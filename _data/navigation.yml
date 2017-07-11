@@ -20,14 +20,14 @@ documentation_fr:
   - title: Langues
     children:
       - title: "English"
-        url: /report_en/
+        url: /documentation_en/
 
 # ====== DOCUMENTATION_EN ================
 documentation_en:
   - title: Languages
     children:
       - title: "Français"
-        url: /report_fr/
+        url: /documentation_fr/
 
 # ====== REPORT_FR ================
 report_fr:
