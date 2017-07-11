@@ -15,6 +15,20 @@ main_en:
   - title: "Report"
     url: /report_en/
 
+# ====== DOCUMENTATION_FR ================
+documentation_fr:
+  - title: Langues
+    children:
+      - title: "English"
+        url: /report_en/
+
+# ====== DOCUMENTATION_EN ================
+documentation_en:
+  - title: Languages
+    children:
+      - title: "Français"
+        url: /report_fr/
+
 # ====== REPORT_FR ================
 report_fr:
   - title: Commandes
