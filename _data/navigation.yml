@@ -92,14 +92,7 @@ portfolio_fr:
     url: /structures_fr/
   - title: Ressource
     url: /resources_fr/
-    children:
-      - title: "Texte court"
-        url: /resources_fr/#field
-      - title: "Texte long"
-        url: /resources_fr/#textfield
-      - title: "Image"
-        url: /resources_fr/#image
-  - title: Métadonnées
+   - title: Métadonnées
     url: /metadata_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
@@ -114,13 +107,6 @@ portfolio_en:
     url: /structures_en/
   - title: Ressource
     url: /resources_en/
-    children:
-      - title: "Short Text"
-        url: /resources_en/#field
-      - title: "Long Text"
-        url: /resources_en/#textfield
-      - title: "Image"
-        url: /resources_en/#image
   - title: Metadata
     url: /metadata_en/
   - title: CSS
@@ -238,10 +224,10 @@ metadata_fr:
   - title: Langues
     children:
       - title: "English"
-        url: /resources_en/
+        url: /metadata_en/
         
 # ====== METADATA_EN =============
-resources_en:
+metadata_en:
   - title: Structures
     url: /structures_en/
   - title: Ressource
@@ -260,4 +246,34 @@ resources_en:
   - title: Langues
     children:
       - title: "Français"
-        url: /resources_fr/
+        url: /metadata_fr/
+
+# ====== CSS_FR =============
+css_fr:
+  - title: Structures
+    url: /structures_fr/
+  - title: Ressource
+    url: /resources_fr/
+   - title: Métadonnées
+    url: /metadata_fr/
+  - title: Mise en forme (CSS)
+    url: /css_fr/
+  - title: Langues
+    children:
+      - title: "English"
+        url: /css_en/
+        
+# ====== CSS_EN =============
+css_en:
+  - title: Structures
+    url: /structures_en/
+  - title: Ressource
+    url: /resources_en/
+  - title: Metadata
+    url: /metadata_en/
+  - title: CSS
+    url: /css_en/
+  - title: Langues
+    children:
+      - title: "Français"
+        url: /css_fr/
