@@ -85,4 +85,61 @@ dashboard_en:
     children:
       - title: "Français"
         url: /dashboard_fr/
+
+# ====== PORTFOLIO_FR =============
+portfolio_fr:
+  - title: Structures
+    url: /structures_fr/
+    children:
+      - title: "Section"
+        url: /structures_fr/#asmstructure
+      - title: "Page"
+        url: /structures_fr/#asmunit
+      - title: "Sous-section"
+        url: /structures_fr/#asmunitstructure
+  - title: Ressource
+    url: /resources_fr/
+    children:
+      - title: "Texte court"
+        url: /resources_fr/#field
+      - title: "Texte long"
+        url: /resources_fr/#textfield
+      - title: "Image"
+        url: /resources_fr/#image
+  - title: Métadonnées
+    url: /metadata_fr/
+  - title: Mise en forme (CSS)
+    url: /css_fr/
+  - title: Langues
+    children:
+      - title: "English"
+        url: /portfolio_en/
         
+# ====== PORTFOLIO_EN =============
+portfolio_en:
+  - title: Structures
+    url: /structures_en/
+    children:
+      - title: "Section"
+        url: /structures_en/#asmstructure
+      - title: "Page"
+        url: /structures_en/#asmunit
+      - title: "Subsection"
+        url: /structures_en/#asmunitstructure
+  - title: Ressource
+    url: /resources_en/
+    children:
+      - title: "Short Text"
+        url: /resources_en/#field
+      - title: "Long Text"
+        url: /resources_en/#textfield
+      - title: "Image"
+        url: /resources_en/#image
+  - title: Metadata
+    url: /metadata_en/
+  - title: CSS
+    url: /css_en/
+  - title: Langues
+    children:
+      - title: "Français"
+        url: /portfolio_fr/
