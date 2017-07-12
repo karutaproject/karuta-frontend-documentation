@@ -90,7 +90,7 @@ dashboard_en:
 portfolio_fr:
   - title: Structures
     url: /structures_fr/
-  - title: Ressource
+  - title: Ressources
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
@@ -105,7 +105,7 @@ portfolio_fr:
 portfolio_en:
   - title: Structures
     url: /structures_en/
-  - title: Ressource
+  - title: Resources
     url: /resources_en/
   - title: Metadata
     url: /metadata_en/
@@ -127,7 +127,7 @@ structures_fr:
         url: /structures_fr/#asmunit
       - title: "Sous-section"
         url: /structures_fr/#asmunitstructure
-  - title: Ressource
+  - title: Ressources
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
@@ -164,7 +164,7 @@ structures_en:
 resources_fr:
   - title: Structures
     url: /structures_fr/
-  - title: Ressource
+  - title: Ressources
     url: /resources_fr/
     children:
       - title: "Texte court"
@@ -186,7 +186,7 @@ resources_fr:
 resources_en:
   - title: Structures
     url: /structures_en/
-  - title: Ressource
+  - title: Resources
     url: /resources_en/
     children:
       - title: "Short Text"
@@ -208,7 +208,7 @@ resources_en:
 metadata_fr:
   - title: Structures
     url: /structures_fr/
-  - title: Ressource
+  - title: Ressources
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
@@ -230,7 +230,7 @@ metadata_fr:
 metadata_en:
   - title: Structures
     url: /structures_en/
-  - title: Ressource
+  - title: Resources
     url: /resources_en/
   - title: Metadata
     url: /metadata_en/
@@ -252,7 +252,7 @@ metadata_en:
 css_fr:
   - title: Structures
     url: /structures_fr/
-  - title: Ressource
+  - title: Ressources
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
@@ -267,7 +267,7 @@ css_fr:
 css_en:
   - title: Structures
     url: /structures_en/
-  - title: Ressource
+  - title: Resources
     url: /resources_en/
   - title: Metadata
     url: /metadata_en/
