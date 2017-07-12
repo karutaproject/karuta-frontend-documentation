@@ -86,3 +86,32 @@ dashboard_en:
       - title: "Français"
         url: /dashboard_fr/
 
+# ====== PORTFOLIO_FR =============
+portfolio_fr:
+  - title: Structures
+    url: /structures_fr/
+  - title: Ressource
+    url: /resources_fr/
+   - title: Métadonnées
+    url: /metadata_fr/
+  - title: Mise en forme (CSS)
+    url: /css_fr/
+  - title: Langues
+    children:
+      - title: "English"
+        url: /portfolio_en/
+        
+# ====== PORTFOLIO_EN =============
+portfolio_en:
+  - title: Structures
+    url: /structures_en/
+  - title: Ressource
+    url: /resources_en/
+  - title: Metadata
+    url: /metadata_en/
+  - title: CSS
+    url: /css_en/
+  - title: Langues
+    children:
+      - title: "Français"
+        url: /portfolio_fr/
