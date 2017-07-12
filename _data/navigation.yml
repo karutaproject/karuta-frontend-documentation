@@ -92,7 +92,7 @@ portfolio_fr:
     url: /structures_fr/
   - title: Ressource
     url: /resources_fr/
-   - title: Métadonnées
+  - title: Métadonnées
     url: /metadata_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
