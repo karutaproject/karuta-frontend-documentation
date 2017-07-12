@@ -136,7 +136,7 @@ structures_fr:
   - title: Langues
     children:
       - title: "English"
-        url: /structure_en/
+        url: /structures_en/
 
 # ====== STRUCTURES_EN =============
 structures_en:
@@ -158,7 +158,7 @@ structures_en:
   - title: Langues
     children:
       - title: "Français"
-        url: /structure_fr/
+        url: /structures_fr/
 
 # ====== RESOURCES_FR =============
 resources_fr:
