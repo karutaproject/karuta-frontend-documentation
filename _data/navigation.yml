@@ -219,6 +219,8 @@ metadata_fr:
         url: /metadata_fr/#query
       - title: "Menu - Get_Multiple"
         url: /metadata_fr/#get_multiple
+      - title: "Menu - Get_Get_Multiple"
+        url: /metadata_fr/#get_get_multiple
       - title: "Menu - Import_Multiple"
         url: /metadata_fr/#import_multiple
   - title: Mise en forme (CSS)
