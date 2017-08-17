@@ -239,6 +239,8 @@ metadata_en:
         url: /metadata_fr/#code
       - title: "Menu - Get_Multiple"
         url: /metadata_fr/#get_multiple
+      - title: "Menu - Get_Get_Multiple"
+        url: /metadata_fr/#get_get_multiple
       - title: "Menu - Import_Multiple"
         url: /metadata_fr/#import_multiple
   - title: CSS
