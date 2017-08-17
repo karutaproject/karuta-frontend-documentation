@@ -52,6 +52,22 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='query'>Query</h3>
+	<p>Query est la fonction de recherche utilisée par Get_Resource, Get_Get_Resource, Menu - Get_Multiple, Menu - Get_Get_Multiple, Menu - Import_Multiple ou encore dans les Sections, Pages ou sous-sections.</p>
+	<h4>Format Get_</h4>
+	<p><code>code_portfolio</code>.<code>semantictag</code>.<code>label</code></p>
+	<h4>Format Get_Get_</h4>
+	<p><code>code_portfolio</code>.<code>position</code>.<code>semantictag</code>.<code>label</code></p>
+	<ul>
+		<li><code>code_portfolio</code> : code du portfolio référentiel où chercher</li>
+		<li><code>position</code> : indique où chercher dans le portfolio courqnt le code du parent permettant de sélectionner dans le référentiel. Prend une des valeurs suivantes: child, sibling, parent, parent.parent, parent.parent.parent</li>
+		<li><code>semantictag</code> : tag sémantique des élements à chercher</li>
+		<li><code>label</code> : Mot réservé</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='get_get_multiple'>Menu - Get_Get_Multiple</h3>
 	<h4>Format</h4>
 	<p><code>function</code>,<code>get_get_multiple</code>/<code>query</code>/<code>code_portfolio.semtag</code>/<code>get_resource_semtag</code>,<code>libellé@fr</code>,<code>role</code></p>
