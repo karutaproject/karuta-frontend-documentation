@@ -28,7 +28,7 @@ sidebar:
 	<p><code>code_portfolio</code>.<code>position</code>.<code>semantictag</code>.<code>label</code></p>
 	<ul>
 		<li><code>code_portfolio</code> : code du portfolio référentiel où chercher</li>
-		<li><code>position</code> : Mots réservés. Indique où chercher dans le portfolio courqnt le code du parent permettant de sélectionner dans le référentiel. Prend une des valeurs suivantes: <code>child</code>, <code>sibling</code>, <code>parent</code>, <code>parent.parent</code>, <code>parent.parent.parent</code></li>
+		<li><code>position</code> : Mots réservés. Indique où chercher dans le portfolio courant le code du parent permettant de sélectionner dans le référentiel. Prend une des valeurs suivantes: <code>child</code>, <code>sibling</code>, <code>parent</code>, <code>parent.parent</code>, <code>parent.parent.parent</code></li>
 		<li><code>semantictag</code> : tag sémantique des élements à chercher</li>
 		<li><code>label</code> : Mot réservé</li>
 	</ul>
@@ -47,6 +47,22 @@ sidebar:
 		<li><code>get_resource_semtag</code> : tag sémantique du Get_Resource (dans part à ajouter)</li>
 		<li><code>libellé@fr</code> : Libellé du menu</li>
 		<li><code>role</code> : rôle(s) voyant le menu</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='query'>Query</h3>
+	<p>Query est la fonction de recherche utilisée par Get_Resource, Get_Get_Resource, Menu - Get_Multiple, Menu - Get_Get_Multiple, Menu - Import_Multiple ou encore dans les Sections, Pages ou sous-sections.</p>
+	<h4>Format Get_</h4>
+	<p><code>code_portfolio</code>.<code>semantictag</code>.<code>label</code></p>
+	<h4>Format Get_Get_</h4>
+	<p><code>code_portfolio</code>.<code>position</code>.<code>semantictag</code>.<code>label</code></p>
+	<ul>
+		<li><code>code_portfolio</code> : code du portfolio référentiel où chercher</li>
+		<li><code>position</code> : indique où chercher dans le portfolio courqnt le code du parent permettant de sélectionner dans le référentiel. Prend une des valeurs suivantes: child, sibling, parent, parent.parent, parent.parent.parent</li>
+		<li><code>semantictag</code> : tag sémantique des élements à chercher</li>
+		<li><code>label</code> : Mot réservé</li>
 	</ul>
 </article>
 
