@@ -215,6 +215,8 @@ metadata_fr:
     children:
       - title: "Code"
         url: /metadata_fr/#code
+      - title: "Query"
+        url: /metadata_fr/#query
       - title: "Menu - Get_Multiple"
         url: /metadata_fr/#get_multiple
       - title: "Menu - Import_Multiple"
