@@ -223,7 +223,7 @@ metadata_fr:
         url: /metadata_fr/#get_get_multiple
       - title: "Menu - Import_Multiple"
         url: /metadata_fr/#import_multiple
-      - title: "Menu - Import_GetGetMultiple"
+      - title: "Menu - Import_GGMultiple"
         url: /metadata_fr/#import_ggmultiple
   - title: Mise en forme (CSS)
     url: /css_fr/
@@ -249,7 +249,7 @@ metadata_en:
         url: /metadata_en/#get_get_multiple
       - title: "Menu - Import_Multiple"
         url: /metadata_en/#import_multiple
-      - title: "Menu - Import_GetGetMultiple"
+      - title: "Menu - Import_GGMultiple"
         url: /metadata_en/#import_ggmultiple
   - title: CSS
     url: /css_en/
