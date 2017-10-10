@@ -99,3 +99,22 @@ sidebar:
 	</ul>
 </article>
 
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='import_multiple'>Menu - Import_ggMultiple</h3>
+	<h4>Format</h4>
+	<p><code>function</code>,<code>import_ggmultiple</code>/<code>query</code>/<code>code_portfolio</code>,<code>libellé@fr</code>,<code>role</code></p>
+	<ul>
+		<li><code>function</code> : mot réservé</li>
+		<li><code>import_multiple</code> : mot réservé</li>
+		<li><code>query</code> : query du Get_Get_Resource - retourne une liste de code (le code du portfolio peut-être le mot-réservé '?', dans ce cas le code du portfolio sera le code de la sélection du parent)</li>
+		<li><code>code_portfolio</code> : code du portfolio duquel on importe le noeud avec le(s) code(s) sélectionné(s) - peut être ou pas le même que celui du Get_resource (le code du portfolio peut-être le mot-réservé '?', dans ce cas le code du portfolio sera le code de la sélection du parent)</li>
+		<li><code>libellé@fr</code> : Libellé du menu</li>
+		<li><code>role</code> : rôle(s) voyant le menu</li>
+	</ul>
+	<p>Exemple d'utilisation: un Get-Resource permet de sélectionner un référentiel parmi une liste de référentiels (le code de l'item doit être le code du portfolio du référentiel). Un Import_GetGetMultiple permet d'importer des éléments du référentiel sélectionné dans le Get_resource.</p>
+	<code>Code du query : function,import_ggmultiple/?.child.referentiel.skill$.label/?,Ajouter une compétence@fr,auteur</code>
+	<p>Remarque: Ce menu se trouve sur une unitstructure et le Get_resource est en-dessous d'où le child, referentiel est le tag du Get_resource ainsi que des items de la liste de référentiels. Chaque item a pour code le code du portfolio référentiel. Les points d'interrogation ? font référence à ce code de pprtfolio référentiel </p>
+</article>
+
+

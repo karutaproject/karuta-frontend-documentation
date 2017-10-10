@@ -223,6 +223,8 @@ metadata_fr:
         url: /metadata_fr/#get_get_multiple
       - title: "Menu - Import_Multiple"
         url: /metadata_fr/#import_multiple
+      - title: "Menu - Import_GetGetMultiple"
+        url: /metadata_fr/#import_ggmultiple
   - title: Mise en forme (CSS)
     url: /css_fr/
   - title: Langues
@@ -240,13 +242,15 @@ metadata_en:
     url: /metadata_en/
     children:
       - title: "Code"
-        url: /metadata_fr/#code
+        url: /metadata_en/#code
       - title: "Menu - Get_Multiple"
-        url: /metadata_fr/#get_multiple
+        url: /metadata_en/#get_multiple
       - title: "Menu - Get_Get_Multiple"
-        url: /metadata_fr/#get_get_multiple
+        url: /metadata_en/#get_get_multiple
       - title: "Menu - Import_Multiple"
-        url: /metadata_fr/#import_multiple
+        url: /metadata_en/#import_multiple
+      - title: "Menu - Import_GetGetMultiple"
+        url: /metadata_en/#import_ggmultiple
   - title: CSS
     url: /css_en/
   - title: Langues
