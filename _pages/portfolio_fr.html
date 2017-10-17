@@ -6,4 +6,26 @@ sidebar:
  nav: "portfolio_fr"
 ---
 
-<h3>En construction...</h3>
+<p>Dans Karuta un portfolio est représenté par un arbre structuré (voir STRUCTURES).</p>
+<p> Il y a plusieurs types d'arbres dans Karuta.</p>
+<ul>
+	<li>modèle de portfolio</li>
+	<li>instance de portfolios</li>
+	<li>référentiel</li>
+	<li>rapport</li>
+	<li>batch</li>
+	<li>modèle de formulaire batch</li>
+</ul>
+<h3>Modèle de portfolio</h3>
+<p>Un modèle de portfolio est une structure d'arbre qui organise des ressources. Les ressources disponibles sont des textes courts, des textes longs, des images, des sons, des documents, des vidéos, etc.</p>
+<p>Un modèle de portfolio est ensuite instancié pour chaque usager, c'est à dire que l'on fait une copie du modèle et cet arbre devientle portfolio spécifique à un usager.</p>
+<h3>Instance de portfolio</h3>
+<p>une instance de portfolio est une copie du modèle mais au moment de l'instantiation (copie) les rôles et droits sont créées pour chacun des éléements du portfolio.</p>
+<h3>Référentiel</h3>
+<p>Un référentiel est une liste d'éléments qui seront référencés dans les portfolios, par exemple, un référentiel de compétences.</p>
+<h3>Rapport</h3>
+<p>Un rapport est un arbre contenant des instructions spécifiques qui permettent de construire des tableaux de bord. Les instrcutions permettent de naviguer dans les portfolios et d'en afficher des éléments.</p>
+<h3>Batch</h3>
+<p>Un batch est un arbre contenant des commandes qui permettent d'une manière automatique de créer des usagers, des portfolios, de mettre à jour des éléments du portfolio, etc. Un fichier batch est généralement associé à un fichier CSV contenant, par exemple, la liste des usagers. L'éécution du batch créera alors automatiquement tous les portfolios des usagers. Un fichier batch peut être associé également à un formulaire.</p>
+<h3>Formulare batch</h3>
+<p>Un formulaire batch permet d'éxécuter un batch d'une manière unitaire pour un sul usager.</p>
