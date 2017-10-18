@@ -5,20 +5,43 @@ title: "Batch"
 sidebar:
  nav: "batch_fr"
 ---
+<!- =========================================== ->
+<h3>Fonctionnement</h3>
+<!- =========================================== ->
 
+<p>Les commandes Batch permettent d'automatiser la création, modification et suppression de portfolios.</p>
+<img src='../assets/img/execute-batch.png'/>
+<p>À partir d'un ou plusieurs modèles de protfolios, d'un script batch et d'un fichier CSV, KARUTA va créer les usagers et leurs portfolios associés.</p>
+<img src='../assets/img/batch-script.png'/>
+<p>Exemple de script</p>
+<ul>
+	<p>Pour chaque ligne</p>
+	<li>Créer un usager si il n'existe pas</li>
+	<li>Créer un portfolio profil</li>
+	<li>Partager le portfolio profil avec le rôle student</li>
+	<li>Mettre à jour les champs nom et prénon dans le profil</li>
+	<li>Créer un portfolio d'évaluation</li>
+	<li>Partager le portfolio d'évaluation avec le rôle student</li>
+	<li>Mettre à jour le Proxy du portfolio d'évaluation vers le portfolio profil</li>
+</ul>
+<p>Exemple de fichier CSV</p>
+<img src='../assets/img/csv-file.png'/>
+
+<!- =========================================== ->
 <h3>Commandes</h3>
+<!- =========================================== ->
 Les commandes disponibles sont :
 <ul>
 	<li><a href='#for-each-line'><code>ForEachLine</code></a></li>
 </ul>
-<h3>Commandes pour les usagers</h3>
+<h4>Commandes pour les usagers</h4>
 <ul>
 	<li><a href='#create-person'><code>CreatePerson</code></a></li>
 	<li><code>DeletePerson</code></li>
 	<li><code>JoinUserGroup</code></li>
 	<li><code>LeaveUserGroup</code></li>
 </ul>
-<h3>Commandes pour les portfolios</h3>
+<h4>Commandes pour les portfolios</h4>
 <ul>
 	<li><code>CreateTree</code></li>
 	<li><code>ShareTree</code></li>
@@ -26,28 +49,28 @@ Les commandes disponibles sont :
 	<li><code>SelectTree</code></li>
 	<li><code>DeleteTree</code></li>
 </ul>
-<h3>Commandes pour les groupes de portfolios</h3>
+<h4>Commandes pour les groupes de portfolios</h4>
 <ul>
 	<li><code>JoinPortfolioGroup</code></li>
 </ul>
-<h3>Commandes pour le partage/départage avec des groupes d'usagers</h3>
+<h4>Commandes pour le partage/départage avec des groupes d'usagers</h4>
 <ul>
 	<li><code>ShareUserGroup</code></li>
 	<li><code>UnshareUserGroup</code></li>
 </ul>
-<h3>Commandes pour ajout dans portfolios</h3>
+<h4>Commandes pour ajout dans portfolios</h4>
 <ul>
 	<li><code>ImportNode</code></li>
 	<li><code>MoveUp</code></li>
 </ul>
-<h3>Commandes de mise à jour d'éléments</h3>
+<h4>Commandes de mise à jour d'éléments</h4>
 <ul>
 	<li><code>UpdateField</code></li>
 	<li><code>UpdateProxy</code></li>
 	<li><code>UpdateDashboard</code></li>
 	<li><code>UpdateTreeRoot</code></li>
 </ul>
-<h3>Commandes de mise à jour des métadonnées</h3>
+<h4>Commandes de mise à jour des métadonnées</h4>
 <ul>
 	<li><code>UpdateMetadataQuery</code></li>
 	<li><code>UpdateMetadataMenu</code></li>
@@ -57,14 +80,20 @@ Les commandes disponibles sont :
 </ul>
 
 <article>
-	<h3 id='for-each-line'>ForEachLine</h3>
-	<p></p>
+	<h3 id='for-each-line'>ForEachLine</h4>
+	<p>Les commandes ajoutées au ForEchLine seront exécutés pour chaque ligne du Fichier CSV fourni par l'opérateur</p>
 </article>
 
 <article>
-	<h3 id='create-person'>CreatePerson</h3>
+	<h3 id='create-person'>CreatePerson</h4>
 	<p></p>
 	<h4>Champs</h4>
+	<p><var>Identifiant</var></p>
+	<p><var>Prénom</var></p>
+	<p><var>Nom</var></p>
+	<p><var>Courriel</var></p>
+	<p><var>Mot de passe</var></p>
+	<p><var>Créateur?</var></p>
 </article>
 
-<h3>À venir ...</h3>
+<h4>À venir ...</h4>
