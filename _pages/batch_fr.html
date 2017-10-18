@@ -26,6 +26,14 @@ sidebar:
 </ul>
 <p>Exemple de fichier CSV</p>
 <img src='../assets/img/csv-file.png'/>
+<p>Le fichier contient les informations nécessaires à l'éxécution du batch.</p>
+<!- =========================================== ->
+<h3>Structure du fichier CSV</h3>
+<!- =========================================== ->
+<p><var>Ligne 1 : </var> Ce sont les noms des variables 'globales', c'est à dire les variables qui ont les même valeurs pour toutes les lignes. <code>model_code</code> est un nom réservé. C'est le code du batch à exécuter. dans le batch les références au variables globales seront précédées de <code>//</code></p>
+<p><var>Ligne 2 : </var> Ce sont respectivement les valeurs des variables globales. Dans l'exemple présenté la valeur de model_code est createStudents</p>
+<p><var>Ligne 3 : </var> Ce sont les noms des variables 'locales', c'est à dire les variables qui ont des valeurs différentes pour chaque ligne.</p>
+<p><var>Ligne 4 et +  : </var> Ce sont respectivement les valeurs des variables locales.</p>
 
 <!- =========================================== ->
 <h3>Commandes</h3>
