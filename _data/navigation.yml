@@ -225,6 +225,8 @@ metadata_fr:
         url: /metadata_fr/#import_multiple
       - title: "Menu - Import_GGMultiple"
         url: /metadata_fr/#import_ggmultiple
+      - title: "Partager"
+        url: /metadata_fr/#sharing
   - title: Mise en forme (CSS)
     url: /css_fr/
   - title: Langues
@@ -251,6 +253,8 @@ metadata_en:
         url: /metadata_en/#import_multiple
       - title: "Menu - Import_GGMultiple"
         url: /metadata_en/#import_ggmultiple
+      - title: "Sharing"
+        url: /metadata_en/#sharing
   - title: CSS
     url: /css_en/
   - title: Langues

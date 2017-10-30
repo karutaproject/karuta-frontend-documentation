@@ -118,4 +118,31 @@ sidebar:
 	<p>Remarque: Ce menu se trouve sur une unitstructure et le Get_resource est en-dessous d'où le child, referentiel est le tag du Get_resource ainsi que des items de la liste de référentiels. Chaque item a pour code le code du portfolio référentiel. Les points d'interrogation ? font référence à ce code de portfolio référentiel </p>
 </article>
 
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='sharing'>Partager</h3>
+	<p>La fonction Partager envoie un courriel avec un lien permettant de partager un portfolio ou une parite du portfolio</p>
+	<h4>Format</h4>
+	<p><code>rôle</code></p>
+	<p><code>rôle</code>,<code>rôle destinataire</code>,<code>rôles et/ou courriels</code>,<code>niveau (0-4)</code>,<code>durée de vie du lien (en heures)</code>,<code>libellé du bouton@fr</code>,<code>condition (optionel)</code></p>
+		<li><code>rôle</code> rôle de celui qui peut partager</li>
+		<li><code>rôle destinataire</code> rôle qu'aura le destinataire</li>
+		<li><code>rôles et/ou courriels</code> rôles et/ou courriels des destinataires. Si c'est un rôle, tous les personnes ayant ce rôle dans le portfolio seront destinataire d'un courriel</li>
+		<li><code>niveau (0-4)</code> : Le niveau peut prendre cinq valeurs de 0 à 4. Voir ci-dessous</li>
+		<li><code> du bouton@fr</code> : Libellé qui apparaitra sur la page ou l'élément.</li>
+		<li><code>condition</code> condition pour l'apparation du bouton de partage. Exemple :  submitted=='Y'</li>
+	</ul>
+	<h5>Niveau 0 – utilisateur Karuta</h5>
+	<p>L’utilisateur existe et le portfolio est déjà partagé avec l’usager et le rôle. Le mot de passe est demandé si le destinataire n'est pas loggé.</p>
+	<h5>Niveau 1</h5>
+	<p>L’utilisateur existe et le portfolio est déjà partagé avec l’usager et le rôle. Le mot de passe n'est pas demandé. Si l'utilisateur n'est pas loggé il obtient un logging temporaire. (Un bouton submit devrait être toujours ajouté)</p>
+	<h5>Niveau 2</h5>
+	<p>L’utilisateur existe et le portfolio n’est pas partagé avec l’usager et le rôle. Le système partage le portfolio avec l’usager et le rôle. Si l'utilisateur n'est pas loggé il obtient un logging temporaire. (Un bouton submit devrait être toujours ajouté)</p>
+	<h5>Niveau 3</h5>
+	<p>Si l’utilisateur n’existe pas le système crée le compte. Le système partage le portfolio avec l’usager et le rôle. Si l'utilisateur n'est pas loggé il obtient un logging temporaire. (Un bouton submit devrait être toujours ajouté)</p>
+	<h5>Niveau 4 – Lien public</h5>
+	<p>Si l'utilisateur n'est pas loggé il obtient un logging temporaire. Il a automatiquement (loggé ou non) le rôle all comme uager public.
+	
+</article>
+
 
