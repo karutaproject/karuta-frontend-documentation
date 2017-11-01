@@ -139,9 +139,9 @@ Les commandes disponibles sont :
 	<p>La commande permet de créer un portfolio à partir d'un modèle de portfolio et de précider le code et le libellé du portfolio qui sera créé.</p>
 	<h4>Champs</h4>
 	<p><code>ID</code>l'ID est utilisé, dans les commandes nécessitant la sélection d'un arbre, pour faire référence à ce portfolio, par exemple, pour le partager avec un usager.</p>
-	<p><code>Modèle</code> Il faut ajouter un select pour une variable et/ou value pour spécifier directement une valeur</p>
-	<p><code>Code</code> Il faut ajouter un select pour une variable et/ou value pour spécifier directement une valeur</p>
-	<p><code>Libellé</code> Il faut ajouter un select pour une variable et/ou value pour spécifier directement une valeur</p>
+	<p><code>Modèle</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
+	<p><code>Code</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
+	<p><code>Libellé</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
 </article>
 
 <article>
@@ -159,7 +159,7 @@ Les commandes disponibles sont :
 	<h3 id='select-tree'>SelectTree</h3>
 	<p>La commande permet de sélectionner un portfolio qui sera référencé dans d'autres commandes.</p>
 	<h4>Champ</h4>
-	<p><code>Code</code> Il faut ajouter un select pour une variable et/ou value pour spécifier directement une valeur</p>
+	<p><code>Code</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
 </article>
 
 <article>
@@ -167,7 +167,7 @@ Les commandes disponibles sont :
 	<h3 id='delete-tree'>DeleteTree</h3>
 	<p>La commande permet de supprimer un portfolio.</p>
 	<h4>Champ</h4>
-	<p><code>Code</code> Il faut ajouter un select pour une variable et/ou value pour spécifier directement une valeur</p>
+	<p><code>Code</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
 </article>
 
 <article>
@@ -240,7 +240,7 @@ Les commandes disponibles sont :
 	<p>La commande permet de mettre à jour l'uuid d'un tableau de bord.</p>
 	<h4>Champs</h4>
 	<p><code>Sélection</code> C'est le noeud proxy que l'on veut mettre à jour. Format : ID.tag_sémantique. ID est une rérence à un portfolio créé ou sélectionné précedemment.</p>
-	<p><code>Dashboard uuid</code> Cela peut-être soit une valeur (value) et/ou une variable (select) soit une référence à un noeud source (SourceSelect - Format : code_portfolio.tag_sémantique)</p>
+	<p><code>Dashboard uuid</code> Cela peut-être soit une valeur (value) et/ou une variable (select) soit une référence à un noeud source (SourceSelect - Format : ID.UUDI où ID est une réfrence à un portfolio déjà créé ou sélectionné et UUID est un mot réservé. La valeur est alors l'uuid du porfolio ID)</p>
 </article>
 
 <article>
@@ -248,9 +248,55 @@ Les commandes disponibles sont :
 	<h3 id='update-treeroot'>UpdateTreeRoot</h3>
 	<p>La commande permet de mettre à jour le code et le libellé d'un portfolio.</p>
 	<h4>Champs</h4>
-	<p><code>Ancien code</code> Il faut ajouter un select pour une variable et/ou value pour spécifier directement une valeur</p>
-	<p><code>Nouveau code</code> Il faut ajouter un select pour une variable et/ou value pour spécifier directement une valeur</p>
-	<p><code>Libellé</code> Il faut ajouter un select pour une variable et/ou value pour spécifier directement une valeur</p>
+	<p><code>Ancien code</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
+	<p><code>Nouveau code</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
+	<p><code>Libellé</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
 </article>
 
-<h4>À venir ...</h4>
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-metadata-query'>UpdateMetadataQuery</h3>
+	<p>La commande permet de mettre à jour l'attribut recherche (query) d'un noeud.</p>
+	<h4>Champs</h4>
+	<p><code>Sélection</code> C'est le noeud que l'on veut mettre à jour. Format : ID.tag_sémantique. ID est une rérence à un portfolio créé ou sélectionné précedemment.</p>
+	<p><code>Valeur query</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-metadata-menu'>UpdateMetadataMenu</h3>
+	<p>La commande permet de mettre à jour l'attribut menu d'un noeud.</p>
+	<h4>Champs</h4>
+	<p><code>Sélection</code> C'est le noeud que l'on veut mettre à jour. Format : ID.tag_sémantique. ID est une rérence à un portfolio créé ou sélectionné précedemment.</p>
+	<p><code>Valeur menu</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-metadata-inline'>UpdateMetadataInline</h3>
+	<p>La commande permet de mettre à jour l'attribut édition en ligne (inline) d'un noeud.</p>
+	<h4>Champs</h4>
+	<p><code>Sélection</code> C'est le noeud que l'on veut mettre à jour. Format : ID.tag_sémantique. ID est une rérence à un portfolio créé ou sélectionné précedemment.</p>
+	<p><code>Valeur inline (Y ou N)</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-metadata'>UpdateMetadata/h3>
+	<p>La commande est plus générale que les précédentes et permet de mettre à jour n'importe quel attribut de metadata d'un noeud.</p>
+	<h4>Champs</h4>
+	<p><code>Sélection</code> C'est le noeud que l'on veut mettre à jour. Format : ID.tag_sémantique. ID est une rérence à un portfolio créé ou sélectionné précedemment.</p>
+	<p><code>attribut</code> C'est le nom de l'attibut à mettre à jour.
+	<p><code>Valeur atttribut</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-metadata-wad'>UpdateMetadataWad/h3>
+	<p>La commande est plus générale que les précédentes et permet de mettre à jour n'importe quel attribut de metadataWad d'un noeud.</p>
+	<h4>Champs</h4>
+	<p><code>Sélection</code> C'est le noeud que l'on veut mettre à jour. Format : ID.tag_sémantique. ID est une rérence à un portfolio créé ou sélectionné précedemment.</p>
+	<p><code>attribut</code> C'est le nom de l'attibut à mettre à jour.
+	<p><code>Valeur atttribut</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
+</article>
+

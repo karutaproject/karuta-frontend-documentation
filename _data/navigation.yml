@@ -100,6 +100,16 @@ batch_fr:
         url: /batch_fr/#update-dashboard
       - title: "UpdateTreeRoot"
         url: /batch_fr/#update-treeroot
+      - title: "UpdateMetadataQuery"
+        url: /batch_fr/#update-metadata-query
+      - title: "UpdateMetadataMenu"
+        url: /batch_fr/#update-metadata-menu
+      - title: "UpdateMetadataInline"
+        url: /batch_fr/#update-metadata-inline
+      - title: "UpdateMetadata"
+        url: /batch_fr/#update-metadata
+      - title: "UpdateMetadataWad"
+        url: /batch_fr/#update-metadata-wad
   - title: Langues
     children:
       - title: "English"
