@@ -95,9 +95,9 @@ Les commandes disponibles sont :
 <h4>Commandes pour les usagers</h4>
 
 <article>
-	<h3 id='create-person'>CreatePerson</h4>
+	<h4 id='create-person'>CreatePerson</h4>
 	<p>La commande crée un usager avec les informations fournies dans les champs de la commande.</p>
-	<h4>Champs</h4>
+	<h5>Champs</h5>
 	<p><var>Identifiant</var></p>
 	<p><var>Prénom</var></p>
 	<p><var>Nom</var></p>
@@ -107,24 +107,24 @@ Les commandes disponibles sont :
 </article>
 
 <article>
-	<h3 id='delete-person'>DeletePerson</h4>
+	<h4 id='delete-person'>DeletePerson</h4>
 	<p>La commande permet de supprimer un usager</p>
-	<h4>Champ</h4>
+	<h5>Champ</h5>
 	<p><var>Identifiant</var></p>
 </article>
 
 <article>
-	<h3 id='join-usergroup'>JoinUserGroup</h4>
+	<h4 id='join-usergroup'>JoinUserGroup</h4>
 	<p>La commande permet de mettre un usager daans un groupe d'usager</p>
-	<h4>Champs</h4>
+	<h5>Champs</h5>
 	<p><var>Personne</var> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
 	<p><var>Groupe</var> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
 </article>
 
 <article>
-	<h3 id='leave-usergroup'>LeaveUserGroup</h4>
+	<h4 id='leave-usergroup'>LeaveUserGroup</h4>
 	<p></p>
-	<h4>Champs</h4>
+	<h5>Champs</h5>
 	<p><var>Personne</var> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
 	<p><var>Groupe</var> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
 </article>
@@ -132,9 +132,9 @@ Les commandes disponibles sont :
 <h4>Commandes pour les portfolios</h4>
 
 <article>
-	<h3 id='create-tree'>CreateTree</h4>
+	<h4 id='create-tree'>CreateTree</h4>
 	<p>La commande permet de créer un portfolio à partir d'un modèle de portfolio et de précider le code et le libellé du portfolio qui sera créé.</p>
-	<h4>Champs</h4>
+	<h5>Champs</h5>
 	<p><var>ID</var>l'ID est utilisé, dans les commandes nécessitant la sélection d'un arbre, pour faire référence à ce portfolio, par exemple, pour le partager avec un usager.</p>
 	<p><var>Modèle</var> Il faut ajouter un select pour une variable et/ou value pour spécifier directement une valeur</p>
 	<p><var>Code</var> Il faut ajouter un select pour une variable et/ou value pour spécifier directement une valeur</p>
@@ -142,34 +142,34 @@ Les commandes disponibles sont :
 </article>
 
 <article>
-	<h3 id='share-tree'>ShareTree</h4>
+	<h4 id='share-tree'>ShareTree</h4>
 	<p>La commande permet de partager un portfolio avec un usager dans un rôle donné.</p>
-	<h4>Champs</h4>
+	<h5>Champs</h5>
 	<p><var>Sélection arbre</var> permet de sélectionner l'id du portfolio concerné par le partage.</p>
 	<p><var>Personne</var> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
 	<p><var>Rôle</var> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
 </article>
 
 <article>
-	<h3 id='select-tree'>SelectTree</h4>
+	<h4 id='select-tree'>SelectTree</h4>
 	<p>La commande permet de sélectionner un portfolio qui sera référencé dans d'autres commandes.</p>
-	<h4>Champ</h4>
+	<h5>Champ</h5>
 	<p><var>Code</var> Il faut ajouter un select pour une variable et/ou value pour spécifier directement une valeur</p>
 </article>
 
 <article>
-	<h3 id='delete-tree'>DeleteTree</h4>
+	<h4 id='delete-tree'>DeleteTree</h4>
 	<p>La commande permet de supprimer un portfolio.</p>
-	<h4>Champ</h4>
+	<h5>Champ</h5>
 	<p><var>Code</var> Il faut ajouter un select pour une variable et/ou value pour spécifier directement une valeur</p>
 </article>
 
 <h4>Commandes pour les groupes de portfolios</h4>
 
 <article>
-	<h3 id='join-portfoliogroup'>JoinPortfolioGroup</h4>
+	<h4 id='join-portfoliogroup'>JoinPortfolioGroup</h4>
 	<p>La commande permet d'ajouter un portfolio à un groupe de portfolios.</p>
-	<h4>Champs</h4>
+	<h5>Champs</h5>
 	<p><var>Sélection arbre</var> permet de sélectionner l'id du portfolio concerné par le partage.</p>
 	<p><var>Groupe</var> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
 </article>
@@ -177,18 +177,18 @@ Les commandes disponibles sont :
 <h4>Commandes pour le partage/départage avec des groupes d'usagers</h4>
 
 <article>
-	<h3 id='share-usergroup'>ShareUserGroup</h4>
+	<h4 id='share-usergroup'>ShareUserGroup</h4>
 	<p>La commande permet de partager un portfolio avec un groupe d'usagers avec un rôle donné.</p>
-	<h4>Champs</h4>
+	<h5>Champs</h5>
 	<p><var>Sélection arbre</var> permet de sélectionner l'id du portfolio concerné par le partage.</p>
 	<p><var>Groupe</var> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
 	<p><var>Rôle</var> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
 </article>
 
 <article>
-	<h3 id='unshare-usergroup'>UnshareUserGroup</h4>
+	<h4 id='unshare-usergroup'>UnshareUserGroup</h4>
 	<p>La commande permet de partager un portfolio avec un groupe d'usagers avec un rôle donné.</p>
-	<h4>Champs</h4>
+	<h5>Champs</h5>
 	<p><var>Sélection arbre</var> permet de sélectionner l'id du portfolio concerné par le partage.</p>
 	<p><var>Groupe</var> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
 	<p><var>Rôle</var> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
