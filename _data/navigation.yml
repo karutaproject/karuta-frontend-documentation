@@ -70,6 +70,24 @@ batch_fr:
         url: /batch_fr/#create-person
       - title: "DeletePerson"
         url: /batch_fr/#delete-person
+      - title: "JoinUserGroup"
+        url: /batch_fr/#join-usergroup
+     - title: "LeaveUserGroup"
+        url: /batch_fr/#leave-usergroup
+    - title: "CreateTree"
+        url: /batch_fr/#create-tree
+    - title: "ShareTree"
+        url: /batch_fr/#share-tree
+    - title: "SelectTree"
+        url: /batch_fr/#select-tree
+    - title: "DeleteTree"
+        url: /batch_fr/#delete-tree
+    - title: "JoinPortfolioGroup"
+        url: /batch_fr/#join-portfoliogroup
+    - title: "ShareUserGroup"
+        url: /batch_fr/#share-usergroup
+    - title: "unshareUserGroup"
+        url: /batch_fr/#unshare-usergroup
   - title: Langues
     children:
       - title: "English"
