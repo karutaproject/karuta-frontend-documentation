@@ -45,46 +45,46 @@ Les commandes disponibles sont :
 <h4>Commandes pour les usagers</h4>
 <ul>
 	<li><a href='#create-person'><code>CreatePerson</code></a></li>
-	<li><code>DeletePerson</code></li>
-	<li><code>JoinUserGroup</code></li>
-	<li><code>LeaveUserGroup</code></li>
+	<li><a href='#delete-person'><code>DeletePerson</code></a></li>
+	<li><a href='#join-usergroup'><code>JoinUserGroup</code></a></li>
+	<li><a href='#leave-usergroup'><code>LeaveUserGroup</code></a></li>
 </ul>
 <h4>Commandes pour les portfolios</h4>
 <ul>
-	<li><code>CreateTree</code></li>
-	<li><code>ShareTree</code></li>
-	<li><code>UnshareTree</code></li>
-	<li><code>SelectTree</code></li>
-	<li><code>DeleteTree</code></li>
+	<li><a href='#create-tree'><code>CreateTree</code></a></li>
+	<li><a href='#share-tree'><code>ShareTree</code></a></li>
+	<li><a href='#unshare-tree'><code>UnshareTree</code></a></li>
+	<li><a href='#select-tree'><code>SelectTree</code></a></li>
+	<li><a href='#delete-tree'><code>DeleteTree</code></a></li>
 </ul>
 <h4>Commandes pour les groupes de portfolios</h4>
 <ul>
-	<li><code>JoinPortfolioGroup</code></li>
+	<li><a href='#join-portfoliogroup'><code>JoinPortfolioGroup</code></a></li>
 </ul>
 <h4>Commandes pour le partage/départage avec des groupes d'usagers</h4>
 <ul>
-	<li><code>ShareUserGroup</code></li>
-	<li><code>UnshareUserGroup</code></li>
+	<li><a href='#share-usergroup'><code>ShareUserGroup</code></a></li>
+	<li><a href='#unshare-usergroup'><code>UnshareUserGroup</code></li>
 </ul>
 <h4>Commandes pour ajout dans portfolios</h4>
 <ul>
-	<li><code>ImportNode</code></li>
-	<li><code>MoveUp</code></li>
+	<li><a href='#import-node'><code>ImportNode</code></a></li>
+	<li><a href='#move-up'><code>MoveUp</code></a></li>
 </ul>
 <h4>Commandes de mise à jour d'éléments</h4>
 <ul>
-	<li><code>UpdateField</code></li>
-	<li><code>UpdateProxy</code></li>
-	<li><code>UpdateDashboard</code></li>
-	<li><code>UpdateTreeRoot</code></li>
+	<li><a href='#update-field'><code>UpdateField</code></a></li>
+	<li><a href='#update-proxy'><code>UpdateProxy</code></a></li>
+	<li><a href='#update-dashboard'><code>UpdateDashboard</code></a></li>
+	<li><a href='#update-treeroot'><code>UpdateTreeRoot</code></a></li>
 </ul>
 <h4>Commandes de mise à jour des métadonnées</h4>
 <ul>
-	<li><code>UpdateMetadataQuery</code></li>
-	<li><code>UpdateMetadataMenu</code></li>
-	<li><code>UpdateMetadataInline</code></li>
-	<li><code>UpdateMetadata</code></li>
-	<li><code>UpdateMetadataWad</code></li>
+	<li><a href='#update-metadata-query'><code>UpdateMetadataQuery</code></a></li>
+	<li><a href='#update-metadata-menu'><code>UpdateMetadataMenu</code></a></li>
+	<li><a href='#update-metadata-inline'><code>UpdateMetadataInline</code></a></li>
+	<li><a href='#update-metadata'><code>UpdateMetadata</code></a></li>
+	<li><a href='#update-metadata-wad'><code>UpdateMetadataWad</code></li>
 </ul>
 
 <article>
@@ -197,6 +197,60 @@ Les commandes disponibles sont :
 	<p><code>Sélection arbre</code> permet de sélectionner l'id du portfolio concerné par le partage.</p>
 	<p><code>Groupe</code> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
 	<p><code>Rôle</code> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='import-node'>ImportNode</h3>
+	<p>La commande permet d'importer un ou des éléments dans un portfolio.</p>
+	<h4>Champs</h4>
+	<p><code>Sélection destination</code> C'est la section, page ou sous-section dans laquelle on veut importer. Format : ID.tag_sémantique. ID est une rérence à un portfolio créé ou sélectionné précedemment.</p>
+	<p><code>Sélection source</code> C'est la partie que l'on veut importer dans le portfolio. Format : code_portfolio.tag_sémantique.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='move-up'>MoveUp</h3>
+	<p>La commande permet d'importer un ou des éléments dans un portfolio.</p>
+	<h4>Champ</h4>
+	<p><code>Sélection</code> C'est le noeud que l'on veut déplacer. Format : ID.tag_sémantique. ID est une rérence à un portfolio créé ou sélectionné précedemment.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-field'>UpdateField</h3>
+	<p>La commande permet de mettre à jour un champ de type texte court.</p>
+	<h4>Champs</h4>
+	<p><code>Sélection</code> C'est le noeud que l'on veut mettre à jour. Format : ID.tag_sémantique. ID est une rérence à un portfolio créé ou sélectionné précedemment.</p>
+	<p><code>Valeur du champ</code> Cela peut-être soit une valeur (value) et/ou une variable (select) soit une référence à un noeud source (SourceSelect - Format : code_portfolio.tag_sémantique)</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-proxy'>UpdateProxy</h3>
+	<p>La commande permet de mettre à jour un proxy.</p>
+	<h4>Champs</h4>
+	<p><code>Sélection proxy</code> C'est le noeud proxy que l'on veut mettre à jour. Format : ID.tag_sémantique. ID est une rérence à un portfolio créé ou sélectionné précedemment.</p>
+	<p><code>Sélection source</code> C'est le noeud vers lequel pointe le proxy. Format : code_portfolio.tag_sémantique.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-dashboard'>UpdateDashboard</h3>
+	<p>La commande permet de mettre à jour l'uuid d'un tableau de bord.</p>
+	<h4>Champs</h4>
+	<p><code>Sélection</code> C'est le noeud proxy que l'on veut mettre à jour. Format : ID.tag_sémantique. ID est une rérence à un portfolio créé ou sélectionné précedemment.</p>
+	<p><code>Dashboard uuid</code> Cela peut-être soit une valeur (value) et/ou une variable (select) soit une référence à un noeud source (SourceSelect - Format : code_portfolio.tag_sémantique)</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-treeroot'>UpdateTreeRoot</h3>
+	<p>La commande permet de mettre à jour le code et le libellé d'un portfolio.</p>
+	<h4>Champs</h4>
+	<p><code>Ancien code</code> Il faut ajouter un select pour une variable et/ou value pour spécifier directement une valeur</p>
+	<p><code>Nouveau code</code> Il faut ajouter un select pour une variable et/ou value pour spécifier directement une valeur</p>
+	<p><code>Libellé</code> Il faut ajouter un select pour une variable et/ou value pour spécifier directement une valeur</p>
 </article>
 
 <h4>À venir ...</h4>

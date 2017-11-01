@@ -88,6 +88,18 @@ batch_fr:
         url: /batch_fr/#share-usergroup
       - title: "UnshareUserGroup"
         url: /batch_fr/#unshare-usergroup
+      - title: "ImportNode"
+        url: /batch_fr/#import-node
+      - title: "MoveUp"
+        url: /batch_fr/#move-up
+      - title: "UpdateField"
+        url: /batch_fr/#update-field
+      - title: "UpdateProxy"
+        url: /batch_fr/#update-proxy
+      - title: "UpdateDashboard"
+        url: /batch_fr/#update-dashboard
+      - title: "UpdateTreeRoot"
+        url: /batch_fr/#update-treeroot
   - title: Langues
     children:
       - title: "English"
