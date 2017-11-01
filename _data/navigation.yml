@@ -72,21 +72,21 @@ batch_fr:
         url: /batch_fr/#delete-person
       - title: "JoinUserGroup"
         url: /batch_fr/#join-usergroup
-     - title: "LeaveUserGroup"
+      - title: "LeaveUserGroup"
         url: /batch_fr/#leave-usergroup
-    - title: "CreateTree"
+      - title: "CreateTree"
         url: /batch_fr/#create-tree
-    - title: "ShareTree"
+      - title: "ShareTree"
         url: /batch_fr/#share-tree
-    - title: "SelectTree"
+      - title: "SelectTree"
         url: /batch_fr/#select-tree
-    - title: "DeleteTree"
+      - title: "DeleteTree"
         url: /batch_fr/#delete-tree
-    - title: "JoinPortfolioGroup"
+      - title: "JoinPortfolioGroup"
         url: /batch_fr/#join-portfoliogroup
-    - title: "ShareUserGroup"
+      - title: "ShareUserGroup"
         url: /batch_fr/#share-usergroup
-    - title: "unshareUserGroup"
+      - title: "unshareUserGroup"
         url: /batch_fr/#unshare-usergroup
   - title: Langues
     children:
