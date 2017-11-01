@@ -86,7 +86,7 @@ batch_fr:
         url: /batch_fr/#join-portfoliogroup
       - title: "ShareUserGroup"
         url: /batch_fr/#share-usergroup
-      - title: "unshareUserGroup"
+      - title: "UnshareUserGroup"
         url: /batch_fr/#unshare-usergroup
   - title: Langues
     children:
