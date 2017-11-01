@@ -65,9 +65,11 @@ batch_fr:
   - title: Commandes
     children:
       - title: "ForEachLine"
-        url: /batch_for-each-line_fr/
+        url: #for-each-line_fr
       - title: "CreatePerson"
-        url: /create-person_fr/
+        url: #create-person_fr
+      - title: "DeletePerson"
+        url: #delete-person_fr
   - title: Langues
     children:
       - title: "English"
