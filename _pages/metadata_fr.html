@@ -45,14 +45,15 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='get_multiple'>Menu - Get_Multiple</h3>
+	<p>La fonction Get_Multiple permet à l'usager d'ajouter plusieurs éléments à partir d'une liste. Un query permet de sélectionner les éléments de la liste. L'usager peut cocher un ou plusieurs items de la liste. Pour chaque item de la liste, Karuta va ajouter un élément prédéfini contenant au moins un Get-Resource qui sera mis à jour avec la sélection de l'usager.</p>
 	<h4>Format</h4>
 	<p><code>function</code>,<code>get_multiple</code>/<code>query</code>/<code>code_portfolio.semtag</code>/<code>get_resource_semtag</code>,<code>libellé@fr</code>,<code>role</code></p>
 	<ul>
 		<li><code>function</code> : mot réservé</li>
 		<li><code>get_multiple</code> : mot réservé</li>
 		<li><code>query</code> : query du Get_Resource</li>
-		<li><code>code_portfolio.semtag</code> : part à ajouter (peut être juste le Get-Resource)</li>
-		<li><code>get_resource_semtag</code> : tag sémantique du Get_Resource (dans part à ajouter)</li>
+		<li><code>code_portfolio.semtag</code> : élément à ajouter (peut être juste le Get-Resource)</li>
+		<li><code>get_resource_semtag</code> : tag sémantique du Get_Resource (dans élément à ajouter)</li>
 		<li><code>libellé@fr</code> : Libellé du menu</li>
 		<li><code>role</code> : rôle(s) voyant le menu</li>
 	</ul>
@@ -61,6 +62,7 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='get_get_multiple'>Menu - Get_Get_Multiple</h3>
+	<p>La fonction Get_Get_Multiple permet à l'usager d'ajouter plusieurs éléments à partir d'une liste. Comme pour le Get_Multiple, un query permet de sélectionner les éléments de la liste. L'usager peut cocher un ou plusieurs items de la liste. Pour chaque item de la liste, Karuta va ajouter un élément prédéfini contenant au moins un Get-Resource qui sera mis à jour avec la sélection de l'usager.</p>
 	<h4>Format</h4>
 	<p><code>function</code>,<code>get_get_multiple</code>/<code>query</code>/<code>code_portfolio.semtag</code>/<code>get_resource_semtag</code>,<code>libellé@fr</code>,<code>role</code></p>
 	<ul>
@@ -77,13 +79,19 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='import_multiple'>Menu - Import_Multiple</h3>
+	<p>La fonction Import_Multiple permet à l'usager d'ajouter plusieurs éléments à partir d'une liste. Comme les commandes précédentes, un query permet de sèlectionner les éléments de la liste. 
+	  Mais avec Import_Multiple, les codes des éléments sélectionnés sont utilisés pour importer les èlèments ayant ce code dans le portfolio d'importation.
+	  Le code du portfolio d'importation peut être le même que celui de recherche, dans ce cas on importe les élémnets recherchés et cochés. 
+	  Mais le code du portfolio d'importation peut être différent de celui de recherche, dans ce cas on importe les éléments ayant le même code que ceux cochés.
+	  OPTION : le code du portfolio d'importation peut être de la forme <code>?</code>.<code>semantictag</code>. Dans ce cas le code du portfolio sera le code de l'élément coché et le tag de l'élément importé sera <code>semantictag</code>
+	</p>
 	<h4>Format</h4>
 	<p><code>function</code>,<code>import_multiple</code>/<code>query</code>/<code>code_portfolio</code>,<code>libellé@fr</code>,<code>role</code></p>
 	<ul>
 		<li><code>function</code> : mot réservé</li>
 		<li><code>import_multiple</code> : mot réservé</li>
 		<li><code>query</code> : query du Get_Resource - retourne une liste de code</li>
-		<li><code>code_portfolio</code> : code du portfolio duquel on importe le noeud avec le(s) code(s) sélectionné(s) - peut être ou pas le même que celui du Get_resource. OPTION le code du portfolio peut être de la forme <code>?</code>.<code>semantictag</code> dans ce cas le code du portfolio sera le code de la sélection du parent et le tag sera <code>semantictag</code></li>
+		<li><code>code_portfolio</code> : code du portfolio duquel on importe le noeud avec le(s) code(s) sélectionné(s) - peut être ou pas le même que celui du Get_resource. OPTION <code>?</code>.<code>semantictag</code> </li>
 		<li><code>libellé@fr</code> : Libellé du menu</li>
 		<li><code>role</code> : rôle(s) voyant le menu</li>
 	</ul>
