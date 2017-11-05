@@ -9,13 +9,13 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='asmstructure'>Code</h3>
-	<p>Le code est utilisée dans les listes déroulantes (Get_Resource, Get_Get_Resource, Menu - Get_Multiple, Menu - Get_Get_Multiple, Menu - Import_Multiple) pour identifier le choix de l'usager. Par défaut le code et le libellé de l'élément apparaissent dans la liste déroulante et seul le libellé apparait ensuite dans la ressource.</p>
+	<p>Le code est utilisé dans les listes déroulantes (Get_Resource, Get_Get_Resource, Menu - Get_Multiple, Menu - Get_Get_Multiple, Menu - Import_Multiple) pour identifier le choix de l'usager. Par défaut le code et le libellé de l'élément apparaissent dans la liste déroulante et seul le libellé apparait ensuite dans la ressource. Les mots-clés ci-dessous permettent de changer ce comportement.</p>
 	<ul>
-		<li>Le mot-clé <code>@</code>&nbsp;ajouté au code rendra le code non visible dans la liste d'une boîte de choix.</li>
+		<li>Le mot-clé <code>@</code>&nbsp;ajouté au code rendra le code non visible dans la liste déroulante.</li>
 		<li>Le mot-clé <code>#</code>&nbsp;ajouté au code rendra le code visible dans la ressource.</li>
 		<li>Le mot-clé <code>&amp;</code>&nbsp;ajouté au code (uniquement pour l'élément <b>Item</b>) rendra la valeur associée visible dans la ressource.</li>
 		<li>Le mot-clé <code>%</code> ajouté au code rendra le libellé non visible dans la ressource.</li>
-		<li>Le mot-clé <code>$</code> ajouté au code rendra le libellé non visible dans la liste d'une boîte de choix.</li>
+		<li>Le mot-clé <code>$</code> ajouté au code rendra le libellé non visible dans la liste déroulante.</li>
 	</ul>
 </article>
 
@@ -25,12 +25,18 @@ sidebar:
 	<p>Query est la fonction de recherche utilisée par Get_Resource, Get_Get_Resource, Menu - Get_Multiple, Menu - Get_Get_Multiple, Menu - Import_Multiple ou encore dans les Sections, Pages ou sous-sections.</p>
 	<h4>Format Get_</h4>
 	<p><code>code_portfolio</code>.<code>semantictag</code>.<code>label</code></p>
+	<ul>
+		<li><code>code_portfolio</code> : code du portfolio référentiel où chercher. Le code du portfolio est formé de 2 parties séparées par un point. La première partie est le code du projet dans lequel se trouve le portfolio, la deuxième partie est le code du portfolio lui-même. Le code du projet est optionel, si il est absent il sera remplacé par le code du projet dans lequel est le portfolio.</li>
+		<li><code>semantictag</code> : tag sémantique des élements à chercher</li>
+		<li><code>label</code> : Mot réservé</li>
+	</ul>
 	<h4>Format Get_Get_</h4>
-	<p><code>code_portfolio</code>.<code>position</code>.<code>semantictag</code>.<code>label</code></p>
+	<p><code>code_portfolio</code>.<code>position</code>.<code>semantictag1</code>.<code>semantictag2</code>.<code>label</code></p>
 	<ul>
 		<li><code>code_portfolio</code> : code du portfolio référentiel où chercher</li>
-		<li><code>position</code> : Mots réservés. Indique où chercher dans le portfolio courant le code du parent permettant de sélectionner dans le référentiel. Prend une des valeurs suivantes: <code>child</code>, <code>sibling</code>, <code>parent</code>, <code>parent.parent</code>, <code>parent.parent.parent</code> </li>
-		<li><code>semantictag</code> : tag sémantique des élements à chercher</li>
+		<li><code>position</code> : indique où chercher dans le portfolio courant le code du parent permettant de restreindre la recherche dans le référentiel. Prend une des valeurs suivantes: child, sibling, parent, parent.parent, parent.parent.parent</li>
+		<li><code>semantictag1</code> : tag sémantique du parent</li>
+		<li><code>semantictag2</code> : tag sémantique des élements à chercher</li>
 		<li><code>label</code> : Mot réservé</li>
 	</ul>
 </article>
@@ -49,23 +55,6 @@ sidebar:
 		<li><code>get_resource_semtag</code> : tag sémantique du Get_Resource (dans part à ajouter)</li>
 		<li><code>libellé@fr</code> : Libellé du menu</li>
 		<li><code>role</code> : rôle(s) voyant le menu</li>
-	</ul>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='query'>Query</h3>
-	<p>Query est la fonction de recherche utilisée par Get_Resource, Get_Get_Resource, Menu - Get_Multiple, Menu - Get_Get_Multiple, Menu - Import_Multiple ou encore dans les Sections, Pages ou sous-sections.</p>
-	<h4>Format Get_</h4>
-	<p><code>code_portfolio</code>.<code>semantictag</code>.<code>label</code></p>
-	<h4>Format Get_Get_</h4>
-	<p><code>code_portfolio</code>.<code>position</code>.<code>semantictag1</code>.<code>semantictag2</code>.<code>label</code></p>
-	<ul>
-		<li><code>code_portfolio</code> : code du portfolio référentiel où chercher</li>
-		<li><code>position</code> : indique où chercher dans le portfolio courant le code du parent permettant de sélectionner dans le référentiel. Prend une des valeurs suivantes: child, sibling, parent, parent.parent, parent.parent.parent</li>
-		<li><code>semantictag1</code> : tag sémantique du parent</li>
-		<li><code>semantictag2</code> : tag sémantique des élements à chercher</li>
-		<li><code>label</code> : Mot réservé</li>
 	</ul>
 </article>
 
