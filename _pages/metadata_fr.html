@@ -9,7 +9,8 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='asmstructure'>Code</h3>
-	<p>Le code est utilisé dans les listes déroulantes (Get_Resource, Get_Get_Resource, Menu - Get_Multiple, Menu - Get_Get_Multiple, Menu - Import_Multiple) pour identifier le choix de l'usager. Par défaut le code et le libellé de l'élément apparaissent dans la liste déroulante et seul le libellé apparait ensuite dans la ressource. Les mots-clés ci-dessous permettent de changer ce comportement.</p>
+	<p>Le code est unique dans un portfolio et est utilisé dans les listes déroulantes (Get_Resource, Get_Get_Resource, Menu - Get_Multiple, Menu - Get_Get_Multiple, Menu - Import_Multiple) pour identifier le choix de l'usager.
+	  Par défaut le code et le libellé de l'élément apparaissent dans la liste déroulante et seul le libellé apparait ensuite dans la ressource. Les mots-clés ci-dessous permettent de changer ce comportement.</p>
 	<ul>
 		<li>Le mot-clé <code>@</code>&nbsp;ajouté au code rendra le code non visible dans la liste déroulante.</li>
 		<li>Le mot-clé <code>#</code>&nbsp;ajouté au code rendra le code visible dans la ressource.</li>
@@ -17,6 +18,82 @@ sidebar:
 		<li>Le mot-clé <code>%</code> ajouté au code rendra le libellé non visible dans la ressource.</li>
 		<li>Le mot-clé <code>$</code> ajouté au code rendra le libellé non visible dans la liste déroulante.</li>
 	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='semantictag'>Tag sémantique</h3>
+	<p>Le tag sémantique exprime la sémantique de l'élémnet. C'est aussi le moyen de rechercher des éléments dans un portfolio. Le tag sémantique est utilisé dans les 'query' (voir ci-dessous) ainsi que dans les script de rapport et de batch.</p>
+	<p>ATTENTION: la recherche de tag sémantiques se fait par inclusion. Par exemple, si on recherche les éléments de tag sémantique 'competence',
+	  les éléments avec comme tag sémantique 'sous-competence' seront ègalement trouvés car le mot 'competence' est inclus dans le mot 'sous-competence'.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='multilingual-node'>Noeud multilingue</h3>
+	<p>	L'attribut permet de spécifier si le libellé du noeud prend des valeurs différentes ou non dans le cas où le portfolio est multilingue.
+	  Si le noeud n'est pas multilingue la veleur du libellè sera stocké dans la langue par défaut définie dans le fichier de configuration _init.js.
+	</p>
+	<p>Remarque : le code n'est pas multilingue. Il a la même valeur quelle que soit la langue sélectionnée.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='multilingual-resource'>Ressource multilingue</h3>
+	<p>	L'attribut permet de spécifier si les attributs de la ressource prennent des valeurs différentes ou non dans le cas où le portfolio est multilingue.
+	  Si la ressource n'est pas multilingue les veleurs des attributs seront stockés dans la langue par défaut définie dans le fichier de configuration _init.js.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='encript-resource'>Encripter la ressource</h3>
+	<p>
+	L'attribut permet de spécifier si la ressource est encriptée. Dans ce cas, à l'ouverture du portfolio, une phrase-clé est demandée à l'usager.
+	  Cette phrase-clé sert à encoder/décoder les valeurs de la ressource.
+	  Cette phrase-clé n'est pas stockée dans Karuta et doit donc être mémorisée par l'usager car elle lui est demandée à chaque ouverture du portfolio.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='see'>Rôles - Voir</h3>
+	<p>
+	Ce sont la liste des rôles, séparés par un espace, pouvant voir le noeud.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='delete'>Rôles - Supprimer</h3>
+	<p>
+	Ce sont la liste des rôles, séparés par un espace, pouvant supprimer le noeud.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='edit-resource'>Rôles - Éditer ressource</h3>
+	<p>
+	Ce sont la liste des rôles, séparés par un espace, pouvant éditer la ressource si il s'agit d'un noeud.ressource.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='comment'>Rôles - Commenter</h3>
+	<p>
+	Ce sont la liste des rôles, séparés par un espace, pouvant commenter le noeud. (boite de texte associée au noeud). Pour pouvoir commenter un noeud, l'usager doit avoir également le droit d'éditer.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='submit'>Rôles - Soumettre</h3>
+	<p>
+	Ce sont la liste des rôles, séparés par un espace, pouvant soumettre le noeud. Un bouton 'soummettre' retire alors tous les droits d'édition ou de suppression accordés au noeud et à ses enfants.
+	</p>
 </article>
 
 <article>
@@ -80,10 +157,11 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='import_multiple'>Menu - Import_Multiple</h3>
 	<p>La fonction Import_Multiple permet à l'usager d'ajouter plusieurs éléments à partir d'une liste. Comme les commandes précédentes, un query permet de sèlectionner les éléments de la liste. 
-	  Mais avec Import_Multiple, les codes des éléments sélectionnés sont utilisés pour importer les èlèments ayant ce code dans le portfolio d'importation.
-	  Le code du portfolio d'importation peut être le même que celui de recherche, dans ce cas on importe les élémnets recherchés et cochés. 
-	  Mais le code du portfolio d'importation peut être différent de celui de recherche, dans ce cas on importe les éléments ayant le même code que ceux cochés.
-	  OPTION : le code du portfolio d'importation peut être de la forme <code>?</code>.<code>semantictag</code>. Dans ce cas le code du portfolio sera le code de l'élément coché et le tag de l'élément importé sera <code>semantictag</code>
+	  Mais avec Import_Multiple, les codes des éléments sélectionnés sont utilisés pour importer les éléments ayant ce code dans le portfolio d'importation.
+	  Le code du portfolio d'importation peut être le même que celui de recherche, dans ce cas on importe les éléments recherchés et cochés. 
+	  Mais le code du portfolio d'importation peut être différent de celui de recherche, dans ce cas on importe les éléments ayant le même code que ceux cochés.</p>
+	<p>OPTION : le code du portfolio d'importation peut être de la forme <code>?</code>.<code>semantictag</code>.
+	  Dans ce cas le code du portfolio sera le code de l'élément coché et le tag de l'élément importé sera <code>semantictag</code>.
 	</p>
 	<h4>Format</h4>
 	<p><code>function</code>,<code>import_multiple</code>/<code>query</code>/<code>code_portfolio</code>,<code>libellé@fr</code>,<code>role</code></p>
@@ -91,7 +169,7 @@ sidebar:
 		<li><code>function</code> : mot réservé</li>
 		<li><code>import_multiple</code> : mot réservé</li>
 		<li><code>query</code> : query du Get_Resource - retourne une liste de code</li>
-		<li><code>code_portfolio</code> : code du portfolio duquel on importe le noeud avec le(s) code(s) sélectionné(s) - peut être ou pas le même que celui du Get_resource. OPTION <code>?</code>.<code>semantictag</code> </li>
+		<li><code>code_portfolio</code> : code du portfolio duquel on importe le noeud avec le(s) code(s) sélectionné(s) - peut être ou pas le même que celui du Get_resource. OPTION <code>?</code>.<code>semantictag</code>.</li>
 		<li><code>libellé@fr</code> : Libellé du menu</li>
 		<li><code>role</code> : rôle(s) voyant le menu</li>
 	</ul>
@@ -100,19 +178,33 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='import_ggmultiple'>Menu - Import_GGMultiple</h3>
+	<p>La fonction Import_GGMultiple permet à l'usager d'ajouter plusieurs éléments à partir d'une liste. Comme les commandes précédentes, un query permet de sèlectionner les éléments de la liste. 
+	  Mais avec Import_GGMultiple, les codes des éléments sélectionnés sont utilisés pour importer les éléments ayant ce code dans le portfolio d'importation.
+	  Le code du portfolio d'importation peut être le même que celui de recherche, dans ce cas on importe les éléments recherchés et cochés. 
+	  Mais le code du portfolio d'importation peut être différent de celui de recherche, dans ce cas on importe les éléments ayant le même code que ceux cochés.</p>
+	  <p>OPTION1 : Dans le query le code du portfolio peut être <code>?</code>.
+	    Dans ce cas le code du portfolio de recherche sera le code de l'élément parent.
+	  </p>
+	  <p>OPTION2 : le code du portfolio d'importation peut être de la forme <code>?</code>.
+	    Dans ce cas le code du portfolio d'importation sera le code de l'élément parent trouvé.
+	  </p>
 	<h4>Format</h4>
 	<p><code>function</code>,<code>import_ggmultiple</code>/<code>query</code>/<code>code_portfolio</code>,<code>libellé@fr</code>,<code>role</code></p>
 	<ul>
 		<li><code>function</code> : mot réservé</li>
 		<li><code>import_ggmultiple</code> : mot réservé</li>
-		<li><code>query</code> : query du Get_Get_Resource - retourne une liste de code (le code du portfolio peut-être le mot-réservé <code>?</code>, dans ce cas le code du portfolio sera le code de la sélection du parent)</li>
-		<li><code>code_portfolio</code> : code du portfolio duquel on importe le noeud avec le(s) code(s) sélectionné(s) - peut être ou pas le même que celui du Get_resource (le code du portfolio peut-être le mot-réservé <code>?</code>, dans ce cas le code du portfolio sera le code de la sélection du parent)</li>
+		<li><code>query</code> : query du Get_Get_Resource - retourne une liste de code. OPTION1 : code du portfolio peut-être le mot-réservé <code>?</code>.</li>
+		<li><code>code_portfolio</code> : code du portfolio duquel on importe le noeud avec le(s) code(s) sélectionné(s). OPTION2 : code du portfolio peut-être le mot-réservé <code>?</code>.</li>
 		<li><code>libellé@fr</code> : Libellé du menu</li>
 		<li><code>role</code> : rôle(s) voyant le menu</li>
 	</ul>
-	<p>Exemple d'utilisation: un Get-Resource permet de sélectionner un référentiel parmi une liste de référentiels (le code de l'item doit être le code du portfolio du référentiel). Un Import_GGMultiple permet d'importer des éléments du référentiel sélectionné dans le Get_resource.</p>
+	<p>Exemple d'utilisation: un Get-Resource permet de sélectionner un référentiel parmi une liste de référentiels (le code de l'item doit être le code du portfolio du référentiel).
+	  Un Import_GGMultiple permet d'importer des éléments du référentiel sélectionné dans le Get_resource.
+	</p>
 	<p>menu : <code>function</code>,<code>import_ggmultiple</code>/<code>?.child.referentiel.skill$.label</code>/<code>?</code>,<code>Ajouter une compétence@fr</code>,<code>auteur</code></p>
-	<p>Remarque: Ce menu se trouve sur une unitstructure et le Get_resource est en-dessous d'où le child, referentiel est le tag du Get_resource ainsi que des items de la liste de référentiels. Chaque item a pour code le code du portfolio référentiel. Les points d'interrogation ? font référence à ce code de portfolio référentiel </p>
+	<p>Remarque: Ce menu se trouve sur une unitstructure et le Get_resource est en-dessous d'où le child, referentiel est le tag du Get_resource ainsi que des items de la liste de référentiels.
+	   Chaque item a pour code le code du portfolio référentiel. Les points d'interrogation ? font référence à ce code de portfolio référentiel 
+	</p>
 </article>
 
 <article>

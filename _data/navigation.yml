@@ -257,6 +257,22 @@ metadata_fr:
     children:
       - title: "Code"
         url: /metadata_fr/#code
+      - title: "Tag sémantique"
+        url: /metadata_fr/#semantictag
+      - title: "Noeud multilingue"
+        url: /metadata_fr/#multilingual-node
+      - title: "Ressource multilingue"
+        url: /metadata_fr/#multilingual-resource
+      - title: "Encripter la ressource"
+        url: /metadata_fr/#encript-resource
+      - title: "Rôles - Voir"
+        url: /metadata_fr/#see
+      - title: "Rôles - Éditer ressouce"
+        url: /metadata_fr/#edit-resource
+      - title: "Rôles - Commenter"
+        url: /metadata_fr/#comment
+      - title: "Rôles - Soumettre"
+        url: /metadata_fr/#submit
       - title: "Query"
         url: /metadata_fr/#query
       - title: "Menu - Get_Multiple"
