@@ -33,3 +33,24 @@ sidebar:
 <h2>Principe de fonctionnement</h2>
 <p>Un portfolio ou arbre dans Karuta est construit en y ajoutant des branches un peu comme dans un Lego. Certaines branches sont prédéfinies : les élémnets de base de Karuta. D'autres branches sont construites par le desginer en assemblant des branches de base.</p>
 <p>On peut ainsi construire des portfolios complexes, définir des menus permettant à l'usage final d'ajouter des branches dans son portfolio.</p>
+
+<h3>Modèle et instance</h3>
+<p>On distingue 2 types de portfolios:</p>
+<ul>
+<li>Portfolio modèle - Construit par le designer. Les rôles associés sont : designer et all</li>
+<li>Portfolio instance - Instancié à partir d'un modèle pour chaque utilisateur. Les rôles associés sont ceux définis par le designer dans le modèle</li>
+</ul>
+<p>Le diagramme ci-dessous présente les liens entre les les types de portfolios</p>
+<img src='../assets/img/modele-instance.png' width='80%'/>
+<h3>Le modèle de sécurité</h3>
+<img src='../assets/img/modele-securite.png' width='80%'/>
+<ul>
+	<li>Un portfolio a des rôles associés.</li>
+	<li>Un rôle a des droits associés (lire, écrire, soumettre, etc.) sur chacun des éléments du portfolio.</li>
+	<li>Le partage d'un portfolio se fait en indiquant un usager et un rôle.</li>
+</ul>
+<img src='../assets/img/partage.png' width='80%'/>
+
+<h3>Simulation des rôles par le designer</h3>
+<p>Dans un portfolio modèle, le designer peut simuler les différents rôles.</p>
+<img src='../assets/img/simulation-roles.png' width='80%'/>
