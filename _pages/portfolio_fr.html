@@ -18,30 +18,30 @@ sidebar:
 </ul>
 <h3>Modèle de portfolio</h3>
 <p>Un modèle de portfolio est une structure d'arbre qui organise des ressources. Les ressources disponibles sont des textes courts, des textes longs, des images, des sons, des documents, des vidéos, etc.</p>
-<p>Un modèle de portfolio est ensuite instancié pour chaque usager, c'est à dire que l'on fait une copie du modèle et cet arbre devientle portfolio spécifique à un usager.</p>
+<p>Une fois construit par le designer, le modèle de portfolio est instancié pour chaque usager, c'est à dire que l'on fait une copie du modèle et cet arbre devient le portfolio spécifique à un usager.</p>
 <h3>Instance de portfolio</h3>
-<p>une instance de portfolio est une copie du modèle mais au moment de l'instantiation (copie) les rôles et droits sont créées pour chacun des éléements du portfolio.</p>
+<p>Une instance de portfolio est une copie du modèle pour un usager spécifique. Au moment de l'instantiation (copie) les rôles et les droits sont créés pour chacun des éléments du portfolio.</p>
 <h3>Référentiel</h3>
-<p>Un référentiel est une liste d'éléments qui seront référencés dans les portfolios, par exemple, un référentiel de compétences.</p>
+<p>Un référentiel est une liste d'éléments qui seront référencés dans les portfolios, par exemple un référentiel de compétences ou encore les éléments d'une boîte de choix.</p>
 <h3>Rapport</h3>
-<p>Un rapport est un script contenant des instructions spécifiques qui permettent de construire des tableaux de bord. Les instrcutions permettent de naviguer dans les portfolios et d'en afficher des éléments.</p>
+<p>Un rapport est un script contenant des commandes spécifiques qui permettent de construire des tableaux de bord. Les commandes permettent de naviguer dans les portfolios et de sélectionner certains éléments à afficher dans le tableau.</p>
 <h3>Batch</h3>
-<p>Un batch est un script contenant des commandes qui permettent d'une manière automatique de créer des usagers, des portfolios, de mettre à jour des éléments du portfolio, etc. Un fichier batch est généralement associé à un fichier CSV contenant, par exemple, la liste des usagers. L'éécution du batch créera alors automatiquement tous les portfolios des usagers. Un fichier batch peut être associé également à un formulaire.</p>
+<p>Un batch est un script contenant des commandes qui permettent d'une manière automatique de créer des usagers, des portfolios, de mettre à jour des éléments du portfolio, etc. Un fichier batch est généralement associé à un fichier CSV contenant, par exemple, la liste des usagers. L'éxécution du batch créera alors automatiquement tous les portfolios des usagers. Un fichier batch peut également être associé à un formulaire.</p>
 <h3>Formulaire batch</h3>
 <p>Un formulaire batch permet d'exécuter un batch d'une manière unitaire pour un seul usager.</p>
 
 <h2>Principe de fonctionnement</h2>
-<p>Un portfolio ou arbre dans Karuta est construit en y ajoutant des branches un peu comme dans un Lego. Certaines branches sont prédéfinies : les élémnets de base de Karuta. D'autres branches sont construites par le desginer en assemblant des branches de base.</p>
-<p>On peut ainsi construire des portfolios complexes, définir des menus permettant à l'usage final d'ajouter des branches dans son portfolio.</p>
+<p>Un portfolio ou arbre dans Karuta est construit en y ajoutant des branches un peu comme dans un jeu de Lego. Certaines branches sont prédéfinies : les élémnets de base de Karuta. D'autres branches sont construites par le designer en assemblant des branches de base. On peut ainsi construire des portfolios complexes.</p>
+<p>On peut aussi définir des menus permettant à l'usager final d'ajouter lui-même des branches à son portfolio.</p>
 
 <h3>Modèle et instance</h3>
-<p>On distingue 2 types de portfolios:</p>
+<p>On distingue deux types de portfolios :</p>
 <ul>
-<li>Portfolio modèle - Construit par le designer. Les rôles associés sont : designer et all</li>
-<li>Portfolio instance - Instancié à partir d'un modèle pour chaque utilisateur. Les rôles associés sont ceux définis par le designer dans le modèle</li>
+<li>Portfolio modèle - Construit par le designer. Les rôles associés sont : designer et all.</li>
+<li>Portfolio instance - Instancié à partir d'un modèle pour chaque utilisateur. Les rôles associés sont ceux définis par le designer dans le modèle.</li>
 </ul>
-<p>Le diagramme ci-dessous présente les liens entre les les types de portfolios</p>
-<img src='../assets/img/modele-instance.png' width='80%'/>
+<p>Le diagramme ci-dessous présente les liens entre les deux types de portfolios :</p>
+<img src='../assets/img/modele-instance1.png' width='80%'/>
 <h3>Le modèle de sécurité</h3>
 <img src='../assets/img/modele-securite.png' width='80%'/>
 <ul>
