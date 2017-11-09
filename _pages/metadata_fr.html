@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /metadata_fr/
-title: "Métadonnées"
+title: "Métadonnées d'un élément"
 sidebar:
  nav: "metadata_fr"
 ---
@@ -9,12 +9,16 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='asmstructure'>Code</h3>
-	<p>Le code d'un élément de portfolio doit être unique dans ce portfolio et est utilisé dans les listes déroulantes ?boîtes de choix? (élément Get_Resource, élément Get_Get_Resource, menu Get_Multiple, menu Get_Get_Multiple, menu Import_Multiple) pour identifier le choix de l'usager.
-	  Par défaut le code et le libellé de l'élément apparaissent dans la liste déroulante et seul le libellé de l'option choisie par l'usager apparait ensuite dans la ressource. Les mots-clés ci-dessous permettent de modifier ce comportement :</p>
+	<p>Le code d'un élément de portfolio doit être unique dans ce portfolio et est utilisé dans les 
+		listes déroulantes(élément Get_Resource, élément Get_Get_Resource, menu Get_Multiple, menu 
+		Get_Get_Multiple, menu Import_Multiple) pour identifier le choix de l'usager. Par défaut le 
+		code et le libellé de l'élément apparaissent dans la liste déroulante et seul le libellé de 
+		l'option choisie par l'usager apparait ensuite dans la ressource. Les mots-clés ci-dessous 
+		permettent de modifier ce comportement :</p>
 	<ul>
-		<li>Le mot-clé <code>@</code>&nbsp;ajouté au code rendra le code non visible dans la liste déroulante.</li>
-		<li>Le mot-clé <code>#</code>&nbsp;ajouté au code rendra le code visible dans la ressource.</li>
-		<li>Le mot-clé <code>&amp;</code>&nbsp;ajouté au code (uniquement pour l'élément <b>Item</b>) rendra la valeur associée visible dans la ressource.</li>
+		<li>Le mot-clé <code>@</code> ajouté au code rendra le code non visible dans la liste déroulante.</li>
+		<li>Le mot-clé <code>#</code> ajouté au code rendra le code visible dans la ressource.</li>
+		<li>Le mot-clé <code>&amp;</code> ajouté au code (uniquement pour l'élément <b>Item</b>) rendra la <b>valeur</b> associée visible dans la ressource.</li>
 		<li>Le mot-clé <code>%</code> ajouté au code rendra le libellé non visible dans la ressource.</li>
 		<li>Le mot-clé <code>$</code> ajouté au code rendra le libellé non visible dans la liste déroulante.</li>
 	</ul>
@@ -23,13 +27,15 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='semantictag'>Tag sémantique</h3>
-	<p>Le tag sémantique exprime la sémantique de l'élément. C'est aussi le moyen de 
-		rechercher des éléments dans un portfolio. Le tag sémantique est utilisé dans les 
-		'query' (voir ci-dessous) ainsi que dans les script de rapport et de batch.
+	<p>
+		Le tag sémantique d'un élément exprime sa sémantique. C'est aussi le moyen de 
+		rechercher des éléments dans un portfolio. Le tag sémantique est utilisé dans le champ  
+		'recherche' (voir ci-dessous) ainsi que dans les scripts de rapport et de batch.
 	</p>
-	<p>ATTENTION : la recherche de tag sémantique se fait par inclusion. Par exemple, 
+	<p>
+		ATTENTION : la recherche de tag sémantique se fait par inclusion. Par exemple, 
 		si on recherche les éléments de tag sémantique 'competence', les éléments avec comme 
-		tag sémantique 'sous-competence' seront également trouvés car le mot 'competence' 
+		tag sémantique 'sous-competence' seront également trouvés, car le mot 'competence' 
 		est inclus dans le mot 'sous-competence'.
 	</p>
 </article>
@@ -37,27 +43,37 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='multilingual-node'>Noeud multilingue</h3>
-	<p>	L'attribut permet de spécifier si le libellé du noeud prend des valeurs différentes ou non dans le cas où le portfolio est multilingue.
-	  Si le noeud n'est pas multilingue la veleur du libellè sera stocké dans la langue par défaut définie dans le fichier de configuration _init.js.
+	<p>
+		L'attribut 'noeud multilingue' d'un élément permet de spécifier si le <b>libellé</b> du noeud 
+		prend des valeurs différentes ou non dans le cas où le portfolio est multilingue. Si le noeud 
+		n'est pas multilingue, la valeur du libellé sera stockée dans la langue par défaut définie 
+		dans le fichier de configuration _init.js.
 	</p>
-	<p>Remarque : le code n'est pas multilingue. Il a la même valeur quelle que soit la langue sélectionnée.</p>
+	<p>
+		Remarque : le code n'est jamais multilingue. Il a la même valeur quelle que soit la langue 
+		sélectionnée.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='multilingual-resource'>Ressource multilingue</h3>
-	<p>	L'attribut permet de spécifier si les attributs de la ressource prennent des valeurs différentes ou non dans le cas où le portfolio est multilingue.
-	  Si la ressource n'est pas multilingue les veleurs des attributs seront stockés dans la langue par défaut définie dans le fichier de configuration _init.js.
+	<p>	
+		L'attribut 'ressource multilingue' d'un élément permet de spécifier si les données entrées 
+		pour la ressource prennent des valeurs différentes ou non dans le cas où le portfolio est 
+		multilingue. Si la ressource n'est pas multilingue les valeurs entrées pour l'élément 
+		seront stockées dans la langue par défaut définie dans le fichier de configuration _init.js.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='encript-resource'>Encripter la ressource</h3>
+	<h3 id='encript-resource'>Encripter la ressource?????????????????????</h3>
 	<p>
-	L'attribut permet de spécifier si la ressource est encriptée. Dans ce cas, à l'ouverture du portfolio, une phrase-clé est demandée à l'usager.
-	  Cette phrase-clé sert à encoder/décoder les valeurs de la ressource.
-	  Cette phrase-clé n'est pas stockée dans Karuta et doit donc être mémorisée par l'usager car elle lui est demandée à chaque ouverture du portfolio.
+		L'attribut permet de spécifier si la ressource est encriptée. Dans ce cas, à l'ouverture 
+		du portfolio, une phrase-clé est demandée à l'usager. Cette phrase-clé sert à encoder/décoder 
+		les valeurs de la ressource. Cette phrase-clé n'est pas stockée dans Karuta et doit donc être 
+		mémorisée par l'usager car elle lui est demandée à chaque ouverture du portfolio.
 	</p>
 </article>
 
@@ -65,23 +81,23 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='see'>Rôles - Voir</h3>
 	<p>
-	Ce sont la liste des rôles, séparés par un espace, pouvant voir le noeud.
+		La liste des rôles, séparés par un espace, pouvant voir l'élément. 
+		Exemple : etudiant professeur
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='delete'>Rôles - Supprimer</h3>
-	<p>
-	Ce sont la liste des rôles, séparés par un espace, pouvant supprimer le noeud.
-	</p>
+	<p>La liste des rôles, séparés par un espace, pouvant supprimer l'élément.</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='edit-resource'>Rôles - Éditer ressource</h3>
 	<p>
-	Ce sont la liste des rôles, séparés par un espace, pouvant éditer la ressource si il s'agit d'un noeud ressource.
+		La liste des rôles, séparés par un espace, pouvant éditer la ressource (disponible 
+		uniquement sur les éléments ressource, non disponible sur les éléments de structure).
 	</p>
 </article>
 
@@ -89,7 +105,10 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='comment'>Rôles - Commenter</h3>
 	<p>
-	Ce sont la liste des rôles, séparés par un espace, pouvant commenter le noeud. (boite de texte associée au noeud). Pour pouvoir commenter un noeud, l'usager doit avoir également le droit d'éditer.
+	La liste des rôles, séparés par un espace, pouvant commenter l'élément. Ce droit ajoute un 
+	éditeur de texte à la ressource; les commentaires sont datés et signés du nom de l'usager 
+	qui l'a écrit. Pour pouvoir commenter un élément, l'usager doit avoir également le droit 
+	d'éditer la ressource.
 	</p>
 </article>
 
@@ -97,29 +116,47 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='submit'>Rôles - Soumettre</h3>
 	<p>
-	Ce sont la liste des rôles, séparés par un espace, pouvant soumettre le noeud. Un bouton 'soumettre' lorqu'il est pressé permet de retirer les droits d'édition ou de suppression du noeud et de ses enfants.
+		La liste des rôles, séparés par un espace, pouvant soumettre l'élément. Ce droit ajoute 
+		un bouton 'soumettre'. Lorsque l'usager soumet un élément, les droits d'édition et/ou de 
+		suppression sont retirés de l'élément et de tous ses enfants.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='query'>Query</h3>
-	<p>Query est la fonction de recherche utilisée par Get_Resource, Get_Get_Resource, Menu - Get_Multiple, Menu - Get_Get_Multiple, Menu - Import_Multiple ou encore dans les Sections, Pages ou sous-sections.</p>
+	<h3 id='query'>Recherche</h3>
+	<p>
+		Le champ 'recherche' est utilisé par l'élément Get_Resource, l'élément 
+		Get_Get_Resource, le menu Get_Multiple, le menu Get_Get_Multiple, le menu Import_Multiple, 
+		????????????de même que par les Sections, Pages ou Sous-sections????????????????.
+	</p>
 	<h4>Format Get_</h4>
-	<p><code>code_portfolio</code>.<code>semantictag</code>.<code>label</code></p>
+	<p><code>code_portfolio</code>.<code>tag_sémantique</code>.<code>label</code></p>
 	<ul>
-		<li><code>code_portfolio</code> : code du portfolio référentiel où chercher. Le code du portfolio est formé de 2 parties séparées par un point. La première partie est le code du projet dans lequel se trouve le portfolio, la deuxième partie est le code du portfolio lui-même. Le code du projet est optionel, si il est absent il sera remplacé par le code du projet dans lequel est le portfolio.</li>
-		<li><code>semantictag</code> : tag sémantique des élements à chercher</li>
-		<li><code>label</code> : Mot réservé</li>
+		<li>
+			<code>code_portfolio</code> : Code du portfolio référentiel où faire la recherche. 
+			Le code du portfolio est formé de deux parties séparées par un point : la première 
+			partie est le code du projet dans lequel se trouve le portfolio référentiel, la 
+			deuxième partie est le code du portfolio référentiel lui-même. Le code du projet est 
+			optionel : si il est absent, il est remplacé par le code du projet dans lequel se 
+			trouve le portfolio courant (le portfolio qui contient le Get_).
+		</li>
+		<li><code>tag_sémantique</code> : Tag sémantique des élements à chercher.</li>
+		<li><code>label</code> : Mot réservé.</li>
 	</ul>
 	<h4>Format Get_Get_</h4>
-	<p><code>code_portfolio</code>.<code>position</code>.<code>semantictag1</code>.<code>semantictag2</code>.<code>label</code></p>
+	<p><code>code_portfolio</code>.<code>position</code>.<code>tag_sémantique1</code>.<code>tag_sémantique2</code>.<code>label</code></p>
 	<ul>
-		<li><code>code_portfolio</code> : code du portfolio référentiel où chercher</li>
-		<li><code>position</code> : indique où chercher dans le portfolio courant le code du parent permettant de restreindre la recherche dans le référentiel. Prend une des valeurs suivantes: child, sibling, parent, parent.parent, parent.parent.parent</li>
-		<li><code>semantictag1</code> : tag sémantique du parent</li>
-		<li><code>semantictag2</code> : tag sémantique des élements à chercher</li>
-		<li><code>label</code> : Mot réservé</li>
+		<li><code>code_portfolio</code> : Code du portfolio référentiel où faire la recherche.</li>
+		<li>
+			<code>position</code> : Indique où chercher dans le portfolio courant le code de l'élément 
+			parent qui va permettre de restreindre la recherche dans le référentiel. Prend une des 
+			valeurs suivantes : <i>child</i>, <i>sibling</i>, <i>parent</i>, <i>parent.parent</i>, 
+			<i>parent.parent.parent</i>
+		</li>
+		<li><code>semantictag1</code> : Tag sémantique du parent qui restreint la recherche.</li>
+		<li><code>semantictag2</code> : Tag sémantique des élements à chercher dans le référentiel.</li>
+		<li><code>label</code> : Mot réservé.</li>
 	</ul>
 </article>
 

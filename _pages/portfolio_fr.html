@@ -7,27 +7,53 @@ sidebar:
 ---
 
 <p>Dans Karuta un portfolio est représenté par un arbre structuré (voir STRUCTURES).</p>
-<p> Il y a plusieurs types d'arbres dans Karuta.</p>
+<p> Il y a plusieurs types d'arbres dans Karuta :</p>
 <ul>
 	<li>modèle de portfolio</li>
 	<li>instance de portfolios</li>
 	<li>référentiel</li>
+	<li>composantes réutilisables</li>
 	<li>rapport</li>
 	<li>batch</li>
 	<li>modèle de formulaire batch</li>
 </ul>
 <h3>Modèle de portfolio</h3>
-<p>Un modèle de portfolio est une structure d'arbre qui organise des ressources. Les ressources disponibles sont des textes courts, des textes longs, des images, des sons, des documents, des vidéos, etc.</p>
-<p>Une fois construit par le designer, le modèle de portfolio est instancié pour chaque usager, c'est à dire que l'on fait une copie du modèle et cet arbre devient le portfolio spécifique à un usager.</p>
+<p>
+	Un modèle de portfolio est une structure d'arbre qui organise des ressources. Les ressources sont 
+	les éléments qui vont contenir les données : les données fournies aux usagers (comme des 
+	instructions ou des fichiers à consulter) et les données que les usagers vont entrer pour peupler 
+	leur portfolio. Karuta offre des ressources de plusieurs types : champ de texte (texte court), 
+	éditeur de texte (texte long), fichier, image, son, vidéo, calendrier, etc.
+</p>
+<p>
+	Une fois construit par le designer, le modèle de portfolio est instancié pour chaque usager, 
+	c'est à dire que l'on fait une copie du modèle et le nouvel arbre devient le portfolio spécifique 
+	à un usager.
+</p>
 <h3>Instance de portfolio</h3>
-<p>Une instance de portfolio est une copie du modèle pour un usager spécifique. Au moment de l'instantiation (copie) les rôles et les droits sont créés pour chacun des éléments du portfolio.</p>
+<p>
+	Une instance de portfolio est une copie du modèle pour un usager spécifique. Au moment de 
+	l'instantiation (copie) les rôles et les droits sont créés pour chacun des éléments du 
+	portfolio.
+</p>
 <h3>Référentiel</h3>
-<p>Un référentiel est une liste d'éléments qui seront référencés dans les portfolios, par exemple un référentiel de compétences ou encore les éléments d'une liste déroulante.</p>
+<p>
+	Un référentiel est une liste d'éléments qui seront référencés dans les portfolios, par exemple un 
+	référentiel de compétences ou encore les éléments d'une liste déroulante.
+</p>
+<h3>Composantes réutilisables</h3>
+<p>
+	Le portfolio de composantes réutilisables sert à stocker des morceaux de portfolio qui seront 
+	ensuite mis à la disposition de l'usager via un menu. L'usager peut ainsi ajouter des morceaux 
+	à son portfolio selon ses besoins.
+</p>
 <h3>Rapport</h3>
-<p>Un rapport est un script contenant des commandes spécifiques qui permettent de présenter des informations d'un ou 
-de portfolios structurées de façon différente, par exemple pour faire un tableau de bord, un cv ou un rapport de 
-cohorte. construire des tableaux de bord. Les commandes de script de rapport permettent de naviguer dans les portfolios et de sélectionner 
-certains éléments à afficher dans le tableau.</p>
+<p>
+	Un rapport est un script contenant des commandes spécifiques qui permettent de sélectionner des 
+	informations d'un ou de plusieurs portfolios et de les afficher sous une présentation différente. 
+	Par exemple pour faire un tableau de bord, un cv ou un rapport de cohorte. Les commandes de script 
+	de rapport permettent de naviguer dans les portfolios pour y sélectionner les éléments à afficher. 
+	Le résultat est affiché dans un tableau html dont la mise en forme est libre au designer.</p>
 
 <h3>Batch</h3>
 <p>Un batch est un script contenant des commandes qui permettent d'une manière automatique 
