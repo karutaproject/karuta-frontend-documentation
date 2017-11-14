@@ -6,7 +6,16 @@ sidebar:
  nav: "report_fr"
 ---
 <h2 id='commandes'>Commandes</h2>
-Les commandes disponibles sont :
+
+<p>Un ensemble de commandes permettent de construire des rapports. Il y a trois façons d'exécuter un rapport :</p>
+<ul>
+	<li>- avec la ressource 'tableau de bord' dans un portfolio,</li>
+	<li>- dans la page Exécuter un rapport en spécifiant le nom du rapport,</li>
+	<li>- dans la page Exécuter un rapport en téléversant un fichier CSV (format: voir section Batch). Dans le fichier CSV, les 2 premières lignes de variables globales ne sont pas prises en compte.</li>
+</ul>
+
+
+<p>Les commandes disponibles sont :</p>
 <ul>
 
 	<li><code><a href='#for-each-portfolio'>ForEachPortfolio</a></code></li>
@@ -103,6 +112,14 @@ Les commandes disponibles sont :
 		<li><code>.has('asmContext:has("metadata[semantictag*=visibility-cv-short]"):has("code:contains(@1)")')</code> retourne l'élément si il y a un enfant avec le sémantique tag &nbsp;visibility-cv-short et le code contient @1</li>
 		<li><code>.sortElements(function(a, b){ return $("code",$("asmResource[xsi_type=Get_Resource]",a)).text() &gt; $("code",$("asmResource[xsi_type=Get_Resource]",b)).text() ? 1 : -1; })</code> trie sur le code du Get_Resource</li>
 	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='for-each-line'>ForEachLine</h3>
+	<p>Pour chacune des lignes du fichier csv, Karuta exécute les commandes qui se trouvent dans le <code>ForEachLine</code>.</p>
+	<p>Pour la commande <code>ForEachPerson</code> dans l'attribut sélection de personnes la valeur username=identifiant (sans guillemets), Karuta remplacera identifiant par la valeur de la variable locale identifiant.</p>
+	<p>Pour les commandes <code>ForEachPortfolio</code> et <code>ForEachPortfolioNode</code> dans sélection portfolios si la valeur code=portfolio_code  (sans guillemets), Karuta remplacera portfolio_code par la valeur de la variable locale identifiant.</p>
 </article>
 
 <h2 id='css'>Mise en forme</h2>
