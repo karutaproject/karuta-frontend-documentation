@@ -60,8 +60,16 @@ report_fr:
         url: /report_fr#url2unit
       - title: "SVG"
         url: /report_fr#svg
+      - title: "Draw Web Title"
+        url: /report_fr#draw-web-title
+      - title: "Draw Web Axis"
+        url: /report_fr#draw-web-axis
+      - title: "Draw Web Line"
+        url: /report_fr#draw-web-line
       - title: "Show Sharing"
         url: /report_fr#show-sharing
+      - title: "Go Parent"
+        url: /report_fr#go-parent
       - title: "QR Code"
         url: /report_fr#qrcode
   - title: Mise en forme
