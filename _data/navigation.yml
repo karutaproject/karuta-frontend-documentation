@@ -191,6 +191,8 @@ structures_en:
         url: /structures_fr/#asmunit
       - title: "Subsection"
         url: /structures_fr/#asmunitstructure
+      - title: "Noeud de ressource"
+        url: /structures_fr/#asmcontext
   - title: Resources
     url: /resources_en/
   - title: Metadata
