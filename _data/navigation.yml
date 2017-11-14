@@ -44,6 +44,26 @@ report_fr:
         url: /report_fr#for-each-node
       - title: "ForEachLine"
         url: /report_fr#for-each-line
+      - title: "Table"
+        url: /report_fr#table
+      - title: "Row"
+        url: /report_fr#row
+      - title: "Cell"
+        url: /report_fr#cell
+      - title: "Node"
+        url: /report_fr#node
+      - title: "Aggregate"
+        url: /report_fr#aggregate
+      - title: "Text"
+        url: /report_fr#text
+      - title: "URL2Unit"
+        url: /report_fr#url2unit
+      - title: "SVG"
+        url: /report_fr#svg
+      - title: "Show Sharing"
+        url: /report_fr#show-sharing
+      - title: "QR Code"
+        url: /report_fr#qrcode
   - title: Mise en forme
     url: /report_fr#css
   - title: Édition
