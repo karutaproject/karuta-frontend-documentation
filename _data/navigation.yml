@@ -169,6 +169,8 @@ structures_fr:
         url: /structures_fr/#asmunit
       - title: "Sous-section"
         url: /structures_fr/#asmunitstructure
+      - title: "Noeud de ressource"
+        url: /structures_fr/#asmcontext
   - title: Ressources
     url: /resources_fr/
   - title: Métadonnées
@@ -191,7 +193,7 @@ structures_en:
         url: /structures_fr/#asmunit
       - title: "Subsection"
         url: /structures_fr/#asmunitstructure
-      - title: "Noeud de ressource"
+      - title: "Resource Node"
         url: /structures_fr/#asmcontext
   - title: Resources
     url: /resources_en/
