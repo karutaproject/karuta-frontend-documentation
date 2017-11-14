@@ -215,6 +215,22 @@ resources_fr:
         url: /resources_fr/#textfield
       - title: "Image"
         url: /resources_fr/#image
+      - title: "Document"
+        url: /resources_fr/#document
+      - title: "URL"
+        url: /resources_fr/#url
+      - title: "Audio"
+        url: /resources_fr/#audio
+      - title: "Vidéo"
+        url: /resources_fr/#video
+      - title: "oEmbed"
+        url: /resources_fr/#oembed
+      - title: "Couleur"
+        url: /resources_fr/#couleur
+      - title: "URL2Unit"
+        url: /resources_fr/#url2unit
+      - title: "Commentaires"
+        url: /resources_fr/#commentaires
   - title: Métadonnées
     url: /metadata_fr/
   - title: Mise en forme (CSS)
