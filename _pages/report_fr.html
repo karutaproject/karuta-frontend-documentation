@@ -6,12 +6,36 @@ sidebar:
  nav: "report_fr"
 ---
 <h2 id='commandes'>Commandes</h2>
-Les commandes disponibles sont :
+
+<p>Un ensemble de commandes permettent de construire des rapports. Il y a trois façons d'exécuter un rapport :</p>
+<ul>
+	<li>avec la ressource 'tableau de bord' dans un portfolio,</li>
+	<li>dans la page Exécuter un rapport en spécifiant le nom du rapport,</li>
+	<li>dans la page Exécuter un rapport en téléversant un fichier CSV (format: voir section Batch). Dans le fichier CSV, les 2 premières lignes de variables globales ne sont pas prises en compte.</li>
+</ul>
+
+
+<p>Les commandes disponibles sont :</p>
 <ul>
 
 	<li><code><a href='#for-each-portfolio'>ForEachPortfolio</a></code></li>
+	<li><code><a href='#for-each-portfolio-node'>ForEachPortfolioNode</a></code></li>
 	<li><code><a href='#for-each-person'>ForEachPerson</a></code></li>
 	<li><code><a href='#for-each-node'>ForEachNode</a></code></li>
+	<li><code><a href='#table'>Table</a></code></li>
+	<li><code><a href='#row'>Row</a></code></li>
+	<li><code><a href='#cell'>Cell</a></code></li>
+	<li><code><a href='#node'>Node</a></code></li>
+	<li><code><a href='#aggregate'>Aggregate</a></code></li>
+	<li><code><a href='#text'>Text</a></code></li>
+	<li><code><a href='#url2unit'>URL2Unit</a></code></li>
+	<li><code><a href='#svg'>SVG</a></code></li>
+	<li><code><a href='#draw-web-tile'>Draw Web Title</a></code></li>
+	<li><code><a href='#draw-web-axis'>Draw Web Axis</a></code></li>
+	<li><code><a href='#draw-web-line'>Draw Web Line</a></code></li>
+	<li><code><a href='#show-sharing'>Show Sharing</a></code></li>
+	<li><code><a href='#go-parent'>Go Parent</a></code></li>
+	<li><code><a href='#qrcode'>QR Code</a></code></li>
 </ul>
 
 
@@ -31,6 +55,24 @@ Les commandes disponibles sont :
 	</p>
 	<p><code>Tri - tag sémantique</code> Tag sémantique du noeud sur lequel doit se faire le tri.</p>
 	<p><code>Tri - élément</code> Valeur possible pour le tri (Libellé noeud, Texte d'une ressource, code d'un noeud ou valeur d'un item.)</p>
+</article>
+
+<article>
+	<h3 id='for-each-portfolio-node'>ForEachPortfolioNode</h3>
+	<p>Pour chacun des portfolios répondant au test de la sélection et des noeuds sélectionnés, Karuta exécute les commandes qui se trouvent dans le <code>ForEachPortfolioNode</code>. Cette commande évite de charger tout le portfolio comme le fait la commande précédente.</p>
+	<h4>Champs</h4>
+	<p><code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à réinitialiser pour chaque nouveau portfolio</p>
+	<p>
+		<code>Sélection portfolios</code> Test Jquery permetant de sélectionner des portfolios parmi ceux visibles par l'usager.
+		<br/>Exemples:
+		<ul>
+			<li><code>code*='2015_work'</code> sélection des portfolios dont le code contient <code>2015_work</code></li>
+			<li><code>code*=portfolio_code</code> sélection des portfolios dont le code contient le contenu de la variable <code>porfolio_code</code></li>
+		</ul>
+	</p>
+	<p><code>Tri - tag sémantique</code> Tag sémantique du noeud sur lequel doit se faire le tri.</p>
+	<p><code>Tri - élément</code> Valeur possible pour le tri (Libellé noeud, Texte d'une ressource, code d'un noeud ou valeur d'un item.)</p>
+	<p><code>Tag sémantique</code>  Tag sémantique du ou des noeuds à sélectionner dans le portfolio.</p>
 </article>
 
 <article>
@@ -84,6 +126,111 @@ Les commandes disponibles sont :
 		<li><code>.has('asmContext:has("metadata[semantictag*=visibility-cv-short]"):has("code:contains(@1)")')</code> retourne l'élément si il y a un enfant avec le sémantique tag &nbsp;visibility-cv-short et le code contient @1</li>
 		<li><code>.sortElements(function(a, b){ return $("code",$("asmResource[xsi_type=Get_Resource]",a)).text() &gt; $("code",$("asmResource[xsi_type=Get_Resource]",b)).text() ? 1 : -1; })</code> trie sur le code du Get_Resource</li>
 	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='for-each-line'>ForEachLine</h3>
+	<p>Pour chacune des lignes du fichier csv, Karuta exécute les commandes qui se trouvent dans le <code>ForEachLine</code>.</p>
+	<p>Pour la commande <code>ForEachPerson</code> dans l'attribut sélection de personnes la valeur username=identifiant (sans guillemets), Karuta remplacera identifiant par la valeur de la variable locale identifiant.</p>
+	<p>Pour les commandes <code>ForEachPortfolio</code> et <code>ForEachPortfolioNode</code> dans sélection portfolios si la valeur code=portfolio_code  (sans guillemets), Karuta remplacera portfolio_code par la valeur de la variable locale identifiant.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='table'>Table</h3>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='row'>Row</h3>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='cell'>Cell</h3>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='cell'>Node</h3>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='aggregate'>Aggregate</h3>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='text'>Text</h3>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='url2unit'>URL2Unit</h3>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='svg'>SVG</h3>
+	<p>La commande SVG initialise un dessin vectoriel SVG. Les commandes de dessin disponibles permettent de construire des diagrammes en étoile comme illustrée ci-dessous.</p>
+	<img src='../assets/img/web.png' width='60%'/>
+	
+	<h4>Champs</h4>
+	<p><code>min-width</code> largeur minimum (par défaut : 100%)</p>
+	<p><code>min-height</code> hauteur minimum (par défaut : 500px)</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='draw-web-title'>Draw Web Title</h3>
+	<p>La commande affiche le titre du dessin SVG.</p>
+	<h4>Champs</h4>
+	<p><code>Type de noeud</code> Liste déroulante des choix possibles.</p>
+	<p><code>Tag sémantique</code> Tag sémantique de l'élément à afficher.</p>
+	<p><code>Afficher</code> Liste déroulante des choix possibles.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='draw-web-axis'>Draw Web Axis</h3>
+	<p>La commande trace un axe de l'étoile. Le libellé de l'axe est défini par les champs de la commande.</p>
+	<h4>Champs</h4>
+	<p><code>Référence</code> valeur utilisée pour les aggrégats.</p>
+	<p><code>Type de noeud</code> Liste déroulante des choix possibles.</p>
+	<p><code>Tag sémantique</code> Tag sémantique de l'élément à afficher.</p>
+	<p><code>Afficher</code> Liste déroulante des choix possibles.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='draw-web-line'>Draw Web Line</h3>
+	<p>La commande positionne une valeur sur l'axe correspondant et trace une ligne entre la dernière valeur et la valeur courante. La commande affiche également la lègende.</p>
+	<h4>Champs</h4>
+	<p><code>Référence</code> valeur utilisée pour les aggrégats.</p>
+	<p><code>Valeur - Type de noeud</code> Liste déroulante des choix possibles pour la valeur à afficher.</p>
+	<p><code>Valeur - Tag sémantique</code> Tag sémantique de l'élément à afficher.</p>
+	<p><code>Valeur - Afficher</code> Liste déroulante des choix possibles pour le noeud sélectionné.</p>
+	<p><code>Légende - Type de noeud</code> Liste déroulante des choix possibles pour la légende.</p>
+	<p><code>Légende - Tag sémantique</code> Tag sémantique de l'élément à afficher.</p>
+	<p><code>Légende - Afficher</code> Liste déroulante des choix possibles poour le noeud sélectionné.</p>
+	<p><code>Légende - Position</code> entier donnant la position relative de la légende (par défaut: 0 positionne la légende au plus)</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='show-sharing'>Show Sharing</h3>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='go-parent'>Go Parent</h3>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='qrcode'>QR Code</h3>
 </article>
 
 <h2 id='css'>Mise en forme</h2>

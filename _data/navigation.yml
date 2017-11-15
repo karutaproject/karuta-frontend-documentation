@@ -36,10 +36,42 @@ report_fr:
     children:
       - title: "ForEachPortfolio"
         url: /report_fr#for-each-portfolio
+      - title: "ForEachPortfolioNode"
+        url: /report_fr#for-each-portfolio-node
       - title: "ForEachPerson"
         url: /report_fr#for-each-person
       - title: "ForEachNode"
         url: /report_fr#for-each-node
+      - title: "ForEachLine"
+        url: /report_fr#for-each-line
+      - title: "Table"
+        url: /report_fr#table
+      - title: "Row"
+        url: /report_fr#row
+      - title: "Cell"
+        url: /report_fr#cell
+      - title: "Node"
+        url: /report_fr#node
+      - title: "Aggregate"
+        url: /report_fr#aggregate
+      - title: "Text"
+        url: /report_fr#text
+      - title: "URL2Unit"
+        url: /report_fr#url2unit
+      - title: "SVG"
+        url: /report_fr#svg
+      - title: "Draw Web Title"
+        url: /report_fr#draw-web-title
+      - title: "Draw Web Axis"
+        url: /report_fr#draw-web-axis
+      - title: "Draw Web Line"
+        url: /report_fr#draw-web-line
+      - title: "Show Sharing"
+        url: /report_fr#show-sharing
+      - title: "Go Parent"
+        url: /report_fr#go-parent
+      - title: "QR Code"
+        url: /report_fr#qrcode
   - title: Mise en forme
     url: /report_fr#css
   - title: Édition
@@ -169,6 +201,8 @@ structures_fr:
         url: /structures_fr/#asmunit
       - title: "Sous-section"
         url: /structures_fr/#asmunitstructure
+      - title: "Noeud de ressource"
+        url: /structures_fr/#asmcontext
   - title: Ressources
     url: /resources_fr/
   - title: Métadonnées
@@ -191,6 +225,8 @@ structures_en:
         url: /structures_fr/#asmunit
       - title: "Subsection"
         url: /structures_fr/#asmunitstructure
+      - title: "Resource Node"
+        url: /structures_fr/#asmcontext
   - title: Resources
     url: /resources_en/
   - title: Metadata
@@ -215,6 +251,22 @@ resources_fr:
         url: /resources_fr/#textfield
       - title: "Image"
         url: /resources_fr/#image
+      - title: "Document"
+        url: /resources_fr/#document
+      - title: "URL"
+        url: /resources_fr/#url
+      - title: "Audio"
+        url: /resources_fr/#audio
+      - title: "Vidéo"
+        url: /resources_fr/#video
+      - title: "oEmbed"
+        url: /resources_fr/#oembed
+      - title: "Couleur"
+        url: /resources_fr/#couleur
+      - title: "URL2Unit"
+        url: /resources_fr/#url2unit
+      - title: "Commentaires"
+        url: /resources_fr/#commentaires
   - title: Métadonnées
     url: /metadata_fr/
   - title: Mise en forme (CSS)
