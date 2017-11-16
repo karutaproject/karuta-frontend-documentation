@@ -68,7 +68,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='encript-resource'>Encripter la ressource?????????????????????</h3>
+	<h3 id='encript-resource'>Encripter la ressource?????????N'EXISTE PLUS????????????</h3>
 	<p>
 		Cet attribut permet de spécifier si la ressource est encriptée. Dans le cas positif, à 
 		l'ouverture du portfolio, une phrase-clé est demandée à l'usager. Cette phrase-clé sert 
@@ -147,8 +147,7 @@ sidebar:
 		<li><code>label</code> : Mot réservé.</li>
 	</ul>
 	<h4>Format Get_Get_</h4>
-	<p><code>code_portfolio</code>.<code>position</code>.<code>tag_sémantique1</code>.
-		<code>tag_sémantique2</code>.<code>label</code>
+	<p><code>code_portfolio</code>.<code>position</code>.<code>tag_sémantique1</code>.<code>tag_sémantique2</code>.<code>label</code>
 	</p>
 	<ul>
 		<li><code>code_portfolio</code> : Code du portfolio référentiel où faire la recherche.</li>
@@ -174,9 +173,7 @@ sidebar:
 		contenant au moins un Get-Resource qui sera mis à jour avec la sélection de l'usager.
 	</p>
 	<h4>Format</h4>
-	<p><code>function</code>,<code>get_multiple</code>/<code>query</code>/<code>code_portfolio.
-		tag_sémantique</code>/<code>get_resource_tag_sémantique</code>,<code>libellé@fr</code>,
-		<code>rôles</code>
+	<p><code>function</code>,<code>get_multiple</code>/<code>query</code>/<code>code_portfolio.tag_sémantique</code>/<code>get_resource_tag_sémantique</code>,<code>libellé@fr</code>,<code>rôles</code>
 	</p>
 	<ul>
 		<li><code>function</code> : Mot réservé.</li>
@@ -199,8 +196,7 @@ sidebar:
 		jour avec la sélection de l'usager.
 	</p>
 	<h4>Format</h4>
-	<p><code>function</code>,<code>get_get_multiple</code>/<code>query</code>/<code>code_portfolio.
-		tag_sémantique</code>/<code>get_resource_tag_sémantique</code>,<code>libellé@fr</code>,
+	<p><code>function</code>,<code>get_get_multiple</code>/<code>query</code>/<code>code_portfolio.tag_sémantique</code>/<code>get_resource_tag_sémantique</code>,<code>libellé@fr</code>,
 		<code>rôles</code>
 	</p>
 	<ul>
@@ -235,14 +231,17 @@ sidebar:
 		et le tag sémantique de l'élément importé sera <code>tag_sémantique</code>.
 	</p>
 	<h4>Format</h4>
-	<p><code>function</code>,<code>import_multiple</code>/<code>query</code>/<code>code_portfolio</code>,<code>libellé@fr</code>,<code>role</code></p>
+	<p><code>function</code>,<code>import_multiple</code>/<code>query</code>/<code>code_portfolio</code>,<code>libellé@fr</code>,<code>rôles</code></p>
 	<ul>
-		<li><code>function</code> : mot réservé</li>
-		<li><code>import_multiple</code> : mot réservé</li>
-		<li><code>query</code> : query du Get_Resource - retourne une liste de code</li>
-		<li><code>code_portfolio</code> : code du portfolio duquel on importe le noeud avec le(s) code(s) sélectionné(s) - peut être ou pas le même que celui du Get_resource. OPTION <code>?</code>.<code>semantictag</code>.</li>
-		<li><code>libellé@fr</code> : Libellé du menu</li>
-		<li><code>role</code> : rôle(s) voyant le menu</li>
+		<li><code>function</code> : Mot réservé.</li>
+		<li><code>import_multiple</code> : Mot réservé.</li>
+		<li><code>query</code> : Query du Get_Resource - retourne une liste de codes.</li>
+		<li><code>code_portfolio</code> : Code du portfolio duquel on importe le noeud avec le(s) 
+			code(s) sélectionné(s) - peut être ou pas le même que celui du Get_resource. 
+			OPTION <code>?</code>.<code>tag_sémantique</code>.
+		</li>
+		<li><code>libellé@fr</code> : Libellé du menu.</li>
+		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
 	</ul>
 </article>
 
@@ -260,14 +259,14 @@ sidebar:
 	    Dans ce cas le code du portfolio d'importation sera le code de l'élément parent trouvé.
 	  </p>
 	<h4>Format</h4>
-	<p><code>function</code>,<code>import_ggmultiple</code>/<code>query</code>/<code>code_portfolio</code>,<code>libellé@fr</code>,<code>role</code></p>
+	<p><code>function</code>,<code>import_ggmultiple</code>/<code>query</code>/<code>code_portfolio</code>,<code>libellé@fr</code>,<code>rôles</code></p>
 	<ul>
-		<li><code>function</code> : mot réservé</li>
-		<li><code>import_ggmultiple</code> : mot réservé</li>
+		<li><code>function</code> : Mot réservé.</li>
+		<li><code>import_ggmultiple</code> : Mot réservé.</li>
 		<li><code>query</code> : query du Get_Get_Resource - retourne une liste de code. OPTION1 : code du portfolio peut-être le mot-réservé <code>?</code>.</li>
 		<li><code>code_portfolio</code> : code du portfolio duquel on importe le noeud avec le(s) code(s) sélectionné(s). OPTION2 : code du portfolio peut-être le mot-réservé <code>?</code>.</li>
-		<li><code>libellé@fr</code> : Libellé du menu</li>
-		<li><code>role</code> : rôle(s) voyant le menu</li>
+		<li><code>libellé@fr</code> : Libellé du menu.</li>
+		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
 	</ul>
 	<p>Exemple d'utilisation: un Get-Resource permet de sélectionner un référentiel parmi une liste de référentiels (le code de l'item doit être le code du portfolio du référentiel).
 	  Un Import_GGMultiple permet d'importer des éléments du référentiel sélectionné dans le Get_resource.
