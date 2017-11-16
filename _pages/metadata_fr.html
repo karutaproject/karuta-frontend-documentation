@@ -9,11 +9,11 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='asmstructure'>Code</h3>
-	<p>Le code d'un élément de portfolio doit être unique dans ce portfolio et est utilisé dans les 
+	<p>Le code d'un élément de portfolio doit être unique dans ce portfolio. Il est utilisé dans les 
 		listes déroulantes (élément Get_Resource, élément Get_Get_Resource, menu Get_Multiple, menu 
 		Get_Get_Multiple, menu Import_Multiple) pour identifier le choix de l'usager. Par défaut le 
 		code et le libellé de l'élément apparaissent dans la liste déroulante et seul le libellé de 
-		l'option choisie par l'usager apparait ensuite dans la ressource. Les mots-clés ci-dessous 
+		l'option choisie par l'usager apparaît ensuite dans la ressource. Les mots-clés ci-dessous 
 		permettent de modifier ce comportement :</p>
 	<ul>
 		<li>Le mot-clé <code>@</code> ajouté au code rendra le code non visible dans la liste déroulante.</li>
@@ -30,7 +30,7 @@ sidebar:
 	<p>
 		Le tag sémantique d'un élément exprime sa sémantique. C'est aussi le moyen de 
 		rechercher des éléments dans un portfolio. Le tag sémantique est utilisé dans le champ  
-		'recherche' (voir ci-dessous) ainsi que dans les scripts de rapport et de batch.
+		'recherche' d'un élément (voir ci-dessous) ainsi que dans les scripts de rapport et de batch.
 	</p>
 	<p>
 		ATTENTION : la recherche de tag sémantique se fait par inclusion. Par exemple, 
@@ -70,10 +70,11 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='encript-resource'>Encripter la ressource?????????????????????</h3>
 	<p>
-		L'attribut permet de spécifier si la ressource est encriptée. Dans ce cas, à l'ouverture 
-		du portfolio, une phrase-clé est demandée à l'usager. Cette phrase-clé sert à encoder/décoder 
-		les valeurs de la ressource. Cette phrase-clé n'est pas stockée dans Karuta et doit donc être 
-		mémorisée par l'usager car elle lui est demandée à chaque ouverture du portfolio.
+		Cet attribut permet de spécifier si la ressource est encriptée. Dans le cas positif, à 
+		l'ouverture du portfolio, une phrase-clé est demandée à l'usager. Cette phrase-clé sert 
+		à encoder/décoder les valeurs de la ressource. Cette phrase-clé n'est pas stockée dans 
+		Karuta et doit donc être mémorisée par l'usager, car elle lui est demandée à chaque ouverture 
+		du portfolio.
 	</p>
 </article>
 
@@ -82,7 +83,8 @@ sidebar:
 	<h3 id='see'>Rôles - Voir</h3>
 	<p>
 		La liste des rôles, séparés par un espace, pouvant voir l'élément. 
-		Exemple : etudiant professeur
+		Exemple : etudiant professeur <br> Par défaut le droit de voir est attribué au rôle 
+		<i>all</i>. Il s'agit de l'unique droit à avoir une valeur par défaut. 
 	</p>
 </article>
 
@@ -96,8 +98,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='edit-resource'>Rôles - Éditer ressource</h3>
 	<p>
-		La liste des rôles, séparés par un espace, pouvant éditer la ressource (disponible 
-		uniquement sur les éléments ressource, non disponible sur les éléments de structure).
+		La liste des rôles, séparés par un espace, pouvant éditer la ressource (y stocker des données). 
+		Disponible uniquement sur les éléments ressource, non disponible sur les éléments de structure.
 	</p>
 </article>
 
