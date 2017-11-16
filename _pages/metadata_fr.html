@@ -192,7 +192,7 @@ sidebar:
 	<p>La fonction Get_Get_Multiple permet à l'usager d'ajouter plusieurs éléments à partir d'une 
 		liste. Comme pour le Get_Multiple, un query permet de sélectionner les éléments de la liste. 
 		L'usager peut cocher un ou plusieurs items de la liste. Pour chaque item de la liste, 
-		Karuta va ajouter un élément prédéfini contenant au moins un ???Get_???Get-Resource qui sera mis à 
+		Karuta va ajouter un élément prédéfini contenant au moins un ???AJOUTER UN Get_ ICI??? Get-Resource qui sera mis à 
 		jour avec la sélection de l'usager.
 	</p>
 	<h4>Format</h4>
@@ -204,9 +204,9 @@ sidebar:
 		<li><code>get_get_multiple</code> : Mot réservé.</li>
 		<li><code>query</code> : Recherche du Get_Get_Resource.</li>
 		<li><code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter (peut être 
-			juste le ???Get_???Get-Resource).
+			juste le ???AJOUTER UN Get_ ICI??? Get-Resource).
 		</li>
-		<li><code>get_resource_tag_sémantique</code> : Tag sémantique du ???Get_???Get_Resource 
+		<li><code>get_resource_tag_sémantique</code> : Tag sémantique du ???AJOUTER UN Get_ ICI??? Get_Resource 
 			(dans la composante à ajouter).
 		</li>
 		<li><code>libellé@fr</code> : Libellé du menu.</li>
@@ -263,12 +263,12 @@ sidebar:
 	<ul>
 		<li><code>function</code> : Mot réservé.</li>
 		<li><code>import_ggmultiple</code> : Mot réservé.</li>
-		<li><code>query</code> : query du Get_Get_Resource - retourne une liste de code. OPTION1 : code du portfolio peut-être le mot-réservé <code>?</code>.</li>
-		<li><code>code_portfolio</code> : code du portfolio duquel on importe le noeud avec le(s) code(s) sélectionné(s). OPTION2 : code du portfolio peut-être le mot-réservé <code>?</code>.</li>
+		<li><code>query</code> : Recherche du Get_Get_Resource - retourne une liste de codes. OPTION1 : code du portfolio peut-être le mot-réservé <code>?</code>.</li>
+		<li><code>code_portfolio</code> : Code du portfolio duquel on importe le noeud avec le(s) code(s) sélectionné(s). OPTION2 : code du portfolio peut-être le mot-réservé <code>?</code>.</li>
 		<li><code>libellé@fr</code> : Libellé du menu.</li>
 		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
 	</ul>
-	<p>Exemple d'utilisation: un Get-Resource permet de sélectionner un référentiel parmi une liste de référentiels (le code de l'item doit être le code du portfolio du référentiel).
+	<p>Exemple d'utilisation : un Get-Resource permet de sélectionner un référentiel parmi une liste de référentiels (le code de l'item doit être le code du portfolio du référentiel).
 	  Un Import_GGMultiple permet d'importer des éléments du référentiel sélectionné dans le Get_resource.
 	</p>
 	<p>menu : <code>function</code>,<code>import_ggmultiple</code>/<code>?.child.referentiel.skill$.label</code>/<code>?</code>,<code>Ajouter une compétence@fr</code>,<code>auteur</code></p>
@@ -279,17 +279,20 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='sharing'>Partager</h3>
-	<p>La fonction Partager envoie un courriel avec un lien permettant de partager un portfolio ou une parite du portfolio</p>
+	<h3 id='sharing'>Partage par l'usager</h3>
+	<p>La fonction Partage par l'usager permet à l'usager d'envoyer un courriel avec un hyperlien qui 
+		partage, en tout ou en partie, son portfolio avec un tiers.</p>
 	<h4>Format</h4>
 	<p><code>rôle</code></p>
 	<p><code>rôle</code>,<code>rôle destinataire</code>,<code>rôles et/ou courriels</code>,<code>niveau (0-4)</code>,<code>durée de vie du lien (en heures)</code>,<code>libellé du bouton@fr</code>,<code>condition (optionel)</code></p>
-		<li><code>rôle</code> rôle de celui qui peut partager</li>
-		<li><code>rôle destinataire</code> rôle qu'aura le destinataire</li>
-		<li><code>rôles et/ou courriels</code> rôles et/ou courriels des destinataires. Si c'est un rôle, tous les personnes ayant ce rôle dans le portfolio seront destinataire d'un courriel</li>
-		<li><code>niveau (0-4)</code> : Le niveau peut prendre cinq valeurs de 0 à 4. Voir ci-dessous</li>
-		<li><code>libellé du bouton@fr</code> : Libellé qui apparaitra sur la page ou l'élément.</li>
-		<li><code>condition</code> condition pour l'apparation du bouton de partage. Exemple :  submitted=='Y'</li>
+		<li><code>rôle</code> Rôle de l'usager qui peut faire le partage.</li>
+		<li><code>rôle destinataire</code> Rôle qu'aura le destinataire dans le portfolio.</li>
+		<li><code>rôles et/ou courriels</code> Rôles et/ou courriels des destinataires. Si c'est 
+			un rôle, tous les personnes ayant ce rôle dans le portfolio seront destinataire d'un 
+			courriel.</li>
+		<li><code>niveau (0-4)</code> : Le niveau peut prendre les valeurs de 0 à 4 (voir ci-dessous).</li>
+		<li><code>libellé du bouton@fr</code> : Libellé qui apparaitra à l'usager qui peut faire le partage.</li>
+		<li><code>condition</code> Condition pour l'apparation du bouton de partage. Exemple :  submitted=='Y'</li>
 	</ul>
 	<h5>Niveau 0 – utilisateur Karuta</h5>
 	<p>L’utilisateur existe et le portfolio est déjà partagé avec l’usager et le rôle. Le mot de passe est demandé si le destinataire n'est pas loggé.</p>
