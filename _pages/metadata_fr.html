@@ -68,7 +68,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='encript-resource'>Encripter la ressource?????????N'EXISTE PLUS????????????</h3>
+	<h3 id='encript-resource'>Encripter la ressource</h3>
 	<p>
 		Cet attribut permet de spécifier si la ressource est encriptée. Dans le cas positif, à 
 		l'ouverture du portfolio, une phrase-clé est demandée à l'usager. Cette phrase-clé sert 
@@ -126,11 +126,11 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='query'>Recherche (ÇA DIT QUERY PARTOUT DANS CETTE PAGE MAIS RECHERCHE DANS KARUTA)</h3>
+	<h3 id='query'>Recherche</h3>
 	<p>
 		Le champ 'recherche' est utilisé par l'élément Get_Resource, l'élément 
 		Get_Get_Resource, le menu Get_Multiple, le menu Get_Get_Multiple, le menu Import_Multiple, 
-		???de même que par les Sections, Pages ou Sous-sections????ÇA SERT À QUOI ÇA?????????.
+		de même que par les Sections, Pages ou Sous-sections.
 	</p>
 	<h4>Format Get_</h4>
 	<p><code>code_portfolio</code>.<code>tag_sémantique</code>.<code>label</code></p>
@@ -192,7 +192,7 @@ sidebar:
 	<p>La fonction Get_Get_Multiple permet à l'usager d'ajouter plusieurs éléments à partir d'une 
 		liste. Comme pour le Get_Multiple, un query permet de sélectionner les éléments de la liste. 
 		L'usager peut cocher un ou plusieurs items de la liste. Pour chaque item de la liste, 
-		Karuta va ajouter un élément prédéfini contenant au moins un ???AJOUTER UN Get_ ICI??? Get-Resource qui sera mis à 
+		Karuta va ajouter un élément prédéfini contenant au moins un Get-Resource qui sera mis à 
 		jour avec la sélection de l'usager.
 	</p>
 	<h4>Format</h4>
@@ -204,9 +204,9 @@ sidebar:
 		<li><code>get_get_multiple</code> : Mot réservé.</li>
 		<li><code>query</code> : Recherche du Get_Get_Resource.</li>
 		<li><code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter (peut être 
-			juste le ???AJOUTER UN Get_ ICI??? Get-Resource).
+			juste le Get-Resource).
 		</li>
-		<li><code>get_resource_tag_sémantique</code> : Tag sémantique du ???AJOUTER UN Get_ ICI??? Get_Resource 
+		<li><code>get_resource_tag_sémantique</code> : Tag sémantique du Get_Resource 
 			(dans la composante à ajouter).
 		</li>
 		<li><code>libellé@fr</code> : Libellé du menu.</li>
@@ -219,12 +219,12 @@ sidebar:
 	<h3 id='import_multiple'>Menu - Import_Multiple</h3>
 	<p>La fonction Import_Multiple permet à l'usager d'ajouter plusieurs éléments à partir d'une liste. 
 		Comme les commandes précédentes, un query permet de sélectionner les éléments de la liste. 
-	  	Mais avec Import_Multiple, les codes des éléments sélectionnés sont utilisés pour importer 
-	  	les éléments ayant ce code dans le portfolio d'importation. Le code du portfolio d'importation 
-	  	peut être le même que celui de recherche, dans ce cas on importe les éléments recherchés et 
-	  	cochés. Mais le code du portfolio d'importation peut être différent de celui de recherche, 
-	  	dans ce cas on importe les éléments ayant le même code que ceux cochés. 
-	  	C'EST QUOI UN PORTFOLIO D'IMPORTATION????LE PORTFOLIO COURANT???CELUI QUI CONTIENT LE MENU????
+		Mais avec Import_Multiple, les codes des éléments sélectionnés sont utilisés pour importer 
+		les éléments ayant ce code dans le portfolio d'importation. Le code du portfolio d'importation 
+		peut être le même que celui de recherche, dans ce cas on importe les éléments recherchés et 
+		cochés. Mais le code du portfolio d'importation peut être différent de celui de recherche, 
+		dans ce cas on importe les éléments ayant le même code que ceux cochés. Le portfolio d'importation 
+		est le portfolio dans lequel on va chercher les éléments à importer.
 	  </p>
 	<p>OPTION : le code du portfolio d'importation peut être de la forme <code>?</code>.
 		<code>semantictag</code>. Dans ce cas le code du portfolio sera le code de l'élément coché 
