@@ -7,9 +7,11 @@ sidebar:
 ---
 <h2 id='commandes'>Commandes</h2>
 
-<p>Un ensemble de commandes permettent de construire des rapports. Il y a trois façons d'exécuter un rapport :</p>
+<p>Un ensemble de commandes permettent de construire des rapports. Il y a trois façons d'exécuter 
+	un rapport :
+</p>
 <ul>
-	<li>avec la ressource 'tableau de bord' dans un portfolio,</li>
+	<li>avec la ressource Tableau de bord dans un portfolio,</li>
 	<li>dans la page Exécuter un rapport en spécifiant le nom du rapport,</li>
 	<li>dans la page Exécuter un rapport en téléversant un fichier CSV (format: voir section Batch). Dans le fichier CSV, les 2 premières lignes de variables globales ne sont pas prises en compte.</li>
 </ul>
@@ -42,61 +44,96 @@ sidebar:
 
 <article>
 	<h3 id='for-each-portfolio'>ForEachPortfolio</h3>
-	<p>Pour chacun des portfolios répondant au test de la sélection, Karuta exécute les commandes qui se trouvent dans le <code>ForEachPortfolio</code></p>
+	<p>Pour chacun des portfolios répondant au test de la sélection, Karuta exécute les commandes qui 
+		se trouvent dans le <code>ForEachPortfolio</code>.
+	</p>
 	<h4>Champs</h4>
-	<p><code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à réinitialiser pour chaque nouveau portfolio</p>
+	<p><code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à 
+		réinitialiser pour chaque nouveau portfolio.
+	</p>
 	<p>
-		<code>Sélection portfolios</code> Test Jquery permetant de sélectionner des portfolios parmi ceux visibles par l'usager.
-		<br/>Exemples:
+		<code>Sélection portfolios</code> Test Jquery permetant de sélectionner des portfolios parmi 
+		ceux visibles par l'usager.
+		<br/>Exemples :
 		<ul>
-			<li><code>code*='2015_work'</code> sélection des portfolios dont le code contient <code>2015_work</code></li>
-			<li><code>code*=portfolio_code</code> sélection des portfolios dont le code contient le contenu de la variable <code>porfolio_code</code></li>
+			<li><code>code*='2015_work'</code> sélection des portfolios dont le code contient 
+				<code>2015_work</code>
+			</li>
+			<li><code>code*=portfolio_code</code> sélection des portfolios dont le code contient le 
+				contenu de la variable <code>porfolio_code</code>
+			</li>
 		</ul>
 	</p>
 	<p><code>Tri - tag sémantique</code> Tag sémantique du noeud sur lequel doit se faire le tri.</p>
-	<p><code>Tri - élément</code> Valeur possible pour le tri (Libellé noeud, Texte d'une ressource, code d'un noeud ou valeur d'un item.)</p>
+	<p><code>Tri - élément</code> Valeur possible pour le tri (libellé noeud, texte d'une ressource, 
+		code d'un noeud ou valeur d'un item.)
+	</p>
 </article>
 
 <article>
 	<h3 id='for-each-portfolio-node'>ForEachPortfolioNode</h3>
-	<p>Pour chacun des portfolios répondant au test de la sélection et des noeuds sélectionnés, Karuta exécute les commandes qui se trouvent dans le <code>ForEachPortfolioNode</code>. Cette commande évite de charger tout le portfolio comme le fait la commande précédente.</p>
+	<p>Pour chacun des portfolios répondant au test de la sélection et des noeuds sélectionnés, 
+		Karuta exécute les commandes qui se trouvent dans le <code>ForEachPortfolioNode</code>. 
+		Cette commande évite de charger tout le portfolio comme le fait la commande précédente.
+	</p>
 	<h4>Champs</h4>
-	<p><code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à réinitialiser pour chaque nouveau portfolio</p>
+	<p><code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à 
+		réinitialiser pour chaque nouveau portfolio.
+	</p>
 	<p>
-		<code>Sélection portfolios</code> Test Jquery permetant de sélectionner des portfolios parmi ceux visibles par l'usager.
-		<br/>Exemples:
+		<code>Sélection portfolios</code> Test Jquery permetant de sélectionner des portfolios parmi 
+		ceux visibles par l'usager.
+		<br/>Exemples :
 		<ul>
-			<li><code>code*='2015_work'</code> sélection des portfolios dont le code contient <code>2015_work</code></li>
-			<li><code>code*=portfolio_code</code> sélection des portfolios dont le code contient le contenu de la variable <code>porfolio_code</code></li>
+			<li><code>code*='2015_work'</code> sélection des portfolios dont le code contient 
+				<code>2015_work</code>
+			</li>
+			<li><code>code*=portfolio_code</code> sélection des portfolios dont le code contient le 
+				contenu de la variable <code>porfolio_code</code>
+			</li>
 		</ul>
 	</p>
 	<p><code>Tri - tag sémantique</code> Tag sémantique du noeud sur lequel doit se faire le tri.</p>
-	<p><code>Tri - élément</code> Valeur possible pour le tri (Libellé noeud, Texte d'une ressource, code d'un noeud ou valeur d'un item.)</p>
+	<p><code>Tri - élément</code> Valeur possible pour le tri (libellé noeud, texte d'une ressource, 
+		code d'un noeud ou valeur d'un item).
+	</p>
 	<p><code>Tag sémantique</code>  Tag sémantique du ou des noeuds à sélectionner dans le portfolio.</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='for-each-person'>ForEachPerson</h3>
-	<p>Pour chacune des personnes répondant au test de la sélection, Karuta exécute les commandes qui se trouvent dans le <code>ForEachPerson</code></p>
+	<p>Pour chacune des personnes répondant au test de la sélection, Karuta exécute les commandes qui 
+		se trouvent dans le <code>ForEachPerson</code>.
+	</p>
 	<h4>Champs</h4>
-	<p><code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à réinitialiser pour chaque nouvelle personne</p>
+	<p><code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à 
+		réinitialiser pour chaque nouvelle personne.
+	</p>
 	<p>
 		<code>Sélection personnes</code> Test Jquery permetant de sélectionner les personnes du système.
 	</p>
-	<p>Exemples:</p>
+	<p>Exemples :</p>
 	<ul>
-		<li><code>username='olivier'</code> sélection de la personne dont le username est  <code>olivier</code></li>
-		<li><code>username=identifier</code> sélection de la personne dont le username est le contenu de la variable <code>identifier</code></li>
+		<li><code>username='olivier'</code> sélection de la personne dont le username est 
+			<code>olivier</code>
+		</li>
+		<li><code>username=identifier</code> sélection de la personne dont le username est le contenu 
+			de la variable <code>identifier</code>
+		</li>
 	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='for-each-node'>ForEachNode</h3>
-	<p>Pour chacune des éléments de portfolio répondant aux critères (type de noeud, tag sémantique et test), Karuta exécute les commandes qui se trouvent dans le <code>ForEachNode</code></p>
+	<p>Pour chacun des éléments de portfolio répondant aux critères (type de noeud, tag sémantique et 
+		test), Karuta exécute les commandes qui se trouvent dans le <code>ForEachNode</code>.
+	</p>
 	<h4>Champs</h4>
-	<p><code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à réinitialiser pour chaque nouvel élément</p>
+	<p><code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à 
+		réinitialiser pour chaque nouvel élément.
+	</p>
 	<p>
 		<code>Type de noeud</code> Liste déroulante des choix possibles.
 	</p>
@@ -104,26 +141,33 @@ sidebar:
 		<code>Tag sémantique</code> Tag sémantique des éléments à sélectionner.
 	</p>
 	<p>
-		<code>Test</code> Test Jquery permettant de filtrer les éléments répondant aux deux critères précédents. Les tests ci-dessous peuvent être combinés. Par exemple : <code>.sort().first()</code> retournera le premier élément de la liste triée.
+		<code>Test</code> Test Jquery permettant de filtrer les éléments répondant aux deux critères 
+		précédents. Les tests ci-dessous peuvent être combinés. Par exemple : 
+		<code>.sort().first()</code> retournera le premier élément de la liste triée.
 	</p>
-	<p>Tests prédéfinis:</p>
+	<p>Tests prédéfinis :</p>
 	<ul>
 		<li><code>.sort()</code> trie la liste des noeuds résultats sur le libellé en ordre croissant<br></li>
 		<li><code>.invsort()</code> trie la liste des noeuds résultats sur le libellé en ordre décroissant<br></li>
-		<li><code>.filename_not_empty()</code> s'applique aux documents et vérifie qu'il y a bien un fichier<br></li>
-		<li><code>.url_not_empty()</code> s'applique aux urls et vérifie qu'il y a bien un url<br></li>
-		<li><code>.text_not_empty()</code> s'applique aux textes couts et longs et vérifie qu'il y a bien du texte dans la ressource.<br></li>
+		<li><code>.filename_not_empty()</code> s'applique aux documents et vérifie un fichier a été uploadé<br></li>
+		<li><code>.url_not_empty()</code> s'applique aux urls et vérifie si un url a été enregistré<br></li>
+		<li><code>.text_not_empty()</code> s'applique aux textes couts et longs et vérifie si du texte a été enregistré dans la ressource.<br></li>
 	</ul>
-	<p>Exemples de fonctions jQuery:</p>
+	<p>Exemples de fonctions jQuery :</p>
 	<ul>
 		<li><code>.first()</code> retourne le premier élément de la liste résultat<code></code></li>
 		<li><code>.not(':eq(0)')</code> retourne la liste sauf le premier élément<br></li>
 		<li><code>.last()</code>&nbsp;retourne le dernier élément de la liste résultat</li>
 		<li><code>.has("code:contains('2')") </code>sélectionne les éléments dont le code contient un 2</li>
-		<li><code>.siblings().has("metadata[semantictag*=job-title]")</code> retourne la liste des éléments de même niveau contenant le tag sémantique " job-title "</li>
+		<li><code>.siblings().has("metadata[semantictag*=job-title]")</code> retourne la liste des éléments 
+			de même niveau contenant le tag sémantique " job-title "
+		</li>
 		<li><code>.has("metadata-wad[submitted='Y']").last()</code> retourne le dernier élément ayant été soumis<br></li>
 		<li><code>.has("metadata-wad[private='N']").last()</code> retourne le dernier élément qui est visible<br></li>
-		<li><code>.has('asmContext:has("metadata[semantictag*=visibility-cv-short]"):has("code:contains(@1)")')</code> retourne l'élément si il y a un enfant avec le sémantique tag &nbsp;visibility-cv-short et le code contient @1</li>
+		<li><code>.has('asmContext:has("metadata[semantictag*=visibility-cv-short]"):has("code:contains(@1)")')</code> 
+			retourne l'élément si il y a un enfant avec le tag sémantique "&nbsp;visibility-cv-short " et 
+			dont le code contient @1
+		</li>
 		<li><code>.sortElements(function(a, b){ return $("code",$("asmResource[xsi_type=Get_Resource]",a)).text() &gt; $("code",$("asmResource[xsi_type=Get_Resource]",b)).text() ? 1 : -1; })</code> trie sur le code du Get_Resource</li>
 	</ul>
 </article>
