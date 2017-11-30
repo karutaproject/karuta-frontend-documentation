@@ -9,9 +9,12 @@ sidebar:
 <h3>Fonctionnement</h3>
 <!- =========================================== ->
 
-<p>Les commandes Batch permettent d'automatiser la création, modification et suppression de portfolios ainsi que la création ou suppresion d'usagers.</p>
+<p>Ensemble de commandes de script permettant d'automatiser la création, modification et suppression de 
+	portfolios, ainsi que la création ou suppresion d'usagers.
+</p>
 <img src='../assets/img/execute-batch.png' width='80%'/>
-<p>À partir d'un ou plusieurs modèles de portfolios, d'un script batch et d'un fichier CSV, KARUTA va créer les usagers et leurs portfolios associés.</p>
+<p>À partir d'un ou plusieurs modèles de portfolios, d'un script batch et d'un fichier CSV, KARUTA 
+	crée les usagers et leurs portfolios.</p>
 <p>Exemple de script</p>
 <img src='../assets/img/batch-script.png'/>
 <ul>
@@ -30,10 +33,20 @@ sidebar:
 <!- =========================================== ->
 <h3>Structure du fichier CSV</h3>
 <!- =========================================== ->
-<p><code>Ligne 1 : </code> Ce sont les noms des variables 'globales', c'est à dire les variables qui ont les même valeurs pour toutes les lignes. <code>model_code</code> est un nom réservé. C'est le code du batch à exécuter. Dans le batch les références au variables globales seront précédées de <code>//</code></p>
-<p><code>Ligne 2 : </code> Ce sont respectivement les valeurs des variables globales. Dans l'exemple présenté la valeur de model_code est createStudents</p>
-<p><code>Ligne 3 : </code> Ce sont les noms des variables 'locales', c'est à dire les variables qui ont des valeurs différentes pour chaque ligne.</p>
-<p><code>Ligne 4 et +  : </code> Ce sont respectivement les valeurs des variables locales.</p>
+<p><code>Ligne 1 : </code> Les noms des variables globales, c'est à dire les variables qui 
+	ont les même valeurs pour toutes les lignes. <code>model_code</code> est un mot réservé : c'est 
+	le code du portfolio contenant le script de batch à exécuter. Dans le script de batch les 
+	références aux variables globales sont précédées de <code>//</code>.
+</p>
+<p><code>Ligne 2 : </code> Les valeurs des variables globales. Dans l'exemple présenté la valeur 
+	de <code>model_code</code> est <i>createStudents</i> : c'est le nom du portfolio contenant le 
+	script de batch.
+</p>
+<p><code>Ligne 3 : </code> Les noms des variables locales, c'est à dire les variables qui 
+	ont des valeurs différentes pour chaque ligne à partir de la ligne suivante. 
+	Exemple : nomEtudiant, prenomEtudiant, matriculeEtudiant, courrielEtudiant.
+</p>
+<p><code>Ligne 4 et + : </code> Les valeurs des variables locales, habituellement un usager par ligne.</p>
 
 <!- =========================================== ->
 <h3>Commandes</h3>
@@ -66,12 +79,12 @@ Les commandes disponibles sont :
 	<li><a href='#share-usergroup'><code>ShareUserGroup</code></a></li>
 	<li><a href='#unshare-usergroup'><code>UnshareUserGroup</code></li>
 </ul>
-<h4>Commandes pour ajout dans portfolios</h4>
+<h4>Commandes pour ajout dans un portfolios</h4>
 <ul>
 	<li><a href='#import-node'><code>ImportNode</code></a></li>
 	<li><a href='#move-up'><code>MoveUp</code></a></li>
 </ul>
-<h4>Commandes de mise à jour d'éléments</h4>
+<h4>Commandes de mise à jour d'éléments de portfolio</h4>
 <ul>
 	<li><a href='#update-field'><code>UpdateField</code></a></li>
 	<li><a href='#update-proxy'><code>UpdateProxy</code></a></li>
@@ -90,113 +103,174 @@ Les commandes disponibles sont :
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='for-each-line'>ForEachLine</h3>
-	<p>ForEachLine est une boucle. Les commandes du ForEachLine seront exécutées pour chaque ligne du Fichier CSV.</p>
+	<p>ForEachLine est une boucle. Les commandes à l'intérieur de l'élément ForEachLine seront 
+		exécutées pour chaque ligne du fichier CSV (lignes 4+).
+	</p>
 </article>
 
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='create-person'>CreatePerson</h3>
-	<p>La commande crée un usager avec les informations fournies dans les champs de la commande.</p>
+	<p>Créer un usager. Attention de remplacer les valeurs par défaut par vos propres noms de variables 
+		locales (ligne 3 du fichier CSV).
+	</p>
 	<h4>Champs</h4>
-	<p><code>Identifiant</code></p>
-	<p><code>Prénom</code></p>
-	<p><code>Nom</code></p>
-	<p><code>Courriel</code></p>
-	<p><code>Mot de passe</code></p>
-	<p><code>Créateur?</code></p>
+	<p><code>Identifiant</code> Identifiant unique qui servira de login dans le système Karuta. 
+		Exemple : matricule ou courriel.
+	</p>
+	<p><code>Prénom</code> Prénom de l'usager.</p>
+	<p><code>Nom</code> Nom de famille de l'usager.</p>
+	<p><code>Courriel</code> Courriel de l'usager.</p>
+	<p><code>Mot de passe</code> Le mot de passe de l'usager dans le système Karuta.</p>
+	<p><code>Créateur?</code> Le compte utilisateur créé doit-il avoir les droits d'un designer 
+		Karuta? (En général, non!)
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='delete-person'>DeletePerson</h3>
-	<p>La commande permet de supprimer un usager</p>
+	<p>Supprimer un usager. (Attention : supprimer un usager ne supprime pas ses portfolios!)</p>
 	<h4>Champ</h4>
-	<p><code>Identifiant</code></p>
+	<p><code>Identifiant</code> Identifiant unique de l'usager à supprimer (son login).</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='join-usergroup'>JoinUserGroup</h3>
-	<p>La commande permet de mettre un usager daans un groupe d'usager</p>
+	<p>Ajouter un usager à un groupe d'usagers.</p>
 	<h4>Champs</h4>
-	<p><code>Personne</code> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
-	<p><code>Groupe</code> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
+	<p><code>Personne</code> Ajouter un élément <i>select</i> pour une variable globale ou 
+		locale du fichier CVS ou un élément <i>value</i> pour spécifier directement l'identifiant 
+		de l'usager.
+	</p>
+	<p><code>Groupe</code> Ajouter un élément <i>select</i> pour une variable globale ou 
+		locale du fichier CVS ou un élément <i>value</i> pour spécifier directement le nom du 
+		groupe d'usagers.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='leave-usergroup'>LeaveUserGroup</h3>
-	<p></p>
+	<p>Retirer un usager d'un groupe d'usagers.</p>
 	<h4>Champs</h4>
-	<p><code>Personne</code> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
-	<p><code>Groupe</code> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
+	<p><code>Personne</code> Ajouter un élément <i>select</i> pour une variable globale ou 
+		locale du fichier CVS ou un élément <i>value</i> pour spécifier directement l'identifiant 
+		de l'usager.
+	</p>
+	<p><code>Groupe</code> Ajouter un élément <i>select</i> pour une variable globale ou 
+		locale du fichier CVS ou un élément <i>value</i> pour spécifier directement le nom du 
+		groupe d'usagers.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='create-tree'>CreateTree</h3>
-	<p>La commande permet de créer un portfolio à partir d'un modèle de portfolio et de précider le code et le libellé du portfolio qui sera créé.</p>
+	<p>Créer une instance portfolio à partir d'un modèle de portfolio et de préciser le 
+		code et le libellé du portfolio qui sera créé.
+	</p>
 	<h4>Champs</h4>
-	<p><code>ID</code>l'ID est utilisé, dans les commandes nécessitant la sélection d'un arbre, pour faire référence à ce portfolio, par exemple, pour le partager avec un usager.</p>
-	<p><code>Modèle</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
-	<p><code>Code</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
-	<p><code>Libellé</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
+	<p><code>ID</code> L'ID est utilisé dans les commandes nécessitant la sélection d'un arbre 
+		pour faire référence à ce portfolio - par exemple pour le partager avec un usager.
+	</p>
+	<p><code>Modèle</code> Modèle de portfolio à instancier : <i>code du projet.code du portfolio</i>. 
+		Ajouter des éléments <i>select</i> pour des variables globales ou 
+		locales du fichier CVS et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+	</p>
+	<p><code>Code</code> Code du portfolio qui sera créé. Ajouter des éléments <i>select</i> pour des 
+		variables globales ou locales du fichier CVS et/ou des éléments <i>value</i> pour spécifier 
+		directement des valeurs.
+	</p>
+	<p><code>Libellé</code> Libellé du portfolio qui sera créé. Ajouter des éléments <i>select</i> 
+		pour des variables globales ou locales du fichier CVS et/ou des éléments <i>value</i> pour 
+		spécifier directement des valeurs.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='share-tree'>ShareTree</h3>
-	<p>La commande permet de partager un portfolio avec un usager dans un rôle donné.</p>
+	<p>Partager un portfolio avec un usager dans un rôle spécifié.</p>
 	<h4>Champs</h4>
-	<p><code>Sélection arbre</code> permet de sélectionner l'id du portfolio concerné par le partage.</p>
-	<p><code>Personne</code> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
-	<p><code>Rôle</code> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
+	<p><code>Sélection arbre</code> Sélectionner l'ID du portfolio concerné par le partage. 
+		L'ID a précédement été attribué soit dans un élément createTree ou dans un élément selectTree.
+	</p>
+	<p><code>Personne</code> Ajouter un élément <i>select</i> pour une variable globale ou 
+		locale du fichier CVS ou un élément <i>value</i> pour spécifier directement l'identifiant 
+		de l'usager.
+	</p>
+	<p><code>Rôle</code> Ajouter un élément <i>select</i> pour une variable globale ou 
+		locale du fichier CVS ou un élément <i>value</i> pour spécifier directement le rôle.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='select-tree'>SelectTree</h3>
-	<p>La commande permet de sélectionner un portfolio qui sera référencé dans d'autres commandes.</p>
+	<p>Sélectionner un portfolio qui sera ensuite référencé dans d'autres commandes du script.</p>
 	<h4>Champ</h4>
-	<p><code>Code</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
+	<p><code>Code</code> Code du portfolio à sélectionner : <i>code du projet.code du portfolio</i>. 
+		Ajouter des éléments <i>select</i> pour des variables globales ou locales du fichier CVS 
+		et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='delete-tree'>DeleteTree</h3>
-	<p>La commande permet de supprimer un portfolio.</p>
+	<p>Supprimer un portfolio.</p>
 	<h4>Champ</h4>
-	<p><code>Code</code> Il faut ajouter un <i>select</i> pour une variable et/ou <i>value</i> pour spécifier directement une valeur</p>
+	<p><code>Code</code> Code du portfolio à supprimer : <i>code du projet.code du portfolio</i>. 
+		Ajouter des éléments <i>select</i> pour des variables globales ou locales du fichier CVS 
+		et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='join-portfoliogroup'>JoinPortfolioGroup</h3>
-	<p>La commande permet d'ajouter un portfolio à un groupe de portfolios.</p>
+	<p>Ajouter un portfolio à un groupe de portfolios.</p>
 	<h4>Champs</h4>
-	<p><code>Sélection arbre</code> permet de sélectionner l'id du portfolio concerné par le partage.</p>
-	<p><code>Groupe</code> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
+	<p><code>Sélection arbre</code> Sélectionner dans une liste déroulante l'ID du portfolio 
+		concerné par le partage.
+	</p>
+	<p><code>Groupe</code> Ajouter un élément <i>select</i> pour une variable globale ou locale 
+		du fichier CVS ou un élément <i>value</i> pour spécifier directement le nom du groupe de 
+		portfolios.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='share-usergroup'>ShareUserGroup</h3>
-	<p>La commande permet de partager un portfolio avec un groupe d'usagers avec un rôle donné.</p>
+	<p>Partager un portfolio avec un groupe d'usagers dans un rôle spécifié.</p>
 	<h4>Champs</h4>
-	<p><code>Sélection arbre</code> permet de sélectionner l'id du portfolio concerné par le partage.</p>
-	<p><code>Groupe</code> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
-	<p><code>Rôle</code> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
+	<p><code>Sélection arbre</code> Sélectionner dans une liste déroulante l'ID du portfolio 
+		concerné par le partage.
+	</p>
+	<p><code>Groupe</code> Ajouter un élément <i>select</i> pour une variable globale ou locale 
+		du fichier CVS ou un élément <i>value</i> pour spécifier directement le nom du groupe 
+		d'usagers.
+	</p>
+	<p><code>Rôle</code> Ajouter un élément <i>select</i> pour une variable globale ou 
+		locale du fichier CVS ou un élément <i>value</i> pour spécifier directement le rôle.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='unshare-usergroup'>UnshareUserGroup</h3>
-	<p>La commande permet de partager un portfolio avec un groupe d'usagers avec un rôle donné.</p>
+	<p>La commande permet de partager un portfolio avec un groupe d'usagers dans un rôle spécifié.</p>
 	<h4>Champs</h4>
 	<p><code>Sélection arbre</code> permet de sélectionner l'id du portfolio concerné par le partage.</p>
-	<p><code>Groupe</code> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
-	<p><code>Rôle</code> Il faut ajouter un select pour une variable ou value pour spécifier directement une valeur</p>
+	<p><code>Groupe</code> Il faut ajouter <i>select</i> pour une variable ou <i>value</i> pour 
+		spécifier directement le nom du groupe d'usagers.</p>
+	<p><code>Rôle</code> Il faut ajouter un <i>select</i> pour une variable ou <i>value</i> pour 
+		spécifier directement le rôle.
+	</p>
 </article>
 
 <article>
