@@ -5,8 +5,12 @@ title: "Éléments ressources"
 sidebar:
  nav: "resources_fr"
 ---
-
-Les ressources sont :
+<p>Les éléments ressource contiennent les données d'un portfolio. Chaque élément ressource vient avec
+	une liste de droits (voir, éditer, soumettre, etc). Pour chaque droit, on peut spécifier un ou
+	plusieurs rôles (par exemple <i>etudiant</i>) qui auront ce droit. Dans la représentation XML du 
+	portfolio, les	ressources sont les feuilles.
+</p>
+<p>Les ressources disponibles sont :</p>
 <ul>
 
 	<li><code><a href='#field'>Texte court</a></code></li>
@@ -27,42 +31,63 @@ Les ressources sont :
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='field'>Texte court</h3>
-	<p></p>
+	<p>L'élément Texte court est un champ. Il est utilisé pour entrer une donnée courte comme un nom.
+	Généralement on veut attribuer le droit d'édition de cet élément à un rôle, par exemple 
+	<i>etudiant</i> ou <i>enseignant</i>.
+</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='textfield'>Texte long</h3>
-	<p></p>
+	<p>L'élément Texte long est utilisé pour entrer un texte plus long que le champ. L'utilisateur
+		qui a le droit d'édition sur cet élément dispose d'un éditeur de texte simple qui offre des
+		options de mise en forme de base. Le texte long peut aussi être utilisé par le designer 
+		Karuta pour donner des instructions à l'utilisateur. Dans ce cas, le rôle d'édition n'est 
+		attribué à aucun utilisateur.</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='image'>Image</h3>
-	<p></p>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='document'>Document</h3>
-	<p></p>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='url'>URL</h3>
-	<p></p>
+	<p>L'élément Image permet de téléverser un fichier image (tous les formats courants sont
+		acceptés). L'image est ensuite affichée dans le portfolio. Il est possible d'attribuer
+		au rôle qui a le droit d'édition sur cet élément le droit supplémentaire de redéfinir
+		la taille d'affichage de l'image.</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='audio'>Audio</h3>
-	<p></p>
+	<p>L'élément Audio permet de téléverser un fichier MP3. Cet élément vient avec un lecteur 
+		audio pour écouter le fichier téléversé. Seul l'utilisateur avec le droit d'édition 
+		peut téléverser un fichier, mais tous les utilisateurs qui ont le droit de voir l'élément 
+		(par défaut <i>all</i>, tous les rôles) peuvent l'écouter.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='video'>Vidéo</h3>
+	<p>L'élément Vidéo permet de téléverser un fichier MP4. Cet élément vient avec un 
+		lecteur vidéo pour regarder le fichier téléversé. Seul l'utilisateur avec le droit
+		d'édition peut téléverser un fichier, mais tous les utilisateurs qui ont le droit 
+		de voir l'élément peuvent le regarder.
+	</p></p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='document'>Document</h3>
+	<p>L'élément Document permet de téléverser un fichier de n'importe quel type au portfolio. 
+		Contrairement aux éléments Image, Audio et Vidéo, le contenu du fichier n'est pas affiché 
+		dans le portfolio - le fichier est disponible pour téléchargement par tous les usagers 
+		qui ont le droit de voir l'élément.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='url'>URL</h3>
 	<p></p>
 </article>
 
