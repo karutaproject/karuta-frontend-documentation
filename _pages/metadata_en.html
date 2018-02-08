@@ -1,41 +1,342 @@
 ---
 layout: archive_en
 permalink: /metadata_en/
-title: "Metadata"
+title: "Metadata of a Karuta element"
 sidebar:
  nav: "metadata_en"
 ---
-To be translated ...
+<p>
+	Element metadata allow the designer to attribute unique identifiers to an element and also to
+	define it's behavior. For example, in the case of structural elements, we may define user-specific
+	menus that allow the designer or even an end-user to add extra elements. In the case of resource 
+	elements, we may define the roles attributed to each right (who can do what on each element). 
+	It is also in the metadata that we specify which elements will fill a choice-box. Finally we may 
+	also specify which users will be able to share their portfolio with other parties, and under which
+	conditions.
+</p>
+<p>
+	Metadata is accessed through an element's editing box.
+</p>
+<p>Metadata:</p>
+<ul>
+	<li><code><a href='#asmstructure'>Code</a></code></li>
+	<li><code><a href='#semantictag'>Semantic Tag</a></code></li>
+	<li><code><a href='#multilingual-node'>Multilingual Node</a></code></li>
+	<li><code><a href='#multilingual-resource'>Multilingual Resource</a></code></li>
+	<li><code><a href='#encript-resource'>Encrypt Resource</a></code></li>
+	<li><code><a href='#see'>Roles - See</a></code></li>
+	<li><code><a href='#delete'>Roles - Delete</a></code></li>
+	<li><code><a href='#edit-resource'>Roles - Edit Resource</a></code></li>
+	<li><code><a href='#comment'>Roles - Comment</a></code></li>
+	<li><code><a href='#submit'>Roles - Submit</a></code></li>
+	<li><code><a href='#query'>Query</a></code></li>
+	<li><code><a href='#get_multiple'>Menu - Get_Multiple</a></code></li>
+	<li><code><a href='#get_get_multiple'>Menu - Get_Get_Multiple</a></code></li>
+	<li><code><a href='#import_multiple'>Menu - Import_Multiple</a></code></li>
+	<li><code><a href='#import_ggmultiple'>Menu - Import_GGMultiple</a></code></li>
+	<li><code><a href='#sharing'>Sharing by the end-user</a></code></li>
+</ul>
+
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='asmstructure'>Code</h3>
-	<p>Le code est utilisée dans les listes déroulantes (Get_Resource, Get_get_Resource, Menu-Get_Multiple, Menu-Import_Multiple) pour identifier le choix de l'usager. Par défaut le code et le libellé de l'élément apparaissent dans la liste déroulante et seul le libellé apparait ensuite dans la ressource.</p>
+	<p>Le code d'un élément de portfolio doit être unique dans ce portfolio. Il est utilisé dans les 
+		listes déroulantes (élément Get_Resource, élément Get_Get_Resource, menu Get_Multiple, menu 
+		Get_Get_Multiple, menu Import_Multiple) pour identifier le choix de l'usager. Par défaut le 
+		code et le libellé de l'élément apparaissent dans la liste déroulante et seul le libellé de 
+		l'option choisie par l'usager apparaît ensuite dans la ressource. Les mots-clés ci-dessous 
+		permettent de modifier ce comportement :</p>
 	<ul>
-		<li>Le mot-clé <code>@</code>&nbsp;ajouté au code rendra le code non visible dans la liste d'une boîte de choix.</li>
-		<li>Le mot-clé <code>#</code>&nbsp;ajouté au code rendra le code visible dans la ressource.</li>
-		<li>Le mot-clé <code>&amp;</code>&nbsp;ajouté au code (uniquement pour l'élément <b>Item</b>) rendra la valeur associée visible dans la ressource.</li>
+		<li>Le mot-clé <code>@</code> ajouté au code rendra le code non visible dans la liste déroulante.</li>
+		<li>Le mot-clé <code>#</code> ajouté au code rendra le code visible dans la ressource.</li>
+		<li>Le mot-clé <code>&amp;</code> ajouté au code (uniquement pour l'élément <b>Item</b>) rendra la <b>valeur</b> associée visible dans la ressource.</li>
 		<li>Le mot-clé <code>%</code> ajouté au code rendra le libellé non visible dans la ressource.</li>
+		<li>Le mot-clé <code>$</code> ajouté au code rendra le libellé non visible dans la liste déroulante.</li>
 	</ul>
 </article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='semantictag'>Tag sémantique</h3>
+	<p>
+		Le tag sémantique d'un élément exprime sa sémantique. C'est aussi le moyen de 
+		rechercher des éléments dans un portfolio. Le tag sémantique est utilisé dans le champ  
+		'recherche' d'un élément (voir ci-dessous) ainsi que dans les scripts de rapport et de batch.
+	</p>
+	<p>
+		ATTENTION : la recherche de tag sémantique se fait par inclusion. Par exemple, 
+		si on recherche les éléments de tag sémantique 'competence', les éléments avec comme 
+		tag sémantique 'sous-competence' seront également trouvés, car le mot 'competence' 
+		est inclus dans le mot 'sous-competence'.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='multilingual-node'>Noeud multilingue</h3>
+	<p>
+		L'attribut 'noeud multilingue' d'un élément permet de spécifier si le <b>libellé</b> du noeud 
+		prend des valeurs différentes ou non dans le cas où le portfolio est multilingue. Si le noeud 
+		n'est pas multilingue, la valeur du libellé sera stockée dans la langue par défaut définie 
+		dans le fichier de configuration _init.js.
+	</p>
+	<p>
+		Remarque : le code n'est jamais multilingue. Il a la même valeur quelle que soit la langue 
+		sélectionnée.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='multilingual-resource'>Ressource multilingue</h3>
+	<p>	
+		L'attribut 'ressource multilingue' d'un élément permet de spécifier si les données entrées 
+		pour la ressource prennent des valeurs différentes ou non dans le cas où le portfolio est 
+		multilingue. Si la ressource n'est pas multilingue les valeurs entrées pour l'élément 
+		seront stockées dans la langue par défaut définie dans le fichier de configuration _init.js.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='encript-resource'>Encripter la ressource</h3>
+	<p>
+		Cet attribut permet de spécifier si la ressource est encriptée. Dans le cas positif, à 
+		l'ouverture du portfolio, une phrase-clé est demandée à l'usager. Cette phrase-clé sert 
+		à encoder/décoder les valeurs de la ressource. Cette phrase-clé n'est pas stockée dans 
+		Karuta et doit donc être mémorisée par l'usager, car elle lui est demandée à chaque ouverture 
+		du portfolio.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='see'>Rôles - Voir</h3>
+	<p>
+		La liste des rôles, séparés par un espace, pouvant voir l'élément. 
+		Exemple : etudiant professeur <br> Par défaut le droit de voir est attribué au rôle 
+		<i>all</i>. Il s'agit de l'unique droit à avoir une valeur par défaut. 
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='delete'>Rôles - Supprimer</h3>
+	<p>La liste des rôles, séparés par un espace, pouvant supprimer l'élément.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='edit-resource'>Rôles - Éditer ressource</h3>
+	<p>
+		La liste des rôles, séparés par un espace, pouvant éditer la ressource (y stocker des données). 
+		Disponible uniquement sur les éléments ressource, non disponible sur les éléments de structure.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='comment'>Rôles - Commenter</h3>
+	<p>
+	La liste des rôles, séparés par un espace, pouvant commenter l'élément. Ce droit ajoute un 
+	éditeur de texte à la ressource; les commentaires sont datés et signés du nom de l'usager 
+	qui l'a écrit. Pour pouvoir commenter un élément, l'usager doit avoir également le droit 
+	d'éditer la ressource.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='submit'>Rôles - Soumettre</h3>
+	<p>
+		La liste des rôles, séparés par un espace, pouvant soumettre l'élément. Ce droit ajoute 
+		un bouton 'soumettre'. Lorsque l'usager soumet un élément, les droits d'édition et/ou de 
+		suppression sont retirés de l'élément et de tous ses enfants.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='query'>Recherche</h3>
+	<p>
+		Le champ 'recherche' est utilisé par l'élément Get_Resource, l'élément 
+		Get_Get_Resource, le menu Get_Multiple, le menu Get_Get_Multiple, le menu Import_Multiple, 
+		de même que par les Sections, Pages ou Sous-sections.
+	</p>
+	<h4>Format Get_</h4>
+	<p><code>code_portfolio</code>.<code>tag_sémantique</code>.<code>label</code></p>
+	<ul>
+		<li>
+			<code>code_portfolio</code> : Code du portfolio référentiel où faire la recherche. 
+			Le code du portfolio est formé de deux parties séparées par un point : la première 
+			partie est le code du projet dans lequel se trouve le portfolio référentiel, la 
+			deuxième partie est le code du portfolio référentiel lui-même. Le code du projet est 
+			optionel : si il est absent, il est remplacé par le code du projet dans lequel se 
+			trouve le portfolio courant (le portfolio qui contient le Get_).
+		</li>
+		<li><code>tag_sémantique</code> : Tag sémantique des élements à chercher.</li>
+		<li><code>label</code> : Mot réservé.</li>
+	</ul>
+	<h4>Format Get_Get_</h4>
+	<p><code>code_portfolio</code>.<code>position</code>.<code>tag_sémantique1</code>.<code>tag_sémantique2</code>.<code>label</code>
+	</p>
+	<ul>
+		<li><code>code_portfolio</code> : Code du portfolio référentiel où faire la recherche.</li>
+		<li>
+			<code>position</code> : Indique où chercher dans le portfolio courant le code de l'élément 
+			parent qui va permettre de restreindre la recherche dans le référentiel. Prend une des 
+			valeurs suivantes : <i>child</i>, <i>sibling</i>, <i>parent</i>, <i>parent.parent</i>, 
+			<i>parent.parent.parent</i>
+		</li>
+		<li><code>tag_sémantique1</code> : Tag sémantique du parent qui restreint la recherche.</li>
+		<li><code>tag_sémantique2</code> : Tag sémantique des éléments à chercher dans le référentiel.</li>
+		<li><code>label</code> : Mot réservé.</li>
+	</ul>
+</article>
+
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='get_multiple'>Menu - Get_Multiple</h3>
+	<p>La fonction Get_Multiple permet à l'usager d'ajouter plusieurs éléments à partir d'une liste. 
+		Un query permet de sélectionner les éléments de la liste. L'usager peut cocher un ou plusieurs 
+		items de la liste. Pour chaque item de la liste, Karuta va ajouter un élément prédéfini 
+		contenant au moins un Get-Resource qui sera mis à jour avec la sélection de l'usager.
+	</p>
 	<h4>Format</h4>
-	<p><code>function</code>,<code>get_multiple</code>/<code>query</code>/<code>code_portfolio.semtag</code>/<code>get_resource_semtag</code>,<code>libellé@fr</code>,<code>role</code></p>
+	<p><code>function</code>,<code>get_multiple</code>/<code>query</code>/<code>code_portfolio.tag_sémantique</code>/<code>get_resource_tag_sémantique</code>,<code>libellé@fr</code>,<code>rôles</code>
+	</p>
 	<ul>
-		<li><code>function</code> : mot réservé</li>
-		<li><code>get_multiple</code> : mot réservé</li>
-		<li><code>query : query du Get_Resource</li>
-		<li><code>code_portfolio.semtag</code> : part à ajouter (peut être juste le Get-Resource)</li>
-		<li><code>get_resource_semtag</code> : tag sémantique du Get_Resource (dans part à ajouter)</li>
-		<li><code>libellé@fr</code> : Libellé du menu</li>
-		<li><code>role</code> : rôle(s) voyant le menu</li>
+		<li><code>function</code> : Mot réservé.</li>
+		<li><code>get_multiple</code> : Mot réservé.</li>
+		<li><code>query</code> : Recherche du Get_Resource.</li>
+		<li><code>code_portfolio.tag_sémantique</code> : Élément à ajouter (peut être juste le Get-Resource).</li>
+		<li><code>get_resource_tag_sémantique</code> : Tag sémantique du Get_Resource (dans l'élément à ajouter).</li>
+		<li><code>libellé@fr</code> : Libellé du menu.</li>
+		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
 	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='import_multiple'>Menu - Get_Multiple</h3>
-	<p></p>
+	<h3 id='get_get_multiple'>Menu - Get_Get_Multiple</h3>
+	<p>La fonction Get_Get_Multiple permet à l'usager d'ajouter plusieurs éléments à partir d'une 
+		liste. Comme pour le Get_Multiple, un query permet de sélectionner les éléments de la liste. 
+		L'usager peut cocher un ou plusieurs items de la liste. Pour chaque item de la liste, 
+		Karuta va ajouter un élément prédéfini contenant au moins un Get-Resource qui sera mis à 
+		jour avec la sélection de l'usager.
+	</p>
+	<h4>Format</h4>
+	<p><code>function</code>,<code>get_get_multiple</code>/<code>query</code>/<code>code_portfolio.tag_sémantique</code>/<code>get_resource_tag_sémantique</code>,<code>libellé@fr</code>,
+		<code>rôles</code>
+	</p>
+	<ul>
+		<li><code>function</code> : Mot réservé.</li>
+		<li><code>get_get_multiple</code> : Mot réservé.</li>
+		<li><code>query</code> : Recherche du Get_Get_Resource.</li>
+		<li><code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter (peut être 
+			juste le Get-Resource).
+		</li>
+		<li><code>get_resource_tag_sémantique</code> : Tag sémantique du Get_Resource 
+			(dans la composante à ajouter).
+		</li>
+		<li><code>libellé@fr</code> : Libellé du menu.</li>
+		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
+	</ul>
 </article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='import_multiple'>Menu - Import_Multiple</h3>
+	<p>La fonction Import_Multiple permet à l'usager d'ajouter plusieurs éléments à partir d'une liste. 
+		Comme les commandes précédentes, un query permet de sélectionner les éléments de la liste. 
+		Mais avec Import_Multiple, les codes des éléments sélectionnés sont utilisés pour importer 
+		les éléments ayant ce code dans le portfolio d'importation. Le code du portfolio d'importation 
+		peut être le même que celui de recherche, dans ce cas on importe les éléments recherchés et 
+		cochés. Mais le code du portfolio d'importation peut être différent de celui de recherche, 
+		dans ce cas on importe les éléments ayant le même code que ceux cochés. Le portfolio d'importation 
+		est le portfolio dans lequel on va chercher les éléments à importer.
+	  </p>
+	<p>OPTION : le code du portfolio d'importation peut être de la forme <code>?</code>.
+		<code>semantictag</code>. Dans ce cas le code du portfolio sera le code de l'élément coché 
+		et le tag sémantique de l'élément importé sera <code>tag_sémantique</code>.
+	</p>
+	<h4>Format</h4>
+	<p><code>function</code>,<code>import_multiple</code>/<code>query</code>/<code>code_portfolio</code>,<code>libellé@fr</code>,<code>rôles</code></p>
+	<ul>
+		<li><code>function</code> : Mot réservé.</li>
+		<li><code>import_multiple</code> : Mot réservé.</li>
+		<li><code>query</code> : Query du Get_Resource - retourne une liste de codes.</li>
+		<li><code>code_portfolio</code> : Code du portfolio duquel on importe le noeud avec le(s) 
+			code(s) sélectionné(s) - peut être ou pas le même que celui du Get_resource. 
+			OPTION <code>?</code>.<code>tag_sémantique</code>.
+		</li>
+		<li><code>libellé@fr</code> : Libellé du menu.</li>
+		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='import_ggmultiple'>Menu - Import_GGMultiple</h3>
+	<p>La fonction Import_GGMultiple permet à l'usager d'ajouter plusieurs éléments à partir d'une liste. Comme les commandes précédentes, un query permet de sèlectionner les éléments de la liste. 
+	  Mais avec Import_GGMultiple, les codes des éléments sélectionnés sont utilisés pour importer les éléments ayant ce code dans le portfolio d'importation.
+	  Le code du portfolio d'importation peut être le même que celui de recherche, dans ce cas on importe les éléments recherchés et cochés. 
+	  Mais le code du portfolio d'importation peut être différent de celui de recherche, dans ce cas on importe les éléments ayant le même code que ceux cochés.</p>
+	  <p>OPTION1 : Dans le query le code du portfolio peut être <code>?</code>.
+	    Dans ce cas le code du portfolio de recherche sera le code de l'élément parent.
+	  </p>
+	  <p>OPTION2 : le code du portfolio d'importation peut être de la forme <code>?</code>.
+	    Dans ce cas le code du portfolio d'importation sera le code de l'élément parent trouvé.
+	  </p>
+	<h4>Format</h4>
+	<p><code>function</code>,<code>import_ggmultiple</code>/<code>query</code>/<code>code_portfolio</code>,<code>libellé@fr</code>,<code>rôles</code></p>
+	<ul>
+		<li><code>function</code> : Mot réservé.</li>
+		<li><code>import_ggmultiple</code> : Mot réservé.</li>
+		<li><code>query</code> : Recherche du Get_Get_Resource - retourne une liste de codes. OPTION1 : code du portfolio peut-être le mot-réservé <code>?</code>.</li>
+		<li><code>code_portfolio</code> : Code du portfolio duquel on importe le noeud avec le(s) code(s) sélectionné(s). OPTION2 : code du portfolio peut-être le mot-réservé <code>?</code>.</li>
+		<li><code>libellé@fr</code> : Libellé du menu.</li>
+		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
+	</ul>
+	<p>Exemple d'utilisation : un Get-Resource permet de sélectionner un référentiel parmi une liste de référentiels (le code de l'item doit être le code du portfolio du référentiel).
+	  Un Import_GGMultiple permet d'importer des éléments du référentiel sélectionné dans le Get_resource.
+	</p>
+	<p>menu : <code>function</code>,<code>import_ggmultiple</code>/<code>?.child.referentiel.skill$.label</code>/<code>?</code>,<code>Ajouter une compétence@fr</code>,<code>auteur</code></p>
+	<p>Remarque: Ce menu se trouve sur une unitstructure et le Get_resource est en-dessous d'où le child, referentiel est le tag du Get_resource ainsi que des items de la liste de référentiels.
+	   Chaque item a pour code le code du portfolio référentiel. Les points d'interrogation ? font référence à ce code de portfolio référentiel 
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='sharing'>Partage par l'usager</h3>
+	<p>La fonction Partage par l'usager permet à l'usager d'envoyer un courriel avec un hyperlien qui 
+		partage, en tout ou en partie, son portfolio avec un tiers.</p>
+	<h4>Format</h4>
+	<p><code>rôle</code></p>
+	<p><code>rôle</code>,<code>rôle destinataire</code>,<code>rôles et/ou courriels</code>,<code>niveau (0-4)</code>,<code>durée de vie du lien (en heures)</code>,<code>libellé du bouton@fr</code>,<code>condition (optionel)</code></p>
+		<li><code>rôle</code> Rôle de l'usager qui peut faire le partage.</li>
+		<li><code>rôle destinataire</code> Rôle qu'aura le destinataire dans le portfolio.</li>
+		<li><code>rôles et/ou courriels</code> Rôles et/ou courriels des destinataires. Si c'est 
+			un rôle, tous les personnes ayant ce rôle dans le portfolio seront destinataire d'un 
+			courriel.</li>
+		<li><code>niveau (0-4)</code> : Le niveau peut prendre les valeurs de 0 à 4 (voir ci-dessous).</li>
+		<li><code>libellé du bouton@fr</code> : Libellé qui apparaitra à l'usager qui peut faire le partage.</li>
+		<li><code>condition</code> Condition pour l'apparation du bouton de partage. Exemple :  submitted=='Y'</li>
+	</ul>
+	<h5>Niveau 0 – utilisateur Karuta</h5>
+	<p>L’utilisateur existe et le portfolio est déjà partagé avec l’usager et le rôle. Le mot de passe est demandé si le destinataire n'est pas loggé.</p>
+	<h5>Niveau 1</h5>
+	<p>L’utilisateur existe et le portfolio est déjà partagé avec l’usager et le rôle. Le mot de passe n'est pas demandé. Si l'utilisateur n'est pas loggé il obtient un logging temporaire. (Un bouton submit devrait être toujours ajouté)</p>
+	<h5>Niveau 2</h5>
+	<p>L’utilisateur existe et le portfolio n’est pas partagé avec l’usager et le rôle. Le système partage le portfolio avec l’usager et le rôle. Si l'utilisateur n'est pas loggé il obtient un logging temporaire. (Un bouton submit devrait être toujours ajouté)</p>
+	<h5>Niveau 3</h5>
+	<p>Si l’utilisateur n’existe pas le système crée le compte. Le système partage le portfolio avec l’usager et le rôle. Si l'utilisateur n'est pas loggé il obtient un logging temporaire. (Un bouton submit devrait être toujours ajouté)</p>
+	<h5>Niveau 4 – Lien public</h5>
+	<p>Si l'utilisateur n'est pas loggé il obtient un logging temporaire. Il a automatiquement (loggé ou non) le rôle all comme uager public.
+	<br>
+	<p>Pour une documentation complète et des exemples d'utilisation consulter <a href='../assets/html/DocPartage.html'>Doc Partage par l'usager</a></p>
+</article>
+
+
