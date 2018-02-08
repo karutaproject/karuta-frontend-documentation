@@ -5,31 +5,170 @@ title: "Ressources"
 sidebar:
  nav: "resources_en"
 ---
+<p>
+	Resource elements contain the data of a portfolio. Each resource element has a list of rights
+	(See, Edit, Submit, etc). One or multiple roles (for example <i>student</i> or <i>teacher</i>) 
+	may be specified for each of these rights. The roles for futur end-users of a portfolio are 
+	created by the portfolio designer.
+</p>
+<p>
+	Note that the designer has all the rights on all portfolio elements while building the
+	portfolio. It is sometimes useful for the designer to pre-fill data in Resource elements to 
+	supply information to end-users (for example supply instructions or attach a file to the 
+	portfolio). In this case, the Edit right is generally not attributed to any role.
+</p>
+<p>
+	In the XML representation of the tree, the resource elements are the leaves of the tree.  
+</p>
 
-Resources are:
+<p>The available Karuta resource elements are:</p>
 <ul>
-
+<ul>
 	<li><code><a href='#field'>Short Text</a></code></li>
-	<li><code><a href='textfield'>Long Text</a></code></li>
+	<li><code><a href='#textfield'>Long Text</a></code></li>
 	<li><code><a href='#image'>Image</a></code></li>
+	<li><code><a href='#audio'>Audio</a></code></li>
+	<li><code><a href='#video'>Video</a></code></li>
+	<li><code><a href='#document'>Document</a></code></li>
+	<li><code><a href='#oembed'>oEmbed</a></code></li>
+	<li><code><a href='#url'>URL</a></code></li>
+	<li><code><a href='#url2unit'>URL2Unit</a></code></li>
+	<li><code><a href='#calendar'>Calendar</a></code></li>
+	<li><code><a href='#color'>Color</a></code></li>
+	<li><code><a href='#comment'>Comment</a></code></li>
 </ul>
-
-
+</ul>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='#field'>Short Text</h3>
-	<p></p>
+	<p>
+		The Short Text element is a text field. It is used to enter short data, like a name. 
+		Usually the Edit right of the element will be attributed to a role, like <i>student</i> 
+		or <i>teacher</i>.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='textfield'>Long Text</h3>
-	<p></p>
+	<p>
+		The Long Text element is used to enter a longer text. A basic text editor with simple 
+		layout options is available to the end-user with the Edit right on this element.</br>
+		This element is also useful to include instructions in the portfolio, from to designer
+		to the end-users. In this case, the Edit right is not attributed to any role.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='image'>Image</h3>
-	<p></p>
+	<p>
+		The Image element allows the designer or the end-user with the Edit right on the element 
+		to upload an image file to the portfolio (all regular formats are accepted). The image is 
+		then displayed in the portfolio.</br>
+		It is possible to give the end-user with the Edit right on this element an additional right
+		to modify the display size of the image (otherwise the display size is set by the portfolio
+		designer).
+	</p>
 </article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='audio'>Audio</h3>
+	<p>
+		The Audio element allows the upload of an MP3 file to the portfolio. A basic audio player is 
+		available to listen to the uploaded file.
+		</br>
+		Only the end-user with the Edit right may upload a file into this element, but any user with
+		the See right (by default <i>all</i>, all roles), may listen to it.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='video'>Video</h3>
+	<p>
+		The Video element allows the upload of an MP4 file to the portfolio. A basic video player 
+		is available to watch to the uploaded file.
+		</br>
+		Only the end-user with the Edit right may upload a file into this element, but any user with
+		the See right (by default <i>all</i>, all roles), may watch it.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='document'>Document</h3>
+	<p>
+		The Document element allows the upload of a file of any type to the portfolio. Contrary to 
+		the Image, Audio and Video elements, the content of the file is not displayed directly in the 
+		portfolio &mdash; but the file is available for download by any user with the See right on 
+		the element.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='oembed'>oEmbed</h3>
+	<p>
+		The oEmbed element allows the end-user with the Edit right on the element to embed content 
+		in the portfolio (like slides, videos, etc) that are hosted on a third-party site (like 
+		Youtube, Vimeo, etc). A basic player is available to view the content within the portfolio
+		directly.</br>
+		For more information on oEmbed elements, see 
+		<a href='https://oembed.com/' target='_blank'>https://oembed.com/</a>.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='url'>URL</h3>
+	<p>
+		The URL element allows the specification a hyperlink. A label may also be specified, in 
+		which case it will be displayed in the portfolio instead of the hyperlink (while conserving 
+		the hyperlink's	capabilities).</br>
+		Any user with the See role on the element may follow the link.</br>
+		The hyperlink must lead outside Karuta &mdash; for links within Karuta see URL2Unit (next 
+		paragraph).
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='url2unit'>URL2Unit</h3>
+	<p>
+		The URL2Unit element allows the specification of a hyperlink to another page of the
+		portfolio. It may be used to by the designer to create navigation links other than the 
+		left-hand navigation menu, or it may be used by the end-user to specify certain pages
+		of their portfolio they consider particularly important.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='calendar'>Calendar</h3>
+	<p>
+		The Calendar element allows the designer or the end-user with the Edit right on the element
+		to pick a date in a calendar.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='color'>Color</h3>
+	<p>
+		The Color element allows the designer or the end-user with the Edit right on the element
+		to pick a color in a color palette.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='comment'>Comment</h3>
+	<p>
+		The Comment element is a TextField element which is signed and timestamped. The name of the
+		user and the time and date of edition are added at the end of the comment.
+	</p>
+</article>
+
