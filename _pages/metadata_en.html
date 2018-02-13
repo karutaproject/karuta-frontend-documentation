@@ -17,10 +17,10 @@ sidebar:
 <p>
 	Metadata is accessed through an element's editing box.
 </p>
-<p>Metadata:</p>
+<p>Some of the Karuta elements' metadata:</p>
 <ul>
-	<li><code><a href='#asmstructure'>Code</a></code></li>
 	<li><code><a href='#semantictag'>Semantic Tag</a></code></li>
+	<li><code><a href='#asmstructure'>Code</a></code></li>
 	<li><code><a href='#multilingual-node'>Multilingual Node</a></code></li>
 	<li><code><a href='#multilingual-resource'>Multilingual Resource</a></code></li>
 	<li><code><a href='#encript-resource'>Encrypt Resource</a></code></li>
@@ -39,41 +39,44 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='semantictag'>Semantic Tag</h3>
+	<p>
+		An element's Semantic Tag expresses it's semantics. It is also the means to search for an element
+		in a portfolio: the Semantic Tag is used in the Query field of an element (see Query below) as well
+		as in batch and report scripts.
+	</p>
+	<p>
+		Note: search of a Semantic Tag is inclusive &mdash; for example, the search for all elements with
+		Semantic Tag "competency" will also yield all elements with the Semantic Tag "sub-competency", as
+		the chain of caracters of the first is included in the second.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='asmstructure'>Code</h3>
-	<p>Le code d'un élément de portfolio doit être unique dans ce portfolio. Il est utilisé dans les 
-		listes déroulantes (élément Get_Resource, élément Get_Get_Resource, menu Get_Multiple, menu 
-		Get_Get_Multiple, menu Import_Multiple) pour identifier le choix de l'usager. Par défaut le 
-		code et le libellé de l'élément apparaissent dans la liste déroulante et seul le libellé de 
-		l'option choisie par l'usager apparaît ensuite dans la ressource. Les mots-clés ci-dessous 
-		permettent de modifier ce comportement :</p>
+	<p>
+		The Code of a portfolio element must be unique within this portfolio. It is used in choice boxes
+		(Get_Resource element, Get_Get_Resource element, Get_Muliple menu, Get_Get_Multiple menu and
+		Import_Multiple menu) to identify the end-user's selection.</br>
+		By default, both the element's Code and Label are displayed in the choice-box, and then only 
+		the Label of the user's selection is displayed in the Resource element. This behavior may be 
+		modified by adding one or more of the following symbols to the element's Code:
+
+	</p>
 	<ul>
-		<li>Le mot-clé <code>@</code> ajouté au code rendra le code non visible dans la liste déroulante.</li>
-		<li>Le mot-clé <code>#</code> ajouté au code rendra le code visible dans la ressource.</li>
-		<li>Le mot-clé <code>&amp;</code> ajouté au code (uniquement pour l'élément <b>Item</b>) rendra la <b>valeur</b> associée visible dans la ressource.</li>
-		<li>Le mot-clé <code>%</code> ajouté au code rendra le libellé non visible dans la ressource.</li>
-		<li>Le mot-clé <code>$</code> ajouté au code rendra le libellé non visible dans la liste déroulante.</li>
+		<li><code>@</code> the Code will not be displayed in the choice-box</li>
+		<li><code>#</code> the Code will be displayed in the Resource element</li>
+		<li><code>&amp;</code> the associated <b>Value</b> will be visible in the Resource element 
+			(<b>Item</b> elements only)</li>
+		<li><code>%</code> the Label will not be displayed in the Resource element</li>
+		<li><code>$</code> the Label will not be displayed in the choice-box</li>
 	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='semantictag'>Tag sémantique</h3>
-	<p>
-		Le tag sémantique d'un élément exprime sa sémantique. C'est aussi le moyen de 
-		rechercher des éléments dans un portfolio. Le tag sémantique est utilisé dans le champ  
-		'recherche' d'un élément (voir ci-dessous) ainsi que dans les scripts de rapport et de batch.
-	</p>
-	<p>
-		ATTENTION : la recherche de tag sémantique se fait par inclusion. Par exemple, 
-		si on recherche les éléments de tag sémantique 'competence', les éléments avec comme 
-		tag sémantique 'sous-competence' seront également trouvés, car le mot 'competence' 
-		est inclus dans le mot 'sous-competence'.
-	</p>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='multilingual-node'>Noeud multilingue</h3>
+	<h3 id='multilingual-node'>Multilingual Node</h3>
 	<p>
 		L'attribut 'noeud multilingue' d'un élément permet de spécifier si le <b>libellé</b> du noeud 
 		prend des valeurs différentes ou non dans le cas où le portfolio est multilingue. Si le noeud 
@@ -88,7 +91,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='multilingual-resource'>Ressource multilingue</h3>
+	<h3 id='multilingual-resource'>Multilingual Resource</h3>
 	<p>	
 		L'attribut 'ressource multilingue' d'un élément permet de spécifier si les données entrées 
 		pour la ressource prennent des valeurs différentes ou non dans le cas où le portfolio est 
@@ -99,7 +102,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='encript-resource'>Encripter la ressource</h3>
+	<h3 id='encript-resource'>Encrypt Resource</h3>
 	<p>
 		Cet attribut permet de spécifier si la ressource est encriptée. Dans le cas positif, à 
 		l'ouverture du portfolio, une phrase-clé est demandée à l'usager. Cette phrase-clé sert 
@@ -111,7 +114,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='see'>Rôles - Voir</h3>
+	<h3 id='see'>Roles - See</h3>
 	<p>
 		La liste des rôles, séparés par un espace, pouvant voir l'élément. 
 		Exemple : etudiant professeur <br> Par défaut le droit de voir est attribué au rôle 
@@ -121,13 +124,13 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='delete'>Rôles - Supprimer</h3>
+	<h3 id='delete'>Roles - Delete</h3>
 	<p>La liste des rôles, séparés par un espace, pouvant supprimer l'élément.</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='edit-resource'>Rôles - Éditer ressource</h3>
+	<h3 id='edit-resource'>Roles - Edit Resource</h3>
 	<p>
 		La liste des rôles, séparés par un espace, pouvant éditer la ressource (y stocker des données). 
 		Disponible uniquement sur les éléments ressource, non disponible sur les éléments de structure.
@@ -136,7 +139,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='comment'>Rôles - Commenter</h3>
+	<h3 id='comment'>Roles - Comment</h3>
 	<p>
 	La liste des rôles, séparés par un espace, pouvant commenter l'élément. Ce droit ajoute un 
 	éditeur de texte à la ressource; les commentaires sont datés et signés du nom de l'usager 
@@ -147,7 +150,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='submit'>Rôles - Soumettre</h3>
+	<h3 id='submit'>Roles - Submit</h3>
 	<p>
 		La liste des rôles, séparés par un espace, pouvant soumettre l'élément. Ce droit ajoute 
 		un bouton 'soumettre'. Lorsque l'usager soumet un élément, les droits d'édition et/ou de 
@@ -157,7 +160,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='query'>Recherche</h3>
+	<h3 id='query'>Query</h3>
 	<p>
 		Le champ 'recherche' est utilisé par l'élément Get_Resource, l'élément 
 		Get_Get_Resource, le menu Get_Multiple, le menu Get_Get_Multiple, le menu Import_Multiple, 
@@ -310,7 +313,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='sharing'>Partage par l'usager</h3>
+	<h3 id='sharing'>Sharing by the end-user</h3>
 	<p>La fonction Partage par l'usager permet à l'usager d'envoyer un courriel avec un hyperlien qui 
 		partage, en tout ou en partie, son portfolio avec un tiers.</p>
 	<h4>Format</h4>
