@@ -175,19 +175,17 @@ sidebar:
 			<li>multiple choice "choice-box" menus (Get_Multiple, Get_Get_Multiple and Import_Multiple menus)</li>
 		</ul>
 	</p>
-	<h5>Format for Get_ (either Get_Resource or Get_Multiple)</h5>
-	<p><code>code_portfolio</code>.<code>tag_sémantique</code>.<code>label</code></p>
+	<h4>Format for Get_ (either Get_Resource or Get_Multiple)</h4>
+	<p><code>portfolio_code</code>.<code>semantic_tag</code>.<code>label</code></p>
 	<ul>
 		<li>
-			<code>code_portfolio</code> : Code du portfolio référentiel où faire la recherche. 
-			Le code du portfolio est formé de deux parties séparées par un point : la première 
-			partie est le code du projet dans lequel se trouve le portfolio référentiel, la 
-			deuxième partie est le code du portfolio référentiel lui-même. Le code du projet est 
-			optionel : si il est absent, il est remplacé par le code du projet dans lequel se 
-			trouve le portfolio courant (le portfolio qui contient le Get_).
+			<code>portfolio_code</code> : Code of Rubrics Portfolio to search in. Format is 'project code'.
+			'Rubrics Portfolio'</br>
+			If 'project code.' is not present, search for the Rubrics Portfolio will be in the current project 
+			(project containing the Get_).
 		</li>
-		<li><code>tag_sémantique</code> : Tag sémantique des élements à chercher.</li>
-		<li><code>label</code> : Mot réservé.</li>
+		<li><code>semantic_tag</code> : Semantic Tag of elements to search for</li>
+		<li><code>label</code> : reserved word</li>
 	</ul>
 	<h4>Format Get_Get_</h4>
 	<p><code>code_portfolio</code>.<code>position</code>.<code>tag_sémantique1</code>.<code>tag_sémantique2</code>.<code>label</code>
