@@ -176,7 +176,7 @@ sidebar:
 		</ul>
 	</p>
 	<h4>Format for Get_ (either Get_Resource or Get_Multiple)</h4>
-	<code>portfolio_code</code>.<code>semantic_tag</code>.<code>label</code>
+	<p><code>portfolio_code</code>.<code>semantic_tag</code>.<code>label</code></p>
 	<ul>
 		<li>
 			<code>portfolio_code</code>: Code of rubrics portfolio in which to search for the specified
@@ -190,12 +190,11 @@ sidebar:
 	<p><code>portfolio_code</code>.<code>position</code>.<code>semantic_tag1</code>.<code>semantic_tag2</code>.<code>label</code>
 	</p>
 	<ul>
-		<li><code>portfolio_code</code> : Code du portfolio référentiel où faire la recherche.</li>
+		<li><code>portfolio_code</code>: Code of rubrics portfolio in which to search.</li>
 		<li>
-			<code>position</code> : Indique où chercher dans le portfolio courant le code de l'élément 
-			parent qui va permettre de restreindre la recherche dans le référentiel. Prend une des 
-			valeurs suivantes : <i>child</i>, <i>sibling</i>, <i>parent</i>, <i>parent.parent</i>, 
-			<i>parent.parent.parent</i>
+			<code>position</code>: Position, in the current portfolio, of the parent element which will
+			restrict the search in the rubrics portfolio. One of the following: <i>child</i>, <i>sibling</i>, 
+			<i>parent</i>, <i>parent.parent</i>, <i>parent.parent.parent</i>
 		</li>
 		<li><code>semantic_tag1</code>: Semantic_tag of parent element (restricts the search inside this parent element).</li>
 		<li><code>semantic_tag2</code>: Semantic tag of elements to search for in the rubrics portfolio.</li>
