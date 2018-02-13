@@ -48,7 +48,7 @@ sidebar:
 	</p>
 	<p>
 		ATTENTION : la recherche de tag sémantique se fait par inclusion. Par exemple, 
-		si on recherche les éléments de tag sémantique 'competence', les éléments avec comme 
+		si on recherche les éléments de tag sémantique 'competence', les éléments avec le 
 		tag sémantique 'sous-competence' seront également trouvés, car le mot 'competence' 
 		est inclus dans le mot 'sous-competence'.
 	</p>
@@ -59,7 +59,9 @@ sidebar:
 	<h3 id='asmstructure'>Code</h3>
 	<p>Le code d'un élément de portfolio doit être unique dans ce portfolio. Il est utilisé dans les 
 		listes déroulantes (élément Get_Resource, élément Get_Get_Resource, menu Get_Multiple, menu 
-		Get_Get_Multiple, menu Import_Multiple) pour identifier la sélection de l'usager.</br>
+		Get_Get_Multiple, menu Import_Multiple) pour identifier la sélection de l'usager.
+	</p>
+	<p>
 		Par défaut le code et le libellé de l'élément apparaissent dans la liste déroulante et seul 
 		le libellé de l'option sélectionnée par l'usager apparaît ensuite dans l'élément ressource. 
 		Ce comportement peut être modifié par l'ajout d'un ou plusieurs des symboles suivants au code 
@@ -97,7 +99,9 @@ sidebar:
 		L'attribut 'ressource multilingue' d'un élément permet de spécifier si les données entrées 
 		pour la ressource prennent des valeurs différentes ou non dans le cas où le portfolio est 
 		multilingue. Si la ressource n'est pas multilingue les valeurs entrées pour l'élément 
-		seront stockées dans la langue par défaut définie dans le fichier de configuration _init.js.
+		seront stockées dans la langue par défaut définie dans le fichier de configuration _init.js.</br>
+		Par exemple, un nom ou une date de naissance ne sont habituellement pas dépendants de la langue,
+		alors qu'un texte est définitivement différent dans chaque langue.
 	</p>
 </article>
 

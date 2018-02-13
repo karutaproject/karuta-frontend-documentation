@@ -48,7 +48,7 @@ sidebar:
 	<p>
 		Note: search of a Semantic Tag is inclusive &mdash; for example, the search for all elements with
 		Semantic Tag "competency" will also yield all elements with the Semantic Tag "sub-competency", as
-		the chain of caracters of the first is included in the second.
+		the chain of characters of the first is included in the second.
 	</p>
 </article>
 
@@ -58,11 +58,12 @@ sidebar:
 	<p>
 		The Code of a portfolio element must be unique within this portfolio. It is used in choice boxes
 		(Get_Resource element, Get_Get_Resource element, Get_Muliple menu, Get_Get_Multiple menu and
-		Import_Multiple menu) to identify the end-user's selection.</br>
+		Import_Multiple menu) to identify the end-user's selection.
+	</p>
+	<p>
 		By default, both the element's Code and Label are displayed in the choice-box, and then only 
 		the Label of the user's selection is displayed in the Resource element. This behavior may be 
 		modified by adding one or more of the following symbols to the element's Code:
-
 	</p>
 	<ul>
 		<li><code>@</code> the Code will not be displayed in the choice-box</li>
@@ -78,14 +79,15 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='multilingual-node'>Multilingual Node</h3>
 	<p>
-		L'attribut 'noeud multilingue' d'un élément permet de spécifier si le <b>libellé</b> du noeud 
-		prend des valeurs différentes ou non dans le cas où le portfolio est multilingue. Si le noeud 
-		n'est pas multilingue, la valeur du libellé sera stockée dans la langue par défaut définie 
-		dans le fichier de configuration _init.js.
+		An element's Multilingual Node attribute specifies whether the element's <b>Label</b> is multilingual
+		(in the case of multilingual Karuta installations). If it is, two different labels can be specified
+		for the element (one in each language). If it is not, the element's Label will be the same 
+		independently of what language the portfolio is being viewed in (the value of the Label will be 
+		stored in the language defined as default language in the configuration file _init.js).
 	</p>
 	<p>
-		Remarque : le code n'est jamais multilingue. Il a la même valeur quelle que soit la langue 
-		sélectionnée.
+		Note: the Code is never multilingual. It has the same value independently of the selected viewing
+		language.
 	</p>
 </article>
 
@@ -93,10 +95,13 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='multilingual-resource'>Multilingual Resource</h3>
 	<p>	
-		L'attribut 'ressource multilingue' d'un élément permet de spécifier si les données entrées 
-		pour la ressource prennent des valeurs différentes ou non dans le cas où le portfolio est 
-		multilingue. Si la ressource n'est pas multilingue les valeurs entrées pour l'élément 
-		seront stockées dans la langue par défaut définie dans le fichier de configuration _init.js.
+		An element's Multilingual Resource attribute specifies whether the data supplied for the element is 
+		multilingual (in the case of multilingual Karuta installations). If it is, two different data sets 
+		can be specified for the element (one in each language). If it is not, the element's data 
+		will be the same independently of what language the portfolio is being viewed in (the data will be 
+		stored in the language defined as default language in the configuration file _init.js).</br>
+		Example: a person's name or birthdate is usually not language dependent (not multilingual) whereas 
+		an essay or instructions are different in each language.
 	</p>
 </article>
 
@@ -104,11 +109,10 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='encript-resource'>Encrypt Resource</h3>
 	<p>
-		Cet attribut permet de spécifier si la ressource est encriptée. Dans le cas positif, à 
-		l'ouverture du portfolio, une phrase-clé est demandée à l'usager. Cette phrase-clé sert 
-		à encoder/décoder les valeurs de la ressource. Cette phrase-clé n'est pas stockée dans 
-		Karuta et doit donc être mémorisée par l'usager, car elle lui est demandée à chaque ouverture 
-		du portfolio.
+		This element attribute specifies whether the data in a Resource element is encrypted. If so, 
+		a key phrase is requested from the user when they open the portfolio. This phrase is used to
+		encrypt and decrypt the data. It is not stored in the portfolio and thus must be memorized by 
+		the end-user.
 	</p>
 </article>
 
@@ -116,24 +120,24 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='see'>Roles - See</h3>
 	<p>
-		La liste des rôles, séparés par un espace, pouvant voir l'élément. 
-		Exemple : etudiant professeur <br> Par défaut le droit de voir est attribué au rôle 
-		<i>all</i>. Il s'agit de l'unique droit à avoir une valeur par défaut. 
+		The list of user roles (separated by a space character) that may see the element. For example: 
+		<i>student teacher</i>.</br>
+		By default, this right is attributed to the role <i>all</i>. It is the only right to have a
+		default value.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='delete'>Roles - Delete</h3>
-	<p>La liste des rôles, séparés par un espace, pouvant supprimer l'élément.</p>
+	<p>The list of user roles (separated by a space character) that may delete the element.</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='edit-resource'>Roles - Edit Resource</h3>
 	<p>
-		La liste des rôles, séparés par un espace, pouvant éditer la ressource (y stocker des données). 
-		Disponible uniquement sur les éléments ressource, non disponible sur les éléments de structure.
+		The list of user roles that may enter data in the element (only for Resource elements).
 	</p>
 </article>
 
@@ -141,10 +145,12 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='comment'>Roles - Comment</h3>
 	<p>
-	La liste des rôles, séparés par un espace, pouvant commenter l'élément. Ce droit ajoute un 
-	éditeur de texte à la ressource; les commentaires sont datés et signés du nom de l'usager 
-	qui l'a écrit. Pour pouvoir commenter un élément, l'usager doit avoir également le droit 
-	d'éditer la ressource.
+		The list of user roles that may add a comment to the element. Comments are timestamped and signed 
+		with the user name. A text editor is available to the users with the correct role for the purpose
+		of comment writing.
+	</p>
+	<p>
+		Note: The user role with the Comment right <b>must also have</b> the Edit Resource right on the element.
 	</p>
 </article>
 
@@ -152,9 +158,9 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='submit'>Roles - Submit</h3>
 	<p>
-		La liste des rôles, séparés par un espace, pouvant soumettre l'élément. Ce droit ajoute 
-		un bouton 'soumettre'. Lorsque l'usager soumet un élément, les droits d'édition et/ou de 
-		suppression sont retirés de l'élément et de tous ses enfants.
+		The list of user roles that may submit the element. Once submitted, the Edit Resource and Delete
+		rights are removed, for the element <b>and all it's children</b>. A submit button is available to
+		the users with the correct role for the purpose of submission.
 	</p>
 </article>
 
@@ -162,9 +168,12 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='query'>Query</h3>
 	<p>
-		Le champ 'recherche' est utilisé par l'élément Get_Resource, l'élément 
-		Get_Get_Resource, le menu Get_Multiple, le menu Get_Get_Multiple, le menu Import_Multiple, 
-		de même que par les Sections, Pages ou Sous-sections.
+		The Query field is used for:
+		<ul>
+			<li>choice-boxes (Get_Resource and Get_Get_Resource elements)</li> 
+			<li>custom menus on Sections, Pages and Subsections</li>
+			<li>multiple choice "choice-box" menus (Get_Multiple, Get_Get_Multiple and Import_Multiple menus)</li>
+		</ul>
 	</p>
 	<h4>Format Get_</h4>
 	<p><code>code_portfolio</code>.<code>tag_sémantique</code>.<code>label</code></p>
