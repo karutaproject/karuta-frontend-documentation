@@ -209,50 +209,58 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='get_multiple'>Menu - Get_Multiple</h3>
-	<p>La fonction Get_Multiple permet à l'usager d'ajouter plusieurs éléments à partir d'une liste. 
-		Un query permet de sélectionner les éléments de la liste. L'usager peut cocher un ou plusieurs 
-		items de la liste. Pour chaque item de la liste, Karuta va ajouter un élément prédéfini 
-		contenant au moins un Get-Resource qui sera mis à jour avec la sélection de l'usager.
+	<p>
+		This function allows the user to select multiple elements from a list. For each item selected by the 
+		user, an reusable component is added to the portfolio. This component is usualy a Get_Resource element, 
+		but it may also be a structural element containing, amongst other things, the Get_Resource element. In
+		any case, the user's choice is set by Karuta in the Get-Resource element.
+	</p>
+	<p>
+		The Query field is used to select the items present in the list. 
 	</p>
 	<h4>Format</h4>
-	<p><code>function</code>,<code>get_multiple</code>/<code>query</code>/<code>code_portfolio.tag_sémantique</code>/<code>get_resource_tag_sémantique</code>,<code>libellé@fr</code>,<code>rôles</code>
+	<p>
+		<code>function</code>,<code>get_multiple</code>/<code>query</code>/<code>portfolio_code.semantic_tag
+		</code>/<code>get_resource_semantic_tag</code>,<code>label@en</code>,<code>roles</code>
 	</p>
 	<ul>
-		<li><code>function</code> : Mot réservé.</li>
-		<li><code>get_multiple</code> : Mot réservé.</li>
-		<li><code>query</code> : Recherche du Get_Resource.</li>
-		<li><code>code_portfolio.tag_sémantique</code> : Élément à ajouter (peut être juste le Get-Resource).</li>
-		<li><code>get_resource_tag_sémantique</code> : Tag sémantique du Get_Resource (dans l'élément à ajouter).</li>
-		<li><code>libellé@fr</code> : Libellé du menu.</li>
-		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
+		<li><code>function</code>: Reserved word.</li>
+		<li><code>get_multiple</code>: Reserved word.</li>
+		<li><code>query</code>: Query of the Get_Resource element (see Query above).</li>
+		<li>
+			<code>portfolio_code.semantic_tag</code>: Reusable component to add to the portfolio 
+			 (Get-Resource element or more complex component containing the Get_Resource element).
+		</li>
+		<li><code>get_resource_semantic_tag</code>: Semantic tag of the Get_Resource element.</li>
+		<li><code>label@en</code>: User menu label.</li>
+		<li><code>roles</code>: List of roles that have this menu (separated by a space character).</li>
 	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='get_get_multiple'>Menu - Get_Get_Multiple</h3>
-	<p>La fonction Get_Get_Multiple permet à l'usager d'ajouter plusieurs éléments à partir d'une 
-		liste. Comme pour le Get_Multiple, un query permet de sélectionner les éléments de la liste. 
-		L'usager peut cocher un ou plusieurs items de la liste. Pour chaque item de la liste, 
-		Karuta va ajouter un élément prédéfini contenant au moins un Get-Resource qui sera mis à 
-		jour avec la sélection de l'usager.
+	<p>
+		Same as the previous function, except the choices available to the user in the list are restricted 
+		by the selection in a parent element (as in Get_Get_Resource elements).
 	</p>
 	<h4>Format</h4>
-	<p><code>function</code>,<code>get_get_multiple</code>/<code>query</code>/<code>code_portfolio.tag_sémantique</code>/<code>get_resource_tag_sémantique</code>,<code>libellé@fr</code>,
-		<code>rôles</code>
+	<p>
+		<code>function</code>,<code>get_get_multiple</code>/<code>query</code>/<code>
+		portfolio_code.semantic_tag</code>/<code>get_get_resource_semantic_tag</code>,
+		<code>label@en</code>,<code>roles</code>
 	</p>
 	<ul>
-		<li><code>function</code> : Mot réservé.</li>
-		<li><code>get_get_multiple</code> : Mot réservé.</li>
-		<li><code>query</code> : Recherche du Get_Get_Resource.</li>
-		<li><code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter (peut être 
-			juste le Get-Resource).
+		<li><code>function</code>: Reserved word.</li>
+		<li><code>get_get_multiple</code>: Reserved word.</li>
+		<li><code>query</code> : Query of the Get_Get_Resource element.</li>
+		<li>
+			<code>portfolio_code.semantic_tag</code>: Reusable component to add to the portfolio 
+			(Get_Get_Resource element or more complex component containing the Get_Get_Resource element).
 		</li>
-		<li><code>get_resource_tag_sémantique</code> : Tag sémantique du Get_Resource 
-			(dans la composante à ajouter).
-		</li>
-		<li><code>libellé@fr</code> : Libellé du menu.</li>
-		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
+		<li><code>get_get_resource_semantic_tag</code>: Semantic tag of the Get_Get_Resource element.</li>
+		<li><code>label@en</code>: User menu label.</li>
+		<li><code>roles</code>: List of roles that have this menu (separated by a space character).</li>
 	</ul>
 </article>
 
