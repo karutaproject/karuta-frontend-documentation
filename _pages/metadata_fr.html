@@ -210,23 +210,27 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='get_multiple'>Menu - Get_Multiple</h3>
-	<p>La fonction Get_Multiple permet à l'usager d'ajouter plusieurs éléments à partir d'une liste. 
-		Un query permet de sélectionner les éléments de la liste. L'usager peut cocher un ou plusieurs 
-		items de la liste. Pour chaque item de la liste, Karuta va ajouter un élément prédéfini 
-		contenant au moins un Get-Resource qui sera mis à jour avec la sélection de l'usager.
+	<p>
+		La fonction Get_Multiple permet à l'usager de sélectionner plusieurs items dans une liste.
+		Pour chaque item sélectionné, une composante réutilisable est ajoutée au portfolio. Cette composante
+		est habituellement un élément Get_Resource, mais peut aussi être un élément structurel qui contient
+		le Get_Resource (et possiblement d'autres éléments). Dans tous les cas, le Get-Resource est mis à 
+		jour avec la sélection de l'usager.
 	</p>
 	<h4>Format</h4>
-	<p><code>function</code>,<code>get_multiple</code>/<code>query</code>/<code>code_portfolio.tag_sémantique</code>/<code>get_resource_tag_sémantique</code>,<code>libellé@fr</code>,<code>rôles</code>
+	<p>
+		<code>function</code>,<code>get_multiple</code>/<code>query</code>/<code>code_portfolio.tag_sémantique
+		</code>/<code>tag_sémantique_get_resource</code>,<code>libellé@fr</code>,<code>rôles</code>
 	</p>
 	<ul>
 		<li><code>function</code> : Mot réservé.</li>
 		<li><code>get_multiple</code> : Mot réservé.</li>
 		<li><code>query</code> : Recherche du Get_Resource.</li>
 		<li>
-			<code>code_portfolio.tag_sémantique</code> : Élément à ajouter (peut être juste l'élément 
-			Get-Resource ou peut être un élément de structure contenant, entre autres, le Get-Resource).
+			<code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter (Get_Resource ou 
+			 composante plus complexe contenant le Get-Resource).
 		</li>
-		<li><code>get_resource_tag_sémantique</code> : Tag sémantique du Get_Resource (dans l'élément à ajouter).</li>
+		<li><code>tag_sémantique_get_resource</code> : Tag sémantique du Get_Resource.</li>
 		<li><code>libellé@fr</code> : Libellé du menu.</li>
 		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
 	</ul>
@@ -235,26 +239,24 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='get_get_multiple'>Menu - Get_Get_Multiple</h3>
-	<p>La fonction Get_Get_Multiple permet à l'usager d'ajouter plusieurs éléments à partir d'une 
-		liste. Comme pour le Get_Multiple, un query permet de sélectionner les éléments de la liste. 
-		L'usager peut cocher un ou plusieurs items de la liste. Pour chaque item de la liste, 
-		Karuta va ajouter un élément prédéfini contenant au moins un Get-Resource qui sera mis à 
-		jour avec la sélection de l'usager.
+	<p>
+		Équivalent à la fonction précédente, sauf que les choix aux utilisateurs sont restreints par la
+		sélection dans un élément parent (même principe que pour les éléments Get_Get_Resource).
 	</p>
 	<h4>Format</h4>
-	<p><code>function</code>,<code>get_get_multiple</code>/<code>query</code>/<code>code_portfolio.tag_sémantique</code>/<code>get_resource_tag_sémantique</code>,<code>libellé@fr</code>,
-		<code>rôles</code>
+	<p>
+		<code>function</code>,<code>get_get_multiple</code>/<code>query</code>/<code>
+		code_portfolio.tag_sémantique</code>/<code>tag_sémantique_get_get_resource</code>,<code>libellé@fr
+		</code>,<code>rôles</code>
 	</p>
 	<ul>
 		<li><code>function</code> : Mot réservé.</li>
 		<li><code>get_get_multiple</code> : Mot réservé.</li>
 		<li><code>query</code> : Recherche du Get_Get_Resource.</li>
-		<li><code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter (peut être 
-			juste le Get-Resource).
+		<li><code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter (Get-Resource ou 
+			 composante plus complexe contenant le Get-Resource).
 		</li>
-		<li><code>get_resource_tag_sémantique</code> : Tag sémantique du Get_Resource 
-			(dans la composante à ajouter).
-		</li>
+		<li><code>tag_sémantique_get_get_resource</code> : Tag sémantique du Get_Get_Resource.</li>
 		<li><code>libellé@fr</code> : Libellé du menu.</li>
 		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
 	</ul>
