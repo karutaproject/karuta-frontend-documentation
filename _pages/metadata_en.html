@@ -273,38 +273,6 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='sharing'>Sharing by the end-user</h3>
-	<p>La fonction Partage par l'usager permet à l'usager d'envoyer un courriel avec un hyperlien qui 
-		partage, en tout ou en partie, son portfolio avec un tiers.</p>
-	<h4>Format</h4>
-	<p>
-		<code>rôle</code></br>
-		or</br>
-		<code>rôle</code>,<code>rôle destinataire</code>,<code>rôles et/ou courriels</code>,<code>niveau 
-		(0-4)</code>,<code>durée de vie du lien (en heures)</code>,<code>libellé du bouton@fr</code>,<code>
-		condition (optionel)</code>
-	</p>
-	<ul>
-		<li><code>rôle</code> Rôle de l'usager qui peut faire le partage.</li>
-		<li><code>rôle destinataire</code> Rôle qu'aura le destinataire dans le portfolio.</li>
-		<li><code>rôles et/ou courriels</code> Rôles et/ou courriels des destinataires. Si c'est 
-			un rôle, tous les personnes ayant ce rôle dans le portfolio seront destinataire d'un 
-			courriel.</li>
-		<li><code>niveau (0-4)</code> : Le niveau peut prendre les valeurs de 0 à 4 (voir ci-dessous).</li>
-		<li><code>libellé du bouton@fr</code> : Libellé qui apparaitra à l'usager qui peut faire le partage.</li>
-		<li><code>condition</code> Condition pour l'apparation du bouton de partage. Exemple :  submitted=='Y'</li>
-	</ul>
-	<h5>Niveau 0 – utilisateur Karuta</h5>
-	<p>L’utilisateur existe et le portfolio est déjà partagé avec l’usager et le rôle. Le mot de passe est demandé si le destinataire n'est pas loggé.</p>
-	<h5>Niveau 1</h5>
-	<p>L’utilisateur existe et le portfolio est déjà partagé avec l’usager et le rôle. Le mot de passe n'est pas demandé. Si l'utilisateur n'est pas loggé il obtient un logging temporaire. (Un bouton submit devrait être toujours ajouté)</p>
-	<h5>Niveau 2</h5>
-	<p>L’utilisateur existe et le portfolio n’est pas partagé avec l’usager et le rôle. Le système partage le portfolio avec l’usager et le rôle. Si l'utilisateur n'est pas loggé il obtient un logging temporaire. (Un bouton submit devrait être toujours ajouté)</p>
-	<h5>Niveau 3</h5>
-	<p>Si l’utilisateur n’existe pas le système crée le compte. Le système partage le portfolio avec l’usager et le rôle. Si l'utilisateur n'est pas loggé il obtient un logging temporaire. (Un bouton submit devrait être toujours ajouté)</p>
-	<h5>Niveau 4 – Lien public</h5>
-	<p>Si l'utilisateur n'est pas loggé il obtient un logging temporaire. Il a automatiquement (loggé ou non) le rôle all comme uager public.
-	<br>
-	<p>Pour une documentation complète et des exemples d'utilisation consulter <a href='../assets/html/DocPartage.html'>Doc Partage par l'usager</a></p>
 </article>
 
 
