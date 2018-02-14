@@ -36,6 +36,8 @@ sidebar:
 	<li><code><a href='#calendar'>Calendar</a></code></li>
 	<li><code><a href='#color'>Color</a></code></li>
 	<li><code><a href='#comment'>Comment</a></code></li>
+	<li><code><a href='#getResource'>GetResource</a></code></li>
+	<li><code><a href='#getGetResource'>GetGetResource</a></code></li>
 </ul>
 </ul>
 
@@ -168,6 +170,29 @@ sidebar:
 	<p>
 		The Comment element is a TextField element which is signed and timestamped. The username 
 		of the user and the time and date of edition are added at the end of the comment.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='getResource'>GetResource (choice box)</h3>
+	<p>
+		The GetResource element allows you to build a list of elements amongst which the end-user
+		must make a choice. The list of elements that will fill the choice box is built in a Rubrics
+		Portfolio. Which elements of the Rubrics Portfolio to display in the choice box is specified
+		through the Query metadata of the GetResource element (see METADATA).
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='getGetResource'>GetGetResource (conditional choice box)</h3>
+	<p>
+		The GetGetResource element is a choice box whose elements are restricted by the choice a user
+		made in a previous GetResource element. The user's selection in the first choice box determines
+		which options will be displayed in the second. Which elements of the Rubrics Portfolio to 
+		display in the choice box is specified through the Query metadata of the GetGetResource element 
+		(see METADATA).
 	</p>
 </article>
 
