@@ -42,12 +42,12 @@ sidebar:
 	<h3 id='semantictag'>Semantic Tag</h3>
 	<p>
 		An element's Semantic Tag expresses it's semantics. It is also the means to search for an element
-		in a portfolio: the Semantic Tag is used in the Query field of an element (see Query below) as well
+		in a portfolio: the semantic tag is used in the Query field of an element (see Query below) as well
 		as in batch and report scripts.
 	</p>
 	<p>
-		Note: search of a Semantic Tag is inclusive &mdash; for example, the search for all elements with
-		Semantic Tag "competency" will also yield all elements with the Semantic Tag "sub-competency", as
+		Note: search of a semantic tag is inclusive &mdash; for example, the search for all elements with
+		semantic tag "competency" will also yield all elements with the semantic tag "sub-competency", as
 		the chain of characters of the first is included in the second.
 	</p>
 </article>
@@ -61,17 +61,17 @@ sidebar:
 		Import_Multiple menu) to identify the end-user's selection.
 	</p>
 	<p>
-		By default, both the element's Code and Label are displayed in the choice-box, and then only 
-		the Label of the user's selection is displayed in the Resource element. This behavior may be 
-		modified by adding one or more of the following symbols to the element's Code:
+		By default, both the element's code and label are displayed in the choice box, and then only 
+		the label of the user's selection is displayed in the Resource element. This behavior may be 
+		modified by adding one or more of the following symbols to the element's code:
 	</p>
 	<ul>
-		<li><code>@</code> the Code will not be displayed in the choice-box</li>
-		<li><code>#</code> the Code will be displayed in the Resource element</li>
-		<li><code>&amp;</code> the associated <b>Value</b> will be visible in the Resource element 
+		<li><code>@</code> the code will not be displayed in the choice box</li>
+		<li><code>#</code> the code will be displayed in the Resource element</li>
+		<li><code>&amp;</code> the associated <b>value</b> will be visible in the Resource element 
 			(<b>Item</b> elements only)</li>
-		<li><code>%</code> the Label will not be displayed in the Resource element</li>
-		<li><code>$</code> the Label will not be displayed in the choice-box</li>
+		<li><code>%</code> the label will not be displayed in the Resource element</li>
+		<li><code>$</code> the label will not be displayed in the choice box</li>
 	</ul>
 </article>
 
@@ -81,12 +81,12 @@ sidebar:
 	<p>
 		An element's Multilingual Node attribute specifies whether the element's <b>Label</b> is multilingual
 		(in the case of multilingual Karuta installations). If it is, two different labels can be specified
-		for the element (one in each language). If it is not, the element's Label will be the same 
-		independently of what language the portfolio is being viewed in (the value of the Label will be 
+		for the element (one in each language). If it is not, the element's label will be the same 
+		independently of what language the portfolio is being viewed in (the value of the label will be 
 		stored in the language defined as default language in the configuration file _init.js).
 	</p>
 	<p>
-		Note: the Code is never multilingual. It has the same value independently of the selected viewing
+		Note: the code is never multilingual. It has the same value independently of the selected viewing
 		language.
 	</p>
 </article>
@@ -170,9 +170,10 @@ sidebar:
 	<p>
 		The Query field is used for:
 		<ul>
-			<li>choice-boxes (Get_Resource and Get_Get_Resource elements)</li> 
+			<li>choice boxes (Get_Resource and Get_Get_Resource elements)</li> 
 			<li>custom menus on Sections, Pages and Subsections</li>
-			<li>multiple choice "choice-box" menus (Get_Multiple, Get_Get_Multiple and Import_Multiple menus)</li>
+			<li>choice boxes allowing multiple user choices implemented through menus (Get_Multiple, 
+				Get_Get_Multiple and Import_Multiple menus)</li>
 		</ul>
 	</p>
 	<h4>Format for Get_ (either Get_Resource or Get_Multiple)</h4>
@@ -197,7 +198,7 @@ sidebar:
 			<i>sibling</i>, <i>parent</i>, <i>parent.parent</i>, <i>parent.parent.parent</i>
 		</li>
 		<li>
-			<code>semantic_tag1</code>: Semantic_tag of parent element (restricts the search inside this 
+			<code>semantic_tag1</code>: Semantic tag of parent element (restricts the search inside this 
 			parent element in the rubrics portfolio).
 		</li>
 		<li><code>semantic_tag2</code>: Semantic tag of elements to search for in the rubrics portfolio.</li>
