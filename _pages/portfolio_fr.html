@@ -6,4 +6,101 @@ sidebar:
  nav: "portfolio_fr"
 ---
 
-<h3>En construction...</h3>
+<p>Dans Karuta un portfolio est représenté par un arbre structuré (voir STRUCTURES).</p>
+<p> Il y a plusieurs types d'arbres dans Karuta :</p>
+<ul>
+	<li>modèle de portfolio</li>
+	<li>instance de portfolios</li>
+	<li>référentiel</li>
+	<li>composantes réutilisables</li>
+	<li>rapport</li>
+	<li>batch</li>
+	<li>modèle de formulaire batch</li>
+</ul>
+<h3>Modèle de portfolio</h3>
+<p>
+	Un modèle de portfolio est une structure d'arbre qui organise des ressources. Les ressources sont 
+	les éléments qui vont contenir les données : les données fournies aux usagers (comme des 
+	instructions ou des fichiers à consulter) et les données que les usagers vont entrer pour peupler 
+	leur portfolio. Karuta offre des ressources de plusieurs types : champ de texte (texte court), 
+	éditeur de texte (texte long), fichier, image, son, vidéo, calendrier, etc.
+</p>
+<p>
+	Une fois construit par le designer, le modèle de portfolio est instancié pour chaque usager, 
+	c'est à dire que l'on fait une copie du modèle et le nouvel arbre devient le portfolio spécifique 
+	à un usager.
+</p>
+<h3>Instance de portfolio</h3>
+<p>
+	Une instance de portfolio est une copie du modèle pour un usager spécifique. Au moment de 
+	l'instantiation (copie) les rôles et les droits sont créés pour chacun des éléments du 
+	portfolio.
+</p>
+<h3>Référentiel</h3>
+<p>
+	Un référentiel est une liste d'éléments qui seront référencés dans les portfolios, par exemple un 
+	référentiel de compétences ou encore les éléments d'une liste déroulante.
+</p>
+<h3>Composantes réutilisables</h3>
+<p>
+	Le portfolio de composantes réutilisables sert à stocker des morceaux de portfolio qui seront 
+	ensuite mis à la disposition de l'usager via un menu. L'usager peut ainsi ajouter des morceaux 
+	à son portfolio selon ses besoins.
+</p>
+<h3>Rapport</h3>
+<p>
+	Un rapport est un script contenant des commandes spécifiques qui permettent de sélectionner des 
+	informations d'un ou de plusieurs portfolios et de les afficher sous une présentation différente. 
+	Par exemple pour faire un tableau de bord, un cv ou un rapport de cohorte. Les commandes de script 
+	de rapport permettent de naviguer dans les portfolios pour y sélectionner les éléments à afficher. 
+	Le résultat est affiché dans un tableau html dont la mise en forme est libre au designer.</p>
+
+<h3>Batch</h3>
+<p>Un batch est un script contenant des commandes qui permettent d'une manière automatique 
+	de créer des usagers, des portfolios, de mettre à jour des éléments du portfolio, etc. 
+	Un script de batch est généralement associé à un fichier CSV contenant, par exemple, la 
+	liste des usagers. L'éxécution du script de batch créera alors automatiquement tous les 
+	portfolios des usagers. Un script de batch peut également être associé à un formulaire.
+</p>
+<h3>Formulaire batch</h3>
+<p>Un formulaire batch permet d'exécuter un script de batch d'une manière unitaire pour un 
+	seul usager.
+</p>
+
+<h2>Principe de fonctionnement</h2>
+<p>Un portfolio ou arbre dans Karuta est construit en y ajoutant des branches un peu comme dans un 
+	jeu de Lego. Certaines branches sont prédéfinies : les éléments de base de Karuta. D'autres 
+	branches sont construites par le designer en assemblant des branches de base. On peut ainsi 
+	construire des portfolios complexes.
+</p>
+<p>On peut aussi définir des menus permettant à l'usager final d'ajouter lui-même des branches à 
+	son portfolio.
+</p>
+
+<h3>Modèle et instance</h3>
+<p>On distingue deux types de portfolios :</p>
+<ul>
+<li>Portfolio modèle — Construit par le designer. Les rôles associés sont <i>designer</i> et 
+	<i>all</i>.
+</li>
+<li>Portfolio instance — Instancié à partir d'un modèle pour chaque utilisateur. Les rôles associés 
+	sont ceux définis par le designer dans le modèle (plus <i>designer</i> et <i>all</i>).
+</li>
+</ul>
+<p>Le diagramme ci-dessous présente les liens entre les deux types de portfolios :</p>
+<img src='../assets/img/modele-instance1.png' width='40%'/>
+<h3>Le modèle de sécurité</h3>
+<p></p>
+<img src='../assets/img/modele-securite.png' width='80%'/>
+<ul>
+	<li>Un portfolio a des rôles associés.</li>
+	<li>Un rôle a des droits associés (lire, écrire, soumettre, etc.) sur chacun des éléments 
+		du portfolio.
+	</li>
+	<li>Le partage d'un portfolio se fait en indiquant un usager et un rôle.</li>
+</ul>
+<img src='../assets/img/partage.png' width='80%'/>
+
+<h3>Simulation des rôles par le designer</h3>
+<p>Dans un portfolio modèle, le designer peut simuler les différents rôles.</p>
+<img src='../assets/img/simulation-roles.png' width='80%'/>

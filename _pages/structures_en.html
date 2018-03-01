@@ -1,34 +1,57 @@
 ---
 layout: archive_en
 permalink: /structures_en/
-title: "Structure Elements"
+title: "Structural Elements"
 sidebar:
  nav: "structures_en"
 ---
 
-Structure elements are :
+<p>
+	The structural elements organize the data in a portfolio.
+</p>
+<p>	In the XML representation of the portfolio, the structural elements are the branches of the tree, 
+	while the data (the Resource elements) are the leaves of the tree.
+</p>
+<p>The Karuta structural elements are:</p>
 <ul>
 	<li><code><a href='#asmstructure'>Section</a></code></li>
 	<li><code><a href='#asmunit'>Page</a></code></li>
 	<li><code><a href='#asmunitstructure'>Subsection</a></code></li>
+	<li><code><a href='#asmcontext'>Resource</a></code></li>
 </ul>
-
-
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='asmstructure'>Section</h3>
-	<p></p>
+	<p>
+		A Section element groups portfolio pages together. A Section may contain any other Karuta 
+		element: Sections, Pages, Subsections and Resource elements (Resources are the data elements).  
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='asmunit'>Page</h3>
-	<p></p>
+	<p>
+		A Page is the basic element through which portfolios are viewed and used. A Page may 
+		contain Subsections and Resources.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='asmunitstructure'>Subsection</h3>
-	<p></p>
+	<p>
+		A Subsection element groups Resources together. A Subsection may contain Subsections and 
+		Resources.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='asmcontext'>Resource</h3>
+	<p>
+		A Resource is the terminating element of a tree (the leaves). Resources contain the data of
+		the portfolio (see RESOURCES).
+	</p>
 </article>

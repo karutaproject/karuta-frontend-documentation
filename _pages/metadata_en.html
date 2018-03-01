@@ -1,41 +1,278 @@
 ---
 layout: archive_en
 permalink: /metadata_en/
-title: "Metadata"
+title: "Metadata of a Karuta element"
 sidebar:
  nav: "metadata_en"
 ---
-To be translated ...
+<p>
+	Element metadata allow the designer to attribute unique identifiers to an element and also to
+	define it's behavior. For example, in the case of structural elements, we may define user-specific
+	menus that allow the designer or even an end-user to add additional elements inside this structural
+	element. In the case of resource elements, we may define the roles attributed to each right (who 
+	can do what on each element). It is also in the metadata that we specify which elements will fill 
+	a choice-box. Finally we may also specify which users will be able to share their portfolio with 
+	other parties, and under which conditions.
+</p>
+<p>
+	Metadata is accessed through an element's editing box.
+</p>
+<p>Some of the Karuta elements' metadata:</p>
+<ul>
+	<li><code><a href='#semantictag'>Semantic Tag</a></code></li>
+	<li><code><a href='#asmstructure'>Code</a></code></li>
+	<li><code><a href='#multilingual-node'>Multilingual Node</a></code></li>
+	<li><code><a href='#multilingual-resource'>Multilingual Resource</a></code></li>
+	<li><code><a href='#encript-resource'>Encrypt Resource</a></code></li>
+	<li><code><a href='#see'>Roles - See</a></code></li>
+	<li><code><a href='#delete'>Roles - Delete</a></code></li>
+	<li><code><a href='#edit-resource'>Roles - Edit Resource</a></code></li>
+	<li><code><a href='#comment'>Roles - Comment</a></code></li>
+	<li><code><a href='#submit'>Roles - Submit</a></code></li>
+	<li><code><a href='#query'>Query</a></code></li>
+	<li><code><a href='#get_multiple'>Menu - Get_Multiple</a></code></li>
+	<li><code><a href='#get_get_multiple'>Menu - Get_Get_Multiple</a></code></li>
+	<li><code><a href='#import_multiple'>Menu - Import_Multiple</a></code></li>
+	<li><code><a href='#import_ggmultiple'>Menu - Import_GGMultiple</a></code></li>
+	<li><code><a href='#sharing'>Sharing by the end-user</a></code></li>
+</ul>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='semantictag'>Semantic Tag</h3>
+	<p>
+		An element's Semantic Tag expresses it's semantics. It is also the means to search for an element
+		in a portfolio: the semantic tag is used in the Query field of an element (see Query below) as well
+		as in batch and report scripts.
+	</p>
+	<p>
+		Note: search of a semantic tag is inclusive &mdash; for example, the search for all elements with
+		semantic tag "competency" will also yield all elements with the semantic tag "sub-competency", as
+		the chain of characters of the first is included in the second.
+	</p>
+</article>
+
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='asmstructure'>Code</h3>
-	<p>Le code est utilisée dans les listes déroulantes (Get_Resource, Get_get_Resource, Menu-Get_Multiple, Menu-Import_Multiple) pour identifier le choix de l'usager. Par défaut le code et le libellé de l'élément apparaissent dans la liste déroulante et seul le libellé apparait ensuite dans la ressource.</p>
+	<p>
+		The Code of a portfolio element must be unique within this portfolio. It is used in choice boxes
+		(Get_Resource element, Get_Get_Resource element, Get_Muliple menu, Get_Get_Multiple menu and
+		Import_Multiple menu) to identify the end-user's selection.
+	</p>
+	<p>
+		By default, both the element's code and label are displayed in the choice box, and then only 
+		the label of the user's selection is displayed in the Resource element. This behavior may be 
+		modified by adding one or more of the following symbols to the element's code:
+	</p>
 	<ul>
-		<li>Le mot-clé <code>@</code>&nbsp;ajouté au code rendra le code non visible dans la liste d'une boîte de choix.</li>
-		<li>Le mot-clé <code>#</code>&nbsp;ajouté au code rendra le code visible dans la ressource.</li>
-		<li>Le mot-clé <code>&amp;</code>&nbsp;ajouté au code (uniquement pour l'élément <b>Item</b>) rendra la valeur associée visible dans la ressource.</li>
-		<li>Le mot-clé <code>%</code> ajouté au code rendra le libellé non visible dans la ressource.</li>
+		<li><code>@</code> the code will not be displayed in the choice box</li>
+		<li><code>#</code> the code will be displayed in the Resource element</li>
+		<li><code>&amp;</code> the associated <b>value</b> will be visible in the Resource element 
+			(<b>Item</b> elements only)</li>
+		<li><code>%</code> the label will not be displayed in the Resource element</li>
+		<li><code>$</code> the label will not be displayed in the choice box</li>
 	</ul>
 </article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='multilingual-node'>Multilingual Node</h3>
+	<p>
+		An element's Multilingual Node attribute specifies whether the element's <b>Label</b> is multilingual
+		(in the case of multilingual Karuta installations). If it is, two different labels can be specified
+		for the element (one in each language). If it is not, the element's label will be the same 
+		independently of what language the portfolio is being viewed in (the value of the label will be 
+		stored in the language defined as default language in the configuration file _init.js).
+	</p>
+	<p>
+		Note: the code is never multilingual. It has the same value independently of the selected viewing
+		language.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='multilingual-resource'>Multilingual Resource</h3>
+	<p>	
+		An element's Multilingual Resource attribute specifies whether the data supplied for the element is 
+		multilingual (in the case of multilingual Karuta installations). If it is, two different data sets 
+		can be specified for the element (one in each language). If it is not, the element's data 
+		will be the same independently of what language the portfolio is being viewed in (the data will be 
+		stored in the language defined as default language in the configuration file _init.js).</br>
+		Example: a person's name or birthdate is usually not language dependent (not multilingual) whereas 
+		an essay or instructions are different in each language.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='encript-resource'>Encrypt Resource</h3>
+	<p>
+		This element attribute specifies whether the data in a Resource element is encrypted. If so, 
+		a key phrase is requested from the user when they open the portfolio. This phrase is used to
+		encrypt and decrypt the data. It is not stored in the portfolio and thus must be memorized by 
+		the end-user.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='see'>Roles - See</h3>
+	<p>
+		The list of user roles (separated by a space character) that may see the element. For example: 
+		<i>student teacher</i>.</br>
+		By default, this right is attributed to the role <i>all</i>. It is the only right to have a
+		default value.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='delete'>Roles - Delete</h3>
+	<p>The list of user roles (separated by a space character) that may delete the element.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='edit-resource'>Roles - Edit Resource</h3>
+	<p>
+		The list of user roles that may enter data in the element (only for Resource elements).
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='comment'>Roles - Comment</h3>
+	<p>
+		The list of user roles that may add a comment to the element. Comments are timestamped and signed 
+		with the user name. A text editor is available to the users with the correct role for the purpose
+		of comment writing.</br>
+		Note: The user role with the Comment right <b>must also have</b> the Edit Resource right on the element.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='submit'>Roles - Submit</h3>
+	<p>
+		The list of user roles that may submit the element. Once submitted, the Edit Resource and Delete
+		rights are removed, for the element <b>and all it's children</b>. A submit button is available to
+		the users with the correct role for the purpose of submission.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='query'>Query</h3>
+	<p>
+		The Query field is used for:
+		<ul>
+			<li>choice boxes (Get_Resource and Get_Get_Resource elements)</li> 
+			<li>custom menus on Sections, Pages and Subsections</li>
+			<li>choice boxes allowing multiple user choices implemented through menus (Get_Multiple, 
+				Get_Get_Multiple and Import_Multiple menus)</li>
+		</ul>
+	</p>
+	<h4>Format for Get_ (either Get_Resource or Get_Multiple)</h4>
+	<p><code>portfolio_code</code>.<code>semantic_tag</code>.<code>label</code></p>
+	<ul>
+		<li>
+			<code>portfolio_code</code>: Code of rubrics portfolio in which to search for the specified
+			semantic tag. Format is 'project code.rubrics portfolio code'. If 'project code.' is not present, 
+			search for the rubrics portfolio will be in the current project (project containing the Get_).
+		</li>
+		<li><code>semantic_tag</code>: Semantic tag of elements to search for in the rubrics portfolio.</li>
+		<li><code>label</code>: Reserved word.</li>
+	</ul>
+	<h4>Format Get_Get_ (either Get_Get_Resource or Get_Get_Multiple)</h4>
+	<p><code>portfolio_code</code>.<code>position</code>.<code>semantic_tag1</code>.<code>semantic_tag2</code>.<code>label</code>
+	</p>
+	<ul>
+		<li><code>portfolio_code</code>: Code of rubrics portfolio in which to search.</li>
+		<li>
+			<code>position</code>: Position, in the current portfolio, of the parent element which will
+			restrict the search in the rubrics portfolio. One of the following values: <i>child</i>, 
+			<i>sibling</i>, <i>parent</i>, <i>parent.parent</i>, <i>parent.parent.parent</i>
+		</li>
+		<li>
+			<code>semantic_tag1</code>: Semantic tag of parent element (restricts the search inside this 
+			parent element in the rubrics portfolio).
+		</li>
+		<li><code>semantic_tag2</code>: Semantic tag of elements to search for in the rubrics portfolio.</li>
+		<li><code>label</code>: Reserved word.</li>
+	</ul>
+</article>
+
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='get_multiple'>Menu - Get_Multiple</h3>
+	<p>
+		This function allows the user to select multiple items from a list. For each item selected by the 
+		user, an reusable component is added to the portfolio. This component is usualy a Get_Resource element, 
+		but it may also be a structural element containing, amongst other things, the Get_Resource element. In
+		any case, the user's choice is set by Karuta in the Get_Resource element.
+	</p>
 	<h4>Format</h4>
-	<p><code>function</code>,<code>get_multiple</code>/<code>query</code>/<code>code_portfolio.semtag</code>/<code>get_resource_semtag</code>,<code>libellé@fr</code>,<code>role</code></p>
+	<p>
+		<code>function</code>,<code>get_multiple</code>/<code>query</code>/<code>portfolio_code.semantic_tag
+		</code>/<code>get_resource_semantic_tag</code>,<code>label@en</code>,<code>roles</code>
+	</p>
 	<ul>
-		<li><code>function</code> : mot réservé</li>
-		<li><code>get_multiple</code> : mot réservé</li>
-		<li><code>query : query du Get_Resource</li>
-		<li><code>code_portfolio.semtag</code> : part à ajouter (peut être juste le Get-Resource)</li>
-		<li><code>get_resource_semtag</code> : tag sémantique du Get_Resource (dans part à ajouter)</li>
-		<li><code>libellé@fr</code> : Libellé du menu</li>
-		<li><code>role</code> : rôle(s) voyant le menu</li>
+		<li><code>function</code>: Reserved word.</li>
+		<li><code>get_multiple</code>: Reserved word.</li>
+		<li><code>query</code>: Query of the Get_Resource element (see Query above).</li>
+		<li>
+			<code>portfolio_code.semantic_tag</code>: Reusable component to add to the portfolio 
+			 (Get-Resource element or more complex component containing the Get_Resource element).
+		</li>
+		<li><code>get_resource_semantic_tag</code>: Semantic tag of the Get_Resource element.</li>
+		<li><code>label@en</code>: User menu label.</li>
+		<li><code>roles</code>: List of roles that have this menu (separated by a space character).</li>
 	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='import_multiple'>Menu - Get_Multiple</h3>
-	<p></p>
+	<h3 id='get_get_multiple'>Menu - Get_Get_Multiple</h3>
+	<p>
+		Same as the previous function, except the choices available to the user in the list are restricted 
+		by the selection in a parent element (as in Get_Get_Resource elements).
+	</p>
+	<h4>Format</h4>
+	<p>
+		<code>function</code>,<code>get_get_multiple</code>/<code>query</code>/<code>
+		portfolio_code.semantic_tag</code>/<code>get_get_resource_semantic_tag</code>,
+		<code>label@en</code>,<code>roles</code>
+	</p>
+	<ul>
+		<li><code>function</code>: Reserved word.</li>
+		<li><code>get_get_multiple</code>: Reserved word.</li>
+		<li><code>query</code> : Query of the Get_Get_Resource element.</li>
+		<li>
+			<code>portfolio_code.semantic_tag</code>: Reusable component to add to the portfolio 
+			(Get_Get_Resource element or more complex component containing the Get_Get_Resource element).
+		</li>
+		<li><code>get_get_resource_semantic_tag</code>: Semantic tag of the Get_Get_Resource element.</li>
+		<li><code>label@en</code>: User menu label.</li>
+		<li><code>roles</code>: List of roles that have this menu (separated by a space character).</li>
+	</ul>
 </article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='import_multiple'>Menu - Import_Multiple</h3>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='import_ggmultiple'>Menu - Import_GGMultiple</h3>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='sharing'>Sharing by the end-user</h3>
+</article>
+
+

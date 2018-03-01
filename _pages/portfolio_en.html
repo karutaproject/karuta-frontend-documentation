@@ -6,4 +6,106 @@ sidebar:
  nav: "portfolio_en"
 ---
 
-<h3>Under construction...</h3>
+<p>Karuta portfolios are represented by structured trees (see STRUCTURES).</p>
+<p>There are multiple types of Karuta trees:</p>
+<ul>
+	<li>Portfolio Model</li>
+	<li>Portfolio Instance</li>
+	<li>Rubrics Portfolio</li>
+	<li>Reusable Components Portfolio</li>
+	<li>Report Script</li>
+	<li>Batch Script</li>
+	<li>Batch Form</li>
+</ul>
+<h3>Portfolio Model</h3>
+<p>
+	A portfolio model is a tree structure that organizes resources. Resources are the elements that 
+	will contain data: data supplied to the users like instructions or files, and data supplied by 
+	the users to populate their portfolios. Karuta offers resources of many types: text fields, text 
+	editors, files, images, audio and video players, date fields, etc.
+</p>
+<p>
+	Once constructed by the designer, the portfolio model is instantiated for each user, which means 
+	that a copy of the model is created and the new tree is the portfolio for that specific user.
+</p>
+<h3>Portfolio Instance</h3>
+<p>
+	A portfolio instance is a copy of the model for a specific user. At the moment of instantiation 
+	(e.g., copying), roles and permissions are created for each element of the portfolio.
+</p>
+<h3>Rubrics Portfolio</h3>
+<p>
+	A rubrics portfolio contains elements that will be referenced in other portfolios, for example a 
+	competency framework or elements of a choice-box.
+</p>
+<h3>Reusable Components Portfolio</h3>
+<p>
+	A reusable components portfolio is used to contain pre-built portfolio parts that will then be
+	made available to a user through a menu. This allows users to add parts to their portfolio as
+	needed.
+</p>
+<h3>Report Script</h3>
+<p>
+	A report script contains commands to select elements from one or multiple portfolios and
+	display them with in a different layout. For exemple, building dashboards, resumes, or cohort
+	aggregate reports. The report commands allow you to navigate through portfolios to select the
+	elements to display. The result is displayed in an html table, the layout of which is 
+	customizable by the designer.
+</p>
+<h3>Batch Script</h3>
+<p>
+	A batch script contains commands to automate the process of creating user accounts, 
+	portfolios, and updating information. A batch script is usually associated to a 
+	CSV file containing, for example, a list of intended users. Executing the batch script
+	with this file would then automatically create the user accounts and their portfolios. 
+	A batch script may also be associated to a batch form.
+</p>
+<h3>Batch Form</h3>
+<p>
+	A batch form executes a batch script for one single line, without the need for a CSV file.
+</p>
+
+<h2>Operational Principles</h2>
+<p>
+	A Kartua portfolio is built by adding branches to the root element, thus constructing a tree 
+	structure. The process is much like an assembly of Lego blocks. Certain branches, such as the 
+	basic Karuta elements, are predefined. Designers combine these basic elements to construct 
+	branches, and combines these branches to build complex portfolios.
+</p>
+<p>
+	User menus may also be defined, allowing the end user to add branches to their portfolio 
+	as need be (this is where the reusable components portfolio is called upon). This way the
+	portfolio is customizable by the end user.
+</p>
+
+<h3>Models and Instances</h3>
+<p>There are two types of Karuta portfolios:</p>
+<ul>
+<li>Portfolio model — Built by the designer. The associated roles are <i>designer</i> and 
+	<i>all</i>.
+</li>
+<li>Portfolio instance — Instantiated from a portfolio model for each individual user. 
+	The associated roles are those defined by the designer in the model (plus <i>designer</i> 
+	and <i>all</i>).
+</li>
+</ul>
+<p>The diagram below illustrates the relationship between these two types of portfolios:</p>
+<img src='../assets/img/modele-instance1.png' width='40%'/>
+<h3>The security model</h3>
+<p></p>
+<img src='../assets/img/modele-securite.png' width='80%'/>
+<ul>
+	<li>A portfolio has associated roles.</li>
+	<li>A role has associated permissions (read, write, submit, etc.) for each of the portfolio
+	 elements.
+	</li>
+	<li>Sharing a portfolio is done by associating a user and a role.</li>
+</ul>
+<img src='../assets/img/partage.png' width='80%'/>
+
+<h3>Simulation of the custom roles by the designer</h3>
+<p>
+	From the portfolio model, the designer may (and should!) simulate the various roles created 
+	for the portfolio users.
+</p>
+<img src='../assets/img/simulation-roles.png' width='80%'/>

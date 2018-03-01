@@ -2,18 +2,18 @@
 main:
   - title: "Portfolio"
     url: /portfolio_fr/
-  - title: "Tableau de bord"
-    url: /dashboard_fr/
   - title: "Rapport"
     url: /report_fr/
+  - title: "Batch"
+    url: /batch_fr/
 
 main_en:
   - title: "Portfolio"
     url: /portfolio_en/
-  - title: "Dashboard"
-    url: /dashboard_en/
   - title: "Report"
     url: /report_en/
+  - title: "Batch"
+    url: /batch_en/
 
 # ====== DOCUMENTATION_FR ================
 documentation_fr:
@@ -36,10 +36,42 @@ report_fr:
     children:
       - title: "ForEachPortfolio"
         url: /report_fr#for-each-portfolio
+      - title: "ForEachPortfolioNode"
+        url: /report_fr#for-each-portfolio-node
       - title: "ForEachPerson"
         url: /report_fr#for-each-person
       - title: "ForEachNode"
         url: /report_fr#for-each-node
+      - title: "ForEachLine"
+        url: /report_fr#for-each-line
+      - title: "Table"
+        url: /report_fr#table
+      - title: "Row"
+        url: /report_fr#row
+      - title: "Cell"
+        url: /report_fr#cell
+      - title: "Node"
+        url: /report_fr#node
+      - title: "Aggregate"
+        url: /report_fr#aggregate
+      - title: "Text"
+        url: /report_fr#text
+      - title: "URL2Unit"
+        url: /report_fr#url2unit
+      - title: "SVG"
+        url: /report_fr#svg
+      - title: "Draw Web Title"
+        url: /report_fr#draw-web-title
+      - title: "Draw Web Axis"
+        url: /report_fr#draw-web-axis
+      - title: "Draw Web Line"
+        url: /report_fr#draw-web-line
+      - title: "Show Sharing"
+        url: /report_fr#show-sharing
+      - title: "Go Parent"
+        url: /report_fr#go-parent
+      - title: "QR Code"
+        url: /report_fr#qrcode
   - title: Mise en forme
     url: /report_fr#css
   - title: Édition
@@ -60,31 +92,73 @@ report_en:
       - title: "Français"
         url: /report_fr/
 
-# ====== DASHBOARD_FR =============
-dashboard_fr:
+# ====== BATCH_FR =============
+batch_fr:
   - title: Commandes
     children:
-      - title: "for-each-line"
-        url: /for-each-line_fr/
-      - title: "for-each-portfolio"
-        url: /for-each-portfolio_fr/
+      - title: "ForEachLine"
+        url: /batch_fr/#for-each-line
+      - title: "CreatePerson"
+        url: /batch_fr/#create-person
+      - title: "DeletePerson"
+        url: /batch_fr/#delete-person
+      - title: "JoinUserGroup"
+        url: /batch_fr/#join-usergroup
+      - title: "LeaveUserGroup"
+        url: /batch_fr/#leave-usergroup
+      - title: "CreateTree"
+        url: /batch_fr/#create-tree
+      - title: "ShareTree"
+        url: /batch_fr/#share-tree
+      - title: "SelectTree"
+        url: /batch_fr/#select-tree
+      - title: "DeleteTree"
+        url: /batch_fr/#delete-tree
+      - title: "JoinPortfolioGroup"
+        url: /batch_fr/#join-portfoliogroup
+      - title: "ShareUserGroup"
+        url: /batch_fr/#share-usergroup
+      - title: "UnshareUserGroup"
+        url: /batch_fr/#unshare-usergroup
+      - title: "ImportNode"
+        url: /batch_fr/#import-node
+      - title: "MoveUp"
+        url: /batch_fr/#move-up
+      - title: "UpdateField"
+        url: /batch_fr/#update-field
+      - title: "UpdateProxy"
+        url: /batch_fr/#update-proxy
+      - title: "UpdateDashboard"
+        url: /batch_fr/#update-dashboard
+      - title: "UpdateTreeRoot"
+        url: /batch_fr/#update-treeroot
+      - title: "UpdateMetadataQuery"
+        url: /batch_fr/#update-metadata-query
+      - title: "UpdateMetadataMenu"
+        url: /batch_fr/#update-metadata-menu
+      - title: "UpdateMetadataInline"
+        url: /batch_fr/#update-metadata-inline
+      - title: "UpdateMetadata"
+        url: /batch_fr/#update-metadata
+      - title: "UpdateMetadataWad"
+        url: /batch_fr/#update-metadata-wad
   - title: Langues
     children:
       - title: "English"
-        url: /dashboard_en/
+        url: /batch_en/
 
-# ====== DASHBOARD_EN =============
-dashboard_en:
+# ====== BATCH_EN =============
+batch_en:
   - title: Functions
     children:
-      - title: "for-each-line"
-        url: /for-each-line_en/
-      - title: "for-each-portfolio"
-        url: /for-each-portfolio_en/
+      - title: "ForEachLine"
+        url: /batch_for-each-line_en/
+      - title: "CreatePerson"
+        url: /create-person_en/
   - title: Languages
     children:
       - title: "Français"
-        url: /dashboard_fr/
+        url: /batch_fr/
 
 # ====== PORTFOLIO_FR =============
 portfolio_fr:
@@ -127,6 +201,8 @@ structures_fr:
         url: /structures_fr/#asmunit
       - title: "Sous-section"
         url: /structures_fr/#asmunitstructure
+      - title: "Noeud de ressource"
+        url: /structures_fr/#asmcontext
   - title: Ressources
     url: /resources_fr/
   - title: Métadonnées
@@ -149,6 +225,8 @@ structures_en:
         url: /structures_fr/#asmunit
       - title: "Subsection"
         url: /structures_fr/#asmunitstructure
+      - title: "Resource Node"
+        url: /structures_fr/#asmcontext
   - title: Resources
     url: /resources_en/
   - title: Metadata
@@ -173,6 +251,22 @@ resources_fr:
         url: /resources_fr/#textfield
       - title: "Image"
         url: /resources_fr/#image
+      - title: "Document"
+        url: /resources_fr/#document
+      - title: "URL"
+        url: /resources_fr/#url
+      - title: "Audio"
+        url: /resources_fr/#audio
+      - title: "Vidéo"
+        url: /resources_fr/#video
+      - title: "oEmbed"
+        url: /resources_fr/#oembed
+      - title: "Couleur"
+        url: /resources_fr/#couleur
+      - title: "URL2Unit"
+        url: /resources_fr/#url2unit
+      - title: "Commentaires"
+        url: /resources_fr/#commentaires
   - title: Métadonnées
     url: /metadata_fr/
   - title: Mise en forme (CSS)
@@ -215,6 +309,22 @@ metadata_fr:
     children:
       - title: "Code"
         url: /metadata_fr/#code
+      - title: "Tag sémantique"
+        url: /metadata_fr/#semantictag
+      - title: "Noeud multilingue"
+        url: /metadata_fr/#multilingual-node
+      - title: "Ressource multilingue"
+        url: /metadata_fr/#multilingual-resource
+      - title: "Encripter la ressource"
+        url: /metadata_fr/#encript-resource
+      - title: "Rôles - Voir"
+        url: /metadata_fr/#see
+      - title: "Rôles - Éditer ressouce"
+        url: /metadata_fr/#edit-resource
+      - title: "Rôles - Commenter"
+        url: /metadata_fr/#comment
+      - title: "Rôles - Soumettre"
+        url: /metadata_fr/#submit
       - title: "Query"
         url: /metadata_fr/#query
       - title: "Menu - Get_Multiple"
@@ -223,6 +333,10 @@ metadata_fr:
         url: /metadata_fr/#get_get_multiple
       - title: "Menu - Import_Multiple"
         url: /metadata_fr/#import_multiple
+      - title: "Menu - Import_GGMultiple"
+        url: /metadata_fr/#import_ggmultiple
+      - title: "Partager"
+        url: /metadata_fr/#sharing
   - title: Mise en forme (CSS)
     url: /css_fr/
   - title: Langues
@@ -240,13 +354,17 @@ metadata_en:
     url: /metadata_en/
     children:
       - title: "Code"
-        url: /metadata_fr/#code
+        url: /metadata_en/#code
       - title: "Menu - Get_Multiple"
-        url: /metadata_fr/#get_multiple
+        url: /metadata_en/#get_multiple
       - title: "Menu - Get_Get_Multiple"
-        url: /metadata_fr/#get_get_multiple
+        url: /metadata_en/#get_get_multiple
       - title: "Menu - Import_Multiple"
-        url: /metadata_fr/#import_multiple
+        url: /metadata_en/#import_multiple
+      - title: "Menu - Import_GGMultiple"
+        url: /metadata_en/#import_ggmultiple
+      - title: "Sharing"
+        url: /metadata_en/#sharing
   - title: CSS
     url: /css_en/
   - title: Langues
