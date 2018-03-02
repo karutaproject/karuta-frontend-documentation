@@ -132,6 +132,8 @@ batch_fr:
         url: /batch_fr/#update-dashboard
       - title: "UpdateTreeRoot"
         url: /batch_fr/#update-treeroot
+      - title: "UpdateNodeResource"
+        url: /batch_fr/#update-noderesource
       - title: "UpdateMetadataQuery"
         url: /batch_fr/#update-metadata-query
       - title: "UpdateMetadataMenu"
