@@ -267,8 +267,16 @@ resources_fr:
         url: /resources_fr/#couleur
       - title: "URL2Unit"
         url: /resources_fr/#url2unit
+      - title: "Date"
+        url: /resources_fr/#date
+      - title: "Couleur"
+        url: /resources_fr/#couleur
       - title: "Commentaires"
         url: /resources_fr/#commentaires
+      - title: "GetResource"
+        url: /resources_fr/#getResource
+      - title: "GetGetResource"
+        url: /resources_fr/#getGetResource
   - title: Métadonnées
     url: /metadata_fr/
   - title: Mise en forme (CSS)
@@ -321,13 +329,15 @@ metadata_fr:
         url: /metadata_fr/#encript-resource
       - title: "Rôles - Voir"
         url: /metadata_fr/#see
+      - title: "Rôles - Supprimer"
+        url: /metadata_fr/#delete
       - title: "Rôles - Éditer ressouce"
         url: /metadata_fr/#edit-resource
       - title: "Rôles - Commenter"
         url: /metadata_fr/#comment
       - title: "Rôles - Soumettre"
         url: /metadata_fr/#submit
-      - title: "Query"
+      - title: "Recherche"
         url: /metadata_fr/#query
       - title: "Menu - Get_Multiple"
         url: /metadata_fr/#get_multiple
