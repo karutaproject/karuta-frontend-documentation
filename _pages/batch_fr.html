@@ -17,7 +17,7 @@ sidebar:
 
 <p>À partir d'un ou plusieurs modèles de portfolios, d'un script batch et d'un fichier CSV, KARUTA 
 	crée les usagers et leurs portfolios. Le fichier CSV contient les données relatives à chaque
-	usager à créer. Le script de batch indique les opérations à effectuer : créer l'usager, créer 
+	usager à créer. Le script de batch indique les opérations à effectuer&nbsp;: créer l'usager, créer 
 	son ou ses instances de portfolios à partir de modèles de portfolio, partager les nouveaux 
 	portfolios avec les usagers dans des rôles spécifiés, remplir les données de l'usager dans les 
 	portfolios, etc.
@@ -25,7 +25,7 @@ sidebar:
 
 <h3>Exemple de script batch</h3>
 <img src='../assets/img/batch-script.png'/>
-<p>Ce script correspond à l'algorithme suivant :</p>
+<p>Ce script correspond à l'algorithme suivant&nbsp;:</p>
 <p>	<i>Pour chaque ligne du fichier CSV</i></br>
 	<ul>
 		<li>Créer l'usager si il n'existe pas</li>
@@ -42,11 +42,11 @@ sidebar:
 <h3>Exemple de fichier CSV</h3>
 <img src='../assets/img/csv-file.png' width='50%'/>
 <p>Le fichier CSV contient les informations nécessaires à l'exécution du batch. <b>Sa structure doit 
-	suivre le format suivant :</b>
+	suivre le format suivant&nbsp;:</b>
 </p>
 <ul>
 	<li>
-		<code>Ligne 1</code> : Les noms des variables globales. Les variables globales sont les variables qui 
+		<code>Ligne 1</code>&nbsp;: Les noms des variables globales. Les variables globales sont les variables qui 
 		ont les même valeurs pour chaque usager à créer : par exemple, les codes des modèles de portfolio à 
 		instancier, un code de programme ou une session.</br>
 		<code>model_code</code> est un mot réservé : c'est le code du portfolio contenant le script de batch 
@@ -54,33 +54,33 @@ sidebar:
 		Dans le script de batch, les références aux variables globales sont précédées de <code>//</code>.
 	</li>
 	<li>
-		<code>Ligne 2</code> : Les valeurs des variables globales. Dans l'exemple présenté la valeur 
+		<code>Ligne 2</code>&nbsp;: Les valeurs des variables globales. Dans l'exemple présenté la valeur 
 		de <code>model_code</code> est <i>createStudents</i> : c'est le code du portfolio contenant le 
 		script de batch.
 	</li>
 	<li>
-		<code>Ligne 3</code> :  Les noms des variables locales. Les variables locales sont les variables qui 
+		<code>Ligne 3</code>&nbsp;:  Les noms des variables locales. Les variables locales sont les variables qui 
 		ont des valeurs différentes pour chaque usager à créer : par exemple, le nom de l'étudiant, son
 		prénom, courriel, etc.
 	</li>
-	<li><code>Lignes 4 et +</code> :  Les valeurs des variables locales, habituellement un usager par ligne.</li>
+	<li><code>Lignes 4 et +</code>&nbsp;:  Les valeurs des variables locales, habituellement un usager par ligne.</li>
 </ul>
 
 <!- =========================================== ->
 <h2>Les commandes</h2>
 <!- =========================================== ->
-<p>Commande d'exécution :</p>
+<p>Commande d'exécution&nbsp;:</p>
 <ul>
 	<li><a href='#for-each-line'><code>ForEachLine</code></a></li>
 </ul>
-<p>Commandes pour les usagers :</p>
+<p>Commandes pour les usagers&nbsp;:</p>
 <ul>
 	<li><a href='#create-person'><code>CreatePerson</code></a></li>
 	<li><a href='#delete-person'><code>DeletePerson</code></a></li>
 	<li><a href='#join-usergroup'><code>JoinUserGroup</code></a></li>
 	<li><a href='#leave-usergroup'><code>LeaveUserGroup</code></a></li>
 </ul>
-<p>Commandes pour les portfolios :</p>
+<p>Commandes pour les portfolios&nbsp;:</p>
 <ul>
 	<li><a href='#create-tree'><code>CreateTree</code></a></li>
 	<li><a href='#share-tree'><code>ShareTree</code></a></li>
@@ -88,28 +88,28 @@ sidebar:
 	<li><a href='#select-tree'><code>SelectTree</code></a></li>
 	<li><a href='#delete-tree'><code>DeleteTree</code></a></li>
 </ul>
-<p>Commande pour les groupes de portfolios :</p>
+<p>Commande pour les groupes de portfolios&nbsp;:</p>
 <ul>
 	<li><a href='#join-portfoliogroup'><code>JoinPortfolioGroup</code></a></li>
 </ul>
-<p>Commandes pour les groupes d'usagers</p>
+<p>Commandes pour les groupes d'usagers&nbsp;:</p>
 <ul>
 	<li><a href='#share-usergroup'><code>ShareUserGroup</code></a></li>
 	<li><a href='#unshare-usergroup'><code>UnshareUserGroup</code></li>
 </ul>
-<p>Commandes pour ajout dans un portfolios</p>
+<p>Commandes pour ajout dans un portfolios&nbsp;:</p>
 <ul>
 	<li><a href='#import-node'><code>ImportNode</code></a></li>
 	<li><a href='#move-up'><code>MoveUp</code></a></li>
 </ul>
-<p>Commandes de mise à jour d'éléments de portfolio</p>
+<p>Commandes de mise à jour d'éléments de portfolio&nbsp;:</p>
 <ul>
 	<li><a href='#update-field'><code>UpdateField</code></a></li>
 	<li><a href='#update-proxy'><code>UpdateProxy</code></a></li>
 	<li><a href='#update-dashboard'><code>UpdateDashboard</code></a></li>
 	<li><a href='#update-treeroot'><code>UpdateTreeRoot</code></a></li>
 </ul>
-<p>Commandes de mise à jour de métadonnées</p>
+<p>Commandes de mise à jour de métadonnées&nbsp;:</p>
 <ul>
 	<li><a href='#update-metadata-query'><code>UpdateMetadataQuery</code></a></li>
 	<li><a href='#update-metadata-menu'><code>UpdateMetadataMenu</code></a></li>
@@ -135,14 +135,14 @@ sidebar:
 	</p>
 	<h6>Champs du CreatePerson</h6>
 	<ul>
-		<li><code>Identifiant</code> : Identifiant unique du l'usager qui servira de login dans le système Karuta. 
-			Exemple : matricule ou courriel.
+		<li><code>Identifiant</code>&nbsp;: Identifiant unique du l'usager qui servira de login dans le système Karuta 
+			(par exemple matricule ou courriel).
 		</li>
-		<li><code>Prénom</code> : Prénom de l'usager.</li>
-		<li><code>Nom</code> : Nom de famille de l'usager.</li>
-		<li><code>Courriel</code> : Courriel de l'usager.</li>
-		<li><code>Mot de passe</code> : Le mot de passe de l'usager dans le système Karuta.</li>
-		<li><code>Créateur?</code> : Le compte utilisateur créé doit-il avoir les droits d'un designer 
+		<li><code>Prénom</code>&nbsp;: Prénom de l'usager.</li>
+		<li><code>Nom</code>&nbsp;: Nom de famille de l'usager.</li>
+		<li><code>Courriel</code>&nbsp;: Courriel de l'usager.</li>
+		<li><code>Mot de passe</code>&nbsp;: Le mot de passe de l'usager dans le système Karuta.</li>
+		<li><code>Créateur?</code>&nbsp;: Le compte utilisateur créé doit-il avoir les droits d'un designer 
 			Karuta? (En général, non!)
 		</li>
 	</ul>
@@ -151,28 +151,35 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='delete-person'>DeletePerson</h3>
-	<p>Supprimer un usager. (Attention : supprimer un usager ne supprime pas ses portfolios!)</p>
-	<h4>Champ du DeletePerson</h4>
-	<p><code>Identifiant</code> Identifiant unique de l'usager à supprimer (son login). Ajouter 
-		un élément <i>select</i> pour puiser l'identifiant dans une variable globale ou locale 
-		du fichier CVS, ou un élément <i>value</i> pour spécifier directement l'identifiant de 
-		l'usager.
-	</p>
+	<p>Supprimer un usager. (Attention&nbsp;: supprimer un usager ne supprime pas ses portfolios!)</p>
+	<h6>Champ du DeletePerson</h6>
+	<ul>
+		<li>
+			<code>Identifiant</code>&nbsp;: Identifiant unique de l'usager à supprimer (son login). 
+			Ajouter un élément <i>select</i> pour puiser l'identifiant dans une variable globale ou 
+			locale du fichier CVS, ou un élément <i>value</i> pour spécifier directement l'identifiant 
+			de l'usager.
+		</li>
+	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='join-usergroup'>JoinUserGroup</h3>
 	<p>Ajouter un usager à un groupe d'usagers.</p>
-	<h4>Champs du JoinUserGroup</h4>
-	<p><code>Personne</code> Identifiant de l'usager (son login). Ajouter un élément <i>select</i> 
-		pour puiser l'identifiant dans une variable globale ou locale du fichier CVS, ou un élément 
-		<i>value</i> pour spécifier directement l'identifiant de l'usager.
-	</p>
-	<p><code>Groupe</code> Nom du groupe d'usagers (exemple : enseignants2017). Ajouter un élément 
-		<i>select</i> pour puiser le nom dans une variable globale ou locale du fichier CVS, ou 
-		un élément <i>value</i> pour spécifier directement le nom du groupe d'usagers.
-	</p>
+	<h6>Champs du JoinUserGroup</h6>
+	<ul>
+		<li>
+			<code>Personne</code>&nbsp;: Identifiant de l'usager (son login). Ajouter un élément 
+			<i>select</i> pour puiser l'identifiant dans une variable globale ou locale du fichier CVS, 
+			ou un élément <i>value</i> pour spécifier directement l'identifiant de l'usager.
+		</li>
+		<li>
+			<code>Groupe</code>&nbsp;: Nom du groupe d'usagers (exemple&nbsp;: enseignants2017). Ajouter 
+			un élément <i>select</i> pour puiser le nom dans une variable globale ou locale du fichier CVS, 
+			ou un élément <i>value</i> pour spécifier directement le nom du groupe d'usagers.
+		</li>
+	</ul>
 </article>
 
 <article>
