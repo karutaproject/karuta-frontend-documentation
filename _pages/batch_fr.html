@@ -23,11 +23,11 @@ sidebar:
 	portfolios, etc.
 </p>
 
-<h5>Exemple de script batch</h5>
+<h4>Exemple de script batch</h4>
 <img src='../assets/img/batch-script.png'/>
 <p>Ce script correspond à l'algorithme suivant :</p>
-<p>Pour chaque ligne du fichier CSV :
 	<ul>
+		Pour chaque ligne du fichier CSV
 		<li>Créer l'usager si il n'existe pas</li>
 		<li>Créer un portfolio Profil</li>
 		<li>Partager le portfolio Profil avec l'usager dans le rôle <i>student</i></li>
@@ -36,29 +36,34 @@ sidebar:
 		<li>Partager le portfolio Évaluation avec l'usager dans le rôle <i>student</i></li>
 		<li>Mettre à jour le Proxy du portfolio Évaluation vers le portfolio Profil</li>
 	</ul>
-</p>
+<p></p>
 
-<h5>Exemple de fichier CSV</h5>
+<h4>Exemple de fichier CSV</h4>
 <img src='../assets/img/csv-file.png'/>
-<p>Le fichier CSV contient les informations nécessaires à l'exécution du batch. Sa structure doit 
-	suivre le format suivant :
+<p>Le fichier CSV contient les informations nécessaires à l'exécution du batch. <b>Sa structure doit 
+	suivre le format suivant :</b>
 </p>
-<p><code>Ligne 1 : </code> Les noms des variables globales. Les variables globales sont les variables qui 
-	ont les même valeurs pour chaque usager à créer : par exemple, les codes des modèles de portfolio à 
-	instancier, un code de programme ou une session.</br>
-	<code>model_code</code> est un mot réservé : c'est le code du portfolio contenant le script de batch 
-	à exécuter.</br> 
-	Dans le script de batch, les références aux variables globales sont précédées de <code>//</code>.
-</p>
-<p><code>Ligne 2 : </code> Les valeurs des variables globales. Dans l'exemple présenté la valeur 
-	de <code>model_code</code> est <i>createStudents</i> : c'est le code du portfolio contenant le 
-	script de batch.
-</p>
-<p><code>Ligne 3 : </code> Les noms des variables locales. Les variables locales sont les variables qui 
-	ont des valeurs différentes pour chaque usager à créer : par exemple, le nom de l'étudiant, son
-	prénom, courriel, etc.
-</p>
-<p><code>Ligne 4 et + : </code> Les valeurs des variables locales, habituellement un usager par ligne.</p>
+<ul>
+	<li>
+		<code>Ligne 1 : </code> Les noms des variables globales. Les variables globales sont les variables qui 
+		ont les même valeurs pour chaque usager à créer : par exemple, les codes des modèles de portfolio à 
+		instancier, un code de programme ou une session.</br>
+		<code>model_code</code> est un mot réservé : c'est le code du portfolio contenant le script de batch 
+		à exécuter.</br> 
+		Dans le script de batch, les références aux variables globales sont précédées de <code>//</code>.
+	</li>
+	<li>
+		<code>Ligne 2 : </code> Les valeurs des variables globales. Dans l'exemple présenté la valeur 
+		de <code>model_code</code> est <i>createStudents</i> : c'est le code du portfolio contenant le 
+		script de batch.
+	</li>
+	<li>
+		<code>Ligne 3 : </code> Les noms des variables locales. Les variables locales sont les variables qui 
+		ont des valeurs différentes pour chaque usager à créer : par exemple, le nom de l'étudiant, son
+		prénom, courriel, etc.
+	</li>
+	<li><code>Ligne 4 et + : </code> Les valeurs des variables locales, habituellement un usager par ligne.</li>
+</ul>
 
 <!- =========================================== ->
 <h3>Commandes</h3>
