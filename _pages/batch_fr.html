@@ -6,7 +6,7 @@ sidebar:
  nav: "batch_fr"
 ---
 <!- =========================================== ->
-<h3>Fonctionnement</h3>
+<h2>Fonctionnement</h2>
 <!- =========================================== ->
 
 <p>Ensemble de commandes de script permettant d'automatiser la création, modification et suppression de 
@@ -23,7 +23,7 @@ sidebar:
 	portfolios, etc.
 </p>
 
-<h4>Exemple de script batch</h4>
+<h3>Exemple de script batch</h3>
 <img src='../assets/img/batch-script.png'/>
 <p>Ce script correspond à l'algorithme suivant :</p>
 <p>	<i>Pour chaque ligne du fichier CSV</i></br>
@@ -46,7 +46,7 @@ sidebar:
 </p>
 <ul>
 	<li>
-		<code>Ligne 1 : </code> Les noms des variables globales. Les variables globales sont les variables qui 
+		<code>Ligne 1</code> : Les noms des variables globales. Les variables globales sont les variables qui 
 		ont les même valeurs pour chaque usager à créer : par exemple, les codes des modèles de portfolio à 
 		instancier, un code de programme ou une session.</br>
 		<code>model_code</code> est un mot réservé : c'est le code du portfolio contenant le script de batch 
@@ -54,16 +54,16 @@ sidebar:
 		Dans le script de batch, les références aux variables globales sont précédées de <code>//</code>.
 	</li>
 	<li>
-		<code>Ligne 2 : </code> Les valeurs des variables globales. Dans l'exemple présenté la valeur 
+		<code>Ligne 2</code> : Les valeurs des variables globales. Dans l'exemple présenté la valeur 
 		de <code>model_code</code> est <i>createStudents</i> : c'est le code du portfolio contenant le 
 		script de batch.
 	</li>
 	<li>
-		<code>Ligne 3 : </code> Les noms des variables locales. Les variables locales sont les variables qui 
+		<code>Ligne 3</code> :  Les noms des variables locales. Les variables locales sont les variables qui 
 		ont des valeurs différentes pour chaque usager à créer : par exemple, le nom de l'étudiant, son
 		prénom, courriel, etc.
 	</li>
-	<li><code>Ligne 4 et + : </code> Les valeurs des variables locales, habituellement un usager par ligne.</li>
+	<li><code>Lignes 4 et +</code> :  Les valeurs des variables locales, habituellement un usager par ligne.</li>
 </ul>
 
 <!- =========================================== ->
