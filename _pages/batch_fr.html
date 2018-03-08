@@ -6,7 +6,7 @@ sidebar:
  nav: "batch_fr"
 ---
 <!- =========================================== ->
-<h2>Fonctionnement</h2>
+<h2>Comment ça fonctionne</h2>
 <!- =========================================== ->
 
 <p>Ensemble de commandes de script permettant d'automatiser la création, modification et suppression de 
@@ -67,20 +67,20 @@ sidebar:
 </ul>
 
 <!- =========================================== ->
-<h2>Commandes</h2>
+<h2>Les commandes</h2>
 <!- =========================================== ->
-Les commandes disponibles sont :
+<p>Commande d'exécution :</p>
 <ul>
 	<li><a href='#for-each-line'><code>ForEachLine</code></a></li>
 </ul>
-<h4>Commandes pour les usagers</h4>
+<p>Commandes pour les usagers :</p>
 <ul>
 	<li><a href='#create-person'><code>CreatePerson</code></a></li>
 	<li><a href='#delete-person'><code>DeletePerson</code></a></li>
 	<li><a href='#join-usergroup'><code>JoinUserGroup</code></a></li>
 	<li><a href='#leave-usergroup'><code>LeaveUserGroup</code></a></li>
 </ul>
-<h4>Commandes pour les portfolios</h4>
+<p>Commandes pour les portfolios :</p>
 <ul>
 	<li><a href='#create-tree'><code>CreateTree</code></a></li>
 	<li><a href='#share-tree'><code>ShareTree</code></a></li>
@@ -88,28 +88,28 @@ Les commandes disponibles sont :
 	<li><a href='#select-tree'><code>SelectTree</code></a></li>
 	<li><a href='#delete-tree'><code>DeleteTree</code></a></li>
 </ul>
-<h4>Commandes pour les groupes de portfolios</h4>
+<p>Commande pour les groupes de portfolios :</p>
 <ul>
 	<li><a href='#join-portfoliogroup'><code>JoinPortfolioGroup</code></a></li>
 </ul>
-<h4>Commandes pour le partage/départage avec des groupes d'usagers</h4>
+<p>Commandes pour les groupes d'usagers</p>
 <ul>
 	<li><a href='#share-usergroup'><code>ShareUserGroup</code></a></li>
 	<li><a href='#unshare-usergroup'><code>UnshareUserGroup</code></li>
 </ul>
-<h4>Commandes pour ajout dans un portfolios</h4>
+<p>Commandes pour ajout dans un portfolios</p>
 <ul>
 	<li><a href='#import-node'><code>ImportNode</code></a></li>
 	<li><a href='#move-up'><code>MoveUp</code></a></li>
 </ul>
-<h4>Commandes de mise à jour d'éléments de portfolio</h4>
+<p>Commandes de mise à jour d'éléments de portfolio</p>
 <ul>
 	<li><a href='#update-field'><code>UpdateField</code></a></li>
 	<li><a href='#update-proxy'><code>UpdateProxy</code></a></li>
 	<li><a href='#update-dashboard'><code>UpdateDashboard</code></a></li>
 	<li><a href='#update-treeroot'><code>UpdateTreeRoot</code></a></li>
 </ul>
-<h4>Commandes de mise à jour des métadonnées</h4>
+<p>Commandes de mise à jour de métadonnées</p>
 <ul>
 	<li><a href='#update-metadata-query'><code>UpdateMetadataQuery</code></a></li>
 	<li><a href='#update-metadata-menu'><code>UpdateMetadataMenu</code></a></li>
@@ -127,22 +127,21 @@ Les commandes disponibles sont :
 	</p>
 </article>
 
-
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='create-person'>CreatePerson</h3>
 	<p>Créer un usager. Ne pas oublier de remplacer les valeurs par défaut de cet élément par vos 
 		propres noms de variables locales (ligne 3 du fichier CSV).
 	</p>
-	<h4>Champs du CreatePerson</h4>
-	<p><code>Identifiant</code> Identifiant unique qui servira de login dans le système Karuta. 
+	<h5>Champs du CreatePerson</h5>
+	<p><code>Identifiant</code> : Identifiant unique du l'usager qui servira de login dans le système Karuta. 
 		Exemple : matricule ou courriel.
 	</p>
-	<p><code>Prénom</code> Prénom de l'usager.</p>
-	<p><code>Nom</code> Nom de famille de l'usager.</p>
-	<p><code>Courriel</code> Courriel de l'usager.</p>
-	<p><code>Mot de passe</code> Le mot de passe de l'usager dans le système Karuta.</p>
-	<p><code>Créateur?</code> Le compte utilisateur créé doit-il avoir les droits d'un designer 
+	<p><code>Prénom</code> : Prénom de l'usager.</p>
+	<p><code>Nom</code> : Nom de famille de l'usager.</p>
+	<p><code>Courriel</code> : Courriel de l'usager.</p>
+	<p><code>Mot de passe</code> : Le mot de passe de l'usager dans le système Karuta.</p>
+	<p><code>Créateur?</code> : Le compte utilisateur créé doit-il avoir les droits d'un designer 
 		Karuta? (En général, non!)
 	</p>
 </article>
