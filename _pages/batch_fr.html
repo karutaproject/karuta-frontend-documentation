@@ -10,47 +10,53 @@ sidebar:
 <!- =========================================== ->
 
 <p>Ensemble de commandes de script permettant d'automatiser la création, modification et suppression de 
-	portfolios, ainsi que la création ou suppresion d'usagers.
+	portfolios, ainsi que la création ou suppression d'usagers.
 </p>
+
 <img src='../assets/img/execute-batch.png' width='80%'/>
+
 <p>À partir d'un ou plusieurs modèles de portfolios, d'un script batch et d'un fichier CSV, KARUTA 
 	crée les usagers et leurs portfolios. Le fichier CSV contient les données relatives à chaque
 	usager à créer. Le script de batch indique les opérations à effectuer : créer l'usager, créer 
 	son ou ses instances de portfolios à partir de modèles de portfolio, partager les nouveaux 
-	portfolios avec des usagers dans des rôles spécifiés, remplir les données de l'usager dans les 
+	portfolios avec les usagers dans des rôles spécifiés, remplir les données de l'usager dans les 
 	portfolios, etc.
 </p>
 
-<p>Exemple de script</p>
+<h5>Exemple de script batch</h5>
 <img src='../assets/img/batch-script.png'/>
-<ul>
-	<h5>Pour chaque ligne du fichier CSV :</h5>
-	<li>Créer l'usager si il n'existe pas</li>
-	<li>Créer un portfolio profil</li>
-	<li>Partager le portfolio profil avec l'usager dans le rôle student</li>
-	<li>Mettre à jour les champs nom et prénom dans le profil</li>
-	<li>Créer un portfolio d'évaluation</li>
-	<li>Partager le portfolio d'évaluation avec l'usager dans le rôle student</li>
-	<li>Mettre à jour le Proxy du portfolio d'évaluation vers le portfolio profil</li>
-</ul>
-<p>Exemple de fichier CSV</p>
+<p>Ce script correspond à l'algorithme suivant :</p>
+<p>Pour chaque ligne du fichier CSV :
+	<ul>
+		<li>Créer l'usager si il n'existe pas</li>
+		<li>Créer un portfolio Profil</li>
+		<li>Partager le portfolio Profil avec l'usager dans le rôle <i>student</i></li>
+		<li>Mettre à jour les champs Nom et Prénom dans le portfolio Profil</li>
+		<li>Créer un portfolio Évaluation</li>
+		<li>Partager le portfolio Évaluation avec l'usager dans le rôle <i>student</i></li>
+		<li>Mettre à jour le Proxy du portfolio Évaluation vers le portfolio Profil</li>
+	</ul>
+</p>
+
+<h5>Exemple de fichier CSV</h5>
 <img src='../assets/img/csv-file.png'/>
-<p>Le fichier CSV contient les informations nécessaires à l'exécution du batch.</p>
-<!- =========================================== ->
-<h3>Structure du fichier CSV</h3>
-<!- =========================================== ->
-<p><code>Ligne 1 : </code> Les noms des variables globales, c'est à dire les variables qui 
-	ont les même valeurs pour toutes les lignes. <code>model_code</code> est un mot réservé : c'est 
-	le code du portfolio contenant le script de batch à exécuter. Dans le script de batch, les 
-	références aux variables globales sont précédées de <code>//</code>.
+<p>Le fichier CSV contient les informations nécessaires à l'exécution du batch. Sa structure doit 
+	suivre le format suivant :
+</p>
+<p><code>Ligne 1 : </code> Les noms des variables globales. Les variables globales sont les variables qui 
+	ont les même valeurs pour chaque usager à créer : par exemple, les codes des modèles de portfolio à 
+	instancier, un code de programme ou une session.</br>
+	<code>model_code</code> est un mot réservé : c'est le code du portfolio contenant le script de batch 
+	à exécuter.</br> 
+	Dans le script de batch, les références aux variables globales sont précédées de <code>//</code>.
 </p>
 <p><code>Ligne 2 : </code> Les valeurs des variables globales. Dans l'exemple présenté la valeur 
-	de <code>model_code</code> est <i>createStudents</i> : c'est le nom du portfolio contenant le 
+	de <code>model_code</code> est <i>createStudents</i> : c'est le code du portfolio contenant le 
 	script de batch.
 </p>
-<p><code>Ligne 3 : </code> Les noms des variables locales, c'est à dire les variables qui 
-	ont des valeurs différentes pour chaque ligne à partir de la ligne suivante. 
-	Exemple : nomEtudiant, prenomEtudiant, matriculeEtudiant, courrielEtudiant.
+<p><code>Ligne 3 : </code> Les noms des variables locales. Les variables locales sont les variables qui 
+	ont des valeurs différentes pour chaque usager à créer : par exemple, le nom de l'étudiant, son
+	prénom, courriel, etc.
 </p>
 <p><code>Ligne 4 et + : </code> Les valeurs des variables locales, habituellement un usager par ligne.</p>
 
