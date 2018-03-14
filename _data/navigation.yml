@@ -251,32 +251,40 @@ resources_fr:
         url: /resources_fr/#field
       - title: "Texte long"
         url: /resources_fr/#textfield
+      - title: "Commentaires"
+        url: /resources_fr/#commentaires
       - title: "Image"
         url: /resources_fr/#image
-      - title: "Document"
-        url: /resources_fr/#document
-      - title: "URL"
-        url: /resources_fr/#url
       - title: "Audio"
         url: /resources_fr/#audio
       - title: "Vidéo"
         url: /resources_fr/#video
+      - title: "Document"
+        url: /resources_fr/#document
       - title: "oEmbed"
         url: /resources_fr/#oembed
-      - title: "Couleur"
-        url: /resources_fr/#couleur
+      - title: "URL"
+        url: /resources_fr/#url
       - title: "URL2Unit"
         url: /resources_fr/#url2unit
-      - title: "Date"
+      - title: "Envoi de courriel"
+        url: /resources_fr/#sendEmail
+      - title: "Calendrier"
         url: /resources_fr/#date
       - title: "Couleur"
         url: /resources_fr/#couleur
-      - title: "Commentaires"
-        url: /resources_fr/#commentaires
+      - title: "Tableau de bord"
+        url: /resources_fr/#dashboard
       - title: "GetResource"
         url: /resources_fr/#getResource
       - title: "GetGetResource"
         url: /resources_fr/#getGetResource
+      - title: "GetDoubleResource"
+        url: /resources_fr/#getDoubleResource
+      - title: "Item"
+        url: /resources_fr/#item
+      - title: "Proxy"
+        url: /resources_fr/#proxy
   - title: Métadonnées
     url: /metadata_fr/
   - title: Mise en forme (CSS)
@@ -294,11 +302,43 @@ resources_en:
     url: /resources_en/
     children:
       - title: "Short Text"
-        url: /resources_en/#field
+        url: /resources_fr/#field
       - title: "Long Text"
-        url: /resources_en/#textfield
+        url: /resources_fr/#textfield
+      - title: "Comment"
+        url: /resources_fr/#commentaires
       - title: "Image"
-        url: /resources_en/#image
+        url: /resources_fr/#image
+      - title: "Audio"
+        url: /resources_fr/#audio
+      - title: "Video"
+        url: /resources_fr/#video
+      - title: "Document"
+        url: /resources_fr/#document
+      - title: "oEmbed"
+        url: /resources_fr/#oembed
+      - title: "URL"
+        url: /resources_fr/#url
+      - title: "URL2Unit"
+        url: /resources_fr/#url2unit
+      - title: "SendEmail"
+        url: /resources_fr/#sendEmail
+      - title: "Calender"
+        url: /resources_fr/#date
+      - title: "Coulor"
+        url: /resources_fr/#couleur
+      - title: "Dashboard"
+        url: /resources_fr/#dashboard
+      - title: "GetResource"
+        url: /resources_fr/#getResource
+      - title: "GetGetResource"
+        url: /resources_fr/#getGetResource
+      - title: "GetDoubleResource"
+        url: /resources_fr/#getDoubleResource
+      - title: "Item"
+        url: /resources_fr/#item
+      - title: "Proxy"
+        url: /resources_fr/#proxy
   - title: Metadata
     url: /metadata_en/
   - title: CSS
@@ -317,21 +357,21 @@ metadata_fr:
   - title: Métadonnées
     url: /metadata_fr/
     children:
-      - title: "Code"
-        url: /metadata_fr/#code
       - title: "Tag sémantique"
         url: /metadata_fr/#semantictag
+      - title: "Code"
+        url: /metadata_fr/#code
       - title: "Noeud multilingue"
         url: /metadata_fr/#multilingual-node
       - title: "Ressource multilingue"
         url: /metadata_fr/#multilingual-resource
-      - title: "Encripter la ressource"
+      - title: "Encrypter la ressource"
         url: /metadata_fr/#encript-resource
       - title: "Rôles - Voir"
         url: /metadata_fr/#see
       - title: "Rôles - Supprimer"
         url: /metadata_fr/#delete
-      - title: "Rôles - Éditer ressouce"
+      - title: "Rôles - Éditer ressource"
         url: /metadata_fr/#edit-resource
       - title: "Rôles - Commenter"
         url: /metadata_fr/#comment
@@ -347,7 +387,7 @@ metadata_fr:
         url: /metadata_fr/#import_multiple
       - title: "Menu - Import_GGMultiple"
         url: /metadata_fr/#import_ggmultiple
-      - title: "Partager"
+      - title: "Partage par l'usager"
         url: /metadata_fr/#sharing
   - title: Mise en forme (CSS)
     url: /css_fr/
@@ -365,18 +405,38 @@ metadata_en:
   - title: Metadata
     url: /metadata_en/
     children:
+      - title: "Semantic Tag"
+        url: /metadata_fr/#semantictag
       - title: "Code"
-        url: /metadata_en/#code
+        url: /metadata_fr/#code
+      - title: "Multilingual Node"
+        url: /metadata_fr/#multilingual-node
+      - title: "Multilingual Resource"
+        url: /metadata_fr/#multilingual-resource
+      - title: "Encrypt Resource"
+        url: /metadata_fr/#encript-resource
+      - title: "Roles - See"
+        url: /metadata_fr/#see
+      - title: "Roles - Delete"
+        url: /metadata_fr/#delete
+      - title: "Roles - Edit Resource"
+        url: /metadata_fr/#edit-resource
+      - title: "Roles - Comment"
+        url: /metadata_fr/#comment
+      - title: "Roles - Submit"
+        url: /metadata_fr/#submit
+      - title: "Query"
+        url: /metadata_fr/#query
       - title: "Menu - Get_Multiple"
-        url: /metadata_en/#get_multiple
+        url: /metadata_fr/#get_multiple
       - title: "Menu - Get_Get_Multiple"
-        url: /metadata_en/#get_get_multiple
+        url: /metadata_fr/#get_get_multiple
       - title: "Menu - Import_Multiple"
-        url: /metadata_en/#import_multiple
+        url: /metadata_fr/#import_multiple
       - title: "Menu - Import_GGMultiple"
-        url: /metadata_en/#import_ggmultiple
-      - title: "Sharing"
-        url: /metadata_en/#sharing
+        url: /metadata_fr/#import_ggmultiple
+      - title: "Sharing by the end-user"
+        url: /metadata_fr/#sharing
   - title: CSS
     url: /css_en/
   - title: Langues

@@ -6,9 +6,585 @@ sidebar:
  nav: "batch_en"
 ---
 
-<h3>Functions</h3>
-Available functions are :
-<ul>
+<!- =========================================== ->
+<h2>How It Works</h2>
+<!- =========================================== ->
 
-	<li><code>ForEachLine</code></li>
+<p>
+	Set of script commands allowing you to automate the creation, modification and deletion of 
+	portfolios, as well as creation or deletion of user accounts.
+</p>
+
+<img src='../assets/img/execute-batch.png' width='50%'/>
+
+<p>
+	Using one or more portfolio models, a batch script and a CSV file, Karuta creates the user 
+	accounts and their portfolios. The CSV file contains the data for each user account to be 
+	created. The batch script contains each step to execute: create the user account, create one
+	or more portfolios from the portfolio models, share the new portfolios with the user accounts
+	in specified roles, update user data in the portfolios, etc.
+</p>
+
+<h3>Batch Script Example</h3>
+<img src='../assets/img/batch-script.png'/>
+<p>This script corresponds to the following alogorith:</p>
+<p>	<i>For each line of the CSV file:</i></br>
+	<ul>
+		<li>Create the user account if it does not already exist</li>
+		<li>Create a Profile Portfolio</li>
+		<li>Share the Profile Portfolio with the user account in the <i>student</i> role</li>
+		<li>Update the Last Name and First Name fields in the Profile Portfolio</li>
+		<li>Create an Evaluation Portfolio</li>
+		<li>Share the Evaluation Portfolio with the user account in the <i>student</i> role</li>
+		<li>Update the Evaluation Portfolio's Proxy element to point to the Profile Portfolio</li>
+	</ul>
+</p>
+<p></p>
+
+<h3>CSV File Example</h3>
+<img src='../assets/img/csv-file.png' width='50%'/>
+<p>The CSV file contains the information needed to execute the batch script.</p>
+<p>CSV file format:</p>
+<ul>
+	<li>
+		<code>Line 1</code> Names of the global variables. Global variables are the variables that have 
+		the same value for each user to be created (for example, the codes of the model portfolios to be 
+		instanciated, a program code or a semester). In the batch script, references to global variables 
+		must be prefixed by <code>//</code>.</br>
+		<code>model_code</code> is a reserved word: it is the code of the portfolio that contains the batch
+		script to be executed.
+	</li>
+	<li>
+		<code>Line 2</code> Values of the global variables. In the exemple above, the value of 
+		<code>model_code</code> is <i>createStudents</i>: it is the code of the portfolio that 
+		contains the batch script.
+	</li>
+	<li>
+		<code>Line 3</code> Names of the local variables. Local variables are the variables that have 
+		different values for each user to be created (for example, the student's name, email, etc).
+	</li>
+	<li>
+		<code>Lines 4+</code> Values of the local variables, usually one user per line.
+	</li>
 </ul>
+
+<!- =========================================== ->
+<h2>The Commands</h2>
+<!- =========================================== ->
+<p>Execution command:</p>
+<ul>
+	<li><a href='#for-each-line'><code>ForEachLine</code></a></li>
+</ul>
+<p>User account commands:</p>
+<ul>
+	<li><a href='#create-person'><code>CreatePerson</code></a></li>
+	<li><a href='#delete-person'><code>DeletePerson</code></a></li>
+	<li><a href='#join-usergroup'><code>JoinUserGroup</code></a></li>
+	<li><a href='#leave-usergroup'><code>LeaveUserGroup</code></a></li>
+</ul>
+<p>Portfolio commands:</p>
+<ul>
+	<li><a href='#create-tree'><code>CreateTree</code></a></li>
+	<li><a href='#share-tree'><code>ShareTree</code></a></li>
+	<li><a href='#unshare-tree'><code>UnshareTree</code></a></li>
+	<li><a href='#select-tree'><code>SelectTree</code></a></li>
+	<li><a href='#delete-tree'><code>DeleteTree</code></a></li>
+</ul>
+<p>Portfolio group commands:</p>
+<ul>
+	<li><a href='#join-portfoliogroup'><code>JoinPortfolioGroup</code></a></li>
+</ul>
+<p>User group commands:</p>
+<ul>
+	<li><a href='#share-usergroup'><code>ShareUserGroup</code></a></li>
+	<li><a href='#unshare-usergroup'><code>UnshareUserGroup</code></li>
+</ul>
+<p>Commands to add an element to a portfolio:</p>
+<ul>
+	<li><a href='#import-node'><code>ImportNode</code></a></li>
+	<li><a href='#move-up'><code>MoveUp</code></a></li>
+</ul>
+<p>Commands to update the value of a portfolio element:</p>
+<ul>
+	<li><a href='#update-field'><code>UpdateField</code></a></li>
+	<li><a href='#update-proxy'><code>UpdateProxy</code></a></li>
+	<li><a href='#update-dashboard'><code>UpdateDashboard</code></a></li>
+	<li><a href='#update-treeroot'><code>UpdateTreeRoot</code></a></li>
+	<li><a href='#update-noderesource'><code>UpdateNodeResource</code></a></li>
+</ul>
+<p>Metadata update commands:</p>
+<ul>
+	<li><a href='#update-metadata-query'><code>UpdateMetadataQuery</code></a></li>
+	<li><a href='#update-metadata-menu'><code>UpdateMetadataMenu</code></a></li>
+	<li><a href='#update-metadata-inline'><code>UpdateMetadataInline</code></a></li>
+	<li><a href='#update-metadata'><code>UpdateMetadata</code></a></li>
+	<li><a href='#update-metadata-wad'><code>UpdateMetadataWad</code></li>
+</ul>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='for-each-line'>ForEachLine</h3>
+	<p>
+		ForEachLine is a loop. It is generally the starting point of a batch script. The commands 
+		inside the ForEachLine element are executed for each line of the CSV file (lines 4+).
+		
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='create-person'>CreatePerson</h3>
+	<p>
+		Create a user account. Don't forget to replace the default local variable names by your own 
+		(line 3 of your CSV file).
+	</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Identifier</code> Unique identifier for the user. Will be used as login to Karuta.
+			(For example student ID number or email.)
+		</li>
+		<li><code>First Name</code> User's first name.</li>
+		<li><code>Last Name</code> User's last name.</li>
+		<li><code>Email</code> User's email.</li>
+		<li><code>Password</code> Password for the user in Karuta.</li>
+		<li>
+			<code>Creator?</code> Does the user account being created need Karuta Designer rights? 
+			(Usually, no!)
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='delete-person'>DeletePerson</h3>
+	<p>Delete a user account. (Important note: deleting a user does NOT delete their portfolios!)</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Identifier</code> Unique identifier of the user account to delete (the login).
+			Add a <i>select</i> element to draw the identifier from a global or local variable in 
+			your CSV file, or a <i>value</i> element to specify the identifier directly.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='join-usergroup'>JoinUserGroup</h3>
+	<p>Add a user to a user group.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Person</code> User identifier (the login). Add a <i>select</i> element to draw the 
+			identifier from a global or local variable in your CSV file, or a <i>value</i> element 
+			to specify the identifier directly.
+		</li>
+		<li>
+			<code>UserGroup</code> User group name (example: teachers2017). Add a <i>select</i> element 
+			to draw the name from a global or local variable in your CSV file, or a <i>value</i> element 
+			to specify the name directly.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='leave-usergroup'>LeaveUserGroup</h3>
+	<p>Remove a user from a user group.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Person</code> User identifier (the login). Add a <i>select</i> element to draw the 
+			identifier from a global or local variable in your CSV file, or a <i>value</i> element 
+			to specify the identifier directly.
+		</li>
+		<li>
+			<code>UserGroup</code> Name of the user group (example: teachers2017). Add a <i>select</i> element 
+			to draw the name from a global or local variable in your CSV file, or a <i>value</i> element 
+			to specify the name directly.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='create-tree'>CreateTree</h3>
+	<p>Create a portfolio instance from a portfolio model.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>ID</code> Assign an ID which will be used in subsequent commands to reference 
+			this portfolio (for example to share the new portfolio with a user).
+		</li>
+		<li>
+			<code>Model</code> Code of the portfolio model to instanciate. Format&nbsp;: 
+			<i>project code.portfolio model code</i>. Add <i>select</i> elements for global or local 
+			variables in your CSV file, and/or <i>value</i> elements to specify values directly.
+		</li>
+		<li>
+			<code>Code</code> Code of the portfolio to be created. Format&nbsp;: 
+			<i>project code.portfolio code</i>. Add <i>select</i> elements for global or local 
+			variables in your CSV file, and/or <i>value</i> elements to specify values directly.
+		</li>
+		<li>
+			<code>Label</code> Label of the portfolio to be created. Add <i>select</i> elements 
+			for global or local variables in your CSV file, and/or <i>value</i> elements to specify 
+			values directly.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='share-tree'>ShareTree</h3>
+	<p>Share a portfolio with a user account in a specified role.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Tree Select</code> Select the ID of the portfolio to be shared. The ID has previously
+			been assigned either in a CreateTree command or in a SelectTree command. 
+		</li>
+		<li>
+			<code>Person</code> User identifier (the login). Add a <i>select</i> element to draw the 
+			identifier from a global or local variable in your CSV file, or a <i>value</i> element 
+			to specify the identifier directly.
+		</li>
+		<li>
+			<code>Role</code> User's role in the portfolio (example: student). Add a <i>select</i> element 
+			to draw the role from a global or local variable in your CSV file, or a <i>value</i> element 
+			to specify the role directly.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='select-tree'>SelectTree</h3>
+	<p> Select a portfolio to be able to reference it in subsequent commands.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>ID</code> Assign an ID which will be used in subsequent commands to reference 
+			this portfolio.
+		</li>
+		<li>
+			<code>Code</code> Code of the portfolio to select. Format&nbsp;: 
+			<i>project code.portfolio code</i>. Add <i>select</i> elements for global or local 
+			variables in your CSV file, and/or <i>value</i> elements to specify values directly.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='delete-tree'>DeleteTree</h3>
+	<p>Delete a portfolio.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Code</code> Code of the portfolio to delete. Format&nbsp;: 
+			<i>project code.portfolio code</i>. Add <i>select</i> elements for global or local 
+			variables in your CSV file, and/or <i>value</i> elements to specify values directly.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='join-portfoliogroup'>JoinPortfolioGroup</h3>
+	<p>Add a portfolio to a portfolio group.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Tree Select</code> Select the ID of the portfolio to be shared. The ID has 
+			previously been assigned either in a CreateTree command or in a SelectTree command. 
+		</li>
+		<li>
+			<code>PortfolioGroup</code> Name of the portfolio group (example: geography2017). 
+			Add a <i>select</i> element to draw the name from a global or local variable in  
+			your CSV file, or a <i>value</i> element to specify the name directly.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='share-usergroup'>ShareUserGroup</h3>
+	<p>Share a portfolio with a user group in a specified role.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Tree Select</code> Select the ID of the portfolio to be shared. The ID has 
+			previously been assigned either in a CreateTree command or in a SelectTree command. 
+		</li>
+		<li>
+			<code>UserGroup</code> Name of the user group (example: teachers2017). Add a <i>select</i> 
+			element to draw the name from a global or local variable in your CSV file, or a <i>value</i> 
+			element to specify the name directly.
+		</li>
+		<li>
+			<code>Role</code> Role of the users in the portfolio. Add a <i>select</i> element to draw 
+			the role from a global or local variable in your CSV file, or a <i>value</i> element to 
+			specify the role directly.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='unshare-usergroup'>UnshareUserGroup</h3>
+	<p>Unshare a portfolio from a user group in a specified role.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Tree Select</code> Select the ID of the portfolio to be shared. The ID has 
+			previously been assigned either in a CreateTree command or in a SelectTree command. 
+		</li>
+		<li>
+			<code>UserGroup</code> Name of the user group (example: teachers2017). Add a <i>select</i> 
+			element to draw the name from a global or local variable in your CSV file, or a <i>value</i> 
+			element to specify the name directly.
+		</li>
+		<li>
+			<code>Role</code> Role of the users in the portfolio. Add a <i>select</i> element to draw 
+			the role from a global or local variable in your CSV file, or a <i>value</i> element to 
+			specify the role directly.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-field'>UpdateField</h3>
+	<p>Update a Short Text resource in a portfolio instance.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Select</code> Resource to update. Format: <i>ID.semantic tag</i>. The ID has 
+			previously been assigned either in a CreateTree command or in a SelectTree command, 
+			and the semantic tag is that of the resource element to be updated in the portfolio.
+		</li>
+		<li>
+			<code>Field Value</code> Value to update to. Add a <i>select</i> element to draw 
+			the value from a global or local variable in your CSV file (example: studentName), 
+			or a <i>value</i> element to specify the value directly.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='import-node'>ImportNode</h3>
+	<p>Import an element in a portfolio.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Destination Select</code> Structural element where to import the node (parent 
+			of the new node). Format: <i>ID.semantic tag</i>. The ID has previously been assigned 
+			either in a CreateTree command or in a SelectTree command, and the semantic tag is 
+			that of the structural element where to import the node.
+		</li>
+		<li>
+			<code>Source select</code> Element to import into the portfolio. Format: 
+			<i>portfolio code.semantic tag</i>.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='move-up'>MoveUp</h3>
+	<p>Move an element up by one position in the XML tree.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Sélection</code> Noeud à déplacer. Format&nbsp;: <i>ID.tag sémantique</i>. 
+			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree ou dans un élément 
+			SelectTree, et le tag sémantique est celui de l'élément à déplacer.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-proxy'>UpdateProxy</h3>
+	<p>Mettre à jour un proxy.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Sélection proxy</code> Ressource de type Proxy que l'on veut mettre à jour. 
+			Format&nbsp;: <i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit 
+			dans un élément CreateTree ou dans un élément SelectTree.
+		</li>
+		<li>
+			<code>Sélection source</code> Noeud vers lequel pointe l'élément Proxy. Format&nbsp;: 
+			<i>code portfolio.tag sémantique</i>.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-dashboard'>UpdateDashboard</h3>
+	<p>Mettre à jour l'UUID d'un tableau de bord.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Sélection proxy</code> Ressource de type Proxy que l'on veut mettre à jour. 
+			Format&nbsp;: <i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit 
+			dans un élément CreateTree ou dans un élément SelectTree.
+		</li>
+		<li>
+			<code>Dashboard uuid</code> cela peut-être soit une valeur (value) et/ou une variable 
+			(select) soit une référence à un noeud source (SourceSelect - Format : ID.UUDI où ID est une 
+			réfrence à un portfolio déjà créé ou sélectionné et UUID est un mot réservé. La valeur est alors 
+			l'uuid du porfolio ID).
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-treeroot'>UpdateTreeRoot</h3>
+	<p>Mettre à jour le code et le libellé d'un portfolio.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Ancien code</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+		</li>
+		<li>
+			<code>Nouveau code</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+		</li>
+		<li>
+			<code>Nouveau libellé</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+		</li>
+	</ul>
+</article>
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-noderesource'>UpdateNodeResource</h3>
+	<p>Mettre à jour une ressource quelconque dans une instance de portfolio.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Sélection</code> C'est la ressource que l'on veut mettre à jour. Format : 
+			<i>ID.tag_sémantique</i>. L'ID a précédement été attribué soit dans un élément CreateTree 
+			ou dans un élément SelectTree, et le tag sémantique est celui de la ressource dans le 
+			portfolio. 
+		</li>
+		<li>
+			<code>Code</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+		</li>
+		<li>
+			<code>Libellé</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+		</li>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-metadata-query'>UpdateMetadataQuery</h3>
+	<p>Mettre à jour l'attribut recherche (Query) d'un noeud.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Sélection</code> Noeud que l'on veut mettre à jour. Format&nbsp;: 
+			<i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit dans un élément 
+			CreateTree ou dans un élément SelectTree.
+		</li>
+		<li>
+			<code>Valeur query</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-metadata-menu'>UpdateMetadataMenu</h3>
+	<p>Mettre à jour l'attribut Menu d'un noeud.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Sélection</code> Noeud que l'on veut mettre à jour. Format&nbsp;: 
+			<i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit dans un élément 
+			CreateTree ou dans un élément SelectTree.
+		</li>
+		<li>
+			<code>Valeur query</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-metadata-inline'>UpdateMetadataInline</h3>
+	<p>Mettre à jour l'attribut Édition en ligne (Inline Editing) d'un noeud.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Sélection</code> Noeud que l'on veut mettre à jour. Format&nbsp;: 
+			<i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit dans un élément 
+			CreateTree ou dans un élément SelectTree.
+		</li>
+		<li>
+			<code>Valeur inline (Y ou N)</code> Ajouter un élément <i>select</i> pour une variable 
+			globale ou locale du fichier CSV ou un élément <i>value</i> pour spécifier directement la 
+			valeur.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-metadata'>UpdateMetadata</h3>
+	<p>Commande plus générale que les précédentes qui permet de mettre à jour n'importe quel attribut 
+		de metadonnée d'un noeud.
+	</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Sélection</code> Noeud que l'on veut mettre à jour. Format&nbsp;: 
+			<i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit dans un élément 
+			CreateTree ou dans un élément SelectTree.
+		</li>
+		<li>
+			<code>Attribut</code> Nom de l'attibut à mettre à jour.
+		</li>
+		<li>
+			<code>Valeur</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+		
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-metadata-wad'>UpdateMetadataWad</h3>
+	<p>Commande plus générale que les précédentes qui permet de mettre à jour n'importe quel attribut 
+		metadataWad d'un noeud.
+	</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Sélection</code> Noeud que l'on veut mettre à jour. Format&nbsp;: 
+			<i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit dans un élément 
+			CreateTree ou dans un élément SelectTree.
+		</li>
+		<li>
+			<code>Attribut</code> Nom de l'attibut à mettre à jour.
+		</li>
+		<li>
+			<code>Valeur</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+		</li>
+	</ul>
+</article>
+
