@@ -25,6 +25,7 @@ sidebar:
 <ul>
 	<li><code><a href='#field'>Texte court</a></code></li>
 	<li><code><a href='#textfield'>Texte long</a></code></li>
+	<li><code><a href='#commentaires'>Commentaires</a></code></li>
 	<li><code><a href='#image'>Image</a></code></li>
 	<li><code><a href='#audio'>Audio</a></code></li>
 	<li><code><a href='#video'>Vidéo</a></code></li>
@@ -32,11 +33,15 @@ sidebar:
 	<li><code><a href='#oembed'>oEmbed</a></code></li>
 	<li><code><a href='#url'>URL</a></code></li>
 	<li><code><a href='#url2unit'>URL2Unit</a></code></li>
-	<li><code><a href='#date'>Date</a></code></li>
+	<li><code><a href='#sendEmail'>Envoi de courriel</a></code></li>
+	<li><code><a href='#date'>Calendrier</a></code></li>
 	<li><code><a href='#couleur'>Couleur</a></code></li>
-	<li><code><a href='#commentaires'>Commentaires</a></code></li>
+	<li><code><a href='#dashboard'>Tableau de bord</a></code></li>
 	<li><code><a href='#getResource'>GetResource</a></code></li>
 	<li><code><a href='#getGetResource'>GetGetResource</a></code></li>
+	<li><code><a href='#getDoubleResource'>GetDoubleResource</a></code></li>
+	<li><code><a href='#item'>Item</a></code></li>
+	<li><code><a href='#proxy'>Proxy</a></code></li>
 </ul>
 
 <article>
@@ -56,6 +61,15 @@ sidebar:
 		options de mise en forme de base.</br>
 		Le texte long peut aussi être utilisé par le designer pour donner des instructions à 
 		l'utilisateur. Dans ce cas, le rôle Éditer n'est attribué à aucun utilisateur.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='commentaires'>Commentaires</h3>
+	<p>L'élément Commentaire est un élément Texte long qui est signé et daté. L'usager qui édite le 
+		commentaire voit son nom d'utilisateur ajouté au bas de son commentaire, ainsi que l'heure 
+		et la date d'édition.
+	</p>
 </article>
 
 <article>
@@ -136,8 +150,17 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='date'>Date</h3>
-	<p>L'élément Date permet de choisir une date dans un calendrier.</p>
+	<h3 id='sendEmail'>Envoi de courriel</h3>
+	<p>
+		Avec un élément Envoi de courriel, un usager peut envoyer un courriel à un destinataire 
+		pré-déterminé sans que l'adresse courriel du destinataire lui soit divulgée.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='date'>Calendrier</h3>
+	<p>L'élément Calendrier permet de choisir une date dans un calendrier.</p>
 </article>
 
 <article>
@@ -148,27 +171,53 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='commentaires'>Commentaires</h3>
-	<p>L'élément Commentaire est un élément Texte long qui est signé et daté. L'usager qui édite le 
-		commentaire voit son nom d'utilisateur ajouté au bas de son commentaire, ainsi que l'heure 
-		et la date d'édition.</p>
+	<h3 id='dashboard'>Tableau de bord</h3>
+	<p>L'élément Tableau de bord exécute le script d'un rapport (à partir d'un portfolio rapport) et 
+		affiche le tableau html résultant.
+	 </p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='getResource'>GetResource (liste déroulante)</h3>
 	<p>L'élément GetResource permet de construire une liste d'éléments parmis laquelle l'usager doit 
-		faire un choix (une boîte de choix). Les éléments qui vont remplir la boîte de choix sont créés
-		dans un portfolio référentiel. On indique quels éléments du référentiel afficher dans la boîte 
-		de choix dans la métadonnée Recherche de l'élément GetResource (voir MÉTADONNÉES).</p>
+		faire un choix (une boîte de choix). Les éléments qui vont remplir la boîte de choix sont des 
+		éléments resource de type Item (voir plus bas) et ils sont créés dans un portfolio séparé
+		- un portfolio référentiel. On indique quels Items du référentiel afficher dans la boîte 
+		de choix par la métadonnée Recherche de l'élément GetResource (voir MÉTADONNÉES).
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='getGetResource'>GetGetResource (liste déroulante conditionnelle)</h3>
-	<p>L'élément GetGetResource permet de construire une une boîte de choix dont la liste d'éléments est
+	<p>L'élément GetGetResource permet de construire une une boîte de choix dont la liste d'Items est
 		restreinte par le choix fait par l'usager dans un élément GetResource associé. Le choix de l'usager
 		dans la première boîte de choix détermine quels seront les choix dans la deuxième. On indique quels 
-		éléments du référentiel afficher dans la boîte de choix dans la métadonnée Recherche de l'élément 
-		GetGetResource (voir MÉTADONNÉES).</p>
+		Items du référentiel afficher dans la boîte de choix dans la métadonnée Recherche de l'élément 
+		GetGetResource (voir MÉTADONNÉES).
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='getDoubleResource'>GetDoubleResource (double liste déroulante)</h3>
+	<p>L'élément GetDoubleResource permet de construire deux boîtes indépendantes l'une de l'autre dans le 
+		même élément.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='item'>Item</h3>
+	<p>L'élément Item est un choix disponible dans une boîte de choix. On regroupe les
+		Items d'un projet dans un portfolio référentiel.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='proxy'>Proxy</h3>
+	<p>L'élément Proxy permet d'afficher un élément d'un portfolio dans un autre portfolio. Il est 
+		possible de donner à l'usager le droit de modifier l'élément affiché par proxy, auquel cas 
+		la valeur de l'élément original est automatiquement mise à jour.
+	</p>
 </article>

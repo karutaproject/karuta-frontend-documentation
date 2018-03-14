@@ -36,8 +36,12 @@ sidebar:
 	<li><code><a href='#calendar'>Calendar</a></code></li>
 	<li><code><a href='#color'>Color</a></code></li>
 	<li><code><a href='#comment'>Comment</a></code></li>
+	<li><code><a href='#dashboard'>Dashboard</a></code></li>
 	<li><code><a href='#getResource'>GetResource</a></code></li>
 	<li><code><a href='#getGetResource'>GetGetResource</a></code></li>
+	<li><code><a href='#getDoubleResource'>GetDoubleResource</a></code></li>
+	<li><code><a href='#item'>Item</a></code></li>
+	<li><code><a href='#proxy'>Proxy</a></code></li>
 </ul>
 </ul>
 
@@ -59,6 +63,15 @@ sidebar:
 		layout options is available to the end-user with the Edit right on this element.</br>
 		This element is also useful to include instructions in the portfolio, from to designer
 		to the end-users. In this case, the Edit right is not attributed to any role.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='comment'>Comment</h3>
+	<p>
+		The Comment element is a TextField element which is signed and timestamped. The user name 
+		along with date and time are added at the end of the comment.
 	</p>
 </article>
 
@@ -148,6 +161,15 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='sendEmail'>SendEmail</h3>
+	<p>
+		With a SendEmail element, a user may send an email to a predefined recipient without the 
+		recipient's email address being revealed to the user.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='calendar'>Calendar</h3>
 	<p>
 		The Calendar element allows the designer or the end-user with the Edit right on the element
@@ -166,10 +188,9 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='comment'>Comment</h3>
-	<p>
-		The Comment element is a TextField element which is signed and timestamped. The user name 
-		along with date and time are added at the end of the comment.
+	<h3 id='dashboard'>Dashboard</h3>
+	<p>The Dashboard element executes a report script (from a Report Portfolio) and displays the resulting 
+		html table.
 	</p>
 </article>
 
@@ -178,9 +199,10 @@ sidebar:
 	<h3 id='getResource'>GetResource (choice box)</h3>
 	<p>
 		The GetResource element allows you to build a list of elements amongst which the end-user
-		must make a choice. The elements that will fill the choice box are created in a Rubrics
-		Portfolio. Which elements of the Rubrics Portfolio to display in the choice box is specified
-		through the Query metadata of the GetResource element (see METADATA).
+		must make a choice. The elements that will fill the choice box are Resource elements of type
+		Item (see below) and are created in a separate portfolio - the Rubrics Portfolio. Which elements 
+		of the Rubrics Portfolio to display in the choice box is specified in the Query metadata of the 
+		GetResource element (see METADATA).
 	</p>
 </article>
 
@@ -188,11 +210,32 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='getGetResource'>GetGetResource (conditional choice box)</h3>
 	<p>
-		The GetGetResource element is a choice box whose elements are restricted by the choice a user
+		The GetGetResource element is a choice box whose Items are restricted by the choice a user
 		made in a previous GetResource element. The user's selection in the first choice box determines
-		which options will be displayed in the second. Which elements of the Rubrics Portfolio to 
-		display in the choice box is specified through the Query metadata of the GetGetResource element 
+		which options will be displayed in the second. Which Items of the Rubrics Portfolio to 
+		display in the choice box is specified in the Query metadata of the GetGetResource element 
 		(see METADATA).
 	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='getDoubleResource'>GetDoubleResource (double choice box)</h3>
+	<p>The GetDoubleResource allows you to build two independent choice boxes within one single element.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='item'>Item</h3>
+	<p>The Item element is one option in a choice box. We group a project's Item elements in a Rubrics
+		portfolio.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='proxy'>Proxy</h3>
+	<p>The Proxy element allows you to display a portfolio element in a different portfolio. It is 
+		possible to give the end-user the right to modify the element displayed by proxy, in which
+		case the value of the original element is automatically updated.</p>
 </article>
 
