@@ -247,7 +247,7 @@ structures_en:
         url: /structures_fr/
 
 # ====== SHARING_FR =============
-structures_fr:
+sharing_fr:
   - title: Structures
     url: /structures_fr/
   - title: Ressources
@@ -261,7 +261,31 @@ structures_fr:
   - title: Langues
     children:
       - title: "English"
-        url: /structures_en/
+        url: /sharing_en/
+
+# ====== SHARING_EN =============
+sharing_en:
+  - title: Structures
+    url: /structures_en/
+    children:
+      - title: "Section"
+        url: /structures_fr/#asmstructure
+      - title: "Page"
+        url: /structures_fr/#asmunit
+      - title: "Subsection"
+        url: /structures_fr/#asmunitstructure
+      - title: "Resource Node"
+        url: /structures_fr/#asmcontext
+  - title: Resources
+    url: /resources_en/
+  - title: Metadata
+    url: /metadata_en/
+  - title: CSS
+    url: /css_en/
+  - title: Langues
+    children:
+      - title: "Français"
+        url: /sharing_fr/
 
 # ====== RESOURCES_FR =============
 resources_fr:
