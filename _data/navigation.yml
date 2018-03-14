@@ -172,6 +172,8 @@ portfolio_fr:
     url: /metadata_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
+  - title: Partage
+    url: /sharing_fr/
   - title: Langues
     children:
       - title: "English"
@@ -187,6 +189,8 @@ portfolio_en:
     url: /metadata_en/
   - title: CSS
     url: /css_en/
+  - title: Sharing
+    url: /sharing_en/
   - title: Langues
     children:
       - title: "Français"
