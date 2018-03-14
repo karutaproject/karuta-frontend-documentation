@@ -241,6 +241,8 @@ structures_en:
     url: /metadata_en/
   - title: CSS
     url: /css_en/
+  - title: Sharing
+    url: /sharing_en/
   - title: Langues
     children:
       - title: "Français"
@@ -267,21 +269,14 @@ sharing_fr:
 sharing_en:
   - title: Structures
     url: /structures_en/
-    children:
-      - title: "Section"
-        url: /structures_fr/#asmstructure
-      - title: "Page"
-        url: /structures_fr/#asmunit
-      - title: "Subsection"
-        url: /structures_fr/#asmunitstructure
-      - title: "Resource Node"
-        url: /structures_fr/#asmcontext
   - title: Resources
     url: /resources_en/
   - title: Metadata
     url: /metadata_en/
   - title: CSS
     url: /css_en/
+  - title: Sharing
+    url: /sharing_en/
   - title: Langues
     children:
       - title: "Français"
