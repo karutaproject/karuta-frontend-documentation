@@ -251,32 +251,40 @@ resources_fr:
         url: /resources_fr/#field
       - title: "Texte long"
         url: /resources_fr/#textfield
+      - title: "Commentaires"
+        url: /resources_fr/#commentaires
       - title: "Image"
         url: /resources_fr/#image
-      - title: "Document"
-        url: /resources_fr/#document
-      - title: "URL"
-        url: /resources_fr/#url
       - title: "Audio"
         url: /resources_fr/#audio
       - title: "Vidéo"
         url: /resources_fr/#video
+      - title: "Document"
+        url: /resources_fr/#document
       - title: "oEmbed"
         url: /resources_fr/#oembed
-      - title: "Couleur"
-        url: /resources_fr/#couleur
+      - title: "URL"
+        url: /resources_fr/#url
       - title: "URL2Unit"
         url: /resources_fr/#url2unit
-      - title: "Date"
+      - title: "Envoi de courriel"
+        url: /resources_fr/#sendEmail
+      - title: "Calendrier"
         url: /resources_fr/#date
       - title: "Couleur"
         url: /resources_fr/#couleur
-      - title: "Commentaires"
-        url: /resources_fr/#commentaires
+      - title: "Tableau de bord"
+        url: /resources_fr/#dashboard
       - title: "GetResource"
         url: /resources_fr/#getResource
       - title: "GetGetResource"
         url: /resources_fr/#getGetResource
+      - title: "GetDoubleResource"
+        url: /resources_fr/#getDoubleResource
+      - title: "Item"
+        url: /resources_fr/#item
+      - title: "Proxy"
+        url: /resources_fr/#proxy
   - title: Métadonnées
     url: /metadata_fr/
   - title: Mise en forme (CSS)
@@ -294,11 +302,43 @@ resources_en:
     url: /resources_en/
     children:
       - title: "Short Text"
-        url: /resources_en/#field
+        url: /resources_fr/#field
       - title: "Long Text"
-        url: /resources_en/#textfield
+        url: /resources_fr/#textfield
+      - title: "Comment"
+        url: /resources_fr/#commentaires
       - title: "Image"
-        url: /resources_en/#image
+        url: /resources_fr/#image
+      - title: "Audio"
+        url: /resources_fr/#audio
+      - title: "Video"
+        url: /resources_fr/#video
+      - title: "Document"
+        url: /resources_fr/#document
+      - title: "oEmbed"
+        url: /resources_fr/#oembed
+      - title: "URL"
+        url: /resources_fr/#url
+      - title: "URL2Unit"
+        url: /resources_fr/#url2unit
+      - title: "SendEmail"
+        url: /resources_fr/#sendEmail
+      - title: "Calender"
+        url: /resources_fr/#date
+      - title: "Coulor"
+        url: /resources_fr/#couleur
+      - title: "Dashboard"
+        url: /resources_fr/#dashboard
+      - title: "GetResource"
+        url: /resources_fr/#getResource
+      - title: "GetGetResource"
+        url: /resources_fr/#getGetResource
+      - title: "GetDoubleResource"
+        url: /resources_fr/#getDoubleResource
+      - title: "Item"
+        url: /resources_fr/#item
+      - title: "Proxy"
+        url: /resources_fr/#proxy
   - title: Metadata
     url: /metadata_en/
   - title: CSS
