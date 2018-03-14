@@ -357,21 +357,21 @@ metadata_fr:
   - title: Métadonnées
     url: /metadata_fr/
     children:
-      - title: "Code"
-        url: /metadata_fr/#code
       - title: "Tag sémantique"
         url: /metadata_fr/#semantictag
+      - title: "Code"
+        url: /metadata_fr/#code
       - title: "Noeud multilingue"
         url: /metadata_fr/#multilingual-node
       - title: "Ressource multilingue"
         url: /metadata_fr/#multilingual-resource
-      - title: "Encripter la ressource"
+      - title: "Encrypter la ressource"
         url: /metadata_fr/#encript-resource
       - title: "Rôles - Voir"
         url: /metadata_fr/#see
       - title: "Rôles - Supprimer"
         url: /metadata_fr/#delete
-      - title: "Rôles - Éditer ressouce"
+      - title: "Rôles - Éditer ressource"
         url: /metadata_fr/#edit-resource
       - title: "Rôles - Commenter"
         url: /metadata_fr/#comment
@@ -387,7 +387,7 @@ metadata_fr:
         url: /metadata_fr/#import_multiple
       - title: "Menu - Import_GGMultiple"
         url: /metadata_fr/#import_ggmultiple
-      - title: "Partager"
+      - title: "Partage par l'usager"
         url: /metadata_fr/#sharing
   - title: Mise en forme (CSS)
     url: /css_fr/
@@ -405,18 +405,38 @@ metadata_en:
   - title: Metadata
     url: /metadata_en/
     children:
+      - title: "Semantic Tag"
+        url: /metadata_fr/#semantictag
       - title: "Code"
-        url: /metadata_en/#code
+        url: /metadata_fr/#code
+      - title: "Multilingual Node"
+        url: /metadata_fr/#multilingual-node
+      - title: "Multilingual Resource"
+        url: /metadata_fr/#multilingual-resource
+      - title: "Encrypt Resource"
+        url: /metadata_fr/#encript-resource
+      - title: "Roles - See"
+        url: /metadata_fr/#see
+      - title: "Roles - Delete"
+        url: /metadata_fr/#delete
+      - title: "Roles - Edit Resource"
+        url: /metadata_fr/#edit-resource
+      - title: "Roles - Comment"
+        url: /metadata_fr/#comment
+      - title: "Roles - Submit"
+        url: /metadata_fr/#submit
+      - title: "Query"
+        url: /metadata_fr/#query
       - title: "Menu - Get_Multiple"
-        url: /metadata_en/#get_multiple
+        url: /metadata_fr/#get_multiple
       - title: "Menu - Get_Get_Multiple"
-        url: /metadata_en/#get_get_multiple
+        url: /metadata_fr/#get_get_multiple
       - title: "Menu - Import_Multiple"
-        url: /metadata_en/#import_multiple
+        url: /metadata_fr/#import_multiple
       - title: "Menu - Import_GGMultiple"
-        url: /metadata_en/#import_ggmultiple
-      - title: "Sharing"
-        url: /metadata_en/#sharing
+        url: /metadata_fr/#import_ggmultiple
+      - title: "Sharing by the end-user"
+        url: /metadata_fr/#sharing
   - title: CSS
     url: /css_en/
   - title: Langues
