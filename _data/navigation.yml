@@ -154,9 +154,53 @@ batch_en:
   - title: Functions
     children:
       - title: "ForEachLine"
-        url: /batch_for-each-line_en/
+        url: /batch_fr/#for-each-line
       - title: "CreatePerson"
-        url: /create-person_en/
+        url: /batch_fr/#create-person
+      - title: "DeletePerson"
+        url: /batch_fr/#delete-person
+      - title: "JoinUserGroup"
+        url: /batch_fr/#join-usergroup
+      - title: "LeaveUserGroup"
+        url: /batch_fr/#leave-usergroup
+      - title: "CreateTree"
+        url: /batch_fr/#create-tree
+      - title: "ShareTree"
+        url: /batch_fr/#share-tree
+      - title: "SelectTree"
+        url: /batch_fr/#select-tree
+      - title: "DeleteTree"
+        url: /batch_fr/#delete-tree
+      - title: "JoinPortfolioGroup"
+        url: /batch_fr/#join-portfoliogroup
+      - title: "ShareUserGroup"
+        url: /batch_fr/#share-usergroup
+      - title: "UnshareUserGroup"
+        url: /batch_fr/#unshare-usergroup
+      - title: "ImportNode"
+        url: /batch_fr/#import-node
+      - title: "MoveUp"
+        url: /batch_fr/#move-up
+      - title: "UpdateField"
+        url: /batch_fr/#update-field
+      - title: "UpdateProxy"
+        url: /batch_fr/#update-proxy
+      - title: "UpdateDashboard"
+        url: /batch_fr/#update-dashboard
+      - title: "UpdateTreeRoot"
+        url: /batch_fr/#update-treeroot
+      - title: "UpdateNodeResource"
+        url: /batch_fr/#update-noderesource
+      - title: "UpdateMetadataQuery"
+        url: /batch_fr/#update-metadata-query
+      - title: "UpdateMetadataMenu"
+        url: /batch_fr/#update-metadata-menu
+      - title: "UpdateMetadataInline"
+        url: /batch_fr/#update-metadata-inline
+      - title: "UpdateMetadata"
+        url: /batch_fr/#update-metadata
+      - title: "UpdateMetadataWad"
+        url: /batch_fr/#update-metadata-wad
   - title: Languages
     children:
       - title: "Français"
