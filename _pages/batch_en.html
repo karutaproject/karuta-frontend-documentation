@@ -419,7 +419,8 @@ sidebar:
 		</li>
 		<li>
 			<code>Source Select</code> Target node the Proxy element should point to. Format: 
-			<i>portfolio code.semantic tag</i>.
+			<i>portfolio code.semantic tag</i>. Add <i>select</i> elements for global or local variables 
+			in your CSV file, and/or <i>value</i> elements to specify values directly.
 		</li>
 	</ul>
 </article>
@@ -427,19 +428,18 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='update-dashboard'>UpdateDashboard</h3>
-	<p>Mettre à jour l'UUID d'un tableau de bord.</p>
+	<p>Update the code of the portfolio that contains the report script in a Dashboard element.</p>
 	<p>Fields to populate:</p>
 	<ul>
 		<li>
-			<code>Sélection proxy</code> Ressource de type Proxy que l'on veut mettre à jour. 
-			Format: <i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit 
-			dans un élément CreateTree ou dans un élément SelectTree.
+			<code>Select</code> Dashboard resource to update. Format: <i>ID.semantic tag</i>. The ID has 
+			previously been assigned either in a CreateTree command or in a SelectTree command, 
+			and the semantic tag is that of the Dashboard resource element to be updated in the portfolio.
 		</li>
 		<li>
-			<code>Dashboard uuid</code> cela peut-être soit une valeur (value) et/ou une variable 
-			(select) soit une référence à un noeud source (SourceSelect - Format : ID.UUDI où ID est une 
-			réfrence à un portfolio déjà créé ou sélectionné et UUID est un mot réservé. La valeur est alors 
-			l'uuid du porfolio ID).
+			<code>Dashboard Code</code> The code of the portfolio that contains the report script. Add 
+			<i>select</i> elements for global or local variables in your CSV file, and/or <i>value</i> 
+			elements to specify values directly.
 		</li>
 	</ul>
 </article>
