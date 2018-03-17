@@ -154,9 +154,53 @@ batch_en:
   - title: Functions
     children:
       - title: "ForEachLine"
-        url: /batch_for-each-line_en/
+        url: /batch_en/#for-each-line
       - title: "CreatePerson"
-        url: /create-person_en/
+        url: /batch_en/#create-person
+      - title: "DeletePerson"
+        url: /batch_en/#delete-person
+      - title: "JoinUserGroup"
+        url: /batch_en/#join-usergroup
+      - title: "LeaveUserGroup"
+        url: /batch_en/#leave-usergroup
+      - title: "CreateTree"
+        url: /batch_en/#create-tree
+      - title: "ShareTree"
+        url: /batch_en/#share-tree
+      - title: "SelectTree"
+        url: /batch_en/#select-tree
+      - title: "DeleteTree"
+        url: /batch_en/#delete-tree
+      - title: "JoinPortfolioGroup"
+        url: /batch_en/#join-portfoliogroup
+      - title: "ShareUserGroup"
+        url: /batch_en/#share-usergroup
+      - title: "UnshareUserGroup"
+        url: /batch_en/#unshare-usergroup
+      - title: "ImportNode"
+        url: /batch_en/#import-node
+      - title: "MoveUp"
+        url: /batch_en/#move-up
+      - title: "UpdateField"
+        url: /batch_en/#update-field
+      - title: "UpdateProxy"
+        url: /batch_en/#update-proxy
+      - title: "UpdateDashboard"
+        url: /batch_en/#update-dashboard
+      - title: "UpdateTreeRoot"
+        url: /batch_en/#update-treeroot
+      - title: "UpdateNodeResource"
+        url: /batch_en/#update-noderesource
+      - title: "UpdateMetadataQuery"
+        url: /batch_en/#update-metadata-query
+      - title: "UpdateMetadataMenu"
+        url: /batch_en/#update-metadata-menu
+      - title: "UpdateMetadataInline"
+        url: /batch_en/#update-metadata-inline
+      - title: "UpdateMetadata"
+        url: /batch_en/#update-metadata
+      - title: "UpdateMetadataWad"
+        url: /batch_en/#update-metadata-wad
   - title: Languages
     children:
       - title: "Français"
@@ -222,13 +266,13 @@ structures_en:
     url: /structures_en/
     children:
       - title: "Section"
-        url: /structures_fr/#asmstructure
+        url: /structures_en/#asmstructure
       - title: "Page"
-        url: /structures_fr/#asmunit
+        url: /structures_en/#asmunit
       - title: "Subsection"
-        url: /structures_fr/#asmunitstructure
+        url: /structures_en/#asmunitstructure
       - title: "Resource Node"
-        url: /structures_fr/#asmcontext
+        url: /structures_en/#asmcontext
   - title: Resources
     url: /resources_en/
   - title: Metadata
@@ -302,43 +346,43 @@ resources_en:
     url: /resources_en/
     children:
       - title: "Short Text"
-        url: /resources_fr/#field
+        url: /resources_en/#field
       - title: "Long Text"
-        url: /resources_fr/#textfield
+        url: /resources_en/#textfield
       - title: "Comment"
-        url: /resources_fr/#commentaires
+        url: /resources_en/#commentaires
       - title: "Image"
-        url: /resources_fr/#image
+        url: /resources_en/#image
       - title: "Audio"
-        url: /resources_fr/#audio
+        url: /resources_en/#audio
       - title: "Video"
-        url: /resources_fr/#video
+        url: /resources_en/#video
       - title: "Document"
-        url: /resources_fr/#document
+        url: /resources_en/#document
       - title: "oEmbed"
-        url: /resources_fr/#oembed
+        url: /resources_en/#oembed
       - title: "URL"
-        url: /resources_fr/#url
+        url: /resources_en/#url
       - title: "URL2Unit"
-        url: /resources_fr/#url2unit
+        url: /resources_en/#url2unit
       - title: "SendEmail"
-        url: /resources_fr/#sendEmail
+        url: /resources_en/#sendEmail
       - title: "Calender"
-        url: /resources_fr/#date
+        url: /resources_en/#date
       - title: "Coulor"
-        url: /resources_fr/#couleur
+        url: /resources_en/#couleur
       - title: "Dashboard"
-        url: /resources_fr/#dashboard
+        url: /resources_en/#dashboard
       - title: "GetResource"
-        url: /resources_fr/#getResource
+        url: /resources_en/#getResource
       - title: "GetGetResource"
-        url: /resources_fr/#getGetResource
+        url: /resources_en/#getGetResource
       - title: "GetDoubleResource"
-        url: /resources_fr/#getDoubleResource
+        url: /resources_en/#getDoubleResource
       - title: "Item"
-        url: /resources_fr/#item
+        url: /resources_en/#item
       - title: "Proxy"
-        url: /resources_fr/#proxy
+        url: /resources_en/#proxy
   - title: Metadata
     url: /metadata_en/
   - title: CSS
@@ -406,37 +450,37 @@ metadata_en:
     url: /metadata_en/
     children:
       - title: "Semantic Tag"
-        url: /metadata_fr/#semantictag
+        url: /metadata_en/#semantictag
       - title: "Code"
-        url: /metadata_fr/#code
+        url: /metadata_en/#code
       - title: "Multilingual Node"
-        url: /metadata_fr/#multilingual-node
+        url: /metadata_en/#multilingual-node
       - title: "Multilingual Resource"
-        url: /metadata_fr/#multilingual-resource
+        url: /metadata_en/#multilingual-resource
       - title: "Encrypt Resource"
-        url: /metadata_fr/#encript-resource
+        url: /metadata_en/#encript-resource
       - title: "Roles - See"
-        url: /metadata_fr/#see
+        url: /metadata_en/#see
       - title: "Roles - Delete"
-        url: /metadata_fr/#delete
+        url: /metadata_en/#delete
       - title: "Roles - Edit Resource"
-        url: /metadata_fr/#edit-resource
+        url: /metadata_en/#edit-resource
       - title: "Roles - Comment"
-        url: /metadata_fr/#comment
+        url: /metadata_en/#comment
       - title: "Roles - Submit"
-        url: /metadata_fr/#submit
+        url: /metadata_en/#submit
       - title: "Query"
-        url: /metadata_fr/#query
+        url: /metadata_en/#query
       - title: "Menu - Get_Multiple"
-        url: /metadata_fr/#get_multiple
+        url: /metadata_en/#get_multiple
       - title: "Menu - Get_Get_Multiple"
-        url: /metadata_fr/#get_get_multiple
+        url: /metadata_en/#get_get_multiple
       - title: "Menu - Import_Multiple"
-        url: /metadata_fr/#import_multiple
+        url: /metadata_en/#import_multiple
       - title: "Menu - Import_GGMultiple"
-        url: /metadata_fr/#import_ggmultiple
+        url: /metadata_en/#import_ggmultiple
       - title: "Sharing by the end-user"
-        url: /metadata_fr/#sharing
+        url: /metadata_en/#sharing
   - title: CSS
     url: /css_en/
   - title: Langues

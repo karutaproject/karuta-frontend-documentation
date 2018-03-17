@@ -149,7 +149,7 @@ sidebar:
 		<li><code>Nom</code> Nom de famille de l'usager.</li>
 		<li><code>Courriel</code> Courriel de l'usager.</li>
 		<li><code>Mot de passe</code> Le mot de passe de l'usager dans le système Karuta.</li>
-		<li><code>Créateur ?</code> Le compte utilisateur créé doit-il avoir les droits d'un designer 
+		<li><code>Créateur?</code> Le compte utilisateur créé doit-il avoir les droits d'un designer 
 			Karuta? (En général, non!)
 		</li>
 	</ul>
@@ -361,25 +361,6 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-field'>UpdateField</h3>
-	<p>Mettre à jour un champ de type texte court dans une instance de portfolio.</p>
-	<p>Champs à renseigner&nbsp;:</p>
-	<ul>
-		<li>
-			<code>Sélection</code> Ressource à mettre à jour. Format&nbsp;: <i>ID.tag sémantique</i>. 
-			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree ou dans un élément 
-			SelectTree, et le tag sémantique est celui de la ressource à mettre à jour dans le portfolio.
-		</li>
-		<li>
-			<code>Valeur du champ</code> Valeur à mettre à jour. Ajouter un élément <i>select</i> pour 
-			puiser la valeur dans une variable globale ou locale du fichier CSV (exemple&nbsp;: nomEtudiant), 
-			ou un élément <i>value</i> pour spécifier directement la valeur du champ.
-		</li>
-	</ul>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='import-node'>ImportNode</h3>
 	<p>Importer un élément dans un portfolio.</p>
 	<p>Champs à renseigner&nbsp;:</p>
@@ -392,7 +373,9 @@ sidebar:
 		</li>
 		<li>
 			<code>Sélection source</code> Élément à importer dans le portfolio. Format&nbsp;: 
-			<i>code portfolio.tag sémantique</i>.
+			<i>code portfolio.tag sémantique</i>. Ajouter des éléments <i>select</i> pour des variables 
+			globales ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement 
+			des valeurs.
 		</li>
 	</ul>
 </article>
@@ -413,6 +396,25 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-field'>UpdateField</h3>
+	<p>Mettre à jour un champ de type texte court dans une instance de portfolio.</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Sélection</code> Ressource à mettre à jour. Format&nbsp;: <i>ID.tag sémantique</i>. 
+			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree ou dans un élément 
+			SelectTree, et le tag sémantique est celui de la ressource à mettre à jour dans le portfolio.
+		</li>
+		<li>
+			<code>Valeur du champ</code> Valeur à mettre à jour. Ajouter un élément <i>select</i> pour 
+			puiser la valeur dans une variable globale ou locale du fichier CSV (exemple&nbsp;: nomEtudiant), 
+			ou un élément <i>value</i> pour spécifier directement la valeur du champ.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='update-proxy'>UpdateProxy</h3>
 	<p>Mettre à jour un proxy.</p>
 	<p>Champs à renseigner&nbsp;:</p>
@@ -424,7 +426,9 @@ sidebar:
 		</li>
 		<li>
 			<code>Sélection source</code> Noeud vers lequel pointe l'élément Proxy. Format&nbsp;: 
-			<i>code portfolio.tag sémantique</i>.
+			<i>code portfolio.tag sémantique</i>. Ajouter des éléments <i>select</i> pour des variables 
+			globales ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement 
+			des valeurs.
 		</li>
 	</ul>
 </article>
@@ -432,19 +436,19 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='update-dashboard'>UpdateDashboard</h3>
-	<p>Mettre à jour l'UUID d'un tableau de bord.</p>
+	<p>Mettre à jour le code du portfolio qui contient le script de rapport dans un élément Tableau de bord.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Sélection proxy</code> Ressource de type Proxy que l'on veut mettre à jour. 
+			<code>Sélection</code> Ressource de type Tableau de bord que l'on veut mettre à jour. 
 			Format&nbsp;: <i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit 
-			dans un élément CreateTree ou dans un élément SelectTree.
+			dans un élément CreateTree ou dans un élément SelectTree, et le tag sémantique est celui 
+			de la ressource Tableau de bord à mettre à jour dans le portfolio.
 		</li>
 		<li>
-			<code>Dashboard uuid</code> cela peut-être soit une valeur (value) et/ou une variable 
-			(select) soit une référence à un noeud source (SourceSelect - Format : ID.UUDI où ID est une 
-			réfrence à un portfolio déjà créé ou sélectionné et UUID est un mot réservé. La valeur est alors 
-			l'uuid du porfolio ID).
+			<code>Code Dashboard</code> Le code du portfolio qui contient le script de rapport. Ajouter 
+			des éléments <i>select</i> pour des variables globales ou locales du fichier CSV et/ou des 
+			éléments <i>value</i> pour spécifier directement des valeurs.
 		</li>
 	</ul>
 </article>

@@ -330,8 +330,8 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='sharing'>Partage par l'usager</h3>
-	<p>La fonction Partage par l'usager permet à l'usager d'envoyer un courriel avec un hyperlien qui 
-		partage, en tout ou en partie, son portfolio avec un tiers.</p>
+	<p>La fonction Partage par l'usager permet à l'usager d'envoyer un courriel à un tiers, avec un hyperlien qui 
+		partage, en tout ou en partie, son portfolio avec ce tiers.</p>
 	<h4>Format</h4>
 	<p>	
 		<code>rôle</code></br>
@@ -341,27 +341,52 @@ sidebar:
 		condition (optionel)</code>
 	</p>
 	<ul>
-		<li><code>rôle</code> Rôle de l'usager qui peut faire le partage.</li>
+		<li><code>rôle</code> Rôle de l'usager qui peut faire le partage (qui aura le bouton pour partager).</li>
 		<li><code>rôle destinataire</code> Rôle qu'aura le destinataire dans le portfolio.</li>
-		<li><code>rôles et/ou courriels</code> Rôles et/ou courriels des destinataires. Si c'est 
-			un rôle, tous les personnes ayant ce rôle dans le portfolio seront destinataire d'un 
-			courriel.</li>
-		<li><code>niveau (0-4)</code> : Le niveau peut prendre les valeurs de 0 à 4 (voir ci-dessous).</li>
-		<li><code>libellé du bouton@fr</code> : Libellé qui apparaitra à l'usager qui peut faire le partage.</li>
-		<li><code>condition</code> Condition pour l'apparation du bouton de partage. Exemple :  submitted=='Y'</li>
+		<li>
+			<code>rôles et/ou courriels</code> Rôles et/ou courriels des destinataires. Si c'est 
+			un rôle, toutes les personnes ayant ce rôle dans le portfolio seront destinataires d'un 
+			courriel.
+		</li>
+		<li><code>niveau (0-4)</code> Le niveau peut prendre les valeurs de 0 à 4 (voir ci-dessous).</li>
+		<li><code>libellé du bouton@fr</code> Libellé qui apparaîtra à l'usager qui peut faire le partage.</li>
+		<li>
+			<code>condition</code> Condition pour que le bouton de partage soit visible (qu'il existe). 
+			Exemple&nbsp;: <i>submitted=='Y'</i>
+		</li>
 	</ul>
 	<h5>Niveau 0 – utilisateur Karuta</h5>
-	<p>L’utilisateur existe et le portfolio est déjà partagé avec l’usager et le rôle. Le mot de passe est demandé si le destinataire n'est pas loggé.</p>
+	<p>
+		L’utilisateur (le destinataire du courriel) possède un compte Karuta et le portfolio lui est déjà partagé, dans le 
+		bon rôle. Son mot de passe lui sera demandé si il n'est pas déjà logué dans Karuta.
+	</p>
 	<h5>Niveau 1</h5>
-	<p>L’utilisateur existe et le portfolio est déjà partagé avec l’usager et le rôle. Le mot de passe n'est pas demandé. Si l'utilisateur n'est pas loggé il obtient un logging temporaire. (Un bouton submit devrait être toujours ajouté)</p>
+	<p>
+		L’utilisateur possède un compte Karuta et le portfolio lui est déjà partagé, dans le bon rôle. Son mot de passe ne 
+		lui sera pas demandé (si l'utilisateur n'est pas déjà logué dans Karuta, il obtiendra un login temporaire). Par 
+		mesure de sécurité, il devrait y avoir un bouton <i>Soumettre</i> sur les éléments que le visiteur peut modifier.
+	</p>
 	<h5>Niveau 2</h5>
-	<p>L’utilisateur existe et le portfolio n’est pas partagé avec l’usager et le rôle. Le système partage le portfolio avec l’usager et le rôle. Si l'utilisateur n'est pas loggé il obtient un logging temporaire. (Un bouton submit devrait être toujours ajouté)</p>
+	<p>
+		L’utilisateur possède un compte Karuta mais le portfolio ne lui est pas partagé. Le système partage le portfolio 
+		avec l’usager dans le bon rôle. (Si l'utilisateur n'est pas déjà logué, il obtiendra un login temporaire.) Par 
+		mesure de sécurité, il devrait y avoir un bouton <i>Soumettre</i> sur les éléments que le visiteur peut modifier.
+	</p>
 	<h5>Niveau 3</h5>
-	<p>Si l’utilisateur n’existe pas le système crée le compte. Le système partage le portfolio avec l’usager et le rôle. Si l'utilisateur n'est pas loggé il obtient un logging temporaire. (Un bouton submit devrait être toujours ajouté)</p>
+	<p>
+		Si l’utilisateur n'a pas de compte dans Karuta, un compte lui sera créé. Le système partage le portfolio 
+		avec l'usager dans le bon rôle. (Si l'utilisateur n'est pas déjà logué, il obtiendra un login temporaire.) Par 
+		mesure de sécurité, il devrait y avoir un bouton <i>Soumettre</i> sur les éléments que le visiteur peut modifier.
+	</p>
 	<h5>Niveau 4 – Lien public</h5>
-	<p>Si l'utilisateur n'est pas loggé il obtient un logging temporaire. Il a automatiquement (loggé ou non) le rôle all comme uager public.
-	<br>
-	<p>Pour une documentation complète et des exemples d'utilisation consulter <a href='../assets/html/DocPartage.html'>Doc Partage par l'usager</a></p>
+	<p>
+		Si l'utilisateur n'est pas logué dans Karuta, il obtient un login temporaire. Il a automatiquement (logué ou non) 
+		le rôle <i>all</i> (donc il peut voir mais ne peut rien modifier).
+	</p>
+	<p>	
+		Pour une documentation complète et des exemples d'utilisation consulter <a href='../assets/html/DocPartage.html'>Doc 
+		Partage par l'usager</a>.
+	</p>
 </article>
 
 
