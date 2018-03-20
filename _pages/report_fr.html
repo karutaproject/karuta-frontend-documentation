@@ -8,17 +8,19 @@ sidebar:
 <h2 id='commandes'>Commandes</h2>
 
 <p>Ensemble de commandes de script permettant de construire des rapports. Il y a trois façons d'exécuter 
-	un rapport :
+	un script de rapport&nbsp;:
 </p>
 <ul>
 	<li>avec la ressource Tableau de bord dans un portfolio,</li>
 	<li>dans la page Exécuter un rapport en spécifiant le nom du rapport,</li>
-	<li>dans la page Exécuter un rapport en téléversant un fichier CSV (format: voir section Batch). 
-		Dans le fichier CSV, les 2 premières lignes de variables globales ne sont pas prises en compte.</li>
+	<li>
+		dans la page Exécuter un rapport en téléversant un fichier CSV (pour le format voir section Batch). 
+		Dans le fichier CSV, les 2 premières lignes (variables globales) ne sont pas prises en compte.
+	</li>
 </ul>
 
 
-<p>Les commandes disponibles sont :</p>
+<p>Les commandes disponibles sont&nbsp;:</p>
 <ul>
 	<li><code><a href='#for-each-portfolio'>ForEachPortfolio</a></code></li>
 	<li><code><a href='#for-each-portfolio-node'>ForEachPortfolioNode</a></code></li>
@@ -56,14 +58,15 @@ sidebar:
 		</li>
 		<li>
 			<code>Sélection portfolios</code> Test Jquery permetant de sélectionner des portfolios parmi 
-			ceux visibles par l'usager.
-			<br/>Exemples :
+			ceux visibles par l'usager. Exemples&nbsp;:
 			<ul>
-				<li><code>code*='2015_work'</code> sélection des portfolios dont le code contient 
-				<code>2015_work</code>
+				<li>
+					<code>code*='2015_work'</code> Sélection des portfolios dont le code contient 
+					"2015_work".
 				</li>
-				<li><code>code*=portfolio_code</code> sélection des portfolios dont le code contient le 
-				contenu de la variable <code>porfolio_code</code>
+				<li>
+					<code>code*=portfolio_code</code> Sélection des portfolios dont le code contient le 
+					contenu de la variable <i>porfolio_code</i>.
 				</li>
 			</ul>
 		</li>
@@ -71,17 +74,17 @@ sidebar:
 			<code>Tri - tag sémantique</code> Tag sémantique du noeud sur lequel doit se faire le tri.
 		</li>
 		<li>
-			<code>Tri - élément</code> Valeur possible pour le tri (libellé noeud, texte d'une ressource, 
-			code d'un noeud ou valeur d'un item.)
+			<code>Tri - élément</code> Valeur à partir de laquelle faire le tri (libellé du noeud, valeur 
+			de la ressource, code du noeud ou valeur d'un item).
 		</li>
 	</ul>
 </article>
 
 <article>
 	<h3 id='for-each-portfolio-node'>ForEachPortfolioNode</h3>
-	<p>Pour chacun des portfolios répondant au test de la sélection et des noeuds sélectionnés, 
-		Karuta exécute les commandes qui se trouvent dans le <code>ForEachPortfolioNode</code>. 
-		Cette commande évite de charger tout le portfolio comme le fait la commande précédente.
+	<p>Pour chacun des portfolios répondant au test de la sélection, Karuta exécute les commandes qui se 
+		trouvent dans le <code>ForEachPortfolioNode</code>, mais en tenant uniquement compte du noeud 
+		spécifié. Cette commande évite de charger tout le portfolio comme le fait la commande précédente.
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
@@ -91,13 +94,13 @@ sidebar:
 		</li>
 		<li>
 			<code>Sélection portfolios</code> Test Jquery permetant de sélectionner des portfolios parmi 
-			ceux visibles par l'usager. Exemples :
+			ceux visibles par l'usager. Exemples&nbsp;:
 			<ul>
-				<li><code>code*='2015_work'</code> sélection des portfolios dont le code contient 
-					<code>2015_work</code>
+				<li><code>code*='2015_work'</code> Sélection des portfolios dont le code contient 
+					"2015_work".
 				</li>
-				<li><code>code*=portfolio_code</code> sélection des portfolios dont le code contient le 
-					contenu de la variable <code>porfolio_code</code>
+				<li><code>code*=portfolio_code</code> Sélection des portfolios dont le code contient le 
+					contenu de la variable <i>porfolio_code</i>.
 				</li>
 			</ul>
 		</li>
@@ -105,17 +108,20 @@ sidebar:
 			<code>Tri - tag sémantique</code> Tag sémantique du noeud sur lequel doit se faire le tri.
 		</li>
 		<li>
-			<code>Tri - élément</code> Valeur possible pour le tri (libellé noeud, texte d'une ressource, 
-			code d'un noeud ou valeur d'un item).
+			<code>Tri - élément</code> Valeur à partir de laquelle faire le tri (libellé du noeud, valeur 
+			de la ressource, code du noeud ou valeur d'un item).
+		</li>
+		<li>
+			<code>Tag sémantique</code> Tag sémantique du ou des noeuds à sélectionner dans le portfolio.
 		</li>
 	</ul>
-	<p><code>Tag sémantique</code> Tag sémantique du ou des noeuds à sélectionner dans le portfolio.</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='for-each-person'>ForEachPerson</h3>
-	<p>Pour chacune des personnes répondant au test de la sélection, Karuta exécute les commandes qui 
+	<p>
+		Pour chacune des personnes répondant au test de la sélection, Karuta exécute les commandes qui 
 		se trouvent dans le <code>ForEachPerson</code>.
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
@@ -126,13 +132,13 @@ sidebar:
 		</li>
 		<li>
 			<code>Sélection personnes</code> Test Jquery permetant de sélectionner les personnes du système. 
-			Exemples :
+			Exemples&nbsp;:
 			<ul>
-				<li><code>username='olivier'</code> sélection de la personne dont le username est 
-					<code>olivier</code>
+				<li><code>username='olivier'</code> Sélection de la personne dont l'identifiant Karuta est 
+					"olivier".
 				</li>
-				<li><code>username=identifier</code> sélection de la personne dont le username est le contenu 
-					de la variable <code>identifier</code>
+				<li><code>username=identifier</code> Sélection de la personne dont l'identifiant Karuta est 
+					le contenu de la variable <i>identifier</i>.
 				</li>
 			</ul>
 		</li>
@@ -159,57 +165,58 @@ sidebar:
 		</li>
 		<li>
 			<code>Test</code> Test Jquery permettant de filtrer les éléments répondant aux deux critères 
-			précédents. Les tests ci-dessous peuvent être combinés. Par exemple : 
+			précédents. Les tests ci-dessous peuvent être combinés. Par exemple&nbsp;: 
 			<code>.sort().first()</code> retournera le premier élément de la liste triée.
 		</li>
 	</ul>
-	<p>Tests prédéfinis :</p>
+	<p>Tests prédéfinis&nbsp;:</p>
 	<ul>
 		<li>
-			<code>.sort()</code> trie la liste des noeuds résultats sur le libellé en ordre croissant
+			<code>.sort()</code> Trie la liste des noeuds résultats sur le libellé, en ordre croissant.
 		</li>
 		<li>
-			<code>.invsort()</code> trie la liste des noeuds résultats sur le libellé en ordre décroissant
+			<code>.invsort()</code> Trie la liste des noeuds résultats sur le libellé, en ordre décroissant.
 		</li>
 		<li>
-			<code>.filename_not_empty()</code> s'applique aux documents et vérifie un fichier a été uploadé
+			<code>.filename_not_empty()</code> S'applique aux éléments Document et vérifie si un fichier 
+			a été téléversé dans l'élément (vérifie que l'élément n'est pas vide).
 		</li>
 		<li>
-			<code>.url_not_empty()</code> s'applique aux urls et vérifie si un url a été enregistré
+			<code>.url_not_empty()</code> S'applique aux éléments URL et vérifie si un hyperlien a été 
+			enregistré 
 		</li>
 		<li>
-			<code>.text_not_empty()</code> s'applique aux textes couts et longs et vérifie si du texte 
-			a été enregistré dans la ressource.
+			<code>.text_not_empty()</code> S'applique aux éléments Texte court et Texte long et vérifie 
+			si du texte a été enregistré dans la ressource (vérifie que l'élément n'est pas vide).
 		</li>
 	</ul>
-	<p>Exemples de fonctions jQuery :</p>
+	<p>Exemples de fonctions jQuery&nbsp;:</p>
 	<ul>
+		<li><code>.first()</code> Retourne le premier élément de la liste résultat.</li>
+		<li><code>.not(':eq(0)')</code> Retourne la liste sauf le premier élément.</li>
+		<li><code>.last()</code> Retourne le dernier élément de la liste résultat.</li>
+		<li><code>.has("code:contains('2')")</code> Sélectionne les éléments dont le code contient un "2".</li>
 		<li>
-			<code>.first()</code> retourne le premier élément de la liste résultat</li>
-		<li><code>.not(':eq(0)')</code> retourne la liste sauf le premier élément</li>
-		<li><code>.last()</code> retourne le dernier élément de la liste résultat</li>
-		<li><code>.has("code:contains('2')")</code> sélectionne les éléments dont le code contient un 2</li>
-		<li>
-			<code>.siblings().has("metadata[semantictag*=job-title]")</code> retourne la liste des éléments 
-			de même niveau contenant le tag sémantique "job-title"
+			<code>.siblings().has("metadata[semantictag*=job-title]")</code> Retourne la liste des éléments 
+			de même niveau (dans l'arborescence XML) contenant le tag sémantique "job-title".
 		</li>
 		<li>
-			<code>.has("metadata-wad[submitted='Y']").last()</code> retourne le dernier élément ayant été 
-			soumis
+			<code>.has("metadata-wad[submitted='Y']").last()</code> Retourne le dernier élément ayant été 
+			soumis.
 		</li>
 		<li>
-			<code>.has("metadata-wad[private='N']").last()</code> retourne le dernier élément qui est visible
+			<code>.has("metadata-wad[private='N']").last()</code> Retourne le dernier élément qui est visible.
 		</li>
 		<li>
 			<code>.has('asmContext:has("metadata[semantictag*=visibility-cv-short]"):has
 			("code:contains(@1)")')</code> 
-			retourne l'élément si il y a un enfant avec le tag sémantique "visibility-cv-short" et 
-			dont le code contient "@1"
+			Retourne un élément si celui-ci a un enfant avec le tag sémantique "visibility-cv-short" et 
+			dont le code contient "@1".
 		</li>
 		<li>
 			<code>.sortElements(function(a, b){ return $("code",$("asmResource[xsi_type=Get_Resource]",a))
 			.text() &gt; $("code",$("asmResource[xsi_type=Get_Resource]",b)).text() ? 1 : -1; })</code> 
-			trie sur le code du Get_Resource
+			Trie sur le code du Get_Resource.
 		</li>
 	</ul>
 </article>
@@ -218,18 +225,20 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='for-each-line'>ForEachLine</h3>
 	<p>
-		Pour chacune des lignes du fichier csv, Karuta exécute les commandes qui se trouvent dans le 
+		Pour chacune des lignes du fichier CSV, Karuta exécute les commandes qui se trouvent dans le 
 		<code>ForEachLine</code>.
 	</p>
 	<p>
-		Pour la commande <code>ForEachPerson</code> dans l'attribut sélection de personnes la valeur 
-		username=identifiant (sans guillemets), Karuta remplacera identifiant par la valeur de la variable 
-		locale identifiant.
+		Pour la commande <code>ForEachPerson</code>&nbsp;:</br>
+		Dans l'attribut <code>Sélection personnes</code>, si la valeur est "username=identifiant" 
+		(sans guillemets), Karuta remplacera "identifiant" par la valeur de la variable locale 
+		<i>identifiant</i> du fichier CSV.
 	</p>
 	<p>
-		Pour les commandes <code>ForEachPortfolio</code> et <code>ForEachPortfolioNode</code> dans 
-		sélection portfolios si la valeur code=portfolio_code (sans guillemets), Karuta remplacera 
-		portfolio_code par la valeur de la variable locale identifiant.
+		Pour les commandes <code>ForEachPortfolio</code> et <code>ForEachPortfolioNode</code>&nbsp;:</br>
+		Dans l'attribut <code>Sélection portfolios</code>, si la valeur est "code=portfolio_code" 
+		(sans guillemets), Karuta remplacera "portfolio_code" par la valeur de la variable locale 
+		<i>portfolio_code</i> du fichier CSV.
 	</p>
 </article>
 
