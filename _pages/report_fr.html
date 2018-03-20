@@ -7,7 +7,7 @@ sidebar:
 ---
 <h2 id='commandes'>Commandes</h2>
 
-<p>Ensemble de commandes permettent de construire des rapports. Il y a trois façons d'exécuter 
+<p>Ensemble de commandes de script permettant de construire des rapports. Il y a trois façons d'exécuter 
 	un rapport :
 </p>
 <ul>
@@ -24,6 +24,7 @@ sidebar:
 	<li><code><a href='#for-each-portfolio-node'>ForEachPortfolioNode</a></code></li>
 	<li><code><a href='#for-each-person'>ForEachPerson</a></code></li>
 	<li><code><a href='#for-each-node'>ForEachNode</a></code></li>
+	<li><code><a href='#for-each-line'>ForEachLine</a></code></li>
 	<li><code><a href='#table'>Table</a></code></li>
 	<li><code><a href='#row'>Row</a></code></li>
 	<li><code><a href='#cell'>Cell</a></code></li>
@@ -47,26 +48,34 @@ sidebar:
 	<p>Pour chacun des portfolios répondant au test de la sélection, Karuta exécute les commandes qui 
 		se trouvent dans le <code>ForEachPortfolio</code>.
 	</p>
-	<h4>Champs</h4>
-	<p><code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à 
-		réinitialiser pour chaque nouveau portfolio.
-	</p>
-	<p>
-		<code>Sélection portfolios</code> Test Jquery permetant de sélectionner des portfolios parmi 
-		ceux visibles par l'usager.
-		<br/>Exemples :
-		<ul>
-			<li><code>code*='2015_work'</code> sélection des portfolios dont le code contient 
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à 
+			réinitialiser pour chaque nouveau portfolio.
+		</li>
+		<li>
+			<code>Sélection portfolios</code> Test Jquery permetant de sélectionner des portfolios parmi 
+			ceux visibles par l'usager.
+			<br/>Exemples :
+			<ul>
+				<li><code>code*='2015_work'</code> sélection des portfolios dont le code contient 
 				<code>2015_work</code>
-			</li>
-			<li><code>code*=portfolio_code</code> sélection des portfolios dont le code contient le 
+				</li>
+				<li><code>code*=portfolio_code</code> sélection des portfolios dont le code contient le 
 				contenu de la variable <code>porfolio_code</code>
-			</li>
-		</ul>
-	</p>
-	<p><code>Tri - tag sémantique</code> Tag sémantique du noeud sur lequel doit se faire le tri.</p>
-	<p><code>Tri - élément</code> Valeur possible pour le tri (libellé noeud, texte d'une ressource, 
-		code d'un noeud ou valeur d'un item.)
+				</li>
+			</ul>
+		</li>
+		<li>
+			<code>Tri - tag sémantique</code> Tag sémantique du noeud sur lequel doit se faire le tri.
+		</li>
+		<li>
+			<code>Tri - élément</code> Valeur possible pour le tri (libellé noeud, texte d'une ressource, 
+			code d'un noeud ou valeur d'un item.)
+		</li>
+		<li>
+	</ul>
 	</p>
 </article>
 
