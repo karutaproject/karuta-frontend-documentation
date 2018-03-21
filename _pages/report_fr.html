@@ -47,17 +47,19 @@ sidebar:
 
 <article>
 	<h3 id='for-each-portfolio'>ForEachPortfolio</h3>
-	<p>Pour chacun des portfolios répondant au test de la sélection, Karuta exécute les commandes qui 
-		se trouvent dans le <code>ForEachPortfolio</code>.
+	<p>
+		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacun des 
+		portfolios répondant au test <code>Sélection portfolios</code>.
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
 			<code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à 
-			réinitialiser pour chaque nouveau portfolio.
+			réinitialiser pour chaque nouveau portfolio. La variable peut avoir été déclarée précédement
+			dans une autre commande ou peut être déclarée pour la première fois ici.
 		</li>
 		<li>
-			<code>Sélection portfolios</code> Test Jquery permetant de sélectionner des portfolios parmi 
+			<code>Sélection portfolios</code> Test Jquery permettant de sélectionner des portfolios parmi 
 			ceux visibles par l'usager. Exemples&nbsp;:
 			<ul>
 				<li>
@@ -71,26 +73,31 @@ sidebar:
 			</ul>
 		</li>
 		<li>
-			<code>Tri&nbsp;- tag sémantique</code> Tag sémantique du noeud sur lequel doit se faire le tri.
+			<code>Tri&nbsp;- Tag sémantique</code> Tag sémantique du noeud sur lequel doit se faire le 
+			tri des portfolios.
 		</li>
 		<li>
-			<code>Tri&nbsp;- élément</code> Valeur à partir de laquelle faire le tri (libellé du noeud, valeur 
-			de la ressource, code du noeud ou valeur d'un item).
+			<code>Tri&nbsp;- Élément</code> Valeur du noeud sélectionné à partir de laquelle faire le tri.
+			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou valeur d'un 
+			élément Item.
 		</li>
 	</ul>
 </article>
 
 <article>
 	<h3 id='for-each-portfolio-node'>ForEachPortfolioNode</h3>
-	<p>Pour chacun des portfolios répondant au test de la sélection, Karuta exécute les commandes qui se 
-		trouvent dans le <code>ForEachPortfolioNode</code>, mais en tenant uniquement compte du noeud 
-		spécifié. Cette commande évite de charger tout le portfolio comme le fait la commande précédente.
+	<p>
+		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacun des 
+		portfolios répondant au test <code>Sélection portfolios</code>. Contrairement à la commande
+		précédente, ce n'est pas tout le portfolio qui est chargé mais uniquement le noeud spécifié 
+		dans <code>Tag sémantique</code>.
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
 			<code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à 
-			réinitialiser pour chaque nouveau portfolio.
+			réinitialiser pour chaque nouveau portfolio. La variable peut avoir été déclarée précédement
+			dans une autre commande ou peut être déclarée pour la première fois.
 		</li>
 		<li>
 			<code>Sélection portfolios</code> Test Jquery permetant de sélectionner des portfolios parmi 
@@ -105,14 +112,16 @@ sidebar:
 			</ul>
 		</li>
 		<li>
-			<code>Tri&nbsp;- tag sémantique</code> Tag sémantique du noeud sur lequel doit se faire le tri.
+			<code>Tri&nbsp;- Tag sémantique</code> Tag sémantique du noeud sur lequel doit se faire le tri.
 		</li>
 		<li>
-			<code>Tri&nbsp;- élément</code> Valeur à partir de laquelle faire le tri (libellé du noeud, valeur 
-			de la ressource, code du noeud ou valeur d'un item).
+			<code>Tri&nbsp;- Élément</code> Valeur du noeud sélectionné à partir de laquelle faire le tri.
+			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou valeur d'un 
+			élément Item.
 		</li>
 		<li>
-			<code>Tag sémantique</code> Tag sémantique du ou des noeuds à sélectionner dans le portfolio.
+			<code>Tag sémantique</code> Tag sémantique du ou des noeuds du portfolio à charger pour 
+			l'exécution.
 		</li>
 	</ul>
 </article>
@@ -121,14 +130,15 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='for-each-person'>ForEachPerson</h3>
 	<p>
-		Pour chacune des personnes répondant au test de la sélection, Karuta exécute les commandes qui 
-		se trouvent dans le <code>ForEachPerson</code>.
+		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacune des 
+		personnes répondant au test <code>Sélection personnes</code>.
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
 			<code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à 
-			réinitialiser pour chaque nouvelle personne.
+			réinitialiser pour chaque nouvelle personne. La variable peut avoir été déclarée précédement
+			dans une autre commande ou peut être déclarée pour la première fois.
 		</li>
 		<li>
 			<code>Sélection personnes</code> Test Jquery permetant de sélectionner les personnes du système. 
@@ -148,25 +158,28 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='for-each-node'>ForEachNode</h3>
-	<p>Pour chacun des éléments de portfolio répondant aux critères (type de noeud, tag sémantique et 
-		test), Karuta exécute les commandes qui se trouvent dans le <code>ForEachNode</code>.
+	<p>
+		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacun des 
+		éléments du portfolio qui répondent aux critères <code>Type de noeud</code>, 
+		<code>Tag sémantique</code> et <code>Test</code>.
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
 			<code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à 
-			réinitialiser pour chaque nouvel élément.
+			réinitialiser pour chaque nouvel élément. La variable peut avoir été déclarée précédement
+			dans une autre commande ou peut être déclarée pour la première fois.
 		</li>
 		<li>
-			<code>Type de noeud</code> Liste déroulante des choix possibles.
+			<code>Type de noeud</code> Type des éléments à sélectionner (liste déroulante des choix 
+			possibles).
 		</li>
 		<li>
 			<code>Tag sémantique</code> Tag sémantique des éléments à sélectionner.
 		</li>
 		<li>
-			<code>Test</code> Test Jquery permettant de filtrer les éléments répondant aux deux critères 
-			précédents. Les tests ci-dessous peuvent être combinés. Par exemple&nbsp;: 
-			<code>.sort().first()</code> retournera le premier élément de la liste triée.
+			<code>Test</code> Test Jquery permettant de filtrer parmis les éléments répondant aux deux 
+			critères précédents.
 		</li>
 	</ul>
 	<p>Tests prédéfinis&nbsp;:</p>
@@ -183,13 +196,17 @@ sidebar:
 		</li>
 		<li>
 			<code>.url_not_empty()</code> S'applique aux éléments URL et vérifie si un hyperlien a été 
-			enregistré 
+			enregistré (vérifie que l'élément n'est pas vide).
 		</li>
 		<li>
 			<code>.text_not_empty()</code> S'applique aux éléments Texte court et Texte long et vérifie 
 			si du texte a été enregistré dans la ressource (vérifie que l'élément n'est pas vide).
 		</li>
 	</ul>
+	<p>
+		Les tests prédéfinis peuvent être combinés. Par exemple&nbsp;: 
+		<code>.sort().first()</code> retournera le premier élément de la liste triée.
+	</p>
 	<p>Exemples de fonctions jQuery&nbsp;:</p>
 	<ul>
 		<li><code>.first()</code> Retourne le premier élément de la liste résultat.</li>
@@ -225,18 +242,19 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='for-each-line'>ForEachLine</h3>
 	<p>
-		Pour chacune des lignes du fichier CSV, Karuta exécute les commandes qui se trouvent dans le 
-		<code>ForEachLine</code>.
+		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacune des 
+		lignes du fichier CSV. En général cet élément est contient un élément <code>ForEachPerson</code>
+		ou un élément <code>ForEachPortfolio</code>.
 	</p>
 	<p>
-		Pour la commande <code>ForEachPerson</code>&nbsp;:</br>
-		Dans l'attribut <code>Sélection personnes</code>, si la valeur est "username=identifiant" 
+		Pour un élément <code>ForEachPerson</code>&nbsp;:</br>
+		dans l'attribut <code>Sélection personnes</code>, si la valeur est "username=identifiant" 
 		(sans guillemets), Karuta remplacera "identifiant" par la valeur de la variable locale 
 		<i>identifiant</i> du fichier CSV.
 	</p>
 	<p>
-		Pour les commandes <code>ForEachPortfolio</code> et <code>ForEachPortfolioNode</code>&nbsp;:</br>
-		Dans l'attribut <code>Sélection portfolios</code>, si la valeur est "code=portfolio_code" 
+		Pour un élément <code>ForEachPortfolio</code> ou <code>ForEachPortfolioNode</code>&nbsp;:</br>
+		dans l'attribut <code>Sélection portfolios</code>, si la valeur est "code=portfolio_code" 
 		(sans guillemets), Karuta remplacera "portfolio_code" par la valeur de la variable locale 
 		<i>portfolio_code</i> du fichier CSV.
 	</p>
@@ -295,12 +313,20 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='draw-web-title'>Draw Web Title</h3>
-	<p>La commande affiche le titre du dessin SVG.</p>
+	<p>Affiche le titre du dessin SVG.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
-		<li><code>Type de noeud</code> Liste déroulante des choix possibles.</li>
-		<li><code>Tag sémantique</code> Tag sémantique de l'élément à afficher.</li>
-		<li><code>Afficher</code> Liste déroulante des choix possibles.</li>
+		<li>
+			<code>Type de noeud</code> Type de l'élément à sélectionner (liste déroulante des choix 
+			possibles).
+		</li>
+		<li>
+			<code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.
+		</li>
+		<li>
+			<code>Afficher</code> Valeur du noeud sélectionné à afficher. Les options sont&nbsp;: 
+			libellé du noeud, valeur de la ressource, code du noeud ou valeur d'un élément Item.
+		</li>
 	</ul>
 </article>
 
