@@ -50,12 +50,12 @@ report_fr:
         url: /report_fr#row
       - title: "Cell"
         url: /report_fr#cell
+      - title: "Text"
+        url: /report_fr#text
       - title: "Node"
         url: /report_fr#node
       - title: "Aggregate"
         url: /report_fr#aggregate
-      - title: "Text"
-        url: /report_fr#text
       - title: "URL2Unit"
         url: /report_fr#url2unit
       - title: "SVG"
