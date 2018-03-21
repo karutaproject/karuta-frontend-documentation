@@ -79,7 +79,7 @@ sidebar:
 		<li>
 			<code>Tri&nbsp;- Élément</code> Valeur du noeud sélectionné à partir de laquelle faire le tri.
 			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou valeur d'un 
-			élément Item.
+			élément Item (liste déroulante des choix possibles).
 		</li>
 	</ul>
 </article>
@@ -117,7 +117,7 @@ sidebar:
 		<li>
 			<code>Tri&nbsp;- Élément</code> Valeur du noeud sélectionné à partir de laquelle faire le tri.
 			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou valeur d'un 
-			élément Item.
+			élément Item (liste déroulante des choix possibles).
 		</li>
 		<li>
 			<code>Tag sémantique</code> Tag sémantique du ou des noeuds du portfolio à charger pour 
@@ -171,7 +171,7 @@ sidebar:
 			dans une autre commande ou peut être déclarée pour la première fois.
 		</li>
 		<li>
-			<code>Type de noeud</code> Type des éléments à sélectionner (liste déroulante des choix 
+			<code>Type noeud</code> Type des éléments à sélectionner (liste déroulante des choix 
 			possibles).
 		</li>
 		<li>
@@ -243,8 +243,8 @@ sidebar:
 	<h3 id='for-each-line'>ForEachLine</h3>
 	<p>
 		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacune des 
-		lignes du fichier CSV. En général cet élément est contient un élément <code>ForEachPerson</code>
-		ou un élément <code>ForEachPortfolio</code>.
+		lignes du fichier CSV. Cet élément doit contenir au moins un des trois éléments suivants&nbsp:
+		<code>ForEachPerson</code>, <code>ForEachPortfolio</code>, <code>ForEachPortfolioNode</code>.
 	</p>
 	<p>
 		Pour un élément <code>ForEachPerson</code>&nbsp;:</br>
@@ -299,8 +299,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='svg'>SVG</h3>
 	<p>
-		La commande SVG initialise un dessin vectoriel SVG. Les commandes de dessin disponibles 
-		permettent de construire des diagrammes en étoile tel qu'illustré ci-dessous&nbsp;:
+		Initialise un dessin vectoriel SVG. Les commandes de dessin disponibles permettent de 
+		construire des diagrammes en étoile tel qu'illustré ci-dessous&nbsp;:
 	</p>
 	<img src='../assets/img/web.png' width='60%'/>
 	<p>Champs à renseigner&nbsp;:</p>
@@ -317,15 +317,14 @@ sidebar:
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Type de noeud</code> Type de l'élément à sélectionner (liste déroulante des choix 
+			<code>Type noeud</code> Type de l'élément à sélectionner (liste déroulante des choix 
 			possibles).
 		</li>
-		<li>
-			<code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.
-		</li>
+		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
 		<li>
 			<code>Afficher</code> Valeur du noeud sélectionné à afficher. Les options sont&nbsp;: 
-			libellé du noeud, valeur de la ressource, code du noeud ou valeur d'un élément Item.
+			libellé du noeud, valeur de la ressource, code du noeud ou valeur d'un élément Item 
+			(liste déroulante des choix possibles).
 		</li>
 	</ul>
 </article>
@@ -333,13 +332,20 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='draw-web-axis'>Draw Web Axis</h3>
-	<p>La commande trace un axe de l'étoile. Le libellé de l'axe est défini par les champs de la commande.</p>
+	<p>Trace un axe de l'étoile, avec son libellé.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
-		<li><code>Référence</code> valeur utilisée pour les aggrégats.</li>
-		<li><code>Type de noeud</code> Liste déroulante des choix possibles.</li>
-		<li><code>Tag sémantique</code> Tag sémantique de l'élément à afficher.</li>
-		<li><code>Afficher</code> Liste déroulante des choix possibles.</li>
+		<li><code>Référence</code> Variable utilisée pour les aggrégats (optionnel).</li>
+		<li>
+			<code>Type noeud</code> Type de l'élément à sélectionner (liste déroulante des choix 
+			possibles).
+		</li>
+		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
+		<li>
+			<code>Afficher</code> Valeur du noeud sélectionné à afficher comme libellé de l'axe. 
+			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou 
+			valeur d'un élément Item (liste déroulante des choix possibles).
+		</li>
 	</ul>
 </article>
 
@@ -347,23 +353,37 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='draw-web-line'>Draw Web Line</h3>
 	<p>
-		La commande positionne une valeur sur l'axe correspondant et trace une ligne entre la dernière 
-		valeur et la valeur courante. La commande affiche également la légende.
+		Positionne une valeur sur l'axe correspondant et trace une ligne entre la dernière 
+		valeur et la valeur courante (pour former l'étoile). Affiche également la légende de 
+		l'élément SVG.
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
-		<li><code>Référence</code> valeur utilisée pour les aggrégats.</li>
+		<li><code>Référence</code> Variable utilisée pour les aggrégats (optionnel).</li>
 		<li>
-			<code>Valeur&nbsp;- Type de noeud</code> Liste déroulante des choix possibles pour la valeur à afficher.
+			<code>Type noeud</code> Type de l'élément à sélectionner (liste déroulante des choix 
+			possibles).
 		</li>
-		<li><code>Valeur&nbsp;- Tag sémantique</code> Tag sémantique de l'élément à afficher.</li>
-		<li><code>Valeur&nbsp;- Afficher</code> Liste déroulante des choix possibles pour le noeud sélectionné.</li>
-		<li><code>Légende&nbsp;- Type de noeud</code> Liste déroulante des choix possibles pour la légende.</li>
-		<li><code>Légende&nbsp;- Tag sémantique</code> Tag sémantique de l'élément à afficher.</p>
-		<li><code>Légende&nbsp;- Afficher</code> Liste déroulante des choix possibles poour le noeud sélectionné.</li>
+		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
 		<li>
-			<code>Légende&nbsp;- Position</code> entier donnant la position relative de la légende 
-			(par défaut 0 positionne la légende au plus)
+			<code>Afficher</code> Valeur du noeud sélectionné à afficher sur l'axe. 
+			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou 
+			valeur d'un élément Item (liste déroulante des choix possibles).
+		</li>
+		<li><code>Valeur&nbsp;- Min</code> Valeur inférieure pour la graduation de l'axe.</li>
+		<li><code>Valeur&nbsp;- Max</code> Valeur supérieure pour la graduation de l'axe.</li>
+		<li>
+			<code>Légende&nbsp;- Type noeud</code> Type de l'élément à sélectionner (liste déroulante 
+			des choix possibles).
+		</li>
+		<li><code>Légende&nbsp;- Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</p>
+		<li>
+			<code>Légende&nbsp;- Afficher</code> Valeur du noeud sélectionné à afficher dans la légende. 
+			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou 
+			valeur d'un élément Item (liste déroulante des choix possibles).</li>
+		<li>
+			<code>Légende&nbsp;- Position</code> Entier donnant la position relative de la légende 
+			(par défaut 0, ce qui positionne la légende au plus bas).
 		</li>
 	</ul>
 </article>
