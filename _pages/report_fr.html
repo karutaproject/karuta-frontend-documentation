@@ -182,7 +182,8 @@ sidebar:
 		</li>
 		<li>
 			<code>Test</code> Optionnel : test Jquery permettant de filtrer parmis les éléments répondant 
-			aux deux critères précédents.
+			aux deux critères précédents. Si pas utilisé, tous les noeuds qui répondent aux deux critères 
+			précédents sont traités.
 		</li>
 	</ul>
 	<p>Tests prédéfinis&nbsp;:</p>
@@ -368,6 +369,14 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='url2unit'>URL2Unit</h3>
+	<p>
+		Permet d'insérer dans le tableau un lien vers une page du portfolio. Le portfolio ne doit
+		contenir qu'une seule page avec le tag sémantique spécifié.
+	</p>
+	<p>Champ à renseigner&nbsp;:</p>
+	<ul>
+		<li><code>Tag sémantique</code> Tag sémantique de la page vers laquelle pointe le lien.</li>
+	</ul>	
 </article>
 
 <article>
@@ -493,6 +502,11 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='qrcode'>QR Code</h3>
+	<p>
+		Permet d'afficher dans le tableau le QR Code qui mène au BubbleMap présent dans le portfolio.
+		L'élément BubbleMap est trouvé automatiquement par Karuta (ne peux pas fonctionner si il y a 
+		plus d'un BubbleMap dans le portfolio).
+	</p>
 </article>
 
 <h2 id='css'>Mise en forme</h2>
