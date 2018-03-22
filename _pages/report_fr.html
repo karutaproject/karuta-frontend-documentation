@@ -7,23 +7,26 @@ sidebar:
 ---
 <h2 id='commandes'>Commandes</h2>
 
-<p>Ensemble de commandes permettent de construire des rapports. Il y a trois façons d'exécuter 
-	un rapport :
+<p>Ensemble de commandes de script permettant de construire des rapports. Il y a trois façons d'exécuter 
+	un script de rapport&nbsp;:
 </p>
 <ul>
 	<li>avec la ressource Tableau de bord dans un portfolio,</li>
 	<li>dans la page Exécuter un rapport en spécifiant le nom du rapport,</li>
-	<li>dans la page Exécuter un rapport en téléversant un fichier CSV (format: voir section Batch). 
-		Dans le fichier CSV, les 2 premières lignes de variables globales ne sont pas prises en compte.</li>
+	<li>
+		dans la page Exécuter un rapport en téléversant un fichier CSV (pour le format voir section Batch). 
+		Dans le fichier CSV, les 2 premières lignes (variables globales) ne sont pas prises en compte.
+	</li>
 </ul>
 
 
-<p>Les commandes disponibles sont :</p>
+<p>Les commandes disponibles sont&nbsp;:</p>
 <ul>
 	<li><code><a href='#for-each-portfolio'>ForEachPortfolio</a></code></li>
 	<li><code><a href='#for-each-portfolio-node'>ForEachPortfolioNode</a></code></li>
 	<li><code><a href='#for-each-person'>ForEachPerson</a></code></li>
 	<li><code><a href='#for-each-node'>ForEachNode</a></code></li>
+	<li><code><a href='#for-each-line'>ForEachLine</a></code></li>
 	<li><code><a href='#table'>Table</a></code></li>
 	<li><code><a href='#row'>Row</a></code></li>
 	<li><code><a href='#cell'>Cell</a></code></li>
@@ -44,82 +47,113 @@ sidebar:
 
 <article>
 	<h3 id='for-each-portfolio'>ForEachPortfolio</h3>
-	<p>Pour chacun des portfolios répondant au test de la sélection, Karuta exécute les commandes qui 
-		se trouvent dans le <code>ForEachPortfolio</code>.
-	</p>
-	<h4>Champs</h4>
-	<p><code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à 
-		réinitialiser pour chaque nouveau portfolio.
-	</p>
 	<p>
-		<code>Sélection portfolios</code> Test Jquery permetant de sélectionner des portfolios parmi 
-		ceux visibles par l'usager.
-		<br/>Exemples :
-		<ul>
-			<li><code>code*='2015_work'</code> sélection des portfolios dont le code contient 
-				<code>2015_work</code>
-			</li>
-			<li><code>code*=portfolio_code</code> sélection des portfolios dont le code contient le 
-				contenu de la variable <code>porfolio_code</code>
-			</li>
-		</ul>
+		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacun des 
+		portfolios répondant au test <code>Sélection portfolios</code>.
 	</p>
-	<p><code>Tri - tag sémantique</code> Tag sémantique du noeud sur lequel doit se faire le tri.</p>
-	<p><code>Tri - élément</code> Valeur possible pour le tri (libellé noeud, texte d'une ressource, 
-		code d'un noeud ou valeur d'un item.)
-	</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Références à initialiser</code> Optionnel&nbsp;: liste des variables (séparées par une barre 
+			oblique) à réinitialiser pour chaque nouveau portfolio. La variable peut avoir été déclarée 
+			précédement dans une autre commande ou peut être déclarée pour la première fois ici.
+		</li>
+		<li>
+			<code>Sélection portfolios</code> Test Jquery permettant de sélectionner des portfolios parmi 
+			ceux visibles par l'usager. Exemples&nbsp;:
+			<ul>
+				<li>
+					<code>code*='2015_work'</code> Sélection des portfolios dont le code contient 
+					"2015_work".
+				</li>
+				<li>
+					<code>code*=portfolio_code</code> Sélection des portfolios dont le code contient le 
+					contenu de la variable <i>porfolio_code</i>.
+				</li>
+			</ul>
+		</li>
+		<li>
+			<code>Tri&nbsp;- Tag sémantique</code> Optionnel&nbsp;: tag sémantique du noeud sur lequel doit 
+			se faire le tri des portfolios. Si pas utilisé, les portfolios sortent dans l'ordre naturel
+			des codes de portfolio.
+		</li>
+		<li>
+			<code>Tri&nbsp;- Élément</code> Valeur du noeud sélectionné à partir de laquelle 
+			faire le tri. Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud 
+			ou valeur d'un élément Item (liste déroulante des choix possibles).
+		</li>
+	</ul>
 </article>
 
 <article>
 	<h3 id='for-each-portfolio-node'>ForEachPortfolioNode</h3>
-	<p>Pour chacun des portfolios répondant au test de la sélection et des noeuds sélectionnés, 
-		Karuta exécute les commandes qui se trouvent dans le <code>ForEachPortfolioNode</code>. 
-		Cette commande évite de charger tout le portfolio comme le fait la commande précédente.
-	</p>
-	<h4>Champs</h4>
-	<p><code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à 
-		réinitialiser pour chaque nouveau portfolio.
-	</p>
 	<p>
-		<code>Sélection portfolios</code> Test Jquery permetant de sélectionner des portfolios parmi 
-		ceux visibles par l'usager.
-		<br/>Exemples :
-		<ul>
-			<li><code>code*='2015_work'</code> sélection des portfolios dont le code contient 
-				<code>2015_work</code>
-			</li>
-			<li><code>code*=portfolio_code</code> sélection des portfolios dont le code contient le 
-				contenu de la variable <code>porfolio_code</code>
-			</li>
-		</ul>
+		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacun des 
+		portfolios répondant au test <code>Sélection portfolios</code>. Contrairement à la commande
+		précédente, ce n'est pas tout le portfolio qui est chargé mais uniquement le noeud spécifié 
+		dans <code>Tag sémantique</code>.
 	</p>
-	<p><code>Tri - tag sémantique</code> Tag sémantique du noeud sur lequel doit se faire le tri.</p>
-	<p><code>Tri - élément</code> Valeur possible pour le tri (libellé noeud, texte d'une ressource, 
-		code d'un noeud ou valeur d'un item).
-	</p>
-	<p><code>Tag sémantique</code>  Tag sémantique du ou des noeuds à sélectionner dans le portfolio.</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Références à initialiser</code> Optionnel&nbsp;: liste des variables (séparées par une barre 
+			oblique) à réinitialiser pour chaque nouveau portfolio. La variable peut avoir été déclarée 
+			précédement dans une autre commande ou peut être déclarée pour la première fois.
+		</li>
+		<li>
+			<code>Sélection portfolios</code> Test Jquery permetant de sélectionner des portfolios parmi 
+			ceux visibles par l'usager. Exemples&nbsp;:
+			<ul>
+				<li><code>code*='2015_work'</code> Sélection des portfolios dont le code contient 
+					"2015_work".
+				</li>
+				<li><code>code*=portfolio_code</code> Sélection des portfolios dont le code contient le 
+					contenu de la variable <i>porfolio_code</i>.
+				</li>
+			</ul>
+		</li>
+		<li>
+			<code>Tri&nbsp;- Tag sémantique</code> Optionnel&nbsp;: tag sémantique du noeud sur lequel doit 
+			se faire le tri des portfolios. Si pas utilisé, les portfolios sortent dans l'ordre naturel
+			des codes de portfolio.
+		</li>
+		<li>
+			<code>Tri&nbsp;- Élément</code> Valeur du noeud sélectionné à partir de laquelle faire le tri.
+			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou valeur d'un 
+			élément Item (liste déroulante des choix possibles).
+		</li>
+		<li>
+			<code>Tag sémantique</code> Tag sémantique du ou des noeuds du portfolio à charger pour 
+			l'exécution.
+		</li>
+	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='for-each-person'>ForEachPerson</h3>
-	<p>Pour chacune des personnes répondant au test de la sélection, Karuta exécute les commandes qui 
-		se trouvent dans le <code>ForEachPerson</code>.
-	</p>
-	<h4>Champs</h4>
-	<p><code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à 
-		réinitialiser pour chaque nouvelle personne.
-	</p>
 	<p>
-		<code>Sélection personnes</code> Test Jquery permetant de sélectionner les personnes du système.
+		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacune des 
+		personnes répondant au test <code>Sélection personnes</code>.
 	</p>
-	<p>Exemples :</p>
+	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
-		<li><code>username='olivier'</code> sélection de la personne dont le username est 
-			<code>olivier</code>
+		<li>
+			<code>Références à initialiser</code> Optionnel&nbsp;: liste des variables (séparées par une barre 
+			oblique) à réinitialiser pour chaque nouvelle personne. La variable peut avoir été déclarée 
+			précédement dans une autre commande ou peut être déclarée pour la première fois.
 		</li>
-		<li><code>username=identifier</code> sélection de la personne dont le username est le contenu 
-			de la variable <code>identifier</code>
+		<li>
+			<code>Sélection personnes</code> Test Jquery permetant de sélectionner les personnes du système. 
+			Exemples&nbsp;:
+			<ul>
+				<li><code>username='olivier'</code> Sélection de la personne dont l'identifiant Karuta est 
+					"olivier".
+				</li>
+				<li><code>username=identifier</code> Sélection de la personne dont l'identifiant Karuta est 
+					le contenu de la variable <i>identifier</i>.
+				</li>
+			</ul>
 		</li>
 	</ul>
 </article>
@@ -127,87 +161,208 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='for-each-node'>ForEachNode</h3>
-	<p>Pour chacun des éléments de portfolio répondant aux critères (type de noeud, tag sémantique et 
-		test), Karuta exécute les commandes qui se trouvent dans le <code>ForEachNode</code>.
-	</p>
-	<h4>Champs</h4>
-	<p><code>Références à initialiser</code> Liste des variables (séparées par une barre oblique) à 
-		réinitialiser pour chaque nouvel élément.
-	</p>
 	<p>
-		<code>Type de noeud</code> Liste déroulante des choix possibles.
+		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacun des 
+		éléments du portfolio qui répondent aux critères <code>Type de noeud</code>, 
+		<code>Tag sémantique</code> et <code>Test</code>.
 	</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Références à initialiser</code> Optionnel&nbsp;: liste des variables (séparées par une barre 
+			oblique) à réinitialiser pour chaque nouvel élément. La variable peut avoir été déclarée 
+			précédement dans une autre commande ou peut être déclarée pour la première fois.
+		</li>
+		<li>
+			<code>Type noeud</code> Type des éléments à sélectionner (liste déroulante des choix 
+			possibles).
+		</li>
+		<li>
+			<code>Tag sémantique</code> Tag sémantique des éléments à sélectionner.
+		</li>
+		<li>
+			<code>Test</code> Optionnel : test Jquery permettant de filtrer parmis les éléments répondant 
+			aux deux critères précédents.
+		</li>
+	</ul>
+	<p>Tests prédéfinis&nbsp;:</p>
+	<ul>
+		<li>
+			<code>.sort()</code> Trie la liste des noeuds résultats sur le libellé, en ordre croissant.
+		</li>
+		<li>
+			<code>.invsort()</code> Trie la liste des noeuds résultats sur le libellé, en ordre décroissant.
+		</li>
+		<li>
+			<code>.filename_not_empty()</code> S'applique aux éléments Document et vérifie si un fichier 
+			a été téléversé dans l'élément (vérifie que l'élément n'est pas vide).
+		</li>
+		<li>
+			<code>.url_not_empty()</code> S'applique aux éléments URL et vérifie si un hyperlien a été 
+			enregistré (vérifie que l'élément n'est pas vide).
+		</li>
+		<li>
+			<code>.text_not_empty()</code> S'applique aux éléments Texte court et Texte long et vérifie 
+			si du texte a été enregistré dans la ressource (vérifie que l'élément n'est pas vide).
+		</li>
+	</ul>
 	<p>
-		<code>Tag sémantique</code> Tag sémantique des éléments à sélectionner.
-	</p>
-	<p>
-		<code>Test</code> Test Jquery permettant de filtrer les éléments répondant aux deux critères 
-		précédents. Les tests ci-dessous peuvent être combinés. Par exemple : 
+		Les tests prédéfinis peuvent être combinés. Par exemple&nbsp;: 
 		<code>.sort().first()</code> retournera le premier élément de la liste triée.
 	</p>
-	<p>Tests prédéfinis :</p>
+	<p>Exemples de fonctions jQuery&nbsp;:</p>
 	<ul>
-		<li><code>.sort()</code> trie la liste des noeuds résultats sur le libellé en ordre croissant<br></li>
-		<li><code>.invsort()</code> trie la liste des noeuds résultats sur le libellé en ordre décroissant<br></li>
-		<li><code>.filename_not_empty()</code> s'applique aux documents et vérifie un fichier a été uploadé<br></li>
-		<li><code>.url_not_empty()</code> s'applique aux urls et vérifie si un url a été enregistré<br></li>
-		<li><code>.text_not_empty()</code> s'applique aux textes couts et longs et vérifie si du texte a été enregistré dans la ressource.<br></li>
-	</ul>
-	<p>Exemples de fonctions jQuery :</p>
-	<ul>
-		<li><code>.first()</code> retourne le premier élément de la liste résultat<code></code></li>
-		<li><code>.not(':eq(0)')</code> retourne la liste sauf le premier élément<br></li>
-		<li><code>.last()</code>&nbsp;retourne le dernier élément de la liste résultat</li>
-		<li><code>.has("code:contains('2')") </code>sélectionne les éléments dont le code contient un 2</li>
-		<li><code>.siblings().has("metadata[semantictag*=job-title]")</code> retourne la liste des éléments 
-			de même niveau contenant le tag sémantique " job-title "
+		<li><code>.first()</code> Retourne le premier élément de la liste résultat.</li>
+		<li><code>.not(':eq(0)')</code> Retourne la liste sauf le premier élément.</li>
+		<li><code>.last()</code> Retourne le dernier élément de la liste résultat.</li>
+		<li><code>.has("code:contains('2')")</code> Sélectionne les éléments dont le code contient un "2".</li>
+		<li>
+			<code>.siblings().has("metadata[semantictag*=job-title]")</code> Retourne la liste des éléments 
+			de même niveau (dans l'arborescence XML) contenant le tag sémantique "job-title".
 		</li>
-		<li><code>.has("metadata-wad[submitted='Y']").last()</code> retourne le dernier élément ayant été soumis<br></li>
-		<li><code>.has("metadata-wad[private='N']").last()</code> retourne le dernier élément qui est visible<br></li>
-		<li><code>.has('asmContext:has("metadata[semantictag*=visibility-cv-short]"):has("code:contains(@1)")')</code> 
-			retourne l'élément si il y a un enfant avec le tag sémantique "&nbsp;visibility-cv-short " et 
-			dont le code contient @1
+		<li>
+			<code>.has("metadata-wad[submitted='Y']").last()</code> Retourne le dernier élément ayant été 
+			soumis.
 		</li>
-		<li><code>.sortElements(function(a, b){ return $("code",$("asmResource[xsi_type=Get_Resource]",a)).text() &gt; $("code",$("asmResource[xsi_type=Get_Resource]",b)).text() ? 1 : -1; })</code> trie sur le code du Get_Resource</li>
+		<li>
+			<code>.has("metadata-wad[private='N']").last()</code> Retourne le dernier élément qui est visible.
+		</li>
+		<li>
+			<code>.has('asmContext:has("metadata[semantictag*=visibility-cv-short]"):has
+			("code:contains(@1)")')</code> 
+			Retourne un élément si celui-ci a un enfant avec le tag sémantique "visibility-cv-short" et 
+			dont le code contient "@1".
+		</li>
+		<li>
+			<code>.sortElements(function(a, b){ return $("code",$("asmResource[xsi_type=Get_Resource]",a))
+			.text() &gt; $("code",$("asmResource[xsi_type=Get_Resource]",b)).text() ? 1 : -1; })</code> 
+			Trie sur le code du Get_Resource.
+		</li>
 	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='for-each-line'>ForEachLine</h3>
-	<p>Pour chacune des lignes du fichier csv, Karuta exécute les commandes qui se trouvent dans le <code>ForEachLine</code>.</p>
-	<p>Pour la commande <code>ForEachPerson</code> dans l'attribut sélection de personnes la valeur username=identifiant (sans guillemets), Karuta remplacera identifiant par la valeur de la variable locale identifiant.</p>
-	<p>Pour les commandes <code>ForEachPortfolio</code> et <code>ForEachPortfolioNode</code> dans sélection portfolios si la valeur code=portfolio_code  (sans guillemets), Karuta remplacera portfolio_code par la valeur de la variable locale identifiant.</p>
+	<p>
+		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacune des 
+		lignes du fichier CSV. Cet élément doit contenir au moins un des trois éléments suivants&nbsp:
+		<code>ForEachPerson</code>, <code>ForEachPortfolio</code> ou <code>ForEachPortfolioNode</code>.
+	</p>
+	<p>
+		Pour un élément <code>ForEachPerson</code>&nbsp;:</br>
+		dans l'attribut <code>Sélection personnes</code>, si la valeur est "username=identifiant" 
+		(sans guillemets), Karuta remplacera "identifiant" par la valeur de la variable locale 
+		<i>identifiant</i> du fichier CSV.
+	</p>
+	<p>
+		Pour un élément <code>ForEachPortfolio</code> ou <code>ForEachPortfolioNode</code>&nbsp;:</br>
+		dans l'attribut <code>Sélection portfolios</code>, si la valeur est "code=portfolio_code" 
+		(sans guillemets), Karuta remplacera "portfolio_code" par la valeur de la variable locale 
+		<i>portfolio_code</i> du fichier CSV.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='table'>Table</h3>
+	<p> Dessine un élément HTML table.</p>
+	<p>Champ à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Références à initialiser</code> Optionnel&nbsp;: liste des variables (séparées par une barre 
+			oblique) à réinitialiser. La variable peut avoir été déclarée précédement dans une autre commande 
+			ou peut être déclarée pour la première fois.
+		</li>
+	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='row'>Row</h3>
+	<p> Dessine un élément HTML row.</p>	
+	<p>Champ à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Références à initialiser</code> Optionnel&nbsp;: liste des variables (séparées par une barre 
+			oblique) à réinitialiser. La variable peut avoir été déclarée précédement dans une autre commande 
+			ou peut être déclarée pour la première fois.
+		</li>
+	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='cell'>Cell</h3>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='cell'>Node</h3>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='aggregate'>Aggregate</h3>
+	<p> 
+		Dessine un élément HTML cell. Contient habituellement un élément Node, un élément Text, ou un 
+		élément Table (pour former des tableaux complexes).
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='text'>Text</h3>
+	<p>
+		Permet d'afficher du texte "programmé en dur" ie&nbsp;: texte fixe qui ne dépend pas des valeurs 
+		dans le portfolio (par exemple les titres de colonnes).	Habituellement utilisé dans un élément
+		Cell.
+	</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les aggrégats. Si utilisé, 
+			la variable enregistre la valeur obtenue par l'attribut <code>Texte</code>.			
+		</li>
+		<li><code>Texte</code> Le texte à afficher.</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='cell'>Node</h3>
+	<p>
+		Permet de puiser le texte à afficher dans un élément de portfolio (par exemple la valeur entrée
+		par l'utilisateur dans l'élément). Habituellement utilisé dans un élément Cell.
+	</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les aggrégats. 
+			Si utilisé, la variable enregistre la valeur affichée.			
+		</li>
+		<li>
+			<code>Type noeud</code> Type de l'élément à sélectionner (liste déroulante des choix 
+			possibles).
+		</li>
+		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
+		<li>
+			<code>Afficher</code> Valeur du noeud sélectionné à afficher. Les options sont&nbsp;: 
+			libellé du noeud, valeur de la ressource, code du noeud ou valeur d'un élément Item 
+			(liste déroulante des choix possibles).		
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='aggregate'>Aggregate</h3>
+	<p>
+		Permet d'afficher la somme ou la moyenne des valeurs contenues dans une variable. La 
+		variable a précédemment été déclarée dans l'attribut <code>Références à initialiser</code> 
+		d'un élément du batch et a collecté les valeurs des éléments où elle est référencée 
+		(attribut <code>Référence</code>).Habituellement utilisé dans un élément Cell.
+	</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Référence</code> Optionnel&nbsp;: variable utilisée pour les aggrégats. 
+			Si utilisé, la variable enregistre la valeur résultante de l'agrégation.			
+		</li>
+		<li>
+			<code>Type aggregation</code> Somme ou moyenne (liste déroulante des choix 
+			possibles).
+		</li>
+		<li><code>Sélection référence</code> Nom de la variable qui contient les valeurs à agréger.</li>
+	</ul>	
 </article>
 
 <article>
@@ -218,58 +373,121 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='svg'>SVG</h3>
-	<p>La commande SVG initialise un dessin vectoriel SVG. Les commandes de dessin disponibles permettent de construire des diagrammes en étoile comme illustrée ci-dessous.</p>
+	<p>
+		Initialise un dessin vectoriel SVG. Les commandes de dessin disponibles (voir 
+		Draw Web Axis et Draw Web Line ci-dessous) permettent de construire des diagrammes 
+		en étoile tel qu'illustré ci-dessous&nbsp;:
+	</p>
 	<img src='../assets/img/web.png' width='60%'/>
-	
-	<h4>Champs</h4>
-	<p><code>min-width</code> largeur minimum (par défaut : 100%)</p>
-	<p><code>min-height</code> hauteur minimum (par défaut : 500px)</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li><code>min-width</code> Largeur minimum (par défaut 100%).</li>
+		<li><code>min-height</code> Hauteur minimum (par défaut 500px).</li>
+	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='draw-web-title'>Draw Web Title</h3>
-	<p>La commande affiche le titre du dessin SVG.</p>
-	<h4>Champs</h4>
-	<p><code>Type de noeud</code> Liste déroulante des choix possibles.</p>
-	<p><code>Tag sémantique</code> Tag sémantique de l'élément à afficher.</p>
-	<p><code>Afficher</code> Liste déroulante des choix possibles.</p>
+	<p>Affiche le titre du dessin SVG.</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Type noeud</code> Type de l'élément à sélectionner (liste déroulante des choix 
+			possibles).
+		</li>
+		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
+		<li>
+			<code>Afficher</code> Valeur du noeud sélectionné à afficher comme titre du dessin. 
+			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou 
+			valeur d'un élément Item (liste déroulante des choix possibles).		
+		</li>
+	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='draw-web-axis'>Draw Web Axis</h3>
-	<p>La commande trace un axe de l'étoile. Le libellé de l'axe est défini par les champs de la commande.</p>
-	<h4>Champs</h4>
-	<p><code>Référence</code> valeur utilisée pour les aggrégats.</p>
-	<p><code>Type de noeud</code> Liste déroulante des choix possibles.</p>
-	<p><code>Tag sémantique</code> Tag sémantique de l'élément à afficher.</p>
-	<p><code>Afficher</code> Liste déroulante des choix possibles.</p>
+	<p>Trace les axes de l'étoile, avec leurs libellés.</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les aggrégats. Si utilisé, 
+			la variable enregistre la valeur obtenue par l'attribut <code>Afficher</code>.			
+		</li>
+		<li>
+			<code>Type noeud</code> Type de l'élément à sélectionner (liste déroulante des choix 
+			possibles).
+		</li>
+		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
+		<li>
+			<code>Afficher</code> Valeur du noeud sélectionné à afficher comme libellé de l'axe. 
+			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou 
+			valeur d'un élément Item (liste déroulante des choix possibles).
+		</li>
+	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='draw-web-line'>Draw Web Line</h3>
-	<p>La commande positionne une valeur sur l'axe correspondant et trace une ligne entre la dernière valeur et la valeur courante. La commande affiche également la lègende.</p>
-	<h4>Champs</h4>
-	<p><code>Référence</code> valeur utilisée pour les aggrégats.</p>
-	<p><code>Valeur - Type de noeud</code> Liste déroulante des choix possibles pour la valeur à afficher.</p>
-	<p><code>Valeur - Tag sémantique</code> Tag sémantique de l'élément à afficher.</p>
-	<p><code>Valeur - Afficher</code> Liste déroulante des choix possibles pour le noeud sélectionné.</p>
-	<p><code>Légende - Type de noeud</code> Liste déroulante des choix possibles pour la légende.</p>
-	<p><code>Légende - Tag sémantique</code> Tag sémantique de l'élément à afficher.</p>
-	<p><code>Légende - Afficher</code> Liste déroulante des choix possibles poour le noeud sélectionné.</p>
-	<p><code>Légende - Position</code> entier donnant la position relative de la légende (par défaut: 0 positionne la légende au plus)</p>
+	<p>
+		Positionne les valeurs sur les axes correspondants et trace une ligne entre les valeurs 
+		(pour former l'étoile). Affiche également la légende de l'élément SVG. Il est possible 
+		d'utiliser plusieurs éléments Draw Web Line dans le même élément SVG. Les étoiles seront
+		supperposées sur les mêmes axes.
+	</p>
+	<p>Champs à renseigner pour positionner les valeurs sur les axes&nbsp;:</p>
+	<ul>
+		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les aggrégats. Si utilisé, 
+			la variable enregistre la valeur obtenue par l'attribut <code>Afficher</code>.			
+		</li>
+		<li>
+			<code>Type noeud</code> Type de l'élément à sélectionner (liste déroulante des choix 
+			possibles).
+		</li>
+		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
+		<li>
+			<code>Afficher</code> Valeur du noeud sélectionné à positionner sur l'axe. 
+			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou 
+			valeur d'un élément Item (liste déroulante des choix possibles).
+		</li>
+	</ul>
+	<p>Champs à renseigner pour la graduation des axes&nbsp;:</p>
+	<ul>
+		<li><code>Valeur&nbsp;- Min</code> Valeur inférieure pour la graduation des axes.</li>
+		<li><code>Valeur&nbsp;- Max</code> Valeur supérieure pour la graduation des axes.</li>
+	</ul>
+	<p>Champs à renseigner pour construire la légende&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Légende&nbsp;- Type noeud</code> Type de l'élément à sélectionner (liste déroulante 
+			des choix possibles).
+		</li>
+		<li><code>Légende&nbsp;- Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</p>
+		<li>
+			<code>Légende&nbsp;- Afficher</code> Valeur du noeud sélectionné à afficher dans la légende. 
+			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou 
+			valeur d'un élément Item (liste déroulante des choix possibles).</li>
+		<li>
+			<code>Légende&nbsp;- Position</code> Entier donnant la position relative de la légende 
+			(par défaut 0, ce qui positionne la légende au plus bas).
+		</li>
+	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='show-sharing'>Show Sharing</h3>
+	<p>
+		Permet d'afficher les usagers qui sont partagés avec un portfolio (avec les rôles des partages).
+		Habituellement utilisé à l'intérieur d'un élément Cell.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='go-parent'>Go Parent</h3>
+	<p>Permet de remonter au parent du noeud courrant dans l'arbre XML.</p>
 </article>
 
 <article>
