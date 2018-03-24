@@ -5,22 +5,30 @@ title: "Rapport"
 sidebar:
  nav: "report_fr"
 ---
-<h2 id='commandes'>Commandes</h2>
+<h2>Fonctionnement</h2>
 
-<p>Ensemble de commandes de script permettant de construire des rapports. Il y a trois façons d'exécuter 
-	un script de rapport&nbsp;:
+<p>
+	Ensemble de commandes de script permettant de construire des rapports. Les rapports présentent
+	habituellement des données puisées d'un ou plusieurs portfolios.
 </p>
-<ul>
-	<li>avec la ressource Tableau de bord dans un portfolio,</li>
-	<li>dans la page Exécuter un rapport en spécifiant le nom du rapport,</li>
-	<li>
-		dans la page Exécuter un rapport en téléversant un fichier CSV (pour le format voir section Batch). 
-		Dans le fichier CSV, les 2 premières lignes (variables globales) ne sont pas prises en compte.
-	</li>
-</ul>
+<p>
+	Il y a trois façons d'exécuter un script de rapport&nbsp;:
+	<ul>
+		<li>avec la ressource Tableau de bord dans un portfolio,</li>
+		<li>
+			à partir de la page Exécuter un script de rapport en spécifiant le code du portfolio contenant 
+			le script de rapport,
+		</li>
+		<li>
+			à partir de la page Exécuter un script de rapport en téléversant un fichier CSV (pour le format 
+			voir section Batch). Dans le fichier CSV, les 2 premières lignes (variables globales) ne sont 
+			pas prises en compte.
+		</li>
+	</ul>
+</p>
 
 
-<p>Les commandes disponibles sont&nbsp;:</p>
+<h2 id='commandes'>Les commandes</h2>
 <ul>
 	<li><code><a href='#for-each-portfolio'>ForEachPortfolio</a></code></li>
 	<li><code><a href='#for-each-portfolio-node'>ForEachPortfolioNode</a></code></li>
@@ -59,7 +67,7 @@ sidebar:
 			précédement dans une autre commande ou peut être déclarée pour la première fois ici.
 		</li>
 		<li>
-			<code>Sélection portfolios</code> Test Jquery permettant de sélectionner des portfolios parmi 
+			<code>Sélection portfolios</code> Test jQuery permettant de sélectionner des portfolios parmi 
 			ceux visibles par l'usager. Exemples&nbsp;:
 			<ul>
 				<li>
@@ -91,7 +99,8 @@ sidebar:
 		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacun des 
 		portfolios répondant au test <code>Sélection portfolios</code>. Contrairement à la commande
 		précédente, ce n'est pas tout le portfolio qui est chargé mais uniquement le noeud spécifié 
-		dans <code>Tag sémantique</code>.
+		dans <code>Tag sémantique</code>. Ceci permet une exécution plus rapide dans le cas de gros
+		portfolios.
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
@@ -101,14 +110,16 @@ sidebar:
 			précédement dans une autre commande ou peut être déclarée pour la première fois.
 		</li>
 		<li>
-			<code>Sélection portfolios</code> Test Jquery permetant de sélectionner des portfolios parmi 
+			<code>Sélection portfolios</code> Test jQuery permetant de sélectionner des portfolios parmi 
 			ceux visibles par l'usager. Exemples&nbsp;:
 			<ul>
-				<li><code>code*='2015_work'</code> Sélection des portfolios dont le code contient 
+				<li>
+					<code>code*='2015_work'</code> Sélection des portfolios dont le code contient 
 					"2015_work".
 				</li>
-				<li><code>code*=portfolio_code</code> Sélection des portfolios dont le code contient le 
-					contenu de la variable <i>porfolio_code</i>.
+				<li>
+					<code>code*=portfolio_code</code> Sélection des portfolios dont le code contient 
+					le contenu de la variable <i>porfolio_code</i>.
 				</li>
 			</ul>
 		</li>
@@ -144,7 +155,7 @@ sidebar:
 			précédement dans une autre commande ou peut être déclarée pour la première fois.
 		</li>
 		<li>
-			<code>Sélection personnes</code> Test Jquery permetant de sélectionner les personnes du système. 
+			<code>Sélection personnes</code> Test jQuery permetant de sélectionner les personnes du système. 
 			Exemples&nbsp;:
 			<ul>
 				<li><code>username='olivier'</code> Sélection de la personne dont l'identifiant Karuta est 
@@ -181,8 +192,9 @@ sidebar:
 			<code>Tag sémantique</code> Tag sémantique des éléments à sélectionner.
 		</li>
 		<li>
-			<code>Test</code> Optionnel : test Jquery permettant de filtrer parmis les éléments répondant 
-			aux deux critères précédents.
+			<code>Test</code> Optionnel : test jQuery permettant de filtrer parmis les éléments répondant 
+			aux deux critères précédents. Si pas utilisé, tous les noeuds qui répondent aux deux critères 
+			précédents sont traités.
 		</li>
 	</ul>
 	<p>Tests prédéfinis&nbsp;:</p>
@@ -310,7 +322,7 @@ sidebar:
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
-		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les aggrégats. Si utilisé, 
+		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les agrégats. Si utilisé, 
 			la variable enregistre la valeur obtenue par l'attribut <code>Texte</code>.			
 		</li>
 		<li><code>Texte</code> Le texte à afficher.</li>
@@ -326,7 +338,7 @@ sidebar:
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
-		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les aggrégats. 
+		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les agrégats. 
 			Si utilisé, la variable enregistre la valeur affichée.			
 		</li>
 		<li>
@@ -354,13 +366,10 @@ sidebar:
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Référence</code> Optionnel&nbsp;: variable utilisée pour les aggrégats. 
+			<code>Référence</code> Optionnel&nbsp;: variable utilisée pour les agrégats. 
 			Si utilisé, la variable enregistre la valeur résultante de l'agrégation.			
 		</li>
-		<li>
-			<code>Type aggregation</code> Somme ou moyenne (liste déroulante des choix 
-			possibles).
-		</li>
+		<li><code>Type agrégation</code> Somme ou moyenne (liste déroulante des choix possibles).</li>
 		<li><code>Sélection référence</code> Nom de la variable qui contient les valeurs à agréger.</li>
 	</ul>	
 </article>
@@ -368,6 +377,14 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='url2unit'>URL2Unit</h3>
+	<p>
+		Permet d'insérer dans le tableau un lien vers une page du portfolio. Le portfolio ne doit
+		contenir qu'une seule page avec le tag sémantique spécifié.
+	</p>
+	<p>Champ à renseigner&nbsp;:</p>
+	<ul>
+		<li><code>Tag sémantique</code> Tag sémantique de la page vers laquelle pointe le lien.</li>
+	</ul>	
 </article>
 
 <article>
@@ -411,7 +428,7 @@ sidebar:
 	<p>Trace les axes de l'étoile, avec leurs libellés.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
-		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les aggrégats. Si utilisé, 
+		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les agrégats. Si utilisé, 
 			la variable enregistre la valeur obtenue par l'attribut <code>Afficher</code>.			
 		</li>
 		<li>
@@ -438,7 +455,7 @@ sidebar:
 	</p>
 	<p>Champs à renseigner pour positionner les valeurs sur les axes&nbsp;:</p>
 	<ul>
-		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les aggrégats. Si utilisé, 
+		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les agrégats. Si utilisé, 
 			la variable enregistre la valeur obtenue par l'attribut <code>Afficher</code>.			
 		</li>
 		<li>
@@ -463,7 +480,7 @@ sidebar:
 			<code>Légende&nbsp;- Type noeud</code> Type de l'élément à sélectionner (liste déroulante 
 			des choix possibles).
 		</li>
-		<li><code>Légende&nbsp;- Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</p>
+		<li><code>Légende&nbsp;- Tag sémantique</code> Tag sémantique de l'élément à sélectionner.
 		<li>
 			<code>Légende&nbsp;- Afficher</code> Valeur du noeud sélectionné à afficher dans la légende. 
 			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou 
@@ -493,6 +510,11 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='qrcode'>QR Code</h3>
+	<p>
+		Permet d'afficher dans le tableau le QR Code qui mène au BubbleMap présent dans le portfolio.
+		L'élément BubbleMap est trouvé automatiquement par Karuta (ne peux pas fonctionner si il y a 
+		plus d'un BubbleMap dans le portfolio).
+	</p>
 </article>
 
 <h2 id='css'>Mise en forme</h2>

@@ -86,7 +86,43 @@ report_en:
   - title: Functions
     children:
       - title: "ForEachPortfolio"
-        url: /for-each-portfolio_en/
+        url: /report_en#for-each-portfolio
+      - title: "ForEachPortfolioNode"
+        url: /report_en#for-each-portfolio-node
+      - title: "ForEachPerson"
+        url: /report_en#for-each-person
+      - title: "ForEachNode"
+        url: /report_en#for-each-node
+      - title: "ForEachLine"
+        url: /report_en#for-each-line
+      - title: "Table"
+        url: /report_en#table
+      - title: "Row"
+        url: /report_en#row
+      - title: "Cell"
+        url: /report_en#cell
+      - title: "Text"
+        url: /report_en#text
+      - title: "Node"
+        url: /report_en#node
+      - title: "Aggregate"
+        url: /report_en#aggregate
+      - title: "URL2Unit"
+        url: /report_en#url2unit
+      - title: "SVG"
+        url: /report_en#svg
+      - title: "Draw Web Title"
+        url: /report_en#draw-web-title
+      - title: "Draw Web Axis"
+        url: /report_en#draw-web-axis
+      - title: "Draw Web Line"
+        url: /report_en#draw-web-line
+      - title: "Show Sharing"
+        url: /report_en#show-sharing
+      - title: "Go Parent"
+        url: /report_en#go-parent
+      - title: "QR Code"
+        url: /report_en#qrcode
   - title: Languages
     children:
       - title: "Français"

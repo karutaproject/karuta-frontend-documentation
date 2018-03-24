@@ -6,6 +6,508 @@ sidebar:
  nav: "report_en"
 ---
 
-<h3>Functions</h3>
+<h2>How It Works</h2>
+<p>
+	Set of script commands allowing you to build reports. Reports generally present data mined from 
+	one or multiple portfolios.
+</p>
+<p>
+	There are three ways to execute a report:
+	<ul>
+		<li>with the Dashboard resource in a portfolio,</li>
+		<li>
+			from the Execute Report Script page with the code of the portfolio containing the report 
+			script,
+		</li>
+		<li>
+			from the Execute Report Script page with a CSV file (see Batch for CSV file format).
+			In the CSV file, the first two lines (global variables) are ignored.
+		</li>
+	</ul>
+</p>
 
-Under construction ...
+<h2 id='commandes'>The commands:</h2>
+<ul>
+	<li><code><a href='#for-each-portfolio'>ForEachPortfolio</a></code></li>
+	<li><code><a href='#for-each-portfolio-node'>ForEachPortfolioNode</a></code></li>
+	<li><code><a href='#for-each-person'>ForEachPerson</a></code></li>
+	<li><code><a href='#for-each-node'>ForEachNode</a></code></li>
+	<li><code><a href='#for-each-line'>ForEachLine</a></code></li>
+	<li><code><a href='#table'>Table</a></code></li>
+	<li><code><a href='#row'>Row</a></code></li>
+	<li><code><a href='#cell'>Cell</a></code></li>
+	<li><code><a href='#node'>Node</a></code></li>
+	<li><code><a href='#aggregate'>Aggregate</a></code></li>
+	<li><code><a href='#text'>Text</a></code></li>
+	<li><code><a href='#url2unit'>URL2Unit</a></code></li>
+	<li><code><a href='#svg'>SVG</a></code></li>
+	<li><code><a href='#draw-web-tile'>Draw Web Title</a></code></li>
+	<li><code><a href='#draw-web-axis'>Draw Web Axis</a></code></li>
+	<li><code><a href='#draw-web-line'>Draw Web Line</a></code></li>
+	<li><code><a href='#show-sharing'>Show Sharing</a></code></li>
+	<li><code><a href='#go-parent'>Go Parent</a></code></li>
+	<li><code><a href='#qrcode'>QR Code</a></code></li>
+</ul>
+
+<article>
+	<h3 id='for-each-portfolio'>ForEachPortfolio</h3>
+	<p>
+		The commands inside this element are executed for each portfolio that corresponds to the 
+		criteria in <code>Select Portfolios</code>.
+	</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>References to Init</code> Optional: list of variable (separated by a forward slash)
+			to reset for each new portfolio. The variables may have been previously declared in another
+			command or may be declared for the first time here.
+		</li>
+		<li>
+		<code>Select Portfolios </code> jQuery test allowing you to select portfolios amongst all
+			those visible to the user. Examples:
+			<ul>
+				<li>
+					<code>code*='2015_work'</code> Selects the portfolios where the code contains
+					"2015_work".
+				</li>
+				<li>
+					<code>code*=portfolio_code</code> Selects the portfolios where the code contains
+					the value of the variable <i>porfolio_code</i>.
+				</li>
+			</ul>
+		</li>
+		<li>
+			<code>Sort&nbsp;- Semantic Tag</code> Optional: semantic tag of the node to be used to 
+			sort the portfolios. If not used, the portfolios are presented in the natural order of 
+			the portfolio codes.
+		</li>
+		<li>
+			<code>Sort&nbsp;- Element</code> Value of the selected node to be used to sort the 
+			portfolios. The options are: node lable, resource value, node code or value of an
+			Item element (drop-down menu of available options).
+		</li>
+	</ul>
+</article>
+
+<article>
+	<h3 id='for-each-portfolio-node'>ForEachPortfolioNode</h3>
+	<p>
+		The commands inside this element are executed for each portfolio that corresponds to the 
+		criteria in <code>Select Portfolios</code>. Contrary to the previous command, only a specified
+		node (<code>Tag sémantique</code>) is loaded rather than the entire portfolio. This leads to
+		faster execution in the case of large portfolios.
+	</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>References to Init</code> Optional: list of variable (separated by a forward slash)
+			to reset for each new portfolio. The variables may have been previously declared in another
+			command or may be declared for the first time here.
+		</li>
+		<li>
+			<code>Select Portfolios </code> jQuery test allowing you to select portfolios amongst all
+			those visible to the user. Examples:
+			<ul>
+				<li>
+					<code>code*='2015_work'</code> Selects the portfolios where the code contains
+					"2015_work".
+				</li>
+				<li>
+					<code>code*=portfolio_code</code> Selects the portfolios where the code contains
+					the value of the variable <i>porfolio_code</i>.
+				</li>
+			</ul>
+		</li>
+		<li>
+			<code>Sort&nbsp;- Semantic Tag</code> Optional: semantic tag of the node to be used to 
+			sort the portfolios. If not used, the portfolios are presented in the natural order of 
+			the portfolio codes.
+		</li>
+		<li>
+			<code>Sort&nbsp;- Element</code> Value of the selected node to be used to sort the 
+			portfolios. The options are: node lable, resource value, node code or value of an
+			Item element (drop-down menu of available options).
+		</li>
+		<li><code>Semantic Tag</code> Semantic tag of the node(s) to load for execution.</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='for-each-person'>ForEachPerson</h3>
+	<p>
+		The commands inside this element are executed for each user that corresponds to the 
+		criteria in <code>Select Persons</code>.
+	</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>References to Init</code> Optional: list of variable (separated by a forward slash)
+			to reset for each new user. The variables may have been previously declared in another
+			command or may be declared for the first time here.
+		</li>
+		<li>
+			<code>Select Persons</code> Jquery test allowing you to select users amongst all in the 
+			system. Examples:
+			<ul>
+				<li>
+					<code>username='olivier'</code> Selects the user with Karuta login "olivier".
+				</li>
+				<li>
+					<code>username=identifier</code> Selects the user with Karuta login equal to
+					the value of the variable <i>identifier</i>.
+				</li>
+			</ul>
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='for-each-node'>ForEachNode</h3>
+	<p>
+		The commands inside this element are executed for each portfolio element that corresponds 
+		to the criteria in <code>Node Type</code>, <code>Semantic Tag</code> and <code>Test</code>.
+	</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>References to Init</code> Optional: list of variable (separated by a forward slash)
+			to reset for each new portfolio element. The variables may have been previously declared 
+			in another command or may be declared for the first time here.
+		</li>
+		<li>
+			<code>Node Type</code> Type of elements to select (drop-down menu of available options).
+		</li>
+		<li>
+			<code>Semantic Tag</code> Semantic Tag of elements to select.
+		</li>
+		<li>
+			<code>Test</code> Optional: jQuery test allowing you to select elements amongst those 
+			that correspond to the two previous criteria. If not used, all elements that correspond 
+			to the two previous criteria are processed.
+		</li>
+	</ul>
+	<p>Karuta Predefined Tests:</p>
+	<ul>
+		<li>
+			<code>.sort()</code> Sorts the list of nodes on their label, ascending order.
+		</li>
+		<li>
+			<code>.invsort()</code> Sorts the list of nodes on their label, descending order.
+		</li>
+		<li>
+			<code>.filename_not_empty()</code> Checks whether a Document element contains a file 
+			(checks the element is not empty).
+		</li>
+		<li>
+			<code>.url_not_empty()</code> Checks whether a URL element contains a hyperlink 
+			(checks the element is not empty).
+		</li>
+		<li>
+			<code>.text_not_empty()</code> Checks whether a TextField or Field element contains text 
+			(checks the element is not empty).
+		</li>
+	</ul>
+	<p>
+		Karuta predefined tests may be combined. For example: <code>.sort().first()</code> 
+		returns the first element of the sorted list.
+	</p>
+	<p>Examples jQuery functions:</p>
+	<ul>
+		<li><code>.first()</code> Returns the first element of the list.</li>
+		<li><code>.not(':eq(0)')</code> Returns the list without it's first element.</li>
+		<li><code>.last()</code> Returns the last element of the list.</li>
+		<li><code>.has("code:contains('2')")</code> Returns the elements where the code contains "2".</li>
+		<li>
+			<code>.siblings().has("metadata[semantictag*=job-title]")</code> Returns the elements of
+			the same hierarchical level (in the XML tree) with semantic tag "job-title".
+		</li>
+		<li>
+			<code>.has("metadata-wad[submitted='Y']").last()</code> Returns the last submitted element.
+		</li>
+		<li>
+			<code>.has("metadata-wad[private='N']").last()</code> Returns the last visible element.
+		</li>
+		<li>
+			<code>.has('asmContext:has("metadata[semantictag*=visibility-cv-short]"):has
+			("code:contains(@1)")')</code> 
+			Returns elements that have a child (in the hierarchy of the XML tree) with semantic tag
+			"visibility-cv-short" and whose code contains "@1".
+		</li>
+		<li>
+			<code>.sortElements(function(a, b){ return $("code",$("asmResource[xsi_type=Get_Resource]",a))
+			.text() &gt; $("code",$("asmResource[xsi_type=Get_Resource]",b)).text() ? 1 : -1; })</code> 
+			Sorts on the Get_Resource code.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='for-each-line'>ForEachLine</h3>
+	<p>
+		The commands inside this element are executed for each line of the CSV file. This element
+		must contain at least one of the following elements: <code>ForEachPerson</code>, 
+		<code>ForEachPortfolio</code> or <code>ForEachPortfolioNode</code>.
+	</p>
+	<p>
+		In the case of a <code>ForEachPerson</code> element:</br>
+		in the attribute <code>Select Persons</code>, if the value is "username=identifier" 
+		(without quotes), Karuta will replace "identifier" by the value of the local variable
+		<i>identifier</i> of the CSV file.
+	</p>
+	<p>
+		In the case of a <code>ForEachPortfolio</code> or <code>ForEachPortfolioNode</code> element:</br>
+		in the attribute <code>Select Portfolios</code>, if the value is "code=portfolio_code" 
+		(without quotes), Karuta will replace "portfolio_code" by the value of the local variable 
+		<i>portfolio_code</i> of the CSV file.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='table'>Table</h3>
+	<p> Draws an HTML Table element.</p>
+	<p>Field to populate:</p>
+	<ul>
+		<li>
+			<code>References to Init</code> Optional: list of variable (separated by a forward slash)
+			to reset. The variables may have been previously declared in another command or may be 
+			declared for the first time here.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='row'>Row</h3>
+	<p> Draws an HTML Row element.</p>	
+	<p>Field to populate:</p>
+	<ul>
+		<li>
+			<code>References to Init</code> Optional: list of variable (separated by a forward slash)
+			to reset. The variables may have been previously declared in another command or may be 
+			declared for the first time here.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='cell'>Cell</h3>
+	<p> 
+		Draws an HTML Cell element. Usually contains either a Node element, a Text element or a Table element 
+		(to draw complex tables).
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='text'>Text</h3>
+	<p>
+		Displays hard-coded text: fixed text that does not depend on the values contained in the portfolio
+		(for example column headers). Usually used in a Cell element.
+	</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Reference</code> Optional: variable used in aggregates. If used, the variable records
+			the value obtained by the attribute <code>Text to Display</code>.
+		</li>
+		<li><code>Text to Display</code> The text to display.</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='cell'>Node</h3>
+	<p>
+		Displays text mined from a portfolio element (for example the value entered by a user
+		in the element). Usually used in a Cell element.
+	</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Reference</code> Optional: variable used in aggregates. If used, the variable records
+			the value obtained by the attribute <code>To Display</code>.
+		</li>
+		<li>
+			<code>Node Type</code> Type of the element to select (drop-down menu of available options).
+		</li>
+		<li><code>Semantic Tag</code> Semantic Tag of the element to select.</li>
+		<li>
+			<code>To Display</code> Value of the selected node to display. Options are:
+			node label, resource value, node code or value of Item element (drop-down menu of 
+			available options).
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='aggregate'>Aggregate</h3>
+	<p>
+		Displays the sum or average of the values contained in a variable. The variable has
+		previously been declared in the <code>References to Init</code> attribute of an element
+		and has collected the values of the elements where it is referenced (attribute 
+		<code>Reference</code>). Usually used in a Cell element.
+	</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Reference</code> Optional: variable used in aggregates. If used, the variable records
+			the value obtained by the aggregation.
+		</li>
+		<li><code>Aggregation Type</code> Sum or average (drop-down menu of available options).</li>
+		<li><code>Select Reference</code> Name of the variable that contains the values to aggregate.</li>
+	</ul>	
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='url2unit'>URL2Unit</h3>
+	<p>
+		Inserts in the table a hyperlink to a specified page of the portfolio. The portfolio must
+		contain only one page with the specified semantic tag.
+	</p>
+	<p>Field to populate:</p>
+	<ul>
+		<li><code>Semantic Tag</code> Semantic tag of the page the link must point to.</li>
+	</ul>	
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='svg'>SVG</h3>
+	<p>
+		Initiates an SVG vector drawing. The available commands (see Draw Web Axis and
+		Draw Web Line below) allow you to build star diagrams like the one shown here:
+	</p>
+	<img src='../assets/img/web.png' width='60%'/>
+	<p>Fields to populate:</p>
+	<ul>
+		<li><code>min-width</code> Minimum width (default 100%).</li>
+		<li><code>min-height</code> Minimum height (default 500px).</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='draw-web-title'>Draw Web Title</h3>
+	<p>Displays the title of the SVG drawing.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Title&nbsp;- Node Type</code> Type of the element to select (drop-down menu of 
+			available options).
+		</li>
+		<li><code>Title&nbsp;- Semantic Tag</code> Semantic Tag of the element to select.</li>
+		<li>
+			<code>Title&nbsp;- To Display</code> Value of the selected node to display as drawing 
+			title. Options are: node label, resource value, node code or value of Item element 
+			(drop-down menu of available options).
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='draw-web-axis'>Draw Web Axis</h3>
+	<p>Draws the axes of the star, with their labels.</p>
+	<p>Fields to populate:</p>
+	<ul>
+		<li>
+			<code>Reference</code> Optional: variable used in aggregates. If used, the variable records
+			the value obtained by the attribute <code>Axis&nbsp;- To Display</code>.
+		</li>
+		<li>
+			<code>Axis&nbsp;- Node Type</code> Type of the element to select (drop-down menu of 
+			available options).
+		</li>
+		<li><code>Axis&nbsp;- Semantic Tag</code> Semantic Tag of the element to select.</li>
+		<li>
+			<code>Axis&nbsp;- To Display</code> Value of the selected node to display as axis label. 
+			Options are: node label, resource value, node code or value of Item element (drop-down menu 
+			of available options).
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='draw-web-line'>Draw Web Line</h3>
+	<p>
+		Positions the values on the corresponding axes and traces a line between the values (to
+		form the star). Also displays the SVG element's caption. Multiple Draw Web Line may be 
+		defined in the same SVG element. The stars will then lay over each other on the same axes.
+	</p>
+	<p>Fields to populate to position the values on the axes:</p>
+	<ul>
+		<li>
+			<code>Reference</code> Optional: variable used in aggregates. If used, the variable records
+			the value obtained by the attribute <code>To Display</code>.
+		</li>
+		<li>
+			<code>Node Type</code> Type of the element to select (drop-down menu of 
+			available options).
+		</li>
+		<li><code>Semantic Tag</code> Semantic Tag of the element to select.</li>
+		<li>
+			<code>To Display</code> Value of the selected node to position on the axis. 
+			Options are: node label, resource value, node code or value of Item element (drop-down menu 
+			of available options).
+		</li>
+	</ul>
+	<p>Fields to populate to graduate the axes:</p>
+	<ul>
+		<li><code>Min Value</code> Starting value to graduate the axes.</li>
+		<li><code>Max Value</code> Final value to graduate the axes.</li>
+	</ul>
+	<p>Fields to populate to build the caption:</p>
+	<ul>
+		<li>
+			<code>Legend&nbsp;- Node Type</code> Type of the element to select (drop-down menu of 
+			available options).
+		</li>
+		<li><code>Legend&nbsp;- Semantic Tag</code> Semantic Tag of the element to select.</li>
+		<li>
+			<code>Legend&nbsp;- Afficher</code> Valeur du noeud sélectionné à afficher dans la légende. 
+			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou 
+			valeur d'un élément Item (liste déroulante des choix possibles).</li>
+		<li>
+			<code>Legend&nbsp;- Position</code> Integer specifying the relative position of the caption
+			(default is 0, lowest position).
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='show-sharing'>Show Sharing</h3>
+	<p>
+		Displays the users shared with a portfolio (with the role they are shared in). Usually 
+		used in a Cell element.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='go-parent'>Go Parent</h3>
+	<p>Backs up one level to the parent of the current node in the XML tree.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='qrcode'>QR Code</h3>
+	<p>
+		Displays the QR Code for the BubbleMap element present in the portfolio. The BubbleMap 
+		element is identified automatically by Karuta (this only works if there is only one 
+		BubbleMap element in the portfolio).
+	</p>
+</article>
+
+<h2 id='css'>Mise en forme</h2>
+
+<h2 id='edition'>Édition</h2>
+
