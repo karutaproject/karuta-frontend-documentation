@@ -211,26 +211,23 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='get_multiple'>Menu - Get_Multiple</h3>
 	<p>
-		La fonction Get_Multiple permet à l'usager de sélectionner plusieurs items dans une liste.
-		Pour chaque item sélectionné, une composante réutilisable est ajoutée au portfolio. Cette composante
-		est habituellement un élément Get_Resource, mais peut aussi être un élément structurel qui contient
-		le Get_Resource (et possiblement d'autres éléments). Dans tous les cas, le Get-Resource est mis à 
-		jour avec la sélection de l'usager.
+		La fonction Get_Multiple permet à l'usager de sélectionner plusieurs éléments dans une liste.
+		Pour chaque élément sélectionné, une composante réutilisable  (page ou sous-section) est ajoutée au portfolio. 
+		Un élément de cette composante est alors mis à jour avec le code et le lbellé de l'élément sélectionné.
 	</p>
 	<h4>Format</h4>
 	<p>
 		<code>function</code>,<code>get_multiple</code>/<code>query</code>/<code>code_portfolio.tag_sémantique
-		</code>/<code>tag_sémantique_get_resource</code>,<code>libellé@fr</code>,<code>rôles</code>
+		</code>/<code>tag_sémantique_a_mettre jour</code>,<code>libellé@fr</code>,<code>rôles</code>
 	</p>
 	<ul>
 		<li><code>function</code> : Mot réservé.</li>
 		<li><code>get_multiple</code> : Mot réservé.</li>
 		<li><code>query</code> : Recherche du Get_Resource.</li>
 		<li>
-			<code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter (Get_Resource ou 
-			 composante plus complexe contenant le Get-Resource).
+			<code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter.
 		</li>
-		<li><code>tag_sémantique_get_resource</code> : Tag sémantique du Get_Resource.</li>
+		<li><code>tag_sémantique_a_mettre_a_jour</code> : Tag sémantique de l'élément de la composante à mettre à jour avec le code et le libellé sélectionné.</li>
 		<li><code>libellé@fr</code> : Libellé du menu.</li>
 		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
 	</ul>
@@ -246,17 +243,17 @@ sidebar:
 	<h4>Format</h4>
 	<p>
 		<code>function</code>,<code>get_get_multiple</code>/<code>query</code>/<code>
-		code_portfolio.tag_sémantique</code>/<code>tag_sémantique_get_get_resource</code>,<code>libellé@fr
+		code_portfolio.tag_sémantique</code>/<code>tag_sémantique_a_mettre_a_jour</code>,<code>libellé@fr
 		</code>,<code>rôles</code>
 	</p>
 	<ul>
 		<li><code>function</code> : Mot réservé.</li>
 		<li><code>get_get_multiple</code> : Mot réservé.</li>
 		<li><code>query</code> : Recherche du Get_Get_Resource.</li>
-		<li><code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter (Get-Resource ou 
-			 composante plus complexe contenant le Get-Resource).
+		<li>
+			<code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter.
 		</li>
-		<li><code>tag_sémantique_get_get_resource</code> : Tag sémantique du Get_Get_Resource.</li>
+		<li><code>tag_sémantique_a_mettre_a_jour</code> : Tag sémantique de l'élément de la composante à mettre à jour avec le code et le libellé sélectionné.</li>
 		<li><code>libellé@fr</code> : Libellé du menu.</li>
 		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
 	</ul>
