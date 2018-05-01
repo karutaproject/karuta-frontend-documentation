@@ -10,6 +10,10 @@ sidebar:
 		border: 1px solid gray;
 		padding: 5px;
 	}
+	mark {
+		margin-left:10px;
+		font-sze:80%;
+	}
 </style>
 <p>
 	Des portfolios complets, des parties de portfolios ou même des ressources spécifiques peuvent être partagées par un usager donné à l’aide d’un bouton.
@@ -32,21 +36,51 @@ vers une section du portfolio dans laquelle le pair pourra inscrire son commenta
 <h4>Dans les métadonnées :</h4>
 <img src='../assets/img/image008.png' width='80%'/>
 <p>Les conditions de ce partage sont très sophistiquées; voici quelques cas d’utilisation usuels :</p>
+<!-- =================================== -->
 <h4>Cas 1 – L’étudiant peut montrer son portfolio à n’importe qui (usager Karuta ou non) en mode lecture seulement (aucun droit d’édition).</h4>
 <p>Partager</p>
 <p>rôle qui partage,rôle destinataire,rôles et/ou courriels,niveau (0-4),durée de vie du lien (en heures),button label@en/libellé du bouton@fr[,condition][;autre partage]</p>
 <p class='champ'>etudiant,all,?,4,unlimited,Partager@fr</p>
 <img src='../assets/img/image009.png' width='80%'/>
+<mark><b>Note1 :</b>  Le symbole « ? » fait en sorte que lorsque l’étudiant cliquera sur Partager, une fenêtre s’ouvrira pour 
+lui permettre de spécifier le courriel.</mark>
+<mark><b>Note2 :</b>  Lors de l’instanciation du portfolio, le rôle all doit être partagé avec l’utilisateur public.</mark>
 
+<!-- =================================== -->
+<h4>Cas 2 – L’étudiant peut montrer son portfolio à n’importe qui (usager Karuta ou non) en mode lecture seulement (aucun droit d’édition) mais le partage a une durée limitée de 24 heures.</h4>
+<p>Partager</p>
+<p>rôle qui partage,rôle destinataire,rôles et/ou courriels,niveau (0-4),durée de vie du lien (en heures),button label@en/libellé du bouton@fr[,condition][;autre partage]</p>
+<p class='champ'>etudiant,all,?,4,24,Partager@fr</p>
+<img src='../assets/img/image009.png' width='80%'/>
+<mark><b>Note1 :</b>  Le symbole « ? » fait en sorte que lorsque l’étudiant cliquera sur Partager, une fenêtre s’ouvrira pour 
+lui permettre de spécifier le courriel.</mark>
+<mark><b>Note2 :</b>  Lors de l’instanciation du portfolio, le rôle all doit être partagé avec l’utilisateur public.</mark>
+<!-- =================================== -->
 <h4>Cas 2 – L’étudiant demande à son professeur de procéder à son évaluation; le professeur possède un compte 
 Karuta et a été assigné au portfolio de cet étudiant dans le rôle professeur lors de l’instanciation.</h4>
-
 <p>Partager</p>
-rôle qui partage[,rôle destinataire,rôles et/ou courriels,niveau (0-3),durée de vie du lien (en heures),button label@en/libellé du bouton@fr[,condition]][;autre partage]
-
+<p>rôle qui partage,rôle destinataire,rôles et/ou courriels,niveau (0-4),durée de vie du lien (en heures),button label@en/libellé du bouton@fr[,condition][;autre partage]</p>
 <p class='champ'>etudiant,professeur,professeur,1,12,Demander une évaluation@fr</p>
+<p>Le professeur reçoit un courriel et n’a qu’à cliquer sur l’hyperlien pour procéder à l’évaluation.</p>
+<!-- =================================== -->
+<h4>Cas 3 – L’étudiant demande à son responsable de stage de compléter son évaluation; le responsable de stage n’a pas de compte Karuta.</h4>
+<p>Partager</p>
+<p>rôle qui partage,rôle destinataire,rôles et/ou courriels,niveau (0-4),durée de vie du lien (en heures),button label@en/libellé du bouton@fr[,condition][;autre partage]</p>
+<p class='champ'>etudiant,evaluateur,yves.lacoste@airfrance.com,3,12,Demander une évaluation@fr</p>
+<p>L’évaluateur externe reçoit un courriel et n’a qu’à cliquer sur l’hyperlien pour procéder à l’évaluation; il n’a pas à s’identifier dans le système Karuta. 
+L’hyperlien est valide pendant 12 heures.</p>
+<!-- =================================== -->
+<h4>Cas 4 – L’étudiant demande à un de ses collègues d’inscrire un commentaire dans son portfolio (évaluation par les pairs); le collègue possède un compte Karuta.</h4>
+<p>Partager</p>
+<p>rôle qui partage,rôle destinataire,rôles et/ou courriels,niveau (0-4),durée de vie du lien (en heures),button label@en/libellé du bouton@fr[,condition][;autre partage]</p>
+<p class='champ'>etudiant,pair,?,1,12,Demander un commentaire@fr</p>
+<p>Le collègue reçoit un courriel et n’a qu’à cliquer sur l’hyperlien pour écrire son commentaire.</p>
 
+<mark><b>Note :</b>  Le symbole « ? » fait en sorte que lorsque l’étudiant cliquera sur Demander un commentaire, une fenêtre s’ouvrira pour 
+lui permettre de spécifier le courriel de son collègue. On fait ici l’hypothèse que l’étudiant a un grand nombre de collègues 
+et que le designer n’a pas spécifié de façon précise les collègues qui seront mobilisés, de façon à donner plus de latitude à 
+l’étudiant dans le choix du pair qui pourra l’évaluer.</mark>
  
 
-Le professeur reçoit un courriel et n’a qu’à cliquer sur l’hyperlien pour procéder à l’évaluation.
+
 <p>En construction...</p>
