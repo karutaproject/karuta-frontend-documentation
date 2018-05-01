@@ -10,9 +10,9 @@ sidebar:
 		border: 1px solid gray;
 		padding: 5px;
 	}
-	mark {
+	.note {
 		margin-left:10px;
-		font-sze:80%;
+		font-size:80%;
 	}
 </style>
 <p>
@@ -42,19 +42,18 @@ vers une section du portfolio dans laquelle le pair pourra inscrire son commenta
 <p>rôle qui partage,rôle destinataire,rôles et/ou courriels,niveau (0-4),durée de vie du lien (en heures),button label@en/libellé du bouton@fr[,condition][;autre partage]</p>
 <p class='champ'>etudiant,all,?,4,unlimited,Partager@fr</p>
 <img src='../assets/img/image009.png' width='80%'/>
-<mark><b>Note1 :</b>  Le symbole « ? » fait en sorte que lorsque l’étudiant cliquera sur Partager, une fenêtre s’ouvrira pour 
-lui permettre de spécifier le courriel.</mark>
-<mark><b>Note2 :</b>  Lors de l’instanciation du portfolio, le rôle all doit être partagé avec l’utilisateur public.</mark>
-
+<div class='note'><b>Note1 :</b>  Le symbole « ? » fait en sorte que lorsque l’étudiant cliquera sur Partager, une fenêtre s’ouvrira pour 
+lui permettre de spécifier le courriel.</div>
+<div class='note'><b>Note2 :</b>  Lors de l’instanciation du portfolio, le rôle all doit être partagé avec l’utilisateur public.</div>
 <!-- =================================== -->
 <h4>Cas 2 – L’étudiant peut montrer son portfolio à n’importe qui (usager Karuta ou non) en mode lecture seulement (aucun droit d’édition) mais le partage a une durée limitée de 24 heures.</h4>
 <p>Partager</p>
 <p>rôle qui partage,rôle destinataire,rôles et/ou courriels,niveau (0-4),durée de vie du lien (en heures),button label@en/libellé du bouton@fr[,condition][;autre partage]</p>
 <p class='champ'>etudiant,all,?,4,24,Partager@fr</p>
 <img src='../assets/img/image009.png' width='80%'/>
-<mark><b>Note1 :</b>  Le symbole « ? » fait en sorte que lorsque l’étudiant cliquera sur Partager, une fenêtre s’ouvrira pour 
-lui permettre de spécifier le courriel.</mark>
-<mark><b>Note2 :</b>  Lors de l’instanciation du portfolio, le rôle all doit être partagé avec l’utilisateur public.</mark>
+<div class='note'><b>Note1 :</b>  Le symbole « ? » fait en sorte que lorsque l’étudiant cliquera sur Partager, une fenêtre s’ouvrira pour 
+lui permettre de spécifier le courriel.</div>
+<div class='note'><b>Note2 :</b>  Lors de l’instanciation du portfolio, le rôle all doit être partagé avec l’utilisateur public.</div>
 <!-- =================================== -->
 <h4>Cas 2 – L’étudiant demande à son professeur de procéder à son évaluation; le professeur possède un compte 
 Karuta et a été assigné au portfolio de cet étudiant dans le rôle professeur lors de l’instanciation.</h4>
@@ -76,10 +75,10 @@ L’hyperlien est valide pendant 12 heures.</p>
 <p class='champ'>etudiant,pair,?,1,12,Demander un commentaire@fr</p>
 <p>Le collègue reçoit un courriel et n’a qu’à cliquer sur l’hyperlien pour écrire son commentaire.</p>
 
-<mark><b>Note :</b>  Le symbole « ? » fait en sorte que lorsque l’étudiant cliquera sur Demander un commentaire, une fenêtre s’ouvrira pour 
+<div class='note'><b>Note :</b>  Le symbole « ? » fait en sorte que lorsque l’étudiant cliquera sur Demander un commentaire, une fenêtre s’ouvrira pour 
 lui permettre de spécifier le courriel de son collègue. On fait ici l’hypothèse que l’étudiant a un grand nombre de collègues 
 et que le designer n’a pas spécifié de façon précise les collègues qui seront mobilisés, de façon à donner plus de latitude à 
-l’étudiant dans le choix du pair qui pourra l’évaluer.</mark>
+l’étudiant dans le choix du pair qui pourra l’évaluer.</dv>
  
 
 <h4>Cas généraux. Les deux tableaux ci-dessous expliquent et précisent la valeur des paramètres de la boîte de partage.</h4>
@@ -90,8 +89,8 @@ l’étudiant dans le choix du pair qui pourra l’évaluer.</mark>
 		<td>Habituellement l’étudiant mais tous les usagers qui ont un rôle défini dans le portfolio peuvent aussi partager.</td>
 	</tr>
 	<tr>
-		<td>Rôle du destinataire
-		<td>Le rôle qu’aura le destinataire dans le portfolio (par exemple « superviseur » – le destinataire pourra faire ce que peut faire un superviseur).
+		<td>Rôle du destinataire</td>
+		<td>Le rôle qu’aura le destinataire dans le portfolio (par exemple « superviseur » – le destinataire pourra faire ce que peut faire un superviseur).</td>
 	</tr>
 	<tr>
 		<td>Rôles et/ou courriels </td>
@@ -123,28 +122,36 @@ l’étudiant dans le choix du pair qui pourra l’évaluer.</mark>
 	</tr>
  </table>
 
-Niveau
-
-Conditions
-
-0
-
-Le destinataire existe dans le système Karuta et le portfolio est déjà partagé avec le destinataire dans le bon rôle. Si le destinataire n’est pas connecté au système, il devra le faire en spécifiant son mot de passe.
-
-1
-
-Le destinataire existe dans le système Karuta et le portfolio est déjà partagé avec le destinataire dans le bon rôle. Si le destinataire n’est pas pas connecté au système, il n’aura pas à le faire : en cliquant sur l’hyperlien, il sera automatiquement dirigé vers la bonne section du portfolio.
-
-2
-
-Le destinataire existe dans le système Karuta mais le portfolio n’est pas déjà partagé avec le destinataire dans le bon rôle.  Le système va partager le portfolio dans le bon rôle avec le destinataire. Si le destinataire n’est pas pas connecté au système, il n’aura pas à le faire : en cliquant sur l’hyperlien, il sera automatiquement dirigé vers la bonne section du portfolio.
-
-3
-
-Le destinataire n’existe pas dans le système Karuta. Le système va automatiquement lui créer un compte et lui partager le portfolio dans le bon rôle. Le compte créé est temporaire.
-
-4
-
-Le destinataire qui reçoit le courriel a accès en lecture seulement au contenu de la section du portfolio partagé avec lui. Lors de l’instanciation, le rôle all doit être partagé avec l’utilisateur public.  Le niveau 4 ressemble beaucoup au cas 1 décrit plus haut mais est beaucoup plus flexible; entre autres on peut limiter le nombre d’heures durant lesquelles un accès en lecture sera possible (cas 5). 
-
- 
+<table>
+	<tr>
+		<td width='25%'>Niveau</td>
+		<td>Conditions</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>Le destinataire existe dans le système Karuta et le portfolio est déjà partagé avec le destinataire dans le bon rôle. Si le destinataire n’est pas connecté au système, 
+		il devra le faire en spécifiant son mot de passe.</td>
+	</tr>
+	<tr>
+		<td>1 </td>
+		<td>Le destinataire existe dans le système Karuta et le portfolio est déjà partagé avec le destinataire dans le bon rôle. Si le destinataire n’est pas pas connecté au système,
+		 il n’aura pas à le faire : en cliquant sur l’hyperlien, il sera automatiquement dirigé vers la bonne section du portfolio.
+		</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Le destinataire existe dans le système Karuta mais le portfolio n’est pas déjà partagé avec le destinataire dans le bon rôle. 
+		 Le système va partager le portfolio dans le bon rôle avec le destinataire. Si le destinataire n’est pas pas connecté au système, 
+		 il n’aura pas à le faire : en cliquant sur l’hyperlien, il sera automatiquement dirigé vers la bonne section du portfolio.</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Le destinataire n’existe pas dans le système Karuta. Le système va automatiquement lui créer un compte et lui partager 
+		le portfolio dans le bon rôle. Le compte créé est temporaire.</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Le destinataire qui reçoit le courriel a accès en lecture seulement au contenu de la section du portfolio partagé avec lui. 
+		Lors de l’instanciation, le rôle all doit être partagé avec l’utilisateur public.</td>
+	</tr>
+ </table>
