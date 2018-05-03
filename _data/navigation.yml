@@ -252,6 +252,8 @@ portfolio_fr:
     url: /metadata_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
+  - title: Partage
+    url: /sharing_fr/
   - title: Langues
     children:
       - title: "English"
@@ -267,6 +269,8 @@ portfolio_en:
     url: /metadata_en/
   - title: CSS
     url: /css_en/
+  - title: Sharing
+    url: /sharing_en/
   - title: Langues
     children:
       - title: "Français"
@@ -291,6 +295,8 @@ structures_fr:
     url: /metadata_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
+  - title: Partage
+    url: /sharing_fr/
   - title: Langues
     children:
       - title: "English"
@@ -315,10 +321,46 @@ structures_en:
     url: /metadata_en/
   - title: CSS
     url: /css_en/
+  - title: Sharing
+    url: /sharing_en/
   - title: Langues
     children:
       - title: "Français"
         url: /structures_fr/
+
+# ====== SHARING_FR =============
+sharing_fr:
+  - title: Structures
+    url: /structures_fr/
+  - title: Ressources
+    url: /resources_fr/
+  - title: Métadonnées
+    url: /metadata_fr/
+  - title: Mise en forme (CSS)
+    url: /css_fr/
+  - title: Partage
+    url: /sharing_fr/
+  - title: Langues
+    children:
+      - title: "English"
+        url: /sharing_en/
+
+# ====== SHARING_EN =============
+sharing_en:
+  - title: Structures
+    url: /structures_en/
+  - title: Resources
+    url: /resources_en/
+  - title: Metadata
+    url: /metadata_en/
+  - title: CSS
+    url: /css_en/
+  - title: Sharing
+    url: /sharing_en/
+  - title: Langues
+    children:
+      - title: "Français"
+        url: /sharing_fr/
 
 # ====== RESOURCES_FR =============
 resources_fr:
@@ -369,6 +411,8 @@ resources_fr:
     url: /metadata_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
+  - title: Partage
+    url: /sharing_fr/
   - title: Langues
     children:
       - title: "English"
@@ -422,6 +466,8 @@ resources_en:
   - title: Metadata
     url: /metadata_en/
   - title: CSS
+  - title: Sharing
+    url: /sharing_en/
     url: /css_en/
   - title: Langues
     children:
@@ -471,6 +517,8 @@ metadata_fr:
         url: /metadata_fr/#sharing
   - title: Mise en forme (CSS)
     url: /css_fr/
+  - title: Partage
+    url: /sharing_fr/
   - title: Langues
     children:
       - title: "English"
@@ -519,6 +567,8 @@ metadata_en:
         url: /metadata_en/#sharing
   - title: CSS
     url: /css_en/
+  - title: Sharing
+    url: /sharing_en/
   - title: Langues
     children:
       - title: "Français"
@@ -534,6 +584,8 @@ css_fr:
     url: /metadata_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
+  - title: Partage
+    url: /sharing_fr/
   - title: Langues
     children:
       - title: "English"
@@ -549,6 +601,8 @@ css_en:
     url: /metadata_en/
   - title: CSS
     url: /css_en/
+  - title: Sharing
+    url: /sharing_en/
   - title: Langues
     children:
       - title: "Français"

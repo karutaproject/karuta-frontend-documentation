@@ -401,9 +401,12 @@ sidebar:
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Sélection</code> Ressource à mettre à jour. Format&nbsp;: <i>ID.tag sémantique</i>. 
-			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree ou dans un élément 
-			SelectTree, et le tag sémantique est celui de la ressource à mettre à jour dans le portfolio.
+			<code>Sélection</code> Ressource à mettre à jour. 
+			Format&nbsp;: <i>ID.tag sémantique</i> ou <i>#current_node</i>. 
+			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree soit dans un élément 
+			SelectTree, et le tag sémantique est celui de la ressource à mettre à jour dans le portfolio. <i>#current_node</i> est un mot réservé.
+			 Dans ce cas la ressource à mettre à jour est la ressource courante. Cela permet, par exemple, de mettre à jour une ressource qui 
+			 vient d'être importée dans le portfolio.
 		</li>
 		<li>
 			<code>Valeur du champ</code> Valeur à mettre à jour. Ajouter un élément <i>select</i> pour 
@@ -421,8 +424,11 @@ sidebar:
 	<ul>
 		<li>
 			<code>Sélection proxy</code> Ressource de type Proxy que l'on veut mettre à jour. 
-			Format&nbsp;: <i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit 
-			dans un élément CreateTree ou dans un élément SelectTree.
+			Format&nbsp;: <i>ID.tag sémantique</i> ou <i>#current_node</i>. 
+			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree soit dans un élément 
+			SelectTree, et le tag sémantique est celui de la ressource à mettre à jour dans le portfolio. <i>#current_node</i> est un mot réservé.
+			 Dans ce cas la ressource à mettre à jour est la ressource courante. Cela permet, par exemple, de mettre à jour une ressource qui 
+			 vient d'être importée dans le portfolio.
 		</li>
 		<li>
 			<code>Sélection source</code> Noeud vers lequel pointe l'élément Proxy. Format&nbsp;: 
@@ -441,9 +447,11 @@ sidebar:
 	<ul>
 		<li>
 			<code>Sélection</code> Ressource de type Tableau de bord que l'on veut mettre à jour. 
-			Format&nbsp;: <i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit 
-			dans un élément CreateTree ou dans un élément SelectTree, et le tag sémantique est celui 
-			de la ressource Tableau de bord à mettre à jour dans le portfolio.
+			Format&nbsp;: <i>ID.tag sémantique</i> ou <i>#current_node</i>. 
+			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree soit dans un élément 
+			SelectTree, et le tag sémantique est celui de la ressource à mettre à jour dans le portfolio. <i>#current_node</i> est un mot réservé.
+			 Dans ce cas la ressource à mettre à jour est la ressource courante. Cela permet, par exemple, de mettre à jour une ressource qui 
+			 vient d'être importée dans le portfolio.
 		</li>
 		<li>
 			<code>Code Dashboard</code> Le code du portfolio qui contient le script de rapport. Ajouter 
@@ -480,10 +488,12 @@ sidebar:
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Sélection</code> C'est la ressource que l'on veut mettre à jour. Format : 
-			<i>ID.tag_sémantique</i>. L'ID a précédement été attribué soit dans un élément CreateTree 
-			ou dans un élément SelectTree, et le tag sémantique est celui de la ressource dans le 
-			portfolio. 
+			<code>Sélection</code> C'est le noeud de ressource que l'on veut mettre à jour. 
+			Format&nbsp;: <i>ID.tag sémantique</i> ou <i>#current_node</i>. 
+			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree soit dans un élément 
+			SelectTree, et le tag sémantique est celui du noeud de ressource à mettre à jour dans le portfolio. <i>#current_node</i> est un mot réservé.
+			 Dans ce cas la ressource à mettre à jour est la ressource courante. Cela permet, par exemple, de mettre à jour une ressource qui 
+			 vient d'être importée dans le portfolio.
 		</li>
 		<li>
 			<code>Code</code> Ajouter des éléments <i>select</i> pour des variables globales 
@@ -502,9 +512,12 @@ sidebar:
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Sélection</code> Noeud que l'on veut mettre à jour. Format&nbsp;: 
-			<i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit dans un élément 
-			CreateTree ou dans un élément SelectTree.
+			<code>Sélection</code> Noeud que l'on veut mettre à jour. 
+			Format&nbsp;: <i>ID.tag sémantique</i> ou <i>#current_node</i>. 
+			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree soit dans un élément 
+			SelectTree, et le tag sémantique est celui de la ressource à mettre à jour dans le portfolio. <i>#current_node</i> est un mot réservé.
+			 Dans ce cas la ressource à mettre à jour est la ressource courante. Cela permet, par exemple, de mettre à jour une ressource qui 
+			 vient d'être importée dans le portfolio.
 		</li>
 		<li>
 			<code>Valeur query</code> Ajouter des éléments <i>select</i> pour des variables globales 
@@ -520,9 +533,12 @@ sidebar:
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Sélection</code> Noeud que l'on veut mettre à jour. Format&nbsp;: 
-			<i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit dans un élément 
-			CreateTree ou dans un élément SelectTree.
+			<code>Sélection</code> Noeud que l'on veut mettre à jour. 
+			Format&nbsp;: <i>ID.tag sémantique</i> ou <i>#current_node</i>. 
+			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree soit dans un élément 
+			SelectTree, et le tag sémantique est celui de la ressource à mettre à jour dans le portfolio. <i>#current_node</i> est un mot réservé.
+			 Dans ce cas la ressource à mettre à jour est la ressource courante. Cela permet, par exemple, de mettre à jour une ressource qui 
+			 vient d'être importée dans le portfolio.
 		</li>
 		<li>
 			<code>Valeur query</code> Ajouter des éléments <i>select</i> pour des variables globales 
@@ -538,9 +554,12 @@ sidebar:
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Sélection</code> Noeud que l'on veut mettre à jour. Format&nbsp;: 
-			<i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit dans un élément 
-			CreateTree ou dans un élément SelectTree.
+			<code>Sélection</code> Noeud que l'on veut mettre à jour. 
+			Format&nbsp;: <i>ID.tag sémantique</i> ou <i>#current_node</i>. 
+			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree soit dans un élément 
+			SelectTree, et le tag sémantique est celui de la ressource à mettre à jour dans le portfolio. <i>#current_node</i> est un mot réservé.
+			 Dans ce cas la ressource à mettre à jour est la ressource courante. Cela permet, par exemple, de mettre à jour une ressource qui 
+			 vient d'être importée dans le portfolio.
 		</li>
 		<li>
 			<code>Valeur inline (Y ou N)</code> Ajouter un élément <i>select</i> pour une variable 
