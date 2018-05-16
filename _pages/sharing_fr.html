@@ -32,8 +32,8 @@ sidebar:
 <img src='../assets/img/image003.png' width='80%'/>
 
 <p>
-	Ainsi, si dans son portfolio l’étudiant clique sur Partager avec un pair, le système envoie un courriel à un pair avec un 
-	hyperlien vers une section du portfolio dans laquelle le pair pourra inscrire son commentaire.
+	Dans l'exemple ci-dessus, si dans son portfolio l’étudiant clique sur "Partager avec un pair", le système envoie un courriel au 
+	pair avec un hyperlien vers une section du portfolio dans laquelle il pourra inscrire son commentaire.
 </p>
 
 <img src='../assets/img/image006.png' width='50%'/>
@@ -42,7 +42,7 @@ sidebar:
 	ressource.
 </p>
 
-<h4>Dans les métadonnées :</h4>
+<h4>Dans les métadonnées</h4>
 
 <img src='../assets/img/image008.png' width='80%'/>
 
@@ -65,7 +65,7 @@ sidebar:
 
 <div class='note'>
 	<b>Note 1 :</b> Le symbole « ? » fait en sorte que lorsque l’étudiant cliquera sur Partager, une fenêtre s’ouvrira 
-	pour lui permettre de spécifier le courriel.
+	pour lui permettre de spécifier le courriel du destinataire.
 </div>
 
 <img src='../assets/img/image009.png' width='80%'/>
@@ -80,7 +80,6 @@ sidebar:
 	Cas 2 – L’étudiant peut montrer son portfolio à n’importe qui (usager Karuta ou non) en mode lecture seulement (aucun 
 	droit d’édition) mais le partage a une durée limitée de 24 heures.
 </h4>
-<p>Partager</p>
 <p>
 	<code>
 			Partager<br>
@@ -101,10 +100,9 @@ sidebar:
 <!-- =================================== -->
 
 <h4>
-	Cas 2 – L’étudiant demande à son professeur de procéder à son évaluation; le professeur possède un compte Karuta et a 
+	Cas 3 – L’étudiant demande à son professeur de procéder à son évaluation; le professeur possède un compte Karuta et a 
 	été assigné au portfolio de cet étudiant dans le rôle professeur lors de l’instanciation.
 </h4>
-<p>Partager</p>
 <p>
 	<code>
 			Partager<br>
@@ -119,10 +117,9 @@ sidebar:
 <!-- =================================== -->
 
 <h4>
-	Cas 3 – L’étudiant demande à son responsable de stage de compléter son évaluation; le responsable de stage n’a pas de 
+	Cas 4 – L’étudiant demande à son responsable de stage de compléter son évaluation; le responsable de stage n’a pas de 
 	compte Karuta.
 </h4>
-<p>Partager</p>
 <p>
 	<code>
 			Partager<br>
@@ -133,17 +130,16 @@ sidebar:
 <p class='champ'>etudiant,evaluateur,yves.lacoste@airfrance.com,3,12,Demander une évaluation@fr</p>
 
 <p>
-	L’évaluateur externe reçoit un courriel et n’a qu’à cliquer sur l’hyperlien pour procéder à l’évaluation; il n’a pas à 
+	Le responsable de stage reçoit un courriel et n’a qu’à cliquer sur l’hyperlien pour procéder à l’évaluation; il n’a pas à 
 	s’identifier dans le système Karuta. L’hyperlien est valide pendant 12 heures.
 </p>
 
 <!-- =================================== -->
 
 <h4>
-	Cas 4 – L’étudiant demande à un de ses collègues d’inscrire un commentaire dans son portfolio (évaluation par les pairs); 
+	Cas 5 – L’étudiant demande à un de ses collègues d’inscrire un commentaire dans son portfolio (évaluation par les pairs); 
 	le collègue possède un compte Karuta.
 </h4>
-<p>Partager</p>
 <p>
 	<code>
 			Partager<br>
@@ -163,7 +159,7 @@ sidebar:
 </div>
  
 
-<h4>Cas généraux. Les deux tableaux ci-dessous expliquent et précisent la valeur des paramètres de la boîte de partage.</h4>
+<h4>Cas généraux : les deux tableaux ci-dessous expliquent et précisent la valeur des paramètres de la boîte de partage.</h4>
 
 <table>
 	<tr>
@@ -213,7 +209,7 @@ sidebar:
 	</tr>
 	<tr>
 		<td>Condition</td>
-		<td>Il est possible de spécifier certaines conditions (facultatif).</td>
+		<td>Par exemple: submitted=='Y' (optionnel).</td>
 	</tr>
 </table>
 <p></p>
@@ -231,24 +227,32 @@ sidebar:
 	</tr>
 	<tr>
 		<td>1</td>
-		<td>Le destinataire existe dans le système Karuta et le portfolio est déjà partagé avec le destinataire dans le bon rôle. Si le destinataire n’est pas pas connecté au système,
-		 il n’aura pas à le faire : en cliquant sur l’hyperlien, il sera automatiquement dirigé vers la bonne section du portfolio.
+		<td>
+			Le destinataire existe dans le système Karuta et le portfolio est déjà partagé avec le destinataire dans le bon rôle. 
+			Si le destinataire n’est pas pas connecté au système, il n’aura pas à le faire : en cliquant sur l’hyperlien, il sera 
+		 	automatiquement dirigé vers la bonne section du portfolio.
 		</td>
 	</tr>
 	<tr>
 		<td>2</td>
-		<td>Le destinataire existe dans le système Karuta mais le portfolio n’est pas déjà partagé avec le destinataire dans le bon rôle. 
-		 Le système va partager le portfolio dans le bon rôle avec le destinataire. Si le destinataire n’est pas pas connecté au système, 
-		 il n’aura pas à le faire : en cliquant sur l’hyperlien, il sera automatiquement dirigé vers la bonne section du portfolio.</td>
+		<td>
+			Le destinataire existe dans le système Karuta mais le portfolio n’est pas déjà partagé avec le destinataire dans le 
+			bon rôle. Le système va partager le portfolio dans le bon rôle avec le destinataire. Si le destinataire n’est pas pas 
+			connecté au système, il n’aura pas à le faire : en cliquant sur l’hyperlien, il sera automatiquement dirigé vers la 
+			bonne section du portfolio.
+		</td>
 	</tr>
 	<tr>
 		<td>3</td>
-		<td>Le destinataire n’existe pas dans le système Karuta. Le système va automatiquement lui créer un compte et lui partager 
+		<td>
+		Le destinataire n’existe pas dans le système Karuta. Le système va automatiquement lui créer un compte et lui partager 
 		le portfolio dans le bon rôle. Le compte créé est temporaire.</td>
 	</tr>
 	<tr>
 		<td>4</td>
-		<td>Le destinataire qui reçoit le courriel a accès en lecture seulement au contenu de la section du portfolio partagé avec lui. 
-		Lors de l’instanciation, le rôle all doit être partagé avec l’utilisateur public.</td>
+		<td>
+			Le destinataire qui reçoit le courriel a accès en lecture seulement au contenu de la section du portfolio partagé avec 
+			lui. Lors de l’instanciation, le rôle all doit être partagé avec l’utilisateur public.
+		</td>
 	</tr>
  </table>
