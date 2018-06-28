@@ -177,6 +177,12 @@ sidebar:
 		éléments du portfolio qui répondent aux critères <code>Type de noeud</code>, 
 		<code>Tag sémantique</code> et <code>Test</code>.
 	</p>
+	<p>
+		Astuce : L'élément ForEachNode est aussi utilisé pour simuler une instruction <code>IF (condition) code 
+		à exécuter ELSE code à exécuter</code>. Un premier ForEachNode est utilisé pour l'instruction IF avec la
+		condition dans le champ <code>Test</code>. Au besoin un deuxième ForEachNode est utilisé pour l'instruction ELSE avec la
+		condition <i>inverse</i> dans le champ <code>Test</code>.
+	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
@@ -210,13 +216,29 @@ sidebar:
 			a été téléversé dans l'élément (vérifie que l'élément n'est pas vide).
 		</li>
 		<li>
+			<code>.filename_empty()</code> S'applique aux éléments Document et vérifie si un fichier 
+			a été téléversé dans l'élément (vérifie que l'élément est vide).
+		</li>
+		<li>
 			<code>.url_not_empty()</code> S'applique aux éléments URL et vérifie si un hyperlien a été 
 			enregistré (vérifie que l'élément n'est pas vide).
+		</li>
+		<li>
+			<code>.url_empty()</code> S'applique aux éléments URL et vérifie si un hyperlien a été 
+			enregistré (vérifie que l'élément est vide).
 		</li>
 		<li>
 			<code>.text_not_empty()</code> S'applique aux éléments Texte court et Texte long et vérifie 
 			si du texte a été enregistré dans la ressource (vérifie que l'élément n'est pas vide).
 		</li>
+		<li>
+			<code>.text_empty()</code> S'applique aux éléments Texte court et Texte long et vérifie 
+			si du texte a été enregistré dans la ressource (vérifie que l'élément est vide).
+		</li>
+		<li>
+			<code>.submitted()</code> Vérifie l'élément a été soumis.
+		</li>
+		
 	</ul>
 	<p>
 		Les tests prédéfinis peuvent être combinés. Par exemple&nbsp;: 
@@ -396,6 +418,11 @@ sidebar:
 		en étoile tel qu'illustré ci-dessous&nbsp;:
 	</p>
 	<img src='../assets/img/web.png' width='60%'/>
+	<p>
+		NOTE IMPORTANTE<br>
+		L'élément Table qui contient l'élément SVG doit avoir l'instruction suivante dans
+		son champ "Autre CSS" (onglet "CSS") : "width:100%;".
+	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li><code>min-width</code> Largeur minimum (par défaut 100%).</li>
