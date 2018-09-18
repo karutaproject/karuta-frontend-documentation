@@ -284,14 +284,13 @@ sidebar:
 		<code>ForEachPerson</code>, <code>ForEachPortfolio</code> ou <code>ForEachPortfolioNode</code>.
 	</p>
 	<p>
-		Pour un élément <code>ForEachPerson</code>&nbsp;:</br>
-		dans l'attribut <code>Sélection personnes</code>, si la valeur est "username=identifiant" 
-		(sans guillemets), Karuta remplacera "identifiant" par la valeur de la variable locale 
-		<i>identifiant</i> du fichier CSV.
+		Pour un élément <code>ForEachPerson</code>&nbsp;: Dans l'attribut <code>Sélection personnes</code>, 
+		si la valeur est "username=identifiant" (sans guillemets), Karuta remplacera "identifiant" 
+		par la valeur de la variable locale <i>identifiant</i> du fichier CSV.
 	</p>
 	<p>
-		Pour un élément <code>ForEachPortfolio</code> ou <code>ForEachPortfolioNode</code>&nbsp;:</br>
-		dans l'attribut <code>Sélection portfolios</code>, si la valeur est "code=portfolio_code" 
+		Pour un élément <code>ForEachPortfolio</code> ou <code>ForEachPortfolioNode</code>&nbsp;:
+		Dans l'attribut <code>Sélection portfolios</code>, si la valeur est "code=portfolio_code" 
 		(sans guillemets), Karuta remplacera "portfolio_code" par la valeur de la variable locale 
 		<i>portfolio_code</i> du fichier CSV.
 	</p>
@@ -382,8 +381,16 @@ sidebar:
 	<p>
 		Permet d'afficher la somme ou la moyenne des valeurs contenues dans une variable. La 
 		variable a précédemment été déclarée dans l'attribut <code>Références à initialiser</code> 
-		d'un élément du batch et a collecté les valeurs des éléments où elle est référencée 
-		(attribut <code>Référence</code>).Habituellement utilisé dans un élément Cell.
+		d'un élément du script de Batch et a collecté les valeurs des éléments où elle est référencée 
+		(attribut <code>Référence</code>). Elle est habituellement référencée dans un élément Node (ou Text).
+	</p>
+	<p>
+		Référence dans un élément <code>Node</code>&nbsp;: Fonctionne uniquement avec 
+		la Valeur d'un élément de portfolio de type Item (<code>Item - Valeur</code>).
+	</p>
+	<p>
+		Référence dans un élément <code>Text</code>&nbsp;: doit contenir uniquement 
+		une valeur numérique.
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
