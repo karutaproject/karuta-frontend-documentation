@@ -201,9 +201,20 @@ sidebar:
 		fait à l'intérieur du portfolio courant (portfolio qui contient l'élément Get_).
 	</p>
 	<p> 
-		OPTION <code>fileid</code> : L'élément cherché peut être une Image. On remplace alors 
+		OPTION <code>text</code> : L'élément cherché doit être un Texte (court ou long). On remplace alors 
+		<code>label</code> par <code>text</code>. Dans ce cas, c'est le texte et non le libellé qui sera affiché.
+	</p>
+	<p> 
+		OPTION <code>fileid</code> : L'élément cherché doit être une Image. On remplace alors 
 		<code>label</code> par <code>fileid</code>. Dans ce cas, l'élément Image doit être déclaré 
 		à même le portfolio où se trouve l'élément Get_ (et non pas dans un portfolio Référentiel) 
+		&rarr; donc à utiliser avec l'option <code>self</code>.
+	</p>
+	<p> 
+		OPTION <code>resource</code> : L'élément cherché peut être un Item. On remplace alors 
+		<code>label</code> par <code>resource</code>. Dans ce cas, l'élément Item doit être déclaré 
+		à même le portfolio où se trouve l'élément Get_ (et non pas dans un portfolio Référentiel). L'effet sera contrairement à label,
+		la mise à jour du get_resource si l'item correspondant sélectionné est modifié.
 		&rarr; donc à utiliser avec l'option <code>self</code>.
 	</p>
 	<h4>Format de la recherche pour un Get_Get_ (élément Get_Get_Resource ou menu Get_Get_Multiple)</h4>
@@ -216,7 +227,7 @@ sidebar:
 		<li>
 			<code>position</code> : Indique où chercher dans le portfolio courant le code de l'élément 
 			parent qui va permettre de restreindre la recherche dans le référentiel. Prend une des 
-			valeurs suivantes : <i>child</i>, <i>parent</i>, <i>parent.parent</i>, 
+			valeurs suivantes : <i>child</i>, <i>sibling</i>,<i>parent</i>, <i>parent.parent</i>, 
 			<i>parent.parent.parent</i>
 		</li>
 		<li>
@@ -328,6 +339,28 @@ sidebar:
 		<li><code>libellé@fr</code> : Libellé du menu.</li>
 		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
 	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='menus'>Menus</h3>
+	<p>
+		Le champ Menus permet de présenter un menu déroulant de choix de composantes à importer. Le menu peut comprendre plusieurs éléments. Dans le cas où pour un rôle,
+		 il n'y a qu'un seul élément alors seul cet élément sera affiché. Si il ya plusieurs éléments pour un rôle, il est possible de contrôler
+		  le libellé du menu ('Menu' par défaut) en précisant le libellé et la langue. Les différents éléments de menu sont séparés par un ; (point-virgule).
+		  ATTENTION : il n'y a pas de point-virgule final.
+	</p>
+	<h4>Format</h4>
+	<p>
+		[<code>libellé_menu@fr</code>;]<code>code_portfolio</code>,<code>tag sémantique</code>,<code>libellé@fr</code>,<code>rôles</code>[; autres éléments]
+	</p>
+	<ul>
+		<li><code>libellé_menu@fr</code> : remplacera le mot Menu par défaut si il ya plus d'un élément dans le menu. OPTIONNEL</li>
+		<li><code>code_portfolio</code> : Code du portfolio duquel on importe la composante.</li>
+		<li><code>libellé@fr</code> : Libellé de l'élément de menu.</li>
+		<li><code>rôles</code> : Rôle(s) voyant l'élément de menu.</li>
+	</ul>
+	</p>
 </article>
 
 <article>
