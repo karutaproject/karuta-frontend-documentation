@@ -84,8 +84,8 @@ sidebar:
 
 <h4>Composantes CSV</h4>
 <ul>
-	<li><code><a href='#go-parent'>Ligne CSV</a></code></li>
-	<li><code><a href='#qrcode'>Valeur CSV</a></code></li>
+	<li><code><a href='#csv-line'>Ligne CSV</a></code></li>
+	<li><code><a href='#csv-value'>Valeur CSV</a></code></li>
 </ul>
 
 <h4>Éléments de construction de tableau</h4>
@@ -670,21 +670,20 @@ sidebar:
 	</ul>	
 </article>
 
-****************************************************rendue ici ***
+<h4>Composantes SVG</h4>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='svg'>SVG</h3>
 	<p>
-		Initialise un dessin vectoriel SVG. Les commandes de dessin disponibles (voir 
-		Draw Web Axis et Draw Web Line ci-dessous) permettent de construire des diagrammes 
+		Initialise un dessin vectoriel SVG. Les commandes de dessin disponibles permettent de construire des diagrammes 
 		en étoile tel qu'illustré ci-dessous&nbsp;:
 	</p>
 	<img src='../assets/img/web.png' width='60%'/>
 	<p>
 		NOTE IMPORTANTE<br>
 		L'élément Table qui contient l'élément SVG doit avoir l'instruction suivante dans
-		son champ "Autre CSS" (onglet "CSS") : "width:100%;".
+		le champ "Autre CSS" de l'onglet "CSS"&nbsp;: "width:100%;".
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
@@ -695,26 +694,26 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='draw-web-title'>Draw Web Title</h3>
+	<h3 id='draw-web-title'>Titre SVG</h3>
 	<p>Affiche le titre du dessin SVG.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Type nœud</code> Type de l'élément à sélectionner (liste déroulante des choix 
+			<code>Titre&nbsp;- Type nœud</code> Type de l'élément à sélectionner (liste déroulante des choix 
 			possibles).
 		</li>
-		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
+		<li><code>Titre&nbsp;- Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
 		<li>
-			<code>Afficher</code> Valeur du nœud sélectionné à afficher comme titre du dessin. 
-			Les options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud ou 
-			valeur d'un élément Item (liste déroulante des choix possibles).		
+			<code>Titre&nbsp;- Afficher</code> Valeur du nœud sélectionné à afficher (liste déroulante des choix possibles). Les 
+			options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud, commentaires sur le nœud, UUID 
+			du nœud, code d'un élément Item ou valeur d'un élément Item.
 		</li>
 	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='draw-web-axis'>Draw Web Axis</h3>
+	<h3 id='draw-web-axis'>Axe SVG</h3>
 	<p>Trace les axes de l'étoile, avec leurs libellés.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
@@ -722,47 +721,46 @@ sidebar:
 			la variable enregistre la valeur obtenue par l'attribut <code>Afficher</code>.			
 		</li>
 		<li>
-			<code>Type nœud</code> Type de l'élément à sélectionner (liste déroulante des choix 
+			<code>Axe&nbsp;- Type nœud</code> Type de l'élément à sélectionner (liste déroulante des choix 
 			possibles).
 		</li>
-		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
+		<li><code>Axe&nbsp;- Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
 		<li>
-			<code>Afficher</code> Valeur du nœud sélectionné à afficher comme libellé de l'axe. 
-			Les options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud ou 
-			valeur d'un élément Item (liste déroulante des choix possibles).
+			<code>Axe&nbsp;- Afficher</code> Valeur du nœud sélectionné à afficher (liste déroulante des choix possibles). Les 
+			options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud, commentaires sur le nœud, UUID 
+			du nœud, code d'un élément Item ou valeur d'un élément Item.
 		</li>
 	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='draw-web-line'>Draw Web Line</h3>
+	<h3 id='draw-web-line'>Courbe SVG</h3>
 	<p>
-		Positionne les valeurs sur les axes correspondants et trace une ligne entre les valeurs 
-		(pour former l'étoile). Affiche également la légende de l'élément SVG. Il est possible 
-		d'utiliser plusieurs éléments Draw Web Line dans le même élément SVG. Les étoiles seront
-		supperposées sur les mêmes axes.
+		Place les points sur les axes et trace une ligne entre les points (pour former l'étoile). Affiche également 
+		la légende de l'élément SVG. Il est possible d'utiliser plusieurs éléments Courbe SVG dans le même élément 
+		SVG. Les étoiles seront	superposées sur les mêmes axes avec des couleurs différentes.
 	</p>
-	<p>Champs à renseigner pour positionner les valeurs sur les axes&nbsp;:</p>
+	<p>Champs à renseigner pour placer les points sur les axes&nbsp;:</p>
 	<ul>
 		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les agrégats. Si utilisé, 
 			la variable enregistre la valeur obtenue par l'attribut <code>Afficher</code>.			
 		</li>
 		<li>
-			<code>Type nœud</code> Type de l'élément à sélectionner (liste déroulante des choix 
+			<code>Points&nbsp;- Type nœud</code> Type de l'élément à sélectionner (liste déroulante des choix 
 			possibles).
 		</li>
-		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
+		<li><code>Points&nbsp;- Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
 		<li>
-			<code>Afficher</code> Valeur du nœud sélectionné à positionner sur l'axe. 
-			Les options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud ou 
-			valeur d'un élément Item (liste déroulante des choix possibles).
+			<code>Points&nbsp;- Afficher</code> Valeur du nœud sélectionné à afficher (liste déroulante des choix possibles). Les 
+			options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud, commentaires sur le nœud, UUID 
+			du nœud, code d'un élément Item ou valeur d'un élément Item.
 		</li>
 	</ul>
 	<p>Champs à renseigner pour la graduation des axes&nbsp;:</p>
 	<ul>
-		<li><code>Valeur&nbsp;- Min</code> Valeur inférieure pour la graduation des axes.</li>
-		<li><code>Valeur&nbsp;- Max</code> Valeur supérieure pour la graduation des axes.</li>
+		<li><code>Axe&nbsp;- Valeur&nbsp;- Min</code> Valeur inférieure pour la graduation des axes.</li>
+		<li><code>Axe&nbsp;- Valeur&nbsp;- Max</code> Valeur supérieure pour la graduation des axes.</li>
 	</ul>
 	<p>Champs à renseigner pour construire la légende&nbsp;:</p>
 	<ul>
@@ -782,8 +780,29 @@ sidebar:
 	</ul>
 </article>
 
+<h4>Composantes CSV</h4>
 
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='csv-line'>Ligne CSV</h3>
+	<p></p>
+</article>
 
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='csv-value'>Valeur CSV</h3>
+	<p></p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li><code>Type nœud</code> Type de l'élément à sélectionner (liste déroulante des choix possibles).</li>
+		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
+		<li>
+			<code>Afficher</code> Valeur du nœud sélectionné à afficher (liste déroulante des choix possibles). Les 
+			options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud, commentaires sur le nœud, UUID 
+			du nœud, code d'un élément Item ou valeur d'un élément Item.
+		</li>
+	</ul>
+</article>
 
 
 
