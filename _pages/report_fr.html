@@ -565,7 +565,10 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='go-parent'>Monter au parent</h3>
-	<p>Permet de remonter au parent du nœud courrant dans l'arbre XML.</p>
+	<p>
+		Permet de remonter au parent du nœud courrant dans l'arbre XML. Peut être utilisé imbriqués un dans l'autre 
+		pour remonter jusqu'à la racine du portfolio.
+	</p>
 </article>
 
 <article>
@@ -597,34 +600,24 @@ sidebar:
 		</li>
 	</ul>
 	<p>Il y a cinq méthodes pour l'assignation de la valeur initiale&nbsp;:</p>
-	<p>
-		<code>Valeur du nœud</code> Permet de puiser la valeur de la variable d'un élément de portfolio (par exemple la valeur 
-		entrée par l'utilisateur dans un élément Ressource). Voir élément d'affichage <code><a href='#node'>Nœud</a></code>.
-	</p>
-	<p>
-		<code>Valeur par aggrégat</code> Permet d'assigner à la variable la somme ou la moyenne des valeurs contenues dans 
-		une Référence. Voir élément <code><a href='#aggregate'>Agrégat</a></code>.
-	</p>
-	<p>
-		<code>Valeur par opération</code> Permet d'assigner à la variable le résultat d'une opération. 
-		Voir élément <code><a href='#operation'>Opération</a></code>.
-	</p>
-	<p>
-		<code>Champ valeur</code> Permet d'assigner une valeur "programmée en dur" ie&nbsp;: texte fixe qui ne dépend pas des 
-		valeurs dans le portfolio. Équivalent de l'élément d'affichage Texte.
-	</p>
-	<p>Champ à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Valeur</code> valeur à assigner à la variable.
+			<code>Valeur du nœud</code> Permet de puiser la valeur de la variable d'un élément de portfolio (par exemple la valeur 
+			entrée par l'utilisateur dans un élément Ressource). Voir élément d'affichage <code><a href='#node'>Nœud</a></code>.
 		</li>
-	</ul>
-	<p><code>Autre variable</code> Permet d'assigner la valeur d'une autre variable.</p>
-	<p>Champ à renseigner&nbsp;:</p>
-	<ul>
 		<li>
-			<code>Autre variable</code> nom de l'autre variable.
+			<code>Valeur par aggrégat</code> Permet d'assigner à la variable la somme ou la moyenne des valeurs contenues dans 
+			une Référence. Voir élément <code><a href='#aggregate'>Agrégat</a></code>.
 		</li>
+		<li>
+			<code>Valeur par opération</code> Permet d'assigner à la variable le résultat d'une opération. 
+			Voir élément <code><a href='#operation'>Opération</a></code>.
+		</li>
+			<code>Champ valeur</code> Permet d'assigner une valeur "programmée en dur" ie&nbsp;: texte fixe qui ne dépend pas des 
+			valeurs dans le portfolio. Équivalent de l'élément d'affichage Texte.
+		<li>
+		</li>
+		<li><p><code>Autre variable</code> Permet d'assigner la valeur d'une autre variable.</p></li>
 	</ul>
 </article>
 
