@@ -40,7 +40,7 @@ sidebar:
 <h4>Éléments d'affichage</h4>
 <ul>
 	<li><code><a href='#text'>Text</a></code></li>
-	<li><code><a href='#node'>Noeud</a></code></li>
+	<li><code><a href='#node'>Nœud</a></code></li>
 	<li><code><a href='#url2unit'>URL2Unit</a></code></li>
 	<li><code><a href='#show-sharing'>Afficher les partages</a></code></li>
 	<li><code><a href='#qrcode'>Code QR</a></code></li>
@@ -53,10 +53,10 @@ sidebar:
 
 <h4>Boucles</h4>
 <ul>
-	<li><code><a href='#for-each-node'>Pour chaque noeud</a></code></li>
+	<li><code><a href='#for-each-node'>Pour chaque nœud</a></code></li>
 	<li><code><a href='#for-each-person'>Pour chaque personne</a></code></li>
 	<li><code><a href='#for-each-portfolio'>Pour chaque portfolio</a></code></li>
-	<li><code><a href='#for-each-portfolio-node'>Pour chaque noeud de portfolio</a></code></li>
+	<li><code><a href='#for-each-portfolio-node'>Pour chaque nœud de portfolio</a></code></li>
 	<li><code><a href='#for-each-line'>Pour chaque ligne</a></code></li>
 	<li><code><a href='#loop'>Boucle</a></code></li>
 </ul>
@@ -155,7 +155,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h4 id='cell'>Noeud</h4>
+	<h4 id='cell'>Nœud</h4>
 	<p>
 		Permet de puiser la valeur à afficher d'un élément de portfolio (par exemple la valeur entrée par l'utilisateur 
 		dans un élément Ressource). Habituellement utilisé dans un élément Cellule.
@@ -166,14 +166,14 @@ sidebar:
 			Si utilisé, la variable enregistre la valeur affichée.			
 		</li>
 		<li>
-			<code>Type noeud</code> Type de l'élément à sélectionner (liste déroulante des choix 
+			<code>Type nœud</code> Type de l'élément à sélectionner (liste déroulante des choix 
 			possibles).
 		</li>
 		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
 		<li>
-			<code>Afficher</code> Valeur du noeud sélectionné à afficher (liste déroulante des choix possibles). Les 
-			options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud, commentaires sur le noeud, UUID 
-			du noeud, code d'un élément Item ou valeur d'un élément Item.
+			<code>Afficher</code> Valeur du nœud sélectionné à afficher (liste déroulante des choix possibles). Les 
+			options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud, commentaires sur le nœud, UUID 
+			du nœud, code d'un élément Item ou valeur d'un élément Item.
 		</li>
 	</ul>
 </article>
@@ -257,10 +257,10 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='for-each-node'>Pour chaque noeud</h3>
+	<h4 id='for-each-node'>Pour chaque nœud</h4>
 	<p>
 		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacun des 
-		éléments du portfolio qui répondent aux critères <code>Type de noeud</code>, 
+		éléments du portfolio qui répondent aux critères <code>Type de nœud</code>, 
 		<code>Tag sémantique</code> et <code>Test</code>.
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
@@ -275,7 +275,7 @@ sidebar:
 			à chaque tour de la boucle et peut être utilisée à l'intérieur de celle-ci.
 		</li>
 		<li>
-			<code>Type noeud</code> Type des éléments à sélectionner (liste déroulante des choix 
+			<code>Type nœud</code> Type des éléments à sélectionner (liste déroulante des choix 
 			possibles).
 		</li>
 		<li>
@@ -283,23 +283,23 @@ sidebar:
 		</li>
 		<li>
 			<code>Test</code> Optionnel&nbsp;: test jQuery permettant de filtrer parmis les éléments répondant 
-			aux deux critères précédents. Si pas utilisé, tous les noeuds qui répondent aux deux critères 
+			aux deux critères précédents. Si pas utilisé, tous les nœuds qui répondent aux deux critères 
 			précédents sont traités.
 		</li>
 	</ul>
 	<p>Tests prédéfinis&nbsp;:</p>
 	<ul>
 		<li>
-			<code>.sort()</code> Trie la liste des noeuds résultats sur le libellé, en ordre croissant.
+			<code>.sort()</code> Trie la liste des nœuds résultats sur le libellé, en ordre croissant.
 		</li>
 		<li>
-			<code>.invsort()</code> Trie la liste des noeuds résultats sur le libellé, en ordre décroissant.
+			<code>.invsort()</code> Trie la liste des nœuds résultats sur le libellé, en ordre décroissant.
 		</li>
 		<li>
-			<code>.sortResource()</code> Trie la liste des noeuds résultats sur la ressource, en ordre croissant.
+			<code>.sortResource()</code> Trie la liste des nœuds résultats sur la ressource, en ordre croissant.
 		</li>
 		<li>
-			<code>.invsortResource()</code> Trie la liste des noeuds résultats sur la ressource, en ordre décroissant.
+			<code>.invsortResource()</code> Trie la liste des nœuds résultats sur la ressource, en ordre décroissant.
 		</li>
 		<li>
 			<code>.sortUTC()</code> Trie une liste d'éléments Calendrier sur la date, en format international (peu
@@ -383,7 +383,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='for-each-person'>Pour chaque personne</h3>
+	<h4 id='for-each-person'>Pour chaque personne</h4>
 	<p>
 		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacune des 
 		personnes répondant au test <code>Sélection personnes</code>.
@@ -416,7 +416,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='for-each-portfolio'>Pour chaque portfolio</h3>
+	<h4 id='for-each-portfolio'>Pour chaque portfolio</h4>
 	<p>
 		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacun des 
 		portfolios répondant au test <code>Sélection portfolios</code>.
@@ -447,13 +447,13 @@ sidebar:
 			</ul>
 		</li>
 		<li>
-			<code>Tri&nbsp;- Tag sémantique</code> Optionnel&nbsp;: tag sémantique du noeud sur lequel doit 
+			<code>Tri&nbsp;- Tag sémantique</code> Optionnel&nbsp;: tag sémantique du nœud sur lequel doit 
 			se faire le tri des portfolios. Si pas utilisé, les portfolios sortent dans l'ordre naturel
 			des codes de portfolio.
 		</li>
 		<li>
-			<code>Tri&nbsp;- Élément</code> Valeur du noeud sélectionné à partir de laquelle 
-			faire le tri. Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud 
+			<code>Tri&nbsp;- Élément</code> Valeur du nœud sélectionné à partir de laquelle 
+			faire le tri. Les options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud 
 			ou valeur d'un élément Item (liste déroulante des choix possibles).
 		</li>
 	</ul>
@@ -461,11 +461,11 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='for-each-portfolio-node'>Pour chaque noeud de portfolio</h3>
+	<h4 id='for-each-portfolio-node'>Pour chaque nœud de portfolio</h4>
 	<p>
 		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacun des 
 		portfolios répondant au test <code>Sélection portfolios</code>. Contrairement à la commande
-		précédente, ce n'est pas tout le portfolio qui est chargé mais uniquement le noeud spécifié 
+		précédente, ce n'est pas tout le portfolio qui est chargé mais uniquement le nœud spécifié 
 		dans <code>Tag sémantique</code>. Ceci permet une exécution plus rapide dans le cas de gros
 		portfolios.
 	</p>
@@ -495,17 +495,17 @@ sidebar:
 			</ul>
 		</li>
 		<li>
-			<code>Tri&nbsp;- Tag sémantique</code> Optionnel&nbsp;: tag sémantique du noeud sur lequel doit 
+			<code>Tri&nbsp;- Tag sémantique</code> Optionnel&nbsp;: tag sémantique du nœud sur lequel doit 
 			se faire le tri des portfolios. Si pas utilisé, les portfolios sortent dans l'ordre naturel
 			des codes de portfolio.
 		</li>
 		<li>
-			<code>Tri&nbsp;- Élément</code> Valeur du noeud sélectionné à partir de laquelle faire le tri.
-			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou valeur d'un 
+			<code>Tri&nbsp;- Élément</code> Valeur du nœud sélectionné à partir de laquelle faire le tri.
+			Les options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud ou valeur d'un 
 			élément Item (liste déroulante des choix possibles).
 		</li>
 		<li>
-			<code>Tag sémantique</code> Tag sémantique du ou des noeuds du portfolio à charger pour 
+			<code>Tag sémantique</code> Tag sémantique du ou des nœuds du portfolio à charger pour 
 			l'exécution.
 		</li>
 	</ul>
@@ -517,7 +517,7 @@ sidebar:
 	<p>
 		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacune des 
 		lignes du fichier CSV. Cet élément doit contenir au moins un des trois éléments suivants&nbsp;:
-		<code>Pour chaque personne</code>, <code>Pour chaque portfolio</code> ou <code>Pour chaque noeud du </code>.
+		<code>Pour chaque personne</code>, <code>Pour chaque portfolio</code> ou <code>Pour chaque nœud du </code>.
 	</p>
 	<p>
 		Pour un élément <code>ForEachPerson</code>&nbsp;: Dans l'attribut <code>Sélection personnes</code>, 
@@ -616,13 +616,13 @@ sidebar:
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Type noeud</code> Type de l'élément à sélectionner (liste déroulante des choix 
+			<code>Type nœud</code> Type de l'élément à sélectionner (liste déroulante des choix 
 			possibles).
 		</li>
 		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
 		<li>
-			<code>Afficher</code> Valeur du noeud sélectionné à afficher comme titre du dessin. 
-			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou 
+			<code>Afficher</code> Valeur du nœud sélectionné à afficher comme titre du dessin. 
+			Les options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud ou 
 			valeur d'un élément Item (liste déroulante des choix possibles).		
 		</li>
 	</ul>
@@ -638,13 +638,13 @@ sidebar:
 			la variable enregistre la valeur obtenue par l'attribut <code>Afficher</code>.			
 		</li>
 		<li>
-			<code>Type noeud</code> Type de l'élément à sélectionner (liste déroulante des choix 
+			<code>Type nœud</code> Type de l'élément à sélectionner (liste déroulante des choix 
 			possibles).
 		</li>
 		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
 		<li>
-			<code>Afficher</code> Valeur du noeud sélectionné à afficher comme libellé de l'axe. 
-			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou 
+			<code>Afficher</code> Valeur du nœud sélectionné à afficher comme libellé de l'axe. 
+			Les options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud ou 
 			valeur d'un élément Item (liste déroulante des choix possibles).
 		</li>
 	</ul>
@@ -665,13 +665,13 @@ sidebar:
 			la variable enregistre la valeur obtenue par l'attribut <code>Afficher</code>.			
 		</li>
 		<li>
-			<code>Type noeud</code> Type de l'élément à sélectionner (liste déroulante des choix 
+			<code>Type nœud</code> Type de l'élément à sélectionner (liste déroulante des choix 
 			possibles).
 		</li>
 		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
 		<li>
-			<code>Afficher</code> Valeur du noeud sélectionné à positionner sur l'axe. 
-			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou 
+			<code>Afficher</code> Valeur du nœud sélectionné à positionner sur l'axe. 
+			Les options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud ou 
 			valeur d'un élément Item (liste déroulante des choix possibles).
 		</li>
 	</ul>
@@ -683,13 +683,13 @@ sidebar:
 	<p>Champs à renseigner pour construire la légende&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Légende&nbsp;- Type noeud</code> Type de l'élément à sélectionner (liste déroulante 
+			<code>Légende&nbsp;- Type nœud</code> Type de l'élément à sélectionner (liste déroulante 
 			des choix possibles).
 		</li>
 		<li><code>Légende&nbsp;- Tag sémantique</code> Tag sémantique de l'élément à sélectionner.
 		<li>
-			<code>Légende&nbsp;- Afficher</code> Valeur du noeud sélectionné à afficher dans la légende. 
-			Les options sont&nbsp;: libellé du noeud, valeur de la ressource, code du noeud ou 
+			<code>Légende&nbsp;- Afficher</code> Valeur du nœud sélectionné à afficher dans la légende. 
+			Les options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud ou 
 			valeur d'un élément Item (liste déroulante des choix possibles).</li>
 		<li>
 			<code>Légende&nbsp;- Position</code> Entier donnant la position relative de la légende 
@@ -701,7 +701,7 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='go-parent'>Go Parent</h3>
-	<p>Permet de remonter au parent du noeud courrant dans l'arbre XML.</p>
+	<p>Permet de remonter au parent du nœud courrant dans l'arbre XML.</p>
 </article>
 
 
