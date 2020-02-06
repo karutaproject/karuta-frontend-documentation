@@ -39,7 +39,7 @@ sidebar:
 
 <h4>Éléments d'affichage</h4>
 <ul>
-	<li><code><a href='#text'>Text</a></code></li>
+	<li><code><a href='#text'>Texte</a></code></li>
 	<li><code><a href='#node'>Nœud</a></code></li>
 	<li><code><a href='#url2unit'>URL2Unit</a></code></li>
 	<li><code><a href='#show-sharing'>Afficher les partages</a></code></li>
@@ -138,7 +138,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='text'>Text</h3>
+	<h3 id='text'>Texte</h3>
 	<p>
 		Permet d'afficher du texte "programmé en dur" ie&nbsp;: texte fixe qui ne dépend pas des valeurs 
 		dans le portfolio (par exemple les titres de colonnes).	Habituellement utilisé dans un élément
@@ -155,7 +155,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='cell'>Nœud</h3>
+	<h3 id='node'>Nœud</h3>
 	<p>
 		Permet de puiser la valeur à afficher d'un élément de portfolio (par exemple la valeur entrée par l'utilisateur 
 		dans un élément Ressource). Habituellement utilisé dans un élément Cellule.
@@ -517,16 +517,16 @@ sidebar:
 	<p>
 		Les commandes qui se trouvent à l'intérieur de cet élément sont exécutées pour chacune des 
 		lignes du fichier CSV. Cet élément doit contenir au moins un des trois éléments suivants&nbsp;:
-		<code>Pour chaque personne</code>, <code>Pour chaque portfolio</code> ou <code>Pour chaque nœud du </code>.
+		<code>Pour chaque personne</code>, <code>Pour chaque portfolio</code> ou <code>Pour chaque nœud de portfolio</code>.
 	</p>
 	<p>
-		Pour un élément <code>ForEachPerson</code>&nbsp;: Dans l'attribut <code>Sélection personnes</code>, 
+		Pour un élément <code>ForEachPerson</code>&nbsp;: dans l'attribut <code>Sélection personnes</code>, 
 		si la valeur est "username=identifiant" (sans guillemets), Karuta remplacera "identifiant" 
 		par la valeur de la variable locale <i>identifiant</i> du fichier CSV.
 	</p>
 	<p>
 		Pour un élément <code>ForEachPortfolio</code> ou <code>ForEachPortfolioNode</code>&nbsp;:
-		Dans l'attribut <code>Sélection portfolios</code>, si la valeur est "code=portfolio_code" 
+		dans l'attribut <code>Sélection portfolios</code>, si la valeur est "code=portfolio_code" 
 		(sans guillemets), Karuta remplacera "portfolio_code" par la valeur de la variable locale 
 		<i>portfolio_code</i> du fichier CSV.
 	</p>
@@ -560,18 +560,85 @@ sidebar:
 	</ul>
 </article>
 
-****************************************************rendue ici ***
+<h4>Instructions</h4>
+
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='aggregate'>Aggregate</h3>
+	<h3 id='go-parent'>Monter au parent</h3>
+	<p>Permet de remonter au parent du nœud courrant dans l'arbre XML.</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='if-then-else'>Si Alors Sinon</h3>
+	<p>Permet d'implémenter une instruction conditionnelle de type "if-then-else".</p>
+	<p>Champ à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Test</code> test jQuery qui détermine si ce sont les actions du alors ou les actions du sinon qui 
+			seront exécutées (doit retourner vrai ou faux).
+		</li>
+	</ul>
+</article>
+	
+<h4>Variables et opérations</h4>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='report-variable'>Variable</h3>
+	<p>Permet de déclarer une variable et de lui assigner une valeur initiale.</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Nom de la variable</code> nom de la variable.
+		</li>
+		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les agrégats. Si utilisé, 
+			la référence enregistre la valeur initiale assignée à la variable.			
+		</li>
+	</ul>
+	<p>Il y a cinq méthodes pour l'assignation de la valeur initiale&nbsp;:</p>
 	<p>
-		Permet d'afficher la somme ou la moyenne des valeurs contenues dans une variable. La 
-		variable a précédemment été déclarée dans l'attribut <code>Références à initialiser</code> 
-		d'un élément du script de Batch et a collecté les valeurs des éléments où elle est référencée 
-		(attribut <code>Référence</code>). Elle est habituellement référencée dans un élément Node (ou Text).
+		<code>Valeur du nœud</code> Permet de puiser la valeur de la variable d'un élément de portfolio (par exemple la valeur 
+		entrée par l'utilisateur dans un élément Ressource). Voir élément d'affichage <code><a href='#node'>Nœud</a></code>.
 	</p>
 	<p>
-		Référence dans un élément <code>Node</code>&nbsp;: Fonctionne uniquement avec 
+		<code>Valeur par aggrégat</code> Permet d'assigner à la variable la somme ou la moyenne des valeurs contenues dans 
+		une Référence. Voir élément <code><a href='#aggregate'>Agrégat</a></code>.
+	</p>
+	<p>
+		<code>Valeur par opération</code> Permet d'assigner à la variable le résultat d'une opération. 
+		Voir élément <code><a href='#operation'>Opération</a></code>.
+	</p>
+	<p>
+		<code>Champ valeur</code> Permet d'assigner une valeur "programmée en dur" ie&nbsp;: texte fixe qui ne dépend pas des 
+		valeurs dans le portfolio. Équivalent de l'élément d'affichage Texte.
+	</p>
+	<p>Champ à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Valeur</code> valeur à assigner à la variable.
+		</li>
+	</ul>
+	<p><code>Autre variable</code> Permet d'assigner la valeur d'une autre variable.</p>
+	<p>Champ à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Autre variable</code> nom de l'autre variable.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='aggregate'>Agrégat</h3>
+	<p>
+		Permet d'afficher la somme ou la moyenne des valeurs contenues dans une variable Référence. La 
+		Référence a précédemment été déclarée dans l'attribut <code>Références à initialiser</code> 
+		d'un élément Table, Rangée ou d'une boucle, et a collecté les valeurs des éléments où elle est référencée 
+		(attribut <code>Référence</code>). Elle est habituellement référencée dans un élément Nœud (ou Texte).
+	</p>
+	<p>
+		Référence dans un élément <code>Nœud</code>&nbsp;: Fonctionne uniquement avec 
 		la Valeur d'un élément de portfolio de type Item (<code>Item - Valeur</code>).
 	</p>
 	<p>
@@ -588,6 +655,29 @@ sidebar:
 		<li><code>Sélection référence</code> Nom de la variable qui contient les valeurs à agréger.</li>
 	</ul>	
 </article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='operation'>Opération</h3>
+	<p>
+		Permet d'afficher le résultat d'une opération arithmétique.
+	</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Référence</code> Optionnel&nbsp;: variable utilisée pour les agrégats. 
+			Si utilisé, la variable enregistre la valeur résultante de l'opération.			
+		</li>
+		<li>
+			<code>Type d'opération</code> Addition, division, multiplication, pourcentage ou soustraction 
+			(liste déroulante des choix possibles).
+		</li>
+		<li><code>Opérande 1</code> Première valeur de l'opération.</li>
+		<li><code>Opérande 2</code> Deuxième valeur de l'opération.</li>
+	</ul>	
+</article>
+
+****************************************************rendue ici ***
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
@@ -699,11 +789,7 @@ sidebar:
 	</ul>
 </article>
 
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='go-parent'>Go Parent</h3>
-	<p>Permet de remonter au parent du nœud courrant dans l'arbre XML.</p>
-</article>
+
 
 
 
