@@ -28,7 +28,7 @@ sidebar:
 </p>
 
 
-<h2 id='commandes'>Les commandes</h2>
+<h2 id='commandes'>Commandes</h2>
 
 <h4>Éléments de construction de tableau</h4>
 <ul>
@@ -82,14 +82,6 @@ sidebar:
 	<li><code><a href='#draw-web-line'>Courbe SVG</a></code></li>
 </ul>
 
-<h4>Composantes CSV</h4>
-<ul>
-	<li><code><a href='#csv-line'>Ligne CSV</a></code></li>
-	<li><code><a href='#csv-value'>Valeur CSV</a></code></li>
-</ul>
-
-<h4>Éléments de construction de tableau</h4>
-
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='table'>Table</h3>
@@ -133,8 +125,6 @@ sidebar:
 		</li>
 	</ul>
 </article>
-
-<h4>Éléments d'affichage</h4>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
@@ -225,7 +215,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='username'>Login utilisateur</h3>
 	<p>
-		Permet d'afficher le login (identifiant) d'un utilisateur. 
+		Permet d'afficher le login (identifiant) de l'utilisateur qui exécute le report (par exemple, l'étudiant qui regarde 
+		son propre portfolio). 
 	</p>
 </article>
 
@@ -233,7 +224,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='firstname'>Prénom utilisateur</h3>
 	<p>
-		Permet d'afficher le prénom d'un utilisateur. 
+		Permet d'afficher le prénom de l'utilisateur qui exécute le report (par exemple, l'étudiant qui regarde son
+		propre portfolio).  
 	</p>
 </article>
 
@@ -241,7 +233,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='lastname'>Nom famille utilisateur</h3>
 	<p>
-		Permet d'afficher le nom de famille d'un utilisateur. 
+		Permet d'afficher le nom de famille de l'utilisateur qui exécute le report (par exemple, l'étudiant qui regarde son
+		propre portfolio).  
 	</p>
 </article>
 
@@ -249,12 +242,11 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='firstname-lastname'>Prénom et nom famille</h3>
 	<p>
-		Permet d'afficher le prénom et le nom de famille d'un utilisateur. 
+		Permet d'afficher le prénom et le nom de famille de l'utilisateur qui exécute le report (par exemple, l'étudiant 
+		qui regarde son propre portfolio).  
 	</p>
 </article>
 	
-<h4>Boucles</h4>
-
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='for-each-node'>Pour chaque nœud</h3>
@@ -560,8 +552,6 @@ sidebar:
 	</ul>
 </article>
 
-<h4>Instructions</h4>
-
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='go-parent'>Monter au parent</h3>
@@ -578,14 +568,12 @@ sidebar:
 	<p>Champ à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Test</code> test jQuery qui détermine si ce sont les actions du alors ou les actions du sinon qui 
-			seront exécutées (doit retourner vrai ou faux).
+			<code>Test</code> test javascript ou jQuery qui détermine si ce sont les actions du alors ou les actions du sinon 
+			qui seront exécutées (doit retourner vrai ou faux).
 		</li>
 	</ul>
 </article>
 	
-<h4>Variables et opérations</h4>
-
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='report-variable'>Variable</h3>
@@ -670,8 +658,6 @@ sidebar:
 	</ul>	
 </article>
 
-<h4>Composantes SVG</h4>
-
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='svg'>SVG</h3>
@@ -687,8 +673,8 @@ sidebar:
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
-		<li><code>min-width</code> Largeur minimum (par défaut 100%).</li>
-		<li><code>min-height</code> Hauteur minimum (par défaut 500px).</li>
+		<li><code>Largeur minimale</code> Largeur minimale (par défaut 100%).</li>
+		<li><code>Hauteur minimale</code> Hauteur minimale (par défaut 500px).</li>
 	</ul>
 </article>
 
@@ -759,8 +745,8 @@ sidebar:
 	</ul>
 	<p>Champs à renseigner pour la graduation des axes&nbsp;:</p>
 	<ul>
-		<li><code>Axe&nbsp;- Valeur&nbsp;- Min</code> Valeur inférieure pour la graduation des axes.</li>
-		<li><code>Axe&nbsp;- Valeur&nbsp;- Max</code> Valeur supérieure pour la graduation des axes.</li>
+		<li><code>Axe&nbsp;- Valeur minimale</code> Valeur inférieure pour la graduation des axes.</li>
+		<li><code>Axe&nbsp;- Valeur maximale</code> Valeur supérieure pour la graduation des axes.</li>
 	</ul>
 	<p>Champs à renseigner pour construire la légende&nbsp;:</p>
 	<ul>
@@ -780,18 +766,32 @@ sidebar:
 	</ul>
 </article>
 
-<h4>Composantes CSV</h4>
 
+<h2 id='css'>Commandes CSV</h2>
+
+<p>
+	Les commandes CSV sont utilisées avec la fonction execReport_BatchCSV. Cette fonction permet de créer en 
+	mémoire un fichier CSV temporaire qui est passé en paramètre à un batch. Autrement dit, un fichier CSV est
+	construit à partir d'un portfolio puis fournit à un script de batch. Une fois la fonction exécutée le fichier
+	n'est pas conservé.
+</p>
+<p>Exemple de script de rapport :</p>
+<img src='../assets/img/report-csv.png' width='60%'/>
+<p>Exemple de fichier temporaire résultant :</p>
+<img src='../assets/img/fichier-csv.png' width='60%'/>
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='csv-line'>Ligne CSV</h3>
-	<p></p>
+	<p>
+		Ajoute une ligne au fichier CSV temporaire. Il faut ensuite remplir les colonnes de la ligne, habituellement 
+		avec une combinaison d'éléments Texte (pour les valeur "en dur") et d'éléments Valeur CSV (pour tirer des
+		valeurs du portfolio).</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='csv-value'>Valeur CSV</h3>
-	<p></p>
+	<p>Équivalent de l'élément d'affichage Nœud pour écrire dans un fichier CSV.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li><code>Type nœud</code> Type de l'élément à sélectionner (liste déroulante des choix possibles).</li>
@@ -803,10 +803,4 @@ sidebar:
 		</li>
 	</ul>
 </article>
-
-
-
-<h2 id='css'>Mise en forme</h2>
-
-<h2 id='edition'>Édition</h2>
 
