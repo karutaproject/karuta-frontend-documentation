@@ -42,7 +42,7 @@ report_fr:
           url: /report_fr#row
         - title: "Cellule"
           url: /report_fr#cell
-     - Éléments d'affichage
+     - "Éléments d'affichage"
        children:     
         - title: "Texte"
           url: /report_fr#text
