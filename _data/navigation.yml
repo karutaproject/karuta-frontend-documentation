@@ -62,8 +62,8 @@ report_fr:
         url: /report_fr#firstname-lastname
       - title: "Pour chaque nœud"
         url: /report_fr#for-each-node      
-#      - title: "Pour chaque personne"
-#       url: /report_fr#for-each-person
+      - title: "Pour chaque personne"
+        url: /report_fr#for-each-person
       - title: "Pour chaque portfolio"
         url: /report_fr#for-each-portfolio
       - title: "Pour chaque nœud de portfolio"
