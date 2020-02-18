@@ -34,48 +34,69 @@ report_fr:
   - title: Commandes
     url: /report_fr#commandes
     children:
-      - title: "ForEachPortfolio"
-        url: /report_fr#for-each-portfolio
-      - title: "ForEachPortfolioNode"
-        url: /report_fr#for-each-portfolio-node
-      - title: "ForEachPerson"
-        url: /report_fr#for-each-person
-      - title: "ForEachNode"
-        url: /report_fr#for-each-node
-      - title: "ForEachLine"
-        url: /report_fr#for-each-line
       - title: "Table"
         url: /report_fr#table
-      - title: "Row"
+      - title: "Rangée"
         url: /report_fr#row
-      - title: "Cell"
+      - title: "Cellule"
         url: /report_fr#cell
-      - title: "Text"
+      - title: "Texte"
         url: /report_fr#text
-      - title: "Node"
+      - title: "Nœud"
         url: /report_fr#node
-      - title: "Aggregate"
-        url: /report_fr#aggregate
       - title: "URL2Unit"
         url: /report_fr#url2unit
+      - title: "Afficher les partages"
+        url: /report_fr#show-sharing
+      - title: "Code QR"
+        url: /report_fr#qrcode
+      - title: "Europass"
+        url: /report_fr#europass
+      - title: "Login utilisateur"
+        url: /report_fr#username
+      - title: "Prénom utilisateur"
+        url: /report_fr#firstname
+      - title: "Nom famille utilisateur"
+        url: /report_fr#lastname
+      - title: "Prénom et nom famille"
+        url: /report_fr#firstname-lastname
+      - title: "Pour chaque nœud"
+        url: /report_fr#for-each-node
+      - title: "Pour chaque personne"
+        url: /report_fr#for-each-person
+      - title: "Pour chaque portfolio"
+        url: /report_fr#for-each-portfolio
+      - title: "Pour chaque nœud de portfolio"
+        url: /report_fr#for-each-portfolio-node
+      - title: "Pour chaque ligne"
+        url: /report_fr#for-each-line
+      - title: "Boucle"
+        url: /report_fr#loop
+      - title: "Monter au parent"
+        url: /report_fr#go-parent
+      - title: "Si Alors Sinon"
+        url: /report_fr#if-then-else
+      - title: "Variable"
+        url: /report_fr#report-variable
+      - title: "Agrégat"
+        url: /report_fr#aggregate
+      - title: "Opération"
+        url: /report_fr#operation
       - title: "SVG"
         url: /report_fr#svg
-      - title: "Draw Web Title"
+      - title: "Titre SVG"
         url: /report_fr#draw-web-title
-      - title: "Draw Web Axis"
+      - title: "Axe SVG"
         url: /report_fr#draw-web-axis
-      - title: "Draw Web Line"
+      - title: "Courbe SVG"
         url: /report_fr#draw-web-line
-      - title: "Show Sharing"
-        url: /report_fr#show-sharing
-      - title: "Go Parent"
-        url: /report_fr#go-parent
-      - title: "QR Code"
-        url: /report_fr#qrcode
-  - title: Mise en forme
-    url: /report_fr#css
-  - title: Édition
-    url: /report_fr#edition
+  - title: Commandes CSV
+    url: /report_fr#commandesCSV
+    children:
+      - title: "Ligne CSV"
+        url: /report_fr#csv-line
+      - title: "Valeur CSV"
+        url: /report_fr#csv-value
   - title: Langues
     children:
       - title: "English"
