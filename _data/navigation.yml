@@ -34,64 +34,74 @@ report_fr:
   - title: Commandes
     url: /report_fr#commandes
     children:
-     - title: "Éléments de constrution"
-     children: 
-      - title: "Table"
-        url: /report_fr#table
-      - title: "Rangée"
-        url: /report_fr#row
-      - title: "Cellule"
-        url: /report_fr#cell
-      - title: "Texte"
-        url: /report_fr#text
-      - title: "Nœud"
-        url: /report_fr#node
-      - title: "URL2Unit"
-        url: /report_fr#url2unit
-      - title: "Afficher les partages"
-        url: /report_fr#show-sharing
-      - title: "Code QR"
-        url: /report_fr#qrcode
-      - title: "Europass"
-        url: /report_fr#europass
-      - title: "Login utilisateur"
-        url: /report_fr#username
-      - title: "Prénom utilisateur"
-        url: /report_fr#firstname
-      - title: "Nom famille utilisateur"
-        url: /report_fr#lastname
-      - title: "Prénom et nom famille"
-        url: /report_fr#firstname-lastname
-      - title: "Pour chaque nœud"
-        url: /report_fr#for-each-node      
-#      - title: "Pour chaque personne"
-#        url: /report_fr#for-each-person
-      - title: "Pour chaque portfolio"
-        url: /report_fr#for-each-portfolio
-      - title: "Pour chaque nœud de portfolio"
-        url: /report_fr#for-each-portfolio-node
-      - title: "Pour chaque ligne"
-        url: /report_fr#for-each-line
-      - title: "Boucle"
-        url: /report_fr#loop
-      - title: "Monter au parent"
-        url: /report_fr#go-parent
-      - title: "Si Alors Sinon"
-        url: /report_fr#if-then-else
-      - title: "Variable"
-        url: /report_fr#report-variable
-      - title: "Agrégat"
-        url: /report_fr#aggregate
-      - title: "Opération"
-        url: /report_fr#operation
-      - title: "SVG"
-        url: /report_fr#svg
-      - title: "Titre SVG"
-        url: /report_fr#draw-web-title
-      - title: "Axe SVG"
-        url: /report_fr#draw-web-axis
-      - title: "Courbe SVG"
-        url: /report_fr#draw-web-line
+      - title: "Éléments de construction de tableau"
+      children: 
+        - title: "Table"
+          url: /report_fr#table
+        - title: "Rangée"
+          url: /report_fr#row
+        - title: "Cellule"
+          url: /report_fr#cell
+      - Éléments d'affichage
+      children:     
+        - title: "Texte"
+          url: /report_fr#text
+        - title: "Nœud"
+          url: /report_fr#node
+        - title: "URL2Unit"
+          url: /report_fr#url2unit
+        - title: "Afficher les partages"
+          url: /report_fr#show-sharing
+        - title: "Code QR"
+          url: /report_fr#qrcode
+        - title: "Europass"
+          url: /report_fr#europass
+        - title: "Login utilisateur"
+          url: /report_fr#username
+        - title: "Prénom utilisateur"
+          url: /report_fr#firstname
+        - title: "Nom famille utilisateur"
+          url: /report_fr#lastname
+        - title: "Prénom et nom famille"
+          url: /report_fr#firstname-lastname
+     - title: "Boucles"
+     children:     
+        - title: "Pour chaque nœud"
+          url: /report_fr#for-each-node      
+#        - title: "Pour chaque personne"
+#          url: /report_fr#for-each-person
+        - title: "Pour chaque portfolio"
+          url: /report_fr#for-each-portfolio
+        - title: "Pour chaque nœud de portfolio"
+          url: /report_fr#for-each-portfolio-node
+        - title: "Pour chaque ligne"
+          url: /report_fr#for-each-line
+        - title: "Boucle"
+          url: /report_fr#loop
+     - title: "Instructions"
+     children:     
+        - title: "Monter au parent"
+          url: /report_fr#go-parent
+        - title: "Si Alors Sinon"
+          url: /report_fr#if-then-else
+     - title: "Variables et opérations"
+     children:     
+        - title: "Variable"
+          url: /report_fr#report-variable
+        - title: "Agrégat"
+          url: /report_fr#aggregate
+        - title: "Opération"
+          url: /report_fr#operation
+     - title: "Composantes SVG"
+     children:     
+        - title: "SVG"
+          url: /report_fr#svg
+        - title: "Titre SVG"
+          url: /report_fr#draw-web-title
+        - title: "Axe SVG"
+          url: /report_fr#draw-web-axis
+        - title: "Courbe SVG"
+          url: /report_fr#draw-web-line
   - title: Commandes CSV
     url: /report_fr#commandesCSV
     children:
