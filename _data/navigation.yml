@@ -34,16 +34,16 @@ report_fr:
   - title: Commandes
     url: /report_fr#commandes
     children:
-      - title: "Éléments de construction de tableau"
-      children: 
+     - title: "Éléments de construction de tableau"
+       children: 
         - title: "Table"
           url: /report_fr#table
         - title: "Rangée"
           url: /report_fr#row
         - title: "Cellule"
           url: /report_fr#cell
-      - Éléments d'affichage
-      children:     
+     - Éléments d'affichage
+       children:     
         - title: "Texte"
           url: /report_fr#text
         - title: "Nœud"
@@ -65,7 +65,7 @@ report_fr:
         - title: "Prénom et nom famille"
           url: /report_fr#firstname-lastname
      - title: "Boucles"
-     children:     
+       children:     
         - title: "Pour chaque nœud"
           url: /report_fr#for-each-node      
 #        - title: "Pour chaque personne"
@@ -79,13 +79,13 @@ report_fr:
         - title: "Boucle"
           url: /report_fr#loop
      - title: "Instructions"
-     children:     
+       children:     
         - title: "Monter au parent"
           url: /report_fr#go-parent
         - title: "Si Alors Sinon"
           url: /report_fr#if-then-else
      - title: "Variables et opérations"
-     children:     
+       children:     
         - title: "Variable"
           url: /report_fr#report-variable
         - title: "Agrégat"
@@ -93,7 +93,7 @@ report_fr:
         - title: "Opération"
           url: /report_fr#operation
      - title: "Composantes SVG"
-     children:     
+       children:     
         - title: "SVG"
           url: /report_fr#svg
         - title: "Titre SVG"
