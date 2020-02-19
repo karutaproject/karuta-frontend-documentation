@@ -100,7 +100,7 @@ sidebar:
 	<li><a href='#share-tree'><code>Partager arbre</code></a></li>
 	<li><a href='#unshare-tree'><code>Départager arbre</code></a></li>
 	<li><a href='#update-tree-root'><code>Mise à jour racine arbre</code></a></li>
-	<li><a href='#re-instantiate-tree'><code>Réinstancier arbre</code></a></li>
+	<li><a href='#re-instantiate-tree'><code>Ré-instancier arbre</code></a></li>
 	<li><a href='#set-owner'><code>Mise à jour propriétaire</code></a></li>
 </ul>
 <h4>Groupes d'utilisateurs</h4>
@@ -321,15 +321,16 @@ sidebar:
 	<ul>
 		<li>
 			<code>Sélection arbre</code> Sélectionner l'identifiant du portfolio concerné par le partage. 
-			Cet identifiant a précédement été attribué soit dans un élément CreateTree ou dans un élément SelectTree.
+			Cet identifiant a précédement été attribué soit dans un élément <code>CreateTree</code> ou dans 
+			un élément <code>SelectTree</code>.
 		</li>
 		<li>
-			<code>Personne</code> Login du compte utilisateur. Ajouter un élément <i>variable</i> pour puiser 
+			<code>Login utilisateur</code> Login du compte utilisateur. Ajouter un élément <i>variable</i> pour puiser 
 			l'identifiant dans une variable globale ou locale du fichier CSV, ou un élément <i>valeur</i> 
 			pour spécifier directement l'identifiant de l'utilisateur.
 		</li>
 		<li>
-			<code>Rôle</code> Rôle de l'utilisateur dans le portfolio (exemple&nbsp;: etudiant). Ajouter un 
+			<code>Rôle utilisateur</code> Rôle de l'utilisateur dans le portfolio (exemple&nbsp;: etudiant). Ajouter un 
 			élément <i>variable</i> pour puiser le rôle dans une variable globale ou locale du fichier CSV, ou 
 			un élément <i>valeur</i> pour spécifier directement le rôle de l'utilisateur.
 		</li>
@@ -339,8 +340,25 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='unshare-tree'>Départager arbre</h3>
-	<p>
-	</p>
+	<p>Départager un portfolio d'un compte utilisateur dans un rôle spécifié.</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Sélection arbre</code> Sélectionner l'identifiant du portfolio concerné. 
+			Cet identifiant a précédement été attribué soit dans un élément <code>CreateTree</code> ou dans 
+			un élément <code>SelectTree</code>.
+		</li>
+		<li>
+			<code>Login utilisateur</code> Login du compte utilisateur. Ajouter un élément <i>variable</i> pour puiser 
+			l'identifiant dans une variable globale ou locale du fichier CSV, ou un élément <i>valeur</i> 
+			pour spécifier directement l'identifiant de l'utilisateur.
+		</li>
+		<li>
+			<code>Rôle utilisateur</code> Rôle de l'utilisateur dans le portfolio (exemple&nbsp;: etudiant). Ajouter un 
+			élément <i>variable</i> pour puiser le rôle dans une variable globale ou locale du fichier CSV, ou 
+			un élément <i>valeur</i> pour spécifier directement le rôle de l'utilisateur.
+		</li>
+	</ul>
 </article>
 
 <article>
@@ -350,32 +368,56 @@ sidebar:
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Ancien code</code> Ajouter des éléments <i>variable</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs.
+			<code>Sélection arbre</code> Sélectionner l'identifiant du portfolio concerné. 
+			Cet identifiant a précédement été attribué soit dans un élément <code>CreateTree</code> ou dans 
+			un élément <code>SelectTree</code>.
 		</li>
 		<li>
-			<code>Nouveau code</code> Ajouter des éléments <i>variable</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs.
+			<code>Nouveau code</code> Code à attribuer au portfolio. Format&nbsp;: 
+			<i>code du projet.code du portfolio</i>. Ajouter des éléments <i>variable</i> pour des variables 
+			globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des 
+			valeurs.
 		</li>
 		<li>
-			<code>Nouveau libellé</code> Ajouter des éléments <i>variable</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs.
+			<code>Nouveau libellé</code> Libellé à attribuer au portfolio. Ajouter des éléments <i>variable</i> pour 
+			des variables globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier 
+			directement des valeurs.
 		</li>
 	</ul>
+	<p>Note&nbsp;: Il faut absolument renseigner les deux champs, même si on ne veut en modifier qu'un seul.
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='re-instantiate-tree'>Réinstancier arbre</h3>
-	<p>
-	</p>
+	<h3 id='re-instantiate-tree'>Ré-instancier arbre</h3>
+	<p>Il faut ré-instancier un portfolio lorsqu'on ajoute un nouveau rôle dans une instance de portfolio.</p>
+		<ul>
+		<li>
+			<code>Sélection arbre</code> Sélectionner l'identifiant du portfolio à ré-instancier. 
+			Cet identifiant a précédement été attribué soit dans un élément <code>CreateTree</code> ou dans 
+			un élément <code>SelectTree</code>.
+		</li>
+	</ul>
+	
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='set-owner'>Mise à jour propriétaire</h3>
-	<p>
-	</p>
+	<p>Changer le propriétaire d'un portfolio.</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Sélection arbre</code> Sélectionner l'identifiant du portfolio concerné. 
+			Cet identifiant a précédement été attribué soit dans un élément <code>CreateTree</code> ou dans 
+			un élément <code>SelectTree</code>.
+		</li>
+		<li>
+			<code>Login utilisateur</code> Login du compte utilisateur. Ajouter un élément <i>variable</i> pour puiser 
+			l'identifiant dans une variable globale ou locale du fichier CSV, ou un élément <i>valeur</i> 
+			pour spécifier directement l'identifiant de l'utilisateur.
+		</li>
+	</ul>
 </article>
 
 <article>
