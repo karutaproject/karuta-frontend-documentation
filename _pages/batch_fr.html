@@ -201,14 +201,34 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='inactivate-person'>Désactiver utilisateur</h3>
 	<p>
+		Désactiver un compte utilisateur. Désactiver un compte plutôt que de le supprimer permet de conserver 
+		les partages aux portfolios et les associations aux groupes d'utilisateurs en prévision d'une réactivation 
+		ultérieure.
 	</p>
+	<p>Champ à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Identifiant</code> Identifiant unique de l'utilisateur à désactiver (son login). 
+			Ajouter un élément <i>variable</i> pour puiser l'identifiant dans une variable globale ou 
+			locale du fichier CSV, ou un élément <i>valeur</i> pour spécifier directement l'identifiant 
+			de l'utilisateur.
+		</li>
+	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='activate-person'>Activer utilisateur</h3>
-	<p>
-	</p>
+	<p>Ré-activer un compte utilisateur précédement désactivé.</p>
+	<p>Champ à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Identifiant</code> Identifiant unique de l'utilisateur à ré-activer (son login). 
+			Ajouter un élément <i>variable</i> pour puiser l'identifiant dans une variable globale ou 
+			locale du fichier CSV, ou un élément <i>valeur</i> pour spécifier directement l'identifiant 
+			de l'utilisateur.
+		</li>
+	</ul>
 </article>
 
 <article>
@@ -233,8 +253,8 @@ sidebar:
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>ID</code> Attribuer un ID qui sera utilisé dans des commandes subséquentes pour 
-			faire référence à ce portfolio (par exemple pour le partager avec un utilisateur).
+			<code>Référence arbre</code> Attribuer un identifiant qui sera utilisé dans des commandes subséquentes 
+			pour faire référence à ce portfolio (par exemple pour le partager avec un utilisateur).
 		</li>
 		<li>
 			<code>Modèle</code> Code du modèle de portfolio à instancier. Format&nbsp;: 
@@ -243,13 +263,13 @@ sidebar:
 			directement des valeurs.
 		</li>
 		<li>
-			<code>Code</code> Code du portfolio qui sera créé. Format&nbsp;: 
-			<i>code du projet.code du portfolio</i>. Ajouter des éléments <i>variable</i> pour des variables 
-			globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement 
+			<code>Code</code> Code de l'instance de portfolio qui sera créée. Format&nbsp;: 
+			<i>code du projet.code de l'instance de portfolio</i>. Ajouter des éléments <i>variable</i> pour des 
+			variables globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement 
 			des valeurs.	
 		</li>
 		<li>
-			<code>Libellé</code> Libellé du portfolio qui sera créé. Ajouter des éléments <i>variable</i> 
+			<code>Libellé</code> Libellé de l'instance de portfolio qui sera créée. Ajouter des éléments <i>variable</i> 
 			pour des variables globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour 
 			spécifier directement des valeurs.
 		</li>
@@ -259,12 +279,15 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='select-tree'>Sélectionner arbre</h3>
-	<p>Sélectionner un portfolio qui sera ensuite référencé dans d'autres commandes du script.</p>
+	<p>
+		Sélectionner un portfolio qui sera référencé dans des commandes subséquentes (par exemple pour le partager 
+		avec un utilisateur).
+	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>ID</code> Attribuer un ID qui sera utilisé dans des commandes subséquentes pour 
-			faire référence à ce portfolio.
+			<code>Référence arbre</code> Attribuer l'identifiant qui sera utilisé dans les commandes subséquentes 
+			pour faire référence à ce portfolio.
 		</li>
 		<li>
 			<code>Code</code> Code du portfolio à sélectionner. Format&nbsp;: 
@@ -293,22 +316,22 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='share-tree'>Partager arbre</h3>
-	<p>Partager un portfolio avec un usager dans un rôle spécifié.</p>
+	<p>Partager un portfolio avec un compte utilisateur dans un rôle spécifié.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Sélection arbre</code> Sélectionner l'ID du portfolio concerné par le partage. 
-			L'ID a précédement été attribué soit dans un élément CreateTree ou dans un élément SelectTree.
+			<code>Sélection arbre</code> Sélectionner l'identifiant du portfolio concerné par le partage. 
+			Cet identifiant a précédement été attribué soit dans un élément CreateTree ou dans un élément SelectTree.
 		</li>
 		<li>
-			<code>Personne</code> Identifiant de l'usager. Ajouter un élément <i>variable</i> pour puiser 
+			<code>Personne</code> Login du compte utilisateur. Ajouter un élément <i>variable</i> pour puiser 
 			l'identifiant dans une variable globale ou locale du fichier CSV, ou un élément <i>valeur</i> 
-			pour spécifier directement l'identifiant de l'usager.
+			pour spécifier directement l'identifiant de l'utilisateur.
 		</li>
 		<li>
-			<code>Rôle</code> Rôle de l'usager dans le portfolio (exemple&nbsp;: etudiant). Ajouter un 
+			<code>Rôle</code> Rôle de l'utilisateur dans le portfolio (exemple&nbsp;: etudiant). Ajouter un 
 			élément <i>variable</i> pour puiser le rôle dans une variable globale ou locale du fichier CSV, ou 
-			un élément <i>valeur</i> pour spécifier directement le rôle de l'usager.
+			un élément <i>valeur</i> pour spécifier directement le rôle de l'utilisateur.
 		</li>
 	</ul>
 </article>
