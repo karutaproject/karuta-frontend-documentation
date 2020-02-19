@@ -53,7 +53,7 @@ sidebar:
 		qui ont les même valeurs pour chaque usager à créer (par exemple, les codes des modèles de portfolio à 
 		instancier, un code de programme ou une session). Dans le script de batch, les références aux variables 
 		globales sont précédées de <code>//</code>.</br>
-		<code>model_code</code> est un mot réservé : c'est le code du portfolio contenant le script de batch 
+		<code>model_code</code> en cellule A1 est un mot réservé : c'est le code du portfolio contenant le script de batch 
 		à exécuter. 
 	</li>
 	<li>
@@ -80,59 +80,83 @@ sidebar:
 <!- =========================================== ->
 <h2>Les commandes</h2>
 <!- =========================================== ->
-<p>Commande d'exécution&nbsp;:</p>
+<h4>Instrutions</h4>
 <ul>
-	<li><a href='#for-each-line'><code>ForEachLine</code></a></li>
+	<li><a href='#for-each-line'><code>Pour chaque ligne</code></a></li>
+	<li><a href='#for-each-tree'><code>Pour chaque arbre</code></a></li>
+	<li><a href='#if-then-else'><code>Si Alors Sinon</code></a></li>
 </ul>
-<p>Commandes pour les usagers&nbsp;:</p>
+<h4>Composantes utilisateurs</h4>
 <ul>
-	<li><a href='#create-person'><code>CreatePerson</code></a></li>
-	<li><a href='#delete-person'><code>DeletePerson</code></a></li>
-	<li><a href='#join-usergroup'><code>JoinUserGroup</code></a></li>
-	<li><a href='#leave-usergroup'><code>LeaveUserGroup</code></a></li>
+	<li><a href='#create-person'><code>Créer utilisateur</code></a></li>
+	<li><a href='#inactivate-person'><code>Désactiver utilisateur</code></a></li>
+	<li><a href='#activate-person'><code>Activer utilisateur</code></a></li>
+	<li><a href='#delete-person'><code>Supprimer utilisateur</code></a></li>
 </ul>
-<p>Commandes pour les portfolios&nbsp;:</p>
+<h4>Composantes arbre</h4>
 <ul>
-	<li><a href='#create-tree'><code>CreateTree</code></a></li>
-	<li><a href='#share-tree'><code>ShareTree</code></a></li>
-	<li><a href='#unshare-tree'><code>UnshareTree</code></a></li>
-	<li><a href='#select-tree'><code>SelectTree</code></a></li>
-	<li><a href='#delete-tree'><code>DeleteTree</code></a></li>
+	<li><a href='#create-tree'><code>Créer arbre</code></a></li>
+	<li><a href='#select-tree'><code>Sélectionner arbre</code></a></li>
+	<li><a href='#delete-tree'><code>Supprimer arbre</code></a></li>
+	<li><a href='#share-tree'><code>Partager arbre</code></a></li>
+	<li><a href='#unshare-tree'><code>Départager arbre</code></a></li>
+	<li><a href='#update-tree-root'><code>Mise à jour racine arbre</code></a></li>
+	<li><a href='#re-instantiate-tree'><code>Réinstancier arbre</code></a></li>
+	<li><a href='#set-owner'><code>Mise à jour propriétaire</code></a></li>
 </ul>
-<p>Commande pour les groupes de portfolios&nbsp;:</p>
+<h4>Groupes d'utilisateurs</h4>
 <ul>
-	<li><a href='#join-portfoliogroup'><code>JoinPortfolioGroup</code></a></li>
+	<li><a href='#create-usergroup'><code>Créer groupe utilisateur</code></a></li>
+	<li><a href='#join-usergroup'><code>Joindre groupe utilisateurs</code></a></li>
+	<li><a href='#leave-usergroup'><code>Quitter groupe utilisateurs</code></a></li>
+	<li><a href='#share-usergroup'><code>Partager groupe utilisateurs avec portfolio</code></a></li>
+	<li><a href='#unshare-usergroup'><code>Départager groupe utilisateurs de portfolio</code></a></li>
+	<li><a href='#share-groups'><code>Partager utilisateurs groupe avec portfolios groupe</code></a></li>
 </ul>
-<p>Commandes pour les groupes d'usagers&nbsp;:</p>
+<h4>Groupes de portfolios</h4>
 <ul>
-	<li><a href='#share-usergroup'><code>ShareUserGroup</code></a></li>
-	<li><a href='#unshare-usergroup'><code>UnshareUserGroup</code></li>
+	<li><a href='#create-portfoliogroup'><code>Créer groupe portfolios</code></a></li>
+	<li><a href='#join-portfoliogroup'><code>Joindre groupe portfolios</code></a></li>
+	<li><a href='#leave-portfoliogroup'><code>Quitter groupe portfolios</code></a></li>
+	<li><a href='#share-portfoliogroup'><code>Partager utilisateur avec groupe portfolios</code></a></li>
+	<li><a href='#unshare-portfoliogroup'><code>Départager utilisateur de groupe portfolios</code></a></li>
 </ul>
-<p>Commandes pour ajout dans un portfolio&nbsp;:</p>
+<h4>Composantes nœuds</h4>
 <ul>
-	<li><a href='#import-node'><code>ImportNode</code></a></li>
-	<li><a href='#move-up'><code>MoveUp</code></a></li>
+	<li><a href='#import-node'><code>Importer nœud</code></a></li>
+	<li><a href='#move-up'><code>Monter un niveau</code></a></li>
+	<li><a href='#delete-node'><code>MSupprimer nœud</code></a></li>
+	<li><a href='#update-node-resource'><code>Mise à jour ressource du nœud</code></a></li>
 </ul>
-<p>Commandes de mise à jour d'éléments de portfolio&nbsp;:</p>
+<h4>Composantes métadonnées</h4>
 <ul>
-	<li><a href='#update-field'><code>UpdateField</code></a></li>
-	<li><a href='#update-proxy'><code>UpdateProxy</code></a></li>
-	<li><a href='#update-dashboard'><code>UpdateDashboard</code></a></li>
-	<li><a href='#update-treeroot'><code>UpdateTreeRoot</code></a></li>
-	<li><a href='#update-noderesource'><code>UpdateNodeResource</code></a></li>
+	<li><a href='#update-metadata'><code>Mise à jour métadonnées</code></a></li>
+	<li><a href='#update-metadata-wad'><code>Mise à jour métadonnées WAD</code></li>
+	<li><a href='#update-rights'><code>Mise à jour droits</code></li>
 </ul>
-<p>Commandes de mise à jour de métadonnées&nbsp;:</p>
+<h4>Mise à jour ressources</h4>
 <ul>
-	<li><a href='#update-metadata-query'><code>UpdateMetadataQuery</code></a></li>
-	<li><a href='#update-metadata-menu'><code>UpdateMetadataMenu</code></a></li>
-	<li><a href='#update-metadata-inline'><code>UpdateMetadataInline</code></a></li>
-	<li><a href='#update-metadata'><code>UpdateMetadata</code></a></li>
-	<li><a href='#update-metadata-wad'><code>UpdateMetadataWad</code></li>
+	<li><a href='#update-resources'><code>Mise à jour ressources</code></a></li>
+	<li><a href='#update-field'><code>Mise à jour texte court</code></a></li>
+	<li><a href='#update-textfield'><code>Mise à jour texte long</code></a></li>
+	<li><a href='#update-calendar'><code>Mise à jour calendrier</code></a></li>
+	<li><a href='#update-document'><code>Mise à jour document</code></a></li>
+	<li><a href='#update-dashboard'><code>Mise à jour tableau de bord</code></a></li>
+	<li><a href='#update-item'><code>Mise à jour item</code></a></li>
+	<li><a href='#update-url2unit'><code>Mise à jour URL2Unit</code></a></li>
+	<li><a href='#update-proxy'><code>Mise à jour proxy</code></a></li>
+</ul>
+<h4>Composantes UUID</h4>
+<ul>
+	<li><a href='#uuid-components'><code>Composantes UUID</code></a></li>
+	<li><a href='#update-field-byid'><code>Mise à jour champ par UUID</code></a></li>
+	<li><a href='#reset-document-byid'><code>Mise à jour document par UUID</code></a></li>
+	<li><a href='#delete-node-byid'><code>Supprimer nœud par UUID</code></a></li>
 </ul>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='for-each-line'>ForEachLine</h3>
+	<h3 id='for-each-line'>Pour chaque ligne</h3>
 	<p>ForEachLine est une boucle et est généralement le point de départ d'un script de batch. 
 		Les commandes à l'intérieur de l'élément ForEachLine seront exécutées pour chaque 
 		ligne du fichier CSV (lignes 4+).
@@ -141,7 +165,21 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='create-person'>CreatePerson</h3>
+	<h3 id='for-each-tree'>Pour chaque arbre</h3>
+	<p>
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='if-then-else'>Si Alors Sinon</h3>
+	<p>
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='create-person'>Créer utilisateur</h3>
 	<p>Créer un usager. Ne pas oublier de remplacer les valeurs par défaut de cet élément par vos 
 		propres noms de variables locales (ligne 3 du fichier CSV).
 	</p>
@@ -162,7 +200,21 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='delete-person'>DeletePerson</h3>
+	<h3 id='inactivate-person'>Désactiver utilisateur</h3>
+	<p>
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='activate-person'>Activer utilisateur</h3>
+	<p>
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='delete-person'>Supprimer utilisateur</h3>
 	<p>Supprimer un usager. (Attention&nbsp;: supprimer un usager ne supprime pas ses portfolios!)</p>
 	<p>Champ à renseigner&nbsp;:</p>
 	<ul>
@@ -177,45 +229,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='join-usergroup'>JoinUserGroup</h3>
-	<p>Ajouter un usager à un groupe d'usagers.</p>
-	<p>Champs à renseigner&nbsp;:</p>
-	<ul>
-		<li>
-			<code>Personne</code> Identifiant de l'usager (son login). Ajouter un élément 
-			<i>select</i> pour puiser l'identifiant dans une variable globale ou locale du fichier CSV, 
-			ou un élément <i>value</i> pour spécifier directement l'identifiant de l'usager.
-		</li>
-		<li>
-			<code>Groupe</code> Nom du groupe d'usagers (exemple&nbsp;: enseignants2017). Ajouter 
-			un élément <i>select</i> pour puiser le nom dans une variable globale ou locale du fichier CSV, 
-			ou un élément <i>value</i> pour spécifier directement le nom du groupe d'usagers.
-		</li>
-	</ul>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='leave-usergroup'>LeaveUserGroup</h3>
-	<p>Retirer un usager d'un groupe d'usagers.</p>
-	<p>Champs à renseigner&nbsp;:</p>
-	<ul>
-		<li>
-			<code>Personne</code> Identifiant de l'usager (son login). Ajouter un élément 
-			<i>select</i> pour puiser l'identifiant dans une variable globale ou locale du fichier CSV, 
-			ou un élément <i>value</i> pour spécifier directement l'identifiant de l'usager.
-		</li>
-		<li>
-			<code>Groupe</code> Nom du groupe d'usagers (exemple&nbsp;: enseignants2017). Ajouter 
-			un élément <i>select</i> pour puiser le nom dans une variable globale ou locale du fichier CSV, 
-			ou un élément <i>value</i> pour spécifier directement le nom du groupe d'usagers.
-		</li>
-	</ul>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='create-tree'>CreateTree</h3>
+	<h3 id='create-tree'>Créer arbre</h3>
 	<p>Créer une instance de portfolio à partir d'un modèle de portfolio.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
@@ -245,7 +259,41 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='share-tree'>ShareTree</h3>
+	<h3 id='select-tree'>Sélectionner arbre</h3>
+	<p>Sélectionner un portfolio qui sera ensuite référencé dans d'autres commandes du script.</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>ID</code> Attribuer un ID qui sera utilisé dans des commandes subséquentes pour 
+			faire référence à ce portfolio.
+		</li>
+		<li>
+			<code>Code</code> Code du portfolio à sélectionner. Format&nbsp;: 
+			<i>code du projet.code du portfolio</i>. Ajouter des éléments <i>select</i> pour des variables 
+			globales ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement 
+			des valeurs.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='delete-tree'>Supprimer arbre</h3>
+	<p>Supprimer un portfolio.</p>
+	<p>Champ à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Code</code> Code du portfolio à supprimer. Format&nbsp;: 
+			<i>code du projet.code du portfolio</i>. Ajouter des éléments <i>select</i> pour des variables 
+			globales ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement 
+			des valeurs.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='share-tree'>Partager arbre</h3>
 	<p>Partager un portfolio avec un usager dans un rôle spécifié.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
@@ -268,59 +316,94 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='select-tree'>SelectTree</h3>
-	<p>Sélectionner un portfolio qui sera ensuite référencé dans d'autres commandes du script.</p>
+	<h3 id='unshare-tree'>Départager arbre</h3>
+	<p>
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-treeroot'>Mise à jour racine arbre</h3>
+	<p>Mettre à jour le code et le libellé d'un portfolio.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>ID</code> Attribuer un ID qui sera utilisé dans des commandes subséquentes pour 
-			faire référence à ce portfolio.
+			<code>Ancien code</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
 		</li>
 		<li>
-			<code>Code</code> Code du portfolio à sélectionner. Format&nbsp;: 
-			<i>code du projet.code du portfolio</i>. Ajouter des éléments <i>select</i> pour des variables 
-			globales ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement 
-			des valeurs.
+			<code>Nouveau code</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+		</li>
+		<li>
+			<code>Nouveau libellé</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
 		</li>
 	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='delete-tree'>DeleteTree</h3>
-	<p>Supprimer un portfolio.</p>
-	<p>Champ à renseigner&nbsp;:</p>
-	<ul>
-		<li>
-			<code>Code</code> Code du portfolio à supprimer. Format&nbsp;: 
-			<i>code du projet.code du portfolio</i>. Ajouter des éléments <i>select</i> pour des variables 
-			globales ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement 
-			des valeurs.
-		</li>
-	</ul>
+	<h3 id='re-instantiate-tree'>Réinstancier arbre</h3>
+	<p>
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='join-portfoliogroup'>JoinPortfolioGroup</h3>
-	<p>Ajouter un portfolio à un groupe de portfolios.</p>
+	<h3 id='set-owner'>Mise à jour propriétaire</h3>
+	<p>
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='create-usergroup'>Créer groupe utilisateurs</h3>
+	<p>
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='join-usergroup'>Joindre groupe utilisateurs</h3>
+	<p>Ajouter un usager à un groupe d'usagers.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Sélection arbre</code> Sélectionner l'ID du portfolio concerné par le partage. 
-			L'ID a précédement été attribué soit dans un élément CreateTree ou dans un élément SelectTree.
+			<code>Personne</code> Identifiant de l'usager (son login). Ajouter un élément 
+			<i>select</i> pour puiser l'identifiant dans une variable globale ou locale du fichier CSV, 
+			ou un élément <i>value</i> pour spécifier directement l'identifiant de l'usager.
 		</li>
 		<li>
-			<code>Groupe</code> Nom du groupe de portfolios (exemple&nbsp;: cohorte2017). Ajouter 
-			un élément <i>select</i> pour puiser le nom dans une variable globale ou locale du fichier CSV,
-			 ou un élément <i>value</i> pour spécifier directement le nom du groupe de portfolios.
+			<code>Groupe</code> Nom du groupe d'usagers (exemple&nbsp;: enseignants2017). Ajouter 
+			un élément <i>select</i> pour puiser le nom dans une variable globale ou locale du fichier CSV, 
+			ou un élément <i>value</i> pour spécifier directement le nom du groupe d'usagers.
 		</li>
 	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='share-usergroup'>ShareUserGroup</h3>
+	<h3 id='leave-usergroup'>Quitter groupe utilisateurs</h3>
+	<p>Retirer un usager d'un groupe d'usagers.</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Personne</code> Identifiant de l'usager (son login). Ajouter un élément 
+			<i>select</i> pour puiser l'identifiant dans une variable globale ou locale du fichier CSV, 
+			ou un élément <i>value</i> pour spécifier directement l'identifiant de l'usager.
+		</li>
+		<li>
+			<code>Groupe</code> Nom du groupe d'usagers (exemple&nbsp;: enseignants2017). Ajouter 
+			un élément <i>select</i> pour puiser le nom dans une variable globale ou locale du fichier CSV, 
+			ou un élément <i>value</i> pour spécifier directement le nom du groupe d'usagers.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='share-usergroup'>Partager groupe utilisateurs avec portfolio</h3>
 	<p>Partager un portfolio avec un groupe d'usagers dans un rôle spécifié.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
@@ -343,7 +426,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='unshare-usergroup'>UnshareUserGroup</h3>
+	<h3 id='unshare-usergroup'>Départager groupe utilisateurs de portfolio</h3>
 	<p>Départager un portfolio d'un groupe d'usagers dans un rôle spécifié.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
@@ -366,7 +449,60 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='import-node'>ImportNode</h3>
+	<h3 id='share-groups'>Partager utilisateurs groupe avec portfolios groupe</h3>
+	<p>
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='create-portfoliogroup'>Créer groupe portfolios</h3>
+	<p>
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='join-portfoliogroup'>Joindre groupe portfolios</h3>
+	<p>Ajouter un portfolio à un groupe de portfolios.</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Sélection arbre</code> Sélectionner l'ID du portfolio concerné par le partage. 
+			L'ID a précédement été attribué soit dans un élément CreateTree ou dans un élément SelectTree.
+		</li>
+		<li>
+			<code>Groupe</code> Nom du groupe de portfolios (exemple&nbsp;: cohorte2017). Ajouter 
+			un élément <i>select</i> pour puiser le nom dans une variable globale ou locale du fichier CSV,
+			 ou un élément <i>value</i> pour spécifier directement le nom du groupe de portfolios.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='leave-portfoliogroup'>Quitter groupe portfolios</h3>
+	<p>
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='share-portfoliogroup'>Partager utilisateur avec groupe portfolios</h3>
+	<p>
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='unshare-portfoliogroup'>Départager utilisateur de groupe portfolios</h3>
+	<p>
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='import-node'>Importer nœud</h3>
 	<p>Importer un élément dans un portfolio.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
@@ -387,7 +523,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='move-up'>MoveUp</h3>
+	<h3 id='move-up'>Monter un niveau</h3>
 	<p>Monter un élément d'une position dans l'arbre XML.</p>
 	<p>Champ à renseigner&nbsp;:</p>
 	<ul>
@@ -398,6 +534,99 @@ sidebar:
 		</li>
 	</ul>
 </article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-node-resource'>Mise à jour ressource du nœud</h3>
+	<p>Mettre à jour une ressource quelconque dans une instance de portfolio.</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Sélection</code> C'est le noeud de ressource que l'on veut mettre à jour. 
+			Format&nbsp;: <i>ID.tag sémantique</i> ou <i>#current_node</i>. 
+			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree soit dans un élément 
+			SelectTree, et le tag sémantique est celui du noeud de ressource à mettre à jour dans le portfolio. <i>#current_node</i> est un mot réservé.
+			 Dans ce cas la ressource à mettre à jour est la ressource courante. Cela permet, par exemple, de mettre à jour une ressource qui 
+			 vient d'être importée dans le portfolio.
+		</li>
+		<li>
+			<code>Code</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+		</li>
+		<li>
+			<code>Libellé</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+		</li>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='delete-node'>Supprimer nœud</h3>
+	<p>
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-metadata'>Mise à jour métadonnées</h3>
+	<p>Commande plus générale que les précédentes qui permet de mettre à jour n'importe quel attribut 
+		de metadonnée d'un noeud.
+	</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Sélection</code> Noeud que l'on veut mettre à jour. Format&nbsp;: 
+			<i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit dans un élément 
+			CreateTree ou dans un élément SelectTree.
+		</li>
+		<li>
+			<code>Attribut</code> Nom de l'attibut à mettre à jour.
+		</li>
+		<li>
+			<code>Valeur</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+		
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-metadata-wad'>Mise à jour métadonnées WAD</h3>
+	<p>Commande plus générale que les précédentes qui permet de mettre à jour n'importe quel attribut 
+		metadataWad d'un noeud.
+	</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Sélection</code> Noeud que l'on veut mettre à jour. Format&nbsp;: 
+			<i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit dans un élément 
+			CreateTree ou dans un élément SelectTree.
+		</li>
+		<li>
+			<code>Attribut</code> Nom de l'attibut à mettre à jour.
+		</li>
+		<li>
+			<code>Valeur</code> Ajouter des éléments <i>select</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-rights'>Mise à jour droits</h3>
+	<p>
+	</p>
+</article>
+
+
+
+
+
+
+
+
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
@@ -466,158 +695,5 @@ sidebar:
 	</ul>
 </article>
 
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-treeroot'>UpdateTreeRoot</h3>
-	<p>Mettre à jour le code et le libellé d'un portfolio.</p>
-	<p>Champs à renseigner&nbsp;:</p>
-	<ul>
-		<li>
-			<code>Ancien code</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
-		</li>
-		<li>
-			<code>Nouveau code</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
-		</li>
-		<li>
-			<code>Nouveau libellé</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
-		</li>
-	</ul>
-</article>
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-noderesource'>UpdateNodeResource</h3>
-	<p>Mettre à jour une ressource quelconque dans une instance de portfolio.</p>
-	<p>Champs à renseigner&nbsp;:</p>
-	<ul>
-		<li>
-			<code>Sélection</code> C'est le noeud de ressource que l'on veut mettre à jour. 
-			Format&nbsp;: <i>ID.tag sémantique</i> ou <i>#current_node</i>. 
-			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree soit dans un élément 
-			SelectTree, et le tag sémantique est celui du noeud de ressource à mettre à jour dans le portfolio. <i>#current_node</i> est un mot réservé.
-			 Dans ce cas la ressource à mettre à jour est la ressource courante. Cela permet, par exemple, de mettre à jour une ressource qui 
-			 vient d'être importée dans le portfolio.
-		</li>
-		<li>
-			<code>Code</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
-		</li>
-		<li>
-			<code>Libellé</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
-		</li>
-</article>
 
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-metadata-query'>UpdateMetadataQuery</h3>
-	<p>Mettre à jour l'attribut recherche (Query) d'un noeud.</p>
-	<p>Champs à renseigner&nbsp;:</p>
-	<ul>
-		<li>
-			<code>Sélection</code> Noeud que l'on veut mettre à jour. 
-			Format&nbsp;: <i>ID.tag sémantique</i> ou <i>#current_node</i>. 
-			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree soit dans un élément 
-			SelectTree, et le tag sémantique est celui de la ressource à mettre à jour dans le portfolio. <i>#current_node</i> est un mot réservé.
-			 Dans ce cas la ressource à mettre à jour est la ressource courante. Cela permet, par exemple, de mettre à jour une ressource qui 
-			 vient d'être importée dans le portfolio.
-		</li>
-		<li>
-			<code>Valeur query</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
-		</li>
-	</ul>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-metadata-menu'>UpdateMetadataMenu</h3>
-	<p>Mettre à jour l'attribut Menu d'un noeud.</p>
-	<p>Champs à renseigner&nbsp;:</p>
-	<ul>
-		<li>
-			<code>Sélection</code> Noeud que l'on veut mettre à jour. 
-			Format&nbsp;: <i>ID.tag sémantique</i> ou <i>#current_node</i>. 
-			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree soit dans un élément 
-			SelectTree, et le tag sémantique est celui de la ressource à mettre à jour dans le portfolio. <i>#current_node</i> est un mot réservé.
-			 Dans ce cas la ressource à mettre à jour est la ressource courante. Cela permet, par exemple, de mettre à jour une ressource qui 
-			 vient d'être importée dans le portfolio.
-		</li>
-		<li>
-			<code>Valeur query</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
-		</li>
-	</ul>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-metadata-inline'>UpdateMetadataInline</h3>
-	<p>Mettre à jour l'attribut Édition en ligne (Inline Editing) d'un noeud.</p>
-	<p>Champs à renseigner&nbsp;:</p>
-	<ul>
-		<li>
-			<code>Sélection</code> Noeud que l'on veut mettre à jour. 
-			Format&nbsp;: <i>ID.tag sémantique</i> ou <i>#current_node</i>. 
-			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree soit dans un élément 
-			SelectTree, et le tag sémantique est celui de la ressource à mettre à jour dans le portfolio. <i>#current_node</i> est un mot réservé.
-			 Dans ce cas la ressource à mettre à jour est la ressource courante. Cela permet, par exemple, de mettre à jour une ressource qui 
-			 vient d'être importée dans le portfolio.
-		</li>
-		<li>
-			<code>Valeur inline (Y ou N)</code> Ajouter un élément <i>select</i> pour une variable 
-			globale ou locale du fichier CSV ou un élément <i>value</i> pour spécifier directement la 
-			valeur.
-		</li>
-	</ul>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-metadata'>UpdateMetadata</h3>
-	<p>Commande plus générale que les précédentes qui permet de mettre à jour n'importe quel attribut 
-		de metadonnée d'un noeud.
-	</p>
-	<p>Champs à renseigner&nbsp;:</p>
-	<ul>
-		<li>
-			<code>Sélection</code> Noeud que l'on veut mettre à jour. Format&nbsp;: 
-			<i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit dans un élément 
-			CreateTree ou dans un élément SelectTree.
-		</li>
-		<li>
-			<code>Attribut</code> Nom de l'attibut à mettre à jour.
-		</li>
-		<li>
-			<code>Valeur</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
-		
-		</li>
-	</ul>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-metadata-wad'>UpdateMetadataWad</h3>
-	<p>Commande plus générale que les précédentes qui permet de mettre à jour n'importe quel attribut 
-		metadataWad d'un noeud.
-	</p>
-	<p>Champs à renseigner&nbsp;:</p>
-	<ul>
-		<li>
-			<code>Sélection</code> Noeud que l'on veut mettre à jour. Format&nbsp;: 
-			<i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit dans un élément 
-			CreateTree ou dans un élément SelectTree.
-		</li>
-		<li>
-			<code>Attribut</code> Nom de l'attibut à mettre à jour.
-		</li>
-		<li>
-			<code>Valeur</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
-		</li>
-	</ul>
-</article>
 
