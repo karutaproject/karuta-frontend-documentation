@@ -214,14 +214,14 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='delete-person'>Supprimer utilisateur</h3>
-	<p>Supprimer un usager. (Attention&nbsp;: supprimer un usager ne supprime pas ses portfolios!)</p>
+	<p>Supprimer un compte utilisateur. (Attention&nbsp;: supprimer un utilisateur ne supprime pas ses portfolios!)</p>
 	<p>Champ à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Identifiant</code> Identifiant unique de l'usager à supprimer (son login). 
-			Ajouter un élément <i>select</i> pour puiser l'identifiant dans une variable globale ou 
-			locale du fichier CSV, ou un élément <i>value</i> pour spécifier directement l'identifiant 
-			de l'usager.
+			<code>Identifiant</code> Identifiant unique de l'utilisateur à supprimer (son login). 
+			Ajouter un élément <i>variable</i> pour puiser l'identifiant dans une variable globale ou 
+			locale du fichier CSV, ou un élément <i>valeur</i> pour spécifier directement l'identifiant 
+			de l'utilisateur.
 		</li>
 	</ul>
 </article>
@@ -234,23 +234,23 @@ sidebar:
 	<ul>
 		<li>
 			<code>ID</code> Attribuer un ID qui sera utilisé dans des commandes subséquentes pour 
-			faire référence à ce portfolio (par exemple pour le partager avec un usager).
+			faire référence à ce portfolio (par exemple pour le partager avec un utilisateur).
 		</li>
 		<li>
 			<code>Modèle</code> Code du modèle de portfolio à instancier. Format&nbsp;: 
-			<i>code du projet.code du portfolio modèle</i>. Ajouter des éléments <i>select</i> pour des 
-			variables globales ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier 
+			<i>code du projet.code du portfolio modèle</i>. Ajouter des éléments <i>variable</i> pour des 
+			variables globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier 
 			directement des valeurs.
 		</li>
 		<li>
 			<code>Code</code> Code du portfolio qui sera créé. Format&nbsp;: 
-			<i>code du projet.code du portfolio</i>. Ajouter des éléments <i>select</i> pour des variables 
-			globales ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement 
+			<i>code du projet.code du portfolio</i>. Ajouter des éléments <i>variable</i> pour des variables 
+			globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement 
 			des valeurs.	
 		</li>
 		<li>
-			<code>Libellé</code> Libellé du portfolio qui sera créé. Ajouter des éléments <i>select</i> 
-			pour des variables globales ou locales du fichier CSV et/ou des éléments <i>value</i> pour 
+			<code>Libellé</code> Libellé du portfolio qui sera créé. Ajouter des éléments <i>variable</i> 
+			pour des variables globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour 
 			spécifier directement des valeurs.
 		</li>
 	</ul>
@@ -268,8 +268,8 @@ sidebar:
 		</li>
 		<li>
 			<code>Code</code> Code du portfolio à sélectionner. Format&nbsp;: 
-			<i>code du projet.code du portfolio</i>. Ajouter des éléments <i>select</i> pour des variables 
-			globales ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement 
+			<i>code du projet.code du portfolio</i>. Ajouter des éléments <i>variable</i> pour des variables 
+			globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement 
 			des valeurs.
 		</li>
 	</ul>
@@ -283,8 +283,8 @@ sidebar:
 	<ul>
 		<li>
 			<code>Code</code> Code du portfolio à supprimer. Format&nbsp;: 
-			<i>code du projet.code du portfolio</i>. Ajouter des éléments <i>select</i> pour des variables 
-			globales ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement 
+			<i>code du projet.code du portfolio</i>. Ajouter des éléments <i>variable</i> pour des variables 
+			globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement 
 			des valeurs.
 		</li>
 	</ul>
@@ -301,14 +301,14 @@ sidebar:
 			L'ID a précédement été attribué soit dans un élément CreateTree ou dans un élément SelectTree.
 		</li>
 		<li>
-			<code>Personne</code> Identifiant de l'usager. Ajouter un élément <i>select</i> pour puiser 
-			l'identifiant dans une variable globale ou locale du fichier CSV, ou un élément <i>value</i> 
+			<code>Personne</code> Identifiant de l'usager. Ajouter un élément <i>variable</i> pour puiser 
+			l'identifiant dans une variable globale ou locale du fichier CSV, ou un élément <i>valeur</i> 
 			pour spécifier directement l'identifiant de l'usager.
 		</li>
 		<li>
 			<code>Rôle</code> Rôle de l'usager dans le portfolio (exemple&nbsp;: etudiant). Ajouter un 
-			élément <i>select</i> pour puiser le rôle dans une variable globale ou locale du fichier CSV, ou 
-			un élément <i>value</i> pour spécifier directement le rôle de l'usager.
+			élément <i>variable</i> pour puiser le rôle dans une variable globale ou locale du fichier CSV, ou 
+			un élément <i>valeur</i> pour spécifier directement le rôle de l'usager.
 		</li>
 	</ul>
 </article>
@@ -327,16 +327,16 @@ sidebar:
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Ancien code</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+			<code>Ancien code</code> Ajouter des éléments <i>variable</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs.
 		</li>
 		<li>
-			<code>Nouveau code</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+			<code>Nouveau code</code> Ajouter des éléments <i>variable</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs.
 		</li>
 		<li>
-			<code>Nouveau libellé</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+			<code>Nouveau libellé</code> Ajouter des éléments <i>variable</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs.
 		</li>
 	</ul>
 </article>
@@ -370,13 +370,13 @@ sidebar:
 	<ul>
 		<li>
 			<code>Personne</code> Identifiant de l'usager (son login). Ajouter un élément 
-			<i>select</i> pour puiser l'identifiant dans une variable globale ou locale du fichier CSV, 
-			ou un élément <i>value</i> pour spécifier directement l'identifiant de l'usager.
+			<i>variable</i> pour puiser l'identifiant dans une variable globale ou locale du fichier CSV, 
+			ou un élément <i>valeur</i> pour spécifier directement l'identifiant de l'usager.
 		</li>
 		<li>
 			<code>Groupe</code> Nom du groupe d'usagers (exemple&nbsp;: enseignants2017). Ajouter 
-			un élément <i>select</i> pour puiser le nom dans une variable globale ou locale du fichier CSV, 
-			ou un élément <i>value</i> pour spécifier directement le nom du groupe d'usagers.
+			un élément <i>variable</i> pour puiser le nom dans une variable globale ou locale du fichier CSV, 
+			ou un élément <i>valeur</i> pour spécifier directement le nom du groupe d'usagers.
 		</li>
 	</ul>
 </article>
@@ -389,13 +389,13 @@ sidebar:
 	<ul>
 		<li>
 			<code>Personne</code> Identifiant de l'usager (son login). Ajouter un élément 
-			<i>select</i> pour puiser l'identifiant dans une variable globale ou locale du fichier CSV, 
-			ou un élément <i>value</i> pour spécifier directement l'identifiant de l'usager.
+			<i>variable</i> pour puiser l'identifiant dans une variable globale ou locale du fichier CSV, 
+			ou un élément <i>valeur</i> pour spécifier directement l'identifiant de l'usager.
 		</li>
 		<li>
 			<code>Groupe</code> Nom du groupe d'usagers (exemple&nbsp;: enseignants2017). Ajouter 
-			un élément <i>select</i> pour puiser le nom dans une variable globale ou locale du fichier CSV, 
-			ou un élément <i>value</i> pour spécifier directement le nom du groupe d'usagers.
+			un élément <i>variable</i> pour puiser le nom dans une variable globale ou locale du fichier CSV, 
+			ou un élément <i>valeur</i> pour spécifier directement le nom du groupe d'usagers.
 		</li>
 	</ul>
 </article>
@@ -411,13 +411,13 @@ sidebar:
 			L'ID a précédement été attribué soit dans un élément CreateTree ou dans un élément SelectTree.
 		</li>
 		<li>
-			<code>Groupe</code> Nom du groupe d'usagers. Ajouter un élément <i>select</i> pour puiser
-			le nom dans une variable globale ou locale du fichier CSV, ou un élément <i>value</i> pour 
+			<code>Groupe</code> Nom du groupe d'usagers. Ajouter un élément <i>variable</i> pour puiser
+			le nom dans une variable globale ou locale du fichier CSV, ou un élément <i>valeur</i> pour 
 			spécifier directement le nom du groupe d'usagers.
 		</li>
 		<li>
-			<code>Rôle</code> Rôle des usagers dans le portfolio. Ajouter un élément <i>select</i> pour 
-			puiser le rôle dans une variable globale ou locale du fichier CSV, ou un élément <i>value</i> 
+			<code>Rôle</code> Rôle des usagers dans le portfolio. Ajouter un élément <i>variable</i> pour 
+			puiser le rôle dans une variable globale ou locale du fichier CSV, ou un élément <i>valeur</i> 
 			pour spécifier directement le rôle des usagers.
 		</li>
 	</ul>
@@ -434,13 +434,13 @@ sidebar:
 			L'ID a précédement été attribué soit dans un élément CreateTree ou dans un élément SelectTree.
 		</li>
 		<li>
-			<code>Groupe</code> Nom du groupe d'usagers. Ajouter un élément <i>select</i> pour puiser
-			le nom dans une variable globale ou locale du fichier CSV, ou un élément <i>value</i> pour 
+			<code>Groupe</code> Nom du groupe d'usagers. Ajouter un élément <i>variable</i> pour puiser
+			le nom dans une variable globale ou locale du fichier CSV, ou un élément <i>valeur</i> pour 
 			spécifier directement le nom du groupe d'usagers.
 		</li>
 		<li>
-			<code>Rôle</code> Rôle des usagers dans le portfolio. Ajouter un élément <i>select</i> pour 
-			puiser le rôle dans une variable globale ou locale du fichier CSV, ou un élément <i>value</i> 
+			<code>Rôle</code> Rôle des usagers dans le portfolio. Ajouter un élément <i>variable</i> pour 
+			puiser le rôle dans une variable globale ou locale du fichier CSV, ou un élément <i>valeur</i> 
 			pour spécifier directement le rôle des usagers.
 		</li>
 	</ul>
@@ -472,8 +472,8 @@ sidebar:
 		</li>
 		<li>
 			<code>Groupe</code> Nom du groupe de portfolios (exemple&nbsp;: cohorte2017). Ajouter 
-			un élément <i>select</i> pour puiser le nom dans une variable globale ou locale du fichier CSV,
-			 ou un élément <i>value</i> pour spécifier directement le nom du groupe de portfolios.
+			un élément <i>variable</i> pour puiser le nom dans une variable globale ou locale du fichier CSV,
+			 ou un élément <i>valeur</i> pour spécifier directement le nom du groupe de portfolios.
 		</li>
 	</ul>
 </article>
@@ -513,8 +513,8 @@ sidebar:
 		</li>
 		<li>
 			<code>Sélection source</code> Élément à importer dans le portfolio. Format&nbsp;: 
-			<i>code portfolio.tag sémantique</i>. Ajouter des éléments <i>select</i> pour des variables 
-			globales ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement 
+			<i>code portfolio.tag sémantique</i>. Ajouter des éléments <i>variable</i> pour des variables 
+			globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement 
 			des valeurs.
 		</li>
 	</ul>
@@ -549,12 +549,12 @@ sidebar:
 			 vient d'être importée dans le portfolio.
 		</li>
 		<li>
-			<code>Code</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+			<code>Code</code> Ajouter des éléments <i>variable</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs.
 		</li>
 		<li>
-			<code>Libellé</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+			<code>Libellé</code> Ajouter des éléments <i>variable</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs.
 		</li>
 </article>
 
@@ -582,8 +582,8 @@ sidebar:
 			<code>Attribut</code> Nom de l'attibut à mettre à jour.
 		</li>
 		<li>
-			<code>Valeur</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+			<code>Valeur</code> Ajouter des éléments <i>variable</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs.
 		
 		</li>
 	</ul>
@@ -606,8 +606,8 @@ sidebar:
 			<code>Attribut</code> Nom de l'attibut à mettre à jour.
 		</li>
 		<li>
-			<code>Valeur</code> Ajouter des éléments <i>select</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement des valeurs.
+			<code>Valeur</code> Ajouter des éléments <i>variable</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs.
 		</li>
 	</ul>
 </article>
@@ -641,9 +641,9 @@ sidebar:
 			 vient d'être importée dans le portfolio.
 		</li>
 		<li>
-			<code>Valeur du champ</code> Valeur à mettre à jour. Ajouter un élément <i>select</i> pour 
+			<code>Valeur du champ</code> Valeur à mettre à jour. Ajouter un élément <i>variable</i> pour 
 			puiser la valeur dans une variable globale ou locale du fichier CSV (exemple&nbsp;: nomEtudiant), 
-			ou un élément <i>value</i> pour spécifier directement la valeur du champ.
+			ou un élément <i>valeur</i> pour spécifier directement la valeur du champ.
 		</li>
 	</ul>
 </article>
@@ -685,8 +685,8 @@ sidebar:
 		</li>
 		<li>
 			<code>Code Dashboard</code> Le code du portfolio qui contient le script de rapport. Ajouter 
-			des éléments <i>select</i> pour des variables globales ou locales du fichier CSV et/ou des 
-			éléments <i>value</i> pour spécifier directement des valeurs.
+			des éléments <i>variable</i> pour des variables globales ou locales du fichier CSV et/ou des 
+			éléments <i>valeur</i> pour spécifier directement des valeurs.
 		</li>
 	</ul>
 </article>
@@ -722,8 +722,8 @@ sidebar:
 		</li>
 		<li>
 			<code>Sélection source</code> Noeud vers lequel pointe l'élément Proxy. Format&nbsp;: 
-			<i>code portfolio.tag sémantique</i>. Ajouter des éléments <i>select</i> pour des variables 
-			globales ou locales du fichier CSV et/ou des éléments <i>value</i> pour spécifier directement 
+			<i>code portfolio.tag sémantique</i>. Ajouter des éléments <i>variable</i> pour des variables 
+			globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement 
 			des valeurs.
 		</li>
 	</ul>
