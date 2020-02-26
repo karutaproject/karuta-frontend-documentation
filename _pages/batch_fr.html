@@ -122,7 +122,7 @@ sidebar:
 <ul>
 	<li><a href='#import-node'><code>Importer nœud</code></a></li>
 	<li><a href='#move-up'><code>Monter un niveau</code></a></li>
-	<li><a href='#delete-node'><code>MSupprimer nœud</code></a></li>
+	<li><a href='#delete-node'><code>Supprimer nœud</code></a></li>
 	<li><a href='#update-node-resource'><code>Mise à jour ressource du nœud</code></a></li>
 </ul>
 <h4>Composantes métadonnées</h4>
@@ -674,6 +674,19 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='delete-node'>Supprimer nœud</h3>
+	<p>Supprimer un élément d'un portfolio.</p>
+	<p>Champ à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Nœud</code> Élément à supprimer. Il y a deux options pour spécifier le nœud à supprimer&nbsp;: 
+			sélection d'une référence d'arbre + tag sémantique du nœud ou par UUID.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='update-node-resource'>Mise à jour ressource du nœud</h3>
 	<p>Mettre à jour le code et le libellé d'un élément de portfolio.</p>
 	<p>Champs à renseigner&nbsp;:</p>
@@ -694,42 +707,24 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='delete-node'>Supprimer nœud</h3>
-	<p>Supprimer un élément d'un portfolio.</p>
-	<p>Champ à renseigner&nbsp;:</p>
-	<ul>
-		<li>
-			<code>Nœud</code> Élément à supprimer. Il y a deux options pour spécifier le nœud à supprimer&nbsp;: 
-			sélection d'une référence d'arbre + tag sémantique du nœud ou par UUID.
-		</li>
-	</ul>
-</article>
-
-*********************************************************************rendue ici ****************************************************
-
-
-
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='update-metadata'>Mise à jour métadonnées</h3>
-	<p>Commande plus générale que les précédentes qui permet de mettre à jour n'importe quel attribut 
-		de metadonnée d'un noeud.
-	</p>
+	<p>Permet de mettre à jour les métadonnées d'un nœud (par exemple son tag sémantique).</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Sélection</code> Noeud que l'on veut mettre à jour. Format&nbsp;: 
-			<i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit dans un élément 
-			CreateTree ou dans un élément SelectTree.
+			<code>Nœud</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
+			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
 		</li>
 		<li>
-			<code>Attribut</code> Nom de l'attibut à mettre à jour.
+			<code>Attribut</code> Métadonnée à mettre à jour. Il y a cinq options pour spécifier la métadonnée à 
+			modifier&nbsp;: Nœud multilingue, Ressource multilingue, Tag sémantique, Édition en place ou Encrypter 
+			la ressource.
 		</li>
 		<li>
-			<code>Valeur</code> Ajouter des éléments <i>variable</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs.
-		
+			<code>Nouvelle valeur de l'attribut</code> Nouvelle valeur à attribuer à la métadonnée. Ajouter des éléments 
+			<i>variable</i> pour des variables globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour 
+			spécifier directement des valeurs. Dans tous les cas sauf le tag sémantique, les valeurs acceptables sont 
+			<i>Y</i> ou <i>N</i>. 
 		</li>
 	</ul>
 </article>
@@ -737,22 +732,21 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='update-metadata-wad'>Mise à jour métadonnées WAD</h3>
-	<p>Commande plus générale que les précédentes qui permet de mettre à jour n'importe quel attribut 
-		metadataWad d'un noeud.
-	</p>
+	<p>Permet de mettre à jour les métadonnées WAD d'un nœud (par exemple un menu).</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Sélection</code> Noeud que l'on veut mettre à jour. Format&nbsp;: 
-			<i>ID.tag sémantique</i>. L'ID du portfolio a précédement été attribué soit dans un élément 
-			CreateTree ou dans un élément SelectTree.
+			<code>Nœud</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
+			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
 		</li>
 		<li>
-			<code>Attribut</code> Nom de l'attibut à mettre à jour.
+			<code>Attribut</code> Métadonnée à mettre à jour. Il y a huit options pour spécifier la métadonnée à 
+			modifier&nbsp;: Recherche, Menu, Partager, Visible ou Repliable.
 		</li>
 		<li>
-			<code>Valeur</code> Ajouter des éléments <i>variable</i> pour des variables globales 
-			ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs.
+			<code>Nouvelle valeur de l'attribut</code> Nouvelle valeur à attribuer à la métadonnée. Ajouter des éléments 
+			<i>variable</i> pour des variables globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour 
+			spécifier directement des valeurs. Pour Visible et Repliable, les valeurs acceptables sont <i>Y</i> ou <i>N</i>. 
 		</li>
 	</ul>
 </article>
@@ -760,8 +754,24 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='update-rights'>Mise à jour droits</h3>
-	<p>
-	</p>
+	<p>Permet de mettre à jour les droits sur un nœud dans une instance.</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Nœud</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
+			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+		</li>
+		<li>
+			<code>Attributs</code> Droits à mettre à jour.
+			<li>
+				<code>Rôle utilisateur</code> Rôle à modifier.
+				<code>Lire</code> Les valeurs acceptables sont <i>Y</i> ou <i>N</i>.
+				<code>Écrire</code> Les valeurs acceptables sont <i>Y</i> ou <i>N</i>.
+				<code>Supprimer</code> Les valeurs acceptables sont <i>Y</i> ou <i>N</i>.
+				<code>Soumettre</code> Les valeurs acceptables sont <i>Y</i> ou <i>N</i>.
+			</li>
+		</li>
+	</ul>
 </article>
 
 <article>
