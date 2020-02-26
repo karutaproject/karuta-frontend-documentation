@@ -137,7 +137,6 @@ sidebar:
 	<li><a href='#update-field'><code>Mise à jour Texte court</code></a></li>
 	<li><a href='#update-textfield'><code>Mise à jour Texte long</code></a></li>
 	<li><a href='#update-calendar'><code>Mise à jour Calendrier</code></a></li>
-	<li><a href='#update-document'><code>Mise à jour Document</code></a></li>
 	<li><a href='#update-dashboard'><code>Mise à jour Tableau de bord</code></a></li>
 	<li><a href='#update-item'><code>Mise à jour Item</code></a></li>
 	<li><a href='#update-url2unit'><code>Mise à jour URL2Unit</code></a></li>
@@ -379,7 +378,7 @@ sidebar:
 			directement des valeurs.
 		</li>
 	</ul>
-	<p>Note&nbsp;: Il faut absolument renseigner les deux champs, même si on ne veut en modifier qu'un seul.
+	<p>Note&nbsp;: Il faut absolument renseigner les deux champs, code et libellé, même si on ne veut en modifier qu'un seul.
 </article>
 
 <article>
@@ -841,29 +840,18 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-document'>Mise à jour Document</h3>
-	<p>
-	</p>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='update-dashboard'>Mise à jour Tableau de bord</h3>
-	<p>Mettre à jour le code du portfolio qui contient le script de rapport dans un élément Tableau de bord.</p>
+	<p>Mettre à jour la Ressource d'un élément de type Tableau de bord.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Sélection</code> Ressource de type Tableau de bord que l'on veut mettre à jour. 
-			Format&nbsp;: <i>ID.tag sémantique</i> ou <i>#current_node</i>. 
-			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree soit dans un élément 
-			SelectTree, et le tag sémantique est celui de la ressource à mettre à jour dans le portfolio. <i>#current_node</i> est un mot réservé.
-			 Dans ce cas la ressource à mettre à jour est la ressource courante. Cela permet, par exemple, de mettre à jour une ressource qui 
-			 vient d'être importée dans le portfolio.
+			<code>Élément</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
+			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
 		</li>
 		<li>
-			<code>Code Dashboard</code> Le code du portfolio qui contient le script de rapport. Ajouter 
-			des éléments <i>variable</i> pour des variables globales ou locales du fichier CSV et/ou des 
-			éléments <i>valeur</i> pour spécifier directement des valeurs.
+			<code>Code</code> Code du portfolio qui contient le nouveau script de tableau
+			de bord (et les paramètres le cas échéant). Ajouter des éléments <i>variable</i> pour des variables globales 
+			ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs.
 		</li>
 	</ul>
 </article>
@@ -871,8 +859,25 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='update-item'>Mise à jour Item</h3>
-	<p>
-	</p>
+	<p>Mettre à jour un élément de type Item.</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Élément</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
+			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+		</li>
+		<li>
+			<code>Attributs</code> Nouvelles valeurs des attributs de l'Item. Ajouter des éléments <i>variable</i> pour 
+			des variables globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement 
+			des valeurs.
+			<ul>
+				<li><code>Code item</code></li>
+				<li><code>Libellé item</code></li>
+				<li><code>Valeur item</code></li>
+			</ul>
+		</li>
+	</ul>
+	Note : Il faut absolument renseigner les trois champs, code, libellé et valeur, même si on ne veut en modifier qu'un seul.
 </article>
 
 <article>
