@@ -134,14 +134,14 @@ sidebar:
 <h4>Mise à jour ressources</h4>
 <ul>
 	<li><a href='#update-resources'><code>Mise à jour ressources</code></a></li>
-	<li><a href='#update-field'><code>Mise à jour texte court</code></a></li>
-	<li><a href='#update-textfield'><code>Mise à jour texte long</code></a></li>
-	<li><a href='#update-calendar'><code>Mise à jour calendrier</code></a></li>
-	<li><a href='#update-document'><code>Mise à jour document</code></a></li>
-	<li><a href='#update-dashboard'><code>Mise à jour tableau de bord</code></a></li>
-	<li><a href='#update-item'><code>Mise à jour item</code></a></li>
+	<li><a href='#update-field'><code>Mise à jour Texte court</code></a></li>
+	<li><a href='#update-textfield'><code>Mise à jour Texte long</code></a></li>
+	<li><a href='#update-calendar'><code>Mise à jour Calendrier</code></a></li>
+	<li><a href='#update-document'><code>Mise à jour Document</code></a></li>
+	<li><a href='#update-dashboard'><code>Mise à jour Tableau de bord</code></a></li>
+	<li><a href='#update-item'><code>Mise à jour Item</code></a></li>
 	<li><a href='#update-url2unit'><code>Mise à jour URL2Unit</code></a></li>
-	<li><a href='#update-proxy'><code>Mise à jour proxy</code></a></li>
+	<li><a href='#update-proxy'><code>Mise à jour Proxy</code></a></li>
 </ul>
 <h4>Composantes UUID</h4>
 <ul>
@@ -754,7 +754,7 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='update-rights'>Mise à jour droits</h3>
-	<p>Permet de mettre à jour les droits sur un nœud dans une instance.</p>
+	<p>Permet de mettre à jour les droits sur un nœud dans une instance de portfolio.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
@@ -777,56 +777,78 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='update-resources'>Mise à jour ressources</h3>
-	<p>
-	</p>
+	<p>Contenant permettant d'ajouter des commandes pour faire la mise à jour d'éléments Ressource.</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-field'>Mise à jour texte court</h3>
-	<p>Mettre à jour un champ de type texte court dans une instance de portfolio.</p>
+	<h3 id='update-field'>Mise à jour Texte court</h3>
+	<p>Mettre à jour la Ressource d'un élément de type Texte court.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Sélection</code> Ressource à mettre à jour. 
-			Format&nbsp;: <i>ID.tag sémantique</i> ou <i>#current_node</i>. 
-			L'ID du portfolio a précédement été attribué soit dans un élément CreateTree soit dans un élément 
-			SelectTree, et le tag sémantique est celui de la ressource à mettre à jour dans le portfolio. <i>#current_node</i> est un mot réservé.
-			 Dans ce cas la ressource à mettre à jour est la ressource courante. Cela permet, par exemple, de mettre à jour une ressource qui 
-			 vient d'être importée dans le portfolio.
+			<code>Élément</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
+			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
 		</li>
 		<li>
-			<code>Valeur du champ</code> Valeur à mettre à jour. Ajouter un élément <i>variable</i> pour 
-			puiser la valeur dans une variable globale ou locale du fichier CSV (exemple&nbsp;: nomEtudiant), 
-			ou un élément <i>valeur</i> pour spécifier directement la valeur du champ.
+			<code>Texte</code> Nouvelle valeur de la Ressource. Ajouter des éléments <i>variable</i> pour des variables 
+			globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs.
 		</li>
 	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-textfield'>Mise à jour texte long</h3>
+	<h3 id='update-textfield'>Mise à jour Texte long</h3>
+	<p>Mettre à jour la Ressource d'un élément de type Texte long.</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Élément</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
+			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+		</li>
+		<li>
+			<code>Texte</code> Nouvelle valeur de la Ressource. Ajouter des éléments <i>variable</i> pour des variables 
+			globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs. 
+			Vous pouvez aussi ajouter un éditeur de texte pour éditer la nouvelle valeur de la Ressource.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-calendar'>Mise à jour Calendrier</h3>
+	<p>Mettre à jour un élément de type Calendrier.</p>
+	<p>Champs à renseigner&nbsp;:</p>
+	<ul>
+		<li>
+			<code>Élément</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
+			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+		</li>
+		<li>
+			<code>Date</code> Nouvelle valeur de la Ressource. Ajouter des éléments <i>variable</i> pour des variables 
+			globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs. 
+		</li>
+		<li>
+			<code>Attributs</code> Optionnels.
+			<ul>
+				<li><code>Pick Format</code> Les valeurs acceptables sont <i>days</i>, <i>months</i> ou <i>years</i>.</li>
+				<li><code>Display Format</code> Par exemple <i>dd-mm-yyyy</i>.</li>
+			</ul>
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='update-document'>Mise à jour Document</h3>
 	<p>
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-calendar'>Mise à jour calendrier</h3>
-	<p>
-	</p>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-document'>Mise à jour document</h3>
-	<p>
-	</p>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-dashboard'>Mise à jour tableau de bord</h3>
+	<h3 id='update-dashboard'>Mise à jour Tableau de bord</h3>
 	<p>Mettre à jour le code du portfolio qui contient le script de rapport dans un élément Tableau de bord.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
@@ -848,7 +870,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-item'>Mise à jour item</h3>
+	<h3 id='update-item'>Mise à jour Item</h3>
 	<p>
 	</p>
 </article>
@@ -863,7 +885,7 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='update-proxy'>Mise à jour proxy</h3>
+	<h3 id='update-proxy'>Mise à jour Proxy</h3>
 	<p>Mettre à jour un proxy.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
@@ -883,3 +905,12 @@ sidebar:
 		</li>
 	</ul>
 </article>
+
+
+<h4>Composantes UUID</h4>
+<ul>
+	<li><a href='#uuid-components'><code>Composantes UUID</code></a></li>
+	<li><a href='#update-field-byid'><code>Mise à jour champ par UUID</code></a></li>
+	<li><a href='#reset-document-byid'><code>Mise à jour document par UUID</code></a></li>
+	<li><a href='#delete-node-byid'><code>Supprimer nœud par UUID</code></a></li>
+</ul>
