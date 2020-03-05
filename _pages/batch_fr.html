@@ -15,7 +15,8 @@ sidebar:
 
 <img src='../assets/img/execute-batch.png' width='50%'/>
 
-<p>À partir d'un ou plusieurs modèles de portfolios, d'un script batch et d'un fichier CSV, KARUTA 
+<p>
+	À partir d'un ou plusieurs modèles de portfolios, d'un script batch et d'un fichier CSV, KARUTA 
 	crée les usagers et leurs portfolios. Le fichier CSV contient les données relatives à chaque
 	usager à créer. Le script de batch indique les opérations à effectuer&nbsp;: créer l'usager, créer 
 	son ou ses instances de portfolios à partir de modèles de portfolio, partager les nouveaux 
@@ -31,7 +32,7 @@ sidebar:
 	Pour chaque ligne du fichier CSV<br>
 	&emsp;Créer le compte pour l'étudiant si il n'existe pas<br>
 	&emsp;Créer le portfolio de l'étudiant<br>
-	&emsp;Mettre à jour le champs Nom dans le portfolio<br>
+	&emsp;Mettre à jour le champ Nom dans le portfolio<br>
 	&emsp;Partager le portfolio avec l'étudiant dans le rôle "etudiant"<br>
 </i></p>
 <p></p>
@@ -47,37 +48,37 @@ sidebar:
 <ul>
 	<li>
 		<code>Ligne 1</code> Les noms des variables globales. Les variables globales sont les variables 
-		qui ont les même valeurs pour chaque usager à créer (par exemple, les codes des modèles de portfolio à 
+		qui ont les mêmes valeurs pour chaque usager à créer (par exemple, les codes des modèles de portfolio à 
 		instancier, un code de programme ou une session). Dans le script de batch, les références aux variables 
 		globales sont précédées de <code>//</code>.</br>
-		<code>model_code</code> en cellule A1 est un mot réservé : c'est le code du portfolio contenant le script de batch 
-		à exécuter. 
+		<code>model_code</code> en cellule A1 est un mot réservé&nbsp;: c'est le code du portfolio contenant le script 
+		de batch à exécuter. 
 	</li>
 	<li>
-		<code>Ligne 2</code> Les valeurs des variables globales. Dans l'exemple présenté la valeur 
-		de <code>model_code</code> est <i>exemple.batch-creer-cohorte</i> : c'est le code du portfolio contenant le 
-		script de batch.
+		<code>Ligne 2</code> Les valeurs des variables globales. Dans l'exemple présenté la valeur de 
+		<code>model_code</code> est <i>exemple.batch-creer-cohorte</i>&nbsp;: c'est le code du portfolio contenant 
+		le script de batch.
 	</li>
 	<li>
-		<code>Ligne 3</code>  Les noms des variables locales. Les variables locales sont les variables 
+		<code>Ligne 3</code> Les noms des variables locales. Les variables locales sont les variables 
 		qui ont des valeurs différentes pour chaque usager à créer (par exemple, le nom de l'étudiant, son
 		prénom, courriel, etc).
 	</li>
 	<li>
-		<code>Lignes 4 et +</code>  Les valeurs des variables locales, habituellement un usager par 
-		ligne.
+		<code>Lignes 4 et +</code> Les valeurs des variables locales, un usager par ligne. En général, les instructions
+		du script de batch seront exécutées pour chacune des ces lignes.
 	</li>
 </ul>
 <p>
 	NOTE IMPORTANTE SUR LA SYNTAXE DES NOMS DE VARIABLES<br>
-	Les noms des variables globales et locales ne peuvent PAS inclure les caractères suivants : trait d'union (-), plus (+),
-	astérisque (*), barre oblique (/), pourcentage (%) ou dièse (#).<br>
+	Les noms des variables globales et locales ne peuvent PAS inclure les caractères suivants : trait d'union (-), 
+	plus (+), astérisque (*), barre oblique (/), pourcentage (%) ou dièse (#).<br>
 	Le caractère de soulignement (_) est permis.
 
 <!- =========================================== ->
 <h2>Les commandes</h2>
 <!- =========================================== ->
-<h4>Instrutions</h4>
+<h4>Instructions</h4>
 <ul>
 	<li><a href='#for-each-line'><code>Pour chaque ligne</code></a></li>
 	<li><a href='#for-each-tree'><code>Pour chaque arbre</code></a></li>
@@ -164,8 +165,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='for-each-tree'>Pour chaque arbre</h3>
 	<p>
-		L'élément Pour chaque arbre est une boucle. Les commandes à l'intérieur de la partie <code>Actions</code> 
-		de l'élément Pour chaque arbre seront exécutées pour chaque portfolio dont le code correspond 
+		L'élément <i>Pour chaque arbre</i> est une boucle. Les commandes à l'intérieur de la partie <code>Actions</code> 
+		de l'élément <i>Pour chaque arbre</i> seront exécutées pour chaque portfolio dont le code correspond 
 		au critère indiqué dans l'attribut <code>Partie du code de portfolio</code>.
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
@@ -176,12 +177,12 @@ sidebar:
 		</li>
 		<li>
 			<code>Partie du code de portfolio</code> Partie du code de portfolio unique aux portfolios désirés. 
-			Format&nbsp;: <i>code du projet.code du portfolio modèle</i>. Ajouter des éléments <i>variable</i> 
-			pour des variables globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier 
-			directement des valeurs.
+			Ajouter des éléments <i>variable</i> pour des variables globales ou locales du fichier CSV et/ou des 
+			éléments <i>valeur</i> pour spécifier directement des valeurs.
 		</li>
 		<li>
-			<code>Actions</code> Les commandes à exécuter pour chaque portfolio.
+			<code>Actions</code> Les commandes à exécuter pour chaque portfolio sélectionné par le critère <code>Partie 
+			du code de portfolio</code>.
 		</li>
 	</ul>
 </article>
@@ -209,13 +210,15 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='create-person'>Créer utilisateur</h3>
-	<p>Créer un usager. Ne pas oublier de remplacer les valeurs par défaut de cet élément par vos 
+	<p>
+		Créer un usager. Ne pas oublier de remplacer les valeurs par défaut de cet élément par vos 
 		propres noms de variables locales (ligne 3 du fichier CSV).
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
-		<li><code>Identifiant</code> Identifiant unique du l'usager qui servira de login dans le 
-		système Karuta (par exemple un matricule ou courriel).
+		<li>
+			<code>Identifiant</code> Identifiant unique du l'usager qui servira de login dans le 
+			système Karuta (par exemple un matricule ou courriel).
 		</li>
 		<li><code>Prénom</code> Prénom de l'usager.</li>
 		<li><code>Nom</code> Nom de famille de l'usager.</li>
@@ -290,15 +293,15 @@ sidebar:
 			directement des valeurs.
 		</li>
 		<li>
-			<code>Code</code> Code de l'instance de portfolio qui sera créée. Format&nbsp;: 
+			<code>Code</code> Code de portfolio à attribuer à l'instance qui sera créée. Format&nbsp;: 
 			<i>code du projet.code de l'instance de portfolio</i>. Ajouter des éléments <i>variable</i> pour des 
 			variables globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement 
 			des valeurs.	
 		</li>
 		<li>
-			<code>Libellé</code> Libellé de l'instance de portfolio qui sera créée. Ajouter des éléments <i>variable</i> 
-			pour des variables globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour 
-			spécifier directement des valeurs.
+			<code>Libellé</code> Libellé à attribuer à l'instance de portfolio qui sera créée. Ajouter des éléments 
+			<i>variable</i> pour des variables globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> 
+			pour spécifier directement des valeurs.
 		</li>
 	</ul>
 </article>
@@ -343,13 +346,13 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='share-tree'>Partager arbre</h3>
-	<p>Partager un portfolio avec un compte utilisateur dans un rôle spécifié.</p>
+	<p>Partager un portfolio avec un compte utilisateur, dans un rôle spécifié.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
 			<code>Sélection arbre</code> Sélectionner l'identifiant du portfolio concerné par le partage. 
-			Cet identifiant a précédement été attribué soit dans un élément <code>CreateTree</code> ou dans 
-			un élément <code>SelectTree</code>.
+			Cet identifiant (référence) doit préalablement être attribué dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.
 		</li>
 		<li>
 			<code>Login utilisateur</code> Login du compte utilisateur. Ajouter un élément <i>variable</i> pour puiser 
@@ -357,9 +360,9 @@ sidebar:
 			pour spécifier directement l'identifiant de l'utilisateur.
 		</li>
 		<li>
-			<code>Rôle utilisateur</code> Rôle de l'utilisateur dans le portfolio (exemple&nbsp;: etudiant). Ajouter un 
-			élément <i>variable</i> pour puiser le rôle dans une variable globale ou locale du fichier CSV, ou 
-			un élément <i>valeur</i> pour spécifier directement le rôle de l'utilisateur.
+			<code>Rôle utilisateur</code> Rôle à attribuer à l'utilisateur dans le portfolio (exemple&nbsp;: etudiant). 
+			Ajouter un élément <i>variable</i> pour puiser le rôle dans une variable globale ou locale du fichier CSV, 
+			ou un élément <i>valeur</i> pour spécifier directement le rôle de l'utilisateur.
 		</li>
 	</ul>
 </article>
@@ -367,13 +370,13 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='unshare-tree'>Départager arbre</h3>
-	<p>Départager un portfolio d'un compte utilisateur dans un rôle spécifié.</p>
+	<p>Départager un portfolio d'un compte utilisateur, dans un rôle spécifié.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
 			<code>Sélection arbre</code> Sélectionner l'identifiant du portfolio concerné. 
-			Cet identifiant a précédement été attribué soit dans un élément <code>CreateTree</code> ou dans 
-			un élément <code>SelectTree</code>.
+			Cet identifiant (référence) doit préalablement être attribué dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.
 		</li>
 		<li>
 			<code>Login utilisateur</code> Login du compte utilisateur. Ajouter un élément <i>variable</i> pour puiser 
@@ -381,8 +384,8 @@ sidebar:
 			pour spécifier directement l'identifiant de l'utilisateur.
 		</li>
 		<li>
-			<code>Rôle utilisateur</code> Rôle de l'utilisateur dans le portfolio (exemple&nbsp;: etudiant). Ajouter un 
-			élément <i>variable</i> pour puiser le rôle dans une variable globale ou locale du fichier CSV, ou 
+			<code>Rôle utilisateur</code> Rôle de l'utilisateur dans le portfolio (exemple&nbsp;: etudiant). Ajouter 
+			un élément <i>variable</i> pour puiser le rôle dans une variable globale ou locale du fichier CSV, ou 
 			un élément <i>valeur</i> pour spécifier directement le rôle de l'utilisateur.
 		</li>
 	</ul>
@@ -396,8 +399,8 @@ sidebar:
 	<ul>
 		<li>
 			<code>Sélection arbre</code> Sélectionner l'identifiant du portfolio concerné. 
-			Cet identifiant a précédement été attribué soit dans un élément <code>CreateTree</code> ou dans 
-			un élément <code>SelectTree</code>.
+			Cet identifiant (référence) doit préalablement être attribué dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.
 		</li>
 		<li>
 			<code>Nouveau code</code> Code à attribuer au portfolio. Format&nbsp;: 
@@ -418,11 +421,12 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='re-instantiate-tree'>Ré-instancier arbre</h3>
 	<p>Il faut ré-instancier un portfolio lorsqu'on ajoute un nouveau rôle dans une instance de portfolio.</p>
-		<ul>
+	<p>Champ à renseigner&nbsp;:</p>
+	<ul>
 		<li>
 			<code>Sélection arbre</code> Sélectionner l'identifiant du portfolio à ré-instancier. 
-			Cet identifiant a précédement été attribué soit dans un élément <code>CreateTree</code> ou dans 
-			un élément <code>SelectTree</code>.
+			Cet identifiant (référence) doit préalablement être attribué dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.
 		</li>
 	</ul>
 	
@@ -436,8 +440,8 @@ sidebar:
 	<ul>
 		<li>
 			<code>Sélection arbre</code> Sélectionner l'identifiant du portfolio concerné. 
-			Cet identifiant a précédement été attribué soit dans un élément <code>CreateTree</code> ou dans 
-			un élément <code>SelectTree</code>.
+			Cet identifiant (référence) doit préalablement être attribué dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.
 		</li>
 		<li>
 			<code>Login utilisateur</code> Login du compte utilisateur. Ajouter un élément <i>variable</i> pour puiser 
@@ -451,7 +455,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='create-usergroup'>Créer groupe utilisateurs</h3>
 	<p>Créer un groupe d'utilisateurs.</p>
-	<p>Champs à renseigner&nbsp;:</p>
+	<p>Champ à renseigner&nbsp;:</p>
 	<ul>
 		<li>
 			<code>Nom du groupe</code> Nom du groupe d'utilisateurs (exemple&nbsp;: enseignants2020). Ajouter 
@@ -507,8 +511,8 @@ sidebar:
 	<ul>
 		<li>
 			<code>Sélection arbre</code> Sélectionner l'identifiant du portfolio concerné. 
-			Cet identifiant a précédement été attribué soit dans un élément <code>CreateTree</code> ou dans 
-			un élément <code>SelectTree</code>.
+			Cet identifiant (référence) doit préalablement être attribué dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.
 		</li>
 		<li>
 			<code>Nom du groupe</code> Nom du groupe d'utilisateurs. Ajouter 
@@ -516,9 +520,9 @@ sidebar:
 			ou un élément <i>valeur</i> pour spécifier directement le nom du groupe d'utilisateurs.
 		</li>
 		<li>
-			<code>Rôle utilisateurs</code> Rôle des utilisateurs dans le portfolio. Ajouter un élément <i>variable</i> pour 
-			puiser le rôle dans une variable globale ou locale du fichier CSV, ou un élément <i>valeur</i> 
-			pour spécifier directement le rôle des utilisateurs.
+			<code>Rôle utilisateurs</code> Rôle à attribuer aux utilisateurs dans le portfolio. Ajouter un élément 
+			<i>variable</i> pour puiser le rôle dans une variable globale ou locale du fichier CSV, ou un élément 
+			<i>valeur</i> pour spécifier directement le rôle des utilisateurs.
 		</li>
 	</ul>
 </article>
@@ -531,8 +535,8 @@ sidebar:
 	<ul>
 		<li>
 			<code>Sélection arbre</code> Sélectionner l'identifiant du portfolio concerné. 
-			Cet identifiant a précédement été attribué soit dans un élément <code>CreateTree</code> ou dans 
-			un élément <code>SelectTree</code>.
+			Cet identifiant (référence) doit préalablement être attribué dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.
 		</li>
 		<li>
 			<code>Nom du groupe</code> Nom du groupe d'utilisateurs. Ajouter 
@@ -551,8 +555,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='share-groups'>Partager utilisateurs groupe avec portfolios groupe</h3>
 	<p>
-		Partager tous les portfolios d'un groupe de portfolios avec tous les utilisateurs d'un groupe d'utilisateurs dans 
-		un rôle spécifié.
+		Partager tous les portfolios d'un groupe de portfolios avec tous les utilisateurs d'un groupe d'utilisateurs,
+		dans un rôle spécifié.
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
@@ -567,9 +571,9 @@ sidebar:
 			ou un élément <i>valeur</i> pour spécifier directement le nom du groupe d'utilisateurs.
 		</li>
 		<li>
-			<code>Rôle utilisateurs</code> Rôle des utilisateurs dans le portfolio. Ajouter un élément <i>variable</i> pour 
-			puiser le rôle dans une variable globale ou locale du fichier CSV, ou un élément <i>valeur</i> 
-			pour spécifier directement le rôle des utilisateurs.
+			<code>Rôle utilisateurs</code> Rôle à attribuer aux utilisateurs dans le portfolio. Ajouter un élément 
+			<i>variable</i> pour puiser le rôle dans une variable globale ou locale du fichier CSV, ou un élément 
+			<i>valeur</i> pour spécifier directement le rôle des utilisateurs.
 		</li>
 	</ul>
 </article>
@@ -578,7 +582,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='create-portfoliogroup'>Créer groupe portfolios</h3>
 	<p>Créer un groupe de portfolios.</p>
-	<p>Champs à renseigner&nbsp;:</p>
+	<p>Champ à renseigner&nbsp;:</p>
 	<ul>
 		<li>
 			<code>Nom du groupe</code> Nom du groupe de portfolios (exemple&nbsp;: psychologie2020). Ajouter 
@@ -596,8 +600,8 @@ sidebar:
 	<ul>
 		<li>
 			<code>Sélection arbre</code> Sélectionner l'identifiant du portfolio concerné. 
-			Cet identifiant a précédement été attribué soit dans un élément <code>CreateTree</code> ou dans 
-			un élément <code>SelectTree</code>.
+			Cet identifiant (référence) doit préalablement être attribué dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.
 		</li>
 		<li>
 			<code>Nom du groupe</code> Nom du groupe de portfolios. Ajouter 
@@ -615,8 +619,8 @@ sidebar:
 	<ul>
 		<li>
 			<code>Sélection arbre</code> Sélectionner l'identifiant du portfolio concerné. 
-			Cet identifiant a précédement été attribué soit dans un élément <code>CreateTree</code> ou dans 
-			un élément <code>SelectTree</code>.
+			Cet identifiant (référence) doit préalablement être attribué dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.
 		</li>
 		<li>
 			<code>Nom du groupe</code> Nom du groupe de portfolios. Ajouter 
@@ -643,9 +647,9 @@ sidebar:
 			pour spécifier directement l'identifiant de l'utilisateur.
 		</li>
 		<li>
-			<code>Rôle utilisateur</code> Rôle de l'utilisateur dans le portfolio. Ajouter un élément <i>variable</i> pour 
-			puiser le rôle dans une variable globale ou locale du fichier CSV, ou un élément <i>valeur</i> 
-			pour spécifier directement le rôle de l'utilisateur.
+			<code>Rôle utilisateur</code> Rôle à attribuer à l'utilisateur dans les portfolios. Ajouter un élément 
+			<i>variable</i> pour puiser le rôle dans une variable globale ou locale du fichier CSV, ou un élément 
+			<i>valeur</i> pour spécifier directement le rôle de l'utilisateur.
 		</li>
 	</ul>
 </article>
@@ -677,16 +681,23 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='import-node'>Importer nœud</h3>
-	<p>Importer un élément dans un portfolio.</p>
+	<p>
+		Importer un élément dans un portfolio, par exemple pour ajouter une page ou une composante réutilisable. L'élément à 
+		importer doit exister dans un autre portfolio. Une copie sera faite, comme lors de l'utilisation des menus aux usagers.
+	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
 			<code>Cible</code> Section, page ou sous-section où importer l'élément désiré. Il y a trois options pour spécifier
 			le nœud cible&nbsp;: sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou <code>Sélectionner 
+			arbre</code>.)
 		</li>
 		<li>
 			<code>Source</code> Élément à importer dans le portfolio. Il y a deux options pour spécifier
-			le nœud source&nbsp;: sélection d'une référence d'arbre + tag sémantique du nœud ou par UUID.
+			le nœud à copier&nbsp;: sélection d'une référence d'arbre + tag sémantique du nœud ou par UUID.
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou <code>Sélectionner 
+			arbre</code>.)
 		</li>
 	</ul>
 </article>
@@ -694,12 +705,17 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='move-up'>Monter un niveau</h3>
-	<p>Monter un élément d'une position dans l'arbre XML.</p>
+	<p>
+		Monter un élément d'une position dans l'arbre XML. Par exemple pour le placer à la bonne place après l'avoir importé 
+		(un élément importé est toujours en dernière place de son niveau dans l'arbre XML).
+	</p>
 	<p>Champ à renseigner&nbsp;:</p>
 	<ul>
 		<li>
 			<code>Nœud</code> Élément à déplacer. Il y a trois options pour spécifier le nœud à déplacer&nbsp;: 
 			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou <code>Sélectionner 
+			arbre</code>.)
 		</li>
 	</ul>
 </article>
@@ -713,6 +729,8 @@ sidebar:
 		<li>
 			<code>Nœud</code> Élément à supprimer. Il y a deux options pour spécifier le nœud à supprimer&nbsp;: 
 			sélection d'une référence d'arbre + tag sémantique du nœud ou par UUID.
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou <code>Sélectionner 
+			arbre</code>.)
 		</li>
 	</ul>
 </article>
@@ -726,6 +744,8 @@ sidebar:
 		<li>
 			<code>Nœud</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
 			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou <code>Sélectionner 
+			arbre</code>.)
 		</li>
 		<li>
 			<code>Code</code> Code à attribuer à l'élément. Ajouter des éléments <i>variable</i> pour des variables globales 
@@ -746,6 +766,8 @@ sidebar:
 		<li>
 			<code>Nœud</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
 			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou <code>Sélectionner 
+			arbre</code>.)
 		</li>
 		<li>
 			<code>Attribut</code> Métadonnée à mettre à jour. Il y a cinq options pour spécifier la métadonnée à 
@@ -770,9 +792,12 @@ sidebar:
 		<li>
 			<code>Nœud</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
 			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.)
+			
 		</li>
 		<li>
-			<code>Attribut</code> Métadonnée à mettre à jour. Il y a huit options pour spécifier la métadonnée à 
+			<code>Attribut</code> Métadonnée à mettre à jour. Il y a cinq options pour spécifier la métadonnée à 
 			modifier&nbsp;: Recherche, Menu, Partager, Visible ou Repliable.
 		</li>
 		<li>
@@ -786,12 +811,14 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='update-rights'>Mise à jour droits</h3>
-	<p>Permet de mettre à jour les droits sur un nœud dans une instance de portfolio.</p>
+	<p>Permet de mettre à jour les droits sur un nœud dans une instance de portfolio, pour un rôle spécifié.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
 			<code>Nœud</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
 			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.)
 		</li>
 		<li>
 			<code>Attributs</code> Droits à mettre à jour.
@@ -821,6 +848,8 @@ sidebar:
 		<li>
 			<code>Élément</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
 			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.)
 		</li>
 		<li>
 			<code>Texte</code> Nouvelle valeur de la Ressource. Ajouter des éléments <i>variable</i> pour des variables 
@@ -838,11 +867,13 @@ sidebar:
 		<li>
 			<code>Élément</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
 			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.)
 		</li>
 		<li>
 			<code>Texte</code> Nouvelle valeur de la Ressource. Ajouter des éléments <i>variable</i> pour des variables 
 			globales ou locales du fichier CSV et/ou des éléments <i>valeur</i> pour spécifier directement des valeurs. 
-			Vous pouvez aussi ajouter un éditeur de texte pour éditer la nouvelle valeur de la Ressource.
+			Il est aussi possible d'ajouter un éditeur de texte pour éditer la nouvelle valeur de la Ressource.
 		</li>
 	</ul>
 </article>
@@ -856,6 +887,8 @@ sidebar:
 		<li>
 			<code>Élément</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
 			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.)
 		</li>
 		<li>
 			<code>Date</code> Nouvelle valeur de la Ressource. Ajouter des éléments <i>variable</i> pour des variables 
@@ -880,6 +913,8 @@ sidebar:
 		<li>
 			<code>Élément</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
 			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.)
 		</li>
 		<li>
 			<code>Code</code> Code du portfolio qui contient le nouveau script de tableau
@@ -898,6 +933,8 @@ sidebar:
 		<li>
 			<code>Élément</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
 			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.)
 		</li>
 		<li>
 			<code>Attributs</code> Nouvelles valeurs des attributs de l'Item. Ajouter des éléments <i>variable</i> pour 
@@ -920,12 +957,16 @@ sidebar:
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Cible</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
+			<code>Cible</code> Élément URL2Unit à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
 			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.)
 		</li>
 		<li>
-			<code>Source</code> Page vers laquelle pointer. Il y a trois options pour spécifier la page vers laquelle 
-			pointer&nbsp;: sélection d'une référence d'arbre + tag sémantique de la page, dernier nœud importé, ou par UUID.
+			<code>Source</code> Page vers laquelle l'élément URL2Unit doit pointer. Il y a trois options pour spécifier 
+			la page vers laquelle pointer&nbsp;: sélection d'une référence d'arbre + tag sémantique de la page, dernier nœud 
+			importé, ou par UUID. (La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> 
+			ou <code>Sélectionner arbre</code>.)
 		</li>
 	</ul>
 </article>
@@ -937,12 +978,16 @@ sidebar:
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Cible</code> Élément à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
+			<code>Cible</code> Élément Proxy à mettre à jour. Il y a trois options pour spécifier le nœud à modifier&nbsp;: 
 			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.)
 		</li>
 		<li>
-			<code>Source</code> Elément vers lequel pointer. Il y a trois options pour spécifier le nœud vers lequel 
-			pointer&nbsp;: sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
+			<code>Source</code> Élément vers lequel l'élément Proxy doit pointer. Il y a trois options pour spécifier 
+			le nœud vers lequel pointer&nbsp;: sélection d'une référence d'arbre + tag sémantique du nœud, dernier 
+			nœud importé, ou par UUID. (La référence arbre doit préalablement être attribuée dans un élément <code>Créer 
+			arbre</code> ou <code>Sélectionner arbre</code>.)			
 		</li>
 	</ul>
 </article>
@@ -976,7 +1021,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='reset-document-byid'>Remise à zéro Document par UUID</h3>
 	<p>Vider un élément Document par son UUID.</p>
-	<p>Champs à renseigner&nbsp;:</p>
+	<p>Champ à renseigner&nbsp;:</p>
 	<ul>
 		<li>
 			<code>UUID Document</code> UUID de l'élément Document à vider. Ajouter des éléments <i>variable</i> 
@@ -990,7 +1035,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='delete-node-byid'>Supprimer nœud par UUID</h3>
 	<p>Supprimer un nœud par son UUID.</p>
-	<p>Champs à renseigner&nbsp;:</p>
+	<p>Champ à renseigner&nbsp;:</p>
 	<ul>
 		<li>
 			<code>UUID nœud</code> UUID du nœud à supprimer. Ajouter des éléments <i>variable</i> pour des variables 
