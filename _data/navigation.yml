@@ -183,7 +183,7 @@ batch_fr:
         url: /batch_fr/#re-instantiate-tree
       - title: "Mise à jour propriétaire"
         url: /batch_fr/#set-owner       
-      - title: "Créer groupe utilisateur"
+      - title: "Créer groupe utilisateurs"
         url: /batch_fr/#create-usergroup
       - title: "Joindre groupe utilisateurs"
         url: /batch_fr/#join-usergroup
