@@ -9,20 +9,20 @@ sidebar:
 
 <p>
 	Ensemble de commandes de script permettant de construire des rapports. Les rapports présentent
-	habituellement des données puisées d'un ou plusieurs portfolios.
+	habituellement des données puisées dans un ou plusieurs portfolios.
 </p>
 <p>
 	Il y a trois façons d'exécuter un script de rapport&nbsp;:
 	<ul>
-		<li>avec la ressource Tableau de bord dans un portfolio,</li>
+		<li>avec la ressource Tableau de bord dans un portfolio (le plus souvent),</li>
 		<li>
 			à partir de la page Exécuter un script de rapport en spécifiant le code du portfolio contenant 
 			le script de rapport,
 		</li>
 		<li>
 			à partir de la page Exécuter un script de rapport en téléversant un fichier CSV (pour le format 
-			voir section Batch). Dans le fichier CSV, les 2 premières lignes (variables globales) ne sont 
-			pas prises en compte.
+			du fichier CSV voir la page Batch de cette documentation). Dans le fichier CSV, les 2 premières 
+			lignes (variables globales) ne sont pas prises en compte.
 		</li>
 	</ul>
 </p>
@@ -54,7 +54,7 @@ sidebar:
 <h4>Boucles</h4>
 <ul>
 	<li><code><a href='#for-each-node'>Pour chaque nœud</a></code></li>
-	<li><code><a href='#for-each-person'>Pour chaque personne</a></code></li>
+<!--	<li><code><a href='#for-each-person'>Pour chaque personne</a></code></li>	-->
 	<li><code><a href='#for-each-portfolio'>Pour chaque portfolio</a></code></li>
 	<li><code><a href='#for-each-portfolio-node'>Pour chaque nœud de portfolio</a></code></li>
 	<li><code><a href='#for-each-line'>Pour chaque ligne</a></code></li>
@@ -136,7 +136,7 @@ sidebar:
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
-		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les agrégats. Si utilisé, 
+		<li><code>Référence</code> Optionnel&nbsp;: <strike>variable utilisée pour les agrégats</strike>. Si utilisé, 
 			la variable enregistre la valeur obtenue par l'attribut <code>Texte</code>.			
 		</li>
 		<li><code>Texte</code> Le texte à afficher.</li>
@@ -152,18 +152,18 @@ sidebar:
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
-		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les agrégats. 
+		<li><code>Référence</code> Optionnel&nbsp;: <strike>variable utilisée pour les agrégats</strike>. 
 			Si utilisé, la variable enregistre la valeur affichée.			
 		</li>
 		<li>
-			<code>Type nœud</code> Type de l'élément à sélectionner (liste déroulante des choix 
-			possibles).
+			<code>Type nœud</code> Type de l'élément à sélectionner. Les options sont&nbsp;: root, section, page,
+			sous-section ou nœud ressource. 
 		</li>
 		<li><code>Tag sémantique</code> Tag sémantique de l'élément à sélectionner.</li>
 		<li>
-			<code>Afficher</code> Valeur du nœud sélectionné à afficher (liste déroulante des choix possibles). Les 
-			options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud, commentaires sur le nœud, UUID 
-			du nœud, code d'un élément Item ou valeur d'un élément Item.
+			<code>Afficher</code> Valeur du nœud sélectionné à afficher. Les 
+			options sont&nbsp;: libellé du nœud, valeur de la ressource, code du nœud, code d'un élément Item, 
+			commentaires sur le nœud, valeur d'un élément Item ou UUID du nœud.
 		</li>
 	</ul>
 </article>
@@ -373,6 +373,7 @@ sidebar:
 	</ul>
 </article>
 
+<!--
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='for-each-person'>Pour chaque personne</h3>
@@ -405,6 +406,7 @@ sidebar:
 		</li>
 	</ul>
 </article>
+-->
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
@@ -580,7 +582,7 @@ sidebar:
 	<p>Permet de déclarer une variable et de lui assigner une valeur initiale.</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
-		<li><code>Référence</code> Optionnel&nbsp;: variable utilisée pour les agrégats. Si utilisé, 
+		<li><code>Référence</code> Optionnel&nbsp;: <strike>variable utilisée pour les agrégats</strike>. Si utilisé, 
 			la référence enregistre la valeur initiale assignée à la variable.			
 		</li>
 		<li>
@@ -629,7 +631,7 @@ sidebar:
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
 		<li>
-			<code>Référence</code> Optionnel&nbsp;: variable utilisée pour les agrégats. 
+			<code>Référence</code> Optionnel&nbsp;: <strike>variable utilisée pour les agrégats.</strike> 
 			Si utilisé, la variable enregistre la valeur résultante de l'agrégation.			
 		</li>
 		<li><code>Type agrégation</code> Somme ou moyenne (liste déroulante des choix possibles).</li>
@@ -668,7 +670,7 @@ sidebar:
 	<img src='../assets/img/web.png' width='80%'/>
 	<p>
 		Note importante : l'élément Table qui contient l'élément SVG doit avoir l'instruction "width:100%;" dans
-		le champ "Autre CSS" de l'onglet "CSS".
+		le champ "Autre CSS" de l'onglet "CSS"&nbsp;:
 	</p>
 	<img src='../assets/img/width-100.png' width='60%'/>
 	<p>Champs à renseigner&nbsp;:</p>

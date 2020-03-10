@@ -61,9 +61,9 @@ report_fr:
       - title: "Prénom et nom famille"
         url: /report_fr#firstname-lastname
       - title: "Pour chaque nœud"
-        url: /report_fr#for-each-node
-      - title: "Pour chaque personne"
-        url: /report_fr#for-each-person
+        url: /report_fr#for-each-node      
+#      - title: "Pour chaque personne"
+#        url: /report_fr#for-each-person
       - title: "Pour chaque portfolio"
         url: /report_fr#for-each-portfolio
       - title: "Pour chaque nœud de portfolio"
@@ -153,54 +153,96 @@ report_en:
 batch_fr:
   - title: Commandes
     children:
-      - title: "ForEachLine"
+      - title: "Pour chaque ligne"
         url: /batch_fr/#for-each-line
-      - title: "CreatePerson"
+      - title: "Pour chaque arbre"
+        url: /batch_fr/#for-each-tree
+      - title: "Si Alors Sinon"
+        url: /batch_fr/#if-then-else
+      - title: "Créer utilisateur"
         url: /batch_fr/#create-person
-      - title: "DeletePerson"
+      - title: "Désactiver utilisateur"
+        url: /batch_fr/#inactivate-person
+      - title: "Activer utilisateur"
+        url: /batch_fr/#activate-person
+      - title: "Supprimer utilisateur"
         url: /batch_fr/#delete-person
-      - title: "JoinUserGroup"
-        url: /batch_fr/#join-usergroup
-      - title: "LeaveUserGroup"
-        url: /batch_fr/#leave-usergroup
-      - title: "CreateTree"
+      - title: "Créer arbre"
         url: /batch_fr/#create-tree
-      - title: "ShareTree"
-        url: /batch_fr/#share-tree
-      - title: "SelectTree"
+      - title: "Sélectionner arbre"
         url: /batch_fr/#select-tree
-      - title: "DeleteTree"
+      - title: "Supprimer arbre"
         url: /batch_fr/#delete-tree
-      - title: "JoinPortfolioGroup"
-        url: /batch_fr/#join-portfoliogroup
-      - title: "ShareUserGroup"
+      - title: "Partager arbre"
+        url: /batch_fr/#share-tree
+      - title: "Départager arbre"
+        url: /batch_fr/#unshare-tree
+      - title: "Mise à jour racine arbre"
+        url: /batch_fr/#update-tree-root
+      - title: "Ré-instancier arbre"
+        url: /batch_fr/#re-instantiate-tree
+      - title: "Mise à jour propriétaire"
+        url: /batch_fr/#set-owner       
+      - title: "Créer groupe utilisateurs"
+        url: /batch_fr/#create-usergroup
+      - title: "Joindre groupe utilisateurs"
+        url: /batch_fr/#join-usergroup
+      - title: "Quitter groupe utilisateurs"
+        url: /batch_fr/#leave-usergroup
+      - title: "Partager groupe utilisateurs avec portfolio"
         url: /batch_fr/#share-usergroup
-      - title: "UnshareUserGroup"
+      - title: "Départager groupe utilisateurs de portfolio"
         url: /batch_fr/#unshare-usergroup
-      - title: "ImportNode"
+      - title: "Partager utilisateurs groupe avec portfolios groupe"
+        url: /batch_fr/#share-groups
+      - title: "Créer groupe portfolios"
+        url: /batch_fr/#create-portfoliogroup
+      - title: "Joindre groupe portfolios"
+        url: /batch_fr/#join-portfoliogroup
+      - title: "Quitter groupe portfolios"
+        url: /batch_fr/#leave-portfoliogroup
+      - title: "Partager utilisateur avec groupe portfolios"
+        url: /batch_fr/#share-portfoliogroup
+      - title: "Départager utilisateur de groupe portfolios"
+        url: /batch_fr/#unshare-portfoliogroup
+      - title: "Importer nœud"
         url: /batch_fr/#import-node
-      - title: "MoveUp"
+      - title: "Monter nœud"
         url: /batch_fr/#move-up
-      - title: "UpdateField"
-        url: /batch_fr/#update-field
-      - title: "UpdateProxy"
-        url: /batch_fr/#update-proxy
-      - title: "UpdateDashboard"
-        url: /batch_fr/#update-dashboard
-      - title: "UpdateTreeRoot"
-        url: /batch_fr/#update-treeroot
-      - title: "UpdateNodeResource"
-        url: /batch_fr/#update-noderesource
-      - title: "UpdateMetadataQuery"
-        url: /batch_fr/#update-metadata-query
-      - title: "UpdateMetadataMenu"
-        url: /batch_fr/#update-metadata-menu
-      - title: "UpdateMetadataInline"
-        url: /batch_fr/#update-metadata-inline
-      - title: "UpdateMetadata"
+      - title: "Supprimer nœud"
+        url: /batch_fr/#delete-node
+      - title: "Mise à jour ressource du nœud"
+        url: /batch_fr/#update-node-resource
+      - title: "Mise à jour métadonnées"
         url: /batch_fr/#update-metadata
-      - title: "UpdateMetadataWad"
+      - title: "Mise à jour métadonnées WAD"
         url: /batch_fr/#update-metadata-wad
+      - title: "Mise à jour droits"
+        url: /batch_fr/#update-rights     
+      - title: "Mise à jour ressources"
+        url: /batch_fr/#update-resources
+      - title: "Mise à jour Texte court"
+        url: /batch_fr/#update-field
+      - title: "Mise à jour Texte long"
+        url: /batch_fr/#update-textfield
+      - title: "Mise à jour Calendrier"
+        url: /batch_fr/#update-calendar
+      - title: "Mise à jour Tableau de bord"
+        url: /batch_fr/#update-dashboard
+      - title: "Mise à jour Item"
+        url: /batch_fr/#update-item
+      - title: "Mise à jour URL2Unit"
+        url: /batch_fr/#update-url2unit
+      - title: "Mise à jour Proxy"
+        url: /batch_fr/#update-proxy      
+      - title: "Composantes UUID"
+        url: /batch_fr/#uuid-components
+      - title: "Mise à jour Texte court par UUID"
+        url: /batch_fr/#update-field-byid
+      - title: "Remise à zéro Document par UUID"
+        url: /batch_fr/#reset-document-byid
+      - title: "Supprimer nœud par UUID"
+        url: /batch_fr/#delete-node-byid        
   - title: Langues
     children:
       - title: "English"
