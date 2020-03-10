@@ -122,7 +122,7 @@ sidebar:
 <h4>Composantes nœuds</h4>
 <ul>
 	<li><a href='#import-node'><code>Importer nœud</code></a></li>
-	<li><a href='#move-up'><code>Monter un niveau</code></a></li>
+	<li><a href='#move-up'><code>Monter nœud</code></a></li>
 	<li><a href='#delete-node'><code>Supprimer nœud</code></a></li>
 	<li><a href='#update-node-resource'><code>Mise à jour ressource du nœud</code></a></li>
 </ul>
@@ -165,9 +165,9 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='for-each-tree'>Pour chaque arbre</h3>
 	<p>
-		L'élément <i>Pour chaque arbre</i> est une boucle. Les commandes à l'intérieur de la partie <code>Actions</code> 
-		de l'élément <i>Pour chaque arbre</i> seront exécutées pour chaque portfolio dont le code correspond 
-		au critère indiqué dans l'attribut <code>Partie du code de portfolio</code>.
+		L'élément <i>Pour chaque arbre</i> est une boucle. Les commandes à l'intérieur de la partie 
+		<code>Actions</code> seront exécutées pour chaque portfolio dont le code correspond au critère indiqué 
+		dans l'attribut <code>Partie du code de portfolio</code>.
 	</p>
 	<p>Champs à renseigner&nbsp;:</p>
 	<ul>
@@ -181,8 +181,8 @@ sidebar:
 			éléments <i>valeur</i> pour spécifier directement des valeurs.
 		</li>
 		<li>
-			<code>Actions</code> Les commandes à exécuter pour chaque portfolio sélectionné par le critère <code>Partie 
-			du code de portfolio</code>.
+			<code>Actions</code> Les commandes à exécuter pour chacun des portfolios sélectionnés par le critère 
+			<code>Partie du code de portfolio</code>.
 		</li>
 	</ul>
 </article>
@@ -704,20 +704,20 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='move-up'>Monter un niveau</h3>
+	<h3 id='move-up'>Monter nœud</h3>
 	<p>
-		Monter un élément d'une position dans l'arbre XML. Par exemple pour le placer à la bonne place après l'avoir importé 
-		(un élément importé est toujours en dernière place de son niveau dans l'arbre XML).
+		Monter un élément d'une position par rapport à ses frères. Par exemple pour le placer à la bonne 
+		place après l'avoir importé (un élément importé est toujours en dernière place de son niveau dans l'arbre XML).
 	</p>
 	<p>Champ à renseigner&nbsp;:</p>
 	<ul>
 		<li>
 			<code>Nœud</code> Élément à déplacer. Il y a trois options pour spécifier le nœud à déplacer&nbsp;: 
 			sélection d'une référence d'arbre + tag sémantique du nœud, dernier nœud importé, ou par UUID.
-			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou <code>Sélectionner 
-			arbre</code>.)
+			(La référence arbre doit préalablement être attribuée dans un élément <code>Créer arbre</code> ou 
+			<code>Sélectionner arbre</code>.)
 		</li>
-	</ul>
+	</ul>OK
 </article>
 
 <article>

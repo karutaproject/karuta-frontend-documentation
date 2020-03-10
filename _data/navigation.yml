@@ -207,7 +207,7 @@ batch_fr:
         url: /batch_fr/#unshare-portfoliogroup
       - title: "Importer nœud"
         url: /batch_fr/#import-node
-      - title: "Monter un niveau"
+      - title: "Monter nœud"
         url: /batch_fr/#move-up
       - title: "Supprimer nœud"
         url: /batch_fr/#delete-node
