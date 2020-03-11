@@ -35,8 +35,8 @@ report_fr:
     url: /report_fr#commandes
     children:
       - title: Commandes
-         url: /report_fr#commandes
-         children:
+        url: /report_fr#commandes
+        children:
            - title: "Table"
              url: /report_fr#table
            - title: "Rangée"
