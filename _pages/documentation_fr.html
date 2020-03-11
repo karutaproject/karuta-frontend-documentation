@@ -11,12 +11,12 @@ sidebar:
 	 des portfolios d'apprentissage ou encore des portfolios d'évaluation.
 </p>
 <p>
-	Le développement de portfolios peut se faire à partir de templates fournis par la communauté 
-	et qui seront ensuite adaptés aux besoins spécifiques, ou encore à partir des éléments de base 
-	fournis par Karuta.
+	Le développement de portfolios peut se faire à partir d'un modèle de portfolio vierge auquel 
+	on ajoute des éléments de base fournis par Karuta, ou encore à partir de templates fournis par 
+	la communauté puis modifiés pour répondre à des besoins spécifiques.
 </p>
 
-<p>La documentation de Karuta est organisée en trois sections :</p>
+<p>La présente documentation est organisée en trois sections&nbsp:</p>
 <ul>
 	<li><a href='../portfolio_fr/'>Portfolio</a></li>
 	<li><a href='../report_fr/'>Rapport</a></li>
@@ -29,45 +29,49 @@ sidebar:
 </p>
 <p>
 	La section <b><a href='../report_fr/'>Rapport</a></b> présente les commandes permettant 
-	de construire des tableaux de bord, la mise en forme des rapports ainsi que les tableaux de 
-	bord qui sont éditables par les usagers. Les commandes d'un script de rapport permettent de 
-	sélectionner des éléments de portfolios et de les présenter sous forme de tableau.
+	de construire des tableaux de bord
+	<!- , la mise en forme des rapports ainsi que les tableaux de bord qui sont éditables par les utilisateurs ->
+	. Ces commandes permettent de sélectionner des éléments d'un ou plusieurs portfolios et 
+	de les présenter sous forme de tableau.
 </p>
 <p>
 	La section <b><a href='../batch_fr/'>Batch</a></b> présente les commandes des scripts batch. 
 	Ces commandes permettent d'automatiser la création, modification et suppression de portfolios 
-	ainsi que la création ou suppresion d'usagers.
+	ainsi que la création ou suppresion d'utilisateurs.
 </p>
 
 <h3>Remarques d'ordre général</h3>
 <p>
-	KARUTA est multilingue (français et anglais par défaut). Les libellés des éléments de portfolios 
-	sont écrits chacun dans la langue sélectionnée dans le menu. Les libellés dans les menus et dans 
-	l'aide sont suffixés par le code de la langue et séparés par une barre oblique <code>/</code>. 
-	Exemple : Ajouter une photo@fr/Add a photo@en
+	<b>Les langues</b>
+	KARUTA est multilingue (français et anglais par défaut). Les libellés des éléments de portfolio 
+	sont conservés dans la langue de travail active (on sélectionne la langue active dans le menu 
+	drapeau tout en haut des pages Karuta.) 
+	Les libellés dans les menus aux utilisateurs et dans les bulles d'aide (Information) sont suffixés 
+	par le code de la langue et séparés par une barre oblique <code>/</code>. 
+	Exemple&nbsp;: <i>Ajouter une photo@fr/Add a photo@en</i>.
 </p>
 <p>
-	Un usager de Karuta est associé à un 'rôle' dans un portfolio. Par exemple, le rôle d'étudiant 
-	ou de professeur. Pour chaque portfolio, un groupe d'usagers est créé pour chaque rôle rencontré 
-	dans le portfolio. Ensuite, pour associer un rôle à un usager, on place cet usager dans le groupe 
-	du rôle correspondant.
+	<b>Les partages et les rôles utilisateurs</b>
+	Au moment du partage d'une instance de portfolio avec un utilisateur, cet utilisateur est associé au 
+	portfolio dans un 'rôle' spécifique (par exemple, le rôle étudiant ou professeur). Pour chaque portfolio, 
+	KARUTA créé un groupe d'utilisateurs pour chaque rôle rencontré dans le portfolio. Ensuite, pour associer un 
+	rôle à un utilisateur, KARUTA place cet utilisateur dans le groupe du rôle correspondant.
 </p>
-<p> Il y a trois rôles prédéfinis :
-</p>
+<p> Il y a trois rôles prédéfinis&nbsp;:</p>
 <ul>
 	<li>
-		<code>designer</code> C'est l'usager qui construit les portfolios. Il a tous les droits sur 
-		les éléments du portfolio, indépendamment des divers rôles spécifiés dans les métadonnées 
-		d'un élément.
+		<code>designer</code> C'est l'utilisateur qui construit les portfolios. Il a tous les droits sur 
+		tous les éléments du portfolio, indépendamment des divers rôles utilisateurs qu'il spécifie dans les 
+		métadonnées d'un élément.
 	</li>
 	<li>
-		<code>all</code> Ce mot-clé inclus tous les rôles définis sur le portfolio.
+		<code>all</code> Ce mot-clé inclus tous les rôles définis sur le portfolio. Par exemple, par défaut tous 
+		les utilisateurs ont le droit de voir tous les éléments d'un portfolio, mais ce comportement peut être 
+		modifié par le designer en retirant le rôle <code>all</code> dans les métadonnées.
 	</li>
 	<li>
-		<code>user</code> Ce mot-clé sera remplacé par l'identifiant de l'usager lors de 
+		<code>user</code> Ce mot-clé sera remplacé par l'identifiant de l'utilisateur lors de 
 		l'instantiation du portfolio. Cela devient donc un rôle unique puisqu'il n'y a qu'un seul 
-		usager qui peut avoir ce rôle.
+		utilisateur qui peut avoir ce rôle.
 	</li>
 </ul>
-<p>
-</p>
