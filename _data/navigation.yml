@@ -414,7 +414,6 @@ sharing_fr:
       - title: "English"
         url: /sharing_en/
         
-
 # ====== SHARING_EN =============
 sharing_en:
   - title: Structures
@@ -577,14 +576,8 @@ metadata_fr:
         url: /metadata_fr/#submit
       - title: "Recherche"
         url: /metadata_fr/#query
-      - title: "Menu - Get_Multiple"
-        url: /metadata_fr/#get_multiple
-      - title: "Menu - Get_Get_Multiple"
-        url: /metadata_fr/#get_get_multiple
-      - title: "Menu - Import_Multiple"
-        url: /metadata_fr/#import_multiple
-      - title: "Menu - Import_GGMultiple"
-        url: /metadata_fr/#import_ggmultiple
+      - title: "Menu"
+        url: /metadata_fr/#menu
       - title: "Partage par l'usager"
         url: /metadata_fr/#sharing
   - title: Fonctions Menu
@@ -647,6 +640,39 @@ metadata_en:
     children:
       - title: "Français"
         url: /metadata_fr/
+        
+# ====== MENUFUNCTIONS_FR =============
+menuFunctions_fr:
+  - title: Structures
+    url: /structures_fr/
+  - title: Ressources
+    url: /resources_fr/
+  - title: Métadonnées
+    url: /metadata_fr/
+  - title: Fonctions Menu
+    url: /menuFunctions_fr/
+    children:
+      - title: "Get_Multiple"
+        url: /metadata_fr/#get_multiple
+      - title: "Get_Get_Multiple"
+        url: /metadata_fr/#get_get_multiple
+      - title: "Import_Multiple"
+        url: /metadata_fr/#import_multiple
+      - title: "Import_GGMultiple"
+        url: /metadata_fr/#import_ggmultiple
+      - title: "Print"
+        url: /metadata_fr/#print
+      - title: "ExecReport_BatchCSV"
+        url: /metadata_fr/#execReport_BatchCSV
+    
+  - title: Mise en forme (CSS)
+    url: /css_fr/
+  - title: Partage par l'utilisateur
+    url: /sharing_fr/
+  - title:
+    children:
+      - title: "English"
+        url: /metadata_en/
 
 # ====== CSS_FR =============
 css_fr:
