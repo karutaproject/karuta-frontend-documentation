@@ -24,7 +24,7 @@ documentation_fr:
 
 # ====== DOCUMENTATION_EN ================
 documentation_en:
-  - title: Languages
+  - title: 
     children:
       - title: "Français"
         url: /documentation_fr/
