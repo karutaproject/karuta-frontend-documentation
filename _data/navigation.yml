@@ -34,8 +34,7 @@ report_fr:
   - title: Commandes
     url: /report_fr#commandes
     children:
-      - title: Commandes
-        url: /report_fr#commandes
+      - title: Éléments de tableaux
         children:
            - title: "Table"
              url: /report_fr#table
