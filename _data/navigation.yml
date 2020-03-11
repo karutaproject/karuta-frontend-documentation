@@ -35,12 +35,13 @@ report_fr:
     url: /report_fr#commandes
     children:
       - title: Éléments de tableaux
+        url: /report_fr#tableau
         children:
-           - title: "Table"
+           - title: "&nbsp;&nbsp;Table"
              url: /report_fr#table
-           - title: "Rangée"
+           - title: "&nbsp;&nbsp;Rangée"
              url: /report_fr#row
-           - title: "Cellule"
+           - title: "&nbsp;&nbsp;Cellule"
              url: /report_fr#cell
       - title: "Texte"
         url: /report_fr#text
