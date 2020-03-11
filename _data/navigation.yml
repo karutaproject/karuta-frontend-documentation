@@ -17,7 +17,7 @@ main_en:
 
 # ====== DOCUMENTATION_FR ================
 documentation_fr:
-  - title: Langues
+  - title: 
     children:
       - title: "English"
         url: /documentation_en/
