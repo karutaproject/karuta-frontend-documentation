@@ -144,7 +144,7 @@ report_en:
         url: /report_en#go-parent
       - title: "QR Code"
         url: /report_en#qrcode
-  - title: Languages
+  - title:
     children:
       - title: "Français"
         url: /report_fr/
@@ -300,7 +300,7 @@ batch_en:
         url: /batch_en/#update-metadata
       - title: "UpdateMetadataWad"
         url: /batch_en/#update-metadata-wad
-  - title: Languages
+  - title:
     children:
       - title: "Français"
         url: /batch_fr/
@@ -317,7 +317,7 @@ portfolio_fr:
     url: /css_fr/
   - title: Partage
     url: /sharing_fr/
-  - title: Langues
+  - title:
     children:
       - title: "English"
         url: /portfolio_en/
@@ -334,7 +334,7 @@ portfolio_en:
     url: /css_en/
   - title: Sharing
     url: /sharing_en/
-  - title: Langues
+  - title:
     children:
       - title: "Français"
         url: /portfolio_fr/
@@ -360,7 +360,7 @@ structures_fr:
     url: /css_fr/
   - title: Partage
     url: /sharing_fr/
-  - title: Langues
+  - title:
     children:
       - title: "English"
         url: /structures_en/
@@ -386,7 +386,7 @@ structures_en:
     url: /css_en/
   - title: Sharing
     url: /sharing_en/
-  - title: Langues
+  - title:
     children:
       - title: "Français"
         url: /structures_fr/
@@ -403,7 +403,7 @@ sharing_fr:
     url: /css_fr/
   - title: Partage
     url: /sharing_fr/
-  - title: Langues
+  - title:
     children:
       - title: "English"
         url: /sharing_en/
@@ -420,7 +420,7 @@ sharing_en:
     url: /css_en/
   - title: Sharing
     url: /sharing_en/
-  - title: Langues
+  - title:
     children:
       - title: "Français"
         url: /sharing_fr/
@@ -476,7 +476,7 @@ resources_fr:
     url: /css_fr/
   - title: Partage
     url: /sharing_fr/
-  - title: Langues
+  - title:
     children:
       - title: "English"
         url: /resources_en/
@@ -532,7 +532,7 @@ resources_en:
   - title: Sharing
     url: /sharing_en/
     url: /css_en/
-  - title: Langues
+  - title:
     children:
       - title: "Français"
         url: /resources_fr/
@@ -582,7 +582,7 @@ metadata_fr:
     url: /css_fr/
   - title: Partage
     url: /sharing_fr/
-  - title: Langues
+  - title:
     children:
       - title: "English"
         url: /metadata_en/
@@ -632,7 +632,7 @@ metadata_en:
     url: /css_en/
   - title: Sharing
     url: /sharing_en/
-  - title: Langues
+  - title:
     children:
       - title: "Français"
         url: /metadata_fr/
@@ -649,7 +649,7 @@ css_fr:
     url: /css_fr/
   - title: Partage
     url: /sharing_fr/
-  - title: Langues
+  - title:
     children:
       - title: "English"
         url: /css_en/
@@ -666,7 +666,7 @@ css_en:
     url: /css_en/
   - title: Sharing
     url: /sharing_en/
-  - title: Langues
+  - title:
     children:
       - title: "Français"
         url: /css_fr/
