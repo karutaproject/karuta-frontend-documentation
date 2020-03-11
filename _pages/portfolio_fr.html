@@ -6,11 +6,14 @@ sidebar:
  nav: "portfolio_fr"
 ---
 
-<p>Dans Karuta un portfolio est représenté par un arbre structuré (voir STRUCTURES).</p>
-<p> Il y a plusieurs types d'arbres dans Karuta :</p>
+<p>
+	Dans Karuta un portfolio est représenté par un arbre structuré. En d'autres mot, tous les portfolios sont construits
+	selon une arborescence XML (voir section STRUCTURES pour plus de détails).
+</p>
+<p> Il y a plusieurs types d'arbres dans Karuta&nbsp;:</p>
 <ul>
 	<li>modèle de portfolio</li>
-	<li>instance de portfolios</li>
+	<li>instance de portfolio</li>
 	<li>portfolio référentiel</li>
 	<li>portfolio de composantes réutilisables</li>
 	<li>script de rapport</li>
@@ -20,32 +23,34 @@ sidebar:
 <h3>Modèle de portfolio</h3>
 <p>
 	Un modèle de portfolio est une structure d'arbre qui organise des ressources. Les ressources sont 
-	les éléments qui vont contenir les données : les données fournies aux usagers (comme des 
-	instructions ou des fichiers à consulter) et les données que les usagers vont entrer pour peupler 
-	leur portfolio. Karuta offre des ressources de plusieurs types : champ de texte (texte court), 
-	éditeur de texte (texte long), fichier, image, son, vidéo, calendrier, etc.
+	les éléments qui vont contenir les données&nbsp;: les données fournies aux utilisateurs (comme des 
+	instructions ou des fichiers à consulter) et les données que les utilisateurs vont entrer pour peupler 
+	leur portfolio. Karuta offre des ressources de plusieurs types&nbsp;: champ de texte (texte court), 
+	éditeur de texte (texte long), fichier, image, son, vidéo, calendrier, etc (voir section RESSOURCES 
+	pour plus de détails).
 </p>
 <p>
-	Une fois construit par le designer, le modèle de portfolio est instancié pour chaque usager, 
+	Une fois construit par le designer, le modèle de portfolio est instancié pour chaque utilisateur, 
 	c'est à dire que l'on fait une copie du modèle et le nouvel arbre devient le portfolio spécifique 
-	à un usager.
+	à un utilisateur.
 </p>
 <h3>Instance de portfolio</h3>
 <p>
-	Une instance de portfolio est une copie du modèle pour un usager spécifique. Au moment de 
-	l'instantiation (copie) les rôles et les droits sont créés pour chacun des éléments du 
-	portfolio.
+	Une instance de portfolio est une copie du modèle pour un utilisateur spécifique. Au moment de 
+	l'instantiation (copie) les rôles et les droits sont créés pour chacun des éléments du portfolio, 
+	en fonction de ce que le designer a indiqué dans les métadonnées (voir section MÉTADONNÉES pour 
+	plus de détails).
 </p>
 <h3>Portfolio référentiel</h3>
 <p>
 	Un référentiel est une liste d'éléments qui seront référencés dans les portfolios, par exemple un 
-	référentiel de compétences ou encore les éléments d'une liste déroulante.
+	référentiel de compétences ou encore les choix d'une liste déroulante.
 </p>
 <h3>Portfolio de composantes réutilisables</h3>
 <p>
 	Le portfolio de composantes réutilisables sert à stocker des morceaux de portfolio qui seront 
-	ensuite mis à la disposition de l'usager via un menu. L'usager peut ainsi ajouter des morceaux 
-	à son portfolio selon ses besoins.
+	ensuite mis à la disposition de l'utilisateur via un menu. L'utilisateur peut ainsi ajouter des 
+	morceaux à son portfolio selon ses besoins.
 </p>
 <h3>Script de rapport</h3>
 <p>
@@ -53,32 +58,39 @@ sidebar:
 	informations d'un ou de plusieurs portfolios et de les afficher sous une présentation différente. 
 	Par exemple pour faire un tableau de bord, un cv ou un rapport de cohorte. Les commandes de script 
 	de rapport permettent de naviguer dans les portfolios pour y sélectionner les éléments à afficher. 
-	Le résultat est affiché dans un tableau html dont la mise en forme est libre au designer.</p>
+	Le résultat est affiché dans un tableau html dont la mise en forme est libre au designer
+	(voir section <b><a href='../report_fr/'>Rapport</a></b> pour plus de détails).
+	</p>
 
 <h3>Script de batch</h3>
-<p>Un batch est un script contenant des commandes qui permettent d'une manière automatique 
-	de créer des usagers, de créer des instances de portfolio, de mettre à jour des éléments du portfolio, 
-	etc. Un script de batch est généralement associé à un fichier CSV contenant, par exemple, la 
-	liste des usagers. L'éxécution du script de batch créera alors automatiquement tous les 
-	portfolios des usagers. Un script de batch peut également être associé à un formulaire.
+<p>
+	Un batch est un script contenant des commandes qui permettent d'une manière automatique 
+	de créer des utilisateurs, de créer des instances de portfolio, de mettre à jour des éléments 
+	du portfolio, etc. Un script de batch est généralement associé à un fichier CSV contenant, par 
+	exemple, la liste des utilisateurs. L'exécution du script de batch créera alors automatiquement 
+	tous les portfolios des utilisateurs (voir section <b><a href='../batch_fr/'>Batch</a></b> pour 
+	plus de détails). Un script de batch peut également être associé à un formulaire de batch.
 </p>
 <h3>Formulaire de batch</h3>
-<p>Un formulaire batch permet d'exécuter un script de batch d'une manière unitaire pour un 
-	seul usager.
+<p>
+	Un formulaire batch permet d'exécuter un script de batch d'une manière unitaire pour un 
+	seul utilisateur.
 </p>
 
-<h2>Principe de fonctionnement</h2>
-<p>Un portfolio ou arbre dans Karuta est construit en y ajoutant des branches un peu comme dans un 
-	jeu de Lego. Certaines branches sont prédéfinies : les éléments de base de Karuta. D'autres 
-	branches sont construites par le designer en assemblant des branches de base. On peut ainsi 
+<h2>Fonctionnement</h2>
+<p>
+	Un portfolio ou arbre Karuta est construit en y ajoutant des branches un peu comme dans un 
+	jeu de Lego. Certaines branches sont prédéfinies&nbsp;: les éléments de base de Karuta. D'autres 
+	branches sont construites par le designer en assemblant des éléments de base. On peut ainsi 
 	construire des portfolios complexes.
 </p>
-<p>On peut aussi définir des menus permettant à l'usager final d'ajouter lui-même des branches à 
-	son portfolio.
+<p>
+	On peut aussi définir des menus permettant à l'utilisateur final d'ajouter lui-même des branches 
+	pré-construites par le designer à son portfolio.
 </p>
 
 <h3>Modèle et instance</h3>
-<p>On distingue deux types de portfolios :</p>
+<p>On distingue deux types de portfolios&nbsp;:</p>
 <ul>
 <li>Portfolio modèle — Construit par le designer. Les rôles associés sont <i>designer</i> et 
 	<i>all</i>.
@@ -88,17 +100,18 @@ sidebar:
 	en plus de <i>designer</i> et <i>all</i>.
 </li>
 </ul>
-<p>Le diagramme ci-dessous présente les liens entre les deux types de portfolios :</p>
+<p>Le diagramme ci-dessous présente les liens entre les deux types de portfolios&nbsp;:</p>
 <img src='../assets/img/modele-instance1.png' width='30%'/>
 <h3>Le modèle de sécurité</h3>
 <p></p>
 <img src='../assets/img/modele-securite.png' width='50%'/>
 <ul>
-	<li>Un portfolio a des rôles associés.</li>
-	<li>Un rôle a des droits associés (lire, écrire, soumettre, etc.) sur chacun des éléments 
+	<li>Un portfolio a des <b>rôles</b> associés.</li>
+	<li>
+		Un rôle a des <b>droits</b> associés (voir, écrire, soumettre, etc) sur chacun des éléments 
 		du portfolio.
 	</li>
-	<li>Le partage d'un portfolio se fait en indiquant un usager et un rôle.</li>
+	<li>Le partage d'un portfolio se fait en indiquant un utilisateur et un rôle.</li>
 </ul>
 <img src='../assets/img/partage.png' width='80%'/>
 
