@@ -653,17 +653,17 @@ menuFunctions_fr:
     url: /menuFunctions_fr/
     children:
       - title: "Get_Multiple"
-        url: /metadata_fr/#get_multiple
+        url: /menuFunctions_fr/#get_multiple
       - title: "Get_Get_Multiple"
-        url: /metadata_fr/#get_get_multiple
+        url: /menuFunctions_fr/#get_get_multiple
       - title: "Import_Multiple"
-        url: /metadata_fr/#import_multiple
+        url: /menuFunctions_fr/#import_multiple
       - title: "Import_GGMultiple"
-        url: /metadata_fr/#import_ggmultiple
+        url: /menuFunctions_fr/#import_ggmultiple
       - title: "Print"
-        url: /metadata_fr/#print
+        url: /menuFunctions_fr/#print
       - title: "ExecReport_BatchCSV"
-        url: /metadata_fr/#execReport_BatchCSV
+        url: /menuFunctions_fr/#execReport_BatchCSV
     
   - title: Mise en forme (CSS)
     url: /css_fr/
