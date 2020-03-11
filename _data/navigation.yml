@@ -97,7 +97,7 @@ report_fr:
         url: /report_fr#csv-line
       - title: "Valeur CSV"
         url: /report_fr#csv-value
-  - title: Langues
+  - title:
     children:
       - title: "English"
         url: /report_en/
@@ -243,7 +243,7 @@ batch_fr:
         url: /batch_fr/#reset-document-byid
       - title: "Supprimer nœud par UUID"
         url: /batch_fr/#delete-node-byid        
-  - title: Langues
+  - title:
     children:
       - title: "English"
         url: /batch_en/
