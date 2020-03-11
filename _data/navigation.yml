@@ -358,9 +358,11 @@ structures_fr:
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
+  - title: Fonctions Menu
+    url: /menuFunctions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
-  - title: Partage
+  - title: Partage par l'utilisateur
     url: /sharing_fr/
   - title:
     children:
@@ -401,9 +403,11 @@ sharing_fr:
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
+  - title: Fonctions Menu
+    url: /menuFunctions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
-  - title: Partage
+  - title: Partage par l'utilisateur
     url: /sharing_fr/
   - title:
     children:
@@ -474,9 +478,11 @@ resources_fr:
         url: /resources_fr/#proxy
   - title: Métadonnées
     url: /metadata_fr/
+  - title: Fonctions Menu
+    url: /menuFunctions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
-  - title: Partage
+  - title: Partage par l'utilisateur
     url: /sharing_fr/
   - title:
     children:
@@ -580,9 +586,11 @@ metadata_fr:
         url: /metadata_fr/#import_ggmultiple
       - title: "Partage par l'usager"
         url: /metadata_fr/#sharing
+  - title: Fonctions Menu
+    url: /menuFunctions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
-  - title: Partage
+  - title: Partage par l'utilisateur
     url: /sharing_fr/
   - title:
     children:
@@ -647,9 +655,11 @@ css_fr:
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
+  - title: Fonctions Menu
+    url: /menuFunctions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
-  - title: Partage
+  - title: Partage par l'utilisateur
     url: /sharing_fr/
   - title:
     children:
