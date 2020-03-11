@@ -34,12 +34,15 @@ report_fr:
   - title: Commandes
     url: /report_fr#commandes
     children:
-      - title: "Table"
-        url: /report_fr#table
-      - title: "Rangée"
-        url: /report_fr#row
-      - title: "Cellule"
-        url: /report_fr#cell
+       - title: Éléments de construction de tableaux
+        url: /report_fr#commandes
+        children:
+          - title: "Table"
+            url: /report_fr#table
+          - title: "Rangée"
+            url: /report_fr#row
+          - title: "Cellule"
+            url: /report_fr#cell
       - title: "Texte"
         url: /report_fr#text
       - title: "Nœud"
