@@ -37,11 +37,11 @@ report_fr:
       - title: Éléments de tableaux
         url: /report_fr#tableau
         children:
-           - title: "&nbsp;&nbsp;Table"
+           - title: "- Table"
              url: /report_fr#table
-           - title: "&nbsp;&nbsp;Rangée"
+           - title: "- Rangée"
              url: /report_fr#row
-           - title: "&nbsp;&nbsp;Cellule"
+           - title: "- Cellule"
              url: /report_fr#cell
       - title: "Texte"
         url: /report_fr#text
