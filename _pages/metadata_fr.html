@@ -6,8 +6,8 @@ sidebar:
  nav: "metadata_fr"
 ---
 <p>
-	Les métadonnées des éléments permettent de leur attribuer des identifiants uniques et aussi d'en
-	spécifier le comportement. Par exemple, dans le cas d'éléments structurels (Section, Page, Sous-section), 
+	Les métadonnées des éléments permettent premièrement de leur attribuer un identifiant unique et ensuite d'en
+	spécifier le comportement. Par exemple, dans le cas d'éléments de structure (Section, Page, Sous-section), 
 	on peut définir des menus qui permettent l'ajout d'éléments supplémentaires par le designer ou même par 
 	l'utilisateur final. Dans le cas des éléments de ressource (éléments qui contiennent les données), on 
 	peut définir les rôles attribués à chaque droit (qui peut faire quoi sur l'élément). C'est aussi dans les 
@@ -33,11 +33,8 @@ de Menu - Print (function,print,Imprimer@fr,etudiant) et exec_report (et celles 
 	<li><code><a href='#comment'>Rôles - Commenter</a></code></li>
 	<li><code><a href='#submit'>Rôles - Soumettre</a></code></li>
 	<li><code><a href='#query'>Recherche</a></code></li>
-	<li><code><a href='#get_multiple'>Menu - Get_Multiple</a></code></li>
-	<li><code><a href='#get_get_multiple'>Menu - Get_Get_Multiple</a></code></li>
-	<li><code><a href='#import_multiple'>Menu - Import_Multiple</a></code></li>
-	<li><code><a href='#import_ggmultiple'>Menu - Import_GGMultiple</a></code></li>
-	<li><code><a href='#sharing'>Partage par l'usager</a></code></li>
+	<li><code><a href='#menu'>Menu</a></code></li>
+	<li><code><a href='#sharing'>Partage par l'utilisateur</a></code></li>
 </ul>
 
 <article>
@@ -61,11 +58,11 @@ de Menu - Print (function,print,Imprimer@fr,etudiant) et exec_report (et celles 
 	<h3 id='asmstructure'>Code</h3>
 	<p>Le code d'un élément de portfolio doit être unique dans ce portfolio. Il est utilisé dans les 
 		listes déroulantes (élément Get_Resource, élément Get_Get_Resource, menu Get_Multiple, menu 
-		Get_Get_Multiple, menu Import_Multiple) pour identifier la sélection de l'usager.
+		Get_Get_Multiple, menu Import_Multiple) pour identifier la sélection de l'utilisateur.
 	</p>
 	<p>
 		Par défaut le code et le libellé de l'élément apparaissent dans la liste déroulante et seul 
-		le libellé de l'option sélectionnée par l'usager apparaît ensuite dans l'élément Ressource. 
+		le libellé de l'option sélectionnée par l'utilisateur apparaît ensuite dans l'élément Ressource. 
 		Ce comportement peut être modifié par l'ajout d'un ou plusieurs des symboles suivants au code 
 		de l'élément :
 	</p>
@@ -113,9 +110,9 @@ de Menu - Print (function,print,Imprimer@fr,etudiant) et exec_report (et celles 
 	<h3 id='encript-resource'>Encrypter la ressource</h3>
 	<p>
 		Cet attribut permet de spécifier si la ressource est encryptée. Dans le cas positif, à 
-		l'ouverture du portfolio, une phrase-clé est demandée à l'usager. Cette phrase-clé sert à 
+		l'ouverture du portfolio, une phrase-clé est demandée à l'utilisateur. Cette phrase-clé sert à 
 		encoder/décoder les données entrées la Ressource. Cette phrase-clé n'est pas stockée dans 
-		Karuta et doit donc être mémorisée par l'usager, car elle lui est demandée à chaque ouverture 
+		Karuta et doit donc être mémorisée par l'utilisateur, car elle lui est demandée à chaque ouverture 
 		du portfolio.
 	</p>
 </article>
@@ -153,7 +150,7 @@ de Menu - Print (function,print,Imprimer@fr,etudiant) et exec_report (et celles 
 	<p>
 		La liste des rôles, séparés par un espace, pouvant commenter un élément Ressource. Ce droit 
 		ajoute un éditeur de texte au bas de la boîte d'édition de la Ressource; le commentaire est 
-		daté et signé du nom de l'usager qui l'a écrit. Pour pouvoir commenter un élément, l'usager 
+		daté et signé du nom de l'utilisateur qui l'a écrit. Pour pouvoir commenter un élément, l'utilisateur 
 		doit également avoir le droit d'éditer la Ressource.
 	</p>
 	<p>
@@ -167,7 +164,7 @@ de Menu - Print (function,print,Imprimer@fr,etudiant) et exec_report (et celles 
 	<h3 id='submit'>Rôles - Soumettre</h3>
 	<p>
 		La liste des rôles, séparés par un espace, pouvant soumettre l'élément. Ce droit ajoute 
-		un bouton <i>Soumettre</i>. Lorsque l'usager soumet un élément, ses droits d'édition et/ou 
+		un bouton <i>Soumettre</i>. Lorsque l'utilisateur soumet un élément, ses droits d'édition et/ou 
 		de suppression sont retirés pour l'élément et tous ses enfants.
 	</p>
 </article>
@@ -179,7 +176,7 @@ de Menu - Print (function,print,Imprimer@fr,etudiant) et exec_report (et celles 
 		Le champ "recherche" est utilisé par :
 		<ul>
 			<li>les listes déroulantes (éléments Get_Resource et Get_Get_Resource)</i>
-			<li>les menus aux usagers sur les éléments de structure (éléments Section, Page et Sous-section)</i>
+			<li>les menus aux utilisateurs sur les éléments de structure (éléments Section, Page et Sous-section)</i>
 			<li>les listes de choix multiple implémentées à travers des menus (menu Get_Multiple, 
 				menu Get_Get_Multiple et menu Import_Multiple)</i>
 		</ul>
@@ -243,111 +240,9 @@ de Menu - Print (function,print,Imprimer@fr,etudiant) et exec_report (et celles 
 	</ul>
 </article>
 
-
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='get_multiple'>Menu - Get_Multiple</h3>
-	<p>
-		La fonction Get_Multiple permet à l'usager de sélectionner plusieurs éléments dans une liste.
-		Pour chaque élément sélectionné, une composante réutilisable  (Page ou Sous-section) est ajoutée au 
-		portfolio. Un élément de cette composante est alors mis à jour avec le code et le libellé de l'élément 
-		sélectionné.
-	</p>
-	<h4>Format</h4>
-	<p>
-		<code>function</code>,<code>get_multiple</code>/<code>recherche</code>/<code>code_portfolio.tag_sémantique
-		</code>/<code>tag_sémantique_a_mettre jour</code>,<code>libellé@fr</code>,<code>rôles</code>
-	</p>
-	<ul>
-		<li><code>function</code> : Mot réservé.</li>
-		<li><code>get_multiple</code> : Mot réservé.</li>
-		<li><code>recherche</code> : Recherche du Get_Resource (voir ci-dessus).</li>
-		<li>
-			<code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter.
-		</li>
-		<li>
-			<code>tag_sémantique_a_mettre_a_jour</code> : Tag sémantique de l'élément de la composante à 
-			mettre à jour avec le code et le libellé sélectionné.
-		</li>
-		<li><code>libellé@fr</code> : Libellé du menu.</li>
-		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
-	</ul>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='get_get_multiple'>Menu - Get_Get_Multiple</h3>
-	<p>
-		Équivalent à la fonction précédente, sauf que les choix aux utilisateurs sont restreints par la
-		sélection dans un élément parent (même principe que pour les éléments Get_Get_Resource).
-	</p>
-	<h4>Format</h4>
-	<p>
-		<code>function</code>,<code>get_get_multiple</code>/<code>recherche</code>/<code>
-		code_portfolio.tag_sémantique</code>/<code>tag_sémantique_à_mettre_à_jour</code>,<code>libellé@fr
-		</code>,<code>rôles</code>
-	</p>
-	<ul>
-		<li><code>function</code> : Mot réservé.</li>
-		<li><code>get_get_multiple</code> : Mot réservé.</li>
-		<li><code>recherche</code> : Recherche du Get_Get_Resource (voir ci-dessus).</li>
-		<li>
-			<code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter.
-		</li>
-		<li>
-			<code>tag_sémantique_à_mettre_à_jour</code> : Tag sémantique de l'élément de la 
-			composante à mettre à jour avec le code et le libellé sélectionné.
-		</li>
-		<li><code>libellé@fr</code> : Libellé du menu.</li>
-		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
-	</ul>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='import_multiple'>Menu - Import_Multiple</h3>
-	<p>
-		La fonction Import_Multiple permet à l'usager d'ajouter plusieurs éléments à partir d'une liste. 
-		Comme les commandes précédentes, un query permet de sélectionner les éléments de la liste. 
-		Mais avec Import_Multiple, les codes des éléments sélectionnés sont utilisés pour importer 
-		les éléments ayant ce code dans le portfolio d'importation. Le code du portfolio d'importation 
-		peut être le même que celui de recherche, dans ce cas on importe les éléments recherchés et 
-		cochés. Mais le code du portfolio d'importation peut être différent de celui de recherche, 
-		dans ce cas on importe les éléments ayant le même code que ceux cochés. Le portfolio d'importation 
-		est le portfolio dans lequel on va chercher les éléments à importer.
-	 </p>
-	<p>
-		OPTION : Le code du portfolio d'importation peut prendre la forme <code>?</code>.
-		<code>tag_sémantique</code>. Dans ce cas le code du portfolio sera le code de l'élément coché 
-		et le tag sémantique de l'élément importé sera <code>tag_sémantique</code>.
-	</p>
-	<p>
-		ATTENTION : Si les éléments à importer sont des items, le code de l'item (<code>Item - Code</code>) 
-		doit être répété dans le code du noeud (<code>Code</code>).
-	</p>
-	<h4>Format</h4>
-	<p><code>function</code>,<code>import_multiple</code>/<code>recherche</code>/<code>code_portfolio</code>,
-		<code>libellé@fr</code>,<code>rôles</code>
-	</p>
-	<ul>
-		<li><code>function</code> : Mot réservé.</li>
-		<li><code>import_multiple</code> : Mot réservé.</li>
-		<li>
-			<code>recherche</code> : Recherche du Get_Resource (voir "recherche" ci-dessus) &mdash; retourne 
-			une liste de codes.
-		</li>
-		<li><code>code_portfolio</code> : Code du portfolio duquel on importe le noeud avec le(s) 
-			code(s) sélectionné(s) &mdash; peut être ou pas le même que celui du Get_Resource.<br> 
-			OPTION : <code>?</code>.<code>tag_sémantique</code>
-		</li>
-		<li><code>libellé@fr</code> : Libellé du menu.</li>
-		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
-	</ul>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='menus'>Menus</h3>
+	<h3 id='menu'>Menu</h3>
 	<p>
 		Le champ Menus permet de présenter un menu déroulant de choix de composantes à importer. Le menu peut comprendre plusieurs éléments. Dans le cas où pour un rôle,
 		 il n'y a qu'un seul élément alors seul cet élément sera affiché. Si il ya plusieurs éléments pour un rôle, il est possible de contrôler
@@ -369,69 +264,9 @@ de Menu - Print (function,print,Imprimer@fr,etudiant) et exec_report (et celles 
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='import_ggmultiple'>Menu - Import_GGMultiple</h3>
+	<h3 id='sharing'>Partage par l'utilisateur</h3>
 	<p>
-		La fonction Import_GGMultiple permet à l'usager d'ajouter plusieurs éléments à partir d'une liste. 
-		Comme les commandes précédentes, une recherche permet de sélectionner les éléments de la liste. 
-	  	Mais avec Import_GGMultiple, les codes des éléments sélectionnés sont utilisés pour importer les 
-	  	éléments ayant ce code dans le portfolio d'importation. Le code du portfolio d'importation peut 
-	  	être le même que celui de recherche, dans ce cas on importe les éléments recherchés et cochés. 
-	  	Mais le code du portfolio d'importation peut être différent de celui de recherche, dans ce cas on 
-	  	importe les éléments ayant le même code que ceux cochés.
-	  </p>
-	 </p>
-	 <p>
-	 	OPTION 1 : Dans la recherche le code du portfolio peut être <code>?</code>.
-	    Dans ce cas le code du portfolio de recherche sera le code de l'élément parent.
-	 </p>
-	 <p>
-	  	OPTION 2 : Le code du portfolio d'importation peut prendre la forme <code>?</code>.
-	    Dans ce cas le code du portfolio d'importation sera le code de l'élément parent trouvé.
-	  </p>
-	<h4>Format</h4>
-	<p>
-		<code>function</code>,<code>import_ggmultiple</code>/<code>recherche</code>/<code>code_portfolio</code>,
-		<code>libellé@fr</code>,<code>rôles</code>
-	</p>
-	<ul>
-		<li><code>function</code> : Mot réservé.</li>
-		<li><code>import_ggmultiple</code> : Mot réservé.</li>
-		<li>
-			<code>recherche</code> : Recherche du Get_Get_Resource (voir "recherche" ci-dessus) &mdash; retourne 
-			une liste de codes.<br>
-			OPTION 1 : Le code du portfolio peut être le mot réservé <code>?</code>.
-		</li>
-		<li>
-			<code>code_portfolio</code> : Code du portfolio duquel on importe le noeud avec le(s) code(s) 
-			sélectionné(s).<br> 
-			OPTION 2 : Le code du portfolio peut être le mot réservé <code>?</code>.
-		</li>
-		<li><code>libellé@fr</code> : Libellé du menu.</li>
-		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
-	</ul>
-	<p>
-		Exemple d'utilisation : Un Get-Resource permet de sélectionner un référentiel parmi une liste de 
-		référentiels (le code de l'élément Item doit être le code du portfolio du référentiel correspondant). 
-		Un Import_GGMultiple permet d'importer des éléments du référentiel sélectionné dans le Get_Resource.
-	</p>
-	<p>
-		Menu : <code>function</code>,<code>import_ggmultiple</code>/<code>?.child.referentiel.skill$.label
-		</code>/<code>?</code>,<code>Ajouter une compétence@fr</code>,<code>auteur</code>
-	</p>
-	<p>
-		Remarque : Ce menu se trouve sur un élément Sous-section et le Get_Resource est à l'intérieur 
-		(d'où l'utiliation du mot résevé <code>child</code>. <code>referentiel</code> est à la fois le  
-		tag sémantique du Get_Resource et le tag sémantique que des éléments Item de la liste de référentiels. 
-	   	Chaque Item a pour code le code du portfolio référentiel correspondant. Les points d'interrogation
-	   	<code>?</code> font référence à ce code de portfolio référentiel.
-	</p>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='sharing'>Partage par l'usager</h3>
-	<p>
-		La fonction Partage par l'usager permet à l'usager d'envoyer un courriel à un tiers, avec un hyperlien 
+		La fonction Partage par l'utilisateur permet à l'utilisateur d'envoyer un courriel à un tiers, avec un hyperlien 
 		qui partage, en tout ou en partie, son portfolio avec ce tiers.
 	</p>
 	<h4>Format</h4>
@@ -443,7 +278,7 @@ de Menu - Print (function,print,Imprimer@fr,etudiant) et exec_report (et celles 
 		condition (optionel)</code>
 	</p>
 	<ul>
-		<li><code>rôle</code> Rôle de l'usager qui peut faire le partage (qui aura le bouton pour partager).</li>
+		<li><code>rôle</code> Rôle de l'utilisateur qui peut faire le partage (qui aura le bouton pour partager).</li>
 		<li><code>rôle destinataire</code> Rôle qu'aura le destinataire dans le portfolio.</li>
 		<li>
 			<code>rôles et/ou courriels</code> Rôles et/ou courriels des destinataires. Si c'est 
@@ -451,7 +286,7 @@ de Menu - Print (function,print,Imprimer@fr,etudiant) et exec_report (et celles 
 			courriel.
 		</li>
 		<li><code>niveau (0-4)</code> Le niveau peut prendre les valeurs de 0 à 4 (voir ci-dessous).</li>
-		<li><code>libellé du bouton@fr</code> Libellé qui apparaîtra à l'usager qui peut faire le partage.</li>
+		<li><code>libellé du bouton@fr</code> Libellé qui apparaîtra à l'utilisateur qui peut faire le partage.</li>
 		<li>
 			<code>condition</code> Condition pour que le bouton de partage soit visible (qu'il existe). 
 			Exemple&nbsp;: <i>submitted=='Y'</i>
@@ -471,13 +306,13 @@ de Menu - Print (function,print,Imprimer@fr,etudiant) et exec_report (et celles 
 	<h5>Niveau 2</h5>
 	<p>
 		L’utilisateur possède un compte Karuta mais le portfolio ne lui est pas partagé. Le système partage le portfolio 
-		avec l’usager dans le bon rôle. (Si l'utilisateur n'est pas déjà logué, il obtiendra un login temporaire.) Par 
+		avec l’utilisateur dans le bon rôle. (Si l'utilisateur n'est pas déjà logué, il obtiendra un login temporaire.) Par 
 		mesure de sécurité, il devrait y avoir un bouton <i>Soumettre</i> sur les éléments que le visiteur peut modifier.
 	</p>
 	<h5>Niveau 3</h5>
 	<p>
 		Si l’utilisateur n'a pas de compte dans Karuta, un compte lui sera créé. Le système partage le portfolio 
-		avec l'usager dans le bon rôle. (Si l'utilisateur n'est pas déjà logué, il obtiendra un login temporaire.) Par 
+		avec l'utilisateur dans le bon rôle. (Si l'utilisateur n'est pas déjà logué, il obtiendra un login temporaire.) Par 
 		mesure de sécurité, il devrait y avoir un bouton <i>Soumettre</i> sur les éléments que le visiteur peut modifier.
 	</p>
 	<h5>Niveau 4 – Lien public</h5>
@@ -487,7 +322,7 @@ de Menu - Print (function,print,Imprimer@fr,etudiant) et exec_report (et celles 
 	</p>
 	<p>	
 		Pour une documentation complète et des exemples d'utilisation consulter <a href='../assets/html/DocPartage.html'>Doc 
-		Partage par l'usager</a>.
+		Partage par l'utilisateur</a>.
 	</p>
 </article>
 

@@ -313,9 +313,11 @@ portfolio_fr:
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
+  - title: Fonctions Menu
+    url: /menuFunctions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
-  - title: Partage
+  - title: Partage par l'utilisateur
     url: /sharing_fr/
   - title:
     children:

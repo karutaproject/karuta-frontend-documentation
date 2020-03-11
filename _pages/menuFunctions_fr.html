@@ -1,0 +1,202 @@
+---
+layout: archive
+permalink: /metadata_fr/
+title: "Fonctions préprogrammées pour la métadonnée Menu"
+sidebar:
+ nav: "metadata_fr"
+---
+<p>Karuta offre plusieurs fonctions préprogrammées qui peuvent être utilisées dans la métadonnées Menu.</p>
+<ul>
+	<li><code><a href='#get_multiple'>Get_Multiple</a></code></li>
+	<li><code><a href='#get_get_multiple'>Get_Get_Multiple</a></code></li>
+	<li><code><a href='#import_multiple'>Import_Multiple</a></code></li>
+	<li><code><a href='#import_ggmultiple'>Import_GGMultiple</a></code></li>
+	<li><code><a href='#print'>Print</a></code></li>
+	<li><code><a href='#execReport_BatchCSV'>ExecReport_BatchCSV</a></code></li>
+</ul>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='get_multiple'>Get_Multiple</h3>
+	<p>
+		La fonction Get_Multiple permet à l'utilisateur de sélectionner plusieurs éléments dans une liste.
+		Pour chaque élément sélectionné, une composante réutilisable  (Page ou Sous-section) est ajoutée au 
+		portfolio. Un élément de cette composante est alors mis à jour avec le code et le libellé de l'élément 
+		sélectionné.
+	</p>
+	<h4>Format</h4>
+	<p>
+		<code>function</code>,<code>get_multiple</code>/<code>recherche</code>/<code>code_portfolio.tag_sémantique
+		</code>/<code>tag_sémantique_a_mettre jour</code>,<code>libellé@fr</code>,<code>rôles</code>
+	</p>
+	<ul>
+		<li><code>function</code> : Mot réservé.</li>
+		<li><code>get_multiple</code> : Mot réservé.</li>
+		<li><code>recherche</code> : Recherche du Get_Resource (voir ci-dessus).</li>
+		<li>
+			<code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter.
+		</li>
+		<li>
+			<code>tag_sémantique_a_mettre_a_jour</code> : Tag sémantique de l'élément de la composante à 
+			mettre à jour avec le code et le libellé sélectionné.
+		</li>
+		<li><code>libellé@fr</code> : Libellé du menu.</li>
+		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='get_get_multiple'>Get_Get_Multiple</h3>
+	<p>
+		Équivalent à la fonction précédente, sauf que les choix aux utilisateurs sont restreints par la
+		sélection dans un élément parent (même principe que pour les éléments Get_Get_Resource).
+	</p>
+	<h4>Format</h4>
+	<p>
+		<code>function</code>,<code>get_get_multiple</code>/<code>recherche</code>/<code>
+		code_portfolio.tag_sémantique</code>/<code>tag_sémantique_à_mettre_à_jour</code>,<code>libellé@fr
+		</code>,<code>rôles</code>
+	</p>
+	<ul>
+		<li><code>function</code> : Mot réservé.</li>
+		<li><code>get_get_multiple</code> : Mot réservé.</li>
+		<li><code>recherche</code> : Recherche du Get_Get_Resource (voir ci-dessus).</li>
+		<li>
+			<code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter.
+		</li>
+		<li>
+			<code>tag_sémantique_à_mettre_à_jour</code> : Tag sémantique de l'élément de la 
+			composante à mettre à jour avec le code et le libellé sélectionné.
+		</li>
+		<li><code>libellé@fr</code> : Libellé du menu.</li>
+		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='import_multiple'>Import_Multiple</h3>
+	<p>
+		La fonction Import_Multiple permet à l'utilisateur d'ajouter plusieurs éléments à partir d'une liste. 
+		Comme les commandes précédentes, un query permet de sélectionner les éléments de la liste. 
+		Mais avec Import_Multiple, les codes des éléments sélectionnés sont utilisés pour importer 
+		les éléments ayant ce code dans le portfolio d'importation. Le code du portfolio d'importation 
+		peut être le même que celui de recherche, dans ce cas on importe les éléments recherchés et 
+		cochés. Mais le code du portfolio d'importation peut être différent de celui de recherche, 
+		dans ce cas on importe les éléments ayant le même code que ceux cochés. Le portfolio d'importation 
+		est le portfolio dans lequel on va chercher les éléments à importer.
+	 </p>
+	<p>
+		OPTION : Le code du portfolio d'importation peut prendre la forme <code>?</code>.
+		<code>tag_sémantique</code>. Dans ce cas le code du portfolio sera le code de l'élément coché 
+		et le tag sémantique de l'élément importé sera <code>tag_sémantique</code>.
+	</p>
+	<p>
+		ATTENTION : Si les éléments à importer sont des items, le code de l'item (<code>Item - Code</code>) 
+		doit être répété dans le code du noeud (<code>Code</code>).
+	</p>
+	<h4>Format</h4>
+	<p><code>function</code>,<code>import_multiple</code>/<code>recherche</code>/<code>code_portfolio</code>,
+		<code>libellé@fr</code>,<code>rôles</code>
+	</p>
+	<ul>
+		<li><code>function</code> : Mot réservé.</li>
+		<li><code>import_multiple</code> : Mot réservé.</li>
+		<li>
+			<code>recherche</code> : Recherche du Get_Resource (voir "recherche" ci-dessus) &mdash; retourne 
+			une liste de codes.
+		</li>
+		<li><code>code_portfolio</code> : Code du portfolio duquel on importe le noeud avec le(s) 
+			code(s) sélectionné(s) &mdash; peut être ou pas le même que celui du Get_Resource.<br> 
+			OPTION : <code>?</code>.<code>tag_sémantique</code>
+		</li>
+		<li><code>libellé@fr</code> : Libellé du menu.</li>
+		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='import_ggmultiple'>Menu - Import_GGMultiple</h3>
+	<p>
+		La fonction Import_GGMultiple permet à l'utilisateur d'ajouter plusieurs éléments à partir d'une liste. 
+		Comme les commandes précédentes, une recherche permet de sélectionner les éléments de la liste. 
+	  	Mais avec Import_GGMultiple, les codes des éléments sélectionnés sont utilisés pour importer les 
+	  	éléments ayant ce code dans le portfolio d'importation. Le code du portfolio d'importation peut 
+	  	être le même que celui de recherche, dans ce cas on importe les éléments recherchés et cochés. 
+	  	Mais le code du portfolio d'importation peut être différent de celui de recherche, dans ce cas on 
+	  	importe les éléments ayant le même code que ceux cochés.
+	  </p>
+	 </p>
+	 <p>
+	 	OPTION 1 : Dans la recherche le code du portfolio peut être <code>?</code>.
+	    Dans ce cas le code du portfolio de recherche sera le code de l'élément parent.
+	 </p>
+	 <p>
+	  	OPTION 2 : Le code du portfolio d'importation peut prendre la forme <code>?</code>.
+	    Dans ce cas le code du portfolio d'importation sera le code de l'élément parent trouvé.
+	  </p>
+	<h4>Format</h4>
+	<p>
+		<code>function</code>,<code>import_ggmultiple</code>/<code>recherche</code>/<code>code_portfolio</code>,
+		<code>libellé@fr</code>,<code>rôles</code>
+	</p>
+	<ul>
+		<li><code>function</code> : Mot réservé.</li>
+		<li><code>import_ggmultiple</code> : Mot réservé.</li>
+		<li>
+			<code>recherche</code> : Recherche du Get_Get_Resource (voir "recherche" ci-dessus) &mdash; retourne 
+			une liste de codes.<br>
+			OPTION 1 : Le code du portfolio peut être le mot réservé <code>?</code>.
+		</li>
+		<li>
+			<code>code_portfolio</code> : Code du portfolio duquel on importe le noeud avec le(s) code(s) 
+			sélectionné(s).<br> 
+			OPTION 2 : Le code du portfolio peut être le mot réservé <code>?</code>.
+		</li>
+		<li><code>libellé@fr</code> : Libellé du menu.</li>
+		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
+	</ul>
+	<p>
+		Exemple d'utilisation : Un Get-Resource permet de sélectionner un référentiel parmi une liste de 
+		référentiels (le code de l'élément Item doit être le code du portfolio du référentiel correspondant). 
+		Un Import_GGMultiple permet d'importer des éléments du référentiel sélectionné dans le Get_Resource.
+	</p>
+	<p>
+		Menu : <code>function</code>,<code>import_ggmultiple</code>/<code>?.child.referentiel.skill$.label
+		</code>/<code>?</code>,<code>Ajouter une compétence@fr</code>,<code>auteur</code>
+	</p>
+	<p>
+		Remarque : Ce menu se trouve sur un élément Sous-section et le Get_Resource est à l'intérieur 
+		(d'où l'utiliation du mot résevé <code>child</code>. <code>referentiel</code> est à la fois le  
+		tag sémantique du Get_Resource et le tag sémantique que des éléments Item de la liste de référentiels. 
+	   	Chaque Item a pour code le code du portfolio référentiel correspondant. Les points d'interrogation
+	   	<code>?</code> font référence à ce code de portfolio référentiel.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='print'>Print</h3>
+	<p>
+	</p>
+	<h4>Format</h4>
+	<p>
+	</p>
+	<ul>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='execReport_BatchCSV'>ExecReport_BatchCSV</h3>
+	<p>
+	</p>
+	<h4>Format</h4>
+	<p>
+	</p>
+	<ul>
+	</ul>
+</article>
+
