@@ -70,9 +70,10 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='semantictag'>Tag sémantique</h3>
 	<p>
-		Le tag sémantique d'un élément exprime sa sémantique. C'est aussi le moyen de 
-		rechercher des éléments dans un portfolio. Le tag sémantique est utilisé dans le champ  
-		"recherche" d'un élément (voir ci-dessous) ainsi que dans les scripts de rapport et de batch.
+		Le tag sémantique d'un élément est son identifiant et devrait exprimer sa sémantique. 
+		C'est par le tag sémantique qu'on recherche des éléments dans un portfolio. 
+		Il est utilisé dans la métadonnée Recherche (voir ci-dessous) ainsi que dans les scripts 
+		de rapport et de batch.
 	</p>
 	<p>
 		ATTENTION : La recherche de tag sémantique se fait par inclusion. Par exemple, 
@@ -86,22 +87,27 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='asmstructure'>Code</h3>
 	<p>Le code d'un élément de portfolio doit être unique dans ce portfolio. Il est utilisé dans les 
-		listes déroulantes (élément Get_Resource, élément Get_Get_Resource, menu Get_Multiple, menu 
-		Get_Get_Multiple, menu Import_Multiple) pour identifier la sélection de l'utilisateur.
+		listes déroulantes (éléments Get_Resource et Get_Get_Resource) et les boîtes de choix multiples
+		(fonctions Get_Multiple et Import_Multiple) pour identifier la sélection de l'utilisateur.
 	</p>
 	<p>
-		Par défaut le code et le libellé de l'élément apparaissent dans la liste déroulante et seul 
-		le libellé de l'option sélectionnée par l'utilisateur apparaît ensuite dans l'élément Ressource. 
-		Ce comportement peut être modifié par l'ajout d'un ou plusieurs des symboles suivants au code 
-		de l'élément :
+		Par défaut le code et le libellé de l'élément apparaissent dans la liste déroulante seul le libellé 
+		de l'option sélectionnée par l'utilisateur est ensuite afffiché dans 
+		l'élément Get_Resource (ou Get_Get_Resource). Ce comportement peut être modifié par l'ajout d'un 
+		ou plusieurs des symboles suivants au code de l'élément&nbsp;:
 	</p>
 	<ul>
 		<li><code>@</code> rendra le code non visible dans la liste déroulante</li>
-		<li><code>#</code> rendra le code visible dans la Ressource</li>
-		<li><code>&amp;</code> rendra la <b>valeur</b> associée à l'élément visible dans la Ressource
-			(uniquement pour l'élément <b>Item</b>)</li>
-		<li><code>%</code> rendra le libellé non visible dans la Ressource</li>
+		<li><code>#</code> rendra le code visible dans l'élément Get_Resource</li>
+		<li>
+			<code>&amp;</code> rendra la valeur associée à l'élément visible dans l'élément 
+			Get_Resource (seul les éléments de type Item ont un champ valeur)</li>
+		<li><code>%</code> rendra le libellé non visible dans l'élément Get_Resource</li>
 		<li><code>$</code> rendra le libellé non visible dans la liste déroulante</li>
+		<li>
+			<code>!</code> rendra le choix non sélectionnable dans la boîte de choix multiple (utile pour
+			créer des titres de section dans la boîte de choix)
+		</li>
 	</ul>
 </article>
 
