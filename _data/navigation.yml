@@ -314,8 +314,8 @@ portfolio_fr:
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
-  - title: Fonctions Menu
-    url: /menuFunctions_fr/
+  - title: Fonctions
+    url: /functions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
   - title: Partage par l'utilisateur
@@ -359,8 +359,8 @@ structures_fr:
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
-  - title: Fonctions Menu
-    url: /menuFunctions_fr/
+  - title: Fonctions
+    url: /functions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
   - title: Partage par l'utilisateur
@@ -404,8 +404,8 @@ sharing_fr:
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
-  - title: Fonctions Menu
-    url: /menuFunctions_fr/
+  - title: Fonctions
+    url: /functions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
   - title: Partage par l'utilisateur
@@ -479,8 +479,8 @@ resources_fr:
         url: /resources_fr/#proxy
   - title: Métadonnées
     url: /metadata_fr/
-  - title: Fonctions Menu
-    url: /menuFunctions_fr/
+  - title: Fonctions
+    url: /functions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
   - title: Partage par l'utilisateur
@@ -559,7 +559,7 @@ metadata_fr:
         url: /metadata_fr/#semantictag
       - title: "Code"
         url: /metadata_fr/#code
-      - title: "Noeud multilingue"
+      - title: "Nœud multilingue"
         url: /metadata_fr/#multilingual-node
       - title: "Ressource multilingue"
         url: /metadata_fr/#multilingual-resource
@@ -623,8 +623,8 @@ metadata_fr:
         url: /metadata_fr/#menulabels
       - title: "Bulle d'aide"
         url: /metadata_fr/#help
-  - title: Fonctions Menu
-    url: /menuFunctions_fr/
+  - title: Fonctions
+    url: /functions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
   - title: Partage par l'utilisateur
@@ -684,29 +684,29 @@ metadata_en:
       - title: "Français"
         url: /metadata_fr/
         
-# ====== MENUFUNCTIONS_FR =============
-menuFunctions_fr:
+# ====== FUNCTIONS_FR =============
+functions_fr:
   - title: Structures
     url: /structures_fr/
   - title: Ressources
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
-  - title: Fonctions Menu
-    url: /menuFunctions_fr/
+  - title: Fonctions
+    url: /functions_fr/
     children:
       - title: "Get_Multiple"
-        url: /menuFunctions_fr/#get_multiple
+        url: /functions_fr/#get_multiple
       - title: "Get_Get_Multiple"
-        url: /menuFunctions_fr/#get_get_multiple
+        url: /functions_fr/#get_get_multiple
       - title: "Import_Multiple"
-        url: /menuFunctions_fr/#import_multiple
+        url: /functions_fr/#import_multiple
       - title: "Import_GGMultiple"
-        url: /menuFunctions_fr/#import_ggmultiple
+        url: /functions_fr/#import_ggmultiple
       - title: "Print"
-        url: /menuFunctions_fr/#print
+        url: /functions_fr/#print
       - title: "ExecReport_BatchCSV"
-        url: /menuFunctions_fr/#execReport_BatchCSV
+        url: /functions_fr/#execReport_BatchCSV
     
   - title: Mise en forme (CSS)
     url: /css_fr/
@@ -725,8 +725,8 @@ css_fr:
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
-  - title: Fonctions Menu
-    url: /menuFunctions_fr/
+  - title: Fonctions
+    url: /functions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
   - title: Partage par l'utilisateur
