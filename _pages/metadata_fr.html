@@ -130,7 +130,7 @@ sidebar:
 		fichier de configuration <i>_init.js</i>.
 	</p>
 	<p>
-		Remarque&nbsp;: Le code n'est jamais multilingue. Il a la même valeur quelle que soit la langue 
+		REMARQUE&nbsp;: Le code n'est jamais multilingue. Il a la même valeur quelle que soit la langue 
 		active.
 	</p>
 </article>
@@ -178,15 +178,15 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='delete'>Supprimer</h3>
-	<p>La liste des rôles, séparés par un espace, pouvant supprimer l'élément.</p>
+	<p>Liste des rôles, séparés par un espace, pouvant supprimer l'élément.</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='edit-resource'>Modifier ressource</h3>
 	<p>
-		La liste des rôles, séparés par un espace, pouvant éditer la Ressource (y stocker des données). 
-		Disponible uniquement sur les éléments Ressource, non disponible sur les éléments de structure.
+		Éléments Ressource uniquement. Liste des rôles, séparés par un espace, pouvant éditer la 
+		Ressource (y enregistrer des données). 
 	</p>
 </article>
 
@@ -194,6 +194,9 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='resnopencil'>Ressource sans crayon</h3>
 	<p>
+		Éléments Ressource uniquement. N'affiche pas le bouton crayon aux rôles ayant le droit
+		d'éditer la Ressource. Utilisé pour les imports de composantes via la fonction de Menu
+		<i>Import_Multiple</i> (voir section FONCTIONS MENU pour plus de détails). 
 	</p>
 </article>
 
@@ -201,14 +204,14 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='comment'>Commenter</h3>
 	<p>
-		La liste des rôles, séparés par un espace, pouvant commenter un élément Ressource. Ce droit 
+		Liste des rôles, séparés par un espace, pouvant commenter un élément Ressource. Ce droit 
 		ajoute un éditeur de texte au bas de la boîte d'édition de la Ressource; le commentaire est 
-		daté et signé du nom de l'utilisateur qui l'a écrit. Pour pouvoir commenter un élément, l'utilisateur 
-		doit également avoir le droit d'éditer la Ressource.
+		daté et signé du nom de l'utilisateur qui l'a écrit. Pour pouvoir commenter un élément, 
+		l'utilisateur doit également avoir le droit de modifier la Ressource.
 	</p>
 	<p>
-		Astuce : Le designer peut s'attribuer le droit de commenter un élément de structure. Cela lui 
-		permet d'ajouter l'équivalent d'un sous-titre au libellé de l'élément.
+		ASTUCE&nbsp;: Le designer peut s'attribuer le droit de commenter un élément de structure.
+		Cela lui permet d'ajouter l'équivalent d'un sous-titre au libellé de l'élément.
 	</p>
 </article>
 
@@ -216,7 +219,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='submit'>Soumettre</h3>
 	<p>
-		La liste des rôles, séparés par un espace, pouvant soumettre l'élément. Ce droit ajoute 
+		Liste des rôles, séparés par un espace, pouvant soumettre l'élément. Ce droit ajoute 
 		un bouton <i>Soumettre</i>. Lorsque l'utilisateur soumet un élément, ses droits d'édition et/ou 
 		de suppression sont retirés pour l'élément et tous ses enfants.
 	</p>
