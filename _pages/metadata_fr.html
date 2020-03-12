@@ -23,8 +23,8 @@ sidebar:
 </p>
 <p>
 	C'est aussi dans les métadonnées qu'on spécifie quels sont les éléments qui vont peupler une boîte 
-	de choix et quels utilisateurs pourront partager leur portfolio avec une tierce partie (et sous 
-	quelles conditions de sécurité).
+	de choix, quels utilisateurs pourront partager leur portfolio avec une tierce partie (et sous 
+	quelles conditions de sécurité), spécifier le contenu des bulles d'aide, etc.
 </p>
 <p>On accède aux métadonnées d'un élément via la boîte d'édition de celui-ci (bouton crayon).</p>
 
@@ -175,7 +175,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='see'>Voir</h3>
 	<p>
-		Liste des rôles, séparés par un espace, pouvant voir l'élément. Exemple : 
+		Liste des rôles, séparés par un espace, ayant le droit de voir l'élément. Exemple&nbsp;: 
 		<i>etudiant professeur</i>.
 	</p>
 	<p>
@@ -187,15 +187,15 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='delete'>Supprimer</h3>
-	<p>Liste des rôles, séparés par un espace, pouvant supprimer l'élément.</p>
+	<p>Liste des rôles, séparés par un espace, ayant le droit de supprimer l'élément.</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='edit-resource'>Modifier ressource</h3>
 	<p>
-		Éléments Ressource uniquement. Liste des rôles, séparés par un espace, pouvant éditer la 
-		Ressource (y enregistrer des données). 
+		Éléments Ressource uniquement. Liste des rôles, séparés par un espace, ayant le droit 
+		d'éditer la Ressource (y enregistrer des données). 
 	</p>
 </article>
 
@@ -204,8 +204,9 @@ sidebar:
 	<h3 id='resnopencil'>Ressource sans crayon</h3>
 	<p>
 		Éléments Ressource uniquement. N'affiche pas le bouton crayon aux rôles ayant le droit
-		d'éditer la Ressource. Utilisé pour les imports de composantes via la fonction 
-		<i>Get_Multiple</i> (voir section FONCTIONS pour plus de détails). 
+		de modifier la Ressource. Utilisé pour les imports d'éléments multiples via la fonction 
+		<i>Import_Multiple</i> (voir section FONCTIONS pour plus de détails). 
+		<br>???????????????
 	</p>
 </article>
 
@@ -213,10 +214,10 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='comment'>Commenter</h3>
 	<p>
-		Liste des rôles, séparés par un espace, pouvant commenter un élément Ressource. Ce droit 
-		ajoute un éditeur de texte au bas de la boîte d'édition de la Ressource; le commentaire est 
-		daté et signé du nom de l'utilisateur qui l'a écrit. Pour pouvoir commenter un élément, 
-		l'utilisateur doit également avoir le droit de modifier la Ressource.
+		Liste des rôles, séparés par un espace, ayant le droit de commenter un élément Ressource. 
+		Ce droit ajoute un éditeur de texte au bas de la boîte d'édition de la Ressource. Le 
+		commentaire est daté et signé du nom de l'utilisateur qui l'a écrit. Pour pouvoir commenter 
+		un élément, l'utilisateur doit également avoir le droit de modifier la Ressource.
 	</p>
 	<p>
 		ASTUCE&nbsp;: Le designer peut s'attribuer le droit de commenter un élément de structure.
@@ -228,16 +229,16 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='submit'>Soumettre</h3>
 	<p>
-		Liste des rôles, séparés par un espace, pouvant soumettre l'élément. Ce droit ajoute 
+		Liste des rôles, séparés par un espace, ayant le droit de soumettre l'élément. Ce droit ajoute 
 		un bouton <i>Soumettre</i>. Lorsque l'utilisateur soumet un élément, ses droits d'édition et/ou 
-		de suppression sont retirés pour l'élément et tous ses enfants.
+		de suppression sont retirés pour cet élément et tous ses enfants.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='editcoderoles'>Éditer code</h3>
-	<p>
+	<p>??????????????????????
 	</p>
 </article>
 
@@ -245,6 +246,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='editnoderoles'>Modifier nœud</h3>
 	<p>
+		Liste des rôles, séparés par un espace, ayant le droit de modifier le <b>libellé<b> de l'élément.
 	</p>
 </article>
 
@@ -252,6 +254,9 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='nodenopencil'>Nœud sans crayon</h3>
 	<p>
+		N'affiche pas le bouton crayon aux rôles ayant le droit de Modifier le nœud. Utilisé pour 
+		les imports de composantes via la fonction <i>Get_Multiple</i> (voir section FONCTIONS 
+		pour plus de détails). 
 	</p>
 </article>
 
@@ -259,13 +264,16 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='duplicateroles'>Dupliquer</h3>
 	<p>
+		Liste des rôles, séparés par un espace, ayant le droit de dupliquer l'élément. La copie de 
+		l'élément sera ajoutée à la fin de la liste d'éléments du même niveau hiérarchique dans 
+		l'arborescence.	
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='incrementroles'>Incrémenter seulement</h3>
-	<p>
+	<p>?????????????????????????????
 	</p>
 </article>
 
@@ -273,13 +281,15 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='resizeroles'>Modifier taille image</h3>
 	<p>
+		Éléments Image uniquement. Liste des rôles, séparés par un espace, ayant le droit de modifier
+		la taille d'affichage de l'image.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='graphicerroles'>Graphiqueur</h3>
-	<p>
+	<p>??????????????????????
 	</p>
 </article>
 
@@ -287,6 +297,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='moveroles'>Ordonner</h3>
 	<p>
+		Liste des rôles, séparés par un espace, ayant le droit modifier l'ordonnancement de l'élément
+		parmis les éléments du même niveau hiérarchique dans l'arborescence.	
 	</p>
 </article>
 
@@ -294,13 +306,15 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='moveinroles'>Déplacer</h3>
 	<p>
+		Liste des rôles, séparés par un espace, ayant le droit de déplacer l'élément vers une autre 
+		branche dans l'arborescence.	
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='movein'>Déplacer dans</h3>
-	<p>
+	<p>??????????????????????????????
 	</p>
 </article>
 
@@ -308,6 +322,10 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='showroles'>Montrer/Cacher</h3>
 	<p>
+		Liste des rôles, séparés par un espace, ayant le droit de montrer/cacher l'élément et tous ses
+		enfants à d'autres utilisateurs. Ce droit ajoute un bouton œil qui indique <b>l'état</b> (et 
+		non l'action)&nbsp;:lorsque l'œil est barré, l'élément est invisible aux autres utilisateurs&nbsp;; 
+		lorsque l'œil n'est pas barré, l'élément est visible aux autres utilisateurs.
 	</p>
 </article>
 
@@ -315,6 +333,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='showtoroles'>Montrer à</h3>
 	<p>
+		Liste des rôles, séparés par un espace, à qui l'élément est caché ou montré (par les utilisateurs
+		ayant le droit de Montrer/Cacher).
 	</p>
 </article>
 
@@ -322,6 +342,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='printroles'>Imprimer</h3>
 	<p>
+		Liste des rôles, séparés par un espace, ayant le droit d'imprimer l'élément.
+		<br>????????????????? C'est quoi la différence avec la fonction Print? ?????????????
 	</p>
 </article>
 
@@ -329,6 +351,9 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='editboxtitle'>Titre boîte d'édition</h3>
 	<p>
+		Spécifie un titre alternatif pour la boîte d'édition (par défaut le titre de la boîte d'édition
+		est le libellé de l'élément). Utile pour les éléments qui n'ont pas de libellé ou pour donner des
+		instructions aux utilisateurs qui ont des droits d'édition sur une Ressource.
 	</p>
 </article>
 
@@ -336,6 +361,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='maxword'>Max mots</h3>
 	<p>
+		Éléments Texte long uniquement. Spécifie le nombre maximal de mots que peut entrer l'utilisateur 
+		qui a le droit de modifier la Ressource.
 	</p>
 </article>
 
