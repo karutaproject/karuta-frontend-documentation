@@ -152,97 +152,98 @@ report_en:
 # ====== BATCH_FR =============
 batch_fr:
   - title: Commandes
+    url: /batch_fr#commandes
     children:
       - title: "Pour chaque ligne"
-        url: /batch_fr/#for-each-line
+        url: /batch_fr#for-each-line
       - title: "Pour chaque arbre"
-        url: /batch_fr/#for-each-tree
+        url: /batch_fr#for-each-tree
       - title: "Si Alors Sinon"
-        url: /batch_fr/#if-then-else
+        url: /batch_fr#if-then-else
       - title: "Créer utilisateur"
-        url: /batch_fr/#create-person
+        url: /batch_fr#create-person
       - title: "Désactiver utilisateur"
-        url: /batch_fr/#inactivate-person
+        url: /batch_fr#inactivate-person
       - title: "Activer utilisateur"
-        url: /batch_fr/#activate-person
+        url: /batch_fr#activate-person
       - title: "Supprimer utilisateur"
-        url: /batch_fr/#delete-person
+        url: /batch_fr#delete-person
       - title: "Créer arbre"
-        url: /batch_fr/#create-tree
+        url: /batch_fr#create-tree
       - title: "Sélectionner arbre"
-        url: /batch_fr/#select-tree
+        url: /batch_fr#select-tree
       - title: "Supprimer arbre"
-        url: /batch_fr/#delete-tree
+        url: /batch_fr#delete-tree
       - title: "Partager arbre"
-        url: /batch_fr/#share-tree
+        url: /batch_fr#share-tree
       - title: "Départager arbre"
-        url: /batch_fr/#unshare-tree
+        url: /batch_fr#unshare-tree
       - title: "Mise à jour racine arbre"
-        url: /batch_fr/#update-tree-root
+        url: /batch_fr#update-tree-root
       - title: "Ré-instancier arbre"
-        url: /batch_fr/#re-instantiate-tree
+        url: /batch_fr#re-instantiate-tree
       - title: "Mise à jour propriétaire"
-        url: /batch_fr/#set-owner       
+        url: /batch_fr#set-owner       
       - title: "Créer groupe utilisateurs"
-        url: /batch_fr/#create-usergroup
+        url: /batch_fr#create-usergroup
       - title: "Joindre groupe utilisateurs"
-        url: /batch_fr/#join-usergroup
+        url: /batch_fr#join-usergroup
       - title: "Quitter groupe utilisateurs"
-        url: /batch_fr/#leave-usergroup
+        url: /batch_fr#leave-usergroup
       - title: "Partager groupe utilisateurs avec portfolio"
-        url: /batch_fr/#share-usergroup
+        url: /batch_fr#share-usergroup
       - title: "Départager groupe utilisateurs de portfolio"
-        url: /batch_fr/#unshare-usergroup
+        url: /batch_fr#unshare-usergroup
       - title: "Partager utilisateurs groupe avec portfolios groupe"
-        url: /batch_fr/#share-groups
+        url: /batch_fr#share-groups
       - title: "Créer groupe portfolios"
-        url: /batch_fr/#create-portfoliogroup
+        url: /batch_fr#create-portfoliogroup
       - title: "Joindre groupe portfolios"
-        url: /batch_fr/#join-portfoliogroup
+        url: /batch_fr#join-portfoliogroup
       - title: "Quitter groupe portfolios"
-        url: /batch_fr/#leave-portfoliogroup
+        url: /batch_fr#leave-portfoliogroup
       - title: "Partager utilisateur avec groupe portfolios"
-        url: /batch_fr/#share-portfoliogroup
+        url: /batch_fr#share-portfoliogroup
       - title: "Départager utilisateur de groupe portfolios"
-        url: /batch_fr/#unshare-portfoliogroup
+        url: /batch_fr#unshare-portfoliogroup
       - title: "Importer nœud"
-        url: /batch_fr/#import-node
+        url: /batch_fr#import-node
       - title: "Monter nœud"
-        url: /batch_fr/#move-up
+        url: /batch_fr#move-up
       - title: "Supprimer nœud"
-        url: /batch_fr/#delete-node
+        url: /batch_fr#delete-node
       - title: "Mise à jour ressource du nœud"
-        url: /batch_fr/#update-node-resource
+        url: /batch_fr#update-node-resource
       - title: "Mise à jour métadonnées"
-        url: /batch_fr/#update-metadata
+        url: /batch_fr#update-metadata
       - title: "Mise à jour métadonnées WAD"
-        url: /batch_fr/#update-metadata-wad
+        url: /batch_fr#update-metadata-wad
       - title: "Mise à jour droits"
-        url: /batch_fr/#update-rights     
+        url: /batch_fr#update-rights     
       - title: "Mise à jour ressources"
-        url: /batch_fr/#update-resources
+        url: /batch_fr#update-resources
       - title: "Mise à jour Texte court"
-        url: /batch_fr/#update-field
+        url: /batch_fr#update-field
       - title: "Mise à jour Texte long"
-        url: /batch_fr/#update-textfield
+        url: /batch_fr#update-textfield
       - title: "Mise à jour Calendrier"
-        url: /batch_fr/#update-calendar
+        url: /batch_fr#update-calendar
       - title: "Mise à jour Tableau de bord"
-        url: /batch_fr/#update-dashboard
+        url: /batch_fr#update-dashboard
       - title: "Mise à jour Item"
-        url: /batch_fr/#update-item
+        url: /batch_fr#update-item
       - title: "Mise à jour URL2Unit"
-        url: /batch_fr/#update-url2unit
+        url: /batch_fr#update-url2unit
       - title: "Mise à jour Proxy"
-        url: /batch_fr/#update-proxy      
+        url: /batch_fr#update-proxy      
       - title: "Composantes UUID"
-        url: /batch_fr/#uuid-components
+        url: /batch_fr#uuid-components
       - title: "Mise à jour Texte court par UUID"
-        url: /batch_fr/#update-field-byid
+        url: /batch_fr#update-field-byid
       - title: "Remise à zéro Document par UUID"
-        url: /batch_fr/#reset-document-byid
+        url: /batch_fr#reset-document-byid
       - title: "Supprimer nœud par UUID"
-        url: /batch_fr/#delete-node-byid        
+        url: /batch_fr#delete-node-byid        
   - title:
     children:
       - title: "English"
@@ -564,22 +565,64 @@ metadata_fr:
         url: /metadata_fr/#multilingual-resource
       - title: "Encrypter la ressource"
         url: /metadata_fr/#encript-resource
-      - title: "Rôles - Voir"
+      - title: "Voir"
         url: /metadata_fr/#see
-      - title: "Rôles - Supprimer"
+      - title: "Supprimer"
         url: /metadata_fr/#delete
-      - title: "Rôles - Éditer ressource"
+      - title: "Modifier ressource"
         url: /metadata_fr/#edit-resource
-      - title: "Rôles - Commenter"
+      - title: "Ressource sans crayon"
+        url: /metadata_fr/#resnopencil
+      - title: "Commenter"
         url: /metadata_fr/#comment
-      - title: "Rôles - Soumettre"
+      - title: "Soumettre"
         url: /metadata_fr/#submit
+      - title: "Éditer code"
+        url: /metadata_fr/#editcoderoles
+      - title: "Modifier nœud"
+        url: /metadata_fr/#editnoderoles
+      - title: "Nœud sans crayon"
+        url: /metadata_fr/#nodenopencil
+      - title: "Dupliquer"
+        url: /metadata_fr/#duplicateroles
+      - title: "Incrémenter seulement"
+        url: /metadata_fr/#incrementroles
+      - title: "Modifier taille image"
+        url: /metadata_fr/#resizeroles
+      - title: "Graphiqueur"
+        url: /metadata_fr/#graphicerroles
+      - title: "Ordonner"
+        url: /metadata_fr/#moveroles
+      - title: "Déplacer"
+        url: /metadata_fr/#moveinroles
+      - title: "Déplacer dans"
+        url: /metadata_fr/#movein
+      - title: "Montrer/Cacher"
+        url: /metadata_fr/#showroles
+      - title: "Montrer à"
+        url: /metadata_fr/#showtoroles
+      - title: "Imprimer"
+        url: /metadata_fr/#printroles
+      - title: "Titre boîte d'édition"
+        url: /metadata_fr/#editboxtitle
+      - title: "Max mots"
+        url: /metadata_fr/#maxword
+      - title: "Visible"
+        url: /metadata_fr/#display
+      - title: "Édition en place"
+        url: /metadata_fr/#inline
+      - title: "Repliable"
+        url: /metadata_fr/#collapsible
       - title: "Recherche"
         url: /metadata_fr/#query
-      - title: "Menu"
-        url: /metadata_fr/#menu
-      - title: "Partage par l'usager"
+      - title: "Partage par l'utilisateur"
         url: /metadata_fr/#sharing
+      - title: "Menus"
+        url: /metadata_fr/#menu
+      - title: "Texte bouton Menu"
+        url: /metadata_fr/#menulabels
+      - title: "Bulle d'aide"
+        url: /metadata_fr/#help
   - title: Fonctions Menu
     url: /menuFunctions_fr/
   - title: Mise en forme (CSS)
@@ -669,10 +712,10 @@ menuFunctions_fr:
     url: /css_fr/
   - title: Partage par l'utilisateur
     url: /sharing_fr/
-  - title:
-    children:
-      - title: "English"
-        url: /metadata_en/
+#  - title:
+#    children:
+#      - title: "English"
+#        url: /metadata_en/
 
 # ====== CSS_FR =============
 css_fr:
