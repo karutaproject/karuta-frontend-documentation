@@ -32,7 +32,7 @@ sidebar:
 <ul>
 	<li><code><a href='#semantictag'>Tag sémantique</a></code></li>
 	<li><code><a href='#asmstructure'>Code</a></code></li>
-	<li><code><a href='#multilingual-node'>Noeud multilingue</a></code></li>
+	<li><code><a href='#multilingual-node'>Nœud multilingue</a></code></li>
 	<li><code><a href='#multilingual-resource'>Ressource multilingue</a></code></li>
 	<li><code><a href='#encript-resource'>Encrypter la ressource</a></code></li>
 	<li><code><a href='#see'>Voir</a></code></li>
@@ -96,8 +96,9 @@ sidebar:
 		(fonctions Get_Multiple et Import_Multiple). C'est lui qui permet d'identifier la sélection de 
 		l'utilisateur.
 	</p>
-	<p>ATTENTION&nbsp;: Le code d'un élément de portfolio doit être unique dans ce portfolio.</p>
-	
+	<p>
+		ATTENTION&nbsp;: Le code d'un élément de portfolio doit être unique à l'intérieur de ce portfolio.
+	</p>
 	<p>
 		Par défaut le code et le libellé de l'élément apparaissent dans la liste déroulante et seul le 
 		libellé de l'option sélectionnée par l'utilisateur est ensuite afffiché dans l'élément 
@@ -121,16 +122,16 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='multilingual-node'>Noeud multilingue</h3>
+	<h3 id='multilingual-node'>Nœud multilingue</h3>
 	<p>
-		L'attribut "noeud multilingue" d'un élément permet de spécifier si le <b>libellé</b> du noeud 
-		prend des valeurs différentes ou non dans le cas où le portfolio est multilingue. Si le noeud 
-		n'est pas multilingue, la valeur du libellé sera stockée dans la langue par défaut définie 
-		dans le fichier de configuration <i>_init.js</i>.
+		Spécifie si le <b>libellé</b> du nœud prend une valeur différente pour chaque langue dans le cas 
+		où le portfolio est multilingue. Si le nœud n'est pas multilingue, il y aura une seule valeur 
+		pour toutes les langues et cette valeur sera stockée dans la langue par défaut définie dans le 
+		fichier de configuration <i>_init.js</i>.
 	</p>
 	<p>
-		Remarque : Le code n'est jamais multilingue. Il a la même valeur quelle que soit la langue 
-		sélectionnée.
+		Remarque&nbsp;: Le code n'est jamais multilingue. Il a la même valeur quelle que soit la langue 
+		active.
 	</p>
 </article>
 
@@ -138,13 +139,15 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='multilingual-resource'>Ressource multilingue</h3>
 	<p>	
-		L'attribut "ressource multilingue" d'un élément permet de spécifier si les données entrées 
-		dans l'élément Ressource prennent des valeurs différentes ou non dans le cas où le portfolio 
-		est multilingue. Si la Ressource n'est pas multilingue les valeurs entrées pour l'élément 
-		seront stockées dans la langue par défaut définie dans le fichier de configuration <i>_init.js</i>.
-		</br>
+		Éléments Ressource uniquement. Spécifie si les données entrées dans l'élément Ressource prennent 
+		des valeurs différentes pour chaque langue  dans le cas où le portfolio est multilingue. Si la 
+		Ressource n'est pas multilingue, il y aura une seule valeur pour toutes les langues et cette 
+		valeur sera stockée dans la langue par défaut définie dans le fichier de configuration 
+		<i>_init.js</i>
+	</p>
+	<p>
 		Par exemple, un nom ou une date de naissance ne sont habituellement pas dépendants de la langue,
-		alors qu'un texte est définitivement différent dans chaque langue.
+		alors qu'un texte qui donne des instructions est définitivement différent dans chaque langue.
 	</p>
 </article>
 
@@ -152,11 +155,10 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='encript-resource'>Encrypter la ressource</h3>
 	<p>
-		Cet attribut permet de spécifier si la ressource est encryptée. Dans le cas positif, à 
-		l'ouverture du portfolio, une phrase-clé est demandée à l'utilisateur. Cette phrase-clé sert à 
-		encoder/décoder les données entrées la Ressource. Cette phrase-clé n'est pas stockée dans 
-		Karuta et doit donc être mémorisée par l'utilisateur, car elle lui est demandée à chaque ouverture 
-		du portfolio.
+		Spécifie si la ressource doit être encryptée. Dans le cas positif, à l'ouverture du portfolio, 
+		une phrase-clé est demandée à l'utilisateur. Cette phrase-clé sert à encoder/décoder les données 
+		entrées dans la Ressource. Cette phrase-clé n'est pas stockée dans Karuta et doit donc être 
+		mémorisée par l'utilisateur, car elle lui est demandée à chaque ouverture du portfolio.
 	</p>
 </article>
 
@@ -164,11 +166,12 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='see'>Voir</h3>
 	<p>
-		La liste des rôles, séparés par un espace, pouvant voir l'élément. Exemple : 
-		<i>etudiant professeur</i> 
-		<br> 
-		Par défaut le droit de voir est attribué au rôle <i>all</i>. Il s'agit de l'unique 
-		droit à avoir une valeur par défaut. 
+		Liste des rôles, séparés par un espace, pouvant voir l'élément. Exemple : 
+		<i>etudiant professeur</i>.
+	</p>
+	<p>
+		Par défaut le droit de voir est attribué au rôle <i>all</i>, qui englobe tous les rôles. Il 
+		s'agit de l'unique droit à avoir une valeur par défaut. 
 	</p>
 </article>
 
