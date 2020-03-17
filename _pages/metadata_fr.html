@@ -385,7 +385,10 @@ sidebar:
 		Le champ Recherche est utilisé pour spécifier quels éléments doivent apparaître dans une liste 
 		déroulante (éléments Get_Resource et Get_Get_Resource) et pour choisir la cible d'un élément Proxy.
 	</p>
-	
+	<p>
+		NOTE&nbsp;: voir section RESSOURCES pour plus de détails sur les éléments Get_Resource, 
+		Get_Get_Resource et Proxy.
+	</p>
 	<h4>Format de la recherche pour un élément Get_Resource</h4>
 	<p>	
 		<code>code_portfolio</code> ou <code>self</code>.<code>tag_sémantique</code>.<code>label</code>
@@ -393,36 +396,40 @@ sidebar:
 	</p>
 	<ul>
 		<li>
-			<code>code_portfolio</code>&nbsp;: Code du portfolio référentiel où chercher le tag sémantique 
-			spécifié. Le format est <i>code du projet.code du portfolio référentiel</i>. Si 
-			<i>code du projet</i> n'est pas présent, la recherche du portfolio référentiel se fait dans 
-			le projet courant (projet qui contient le portfolio dans lequel se trouve le Get_Resource).
+			<code>code_portfolio</code>&nbsp;: Code du portfolio référentiel où chercher les éléments
+			spécifiés par le tag sémantique. Le format est <i>code du projet.code du portfolio 
+			référentiel</i>. Si <i>code du projet</i> n'est pas présent, la recherche du portfolio 
+			référentiel se fait dans le projet courant (projet qui contient le portfolio dans lequel se 
+			trouve le Get_Resource).
 		</li>
 		<li><code>tag_sémantique</code>&nbsp;: Tag sémantique des élements à chercher.</li>
 		<li>
-			<code>label</code>&nbsp;: Mot réservé. Lorsque l'élément cherché est un Item ou une Sous-structure.
+			<code>label</code>&nbsp;: Mot réservé. Lorsque l'élément cherché est un Item ou une 
+			Sous-structure (voir autres options ci-dessous).
 		</li>
 	</ul>
 	<p> 
 		OPTION <code>self</code>&nbsp;: Peut remplacer <code>code_portfolio</code>. Dans ce cas la recherche se
-		fait à l'intérieur du portfolio courant (portfolio qui contient l'élément Get_).
+		fait à l'intérieur du portfolio courant (portfolio qui contient l'élément Get_Resource).
 	</p>
 	<p> 
-		OPTION <code>text</code>&nbsp;: L'élément cherché doit être un Texte (court ou long). On remplace alors 
-		<code>label</code> par <code>text</code>. Dans ce cas, c'est le texte et non le libellé qui sera affiché.
+		OPTION <code>text</code>&nbsp;: Peut remplacer <code>label</code> et s'applique lorsque l'élément 
+		cherché est un Texte court ou Texte long. Dans ce cas, c'est le texte dans la Ressource et non le 
+		libellé qui sera affiché dans la liste déroulante puis dans le Get_Ressource.
 	</p>
 	<p> 
-		OPTION <code>fileid</code>&nbsp;: L'élément cherché doit être une Image. On remplace alors 
-		<code>label</code> par <code>fileid</code>. Dans ce cas, l'élément Image doit être déclaré 
-		à même le portfolio où se trouve l'élément Get_ (et non pas dans un portfolio Référentiel) 
-		&rarr; donc à utiliser avec l'option <code>self</code>.
+		OPTION <code>fileid</code>&nbsp;: Peut remplacer <code>label</code> et s'applique lorsque l'élément 
+		cherché est une Image. Dans ce cas, c'est l'image et non le libellé qui sera affiché dans la liste 
+		déroulante puis dans le Get_Ressource. L'élément Image doit être déclaré à même le portfolio où se 
+		trouve l'élément Get_Ressource et non pas dans un portfolio Référentiel&nbsp;; donc à utiliser en 
+		combinaison avec l'option <code>self</code>.
 	</p>
 	<p> 
-		OPTION <code>resource</code>&nbsp;: L'élément cherché peut être un Item. On remplace alors 
-		<code>label</code> par <code>resource</code>. Dans ce cas, l'élément Item doit être déclaré 
-		à même le portfolio où se trouve l'élément Get_ (et non pas dans un portfolio Référentiel). L'effet sera contrairement à label,
-		la mise à jour du get_resource si l'item correspondant sélectionné est modifié.
-		&rarr; donc à utiliser avec l'option <code>self</code>.
+		OPTION <code>resource</code>&nbsp;: Peut remplacer <code>label</code> et s'applique lorsque l'élément 
+		cherché est un Item. Dans ce cas, le Get_Resource sera mis à jour si l'élément Item est modifié. 
+		L'élément Item doit être déclaré à même le portfolio où se trouve l'élément Get_Ressource et non 
+		pas dans un portfolio Référentiel&nbsp;; donc à utiliser en combinaison avec l'option 
+		<code>self</code>. 
 	</p>
 	<h4>Format de la recherche pour un élément Get_Get_Resource</h4>
 	<p>
@@ -458,10 +465,6 @@ sidebar:
 		</li>
 		<li><code>label</code>&nbsp;: Mot réservé.</li>
 	</ul>
-	<p>
-		NOTE&nbsp;: voir section RESSOURCES pour plus de détails sur les éléments Get_Resource, 
-		Get_Get_Resource et Proxy.
-	</p>
 </article>
 
 <article>
