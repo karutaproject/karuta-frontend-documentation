@@ -396,36 +396,43 @@ sidebar:
 	</p>
 	<ul>
 		<li>
-			<code>code_portfolio</code>&nbsp;: Code du portfolio référentiel où chercher les éléments
+			<code>code_portfolio</code> Code du portfolio référentiel où chercher les éléments
 			spécifiés par le tag sémantique. Le format est <i>code du projet.code du portfolio 
 			référentiel</i>. Si <i>code du projet</i> n'est pas présent, la recherche du portfolio 
 			référentiel se fait dans le projet courant (projet qui contient le portfolio dans lequel se 
 			trouve le Get_Resource).
 		</li>
-		<li><code>tag_sémantique</code>&nbsp;: Tag sémantique des élements à chercher.</li>
 		<li>
-			<code>label</code>&nbsp;: Mot réservé. Lorsque l'élément cherché est un Item ou une 
-			Sous-structure (voir autres options ci-dessous).
+			<code>tag_sémantique</code> Tag sémantique des élements à afficher dans la liste
+			déroulante.
+		</li>
+		<li>
+			<code>label</code> Mot réservé. Lorsque l'élément cherché est un Item ou une 
+			Sous-section (voir autres options ci-dessous).
 		</li>
 	</ul>
 	<p> 
-		OPTION <code>self</code>&nbsp;: Peut remplacer <code>code_portfolio</code>. Dans ce cas la recherche se
+		Option <code>self</code><br>
+		Peut remplacer <code>code_portfolio</code>. Dans ce cas la recherche se
 		fait à l'intérieur du portfolio courant (portfolio qui contient l'élément Get_Resource).
 	</p>
 	<p> 
-		OPTION <code>text</code>&nbsp;: Peut remplacer <code>label</code> et s'applique lorsque l'élément 
+		Option <code>text</code><br>
+		Peut remplacer <code>label</code> et s'applique lorsque l'élément 
 		cherché est un Texte court ou Texte long. Dans ce cas, c'est le texte dans la Ressource et non le 
 		libellé qui sera affiché dans la liste déroulante puis dans le Get_Ressource.
 	</p>
 	<p> 
-		OPTION <code>fileid</code>&nbsp;: Peut remplacer <code>label</code> et s'applique lorsque l'élément 
+		Option <code>fileid</code><br>
+		Peut remplacer <code>label</code> et s'applique lorsque l'élément 
 		cherché est une Image. Dans ce cas, c'est l'image et non le libellé qui sera affiché dans la liste 
 		déroulante puis dans le Get_Ressource. L'élément Image doit être déclaré à même le portfolio où se 
 		trouve l'élément Get_Ressource et non pas dans un portfolio Référentiel&nbsp;; donc à utiliser en 
 		combinaison avec l'option <code>self</code>.
 	</p>
 	<p> 
-		OPTION <code>resource</code>&nbsp;: Peut remplacer <code>label</code> et s'applique lorsque l'élément 
+		Option <code>resource</code><br>
+		Peut remplacer <code>label</code> et s'applique lorsque l'élément 
 		cherché est un Item. Dans ce cas, le Get_Resource sera mis à jour si l'élément Item est modifié. 
 		L'élément Item doit être déclaré à même le portfolio où se trouve l'élément Get_Ressource et non 
 		pas dans un portfolio Référentiel&nbsp;; donc à utiliser en combinaison avec l'option 
