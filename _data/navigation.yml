@@ -314,7 +314,7 @@ portfolio_fr:
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
-  - title: Fonctions
+  - title: Fonctions Menu
     url: /functions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
@@ -359,7 +359,7 @@ structures_fr:
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
-  - title: Fonctions
+  - title: Fonctions Menu
     url: /functions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
@@ -404,7 +404,7 @@ sharing_fr:
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
-  - title: Fonctions
+  - title: Fonctions Menu
     url: /functions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
@@ -479,7 +479,7 @@ resources_fr:
         url: /resources_fr/#proxy
   - title: Métadonnées
     url: /metadata_fr/
-  - title: Fonctions
+  - title: Fonctions Menu
     url: /functions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
@@ -585,12 +585,8 @@ metadata_fr:
         url: /metadata_fr/#nodenopencil
       - title: "Dupliquer"
         url: /metadata_fr/#duplicateroles
-      - title: "Incrémenter seulement"
-        url: /metadata_fr/#incrementroles
       - title: "Modifier taille image"
         url: /metadata_fr/#resizeroles
-      - title: "Graphiqueur"
-        url: /metadata_fr/#graphicerroles
       - title: "Ordonner"
         url: /metadata_fr/#moveroles
       - title: "Déplacer"
@@ -623,7 +619,7 @@ metadata_fr:
         url: /metadata_fr/#menulabels
       - title: "Bulle d'aide"
         url: /metadata_fr/#help
-  - title: Fonctions
+  - title: Fonctions Menu
     url: /functions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
@@ -692,7 +688,7 @@ functions_fr:
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
-  - title: Fonctions
+  - title: Fonctions Menu
     url: /functions_fr/
     children:
       - title: "Get_Multiple"
@@ -703,8 +699,8 @@ functions_fr:
         url: /functions_fr/#import_multiple
       - title: "Import_GGMultiple"
         url: /functions_fr/#import_ggmultiple
-      - title: "Print"
-        url: /functions_fr/#print
+      - title: "MoveTo"
+        url: /functions_fr/#moveTO
       - title: "ExecReport_BatchCSV"
         url: /functions_fr/#execReport_BatchCSV
     
@@ -725,7 +721,7 @@ css_fr:
     url: /resources_fr/
   - title: Métadonnées
     url: /metadata_fr/
-  - title: Fonctions
+  - title: Fonctions Menu
     url: /functions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
