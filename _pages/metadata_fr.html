@@ -391,8 +391,8 @@ sidebar:
 	</p>
 	<h4>Format de la recherche pour un élément Get_Resource</h4>
 	<p>	
-		<code>code_portfolio</code> ou <code>self</code>.<code>tag_sémantique</code>.<code>label</code>
-		ou <code>text</code> ou <code>fileid</code> ou <code>resource</code>
+		<code>code_portfolio</code> (ou <code>self</code>).<code>tag_sémantique</code>.<code>label</code>
+		(ou <code>text</code> ou <code>fileid</code> ou <code>resource</code>)
 	</p>
 	<ul>
 		<li>
@@ -444,33 +444,40 @@ sidebar:
 		<code>tag_sémantique2</code>.<code>label</code>
 	</p>
 	<ul>
-		<li><code>code_portfolio</code>&nbsp;: Code du portfolio référentiel où faire la recherche.</li>
+		<li>			
+			<code>code_portfolio</code> Code du portfolio référentiel où chercher les éléments
+			spécifiés par tag sémantique2. Le format est <i>code du projet.code du portfolio 
+			référentiel</i>. Si <i>code du projet</i> n'est pas présent, la recherche du portfolio 
+			référentiel se fait dans le projet courant (projet qui contient le portfolio dans lequel se 
+			trouve le Get_Get_Resource).
+		</li>
 		<li>
-			<code>position</code>&nbsp;: Indique où chercher dans le portfolio courant le code de l'élément 
+			<code>position</code> Indique où chercher dans le portfolio courant le code de l'élément 
 			parent qui va permettre de restreindre la recherche dans le référentiel. Prend une des 
 			valeurs suivantes&nbsp;: <i>child</i>, <i>sibling</i>,<i>parent</i>, <i>parent.parent</i>, 
 			<i>parent.parent.parent</i>.
 		</li>
 		<li>
-			<code>tag_sémantique1</code>&nbsp;: Tag sémantique du parent (restreint la recherche aux 
+			<code>tag_sémantique1</code> Tag sémantique du parent (restreint la recherche aux 
 			enfants de ce parent).
 		</li>
 		<li>
-			<code>tag_sémantique2</code>&nbsp;: Tag sémantique des éléments à chercher dans le référentiel.
+			<code>tag_sémantique2</code> Tag sémantique des élements à afficher dans la liste
+			déroulante.
 		</li>
-		<li><code>label</code>&nbsp;: Mot réservé.</li>
+		<li><code>label</code> Mot réservé.</li>
 	</ul>
 	<h4>Format de la recherche pour un élément Proxy</h4>
 	<p><code>code_portfolio</code>.<code>tag_sémantique</code>.<code>label</code></p>
 	<ul>
 		<li>
-			<code>code_portfolio</code>&nbsp;: Code du portfolio dans lequel chercher la cible à afficher 
+			<code>code_portfolio</code> Code du portfolio dans lequel chercher la cible à afficher 
 			dans le proxy.
 		</li>
 		<li>
-			<code>tag_sémantique</code>&nbsp;: Tag sémantique des élements parmis lesquels choisir la cible.
+			<code>tag_sémantique</code> Tag sémantique des élements parmis lesquels choisir la cible.
 		</li>
-		<li><code>label</code>&nbsp;: Mot réservé.</li>
+		<li><code>label</code> Mot réservé.</li>
 	</ul>
 </article>
 
