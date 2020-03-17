@@ -147,7 +147,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='multilingual-resource'>Ressource multilingue</h3>
 	<p>	
-		Éléments ressource uniquement. Spécifie si les données entrées dans l'élément ressource prennent 
+		Éléments Ressource uniquement. Spécifie si les données entrées dans l'élément ressource prennent 
 		des valeurs différentes pour chaque langue  dans le cas où le portfolio est multilingue. Si la 
 		ressource n'est pas multilingue, il y aura une seule valeur pour toutes les langues et cette 
 		valeur sera stockée dans la langue par défaut définie dans le fichier de configuration 
@@ -193,7 +193,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='edit-resource'>Modifier ressource</h3>
 	<p>
-		Éléments ressource uniquement. Liste des rôles, séparés par un espace, ayant le droit 
+		Éléments Ressource uniquement. Liste des rôles, séparés par un espace, ayant le droit 
 		d'éditer la ressource (y enregistrer des données). 
 	</p>
 </article>
@@ -202,7 +202,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='resnopencil'>Ressource sans crayon</h3>
 	<p>
-		Éléments ressource uniquement. N'affiche pas le bouton crayon aux rôles ayant le droit
+		Éléments Ressource uniquement. N'affiche pas le bouton crayon aux rôles ayant le droit
 		de modifier la ressource. Utilisé pour les imports d'éléments multiples via la fonction 
 		<i>Import_Multiple</i> (voir section FONCTIONS MENU pour plus de détails). 
 	</p>
@@ -363,7 +363,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='inline'>Édition en place</h3>
 	<p>
-		Éléments ressource uniquement. Lorsque éditable "en place", l'utilisateur n'a pas de bouton crayon
+		Éléments Ressource uniquement. Lorsque éditable "en place", l'utilisateur n'a pas de bouton crayon
 		et c'est l'éditeur de la ressource qui est affiché dans la page du portfolio.
 	</p>
 </article>
@@ -383,13 +383,13 @@ sidebar:
 	<h3 id='query'>Recherche</h3>
 	<p>
 		Le champ Recherche est utilisé pour spécifier quels éléments doivent apparaître dans une liste 
-		déroulante (éléments Get_Resource et Get_Get_Resource).
+		déroulante (éléments Get_Resource et Get_Get_Resource) et pour choisir la cible d'un élément Proxy.
 	</p>
 	
 	<h4>Format de la recherche pour un élément Get_Resource</h4>
 	<p>	
-		<code>code_portfolio</code> ou <code>self</code>.<code>tag_sémantique</code>.<code>label</code> ou 
-		<code>resource</code> ou <code>text</code> ou <code>fileid</code>
+		<code>code_portfolio</code>[<code>self</code>].<code>tag_sémantique</code>.<code>label</code>
+		[<code>resource</code>/<code>text</code>/<code>fileid</code>]
 	</p>
 	<ul>
 		<li>
@@ -446,6 +446,22 @@ sidebar:
 		</li>
 		<li><code>label</code>&nbsp;: Mot réservé.</li>
 	</ul>
+	<h4>Format de la recherche pour un élément Proxy</h4>
+	<p><code>code_portfolio</code>.<code>tag_sémantique</code>.<code>label</code></p>
+	<ul>
+		<li>
+			<code>code_portfolio</code>&nbsp;: Code du portfolio dans lequel chercher la cible à afficher 
+			dans le proxy.
+		</li>
+		<li>
+			<code>tag_sémantique</code>&nbsp;: Tag sémantique des élements parmis lesquels choisir la cible.
+		</li>
+		<li><code>label</code>&nbsp;: Mot réservé.</li>
+	</ul>
+	<p>
+		NOTE&nbsp;: voir section RESSOURCES pour plus de détails sur les éléments Get_Resource, 
+		Get_Get_Resource et Proxy.
+	</p>
 </article>
 
 <article>

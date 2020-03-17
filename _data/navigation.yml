@@ -699,6 +699,8 @@ functions_fr:
         url: /functions_fr/#import_multiple
       - title: "Import_GGMultiple"
         url: /functions_fr/#import_ggmultiple
+      - title: "Proxy_Multiple"
+        url: /functions_fr/#proxy_multiple
       - title: "MoveTo"
         url: /functions_fr/#moveTO
       - title: "ExecReport_BatchCSV"
