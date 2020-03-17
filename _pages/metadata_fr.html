@@ -51,9 +51,7 @@ sidebar:
 	<li><code><a href='#editnoderoles'>Modifier nœud</a></code></li>
 	<li><code><a href='#nodenopencil'>Nœud sans crayon</a></code></li>
 	<li><code><a href='#duplicateroles'>Dupliquer</a></code></li>
-	<li><code><a href='#incrementroles'>Incrémenter seulement</a></code></li>
 	<li><code><a href='#resizeroles'>Modifier taille image</a></code></li>
-	<li><code><a href='#graphicerroles'>Graphiqueur</a></code></li>
 	<li><code><a href='#moveroles'>Ordonner</a></code></li>
 	<li><code><a href='#moveinroles'>Déplacer</a></code></li>
 	<li><code><a href='#movein'>Déplacer dans</a></code></li>
@@ -79,9 +77,10 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='semantictag'>Tag sémantique</h3>
 	<p>
-		Le tag sémantique d'un élément est son identifiant et devrait exprimer sa sémantique. Le 
-		designer d'un portfolio devrait, pour chaque élément qu'il ajoute à un portfolio, remplacer
-		le tag sémantique par défaut par quelque chose qui exprime la sémantique de l'élément.
+		Le tag sémantique d'un élément est son identifiant et devrait exprimer sa sémantique 
+		(exemples&nbsp;: page-profil-etudiant, nom-etudiant, etc). Le designer d'un portfolio devrait, 
+		pour chaque élément qu'il ajoute à un portfolio, remplacer le tag sémantique par défaut par 
+		quelque chose qui exprime la sémantique de l'élément.
 	</p>
 	<p>
 		C'est par le tag sémantique qu'on recherche des éléments dans un portfolio. 
@@ -206,7 +205,6 @@ sidebar:
 		Éléments Ressource uniquement. N'affiche pas le bouton crayon aux rôles ayant le droit
 		de modifier la Ressource. Utilisé pour les imports d'éléments multiples via la fonction 
 		<i>Import_Multiple</i> (voir section FONCTIONS pour plus de détails). 
-		<br>???????????????
 	</p>
 </article>
 
@@ -238,15 +236,14 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='editcoderoles'>Éditer code</h3>
-	<p>??????????????????????
-	</p>
+	<p>Liste des rôles, séparés par un espace, ayant le droit de modifier le code de l'élément.</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='editnoderoles'>Modifier nœud</h3>
 	<p>
-		Liste des rôles, séparés par un espace, ayant le droit de modifier le <b>libellé<b> de l'élément.
+		Liste des rôles, séparés par un espace, ayant le droit de modifier le <b>libellé</b> de l'élément.
 	</p>
 </article>
 
@@ -272,24 +269,10 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='incrementroles'>Incrémenter seulement</h3>
-	<p>?????????????????????????????
-	</p>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='resizeroles'>Modifier taille image</h3>
 	<p>
 		Éléments Image uniquement. Liste des rôles, séparés par un espace, ayant le droit de modifier
 		la taille d'affichage de l'image.
-	</p>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='graphicerroles'>Graphiqueur</h3>
-	<p>??????????????????????
 	</p>
 </article>
 
@@ -314,7 +297,10 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='movein'>Déplacer dans</h3>
-	<p>??????????????????????????????
+	<p>
+		Pour les rôles qui ont le droit de Déplacer. Tag sémantique qui contraint les éléments 
+		vers lesquels on peut déplacer. Par exemple, avoir le droit de déplacer un élément uniquement
+		vers les sous-sections qui ont le tag sémantique spécifié.
 	</p>
 </article>
 
@@ -324,8 +310,8 @@ sidebar:
 	<p>
 		Liste des rôles, séparés par un espace, ayant le droit de montrer/cacher l'élément et tous ses
 		enfants à d'autres utilisateurs. Ce droit ajoute un bouton œil qui indique <b>l'état</b> (et 
-		non l'action)&nbsp;:lorsque l'œil est barré, l'élément est invisible aux autres utilisateurs&nbsp;; 
-		lorsque l'œil n'est pas barré, l'élément est visible aux autres utilisateurs.
+		non l'action)&nbsp;:lorsque l'œil est barré, l'élément est invisible aux autres 
+		utilisateurs&nbsp;; lorsque l'œil n'est pas barré, l'élément est visible aux autres utilisateurs.
 	</p>
 </article>
 
@@ -341,10 +327,7 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='printroles'>Imprimer</h3>
-	<p>
-		Liste des rôles, séparés par un espace, ayant le droit d'imprimer l'élément.
-		<br>????????????????? C'est quoi la différence avec la fonction Print? ?????????????
-	</p>
+	<p>Liste des rôles, séparés par un espace, ayant le droit d'imprimer l'élément.</p>
 </article>
 
 <article>
