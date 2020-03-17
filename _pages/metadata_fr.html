@@ -419,21 +419,21 @@ sidebar:
 	<p> 
 		Option <code>text</code><br>
 		Peut remplacer <code>label</code> et s'applique lorsque les éléments 
-		cherchés sont de type Texte court ou Texte long. Dans ce cas, c'est le texte dans la Ressource et 
+		cherchés sont de type Texte court ou Texte long. Dans ce cas c'est le texte dans la Ressource et 
 		non le libellé qui sera affiché dans la liste déroulante puis dans le Get_Ressource.
 	</p>
 	<p> 
 		Option <code>fileid</code><br>
 		Peut remplacer <code>label</code> et s'applique lorsque les éléments
-		cherchés sont de type Image. Dans ce cas, c'est l'image et non le libellé qui sera affiché dans 
-		la liste déroulante puis dans le Get_Ressource. Les éléments Image doiventt être déclarés à même le 
+		cherchés sont de type Image. Dans ce cas c'est l'image et non le libellé qui sera affiché dans 
+		la liste déroulante puis dans le Get_Ressource. Les éléments Image doivent être déclarés à même le 
 		portfolio où se trouve l'élément Get_Ressource et non pas dans un portfolio Référentiel&nbsp;; donc 
 		à utiliser en combinaison avec l'option <code>self</code>.
 	</p>
 	<p> 
 		Option <code>resource</code><br>
 		Peut remplacer <code>label</code> et s'applique lorsque les éléments 
-		cherchés sont de type Item. Dans ce cas, le Get_Resource sera mis à jour si l'élément Item 
+		cherchés sont de type Item. Dans ce cas le Get_Resource sera mis à jour si l'élément Item 
 		sélectionné est modifié. Les éléments Item doivent être déclarés à même le portfolio où se trouve 
 		l'élément Get_Ressource et non pas dans un portfolio Référentiel&nbsp;; donc à utiliser en 
 		combinaison avec l'option <code>self</code>. 
@@ -454,7 +454,7 @@ sidebar:
 		<li>
 			<code>position</code> Indique où chercher dans le portfolio courant le code de l'élément 
 			parent qui va permettre de restreindre la recherche dans le référentiel. Prend une des 
-			valeurs suivantes&nbsp;: <i>child</i>, <i>sibling</i>,<i>parent</i>, <i>parent.parent</i>, 
+			valeurs suivantes&nbsp;: <i>child</i>, <i>sibling</i>, <i>parent</i>, <i>parent.parent</i>, 
 			<i>parent.parent.parent</i>.
 		</li>
 		<li>
@@ -470,13 +470,8 @@ sidebar:
 	<h4>Format de la recherche pour un élément Proxy</h4>
 	<p><code>code_portfolio</code>.<code>tag_sémantique</code>.<code>label</code></p>
 	<ul>
-		<li>
-			<code>code_portfolio</code> Code du portfolio dans lequel chercher la cible à afficher 
-			dans le proxy.
-		</li>
-		<li>
-			<code>tag_sémantique</code> Tag sémantique des élements parmis lesquels choisir la cible.
-		</li>
+		<li><code>code_portfolio</code> Code du portfolio dans lequel chercher la cible à afficher.</li>
+		<li><code>tag_sémantique</code> Tag sémantique des élements parmis lesquels choisir la cible.</li>
 		<li><code>label</code> Mot réservé.</li>
 	</ul>
 </article>
@@ -485,22 +480,20 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='sharing'>Partager</h3>
 	<p>
-		La fonction Partage par l'utilisateur permet à l'utilisateur d'envoyer un courriel à un tiers, avec un hyperlien 
+		La fonction Partager permet à l'utilisateur d'envoyer à un tiers un courriel avec un hyperlien 
 		qui partage, en tout ou en partie, son portfolio avec ce tiers.
 	</p>
 	<h4>Format</h4>
 	<p>	
-		<code>rôle</code></br>
-		ou</br>
-		<code>rôle</code>,<code>rôle destinataire</code>,<code>rôles et/ou courriels</code>,<code>niveau 
-		(0-4)</code>,<code>durée de vie du lien (en heures)</code>,<code>libellé du bouton@fr</code>,<code>
-		condition (optionel)</code>
+		<code>rôle qui partage</code>,<code>rôle destinataire</code>,<code>rôles et/ou 
+		courriels destinataires</code>, <code>niveau (0-4)</code>,<code>durée de vie du lien (en heures)</code>,
+		<code>libellé du bouton@fr</code>,<code>condition (optionel)</code>
 	</p>
 	<ul>
 		<li><code>rôle</code> Rôle de l'utilisateur qui peut faire le partage (qui aura le bouton pour partager).</li>
 		<li><code>rôle destinataire</code> Rôle qu'aura le destinataire dans le portfolio.</li>
 		<li>
-			<code>rôles et/ou courriels</code> Rôles et/ou courriels des destinataires. Si c'est 
+			<code>rôles et/ou courriels destinataires</code> Rôles et/ou courriels des destinataires. Si c'est 
 			un rôle, toutes les personnes ayant ce rôle dans le portfolio seront destinataires d'un 
 			courriel.
 		</li>
