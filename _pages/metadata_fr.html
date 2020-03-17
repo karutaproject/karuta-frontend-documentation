@@ -487,7 +487,7 @@ sidebar:
 	<p>	
 		<code>rôle qui partage</code>,<code>rôle visiteur</code>,<code>rôles et/ou 
 		courriels destinataires</code>,<code>niveau (0-4)</code>,<code>durée de vie du lien 
-		(en heures)</code>,<code>libellé du bouton</code>@fr,<code>condition</code> (optionnel)
+		(en heures)</code>,<code>libellé du bouton</code>@fr,<code>condition (optionnel)</code> 
 	</p>
 	<ul>
 		<li>
@@ -503,6 +503,10 @@ sidebar:
 		<li>
 			<code>niveau (0-4)</code> Niveau de sécurité pour le partage. Peut prendre les valeurs de 0 à 4 
 			(voir description des niveaux ci-dessous).
+		</li>
+		<li>
+			<code>durée de vie du lien</code> En heure. Après ce temps, le lien qui se trouve dans le 
+			courriel est désactivé.
 		</li>
 		<li>
 			<code>libellé du bouton</code> Libellé qui apparaîtra à l'utilisateur qui peut faire le 
@@ -554,20 +558,32 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='menu'>Menus</h3>
 	<p>
-		Le champ Menus permet de présenter un menu déroulant de choix de composantes à importer. Le menu peut comprendre plusieurs éléments. Dans le cas où pour un rôle,
-		 il n'y a qu'un seul élément alors seul cet élément sera affiché. Si il ya plusieurs éléments pour un rôle, il est possible de contrôler
-		  le libellé du menu ('Menu' par défaut) en précisant le libellé et la langue. Les différents éléments de menu sont séparés par un ; (point-virgule).
-		  ATTENTION : il n'y a pas de point-virgule final.
+		Le champ est utilisé pour composer des menus afin d'importer des composantes. En général, les 
+		composantes se trouvent dans le portfolio de composantes réutilisables et le menu s'adresse à 
+		un ou plusieurs utilisateurs finaux. Dans ce cas la composante importée est <i>copiée</i> puis 
+		<i>collée</i> dans le portfolio.
+	</p>
+	<p>
+		ASTUCE&nbsp;: Le designer peut se créer des menus à lui-même afin de copier des morceaux 
+		de portfolio d'un portfolio à l'autre.
+	</p>
+	<p>
+		Il existe aussi dans Karuta plusieurs fonctions préprogrammées dont l'appel se fait à l'intérieur 
+		de la métadonnée Menus. Voir section FONCTIONS MENU pour la documentation de ces fonctions.
+	</p>
+	<p>
+		ATTENTION&nbsp;: Il n'y a pas de point-virgule final.
 	</p>
 	<h4>Format</h4>
 	<p>
-		[<code>libellé_menu@fr</code>;]<code>code_portfolio</code>,<code>tag sémantique</code>,<code>libellé@fr</code>,<code>rôles</code>[; autres éléments]
+		<code>code_portfolio</code>,<code>tag sémantique</code>,<code>libellé@fr</code>,<code>rôles</code>
+		[;&nbsp;autres menus]
 	</p>
 	<ul>
-		<li><code>libellé_menu@fr</code> : remplacera le mot Menu par défaut si il ya plus d'un élément dans le menu. OPTIONNEL</li>
-		<li><code>code_portfolio</code> : Code du portfolio duquel on importe la composante.</li>
-		<li><code>libellé@fr</code> : Libellé de l'élément de menu.</li>
-		<li><code>rôles</code> : Rôle(s) voyant l'élément de menu.</li>
+		<li><code>code_portfolio</code> Code du portfolio duquel on importe la composante.</li>
+		<li><code>tag sémantique</code> Tag sémantique de la composante à importer.</li>
+		<li><code>libellé@fr</code> Libellé de l'élément de menu.</li>
+		<li><code>rôles</code> Liste des rôles, séparés par un espace, voyant l'élément de menu.</li>
 	</ul>
 	</p>
 </article>
@@ -576,6 +592,9 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='menulabels'>Texte bouton Menu</h3>
 	<p>
+		Texte alternatif pour le libellé du bouton Menu lorsque plus d'un choix est offert à un rôle
+		(par défaut <i>Menu</i>). Suffixer de @fr pour français. Par exemple&nbsp;: 
+		<i>Ajouter un diplôme@fr</i> si il y a plusieurs types de composantes de diplômes.
 	</p>
 </article>
 
@@ -583,6 +602,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='help'>Bulle d'aide</h3>
 	<p>
+		Affiche de l'information supplémentaire dans une bulle pop-up à côté du libellé de l'élément. 
+		Suffixer de @fr pour français.
 	</p>
 </article>
 
