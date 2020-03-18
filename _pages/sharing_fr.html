@@ -27,7 +27,7 @@ sidebar:
 </ul>
 	
 <h4>Dans le portfolio</h4>
-<img src='../assets/img/image003.png' width='80%'/>
+<img src='../assets/img/image003.png' width='100%'/>
 <p>
 	Dans l'exemple ci-dessus, lorsque l’étudiant clique sur "Partager avec un pair", le système envoie un 
 	courriel au pair avec un hyperlien vers la section du portfolio dans laquelle il pourra inscrire son 
@@ -35,7 +35,7 @@ sidebar:
 </p>
 
 <h4>Dans le courriel</h4>
-<img src='../assets/img/image006.png' width='100%'/>
+<img src='../assets/img/image006.png' width='70%'/>
 
 <h4>Dans les métadonnées</h4>
 <img src='../assets/img/image008.png' width='80%'/>
@@ -61,11 +61,11 @@ sidebar:
 <p class='champ'>etudiant,all,?,4,unlimited,Partager@fr</p>
 <p>
 	NOTE 1&nbsp;: Grâce au point d'interrogation (?), le destinataire n'est pas spécifié à l'avance&nbsp;; 
-	lorsque l’étudiant cliquera sur Partager, une fenêtre s’ouvrira pour lui permettre de spécifier le 
-	courriel du destinataire.
+	lorsque l’étudiant clique sur Partager, une fenêtre pop-up lui permet de spécifier le courriel du 
+	destinataire.
 </p>
 <p>
-	Note 2&nbsp;: Lors de l’instanciation du portfolio, le rôle <i>all</i> doit être partagé avec 
+	NOTE 2&nbsp;: Lors de l’instanciation du portfolio, le rôle <i>all</i> doit être partagé avec 
 	l’utilisateur <i>public</i>.
 </p>
 
@@ -78,8 +78,8 @@ sidebar:
 <p class='champ'>etudiant,all,?,4,24,Partager@fr</p>
 <p>
 	NOTE 1&nbsp;: Grâce au point d'interrogation (?), le destinataire n'est pas spécifié à l'avance&nbsp;; 
-	lorsque l’étudiant cliquera sur Partager, une fenêtre s’ouvrira pour lui permettre de spécifier le 
-	courriel du destinataire.
+	lorsque l’étudiant clique sur Partager, une fenêtre pop-up lui permet de spécifier le courriel du 
+	destinataire.
 </p>
 <p>
 	NOTE 2&nbsp;: Lors de l’instanciation du portfolio, le rôle <i>all</i> doit être partagé avec 
@@ -117,32 +117,31 @@ sidebar:
 <p>Le collègue reçoit un courriel et clique sur l’hyperlien pour écrire son commentaire.</p>
 <p>
 	NOTE&nbsp;: Grâce au point d'interrogation (?), le destinataire n'est pas spécifié à l'avance&nbsp;; 
-	lorsque l’étudiant cliquera sur Partager, une fenêtre s’ouvrira pour lui permettre de spécifier le 
-	courriel du destinataire. On fait ici l’hypothèse que l’étudiant a un grand nombre de collègues et 
+	lorsque l’étudiant clique sur Partager, une fenêtre pop-up lui permet de spécifier le courriel du 
+	destinataire. On fait ici l’hypothèse que l’étudiant a un grand nombre de collègues et 
 	que le designer n’a pas spécifié à l'avance les collègues qui seront mobilisés, de façon à 
 	donner plus de latitude à l’étudiant dans le choix du pair qui l’évaluera.
 </p>
  
-
 <h4>
-	Cas généraux&nbsp;: les deux tableaux ci-dessous expliquent et précisent la valeur des paramètres de 
-	la boîte de partage.
+	Cas généraux&nbsp;: les deux tableaux ci-dessous expliquent les valeurs des paramètres de 
+	la métadonnée Partager.
 </h4>
 
 <table>
 	<tr>
 		<td width='25%'>Rôle qui partage</td>
-		<td>Habituellement l’étudiant mais tous les utilisateurs qui ont un rôle défini dans le portfolio peuvent aussi partager.</td>
+		<td>Rôle qui aura le bouton pour partager.</td>
 	</tr>
 	<tr>
-		<td>Rôle du destinataire</td>
+		<td>Rôle visiteur</td>
 		<td>
-			Le rôle qu’aura le destinataire dans le portfolio (par exemple « superviseur » – le destinataire pourra faire ce 
-			que peut faire un superviseur).
+			Rôle qu’aura le destinataire lorsqu'il visitera le portfolio (par exemple 
+			<i>superviseur</i>&nbsp;– le destinataire pourra faire ce que peut faire un superviseur).
 		</td>
 	</tr>
 	<tr>
-		<td>Rôles et/ou courriels </td>
+		<td>Rôles et/ou courriels destinataires</td>
 		<td>
 			Le rôle du destinataire dans le portfolio ou encore son courriel :
 			<ul>
