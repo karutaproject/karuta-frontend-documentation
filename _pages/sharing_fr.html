@@ -10,74 +10,68 @@ sidebar:
 		border: 1px solid gray;
 		padding: 5px;
 	}
-	.note {
-		font-size:70%;
-	}
 </style>
 <p>
-	Des portfolios complets, des parties de portfolios ou même des ressources spécifiques peuvent être partagées par un usager donné 
-	à l’aide d’un bouton. Les usagers qui recevront le partage en seront avisés par courriel (le courriel contient un hyperlien vers 
-	le portfolio partagé).
+	À l'aide de la métadonnée Partager, il possible de permettre aux utilisateurs de partager leur 
+	portfolio, au complet ou en partie, avec un tiers et même de donner à ce tiers des droits d'édition 
+	sur les éléments partagés. L'utilisateur procède au partage en cliquant sur un bouton, ce qui 
+	déclenche l'envoi d'un courriel au tiers avec un hyperlien vers les éléments partagés.
 </p>
-<p>
-	 Ils pourront alors intervenir dans le portfolio selon le rôle qui leur sera assigné. Le partage permet deux possibilités : 
-</p>
-	<ol>
-		<li>avertir un acteur du portfolio qu’il doit intervenir;</li>
-		<li>permettre à un usager qui n’a pas actuellement les droits d’intervenir dans un portfolio de le faire.</li>
-	</ol>
+<p>Le partage permet deux possibilités&nbsp;:</p>
+<ul>
+	<li>avertir un acteur du portfolio qu’il doit intervenir&nbsp;;</li>
+	<li>
+		permettre à un utilisateur qui n’a pas actuellement les droits d’intervenir dans un portfolio 
+		de le faire.
+	</li>
+</ul>
 	
 <h4>Dans le portfolio</h4>
-
 <img src='../assets/img/image003.png' width='80%'/>
-
 <p>
-	Dans l'exemple ci-dessus, si dans son portfolio l’étudiant clique sur "Partager avec un pair", le système envoie un courriel au 
-	pair avec un hyperlien vers une section du portfolio dans laquelle il pourra inscrire son commentaire.
+	Dans l'exemple ci-dessus, lorsque l’étudiant clique sur "Partager avec un pair", le système envoie un 
+	courriel au pair avec un hyperlien vers une section du portfolio dans laquelle il pourra inscrire son 
+	commentaire.
 </p>
 
-<img src='../assets/img/image006.png' width='50%'/>
-<p>
-	La spécification du partage se fait dans l’onglet métadonnées d’une section, d’une page, d’une sous-section ou même d’une 
-	ressource.
-</p>
+<h4>Dans le courriel</h4>
+<img src='../assets/img/image006.png' width='80%'/>
 
 <h4>Dans les métadonnées</h4>
-
 <img src='../assets/img/image008.png' width='80%'/>
-
-<p>Les conditions de ce partage sont très sophistiquées; voici quelques cas d’utilisation usuels :</p>
-
-<!-- =================================== -->
-
-<h4>
-	Cas 1 – L’étudiant peut montrer son portfolio à n’importe qui (usager Karuta ou non) en mode lecture seulement (aucun droit 
-	d’édition).
-</h4>
 <p>
-	<code>
-			Partager<br>
-			rôle qui partage,rôle destinataire,rôles et/ou courriels,niveau (0-4),durée de vie du lien (en heures),button 
-			label@en/libellé du bouton@fr[,condition][;autre partage]
-	</code>
+	<code>Partager</code><br>
+	<code>rôle qui partage</code>,<code>rôle visiteur</code>,<code>rôles et/ou courriels 
+	destinataires</code>,<code>niveau (0-4)</code>,<code>durée de vie du lien 
+	(en heures)</code>,<code>button label</code>@en/<code>libellé du 
+	bouton</code>@fr[,<code>condition</code>][;autre partage]
+</code>
 </p>
-<p class='champ'>etudiant,all,?,4,unlimited,Partager@fr</p>
-
-<div class='note'>
-	<b>Note 1 :</b> Le symbole « ? » fait en sorte que lorsque l’étudiant cliquera sur Partager, une fenêtre s’ouvrira 
-	pour lui permettre de spécifier le courriel du destinataire.
-</div>
-
-<img src='../assets/img/image009.png' width='80%'/>
-
-<div class='note'>
-	<b>Note 2 :</b> Lors de l’instanciation du portfolio, le rôle all doit être partagé avec l’utilisateur public.
-</div>
+<p>
+	Il y a plusieurs options pour les conditions de sécurité du partage&nbsp;; voici quelques cas 
+	d’utilisation usuels&nbsp;:
+</p>
 
 <!-- =================================== -->
 
 <h4>
-	Cas 2 – L’étudiant peut montrer son portfolio à n’importe qui (usager Karuta ou non) en mode lecture seulement (aucun 
+	Cas 1&nbsp;– L’étudiant peut montrer son portfolio à n’importe qui (utilisateur Karuta ou non) en mode 
+	lecture seulement (aucun droit d’édition).
+</h4>
+<p class='champ'>etudiant,all,?,4,unlimited,Partager@fr</p>
+<p>
+	NOTE 1&nbsp;: Le symbole <code>?</code> fait en sorte que lorsque l’étudiant cliquera sur Partager, 
+	une fenêtre s’ouvrira pour lui permettre de spécifier le courriel du destinataire.
+</p>
+<p>
+	Note 2&nbsp;: Lors de l’instanciation du portfolio, le rôle <i>all</i> doit être partagé avec 
+	l’utilisateur <i>public</i>.
+</p>
+
+<!-- =================================== -->
+
+<h4>
+	Cas 2 – L’étudiant peut montrer son portfolio à n’importe qui (utilisateur Karuta ou non) en mode lecture seulement (aucun 
 	droit d’édition) mais le partage a une durée limitée de 24 heures.
 </h4>
 <p>
@@ -164,7 +158,7 @@ sidebar:
 <table>
 	<tr>
 		<td width='25%'>Rôle qui partage</td>
-		<td>Habituellement l’étudiant mais tous les usagers qui ont un rôle défini dans le portfolio peuvent aussi partager.</td>
+		<td>Habituellement l’étudiant mais tous les utilisateurs qui ont un rôle défini dans le portfolio peuvent aussi partager.</td>
 	</tr>
 	<tr>
 		<td>Rôle du destinataire</td>
@@ -180,7 +174,7 @@ sidebar:
 			<ul>
 				<li>
 					Par exemple si « superviseur », le message de partage sera envoyé à la personne qui a le rôle superviseur
-				 	dans le portfolio. L'usager n'entre pas à la main la personne avec qui partager, ceci est déterminé par le 
+				 	dans le portfolio. L'utilisateur n'entre pas à la main la personne avec qui partager, ceci est déterminé par le 
 				 	système.
 				 </li>
 				<li>On peut aussi inscrire directement une adresse courriel si le destinataire est connu.</li>
