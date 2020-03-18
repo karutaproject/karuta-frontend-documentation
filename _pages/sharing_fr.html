@@ -60,8 +60,9 @@ sidebar:
 </h4>
 <p class='champ'>etudiant,all,?,4,unlimited,Partager@fr</p>
 <p>
-	NOTE 1&nbsp;: Le symbole <code>?</code> fait en sorte que lorsque l’étudiant cliquera sur Partager, 
-	une fenêtre s’ouvrira pour lui permettre de spécifier le courriel du destinataire.
+	NOTE 1&nbsp;: Grâce au point d'interrogation (?), le destinataire n'est pas spécifié à l'avance&nbsp;; 
+	lorsque l’étudiant cliquera sur Partager, une fenêtre s’ouvrira pour lui permettre de spécifier le 
+	courriel du destinataire.
 </p>
 <p>
 	Note 2&nbsp;: Lors de l’instanciation du portfolio, le rôle <i>all</i> doit être partagé avec 
@@ -71,89 +72,62 @@ sidebar:
 <!-- =================================== -->
 
 <h4>
-	Cas 2 – L’étudiant peut montrer son portfolio à n’importe qui (utilisateur Karuta ou non) en mode lecture seulement (aucun 
-	droit d’édition) mais le partage a une durée limitée de 24 heures.
+	Cas 2&nbsp;– L’étudiant peut montrer son portfolio à n’importe qui (utilisateur Karuta ou non) en mode 
+	lecture seulement (aucun droit d’édition) mais le partage a une durée limitée de 24 heures.
 </h4>
-<p>
-	<code>
-			Partager<br>
-			rôle qui partage,rôle destinataire,rôles et/ou courriels,niveau (0-4),durée de vie du lien (en heures),button 
-			label@en/libellé du bouton@fr[,condition][;autre partage]
-	</code>
-</p>
 <p class='champ'>etudiant,all,?,4,24,Partager@fr</p>
-
-<div class='note'>
-	<b>Note 1 :</b> Le symbole « ? » fait en sorte que lorsque l’étudiant cliquera sur Partager, une fenêtre s’ouvrira pour 
-	lui permettre de spécifier le courriel.
-</div>
-<div class='note'>
-	<b>Note 2 :</b> Lors de l’instanciation du portfolio, le rôle all doit être partagé avec l’utilisateur public.
-</div>
+<p>
+	NOTE 1&nbsp;: Grâce au point d'interrogation (?), le destinataire n'est pas spécifié à l'avance&nbsp;; 
+	lorsque l’étudiant cliquera sur Partager, une fenêtre s’ouvrira pour lui permettre de spécifier le 
+	courriel du destinataire.
+</p>
+<p>
+	NOTE 2&nbsp;: Lors de l’instanciation du portfolio, le rôle <i>all</i> doit être partagé avec 
+	l’utilisateur <i>public</i>.
+</p>
 
 <!-- =================================== -->
 
 <h4>
-	Cas 3 – L’étudiant demande à son professeur de procéder à son évaluation; le professeur possède un compte Karuta et a 
-	été assigné au portfolio de cet étudiant dans le rôle professeur lors de l’instanciation.
+	Cas 3&nbsp;– L’étudiant demande à son professeur de procéder à son évaluation&nbsp;; le professeur 
+	possède un compte Karuta et le portfolio lui est partagé dans le rôle <i>professeur</i>.
 </h4>
-<p>
-	<code>
-			Partager<br>
-			rôle qui partage,rôle destinataire,rôles et/ou courriels,niveau (0-4),durée de vie du lien (en heures),button 
-			label@en/libellé du bouton@fr[,condition][;autre partage]
-	</code>
-</p>
 <p class='champ'>etudiant,professeur,professeur,1,12,Demander une évaluation@fr</p>
-
-<p>Le professeur reçoit un courriel et n’a qu’à cliquer sur l’hyperlien pour procéder à l’évaluation.</p>
+<p>Le professeur reçoit un courriel et clique sur l’hyperlien pour procéder à l’évaluation.</p>
 
 <!-- =================================== -->
 
 <h4>
-	Cas 4 – L’étudiant demande à son responsable de stage de compléter son évaluation; le responsable de stage n’a pas de 
-	compte Karuta.
+	Cas 4&nbsp;– L’étudiant demande à son responsable de stage de compléter son évaluation&nbsp;; le 
+	responsable de stage n’a pas de compte Karuta.
 </h4>
-<p>
-	<code>
-			Partager<br>
-			rôle qui partage,rôle destinataire,rôles et/ou courriels,niveau (0-4),durée de vie du lien (en heures),button 
-			label@en/libellé du bouton@fr[,condition][;autre partage]
-	</code>
-</p>
 <p class='champ'>etudiant,evaluateur,yves.lacoste@airfrance.com,3,12,Demander une évaluation@fr</p>
-
 <p>
-	Le responsable de stage reçoit un courriel et n’a qu’à cliquer sur l’hyperlien pour procéder à l’évaluation; il n’a pas à 
-	s’identifier dans le système Karuta. L’hyperlien est valide pendant 12 heures.
+	Le responsable de stage reçoit un courriel et clique sur l’hyperlien pour procéder à l’évaluation. 
+	Il n’a pas à s’identifier dans le système Karuta. L’hyperlien est valide pendant 12 heures.
 </p>
 
 <!-- =================================== -->
 
 <h4>
-	Cas 5 – L’étudiant demande à un de ses collègues d’inscrire un commentaire dans son portfolio (évaluation par les pairs); 
-	le collègue possède un compte Karuta.
+	Cas&nbsp;5 – L’étudiant demande à un de ses collègues d’inscrire un commentaire dans son portfolio 
+	(évaluation par les pairs)&nbsp;; le collègue possède un compte Karuta.
 </h4>
-<p>
-	<code>
-			Partager<br>
-			rôle qui partage,rôle destinataire,rôles et/ou courriels,niveau (0-4),durée de vie du lien (en heures),button 
-			label@en/libellé du bouton@fr[,condition][;autre partage]
-	</code>
-</p>
 <p class='champ'>etudiant,pair,?,2,12,Demander un commentaire@fr</p>
-
-<p>Le collègue reçoit un courriel et n’a qu’à cliquer sur l’hyperlien pour écrire son commentaire.</p>
-
-<div class='note'>
-	<b>Note :</b> Le symbole « ? » fait en sorte que lorsque l’étudiant cliquera sur Demander un commentaire, une fenêtre 
-	s’ouvrira pour lui permettre de spécifier le courriel de son collègue. On fait ici l’hypothèse que l’étudiant a un grand 
-	nombre de collègues et que le designer n’a pas spécifié de façon précise les collègues qui seront mobilisés, de façon à 
-	donner plus de latitude à l’étudiant dans le choix du pair qui pourra l’évaluer.
-</div>
+<p>Le collègue reçoit un courriel et clique sur l’hyperlien pour écrire son commentaire.</p>
+<p>
+	NOTE&nbsp;: Grâce au point d'interrogation (?), le destinataire n'est pas spécifié à l'avance&nbsp;; 
+	lorsque l’étudiant cliquera sur Partager, une fenêtre s’ouvrira pour lui permettre de spécifier le 
+	courriel du destinataire. On fait ici l’hypothèse que l’étudiant a un grand nombre de collègues et 
+	que le designer n’a pas spécifié à l'avance les collègues qui seront mobilisés, de façon à 
+	donner plus de latitude à l’étudiant dans le choix du pair qui l’évaluera.
+</p>
  
 
-<h4>Cas généraux : les deux tableaux ci-dessous expliquent et précisent la valeur des paramètres de la boîte de partage.</h4>
+<h4>
+	Cas généraux&nbsp;: les deux tableaux ci-dessous expliquent et précisent la valeur des paramètres de 
+	la boîte de partage.
+</h4>
 
 <table>
 	<tr>
