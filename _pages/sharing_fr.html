@@ -52,8 +52,6 @@ sidebar:
 	d’utilisation usuels&nbsp;:
 </p>
 
-<!-- =================================== -->
-
 <h4>
 	Cas 1&nbsp;– L’étudiant peut montrer son portfolio à n’importe qui (utilisateur Karuta ou non) en mode 
 	lecture seulement (aucun droit d’édition).
@@ -68,8 +66,6 @@ sidebar:
 	NOTE 2&nbsp;: Lors de l’instanciation du portfolio, le rôle <i>all</i> doit être partagé avec 
 	l’utilisateur <i>public</i>.
 </p>
-
-<!-- =================================== -->
 
 <h4>
 	Cas 2&nbsp;– L’étudiant peut montrer son portfolio à n’importe qui (utilisateur Karuta ou non) en mode 
@@ -86,16 +82,15 @@ sidebar:
 	l’utilisateur <i>public</i>.
 </p>
 
-<!-- =================================== -->
-
 <h4>
 	Cas 3&nbsp;– L’étudiant demande à son professeur de procéder à son évaluation&nbsp;; le professeur 
 	possède un compte Karuta et le portfolio lui est partagé dans le rôle <i>professeur</i>.
 </h4>
 <p class='champ'>etudiant,professeur,professeur,1,12,Demander une évaluation@fr</p>
-<p>Le professeur reçoit un courriel et clique sur l’hyperlien pour procéder à l’évaluation.</p>
-
-<!-- =================================== -->
+<p>
+	Le professeur qui est partagé au portfolio reçoit un courriel et clique sur l’hyperlien pour procéder 
+	à l’évaluation.
+</p>
 
 <h4>
 	Cas 4&nbsp;– L’étudiant demande à son responsable de stage de compléter son évaluation&nbsp;; le 
@@ -106,8 +101,6 @@ sidebar:
 	Le responsable de stage reçoit un courriel et clique sur l’hyperlien pour procéder à l’évaluation. 
 	Il n’a pas à s’identifier dans le système Karuta. L’hyperlien est valide pendant 12 heures.
 </p>
-
-<!-- =================================== -->
 
 <h4>
 	Cas&nbsp;5 – L’étudiant demande à un de ses collègues d’inscrire un commentaire dans son portfolio 
@@ -127,7 +120,7 @@ sidebar:
 	Cas généraux&nbsp;: les deux tableaux ci-dessous expliquent les valeurs des paramètres de 
 	la métadonnée Partager.
 </h4>
-
+<p></p>
 <table>
 	<tr>
 		<td width='25%'>Rôle qui partage</td>
@@ -143,17 +136,15 @@ sidebar:
 	<tr>
 		<td>Rôles et/ou courriels destinataires</td>
 		<td>
-			Le rôle du destinataire dans le portfolio ou encore son courriel :
+			À qui le courriel avec l'hyperlien sera envoyé&nbsp;:
 			<ul>
 				<li>
-					Par exemple si « superviseur », le message de partage sera envoyé à la personne qui a le rôle superviseur
-				 	dans le portfolio. L'utilisateur n'entre pas à la main la personne avec qui partager, ceci est déterminé par le 
-				 	système.
+					Rôles&nbsp;: Le courriel sera envoyé à tous les comptes qui sont partagés au portfolio 
+					dans ce rôle.
 				 </li>
-				<li>On peut aussi inscrire directement une adresse courriel si le destinataire est connu.</li>
+				<li>Courriels&nbsp;: Le courriel sera envoyé aux adresses spécifiées.</li>
 				<li>
-					Finalement on peut remplacer ce paramètre par « ? », ce qui permet à l’utilisateur qui partage de spécifier 
-					le courriel de la personne avec qui partager.
+					?&nbsp;: C'est l'utilisateur qui spécifie l'adresse de courriel au moment du partage.
 				</li>
 			</ul>
 		</td>
@@ -161,22 +152,29 @@ sidebar:
 	<tr>
 		<td>Niveau (0,4)</td>
 		<td>
-			Le niveau de sécurité détermine si on oblige le destinataire à se connecter à Karuta avec son identifiant et mot 
-		 	de passe avant de voir ce qui lui est partagé.  Il permet aussi à des destinataires qui n’ont pas de compte dans 
-		 	Karuta d’éditer des ressources sans se connecter (niveau 3).
+			Le niveau de sécurité détermine si on oblige le destinataire à se connecter à Karuta avec son 
+			identifiant et mot de passe avant de voir ce qui lui est partagé. Il permet aussi à des 
+			destinataires qui n’ont pas de compte dans Karuta d’éditer des ressources sans se connecter 
+			(niveau 3).
 		 </td>
 	</tr>
 	<tr>
-		<td>Durée de vie du lien (en heures)</td>
-		<td>Pour des raisons de sécurité, le designer peut spécifier la durée de vie du lien qui sera envoyé.</td>
+		<td>Durée de vie du lien</td>
+		<td>
+			En heures. Pour des raisons de sécurité, le designer peut spécifier la durée de vie du lien 
+			qui sera envoyé.
+		</td>
 	</tr>
 	<tr>
-		<td>button label@en/ libellé du bouton@fr</td>
-		<td>Le libellé du menu Partager dans la langue appropriée.  Ne pas oublier le / si bilingue.</td>
+		<td>Libellé du bouton</td>
+		<td>
+			Le libellé du bouton pour partager. Suffixer de @fr pour français et/ou @en pour anglais. 
+			Si bilingue, séparer par une barre oblique (/).
+		</td>
 	</tr>
 	<tr>
 		<td>Condition</td>
-		<td>Par exemple: submitted=='Y' (optionnel).</td>
+		<td>Optionnel. Par exemple&nbsp;: <i>submitted=='Y'</i>.</td>
 	</tr>
 </table>
 <p></p>
@@ -186,40 +184,42 @@ sidebar:
 		<td>Conditions</td>
 	</tr>
 	<tr>
-		<td>0</td>
+		<td>0&nbsp;– utilisateur Karuta</td>
 		<td>
-			Le destinataire existe dans le système Karuta et le portfolio est déjà partagé avec le destinataire dans le bon 
-			rôle. Si le destinataire n’est pas connecté au système, il devra le faire en spécifiant son mot de passe.
+			Le destinataire du courriel possède un compte Karuta et le portfolio lui est déjà partagé, 
+			dans le bon rôle. Son mot de passe lui sera demandé si il n'est pas déjà logué dans Karuta.		
 		</td>
 	</tr>
 	<tr>
 		<td>1</td>
 		<td>
-			Le destinataire existe dans le système Karuta et le portfolio est déjà partagé avec le destinataire dans le bon rôle. 
-			Si le destinataire n’est pas pas connecté au système, il n’aura pas à le faire : en cliquant sur l’hyperlien, il sera 
-		 	automatiquement dirigé vers la bonne section du portfolio.
+			Le destinataire du courriel possède un compte Karuta et le portfolio lui est déjà partagé, 
+			dans le bon rôle. Son mot de passe ne lui sera pas demandé (si l'utilisateur n'est pas déjà 
+			logué dans Karuta, un login temporaire lui sera attribué).
 		</td>
 	</tr>
 	<tr>
 		<td>2</td>
 		<td>
-			Le destinataire existe dans le système Karuta mais le portfolio n’est pas déjà partagé avec le destinataire dans le 
-			bon rôle. Le système va partager le portfolio dans le bon rôle avec le destinataire. Si le destinataire n’est pas pas 
-			connecté au système, il n’aura pas à le faire : en cliquant sur l’hyperlien, il sera automatiquement dirigé vers la 
-			bonne section du portfolio.
+			Le destinataire du courriel possède un compte Karuta mais le portfolio ne lui est pas partagé. 
+			Le système partage le portfolio avec l’utilisateur dans le bon rôle. (Si l'utilisateur n'est 
+			pas déjà logué dans Karuta, un login temporaire lui sera attribué.)
 		</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>
-		Le destinataire n’existe pas dans le système Karuta. Le système va automatiquement lui créer un compte et lui partager 
-		le portfolio dans le bon rôle. Le compte créé est temporaire.</td>
-	</tr>
+			Si le destinataire du courriel n'a pas de compte dans Karuta, un compte lui sera créé. Le 
+			système partage le portfolio avec l'utilisateur dans le bon rôle. (Si l'utilisateur n'est 
+			pas déjà logué dans Karuta, un login temporaire lui sera attribué.)	
+		</tr>
 	<tr>
 		<td>4</td>
 		<td>
-			Le destinataire qui reçoit le courriel a accès en lecture seulement au contenu de la section du portfolio partagé avec 
-			lui. Lors de l’instanciation, le rôle all doit être partagé avec l’utilisateur public.
+			Si le destinataire du courriel n'a pas de compte dans Karuta, un compte lui sera créé. Le 
+			système partage le portfolio avec l'utilisateur dans le bon rôle. (Si l'utilisateur n'est pas 
+			déjà logué dans Karuta, un login temporaire lui sera attribué.) Lors de l’instanciation, le 
+			rôle <i>all</i> doit être partagé avec l’utilisateur <i>public</i>.
 		</td>
 	</tr>
  </table>
