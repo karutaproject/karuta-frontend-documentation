@@ -5,7 +5,7 @@ title: "Fonctions préprogrammées de la métadonnée Menu"
 sidebar:
  nav: "functions_fr"
 ---
-<p>Karuta offre plusieurs fonctions préprogrammées qui peuvent être utilisées dans la métadonnées Menu.</p>
+<p>Karuta offre plusieurs fonctions préprogrammées qui peuvent être utilisées dans la métadonnée Menus.</p>
 <ul>
 	<li><code><a href='#get_multiple'>Get_Multiple</a></code></li>
 	<li><code><a href='#get_get_multiple'>Get_Get_Multiple</a></code></li>
@@ -20,10 +20,24 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='get_multiple'>Get_Multiple</h3>
 	<p>
-		La fonction Get_Multiple permet à l'utilisateur de sélectionner plusieurs éléments dans une liste.
-		Pour chaque élément sélectionné, une composante réutilisable  (Page ou Sous-section) est ajoutée au 
-		portfolio. Un élément de cette composante est alors mis à jour avec le code et le libellé de l'élément 
-		sélectionné.
+		La fonction Get_Multiple permet à l'utilisateur de sélectionner plusieurs éléments parmi une 
+		liste. Pour chaque élément sélectionné, une composante réutilisable est importée dans le 
+		portfolio. Un élément de cette composante est alors mis à jour avec le code et le libellé de 
+		l'élément sélectionné. 
+	<p>
+	</p>
+		La liste d'éléments doit exister dans un portfolio référentiel et chaque élément doit avoir un 
+		code&nbsp;; dans le cas d'éléments Items, il faut répéter le <i>Code&nbsp;- Item</i> dans le champ 
+		<i>Code</i> du nœud.
+	<p>
+	</p>
+		Pour que l'utilisateur puisse exécuter cette opération, il doit avoir le droit de Modifier le nœud
+		ou Modifier la ressource (nœud si la composante est une Page ou une Sous-section, ressource si la 
+		composante est un Get_Resource).
+	<p>
+	</p>
+		ASTUCE&nbsp;: Afin que l'utilisateur ne puisse pas modifier directement le noeud ou la ressource 
+		après l'import, cocher la métadonnée Nœud sans crayon ou Ressource sans crayon.
 	</p>
 	<h4>Format</h4>
 	<p>
