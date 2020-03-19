@@ -28,8 +28,7 @@ sidebar:
 	<p>
 	</p>
 		La liste d'éléments doit exister dans un portfolio référentiel et chaque élément doit avoir un 
-		code&nbsp;; dans le cas d'éléments Items, il faut répéter le <i>Code&nbsp;- Item</i> dans le champ 
-		<i>Code</i> du nœud.
+		code unique.
 	<p>
 	</p>
 		Pour que l'utilisateur puisse exécuter cette opération, il doit avoir le droit de Modifier le nœud
@@ -37,27 +36,33 @@ sidebar:
 		ressource si c'est un Get_Resource).
 	<p>
 	</p>
-		ASTUCE&nbsp;: Afin que l'utilisateur ne puisse pas modifier directement le noeud ou la ressource 
+		ASTUCE&nbsp;: Afin que l'utilisateur ne puisse pas modifier directement le nœud ou la ressource 
 		après l'import, cocher la métadonnée Nœud sans crayon ou Ressource sans crayon.
 	</p>
 	<h4>Format</h4>
 	<p>
-		<code>function</code>,<code>get_multiple</code>/<code>recherche</code>/<code>code_portfolio.tag_sémantique
-		</code>/<code>tag_sémantique_a_mettre jour</code>,<code>libellé@fr</code>,<code>rôles</code>
+		<code>function</code>,<code>get_multiple</code>/<code>recherche</code>/<code>code_portfolio.tag_sémantique</code>/<code>tag_sémantique</code>,<code>libellé</code>@fr,<code>rôles</code>
 	</p>
 	<ul>
-		<li><code>function</code> : Mot réservé.</li>
-		<li><code>get_multiple</code> : Mot réservé.</li>
-		<li><code>recherche</code> : Recherche du Get_Resource (voir ci-dessus).</li>
+		<li><code>function</code> Mot réservé.</li>
+		<li><code>get_multiple</code> Mot réservé.</li>
 		<li>
-			<code>code_portfolio.tag_sémantique</code> : Composante réutilisable à ajouter.
+			<code>recherche</code> Recherche du Get_Resource équivalent (voir section 
+			<a href='../metadata_fr/'>MÉTADONNÉES</a> pour plus de détails).
+		</li>
+		<li><code>code_portfolio.tag_sémantique</code> Composante réutilisable à importer.</li>
+		<li>
+			<code>tag_sémantique</code> Tag sémantique de l'élément de la composante à mettre à jour avec 
+			le code et le libellé sélectionné.
+		</li>
+		<li>¸
+			<code>libellé</code> : Libellé du bouton pour la boîte de choix. Suffixer de @fr pour 
+			français.
 		</li>
 		<li>
-			<code>tag_sémantique_a_mettre_a_jour</code> : Tag sémantique de l'élément de la composante à 
-			mettre à jour avec le code et le libellé sélectionné.
+			<code>rôles</code> : Liste des rôles, séparés par un espace, voyant le bouton pour la 
+			boîte de choix.
 		</li>
-		<li><code>libellé@fr</code> : Libellé du menu.</li>
-		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
 	</ul>
 </article>
 
