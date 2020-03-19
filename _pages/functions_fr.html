@@ -71,9 +71,8 @@ sidebar:
 	<h3 id='get_get_multiple'>Get_Get_Multiple</h3>
 	<p>
 		Équivalent à la fonction précédente, sauf que les choix aux utilisateurs sont restreints par la
-		sélection dans un élément parent. Il s'agit du même principe que pour les éléments 
-		Get_Get_Resourcec (voir section <a href='../resources_fr#getGetResource/'>RESSOURCES</a> pour plus 
-		de détails).
+		sélection dans un élément parent. Il s'agit du même principe que pour l'élément Get_Get_Resource 
+		(voir section <a href='../resources_fr#getGetResource/'>RESSOURCES</a> pour plus de détails).
 	</p>
 	<h4>Format</h4>
 	<p>
@@ -106,69 +105,60 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='import_multiple'>Import_Multiple</h3>
 	<p>
-		La fonction Import_Multiple permet à l'utilisateur d'ajouter plusieurs éléments à partir d'une liste. 
-		Comme les commandes précédentes, un query permet de sélectionner les éléments de la liste. 
-		Mais avec Import_Multiple, les codes des éléments sélectionnés sont utilisés pour importer 
-		les éléments ayant ce code dans le portfolio d'importation. Le code du portfolio d'importation 
-		peut être le même que celui de recherche, dans ce cas on importe les éléments recherchés et 
-		cochés. Mais le code du portfolio d'importation peut être différent de celui de recherche, 
-		dans ce cas on importe les éléments ayant le même code que ceux cochés. Le portfolio d'importation 
-		est le portfolio dans lequel on va chercher les éléments à importer.
-	 </p>
-	<p>
-		OPTION : Le code du portfolio d'importation peut prendre la forme <code>?</code>.
-		<code>tag_sémantique</code>. Dans ce cas le code du portfolio sera le code de l'élément coché 
-		et le tag sémantique de l'élément importé sera <code>tag_sémantique</code>.
+		La fonction Import_Multiple permet d'implémenter une boîte de choix multiples (contrairement à 
+		l'élément Get_Resource qui ne permet qu'une seule sélection). Pour chaque élément sélectionné 
+		dans une liste, un élément est importé dans le portfolio. 
 	</p>
 	<p>
-		ATTENTION : Si les éléments à importer sont des items, le code de l'item (<code>Item - Code</code>) 
-		doit être répété dans le code du noeud (<code>Code</code>).
-	</p>
-	
-	
-	</p>
 		La liste d'éléments doit exister dans un portfolio référentiel et chaque élément doit avoir un 
-		code&nbsp;; dans le cas d'éléments Items, il faut répéter le <i>Code&nbsp;- Item</i> dans le champ 
-		<i>Code</i> du nœud.
+		code unique&nbsp;; dans le cas d'éléments Items, il faut répéter le <i>Code&nbsp;- Item</i> dans 
+		le champ <i>Code</i> du nœud.
+	</p>
 	<p>
-	</p>
-		Pour que l'utilisateur puisse exécuter cette opération, il doit avoir le droit de Modifier le nœud
-		ou Modifier la ressource (nœud si la composante mise à jour est une Page ou une Sous-section, 
-		ressource si c'est un Get_Resource).
-	<p>
-	</p>
-		ASTUCE&nbsp;: Afin que l'utilisateur ne puisse pas modifier directement le noeud ou la ressource 
-		après l'import, cocher la métadonnée Nœud sans crayon ou Ressource sans crayon.
-	</p>
-	
-	
+		Les éléments importés peuvent être directement ceux du portfolio référentiel (éléments Items ou 
+		Sous-section) ou peuvent être copiés d'un portfolio tiers. Dans ce dernier cas, les éléments 
+		importés sont ceux qui ont le même code que ceux cochés dans la liste. Les éléments du portfolio 
+		tiers doivent donc avoir les mêmes codes que ceux du portfolio référentiel. 
+	 </p>????????????? Ça sert à quoi ça????????????
 	
 	<h4>Format</h4>
-	<p><code>function</code>,<code>import_multiple</code>/<code>recherche</code>/<code>code_portfolio</code>,
-		<code>libellé@fr</code>,<code>rôles</code>
+	<p><code>function</code>,<code>import_multiple</code>/<code>recherche</code>/<code>code_portfolio</code>,<code>libellé</code>@fr,<code>rôles</code>
 	</p>
 	<ul>
-		<li><code>function</code> : Mot réservé.</li>
-		<li><code>import_multiple</code> : Mot réservé.</li>
+		<li><code>function</code> Mot réservé.</li>
+		<li><code>import_multiple</code> Mot réservé.</li>
 		<li>
-			<code>recherche</code> : Recherche du Get_Resource (voir "recherche" ci-dessus) &mdash; retourne 
-			une liste de codes.
+			<code>recherche</code> Recherche du Get_Resource équivalent (voir section 
+			<a href='../metadata_fr#query/'>MÉTADONNÉES</a> pour plus de détails). Retourne une liste
+			de codes.
 		</li>
-		<li><code>code_portfolio</code> : Code du portfolio duquel on importe le noeud avec le(s) 
-			code(s) sélectionné(s) &mdash; peut être ou pas le même que celui du Get_Resource.<br> 
-			OPTION : <code>?</code>.<code>tag_sémantique</code>
+		<li>
+			<code>code_portfolio</code> : Code du portfolio duquel on importe les noeuds qui ont les 
+			codes sélectionnés. Peut être ou pas le même que celui de la recherche.
 		</li>
-		<li><code>libellé@fr</code> : Libellé du menu.</li>
-		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
+		<li>
+			<code>libellé</code> Libellé du bouton pour la boîte de choix. Suffixer de @fr pour 
+			français.
+		</li>
+		<li>
+			<code>rôles</code> Liste des rôles, séparés par un espace, ayant le bouton pour la 
+			boîte de choix.
+		</li>
 	</ul>
+	<p> 
+		Option <code>?</code>.<code>tag_sémantique</code><br>
+		Peut remplacer <code>code_portfolio</code>. Dans ce cas le code du portfolio sera le code de 
+		l'élément coché et le tag sémantique de l'élément importé sera <code>tag_sémantique</code>.
+	</p>?????????????? Je ne comprends pas!????????????
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='import_ggmultiple'>Import_GGMultiple</h3>
 	<p>
-		La fonction Import_GGMultiple permet à l'utilisateur d'ajouter plusieurs éléments à partir d'une liste. 
-		Comme les commandes précédentes, une recherche permet de sélectionner les éléments de la liste. 
+		La fonction Import_GGMultiple permet à l'utilisateur d'importer plusieurs éléments à partir d'une 
+		liste. Comme les fonctions précédentes, une recherche permet de sélectionner les éléments dans 
+		une liste. 
 	  	Mais avec Import_GGMultiple, les codes des éléments sélectionnés sont utilisés pour importer les 
 	  	éléments ayant ce code dans le portfolio d'importation. Le code du portfolio d'importation peut 
 	  	être le même que celui de recherche, dans ce cas on importe les éléments recherchés et cochés. 
