@@ -23,7 +23,8 @@ sidebar:
 		La fonction Get_Multiple permet à l'utilisateur de sélectionner plusieurs éléments parmi une 
 		liste. Pour chaque élément sélectionné, une composante réutilisable est importée dans le 
 		portfolio. Un élément de cette composante est alors mis à jour avec le code et le libellé de 
-		l'élément sélectionné. 
+		l'élément sélectionné (en général un élément Page, Sous-section ou Get_Resource&nbsp;- dans le 
+		cas d'un Get-Resource, c'est la resource qui est mise à jour). 
 	<p>
 	</p>
 		La liste d'éléments doit exister dans un portfolio référentiel et chaque élément doit avoir un 
@@ -32,8 +33,8 @@ sidebar:
 	<p>
 	</p>
 		Pour que l'utilisateur puisse exécuter cette opération, il doit avoir le droit de Modifier le nœud
-		ou Modifier la ressource (nœud si la composante est une Page ou une Sous-section, ressource si la 
-		composante est un Get_Resource).
+		ou Modifier la ressource (nœud si la composante mise à jour est une Page ou une Sous-section, 
+		ressource si c'est un Get_Resource).
 	<p>
 	</p>
 		ASTUCE&nbsp;: Afin que l'utilisateur ne puisse pas modifier directement le noeud ou la ressource 
@@ -111,6 +112,25 @@ sidebar:
 		ATTENTION : Si les éléments à importer sont des items, le code de l'item (<code>Item - Code</code>) 
 		doit être répété dans le code du noeud (<code>Code</code>).
 	</p>
+	
+	
+	</p>
+		La liste d'éléments doit exister dans un portfolio référentiel et chaque élément doit avoir un 
+		code&nbsp;; dans le cas d'éléments Items, il faut répéter le <i>Code&nbsp;- Item</i> dans le champ 
+		<i>Code</i> du nœud.
+	<p>
+	</p>
+		Pour que l'utilisateur puisse exécuter cette opération, il doit avoir le droit de Modifier le nœud
+		ou Modifier la ressource (nœud si la composante mise à jour est une Page ou une Sous-section, 
+		ressource si c'est un Get_Resource).
+	<p>
+	</p>
+		ASTUCE&nbsp;: Afin que l'utilisateur ne puisse pas modifier directement le noeud ou la ressource 
+		après l'import, cocher la métadonnée Nœud sans crayon ou Ressource sans crayon.
+	</p>
+	
+	
+	
 	<h4>Format</h4>
 	<p><code>function</code>,<code>import_multiple</code>/<code>recherche</code>/<code>code_portfolio</code>,
 		<code>libellé@fr</code>,<code>rôles</code>
