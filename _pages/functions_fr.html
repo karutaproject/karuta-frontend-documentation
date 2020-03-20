@@ -72,7 +72,7 @@ sidebar:
 	<p>
 		Équivalent à la fonction précédente, sauf que les choix aux utilisateurs sont restreints par la
 		sélection dans un élément parent. Il s'agit du même principe que pour l'élément Get_Get_Resource 
-		(voir section <a href='../resources_fr#getGetResource/'>RESSOURCES</a> pour plus de détails).
+		(voir section <a href='../resources_fr/#getGetResource'>RESSOURCES</a> pour plus de détails).
 	</p>
 	<h4>Format</h4>
 	<p>
@@ -159,7 +159,7 @@ sidebar:
 	<p>
 		Équivalent à la fonction précédente, sauf que les choix aux utilisateurs sont restreints par la 
 		sélection dans un élément parent. Il s'agit du même principe que pour l'élément Get_Get_Resource 
-		(voir section RESSOURCES pour plus de détails).
+		(voir section <a href='../resources_fr/#getGetResource'>RESSOURCES</a>.
 	 </p>
 	<h4>Format</h4>
 	<p>
@@ -209,10 +209,10 @@ sidebar:
 	<p>
 		Remarque<br>
 		Ce menu se trouve sur un élément Sous-section qui contient l'élément Get_Resource (d'où l'utiliation 
-		du mot résevé <code>child</code>. <code>referentiel</code> est à la fois le tag sémantique de
+		du mot résevé <code>child</code>). <code>referentiel</code> est à la fois le tag sémantique de
 		l'élément Get_Resource et le tag sémantique des éléments Item de la liste de référentiels. Chaque 
-	   	élément Item a pour code le code du portfolio référentiel correspondant. Les points d'interrogation
-	   	<code>?</code> font référence à ce code de portfolio référentiel.
+	   	élément Item a pour code le code du portfolio référentiel correspondant. Les deux <code>?</code> 
+	   	font référence à ce code de portfolio référentiel.
 	</p>
 </article>
 
@@ -222,17 +222,17 @@ sidebar:
 	<p>
 		Permet à un utilisateur de sélectionner plusieurs éléments à partir d'une liste. Pour chaque 
 		sélection un élément Proxy est importé et sa cible est mise à jour avec la sélection. L'élément 
-		Proxy doit exister dans le portfolio de composantes. 
+		Proxy doit exister dans le portfolio de composantes réutilisables.
+	</p>
+	<p>
+		Cette fonction donne l'équivalent d'un Import_Multiple sauf qu'au lieu d'importer l'élément 
+		sélectionné dans le portfolio, c'est un élément Proxy qui est importé puis mis à jour pour 
+		pointer sur l'élément sélectionné.
 	</p>
 	<p>
 		Pour que l'utilisateur puisse exécuter cette opération, il doit avoir le droit de Modifier la 
 		ressource sur la composante mise à jour (l'élément Proxy).
 	</p>
-	<p>
-		ASTUCE&nbsp;: Afin que l'utilisateur ne puisse pas modifier directement la ressource 
-		après l'import, cocher la métadonnée Ressource sans crayon.
-	</p>
-	
 	<h4>Format</h4>
 	<p>		
 		<code>function</code>,<code>proxy_multiple</code>/<code>recherche</code>/<code>code_portfolio.tag_sémantique</code>/<code>tag_sémantique</code>,<code>libellé</code>@fr,<code>rôles</code>
@@ -240,8 +240,9 @@ sidebar:
 	<ul>
 		<li><code>function</code> Mot réservé.</li>
 		<li><code>proxy_multiple</code> Mot réservé.</li>
-		<li>
-			<code>recherche</code> Recherche de ??????????.
+			<code>recherche</code> Recherche du Get_Resource équivalent (voir section 
+			<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails). Retourne une liste
+			de codes.
 		</li>
 		<li><code>code_portfolio.tag_sémantique</code> Élément Proxy à importer.</li>
 		<li>
@@ -257,8 +258,6 @@ sidebar:
 		</li>
 	</ul>
 </article>
-
-
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
@@ -289,18 +288,35 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='execReport_BatchCSV'>ExecReport_BatchCSV</h3>
 	<p>
-		Cette fonction permet*********************RENDUE ICI**************************************
-		Un script de  d'exécuter un rapport, d'en obtenir la sortie dans un fichier CVS temporaire 
-		plutôt qu'en affichage à l'écran
+		Cette fonction exécute un script de rapport sur les données du portfolio courant, construit avec
+		les données résultantes un fichier CSV temporaire, puis fournit ce fichier en entrée à un script 
+		de batch.
 	</p>
 	<p>
-		NOTE&nbsp;: À utiliser en combinaison avec les éléments de <a href='../report_fr/'>Rapport</a> 
-		<code>Ligne CSV</code> et <code>Valeur CSV</code>.
+		Ceci permet par exemple d'utiliser un portfolio pour la gestion des comptes utilisateurs et 
+		portfolios à créer, sans créer à la main de fichier CSV. 
+	</p>
+	<p>
+		Pour ce faire, le script de rapport, au lieu de faire de l'affichage à l'écran, doit écrire dans 
+		un fichier CSV. Ceci est permis par les éléments <code>Ligne CSV</code> et <code>Valeur CSV</code>
+		(voir la section <a href='../report_fr/#commandesCSV'>Commandes CSV de Rapport</a> pour plus de 
+		détails.) 
+	</p>
+	<p>
+		NOTE&nbsp;: Le fichier CSV n'est pas conservé.
 	</p>
 	<h4>Format</h4>
 	<p>
+		<code>function</code>,<code>execReport_BatchCSV</code>/<code>code_rapport</code>,<code>libellé</code>@fr,<code>rôles</code>
 	</p>
 	<ul>
+		<li><code>function</code> Mot réservé.</li>
+		<li><code>execReport_BatchCSV</code> Mot réservé.</li>
+		<li>
+			<code>code_rapport</code> Code du portfolio script de rapport.
+		</li>
+		<li><code>libellé</code> Libellé du bouton pour la bascule. Suffixer de @fr pour français.</li>
+		<li><code>rôles</code> Liste des rôles, séparés par un espace, ayant le bouton.</li>
 	</ul>
 </article>
 
