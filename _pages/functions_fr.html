@@ -48,7 +48,7 @@ sidebar:
 		<li><code>get_multiple</code> Mot réservé.</li>
 		<li>
 			<code>recherche</code> Recherche du Get_Resource équivalent (voir section 
-			<a href='../metadata_fr#query/'>MÉTADONNÉES</a> pour plus de détails).
+			<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails).
 		</li>
 		<li><code>code_portfolio.tag_sémantique</code> Composante réutilisable à importer.</li>
 		<li>
@@ -83,7 +83,7 @@ sidebar:
 		<li><code>get_get_multiple</code> Mot réservé.</li>
 		<li>
 			<code>recherche</code> Recherche du Get_Get_Resource équivalent (voir section 
-			<a href='../metadata_fr#query/'>MÉTADONNÉES</a> pour plus de détails).
+			<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails).
 		</li>
 		<li><code>code_portfolio.tag_sémantique</code> Composante réutilisable à importer.</li>
 		<li>
@@ -147,9 +147,9 @@ sidebar:
 		Option <code>?</code>.<code>tag_sémantique</code><br>
 		Peut remplacer <code>code_portfolio</code>. Dans ce cas le code du portfolio sera le code de 
 		l'élément coché et le tag sémantique de l'élément importé sera <code>tag_sémantique</code>.
-		Ceci permet d'importer des éléments de plusieurs portfolios. Ceci permet par exemple de 
-		sélectionner des référentiels parmi une liste de référentiels puis d'importer les compétences 
-		de ces référentiels qui ont le <code>tag sémantique</code> dans le portfolio.
+		Ceci permet d'importer des éléments de plusieurs portfolios différents. Par exemple, l'utilisateur 
+		peut sélectionner plusieurs référentiels parmi une liste, puis importer les compétences de ces 
+		référentiels qui ont le <code>tag sémantique</code> dans son portfolio.
 	</p>
 </article>
 
@@ -157,55 +157,52 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='import_ggmultiple'>Import_GGMultiple</h3>
 	<p>
-		Équivalent à la fonction précédente, sauf que les choix aux utilisateurs sont restreints par la sélection dans un élément parent. Il s'agit du même principe que pour l'élément Get_Get_Resource (voir section RESSOURCES pour plus de détails).
-		
-		
-		La fonction Import_GGMultiple permet à l'utilisateur d'importer plusieurs éléments à partir d'une 
-		liste. Comme les fonctions précédentes, une recherche permet de sélectionner les éléments dans 
-		une liste. 
-	  	Mais avec Import_GGMultiple, les codes des éléments sélectionnés sont utilisés pour importer les 
-	  	éléments ayant ce code dans le portfolio d'importation. Le code du portfolio d'importation peut 
-	  	être le même que celui de recherche, dans ce cas on importe les éléments recherchés et cochés. 
-	  	Mais le code du portfolio d'importation peut être différent de celui de recherche, dans ce cas on 
-	  	importe les éléments ayant le même code que ceux cochés.
-	  </p>
+		Équivalent à la fonction précédente, sauf que les choix aux utilisateurs sont restreints par la 
+		sélection dans un élément parent. Il s'agit du même principe que pour l'élément Get_Get_Resource 
+		(voir section RESSOURCES pour plus de détails).
 	 </p>
-	 <p>
-	 	OPTION 1 : Dans la recherche le code du portfolio peut être <code>?</code>.
-	    Dans ce cas le code du portfolio de recherche sera le code de l'élément parent.
-	 </p>
-	 <p>
-	  	OPTION 2 : Le code du portfolio d'importation peut prendre la forme <code>?</code>.
-	    Dans ce cas le code du portfolio d'importation sera le code de l'élément parent trouvé.
-	  </p>
 	<h4>Format</h4>
 	<p>
-		<code>function</code>,<code>import_ggmultiple</code>/<code>recherche</code>/<code>code_portfolio</code>,
-		<code>libellé@fr</code>,<code>rôles</code>
+		<code>function</code>,<code>import_ggmultiple</code>/<code>recherche</code>/<code>code_portfolio</code>,<code>libellé</code>@fr,<code>rôles</code>
 	</p>
 	<ul>
-		<li><code>function</code> : Mot réservé.</li>
-		<li><code>import_ggmultiple</code> : Mot réservé.</li>
+		<li><code>function</code> Mot réservé.</li>
+		<li><code>import_ggmultiple</code> Mot réservé.</li>
 		<li>
-			<code>recherche</code> : Recherche du Get_Get_Resource (voir "recherche" ci-dessus) &mdash; retourne 
-			une liste de codes.<br>
-			OPTION 1 : Le code du portfolio peut être le mot réservé <code>?</code>.
+			<code>recherche</code> Recherche du Get_Get_Resource équivalent (voir section 
+			<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails).
 		</li>
 		<li>
-			<code>code_portfolio</code> : Code du portfolio duquel on importe le noeud avec le(s) code(s) 
-			sélectionné(s).<br> 
-			OPTION 2 : Le code du portfolio peut être le mot réservé <code>?</code>.
+			<code>code_portfolio</code> Code du portfolio duquel on importe les noeuds qui ont les 
+			codes sélectionnés. Peut être ou pas le même que celui de la recherche.
 		</li>
-		<li><code>libellé@fr</code> : Libellé du menu.</li>
-		<li><code>rôles</code> : Rôle(s) voyant le menu.</li>
+		<li>
+			<code>libellé</code> Libellé du bouton pour la boîte de choix. Suffixer de @fr pour 
+			français.
+		</li>
+		<li>
+			<code>rôles</code> Liste des rôles, séparés par un espace, ayant le bouton pour la 
+			boîte de choix.
+		</li>
 	</ul>
 	<p>
-		Exemple d'utilisation : Un Get-Resource permet de sélectionner un référentiel parmi une liste de 
+	 	OPTION <code>?</code> dans la recherche<br> 
+	 	Peut remplacer le code du portfolio dans la recherche. Dans ce cas le code du portfolio de recherche 
+	    sera le code de l'élément parent.
+	 </p>
+	 <p>
+	  	OPTION <code>?</code><br>
+	  	Peut remplacer <code>code_portfolio</code>. Dans ce cas le code du portfolio d'importation sera le 
+	  	code de l'élément parent trouvé.
+	 </p>
+	<p>
+		Exemple d'utilisation : Un élémentGet-Resource permet de sélectionner un référentiel parmi une liste de 
 		référentiels (le code de l'élément Item doit être le code du portfolio du référentiel correspondant). 
 		Un Import_GGMultiple permet d'importer des éléments du référentiel sélectionné dans le Get_Resource.
 	</p>
 	<p>
-		Menu : <code>function</code>,<code>import_ggmultiple</code>/<code>?.child.referentiel.skill$.label
+		Menu : 
+		<code>function</code>,<code>import_ggmultiple</code>/<code>?.child.referentiel.skill$.label
 		</code>/<code>?</code>,<code>Ajouter une compétence@fr</code>,<code>auteur</code>
 	</p>
 	<p>
