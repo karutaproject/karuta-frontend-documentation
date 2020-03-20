@@ -25,17 +25,17 @@ sidebar:
 		portfolio. Un élément de cette composante est alors mis à jour avec le code et le libellé de 
 		l'élément sélectionné (en général un élément Page, Sous-section ou Get_Resource&nbsp;- dans le 
 		cas d'un Get-Resource, c'est la resource qui est mise à jour). 
-	<p>
 	</p>
+	<p>
 		La liste d'éléments doit exister dans un portfolio référentiel et chaque élément doit avoir un 
 		code unique.
-	<p>
 	</p>
+	<p>
 		Pour que l'utilisateur puisse exécuter cette opération, il doit avoir le droit de Modifier le nœud
 		ou Modifier la ressource sur la composante mise à jour (nœud si la composante mise à jour est une 
 		Page ou une Sous-section, ressource si c'est un Get_Resource).
-	<p>
 	</p>
+	<p>
 		ASTUCE&nbsp;: Afin que l'utilisateur ne puisse pas modifier directement le nœud ou la ressource 
 		après l'import, cocher la métadonnée Nœud sans crayon ou Ressource sans crayon.
 	</p>
@@ -117,10 +117,8 @@ sidebar:
 		Les éléments importés peuvent être directement ceux du portfolio référentiel (éléments Items ou 
 		Sous-section) ou peuvent être copiés d'un portfolio tiers. Dans ce dernier cas, les éléments 
 		importés sont ceux qui ont le même code que ceux cochés dans la liste. Les éléments du portfolio 
-		tiers doivent donc avoir les mêmes codes que ceux du portfolio référentiel. 
-	<br> ????????????? Ça sert à quoi ça????????????
+		tiers doivent donc avoir les mêmes codes que ceux du portfolio référentiel.
 	</p>
-	
 	<h4>Format</h4>
 	<p><code>function</code>,<code>import_multiple</code>/<code>recherche</code>/<code>code_portfolio</code>,<code>libellé</code>@fr,<code>rôles</code>
 	</p>
@@ -129,11 +127,11 @@ sidebar:
 		<li><code>import_multiple</code> Mot réservé.</li>
 		<li>
 			<code>recherche</code> Recherche du Get_Resource équivalent (voir section 
-			<a href='../metadata_fr#query/'>MÉTADONNÉES</a> pour plus de détails). Retourne une liste
+			<a href='../metadata_fr/#query/'>MÉTADONNÉES</a> pour plus de détails). Retourne une liste
 			de codes.
 		</li>
 		<li>
-			<code>code_portfolio</code> : Code du portfolio duquel on importe les noeuds qui ont les 
+			<code>code_portfolio</code> Code du portfolio duquel on importe les noeuds qui ont les 
 			codes sélectionnés. Peut être ou pas le même que celui de la recherche.
 		</li>
 		<li>
@@ -149,7 +147,9 @@ sidebar:
 		Option <code>?</code>.<code>tag_sémantique</code><br>
 		Peut remplacer <code>code_portfolio</code>. Dans ce cas le code du portfolio sera le code de 
 		l'élément coché et le tag sémantique de l'élément importé sera <code>tag_sémantique</code>.
-	<br>?????????????? Je ne comprends pas!????????????
+		Ceci permet d'importer des éléments de plusieurs portfolios. Ceci permet par exemple de 
+		sélectionner des référentiels parmi une liste de référentiels puis d'importer les compétences 
+		de ces référentiels qui ont le <code>tag sémantique</code> dans le portfolio.
 	</p>
 </article>
 
@@ -157,6 +157,9 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='import_ggmultiple'>Import_GGMultiple</h3>
 	<p>
+		Équivalent à la fonction précédente, sauf que les choix aux utilisateurs sont restreints par la sélection dans un élément parent. Il s'agit du même principe que pour l'élément Get_Get_Resource (voir section RESSOURCES pour plus de détails).
+		
+		
 		La fonction Import_GGMultiple permet à l'utilisateur d'importer plusieurs éléments à partir d'une 
 		liste. Comme les fonctions précédentes, une recherche permet de sélectionner les éléments dans 
 		une liste. 
@@ -217,12 +220,42 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='proxy_multiple'>Proxy_Multiple</h3>
-	<p>
+	<p>Permet à un utilisateur de sélectionner plusieurs éléments à partir d'une liste. Pour chaque 
+	sélection un élément Proxy est importé et sa cible est mise à jour avec la sélection. L'élément 
+	Proxy doit exister dans le portfolio de composantes. L'utilisateur do
 	</p>
-	<h4>Format</h4>
+	<p>  <a==À REVOIR
+		Pour que l'utilisateur puisse exécuter cette opération, il doit avoir le droit de Modifier le nœud
+		ou Modifier la ressource sur la composante mise à jour (nœud si la composante mise à jour est une 
+		Page ou une Sous-section, ressource si c'est un Get_Resource).
+	</p>
 	<p>
+		ASTUCE&nbsp;: Afin que l'utilisateur ne puisse pas modifier directement le nœud ou la ressource 
+		après l'import, cocher la métadonnée Nœud sans crayon ou Ressource sans crayon.
+	</p>
+	
+	<h4>Format</h4>
+	<p>		
+		<code>function</code>,<code>proxy_multiple</code>/<code>recherche</code>/<code>code_portfolio.tag_sémantique</code>/<code>tag_sémantique</code>,<code>libellé</code>@fr,<code>rôles</code>
 	</p>
 	<ul>
+		<li><code>function</code> Mot réservé.</li>
+		<li><code>proxy_multiple</code> Mot réservé.</li>
+		<li>
+			<code>recherche</code> Recherche de ??????????.
+		</li>
+		<li><code>code_portfolio.tag_sémantique</code> Élément Proxy à importer.</li>
+		<li>
+			<code>tag_sémantique</code> Élément Proxy à mettre à jour.
+		</li>
+		<li>
+			<code>libellé</code> Libellé du bouton pour la boîte de choix. Suffixer de @fr pour 
+			français.
+		</li>
+		<li>
+			<code>rôles</code> Liste des rôles, séparés par un espace, ayant le bouton pour la 
+			boîte de choix.
+		</li>
 	</ul>
 </article>
 
@@ -232,11 +265,24 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='moveTO'>MoveTO</h3>
 	<p>
+		Permet de créer un bouton pour que l'utilisateur bascule un élément de son portfolio entre deux 
+		endroits prédéterminés. À chaque exécution, la destination et le point de départ sont inversés.
 	</p>
 	<h4>Format</h4>
 	<p>
+		<code>function</code>,<code>moveTO</code>/<code>destination</code>/<code>départ</code>,<code>libellé</code>@fr,<code>rôles</code>
 	</p>
 	<ul>
+		<li><code>function</code> Mot réservé.</li>
+		<li><code>moveTO</code> Mot réservé.</li>
+		<li>
+			<code>destination</code> Tag sémantique de la Section, Page ou Sous-section de destination.
+		</li>
+		<li>
+			<code>départ</code> Tag sémantique de la Section, Page ou Sous-section du point de départ.
+		</li>
+		<li><code>libellé</code> Libellé du bouton pour la bascule. Suffixer de @fr pour français.</li>
+		<li><code>rôles</code> Liste des rôles, séparés par un espace, ayant le bouton.</li>
 	</ul>
 </article>
 
@@ -244,6 +290,13 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='execReport_BatchCSV'>ExecReport_BatchCSV</h3>
 	<p>
+		Cette fonction permet*********************RENDUE ICI**************************************
+		Un script de  d'exécuter un rapport, d'en obtenir la sortie dans un fichier CVS temporaire 
+		plutôt qu'en affichage à l'écran
+	</p>
+	<p>
+		NOTE&nbsp;: À utiliser en combinaison avec les éléments de <a href='../report_fr/'>Rapport</a> 
+		<code>Ligne CSV</code> et <code>Valeur CSV</code>.
 	</p>
 	<h4>Format</h4>
 	<p>
