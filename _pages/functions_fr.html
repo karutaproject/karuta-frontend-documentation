@@ -195,21 +195,23 @@ sidebar:
 	  	Peut remplacer <code>code_portfolio</code>. Dans ce cas le code du portfolio d'importation sera le 
 	  	code de l'élément parent trouvé.
 	 </p>
+<h4>Exemple d'utilisation</h4>
 	<p>
-		Exemple d'utilisation : Un élémentGet-Resource permet de sélectionner un référentiel parmi une liste de 
-		référentiels (le code de l'élément Item doit être le code du portfolio du référentiel correspondant). 
-		Un Import_GGMultiple permet d'importer des éléments du référentiel sélectionné dans le Get_Resource.
+		Un élément Get-Resource permet de sélectionner un référentiel parmi une liste de référentiels 
+		(le code de l'élément Item doit alors être le code du portfolio du référentiel correspondant). 
+		La fonction Import_GGMultiple permet d'importer des éléments du référentiel sélectionné dans  
+		l'élément Get_Resource.
 	</p>
 	<p>
-		Menu : 
-		<code>function</code>,<code>import_ggmultiple</code>/<code>?.child.referentiel.skill$.label
-		</code>/<code>?</code>,<code>Ajouter une compétence@fr</code>,<code>auteur</code>
+		Menu<br> 
+		<code>function</code>,<code>import_ggmultiple</code>/<code>?.child.referentiel.skill$.label</code>/<code>?</code>,<code>Ajouter une compétence</code>@fr,<code>auteur</code>
 	</p>
 	<p>
-		Remarque : Ce menu se trouve sur un élément Sous-section et le Get_Resource est à l'intérieur 
-		(d'où l'utiliation du mot résevé <code>child</code>. <code>referentiel</code> est à la fois le  
-		tag sémantique du Get_Resource et le tag sémantique que des éléments Item de la liste de référentiels. 
-	   	Chaque Item a pour code le code du portfolio référentiel correspondant. Les points d'interrogation
+		Remarque<br>
+		Ce menu se trouve sur un élément Sous-section qui contient l'élément Get_Resource (d'où l'utiliation 
+		du mot résevé <code>child</code>. <code>referentiel</code> est à la fois le tag sémantique de
+		l'élément Get_Resource et le tag sémantique des éléments Item de la liste de référentiels. Chaque 
+	   	élément Item a pour code le code du portfolio référentiel correspondant. Les points d'interrogation
 	   	<code>?</code> font référence à ce code de portfolio référentiel.
 	</p>
 </article>
