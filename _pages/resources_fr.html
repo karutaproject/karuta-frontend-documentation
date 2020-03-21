@@ -6,14 +6,14 @@ sidebar:
  nav: "resources_fr"
 ---
 <p>
-	Les éléments Ressource contiennent les données d'un portfolio. Chaque élément Ressource a une
+	Les éléments de ressource contiennent les données d'un portfolio. Chaque élément ressource a une
 	liste de droits (Voir, Éditer, Soumettre, etc). Pour chaque droit, on peut spécifier un ou
 	plusieurs rôles (par exemple <i>etudiant</i> ou <i>enseignant</i>) qui auront ce droit. C'est  
 	le designer du portfolio qui créé les rôles pour les futurs utilisateurs du portfolio.
 </p>
 <p>
 	Notez que le designer a	tous les droits sur tous les éléments pendant qu'il construit le portfolio. 
-	Il est parfois utile au designer de pré-remplir les données dans un élément Ressource afin de
+	Il est parfois utile au designer de pré-remplir les données dans un élément ressource afin de
 	fournir des informations aux utilisateurs (par exemple fournir des instructions ou joindre un
 	fichier au portfolio). Dans ce cas, on n'attribue généralement le droit d'édition à aucun rôle.
 </p>
@@ -48,7 +48,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='field'>Texte court</h3>
 	<p>L'élément Texte court est un champ de texte. Il est utilisé pour entrer une donnée courte 
-	comme un nom. Généralement on veut attribuer le droit d'Éditer cet élément à un rôle, par 
+	comme un nom. Généralement on veut attribuer le droit d'Éditer la ressource à un rôle, par 
 	exemple <i>etudiant</i> ou <i>enseignant</i>.
 </p>
 </article>
@@ -57,10 +57,10 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='textfield'>Texte long</h3>
 	<p>L'élément Texte long est utilisé pour entrer un texte plus long que le champ. L'utilisateur
-		qui a le droit d'Éditer cet élément dispose d'un éditeur de texte simple qui offre des
+		qui a le droit d'Éditer la ressource dispose d'un éditeur de texte simple qui offre des
 		options de mise en forme de base.</br>
 		Le texte long peut aussi être utilisé par le designer pour donner des instructions à 
-		l'utilisateur. Dans ce cas, le rôle Éditer n'est attribué à aucun utilisateur.</p>
+		l'utilisateur. Dans ce cas, le rôle Éditer la ressource n'est attribué à aucun utilisateur.</p>
 </article>
 
 <article>
@@ -77,7 +77,7 @@ sidebar:
 	<h3 id='image'>Image</h3>
 	<p>L'élément Image permet de téléverser un fichier image (tous les formats courants sont
 		acceptés). L'image est ensuite affichée dans le portfolio.</br>
-		Il est possible d'attribuer au rôle qui a le droit d'Éditer cet élément un droit 
+		Il est possible d'attribuer au rôle qui a le droit d'Éditer la ressource un droit 
 		supplémentaire pour redéfinir la taille d'affichage de l'image (autrement la taille 
 		d'affichage est définie par le designer).
 	</p>
@@ -88,8 +88,8 @@ sidebar:
 	<h3 id='audio'>Audio</h3>
 	<p>L'élément Audio permet de téléverser un fichier MP3. Cet élément vient avec un lecteur 
 		audio pour écouter le fichier téléversé.</br>
-		Seul l'utilisateur avec le droit d'Éditer peut téléverser un fichier, mais tous les 
-		utilisateurs qui ont le droit de Voir l'élément (par défaut <i>all</i>, tous les rôles) 
+		Seul l'utilisateur avec le droit d'Éditer la ressource peut téléverser un fichier, mais tous 
+		les utilisateurs qui ont le droit de Voir l'élément (par défaut <i>all</i>, tous les rôles) 
 		peuvent l'écouter.
 	</p>
 </article>
@@ -99,7 +99,7 @@ sidebar:
 	<h3 id='video'>Vidéo</h3>
 	<p>L'élément Vidéo permet de téléverser un fichier MP4. Cet élément vient avec un 
 		lecteur vidéo pour regarder le fichier téléversé.</br>
-		Seul l'utilisateur avec le droit d'Éditer peut téléverser un fichier, mais tous les 
+		Seul l'utilisateur avec le droit d'Éditer la ressource peut téléverser un fichier, mais tous les 
 		utilisateurs qui ont le droit de Voir l'élément peuvent le regarder.
 	</p></p>
 </article>
@@ -132,7 +132,7 @@ sidebar:
 	<p>L'élément URL permet de spécifier un hyperlien dans le portfolio. L'usager qui a le droit 
 		d'Éditer la ressource peut spécifier un libellé qui sera affiché sur le lien au lieu de l'url.
 		</br> 
-		L'hyperlien doit rediriger vers une page à l'extérieur de Karuta &mdash; pour un lien
+		L'hyperlien doit rediriger vers une page à l'extérieur de Karuta &ndash; pour un lien
 		à l'intérieur de Karuta voir l'élément URL2Unit (paragraphe suivant).
 	</p>
 </article>
@@ -142,7 +142,7 @@ sidebar:
 	<h3 id='url2unit'>URL2Unit</h3>
 	<p>
 		L'élément URL2Unit permet de créer un lien vers une autre page du portfolio. Il peut être 
-		utilisé par le designer pour créer des liens de navigation dans le portfolio autres que le 
+		utilisé par le designer pour créer des liens de navigation dans le portfolio, autres que le 
 		menu de navigation à gauche, ou par l'utilisateur final pour spécifier des pages de son 
 		portfolio qu'il juge particulièrement importantes.
 	</p>
@@ -172,37 +172,47 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='dashboard'>Tableau de bord</h3>
-	<p>L'élément Tableau de bord exécute le script d'un rapport (à partir d'un portfolio rapport) et 
-		affiche le tableau html résultant.</p>
-	<p>Le code du portfolio peut être suivi d'un ou plusieurs des codes suivants:</p>
+	<p>
+		L'élément Tableau de bord exécute un script de rapport spécifié et affiche la table HTML 
+		résultante.
+	</p>
+	<p>Le code du portfolio peut être suffixé d'une ou plusieurs des instructions suivantes&nbsp;:</p>
 	<ul>
-		<li>@local : le rapport s'exécutera sur les données de la page affichée.</li>
-		<li>@nospinning : la petite roue dentée d'attente ne s'affiche pas.</li>
-		<li>@norefresh : le rapport n'est pas mis à jour en cas de modification dans le rapport.</li>
+		<li>
+			<code>@local</code> le script de rapport s'exécutera uniquement sur les données contenues dans 
+			la page courante (page qui contient l'élément Tableau de bord) plutôt sur tout le portfolio.
+		</li>
+		<li><code>@nospinning</code> la roulette d'attente n'est pas affichée.</li>
+		<li>
+			<code>@norefresh</code> la table n'est pas mise à jour en cas de modification des données.
+		</li>
 	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='getResource'>GetResource (liste déroulante)</h3>
-	<p>L'élément GetResource permet de construire une liste d'éléments parmis laquelle l'usager doit 
-		faire un choix (une boîte de choix). Les éléments qui vont remplir la boîte de choix sont des 
-		éléments resource de type Item (voir plus bas) et ils sont créés dans un portfolio séparé
-		- un portfolio référentiel. On indique quels Items du référentiel afficher dans la boîte 
-		de choix par la métadonnée Recherche de l'élément GetResource (voir MÉTADONNÉES).
-		==> Item - .label ou .resource
-		==> TextField ou Field - .text
+	<p>
+		L'élément GetResource permet de construire une liste d'éléments parmi laquelle l'usager peut 
+		faire un choix (liste déroulante, boîte de choix ou encore radio-boutons). Les éléments qui 
+		vont remplir la liste déroulante sont des éléments ressource de type Item (voir plus bas) ou 
+		des éléments Sous-section et ils sont habituellement créés dans un portfolio séparé&nbsp;: le 
+		portfolio référentiel. On spécifie quels éléments du référentiel afficher dans la liste déroulante 
+		via la métadonnée Recherche de l'élément (voir section 
+		<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails).
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='getGetResource'>GetGetResource (liste déroulante conditionnelle)</h3>
-	<p>L'élément GetGetResource permet de construire une une boîte de choix dont la liste d'Items est
-		restreinte par le choix fait par l'usager dans un élément GetResource associé. Le choix de l'usager
-		dans la première boîte de choix détermine quels seront les choix dans la deuxième. On indique quels 
-		Items du référentiel afficher dans la boîte de choix dans la métadonnée Recherche de l'élément 
-		GetGetResource (voir MÉTADONNÉES).
+	<p>
+		L'élément GetGetResource permet de construire une liste déroulante dont les choix sont
+		restreints par le choix fait par l'usager dans un élément GetResource associé. Le choix de l'usager
+		dans la première liste déroulante détermine quels seront les choix offerts dans la deuxième. On 
+		spécifie quels éléments du référentiel afficher dans la liste déroulante via la métadonnée Recherche 
+		de l'élément (voir section 
+		<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails).
 	</p>
 </article>
 
