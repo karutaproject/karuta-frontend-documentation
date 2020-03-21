@@ -19,7 +19,7 @@ sidebar:
 	<li>portfolio de composantes réutilisables</li>
 	<li>script de rapport</li>
 	<li>script de batch</li>
-	<li>formulaire de batch</li>
+	<li>formulaire pour batch</li>
 </ul>
 <h3>Modèle de portfolio</h3>
 <p>
@@ -57,25 +57,25 @@ sidebar:
 <p>
 	Un rapport est un script contenant des commandes spécifiques qui permettent de sélectionner 
 	des informations d'un ou de plusieurs portfolios et de les afficher sous une présentation différente. 
-	Par exemple pour faire un tableau de bord, un cv ou un rapport de cohorte. Les commandes de script 
+	Par exemple pour faire un tableau de bord, un CV ou un rapport de cohorte. Les commandes de script 
 	de rapport permettent de naviguer dans les portfolios pour y sélectionner les éléments à afficher. 
-	Le résultat est affiché dans un tableau html dont la mise en forme est libre au designer
+	Le résultat est affiché dans une table HTML dont la mise en forme est libre au designer
 	(voir section <b><a href='../report_fr/'>Rapport</a></b> pour plus de détails).
 </p>
 
 <h3>Script de batch</h3>
 <p>
 	Un batch est un script contenant des commandes qui permettent d'une manière automatique 
-	de créer des utilisateurs, de créer des instances de portfolio, de mettre à jour des éléments 
-	du portfolio, etc. Un script de batch est généralement associé à un fichier CSV contenant, par 
+	de créer des utilisateurs, des instances de portfolio, de mettre à jour des éléments 
+	de ces portfolios, etc. Un script de batch est généralement associé à un fichier CSV contenant, par 
 	exemple, la liste des utilisateurs. L'exécution du script de batch créera alors automatiquement 
 	tous les portfolios des utilisateurs (voir section <b><a href='../batch_fr/'>Batch</a></b> pour 
-	plus de détails). Un script de batch peut également être associé à un formulaire de batch.
+	plus de détails). Un script de batch peut également être associé à un formulaire batch.
 </p>
-<h3>Formulaire de batch</h3>
+<h3>Formulaire pour batch</h3>
 <p>
-	Un formulaire batch permet d'exécuter un script de batch d'une manière unitaire pour un 
-	seul utilisateur.
+	Un formulaire batch permet d'exécuter un script de batch d'une manière unitaire, pour un 
+	seul utilisateur à la fois, sans passer par un fichier CSV.
 </p>
 
 <h2>Fonctionnement</h2>
@@ -107,9 +107,12 @@ sidebar:
 <p></p>
 <img src='../assets/img/modele-securite.png' width='50%'/>
 <ul>
-	<li>Un portfolio a des <b>rôles</b> associés (par exemple etudiant, professeur, etc).</li>
 	<li>
-		Un rôle a des <b>droits</b> associés (voir, écrire, soumettre, etc) sur chacun des éléments 
+		Un portfolio a des <b>rôles</b> associés, par exemple etudiant, professeur, etc (on évite les
+		accents et les caractères spéciaux dans les noms de rôles).
+	</li>
+	<li>
+		Un rôle a des <b>droits</b> associés, voir, écrire, soumettre, etc, sur chacun des éléments 
 		du portfolio.
 	</li>
 	<li>Le partage d'un portfolio se fait en indiquant un utilisateur et un rôle.</li>
