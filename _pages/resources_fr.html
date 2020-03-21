@@ -58,7 +58,9 @@ sidebar:
 	<h3 id='textfield'>Texte long</h3>
 	<p>L'élément Texte long est utilisé pour entrer un texte plus long que le champ. L'utilisateur
 		qui a le droit d'Éditer la ressource dispose d'un éditeur de texte simple qui offre des
-		options de mise en forme de base.</br>
+		options de mise en forme de base.
+	</p>
+	<p>
 		Le texte long peut aussi être utilisé par le designer pour donner des instructions à 
 		l'utilisateur. Dans ce cas, le rôle Éditer la ressource n'est attribué à aucun utilisateur.</p>
 </article>
@@ -76,7 +78,9 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='image'>Image</h3>
 	<p>L'élément Image permet de téléverser un fichier image (tous les formats courants sont
-		acceptés). L'image est ensuite affichée dans le portfolio.</br>
+		acceptés). L'image est ensuite affichée dans le portfolio.
+	</p>
+	<p>
 		Il est possible d'attribuer au rôle qui a le droit d'Éditer la ressource un droit 
 		supplémentaire pour redéfinir la taille d'affichage de l'image (autrement la taille 
 		d'affichage est définie par le designer).
@@ -87,7 +91,9 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='audio'>Audio</h3>
 	<p>L'élément Audio permet de téléverser un fichier MP3. Cet élément vient avec un lecteur 
-		audio pour écouter le fichier téléversé.</br>
+		audio pour écouter le fichier téléversé.
+	</p>
+	<p>
 		Seul l'utilisateur avec le droit d'Éditer la ressource peut téléverser un fichier, mais tous 
 		les utilisateurs qui ont le droit de Voir l'élément (par défaut <i>all</i>, tous les rôles) 
 		peuvent l'écouter.
@@ -98,7 +104,9 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='video'>Vidéo</h3>
 	<p>L'élément Vidéo permet de téléverser un fichier MP4. Cet élément vient avec un 
-		lecteur vidéo pour regarder le fichier téléversé.</br>
+		lecteur vidéo pour regarder le fichier téléversé.
+	</p>
+	<p>
 		Seul l'utilisateur avec le droit d'Éditer la ressource peut téléverser un fichier, mais tous les 
 		utilisateurs qui ont le droit de Voir l'élément peuvent le regarder.
 	</p></p>
@@ -118,7 +126,9 @@ sidebar:
 	<h3 id='oembed'>oEmbed</h3>
 	<p>L'élément oEmbed permet d'afficher dans le portfolio des présentations (vidéo, diapositives, 
 		etc) sauvegardées sur un site tiers (YouTube, Vimeo, Meetup, Facebook, etc). Le contenu 
-		désiré est spécifié par un hyperlien.</br>
+		désiré est spécifié par un hyperlien.
+	</p>
+	<p>
 		Cet élément vient avec un lecteur qui permet de regarder le contenu du lien oEmbed à même le 
 		portfolio.</br>
 		Pour plus d'informations au sujet de l'élément oEmbed voir 
@@ -131,7 +141,8 @@ sidebar:
 	<h3 id='url'>URL</h3>
 	<p>L'élément URL permet de spécifier un hyperlien dans le portfolio. L'usager qui a le droit 
 		d'Éditer la ressource peut spécifier un libellé qui sera affiché sur le lien au lieu de l'url.
-		</br> 
+	</p>
+	<p>
 		L'hyperlien doit rediriger vers une page à l'extérieur de Karuta &ndash; pour un lien
 		à l'intérieur de Karuta voir l'élément URL2Unit (paragraphe suivant).
 	</p>
@@ -199,8 +210,13 @@ sidebar:
 	<p>
 		Les éléments qui vont remplir la liste déroulante sont des éléments ressource de type Item 
 		(voir plus bas) ou des éléments Sous-section et ils sont habituellement créés dans un portfolio 
-		séparé&nbsp;: le portfolio référentiel. On spécifie quels éléments du référentiel afficher dans 
-		la liste déroulante via la métadonnée Recherche de l'élément (voir section 
+		séparé&nbsp;: le portfolio référentiel. Tous les éléments d'une liste déroulante doivent partager 
+		le même tag sémantique et chacun doit avoir un code unique (<i>Code&nbsp;- Item</i> dans le cas 
+		d'éléments Item et <i>Code</i> dans le cas d'éléments Sous-section). 
+	</p>
+	<p>
+		On spécifie quels éléments du référentiel afficher dans la liste déroulante via la métadonnée 
+		Recherche de l'élément (voir section 
 		<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails).
 	</p>
 </article>
@@ -223,22 +239,30 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='getDoubleResource'>GetDoubleResource (double liste déroulante)</h3>
-	<p>L'élément GetDoubleResource permet de construire deux boîtes indépendantes l'une de l'autre dans le 
-		même élément.</p>
+	<p>
+		L'élément GetDoubleResource permet de construire deux boîtes indépendantes l'une de l'autre dans 
+		le même élément. Par exemple pour demander à l'utilisateur de choisir un semestre et une année.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='item'>Item</h3>
-	<p>L'élément Item est un choix disponible dans une boîte de choix. On regroupe les
-		Items d'un projet dans un portfolio référentiel.</p>
+	<p>
+		L'élément Item est un choix offert dans une liste déroulante. On regroupe les éléments Item d'un 
+		projet dans un portfolio référentiel. Tous les éléments d'une même liste déroulante doivent 
+		partager le même tag sémantique et chacun doit avoir un code unique.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='proxy'>Proxy</h3>
-	<p>L'élément Proxy permet d'afficher un élément d'un portfolio dans un autre portfolio. Il est 
-		possible de donner à l'usager le droit de modifier l'élément affiché par proxy, auquel cas 
-		la valeur de l'élément original est automatiquement mise à jour.
+	<p>
+		L'élément Proxy permet d'afficher un élément d'un portfolio dans un autre portfolio. 
+	</p>
+	<p>
+		Il est possible de donner à l'usager le droit de modifier l'élément affiché par proxy, 
+		auquel cas la valeur de l'élément original est automatiquement mise à jour.
 	</p>
 </article>
