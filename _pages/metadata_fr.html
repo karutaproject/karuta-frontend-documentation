@@ -78,9 +78,9 @@ sidebar:
 	<h3 id='semantictag'>Tag sémantique</h3>
 	<p>
 		Le tag sémantique d'un élément est son identifiant et devrait exprimer sa sémantique 
-		(exemples&nbsp;: page-profil-etudiant, nom-etudiant, etc). Le designer d'un portfolio devrait, 
-		pour chaque élément qu'il ajoute à un portfolio, remplacer le tag sémantique par défaut par 
-		quelque chose qui exprime la sémantique de l'élément.
+		(exemple&nbsp;: <i>page-profil-etudiant</i>, <i>nom-etudiant</i>, etc). Le designer d'un 
+		portfolio devrait, pour chaque élément qu'il ajoute à un portfolio, remplacer le tag 
+		sémantique par défaut par quelque chose qui exprime la sémantique de l'élément.
 	</p>
 	<p>
 		C'est par le tag sémantique qu'on recherche des éléments dans un portfolio. 
@@ -114,16 +114,17 @@ sidebar:
 		ou plusieurs des symboles suivants au code de l'élément&nbsp;:
 	</p>
 	<ul>
-		<li><code>@</code> rendra le code non visible dans la liste déroulante</li>
-		<li><code>#</code> rendra le code visible dans l'élément Get_Resource</li>
+		<li><code>@</code> rendra le code non visible dans la liste déroulante&nbsp;;</li>
+		<li><code>#</code> rendra le code visible dans l'élément Get_Resource&nbsp;;</li>
 		<li>
 			<code>&amp;</code> rendra la valeur associée à l'élément visible dans l'élément 
-			Get_Resource (seul les éléments de type Item ont un champ valeur)</li>
-		<li><code>%</code> rendra le libellé non visible dans l'élément Get_Resource</li>
-		<li><code>$</code> rendra le libellé non visible dans la liste déroulante</li>
+			Get_Resource (seul les éléments de type Item ont un champ pour indiquer une valeur)&nbsp;;
+		</li>
+		<li><code>%</code> rendra le libellé non visible dans l'élément Get_Resource&nbsp;;</li>
+		<li><code>$</code> rendra le libellé non visible dans la liste déroulante&nbsp;;</li>
 		<li>
 			<code>!</code> rendra le choix non sélectionnable dans la boîte de choix multiple (utile pour
-			créer des titres de section dans la boîte de choix)
+			créer des titres de section dans la boîte de choix).
 		</li>
 	</ul>
 </article>
@@ -133,7 +134,7 @@ sidebar:
 	<h3 id='multilingual-node'>Nœud multilingue</h3>
 	<p>
 		Spécifie si le <b>libellé</b> du nœud prend une valeur différente pour chaque langue dans le cas 
-		où le portfolio est multilingue. Si le nœud n'est pas multilingue, il y aura une seule valeur 
+		où le portfolio est multilingue. Si Nœud multilingue n'est pas coché, il y aura une seule valeur 
 		pour toutes les langues et cette valeur sera stockée dans la langue par défaut définie dans le 
 		fichier de configuration <i>_init.js</i>.
 	</p>
@@ -147,9 +148,9 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='multilingual-resource'>Ressource multilingue</h3>
 	<p>	
-		Éléments Ressource uniquement. Spécifie si les données entrées dans l'élément ressource prennent 
+		Éléments ressource uniquement. Spécifie si les données entrées dans l'élément ressource prennent 
 		des valeurs différentes pour chaque langue  dans le cas où le portfolio est multilingue. Si la 
-		ressource n'est pas multilingue, il y aura une seule valeur pour toutes les langues et cette 
+		Ressource multilingue n'est pas coché, il y aura une seule valeur pour toutes les langues et cette 
 		valeur sera stockée dans la langue par défaut définie dans le fichier de configuration 
 		<i>_init.js</i>
 	</p>
@@ -163,8 +164,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='encript-resource'>Encrypter la ressource</h3>
 	<p>
-		Spécifie si la ressource doit être encryptée. Dans le cas positif, à l'ouverture du portfolio 
-		une phrase-clé est demandée à l'utilisateur. Cette phrase-clé sert à encoder/décoder les données 
+		Spécifie si la ressource doit être encryptée. Dans le cas positif, une phrase-clé est demandée à 
+		l'utilisateur à l'ouverture du portfolio. Cette phrase-clé sert à encoder/décoder les données 
 		entrées dans la ressource. Cette phrase-clé n'est pas stockée dans Karuta et doit donc être 
 		mémorisée par l'utilisateur, car elle lui est demandée à chaque ouverture du portfolio.
 	</p>
@@ -186,15 +187,17 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='delete'>Supprimer</h3>
-	<p>Liste des rôles, séparés par un espace, ayant le droit de supprimer l'élément.</p>
+	<p>
+		Liste des rôles, séparés par un espace, ayant le droit de supprimer l'élément. Affiche le bouton X.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='edit-resource'>Modifier ressource</h3>
 	<p>
-		Éléments Ressource uniquement. Liste des rôles, séparés par un espace, ayant le droit 
-		d'éditer la ressource (y enregistrer des données). 
+		Éléments ressource uniquement. Liste des rôles, séparés par un espace, ayant le droit 
+		d'éditer la ressource (y enregistrer des données). Affiche le bouton crayon.
 	</p>
 </article>
 
@@ -202,7 +205,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='resnopencil'>Ressource sans crayon</h3>
 	<p>
-		Éléments Ressource uniquement. N'affiche pas le bouton crayon aux rôles ayant le droit
+		Éléments ressource uniquement. N'affiche pas le bouton crayon aux rôles ayant le droit
 		de modifier la ressource. Utilisé pour les imports d'éléments multiples via la fonction 
 		 <i>Get_Multiple</i> (voir section <a href='../functions_fr/'>FONCTIONS MENU</a> pour 
 		plus de détails). 
