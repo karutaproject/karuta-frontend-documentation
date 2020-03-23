@@ -701,7 +701,7 @@ functions_fr:
         url: /functions_fr/#import_ggmultiple
       - title: "Proxy_Multiple"
         url: /functions_fr/#proxy_multiple
-      - title: "importAndSetDateToday"
+      - title: "ImportAndSetDateToday"
         url: /functions_fr/#importAndSetDateToday
       - title: "MoveTO"
         url: /functions_fr/#moveTO
