@@ -12,6 +12,7 @@ sidebar:
 	<li><code><a href='#import_multiple'>Import_Multiple</a></code></li>
 	<li><code><a href='#import_ggmultiple'>Import_GGMultiple</a></code></li>
 	<li><code><a href='#proxy_multiple'>Proxy_Multiple</a></code></li>
+	<li><code><a href='#importAndSetDateToday'>ImportAndSetDateToday</a></code></li>
 	<li><code><a href='#moveTO'>MoveTO</a></code></li>
 	<li><code><a href='#execReport_BatchCSV'>ExecReport_BatchCSV</a></code></li>
 </ul>
@@ -255,6 +256,47 @@ sidebar:
 		<li>
 			<code>rôles</code> Liste des rôles, séparés par un espace, ayant le bouton pour la 
 			boîte de choix.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='importAndSetDateToday'>ImportAndSetDateToday</h3>
+	<p>
+		Permet de dater le moment où un élément est ajouté au portfolio par l'utilisateur. Lorsque  
+		l'utilisateur clique sur le menu, une composante réutilisable est importée dans le portfolio 
+		et un élément Calendrier de cette composante est mis à jour avec la date courante du système.
+	</p>
+	<p>
+		Pour que l'utilisateur puisse exécuter cette opération, il doit avoir le droit de Modifier la 
+		ressource sur la composante mise à jour (l'élément Calendrier).
+	</p>
+	<p>
+		ASTUCE&nbsp;: Afin que l'utilisateur ne puisse pas modifier directement la ressource 
+		après l'import, cocher la métadonnée Ressource sans crayon.
+	</p>
+	<h4>Format</h4>
+	<p><code>function</code>,<code>importAndSetDateToday</code>/<code>code_portfolio</code>/<code>tag_sémantique_composante</code>/<code>tag_sémantique_calendrier</code>,<code>libellé</code>@fr,<code>rôles</code>
+	</p>
+	<ul>
+		<li><code>function</code> Mot réservé.</li>
+		<li><code>importAndSetDateToday</code> Mot réservé.</li>
+		<li>
+			<code>code_portfolio</code> Code du portfolio de composantes réutilisables où se trouve la 
+			composante à importer.
+		</li>
+		<li><code>tag_sémantique_composante</code> Composante réutilisable à importer.</li>
+		<li>
+			<code>tag_sémantique_calendrier</code> Élément Calendrier à mettre à jour avec la date 
+			courante.
+		</li>
+		<li>
+			<code>libellé</code> Libellé du bouton pour l'élément de menu. Suffixer de @fr pour 
+			français.
+		</li>
+		<li>
+			<code>rôles</code> Liste des rôles, séparés par un espace, ayant l'élément de menu.
 		</li>
 	</ul>
 </article>

@@ -701,11 +701,12 @@ functions_fr:
         url: /functions_fr/#import_ggmultiple
       - title: "Proxy_Multiple"
         url: /functions_fr/#proxy_multiple
+      - title: "importAndSetDateToday"
+        url: /functions_fr/#importAndSetDateToday
       - title: "moveTo"
         url: /functions_fr/#moveTO
       - title: "ExecReport_BatchCSV"
         url: /functions_fr/#execReport_BatchCSV
-    
   - title: Mise en forme (CSS)
     url: /css_fr/
   - title: Partage par l'utilisateur
