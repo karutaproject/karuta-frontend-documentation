@@ -219,11 +219,11 @@ sidebar:
 		Liste des rôles, séparés par un espace, ayant le droit de commenter un élément ressource. 
 		Ce droit ajoute un éditeur de texte au bas de la boîte d'édition de la ressource. Le 
 		commentaire est daté et signé du nom de l'utilisateur qui l'a écrit. Pour pouvoir commenter 
-		un élément, l'utilisateur doit également avoir le droit de modifier la ressource.
+		un élément, l'utilisateur doit également avoir le droit de Modifier la ressource.
 	</p>
 	<p>
-		ASTUCE&nbsp;: Le designer peut s'attribuer le droit de commenter un élément de structure.
-		Cela lui permet d'ajouter l'équivalent d'un sous-titre au libellé de l'élément.
+		ASTUCE&nbsp;: Le designer peut s'attribuer le droit de commenter un élément de structure &ndash;
+		cela lui permet d'ajouter l'équivalent d'un sous-titre au libellé de l'élément.
 	</p>
 </article>
 
@@ -231,9 +231,9 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='submit'>Soumettre</h3>
 	<p>
-		Liste des rôles, séparés par un espace, ayant le droit de soumettre l'élément. Ce droit ajoute 
-		un bouton <i>Soumettre</i>. Lorsque l'utilisateur soumet un élément, ses droits d'édition et/ou 
-		de suppression sont retirés pour cet élément et tous ses enfants.
+		Liste des rôles, séparés par un espace, ayant le droit de soumettre l'élément. Lorsque 
+		l'utilisateur soumet un élément, ses droits d'édition et/ou de suppression sont retirés pour cet 
+		élément et tous ses enfants. Affiche le bouton <i>Soumettre</i>.
 	</p>
 </article>
 
@@ -247,7 +247,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='editnoderoles'>Modifier nœud</h3>
 	<p>
-		Liste des rôles, séparés par un espace, ayant le droit de modifier le <b>libellé</b> de l'élément.
+		Liste des rôles, séparés par un espace, ayant le droit de modifier le <b>libellé</b> de l'élément. 
+		Affiche le bouton crayon.
 	</p>
 </article>
 
@@ -267,7 +268,7 @@ sidebar:
 	<p>
 		Liste des rôles, séparés par un espace, ayant le droit de dupliquer l'élément. La copie de 
 		l'élément sera ajoutée à la fin de la liste d'éléments du même niveau hiérarchique dans 
-		l'arborescence.	
+		l'arborescence. Affiche le bouton copie.	
 	</p>
 </article>
 
@@ -276,7 +277,7 @@ sidebar:
 	<h3 id='resizeroles'>Modifier taille image</h3>
 	<p>
 		Éléments Image uniquement. Liste des rôles, séparés par un espace, ayant le droit de modifier
-		la taille d'affichage de l'image.
+		la taille d'affichage de l'image. Affiche le bouton crayon.
 	</p>
 </article>
 
@@ -285,7 +286,8 @@ sidebar:
 	<h3 id='moveroles'>Ordonner</h3>
 	<p>
 		Liste des rôles, séparés par un espace, ayant le droit modifier l'ordonnancement de l'élément
-		parmis les éléments du même niveau hiérarchique dans l'arborescence.	
+		parmis les éléments du même niveau hiérarchique dans l'arborescence. Affiche le bouton flèche 
+		vers le haut.	
 	</p>
 </article>
 
@@ -294,7 +296,7 @@ sidebar:
 	<h3 id='moveinroles'>Déplacer</h3>
 	<p>
 		Liste des rôles, séparés par un espace, ayant le droit de déplacer l'élément vers une autre 
-		branche dans l'arborescence.	
+		branche dans l'arborescence. Affiche le bouton flèches croisées.
 	</p>
 </article>
 
@@ -313,7 +315,7 @@ sidebar:
 	<h3 id='showroles'>Montrer/Cacher</h3>
 	<p>
 		Liste des rôles, séparés par un espace, ayant le droit de montrer/cacher l'élément et tous ses
-		enfants à d'autres utilisateurs. Ce droit ajoute un bouton œil qui indique <b>l'état</b> (et 
+		enfants à d'autres utilisateurs. Ce droit ajoute le bouton œil qui indique <b>l'état</b> (et 
 		non l'action)&nbsp;: lorsque l'œil est barré, l'élément est invisible aux autres 
 		utilisateurs&nbsp;; lorsque l'œil n'est pas barré, l'élément est visible aux autres utilisateurs.
 	</p>
@@ -331,7 +333,10 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='printroles'>Imprimer</h3>
-	<p>Liste des rôles, séparés par un espace, ayant le droit d'imprimer l'élément.</p>
+	<p>
+		Liste des rôles, séparés par un espace, ayant le droit d'imprimer l'élément. Affiche le bouton 
+		imprimante.
+	</p>
 </article>
 
 <article>
@@ -339,8 +344,8 @@ sidebar:
 	<h3 id='editboxtitle'>Titre boîte d'édition</h3>
 	<p>
 		Spécifie un titre alternatif pour la boîte d'édition (par défaut le titre de la boîte d'édition
-		est le libellé de l'élément). Utile pour les éléments qui n'ont pas de libellé ou pour donner des
-		instructions aux utilisateurs qui ont des droits d'édition sur une ressource.
+		est le libellé de l'élément). Utile pour les éléments ressource qui n'ont pas de libellé ou pour 
+		donner des instructions aux utilisateurs qui ont le droit de Modifier la ressource.
 	</p>
 </article>
 
@@ -349,7 +354,7 @@ sidebar:
 	<h3 id='maxword'>Max mots</h3>
 	<p>
 		Éléments Texte long uniquement. Spécifie le nombre maximal de mots que peut entrer l'utilisateur 
-		qui a le droit de modifier la ressource.
+		qui a le droit de Modifier la ressource.
 	</p>
 </article>
 
@@ -357,8 +362,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='display'>Visible</h3>
 	<p>
-		Lorsque non visible, l'élément n'est pas affiché (sauf au designer). Utile pour cacher aux
-		utilisateurs du contenu nécéssaire à l'exécution d'un script de tableau. Tous les éléments 
+		Lorsque Visible n'est pas coché, l'élément n'est pas affiché (sauf au designer). Utile pour cacher 
+		aux utilisateurs du contenu nécéssaire à l'exécution d'un script de tableau. Tous les éléments 
 		sont visibles par défaut.
 	</p>
 </article>
@@ -367,8 +372,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='inline'>Édition en place</h3>
 	<p>
-		Éléments Ressource uniquement. Lorsque éditable "en place", l'utilisateur n'a pas de bouton 
-		crayon et c'est l'éditeur de la ressource qui est affiché dans la page du portfolio.
+		Éléments ressource uniquement. Lorsque Édition en place est coché, l'utilisateur n'a pas de 
+		bouton crayon et l'éditeur de la ressource est affiché directement dans la page du portfolio.
 	</p>
 </article>
 
@@ -376,9 +381,9 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='collapsible'>Repliable</h3>
 	<p>
-		Éléments Sous-section uniquement. Lorsque non repliable, le bouton +/- à gauche qui permet
-		de déplier/replier la sous-section n'est pas affiché. Les sous-sections sont repliables 
-		par défaut.
+		Éléments Sous-section uniquement. Lorsque Repliable n'est pas coché, le bouton +/- à gauche 
+		qui permet de déplier/replier la sous-section n'est pas affiché. Les sous-sections sont 
+		repliables par défaut.
 	</p>
 </article>
 
@@ -431,7 +436,7 @@ sidebar:
 		Peut remplacer <code>label</code> et s'applique lorsque les éléments
 		cherchés sont de type Image. Dans ce cas c'est l'image et non le libellé qui sera affiché dans 
 		la liste déroulante puis dans le Get_Ressource. Les éléments Image doivent être déclarés à même le 
-		portfolio où se trouve l'élément Get_Ressource et non pas dans un portfolio Référentiel&nbsp;; donc 
+		portfolio où se trouve l'élément Get_Ressource et non pas dans un portfolio référentiel&nbsp;; donc 
 		à utiliser en combinaison avec l'option <code>self</code>.
 	</p>
 	<p> 
@@ -439,7 +444,7 @@ sidebar:
 		Peut remplacer <code>label</code> et s'applique lorsque les éléments 
 		cherchés sont de type Item. Dans ce cas le Get_Resource sera mis à jour si l'élément Item 
 		sélectionné est modifié. Les éléments Item doivent être déclarés à même le portfolio où se trouve 
-		l'élément Get_Ressource et non pas dans un portfolio Référentiel&nbsp;; donc à utiliser en 
+		l'élément Get_Ressource et non pas dans un portfolio référentiel&nbsp;; donc à utiliser en 
 		combinaison avec l'option <code>self</code>. 
 	</p>
 	<h4>Format de la recherche pour un élément Get_Get_Resource</h4>
@@ -565,7 +570,7 @@ sidebar:
 	<p>
 		Permet de composer des menus afin d'importer des composantes. En général, les 
 		composantes se trouvent dans un portfolio de composantes réutilisables et le menu s'adresse à 
-		un ou plusieurs utilisateurs finaux, leur permettant d'ajouter des éléments à leur portfolio. Dans 
+		un ou plusieurs utilisateurs, leur permettant d'ajouter des éléments à leur portfolio. Dans 
 		ce cas la composante importée est copiée puis collée dans le portfolio.
 	</p>
 	<p>
