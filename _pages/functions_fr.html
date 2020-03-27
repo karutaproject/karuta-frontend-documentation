@@ -21,7 +21,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='get_multiple'>Get_Multiple</h3>
 	<p>
-		La fonction Get_Multiple permet à l'utilisateur de sélectionner plusieurs éléments parmi une 
+		Permet à l'utilisateur de sélectionner plusieurs éléments parmi une 
 		liste. Pour chaque élément sélectionné, une composante réutilisable est importée dans le 
 		portfolio. Un élément de cette composante est alors mis à jour avec le code et le libellé de 
 		l'élément sélectionné (en général un élément Page, Sous-section ou Get_Resource&nbsp;&ndash; dans 
@@ -106,7 +106,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='import_multiple'>Import_Multiple</h3>
 	<p>
-		La fonction Import_Multiple permet à l'utilisateur de sélectionner plusieurs éléments parmi une 
+		Permet à l'utilisateur de sélectionner plusieurs éléments parmi une 
 		liste. Pour chaque élément sélectionné, un élément est importé dans le portfolio. 
 	</p>
 	<p>
@@ -221,12 +221,12 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='proxy_multiple'>Proxy_Multiple</h3>
 	<p>
-		Permet à un utilisateur de sélectionner plusieurs éléments à partir d'une liste. Pour chaque 
+		Permet à l'utilisateur de sélectionner plusieurs éléments à partir d'une liste. Pour chaque 
 		sélection un élément Proxy est importé et sa cible est mise à jour avec la sélection. L'élément 
 		Proxy doit exister dans le portfolio de composantes réutilisables.
 	</p>
 	<p>
-		Cette fonction donne l'équivalent d'un Import_Multiple sauf qu'au lieu d'importer l'élément 
+		Cette fonction donne l'équivalent d'un Import_Multiple mais au lieu d'importer l'élément 
 		sélectionné dans le portfolio, c'est un élément Proxy qui est importé puis mis à jour pour 
 		pointer sur l'élément sélectionné.
 	</p>
@@ -330,13 +330,14 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='execReport_BatchCSV'>ExecReport_BatchCSV</h3>
 	<p>
-		Cette fonction exécute un script de rapport sur les données du portfolio courant, construit avec
+		Exécute un script de rapport sur les données du portfolio courant, construit avec
 		les données résultantes un fichier CSV temporaire, puis fournit ce fichier en entrée à un script 
 		de batch.
 	</p>
 	<p>
-		Ceci permet par exemple d'utiliser un portfolio pour la gestion des comptes utilisateurs et 
-		portfolios à créer, sans créer à la main de fichier CSV. 
+		Cette fonction permet de créer un portfolio de gestion de cohorte pour un utilisateur qui doit 
+		effectuer certaines opérations d'administration bien déterminées sans avoir tous les droits d'un 
+		designer (par exemple créer des comptes utilisateur et des instances de portfolio).
 	</p>
 	<p>
 		Pour ce faire, le script de rapport, au lieu de faire de l'affichage à l'écran, doit écrire dans 
