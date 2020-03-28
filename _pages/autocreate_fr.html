@@ -1,0 +1,92 @@
+---
+layout: archive
+permalink: /autocreate_fr/
+title: "Création automatique"
+sidebar:
+ nav: "autocreate_fr"
+---
+<style>
+	.champ {
+		border: 1px solid gray;
+		padding: 5px;
+	}
+</style>
+<p>
+	Il est possible d'automatiser la création d'un portfolio lors de la première connexion d'un utilisateur. 
+	Dans ce cas Karuta exécutera un batch créé puis spécifié par le designer dans le fichier application/js/specific.js.
+</p>
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='step1'>Condition d'exécution</h3>
+	<p>
+		Pour que le batch de création s'exécute lors de la première connexion de l'utilisateur, ce dernier doit avoir le droit de création qui lui sera retiré à la fin de l'exécution du batch.
+		Il doit également avoir <code>xlimited</code> dans le champ Autre.
+	</p>
+		<img src='../assets/img/autocreate/usager.jpg' width='50%'/>
+	<p>
+		<b>Remarque</b> : si CAS est utilisé, Karuta créera automatiquement l'utilisateur avec comme username l'identifiant CAS avec le droit de création et <code>xlimited</code> dans le champ Autre
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='step1'>Étape 1 - Écriture du batch de création</h3>
+	<p>
+		Le batch doit inclure la création du ou des portfolios de l'utilisateur, le partage avec cet utilisateur dans le rôle désiré.
+		Il doit se terminer par :
+		<ol>
+			<li> Retrait des droits de création de l'utilisateur</li>
+			<li> Départage des éléments créés du rôle designer</li>
+			<li> Changement du propriétaire des éléments créés</li>
+		</ol>
+		Exemple de batch de création automatique
+	</p>
+	<img src='../assets/img/autocreate/batch.jpg'/>
+	<p>
+	Téléchargez le batch <a href='../assets/img/autocreate/autocreate.batch-creation.xml'>autocreate.batch-creation.xml</a>
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='step2'>Étape 2 - Spécification du batch</h3>
+	<p>
+	Le designer doit spécifier le batch de création ainsi que les variables globales utilisées dans le batch dans le fichier application/js/specific.js.
+	La valeur de la varable g_execbatch à la ligne 3 doit être <code>true</code>.
+	</p>
+		<img src='../assets/img/autocreate/specific_js.jpg' width='50%'/>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='step3'>Détails du batch de création</h3>
+	<!-- --------------------------------------- -->
+	<h4>Création du projet Cohorte</h4>
+	<p> Dans notre exemple un projet Cohorte sera créé si il n'existe pas déjà.
+	Son code et libellé sera la valeur de la vaiable globale défini dans le fichier specific.js (année-mois)
+	</p>
+	<img src='../assets/img/autocreate/create-project.jpg'/>
+	<!-- --------------------------------------- -->
+	<h4>Création du portfolio</h4>
+	<img src='../assets/img/autocreate/create-tree.jpg'/>
+	<!-- --------------------------------------- -->
+	<h4>Partage du portfolio</h4>
+	<img src='../assets/img/autocreate/share-tree.jpg'/>
+	<!-- --------------------------------------- -->
+	<h4>Mise à jour des ressources</h4>
+	<p>Dans notre modèle de portfolio, il y a le nom, prénom et couriel de l'étudiant.</p>
+	<img src='../assets/img/autocreate/update-resources.jpg'/>
+	<!-- --------------------------------------- -->
+	<h4>Départage du portfolio</h4>
+	<img src='../assets/img/autocreate/unshare-portfolio.jpg'/>
+	<!-- --------------------------------------- -->
+	<h4>Départage du projet</h4>
+	<img src='../assets/img/autocreate/unshare-project.jpg'/>
+	<!-- --------------------------------------- -->
+	<h4>Changement de propiétaire du portfolio</h4>
+	<img src='../assets/img/autocreate/setowner-portfolio.jpg'/>
+	<!-- --------------------------------------- -->
+	<h4>Changement de propiétaire du portfolio</h4>
+	<img src='../assets/img/autocreate/setowner-project.jpg'/>
+	<!-- --------------------------------------- -->
+</article>

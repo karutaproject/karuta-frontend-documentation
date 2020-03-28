@@ -320,6 +320,8 @@ portfolio_fr:
     url: /css_fr/
   - title: Partage par l'utilisateur
     url: /sharing_fr/
+  - title: Création automatique
+    url: /autocreate_fr/
   - title:
     children:
       - title: "English"
@@ -365,6 +367,8 @@ structures_fr:
     url: /css_fr/
   - title: Partage par l'utilisateur
     url: /sharing_fr/
+  - title: Création automatique
+    url: /autocreate_fr/
   - title:
     children:
       - title: "English"
@@ -410,6 +414,8 @@ sharing_fr:
     url: /css_fr/
   - title: Partage par l'utilisateur
     url: /sharing_fr/
+  - title: Création automatique
+    url: /autocreate_fr/
   - title:
     children:
       - title: "English"
@@ -485,6 +491,8 @@ resources_fr:
     url: /css_fr/
   - title: Partage par l'utilisateur
     url: /sharing_fr/
+  - title: Création automatique
+    url: /autocreate_fr/
   - title:
     children:
       - title: "English"
@@ -623,6 +631,8 @@ metadata_fr:
     url: /functions_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
+  - title: Création automatique
+    url: /autocreate_fr/
   - title: Partage par l'utilisateur
     url: /sharing_fr/
   - title:
@@ -730,6 +740,8 @@ css_fr:
     url: /css_fr/
   - title: Partage par l'utilisateur
     url: /sharing_fr/
+  - title: Création automatique
+    url: /autocreate_fr/
   - title:
     children:
       - title: "English"
@@ -751,3 +763,42 @@ css_en:
     children:
       - title: "Français"
         url: /css_fr/
+
+# ====== AUTOCREATE_FR =============
+autocreate_fr:
+  - title: Structures
+    url: /structures_fr/
+  - title: Ressources
+    url: /resources_fr/
+  - title: Métadonnées
+    url: /metadata_fr/
+  - title: Fonctions Menu
+    url: /functions_fr/
+  - title: Mise en forme (CSS)
+    url: /css_fr/
+  - title: Partage par l'utilisateur
+    url: /sharing_fr/
+  - title: Création automatique
+    url: /autocreate_fr/
+  - title:
+    children:
+      - title: "English"
+        url: /css_en/
+        
+# ====== AUTOCREATE_EN =============
+autocreate_en:
+  - title: Structures
+    url: /structures_en/
+  - title: Resources
+    url: /resources_en/
+  - title: Metadata
+    url: /metadata_en/
+  - title: CSS
+    url: /css_en/
+  - title: Sharing
+    url: /sharing_en/
+  - title:
+    children:
+      - title: "Français"
+        url: /css_fr/
+
