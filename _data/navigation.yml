@@ -88,7 +88,7 @@ report_fr:
         url: /report_fr#draw-web-title
       - title: "Axe SVG"
         url: /report_fr#draw-web-axis
-      - title: "Courbe SVG"
+      - title: "Ligne SVG"
         url: /report_fr#draw-web-line
   - title: Commandes CSV
     url: /report_fr#commandesCSV
