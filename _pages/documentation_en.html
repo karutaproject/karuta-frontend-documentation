@@ -7,63 +7,68 @@ sidebar:
 ---
 
 <p>
-	<b>KARUTA</b> is an opensource software for the construction of electronic portfolios. It is
+	<b>KARUTA</b> is an open source software for the construction of electronic portfolios. It is
 	a flexible tool that allows the design of portfolios for multiple purposes: showcasing, support 
 	to learning, support to learning assessment.
 </p>
 <p>
 	Portfolio development may be done starting from scratch with the basic elements supplied in 
-	Karuta, or from templates supplied by the community and then adapted for specific needs.
+	Karuta, or from templates supplied by the Karuta community and then adapted for specific needs.
 </p>
 
 <p>The Karuta documentation is organized in three sections:</p>
 <ul>
-	<li><a href='portfolio_fr.html'>Portfolio</a></li>
-	<li><a href='report_fr.html'>Report Script</a></li>
-	<li><a href='batch_fr.html'>Batch Script</a></li>
+	<li><a href='../portfolio_en/'>Portfolio</a></li>
+	<li><a href='../report_en/'>Report</a></li>
+	<li><a href='../batch_en/'>Batch</a></li>
 </ul>
 <p>
-	The <b><a href='portfolio_fr.html'>Portfolio</a></b> section presents the structural elements,
-	the resources (elements that will contain the data), the metadata and the layout (CSS).
+	The <b><a href='../portfolio_en/'>Portfolio</a></b> section presents the structural elements 
+	available to build portfolios, the resources (elements that will contain the data), the metadata 
+	and the layout (CSS).
 </p>
 <p>
-	The <b><a href='report_fr.html'>Report Script</a></b> section presents the commands used to build
-	tables and dashboards, the layout of tables, and tables that can be edited by end users. The report
-	script commands are used to navigate through portfolios, select certain elements, and display those
-	elements in a table.
+	The <b><a href='../report_en/'>Report</a></b> section presents the report script commands.
+	These commands are used to navigate through portfolios, select certain elements, and display 
+	them in an HTML table to build dashboards and CVs.
 </p>
 <p>
-	The <b><a href='batch_fr.html'>Batch Script</a></b> section presents the commands used to automate
-	creating, updating and deleting portfolios, as well as creating or deleting user accounts.
+	The <b><a href='../batch_en/'>Batch</a></b> section presents the batch script commands.
+	These commands are used to automate the creation, modification and deletion of portfolios, 
+	as well as the creation and deletion of user accounts.
 </p>
 
-<h3>General Remarks</h3>
+<h2>General Remarks</h2>
 <p>
+	<b>Languages</b><br>
 	KARUTA is multilingual (by default English and French). The element labels are saved in the
-	language selected in the language menu. In end user menus and end user help nodes, labels must
-	be appended with the language code and separated by the slash <code>/</code>. 
-	Example : Add a photo@en/Ajouter une photo@fr
+	active working language (the active working language is selected through the flag menu at the 
+	top of the Karuta pages). For end user menus and help bubbles, labels must be appended with 
+	the language code and separated by a slash <code>/</code>.<br>
+	Example: <i>Add a picture@en/Ajouter une photo@fr</i>
 </p>
 <p>
-	A Karuta user is associated to a specific portfolio in a specific role - for example the student
-	or teacher role (the designer decides on the role names). For each portfolio, a user group is 
-	created for each role the designer has defined. Then, to associate a user with a role, this user
-	is placed in the corresponding user group.
+	<b>Sharing and user roles</b><br>
+	Upon sharing a portfolio instance with a user, this user is paired with the portfolio in a specific 
+	role (for example student or teacher). It is up to the designer to define role names. For each 
+	portfolio, Karuta creates a user group for each role specified in the portfolio. Then, to share the 
+	portfolio with a user, the user is placed in the corresponding user group.
 </p>
-<p> There are three predefined roles:
-</p>
+<p>There are three predefined roles:</p>
 <ul>
 	<li>
 		<code>designer</code> This is the user that builds portfolios. This person has all the rights
-		and permissions on all the portfolio elements, without regard to the roles specified in the
-		metadata of an element.
+		on all the portfolio elements, regardless of the roles he or she specifies in the metadata of 
+		each element.
 	</li>
 	<li>
-		<code>all</code> This keyword includes all roles defined on the portfolio.
+		<code>all</code> This keyword includes all roles defined on the portfolio. For example, by default
+	 	all users have the right to see all portfolio elements, but this behavior may be modified by the 
+	 	designer by removing the <code>all</code> role in the metadata.
 	</li>
 	<li>
-		<code>user</code> This keyword will be replaced by the ID of the end user at the time of 
-		portfolio instanciation. Only this specific user may then have this role.
+		<code>user</code> This keyword will be replaced by a user's identifier at the time of 
+		portfolio instanciation. This then becomes a unique role as only this specific user may have 
+		this role.
 	</li>
 </ul>
-<p>

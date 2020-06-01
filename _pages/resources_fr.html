@@ -7,9 +7,11 @@ sidebar:
 ---
 <p>
 	Les éléments de ressource contiennent les données d'un portfolio. Chaque élément ressource a une
-	liste de droits (Voir, Éditer, Soumettre, etc). Pour chaque droit, on peut spécifier un ou
-	plusieurs rôles (par exemple <i>etudiant</i> ou <i>enseignant</i>) qui auront ce droit. C'est  
-	le designer du portfolio qui créé les rôles pour les futurs utilisateurs du portfolio.
+	liste de droits (Voir, Éditer, Soumettre, etc). Pour chaque droit, le designer peut spécifier un ou
+	plusieurs rôles (par exemple <i>etudiant</i> ou <i>enseignant</i>) qui auront ce droit. Il ou elle 
+	procède à cette spécification dans les métadonnées de l'élément. C'est le designer du portfolio qui 
+	décide quels seront les rôles pour les futurs utilisateurs du portfolio. Les utilisateurs seront 
+	ensuite partagés avec un portfolio en spécifiant un rôle.
 </p>
 <p>
 	Notez que le designer a	tous les droits sur tous les éléments pendant qu'il construit le portfolio. 
@@ -21,7 +23,7 @@ sidebar:
 	Dans la représentation XML du portfolio, les ressources sont les feuilles.
 </p>
 
-<p>Les ressources disponibles sont :</p>
+<p>Les ressources disponibles sont&nbsp;:</p>
 <ul>
 	<li><code><a href='#field'>Texte court</a></code></li>
 	<li><code><a href='#textfield'>Texte long</a></code></li>
@@ -37,49 +39,58 @@ sidebar:
 	<li><code><a href='#date'>Calendrier</a></code></li>
 	<li><code><a href='#couleur'>Couleur</a></code></li>
 	<li><code><a href='#dashboard'>Tableau de bord</a></code></li>
-	<!- ******* Rapport différé ******* ->
+	<li><code><a href='#report'>Rapport différé</a></code></li>
 	<li><code><a href='#getResource'>GetResource</a></code></li>
 	<li><code><a href='#getGetResource'>GetGetResource</a></code></li>
 	<li><code><a href='#getDoubleResource'>GetDoubleResource</a></code></li>
 	<li><code><a href='#item'>Item</a></code></li>
 	<li><code><a href='#proxy'>Proxy</a></code></li>
-	<!- ******* GetProxy ******* ->
+	<li><code><a href='#getProxy'>GetProxy</a></code></li>
 </ul>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='field'>Texte court</h3>
-	<p>L'élément Texte court est un champ de texte. Il est utilisé pour entrer une donnée courte 
-	comme un nom. Généralement on veut attribuer le droit d'Éditer la ressource à un rôle, par 
-	exemple <i>etudiant</i> ou <i>enseignant</i>.
-</p>
+	<p>
+		L'élément Texte court est un champ de texte. Il est utilisé pour entrer une donnée courte 
+		comme un nom. Généralement on veut attribuer le droit d'Éditer la ressource à un rôle, par 
+		exemple <i>etudiant</i> ou <i>enseignant</i>.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='textfield'>Texte long</h3>
-	<p>L'élément Texte long est utilisé pour entrer un texte plus long que le champ. L'utilisateur
+	<p>
+		L'élément Texte long est utilisé pour entrer un texte plus long que le champ. L'utilisateur
 		qui a le droit d'Éditer la ressource dispose d'un éditeur de texte simple qui offre des
 		options de mise en forme de base.
 	</p>
 	<p>
-		Le texte long peut aussi être utilisé par le designer pour donner des instructions à 
-		l'utilisateur. Dans ce cas, le rôle Éditer la ressource n'est attribué à aucun utilisateur.</p>
+		Peut aussi être utilisé par le designer pour donner des instructions à l'utilisateur. Dans ce 
+		cas, le rôle Éditer la ressource n'est attribué à aucun utilisateur.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='commentaires'>Commentaires</h3>
-	<p>L'élément Commentaire est un élément Texte long qui est signé et daté. L'usager qui édite le 
+	<p>
+		L'élément Commentaires est un élément Texte long qui est signé et daté. L'utilisateur qui édite le 
 		commentaire voit son nom d'utilisateur ajouté au bas de son commentaire, ainsi que l'heure 
 		et la date d'édition.
+	</p>
+	<p>
+		Habituellement utilisé avec un menu pour que l'utilisateur puisse ajouter des commentaires au
+		besoin et un bouton soumettre pour pouvoir garder la trace de l'évolution des commentaires.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='image'>Image</h3>
-	<p>L'élément Image permet de téléverser un fichier image (tous les formats courants sont
+	<p>
+		L'élément Image permet de téléverser un fichier image (tous les formats courants sont
 		acceptés). L'image est ensuite affichée dans le portfolio.
 	</p>
 	<p>
@@ -92,7 +103,8 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='audio'>Audio</h3>
-	<p>L'élément Audio permet de téléverser un fichier MP3. Cet élément vient avec un lecteur 
+	<p>
+		L'élément Audio permet de téléverser un fichier MP3. Cet élément vient avec un lecteur 
 		audio pour écouter le fichier téléversé.
 	</p>
 	<p>
@@ -105,7 +117,8 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='video'>Vidéo</h3>
-	<p>L'élément Vidéo permet de téléverser un fichier MP4. Cet élément vient avec un 
+	<p>
+		L'élément Vidéo permet de téléverser un fichier MP4. Cet élément vient avec un 
 		lecteur vidéo pour regarder le fichier téléversé.
 	</p>
 	<p>
@@ -117,10 +130,11 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='document'>Document</h3>
-	<p>L'élément Document permet de téléverser un fichier de n'importe quel type au portfolio. 
+	<p>
+		L'élément Document permet de téléverser un fichier de n'importe quel type au portfolio. 
 		Contrairement aux éléments Image, Audio et Vidéo, le contenu du fichier n'est pas affiché 
-		dans le portfolio &mdash; le fichier est disponible pour téléchargement par tous les usagers 
-		qui ont le droit de Voir l'élément.</p>
+		dans le portfolio &mdash; cependant le fichier est disponible pour téléchargement par tous les 
+		utilisateurs qui ont le droit de Voir l'élément.</p>
 </article>
 
 <article>
@@ -128,11 +142,10 @@ sidebar:
 	<h3 id='oembed'>oEmbed</h3>
 	<p>L'élément oEmbed permet d'afficher dans le portfolio des présentations (vidéo, diapositives, 
 		etc) sauvegardées sur un site tiers (YouTube, Vimeo, Meetup, Facebook, etc). Le contenu 
-		désiré est spécifié par un hyperlien.
+		désiré est spécifié par un hyperlien. Cet élément vient avec un lecteur qui permet de regarder 
+		la cible du lien oEmbed à même le portfolio.
 	</p>
 	<p>
-		Cet élément vient avec un lecteur qui permet de regarder le contenu du lien oEmbed à même le 
-		portfolio.</br>
 		Pour plus d'informations au sujet de l'élément oEmbed voir 
 		<a href='https://oembed.com/' target='_blank'>https://oembed.com/</a>.
 	</p>
@@ -141,12 +154,10 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='url'>URL</h3>
-	<p>L'élément URL permet de spécifier un hyperlien dans le portfolio. L'usager qui a le droit 
-		d'Éditer la ressource peut spécifier un libellé qui sera affiché sur le lien au lieu de l'url.
-	</p>
 	<p>
-		L'hyperlien doit rediriger vers une page à l'extérieur de Karuta &ndash; pour un lien
-		à l'intérieur de Karuta voir l'élément URL2Unit (paragraphe suivant).
+		L'élément URL permet de spécifier un hyperlien dans le portfolio. L'hyperlien doit 
+		rediriger vers une page à l'extérieur de Karuta &mdash; pour rediriger à l'intérieur 
+		de Karuta, voir l'élément URL2Unit (paragraphe suivant).
 	</p>
 </article>
 
@@ -185,11 +196,12 @@ sidebar:
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='dashboard'>Tableau de bord</h3>
+	<p>L'élément Tableau de bord exécute un script de rapport et affiche la table HTML résultante.</p>
 	<p>
-		L'élément Tableau de bord exécute un script de rapport spécifié et affiche la table HTML 
-		résultante.
+		Le script de rapport est créé dans un portfolio séparé, le portfolio Rapport, et le code de ce
+		portfolio est spécifié dans l'élément Tableau de bord. Le code du portfolio Rapport peut être 
+		suffixé d'une ou plusieurs des instructions suivantes&nbsp;:
 	</p>
-	<p>Le code du portfolio peut être suffixé d'une ou plusieurs des instructions suivantes&nbsp;:</p>
 	<ul>
 		<li>
 			<code>@local</code> Le script de rapport s'exécutera uniquement sur les données contenues dans 
@@ -204,22 +216,34 @@ sidebar:
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='report'>Rapport différé</h3>
+	<p>
+		Comme l'élément Tableau de bord, l'élément Rapport différé exécute un script de rapport et affiche 
+		la table HTML résultante. Cependant, au lieu d'être exécuté au moment d'afficher la page de 
+		portfolio, le script est exécuté à un moment et une fréquence pré-déterminé puis stocké en mémoire, 
+		et c'est le résultat pré-exécuté qui est affiché au moment de charger la page. Ceci est utile pour 
+		les scripts qui sont long à exécuter, comme les rapports de cohorte.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='getResource'>GetResource (liste déroulante)</h3>
 	<p>
-		L'élément GetResource permet de construire une liste d'éléments parmi laquelle l'usager peut 
+		L'élément GetResource permet de construire une liste d'éléments parmi laquelle l'utilisateur peut 
 		faire un choix (liste déroulante, boîte de choix ou encore radio-boutons).
 	</p>
 	<p>
 		Les éléments qui vont remplir la liste déroulante sont des éléments ressource de type Item 
 		(voir plus bas) ou des éléments Sous-section et ils sont habituellement créés dans un portfolio 
-		séparé&nbsp;: le portfolio référentiel. Tous les éléments d'une liste déroulante doivent partager 
+		séparé&nbsp;: le portfolio Référentiel. Tous les éléments d'une liste déroulante doivent partager 
 		le même tag sémantique et chacun doit avoir un code unique (<i>Code&nbsp;- Item</i> dans le cas 
 		d'éléments Item et <i>Code</i> dans le cas d'éléments Sous-section). 
 	</p>
 	<p>
 		On spécifie quels éléments du référentiel afficher dans la liste déroulante via la métadonnée 
-		Recherche de l'élément (voir section 
-		<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails).
+		Recherche de l'élément (voir la page <a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour 
+		plus de détails).
 	</p>
 </article>
 
@@ -227,14 +251,15 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='getGetResource'>GetGetResource (liste déroulante conditionnelle)</h3>
 	<p>
-		L'élément GetGetResource permet de construire une liste déroulante dont les choix sont
-		restreints par le choix fait par l'usager dans un élément GetResource associé. Le choix de l'usager
-		dans la première liste déroulante détermine quels seront les choix offerts dans la deuxième. 
+		L'élément GetGetResource permet de construire une liste déroulante dont les options sont
+		restreintes par le choix fait par l'usager dans un élément GetResource associé. Le choix de 
+		l'utilisateur dans la première liste déroulante détermine quels seront les options offertes 
+		dans la deuxième. 
 	</p>
 	<p>
 		On spécifie quels éléments du référentiel afficher dans la liste déroulante via la métadonnée 
-		Recherche de l'élément (voir section 
-		<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails).
+		Recherche de l'élément (voir la page <a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour 
+		plus de détails).
 	</p>
 </article>
 
@@ -266,5 +291,15 @@ sidebar:
 	<p>
 		Il est possible de donner à l'usager le droit de modifier l'élément affiché par proxy, 
 		auquel cas la valeur de l'élément original est automatiquement mise à jour.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='getProxy'>GetProxy</h3>
+	<p>
+		L'élément GetProxy permet de laisser l’utilisateur choisir la cible du Proxy affiché via 
+		une liste déroulante. Tous les éléments offerts dans la liste déroulante doivent patager le 
+		même tag sémantique (par exemple choisir parmi toutes les pages <i>page-competence</i>).
 	</p>
 </article>

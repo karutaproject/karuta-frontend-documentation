@@ -7,17 +7,21 @@ sidebar:
 ---
 
 <p>
-	The structural elements organize the data in a portfolio.
+	The structural elements are used to organize the data in a portfolio.
 </p>
-<p>	In the XML representation of the portfolio, the structural elements are the branches of the tree, 
-	while the data (the Resource elements) are the leaves of the tree.
+<p>	
+	In the XML representation of the portfolio, the structural elements are the branches of the tree, 
+	while the data elements (the resources) are the leaves of the tree.
 </p>
 <p>The Karuta structural elements are:</p>
 <ul>
 	<li><code><a href='#asmstructure'>Section</a></code></li>
 	<li><code><a href='#asmunit'>Page</a></code></li>
 	<li><code><a href='#asmunitstructure'>Subsection</a></code></li>
-	<li><code><a href='#asmcontext'>Resource</a></code></li>
+</ul>
+<p>The Karuta data elements are:</p>
+<ul>
+	<li><code><a href='#asmcontext'>Resource Node</a></code></li>
 </ul>
 
 <article>
@@ -25,7 +29,7 @@ sidebar:
 	<h3 id='asmstructure'>Section</h3>
 	<p>
 		A Section element groups portfolio pages together. A Section may contain any other Karuta 
-		element: Sections, Pages, Subsections and Resource elements (Resources are the data elements).  
+		element: Sections, Pages, Subsections and Resource Nodes.  
 	</p>
 </article>
 
@@ -33,8 +37,8 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='asmunit'>Page</h3>
 	<p>
-		A Page is the basic element through which portfolios are viewed and used. A Page may 
-		contain Subsections and Resources.
+		A Page is the basic element through which portfolios are displayed. A Page may 
+		contain Subsections and Resource Nodes.
 	</p>
 </article>
 
@@ -42,16 +46,18 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='asmunitstructure'>Subsection</h3>
 	<p>
-		A Subsection element groups Resources together. A Subsection may contain Subsections and 
-		Resources.
+		A Subsection element groups Resource Nodes together. A Subsection may contain other Subsections
+		and Resource Nodes.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='asmcontext'>Resource</h3>
+	<h3 id='asmcontext'>Resource Node</h3>
 	<p>
-		A Resource is the terminating element of a tree (the leaves). A Resource is not a structural
-		element, it contain the data of	the portfolio. There are multiple types of resources (see RESOURCES).
+		A Resource Node is the terminating element of a tree (the leaves). A resource is not a structural
+		element, it contain the data of	the portfolio. There are multiple types of resources: text field, 
+		text editor, file, image, audio and video player, calendar, etc (see the
+		<a href='../resources_en/'>RESOURCES</a> page for more detail).
 	</p>
 </article>

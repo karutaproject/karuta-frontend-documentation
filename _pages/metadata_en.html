@@ -6,72 +6,129 @@ sidebar:
  nav: "metadata_en"
 ---
 <p>
-	Element metadata allow the designer to attribute unique identifiers to an element and also to
-	define it's behavior. For example, in the case of structural elements, we may define user-specific
-	menus that allow the designer or even an end-user to add additional elements inside this structural
-	element. In the case of resource elements, we may define the roles attributed to each right (who 
-	can do what on each element). It is also in the metadata that we specify which elements will fill 
-	a choice-box. Finally we may also specify which users will be able to share their portfolio with 
-	other parties, and under which conditions.
+	The metadata of an element allow the designer to give it a unique identifier and to define 
+	it's behavior. 
 </p>
 <p>
-	Metadata is accessed through an element's editing box.
+	The unique identifier is called the Semantic Tag and is used to reference an element from 
+	another element. The designer should attribute a unique identifier to every element added 
+	to a portfolio.
 </p>
-<p>Some of the Karuta elements' metadata:</p>
+<p>
+	The next step is to specify the behavior of the element. For example, in the case of 
+	structural elements (Section, Page, Subsection), the designer may specify menus that allow the 
+	user to add elements to his or her portfolio. In the case of resources (the elements that contain 
+	the data), the designer can associate roles to each right, hence specifying who can do what on 
+	each element.
+</p>
+<p>
+	It is also in the metadata that the designer specifies which elements will populate a choice box, 
+	which users will be able to share their portfolio with another person (and under which security 
+	restrictions), create help bubbles, etc.
+</p>
+<p>
+	The metadata of an element is accessed through it's editing dialog box (pencil button).
+</p>
+
+<h2>The Metadata</h2>
+
+<h4>Node</h4>
 <ul>
 	<li><code><a href='#semantictag'>Semantic Tag</a></code></li>
 	<li><code><a href='#asmstructure'>Code</a></code></li>
 	<li><code><a href='#multilingual-node'>Multilingual Node</a></code></li>
 	<li><code><a href='#multilingual-resource'>Multilingual Resource</a></code></li>
 	<li><code><a href='#encript-resource'>Encrypt Resource</a></code></li>
-	<li><code><a href='#see'>Roles - See</a></code></li>
-	<li><code><a href='#delete'>Roles - Delete</a></code></li>
-	<li><code><a href='#edit-resource'>Roles - Edit Resource</a></code></li>
-	<li><code><a href='#comment'>Roles - Comment</a></code></li>
-	<li><code><a href='#submit'>Roles - Submit</a></code></li>
-	<li><code><a href='#query'>Query</a></code></li>
-	<li><code><a href='#get_multiple'>Menu - Get_Multiple</a></code></li>
-	<li><code><a href='#get_get_multiple'>Menu - Get_Get_Multiple</a></code></li>
-	<li><code><a href='#import_multiple'>Menu - Import_Multiple</a></code></li>
-	<li><code><a href='#import_ggmultiple'>Menu - Import_GGMultiple</a></code></li>
-	<li><code><a href='#sharing'>Sharing by the end-user</a></code></li>
+</ul>
+<h4>User Rights</h4>
+<ul>
+	<li><code><a href='#see'>See</a></code></li>
+	<li><code><a href='#delete'>Delete</a></code></li>
+	<li><code><a href='#edit-resource'>Edit Resource</a></code></li>
+	<li><code><a href='#resnopencil'>Resource Without Pencil</a></code></li>
+	<li><code><a href='#comment'>Comment</a></code></li>
+	<li><code><a href='#submit'>Submit</a></code></li>
+	<li><code><a href='#editcoderoles'>Edit Code</a></code></li>
+	<li><code><a href='#editnoderoles'>Edit Label</a></code></li>
+	<li><code><a href='#nodenopencil'>Node Without Pencil</a></code></li>
+	<li><code><a href='#duplicateroles'>Duplicate</a></code></li>
+	<li><code><a href='#resizeroles'>Resize Image</a></code></li>
+	<li><code><a href='#edittargetroles'>Edit Proxy Target</a></code></li>
+	<li><code><a href='#moveroles'>Ordering</a></code></li>
+	<li><code><a href='#moveinroles'>Move</a></code></li>
+	<li><code><a href='#movein'>Move In</a></code></li>
+	<li><code><a href='#showroles'>Show/Hide</a></code></li>
+	<li><code><a href='#showtoroles'>Show To</a></code></li>
+	<li><code><a href='#printroles'>Print</a></code></li>
+</ul>
+<h4>Node</h4>
+<ul>
+	<li><code><a href='#editboxtitle'>Editing Box Title</a></code></li>
+	<li><code><a href='#maxword'>Max Words</a></code></li>
+	<li><code><a href='#display'>Visible</a></code></li>
+	<li><code><a href='#inline'>Inline Editing</a></code></li>
+	<li><code><a href='#collapsible'>Collapsible</a></code></li>
+	<li><code><a href='#query'>Search</a></code></li>
+	<li><code><a href='#sharing'>Share</a></code></li>
+	<li><code><a href='#menu'>Menus</a></code></li>
+	<li><code><a href='#menulabels'>Menu Button Text</a></code></li>
+	<li><code><a href='#help'>Help Bubble</a></code></li>
 </ul>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='semantictag'>Semantic Tag</h3>
 	<p>
-		An element's Semantic Tag expresses it's semantics. It is also the means to search for an element
-		in a portfolio: the semantic tag is used in the Query field of an element (see Query below) as well
-		as in batch and report scripts.
+		An element's Semantic Tag is it's identifier and should express it's semantics (example:
+		<i>student-profile-page</i>, <i>student-name</i>, etc). For each element the designer adds 
+		to a portfolio, he or she should replace the default semantic tag by one that expresses what 
+		the element's purpose is and what it will contain.
 	</p>
 	<p>
-		Note: search of a semantic tag is inclusive &mdash; for example, the search for all elements with
-		semantic tag "competency" will also yield all elements with the semantic tag "sub-competency", as
-		the chain of characters of the first is included in the second.
+		The semantic tag is used to search for an element in a portfolio. It is used in the Search 
+		metadata (see below) as well as in the report and batch scripts.
+	</p>
+	<p>
+		IMPORTANT: Search of a semantic tag is inclusive &mdash; for example, the search for all elements 
+		with semantic tag <i>competency</i> will also yield all elements with the semantic tag 
+		<i>sub-competency</i>, as the chain of characters of the first is included in the second.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='asmstructure'>Code</h3>
+	<h3 id='code'>Code</h3>
 	<p>
-		The Code of a portfolio element must be unique within this portfolio. It is used in choice boxes
-		(Get_Resource element, Get_Get_Resource element, Get_Muliple menu, Get_Get_Multiple menu and
-		Import_Multiple menu) to identify the end-user's selection.
+		Most often attributed to Item and Subsection elements that will appear in single choice 
+		boxes (GetResource and GetGetResource elements) and multiple choice boxes (Get_Multiple and 
+		Import_Multiple functions). It is by the code that the user's selection is identified.
+	</p>
+	<p>
+		IMPORTANT: The code of a portfolio element must be unique within this portfolio.
 	</p>
 	<p>
 		By default, both the element's code and label are displayed in the choice box, and then only 
-		the label of the user's selection is displayed in the Resource element. This behavior may be 
-		modified by adding one or more of the following symbols to the element's code:
+		the label of the user's selection is displayed in the GetResource (or GetGetResource) element. 
+		This behavior may be modified by adding one or more of the following symbols to the element's 
+		code:
 	</p>
 	<ul>
 		<li><code>@</code> the code will not be displayed in the choice box</li>
-		<li><code>#</code> the code will be displayed in the Resource element</li>
-		<li><code>&amp;</code> the associated <b>value</b> will be visible in the Resource element 
-			(<b>Item</b> elements only)</li>
-		<li><code>%</code> the label will not be displayed in the Resource element</li>
+		<li><code>#</code> the code will be displayed in the GetResource element</li>
 		<li><code>$</code> the label will not be displayed in the choice box</li>
+		<li><code>%</code> the label will not be displayed in the GetResource element</li>
+		<li>
+			<code>?</code> the value will be displayed in the choice box 
+			(only Item elements have a field to indicate a value)
+		</li>
+		<li>
+			<code>&amp;</code> the value will be displayed in the GetResource 
+			element (only Item elements have a field to indicate a value)
+		</li>
+		<li>
+			<code>!</code> the element will not be selectable in the choice box (useful to 
+			create section titles in the choice box)
+		</li>
 	</ul>
 </article>
 
@@ -79,15 +136,14 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='multilingual-node'>Multilingual Node</h3>
 	<p>
-		An element's Multilingual Node attribute specifies whether the element's <b>Label</b> is multilingual
-		(in the case of multilingual Karuta installations). If it is, two different labels can be specified
-		for the element (one in each language). If it is not, the element's label will be the same 
-		independently of what language the portfolio is being viewed in (the value of the label will be 
-		stored in the language defined as default language in the configuration file _init.js).
+		Specifies whether an element's <b>label</b> has a different value in each language (if the 
+		portfolio is multilingual). If Multilingual Node is not checked, there will only be one
+		value for all languages, and that value will be stored in the default language (the default 
+		language is defined in the <i>_init.js</i> configuration file).
 	</p>
 	<p>
-		Note: the code is never multilingual. It has the same value independently of the selected viewing
-		language.
+		IMPORTANT: The code is never multilingual. It has the same value independently of the selected 
+		working	language.
 	</p>
 </article>
 
@@ -95,13 +151,14 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='multilingual-resource'>Multilingual Resource</h3>
 	<p>	
-		An element's Multilingual Resource attribute specifies whether the data supplied for the element is 
-		multilingual (in the case of multilingual Karuta installations). If it is, two different data sets 
-		can be specified for the element (one in each language). If it is not, the element's data 
-		will be the same independently of what language the portfolio is being viewed in (the data will be 
-		stored in the language defined as default language in the configuration file _init.js).</br>
-		Example: a person's name or birthdate is usually not language dependent (not multilingual) whereas 
-		an essay or instructions are different in each language.
+		Resource elements only. Specifies whether the data in the resource element has a different value 
+		in each language (if the portfolio is multilingual). If Multilingual Resource is not checked, 
+		there will only be one value for all languages, and that value will be stored in the default 
+		language (the default language is defined in the <i>_init.js</i> configuration file).
+	</p>
+	<p>
+		For example, a name or a birth date are usually not language dependant, whereas a text that gives
+		instructions is	definitely language specific.
 	</p>
 </article>
 
@@ -109,56 +166,240 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='encript-resource'>Encrypt Resource</h3>
 	<p>
-		This element attribute specifies whether the data in a Resource element is encrypted. If so, 
-		a key phrase is requested from the user when they open the portfolio. This phrase is used to
-		encrypt and decrypt the data. It is not stored in the portfolio and thus must be memorized by 
-		the end-user.
+		Resource elements only. Specifies whether the data in the resource element must be encrypted.
+		If so, a key phrase is requested from the user when they open the portfolio. This phrase is used 
+		to encrypt/decrypt the data. It is not stored in the portfolio and thus must be memorized by 
+		the user, as he or she will be asked to provide it every time they open the portfolio.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='see'>Roles - See</h3>
+	<h3 id='see'>See</h3>
 	<p>
-		The list of user roles (separated by a space character) that may see the element. For example: 
-		<i>student teacher</i>.</br>
-		By default, this right is attributed to the role <i>all</i>. It is the only right to have a
-		default value.
+		List of roles, separated by a space character, that have the right to see the element. For  
+		example: <i>student teacher</i>.
+	</p>
+	<p>
+		By default, the right to see is attributed to the role <i>all</i>, which includes all roles 
+		defined on the portfolio. This is the only right to have a default value.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='delete'>Roles - Delete</h3>
-	<p>The list of user roles (separated by a space character) that may delete the element.</p>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='edit-resource'>Roles - Edit Resource</h3>
+	<h3 id='delete'>Delete</h3>
 	<p>
-		The list of user roles that may enter data in the element (only for Resource elements).
+		List of roles, separated by a space character, that have the right to delete the element.
+		Displays the X button.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='comment'>Roles - Comment</h3>
+	<h3 id='edit-resource'>Edit Resource</h3>
 	<p>
-		The list of user roles that may add a comment to the element. Comments are timestamped and signed 
-		with the user name. A text editor is available to the users with the correct role for the purpose
-		of comment writing.</br>
-		Note: The user role with the Comment right <b>must also have</b> the Edit Resource right on the element.
+		Resource elements only. List of roles, separated by a space character, that have the right to 
+		edit the element (store and modify data in the element). Displays the pencil button.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='submit'>Roles - Submit</h3>
+	<h3 id='resnopencil'>Resource Without Pencil</h3>
 	<p>
-		The list of user roles that may submit the element. Once submitted, the Edit Resource and Delete
-		rights are removed, for the element <b>and all it's children</b>. A submit button is available to
-		the users with the correct role for the purpose of submission.
+		Resource elements only. Does not display the pencil button to the roles that have 
+		the Edit Resource right. Used in combination with the Import_Multiple and Get_Multiple 
+		functions (see the <a href='../functions_en/'>MENU FONCTIONS</a> page for details).
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='comment'>Comment</h3>
+	<p>
+		List of roles, separated by a space character, that have the right to comment the element.
+		Adds a text editor at the bottom of the element's editing box. In the case of resource 
+		elements, the comment is timestamped and signed with the user's name. The user must also have 
+		the Edit Resource right on the element.
+	</p>
+	<p>
+		TIP: Designers can give themselves the Comment right on structural elements &mdash; 
+		this way they can add the equivalent of a subtitle to the element's label.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='submit'>Submit</h3>
+	<p>
+		List of roles, separated by a space character, that have the right to submit the element.
+		Upon submission the Edit Resource and Delete rights are removed from the element and all  
+		it's children. Displays the <i>Submit</i> button.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='editcoderoles'>Edit Code</h3>
+	<p>
+		List of roles, separated by a space character, that have the right to modify the code of the 
+		element.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='editnoderoles'>Edit Label</h3>
+	<p>
+		List of roles, separated by a space character, that have the right to modify the label of the 
+		element.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='nodenopencil'>Node Without Pencil</h3>
+	<p>
+		Does not display the pencil button to the roles that have the Edit Label right. 
+		Used in combination with the Import_Multiple and Get_Multiple functions 
+		(see the <a href='../functions_en/'>MENU FONCTIONS</a> page for details).
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='duplicateroles'>Duplicate</h3>
+	<p>
+		List of roles, separated by a space character, that have the right to duplicate the element.
+		The new element will be added at the end of the list of the original element's siblings (the 
+		elements of the same hierarchical level in the tree). Displays the copy button.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='resizeroles'>Resize Image</h3>
+	<p>
+		Image elements only. List of roles, separated by a space character, that have the right to 
+		modify the size in which the image is displayed. Displays the pencil button.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='edittargetroles'>Edit Proxy Target</h3>
+	<p>
+		Proxy elements only. List of roles, separated by a space character, that have the right to 
+		modify the element displayed by Proxy. The value of the original element is automatically
+		updated.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='moveroles'>Ordering</h3>
+	<p>
+		List of roles, separated by a space character, that have the right to modify the position
+		of the element amongst it's siblings (the elements of the same hierarchical level in the 
+		tree). Displays the upward arrow button.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='moveinroles'>Move</h3>
+	<p>
+		List of roles, separated by a space character, that have the right to move the element to 
+		another branch of the portfolio tree. Displays the intersecting arrows button.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='movein'>Move In</h3>
+	<p>
+		Semantic Tag that restricts the list of elements to which the element can be moved. 
+		Used in combination with the Move right. User can only move the element to an element
+		that has the specified semantic tag (example: <i>competency-page</i>).
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='showroles'>Show/Hide</h3>
+	<p>
+		List of roles, separated by a space character, that have the right to show/hide the element 
+		and all it's children to other users. Displays the eye button. The eye button is a
+		toggle button and indicates the	<b>state</b>, not the action: when the eye is not slashed, the 
+		element is visible to the other users.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='showtoroles'>Show To</h3>
+	<p>
+		List of roles, separated by a space character, to whom the element is shown or hidden by the 
+		users that have the Show/Hide right.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='printroles'>Print</h3>
+	<p>
+		List of roles, separated by a space character, that have the right to print the element. 
+		Displays the printer button.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='editboxtitle'>Editing Box Title</h3>
+	<p>
+		Specifies an alternate title for the element's editing box (by default the title is the 
+		element's label). Useful for resource elements that don't have a label or to give instructions 
+		to users with the Edit Resource right.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='maxword'>Max Words</h3>
+	<p>
+		Long Text elements only. Specifies the maximum number of words that the user with the Edit 
+		Resource right can enter into the element.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='display'>Visible</h3>
+	<p>
+		When not selected, the element is not displayed (except to the designer). Useful to hide to
+		users content that is needed for the execution of a report script. All elements are visible 
+		by default.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='inline'>Inline Editing</h3>
+	<p>
+		Resource elements only. When selected, instead of displaying the pencil button to the user
+		with the Edit Resource right, the resource's editor is displayed directly on the portfolio
+		page.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='collapsible'>Collapsible</h3>
+	<p>
+		Subsection elements only. When not selected, the +/- toggle button to the left, through 
+		which the subsection may be extended or collapsed, is not displayed. Subsections are 
+		collapsible by default.
 	</p>
 </article>
 
@@ -166,113 +407,256 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='query'>Query</h3>
 	<p>
-		The Query field is used for:
-		<ul>
-			<li>choice boxes (Get_Resource and Get_Get_Resource elements)</li> 
-			<li>custom menus on Sections, Pages and Subsections</li>
-			<li>choice boxes allowing multiple user choices implemented through menus (Get_Multiple, 
-				Get_Get_Multiple and Import_Multiple menus)</li>
-		</ul>
+		The Query metadata is used to specify which elements will be displayed in a choice box 
+		(GetResource and GetGetResource elements), as well as to specify the target of a Proxy 
+		element (see <a href='../resources_en/'>RESOURCES</a> for details on GetResource, 
+		GetGetResource and Proxy elements).
 	</p>
-	<h4>Format for Get_ (either Get_Resource or Get_Multiple)</h4>
-	<p><code>portfolio_code</code>.<code>semantic_tag</code>.<code>label</code></p>
+	
+	<h4>Query Format for GetResource elements</h4>
+	<p><code>portfolio code</code>.<code>semantic tag</code>.<code>label</code></p>
 	<ul>
 		<li>
-			<code>portfolio_code</code>: Code of rubrics portfolio in which to search for the specified
-			semantic tag. Format is 'project code.rubrics portfolio code'. If 'project code.' is not present, 
-			search for the rubrics portfolio will be in the current project (project containing the Get_).
+			<code>portfolio code</code> Code of the rubrics portfolio in which to search for the elements
+			to display in the choice box. The format is <i>project code.rubrics portfolio code</i>. If 
+			<i>project code</i> is not present, the search for the rubrics portfolio will take place in 
+			the current project (project containing the GetResource element).
 		</li>
-		<li><code>semantic_tag</code>: Semantic tag of elements to search for in the rubrics portfolio.</li>
-		<li><code>label</code>: Reserved word.</li>
+		<li><code>semantic tag</code> Semantic tag of the elements to display in the choice box.</li>
+		<li>
+			<code>label</code> Reserved word. When searching for Item or Subsection elements (see other
+			options below).
+		</li>
 	</ul>
-	<h4>Format Get_Get_ (either Get_Get_Resource or Get_Get_Multiple)</h4>
-	<p><code>portfolio_code</code>.<code>position</code>.<code>semantic_tag1</code>.<code>semantic_tag2</code>.<code>label</code>
+	<p> 
+		Option <code>self</code><br>
+		Can replace <code>portfolio code</code>. In that case, the search will take place within the
+		current portfolio (portfolio containing the GetResource element).
+	</p>
+	<p> 
+		Option <code>text</code><br>
+		Can replace <code>label</code> if the elements searched for are Long Text or Short Text elements.
+		In that case, it is the text in the resource that will be displayed in the choice box and then in 
+		the GetResource element.
+	</p>
+	<p> 
+		Option <code>fileid</code><br>
+		Can replace <code>label</code> if the elements searched for are Image elements. In that case, 
+		it is the image in the resource that will be displayed in the choice box and then in the 
+		GetResource element. The Image elements must be created inside the same portfolio as the 
+		GetResource element; hence to be used in combination with the <code>self</code> option.
+	</p>
+	<p> 
+		Option <code>resource</code><br>
+		Can replace <code>label</code> if the elements searched for are Item elements. In that case, 
+		the GetResource element will be updated if the selected Item element is modified. The Item 
+		elements must be created inside the same portfolio as the GetResource element; hence to be used 
+		in combination with the <code>self</code> option.
+	</p>
+	
+	<h4>Query Format for GetGetResource elements</h4>
+	<p>
+		<code>portfolio code</code>.<code>position</code>.<code>semantic tag1</code>.<code>semantic 
+		tag2</code>.<code>label</code>
 	</p>
 	<ul>
-		<li><code>portfolio_code</code>: Code of rubrics portfolio in which to search.</li>
 		<li>
-			<code>position</code>: Position, in the current portfolio, of the parent element which will
-			restrict the search in the rubrics portfolio. One of the following values: <i>child</i>, 
-			<i>sibling</i>, <i>parent</i>, <i>parent.parent</i>, <i>parent.parent.parent</i>
+			<code>portfolio code</code> Code of the rubrics portfolio in which to search for the elements
+			specified by <code>semantic tag2</code>. The format is <i>project code.rubrics portfolio 
+			code</i>. If <i>project code</i> is not present, the search for the rubrics portfolio will 
+			take place in the current project (project containing the GetGetResource element).
 		</li>
 		<li>
-			<code>semantic_tag1</code>: Semantic tag of parent element (restricts the search inside this 
-			parent element in the rubrics portfolio).
+			<code>position</code> Indicates where in the current portfolio to search for the code of the
+			element that will restrict the search in the Rubrics portfolio. Takes one of the following
+			values <i>child</i>, <i>sibling</i>, <i>parent</i>, <i>parent.parent</i>, 
+			<i>parent.parent.parent</i>.
 		</li>
-		<li><code>semantic_tag2</code>: Semantic tag of elements to search for in the rubrics portfolio.</li>
-		<li><code>label</code>: Reserved word.</li>
+		<li>
+			<code>semantic tag1</code> Semantic tag of the parent element (restricts the search to the 
+			children of this parent).
+		</li>
+		<li><code>semantic tag2</code> Semantic tag of the elements to display in the choice box.</li>
+		<li><code>label</code> Reserved word.</li>
 	</ul>
-</article>
-
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='get_multiple'>Menu - Get_Multiple</h3>
-	<p>
-		This function allows the user to select multiple items from a list. For each item selected by the 
-		user, an reusable component is added to the portfolio. This component is usualy a Get_Resource element, 
-		but it may also be a structural element containing, amongst other things, the Get_Resource element. In
-		any case, the user's choice is set by Karuta in the Get_Resource element.
-	</p>
-	<h4>Format</h4>
-	<p>
-		<code>function</code>,<code>get_multiple</code>/<code>query</code>/<code>portfolio_code.semantic_tag
-		</code>/<code>get_resource_semantic_tag</code>,<code>label@en</code>,<code>roles</code>
-	</p>
+	
+	<h4>Query Format for Proxy elements</h4>
+	<p><code>portfolio code</code>.<code>semantic tag</code>.<code>label</code></p>
 	<ul>
-		<li><code>function</code>: Reserved word.</li>
-		<li><code>get_multiple</code>: Reserved word.</li>
-		<li><code>query</code>: Query of the Get_Resource element (see Query above).</li>
 		<li>
-			<code>portfolio_code.semantic_tag</code>: Reusable component to add to the portfolio 
-			 (Get-Resource element or more complex component containing the Get_Resource element).
+			<code>portfolio code</code> Code of the portfolio in which to search for the target to 
+			display.
 		</li>
-		<li><code>get_resource_semantic_tag</code>: Semantic tag of the Get_Resource element.</li>
-		<li><code>label@en</code>: User menu label.</li>
-		<li><code>roles</code>: List of roles that have this menu (separated by a space character).</li>
-	</ul>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='get_get_multiple'>Menu - Get_Get_Multiple</h3>
-	<p>
-		Same as the previous function, except the choices available to the user in the list are restricted 
-		by the selection in a parent element (as in Get_Get_Resource elements).
-	</p>
-	<h4>Format</h4>
-	<p>
-		<code>function</code>,<code>get_get_multiple</code>/<code>query</code>/<code>
-		portfolio_code.semantic_tag</code>/<code>get_get_resource_semantic_tag</code>,
-		<code>label@en</code>,<code>roles</code>
-	</p>
-	<ul>
-		<li><code>function</code>: Reserved word.</li>
-		<li><code>get_get_multiple</code>: Reserved word.</li>
-		<li><code>query</code> : Query of the Get_Get_Resource element.</li>
 		<li>
-			<code>portfolio_code.semantic_tag</code>: Reusable component to add to the portfolio 
-			(Get_Get_Resource element or more complex component containing the Get_Get_Resource element).
+			<code>semantic tag</code> Semantic tag of the elements amongst which to choose the target
+			to display.
 		</li>
-		<li><code>get_get_resource_semantic_tag</code>: Semantic tag of the Get_Get_Resource element.</li>
-		<li><code>label@en</code>: User menu label.</li>
-		<li><code>roles</code>: List of roles that have this menu (separated by a space character).</li>
+		<li><code>label</code> Reserved word.</li>
 	</ul>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='import_multiple'>Menu - Import_Multiple</h3>
+	<h3 id='sharing'>Share</h3>
+	<p>
+		The Share metadata is used to allow users to send a third party an email containing a hyperlink
+		that shares part or all of their portfolio with this person.
+	</p>
+	<h4>Share Format</h4>
+	<p>
+		<code>role that shares</code>,<code>visitor role</code>,<code>role(s) and/or email(s) of 
+		recipient(s)</code>,<code>security level</code>,<code>link lifespan</code>,<code>button 
+		label</code>@en[,<code>condition</code>]
+	</p>
+	<ul>
+		<li>
+			<code>role that shares</code> Role of user that can share (will have the sharing button).
+		</li>
+		<li><code>visitor role</code> Role the recipient will have in the portfolio.</li>
+		<li>
+			<code>role(s) and/or email(s) of recipient(s)</code> Role(s) and/or email(s) of recipient(s). 
+			If it is a role, all users who have been shared with the portfolio in this role will receive 
+			an email.
+		</li>
+		<li>
+			<code>security level</code> 0 to 4 (see security level descriptions below).
+		</li>
+		<li>
+			<code>link lifespan</code> In hours. After this time, the link in the email will be
+			deactivated.
+		</li>
+		<li>
+			<code>button label</code> Label that will appear on the sharing button. Append with @en
+			for English.
+		</li>
+		<li>
+			<code>condition</code> Optionnal. Condition for the sharing button to be available to
+			the user. Example: <i>submitted=='Y'</i>.
+		</li>
+	</ul>
+	<p> 
+		Option <code>?</code><br>
+		Can replace <code>role(s) and/or email(s) of recipient(s)</code>. In this case the email's 
+		recipient is not predetermined by the designer; the user will specify an email address in a
+		pop-up window. 
+	</p>
+	
+	<h4>Security Levels</h4>
+	<p>
+		Level 0 &ndash; Karuta user<br>
+		The email's recipient has a Karuta account and the portfolio is already shared with him or 
+		her in the appropriate role. Karuta will require their password if they are not already 
+		logged in.
+	</p>
+	<p>
+		Level 1<br>
+		The email's recipient has a Karuta account and the portfolio is already shared with him or 
+		her in the appropriate role. Karuta will not require their password (if they are not already
+		logged in, a temporary password will be created). For security purposes, there should be a
+		<i>Submit</i> button on the elements the visitor can edit.
+	</p>
+	<p>
+		Level 2<br>
+		The email's recipient has a Karuta account but the portfolio is not shared with them. Karuta
+		will share the portfolio with the user in the appropriate role. If they are not already logged 
+		in, a temporary password will be created. For security purposes, there should be a <i>Submit</i> 
+		button on the elements the visitor can edit.	
+		</p>
+	<p>
+		Level 3<br>
+		If the email's recipient doesn't have a Karuta account, a temporary user ID will be created.
+		Karuta will share the portfolio with the user in the appropriate role. 
+		For security purposes, there should be a <i>Submit</i> button on the elements the 
+		visitor can edit.
+	</p>
+	<p>
+		Level 4 &ndash; Public link<br>
+		If the email's recipient doesn't have a Karuta account, a temporary user ID will be created.
+		The user's role is <i>all</i>: can see but cannot edit. The portfolio instance must be shared 
+		with the user <i>public</i> in the role <i>all</i>.
+	</p>
+	
+	<h4>Use Case Examples</h4>
+	<p>
+		The student can show his or her portfolio to anyone (Karuta user or not) in read-only mode 
+		(no edit rights):<br>
+		<code>student,all,?,4,unlimited,Share@en</code>
+	</p>
+	<p>
+		The student can show his portfolio to anyone (Karuta user or not) in read-only mode (no edit 
+		rights), but the sharing has a limited duration of 24 hours:<br>
+		<code>student,all,?,4,24,Share@en</code>
+	</p>
+	<p>
+		The student requests for his or her teacher to proceed with their evaluation; the teacher has 
+		a Karuta account and the student's portfolio is shared with said teacher in the <i>teacher</i> 
+		role:<br>
+		<code>student,teacher,teacher,1,12,Request an evaluation@en</code>
+	</p>
+	<p>
+		The student requests for his or her internship supervisor to proceed with their evaluation; 
+		the internship supervisor does not have a Karuta account:<br>
+		<code>student,evaluator,yves.lacoste@airfrance.com,3,12,Request an evaluation@en</code>
+	</p>
+	<p>
+		The student asks a peer to add a review in his or her portfolio; the colleague has a Karuta 
+		account:<br>
+		<code>student,peer,?,2,12,Request a comment@en</code>
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='import_ggmultiple'>Menu - Import_GGMultiple</h3>
+	<h3 id='menu'>Menus</h3>
+	<p>
+		The Menu metadata is used to compose menus to import  components into a portfolio. Usually
+		the components are pre-built by the designer in a Reusable Components portfolio and the 
+		menu allows users to add these parts to their portoflio. In this case the imported component
+		is copied and then pasted into the portfolio. 
+	</p>
+	<p>
+		TIP: Designers can create menus for themselves to copy portfolios parts from one portfolio
+		model to another.
+	</p>
+	<p>
+		Karuta also has various pre-programmed functions that can be called through the Menu metadata.
+		See the <a href='../functions_en/'>MENU FONCTIONS</a> page for complete specification.
+	</p>
+	
+	<h4>Menu Format</h4>
+	<p>
+		<code>portfolio code</code>,<code>semantic tag</code>,<code>menu 
+		label</code>@en,<code>role(s)</code>[;other menus]
+	</p>
+	<ul>
+		<li><code>portfolio code</code> Code of the portfolio from which to import the component</li>
+		<li><code>semantic tag</code> Semantic tag of the component to import</li>
+		<li>
+			<code>menu label</code> Label that will appear on the menu button. Append with @en for 
+			English.</li>
+		<li>
+			<code>role(s)</code> List of roles, separated by a space character, that will have the menu 
+			element.
+		</li>
+	</ul>
+	<p>NOTE&nbsp;: There is no final semicolon.</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='sharing'>Sharing by the end-user</h3>
+	<h3 id='menulabels'>Menu Button Text</h3>
+	<p>
+		Alternate text for the Menu button when more than one option is offered to a role (by 
+		default <i>Menu</i>). Append with @en for English. Example: <i>Add a diploma@en</i> if 
+		there are multiple types of diploma components.
+	</p>
 </article>
 
-
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='help'>Help Bubble</h3>
+	<p>
+		Displays additional information in a pop-up bubble next to the element's label.
+		Append with @en for English.
+	</p>
+</article>

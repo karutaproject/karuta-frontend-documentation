@@ -1,0 +1,371 @@
+---
+layout: archive
+permalink: /functions_en/
+title: "Preprogrammed Functions for the Menu Metadata"
+sidebar:
+ nav: "functions_en"
+---
+<p>Karuta has multiple preprogrammed functions that can be called through the Menu metadata.</p>
+<ul>
+	<li><code><a href='#get_multiple'>Get_Multiple</a></code></li>
+	<li><code><a href='#get_get_multiple'>Get_Get_Multiple</a></code></li>
+	<li><code><a href='#import_multiple'>Import_Multiple</a></code></li>
+	<li><code><a href='#import_ggmultiple'>Import_GGMultiple</a></code></li>
+	<li><code><a href='#proxy_multiple'>Proxy_Multiple</a></code></li>
+	<li><code><a href='#importAndSetDateToday'>ImportAndSetDateToday</a></code></li>
+	<li><code><a href='#moveTO'>MoveTO</a></code></li>
+	<li><code><a href='#execReport_BatchCSV'>ExecReport_BatchCSV</a></code></li>
+</ul>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='get_multiple'>Get_Multiple</h3>
+	<p>
+		This function is used to allow the user to select multiple elements from a list. For 
+		each selected element, a reusable component is imported into the portfolio. One element of the 
+		component is then updated with the code and label of the selected element (usually a Page, 
+		a Subsection or a GetResource element &mdash; in the case of a GetResource, it is the resource 
+		that is updated).
+	</p>
+	<p>
+		The list of elements must exist in a Rubrics portfolio. All the elements displayed in the list
+		must share the same semantic tag and each must have a unique code (same rules as the 
+		GetResource element).
+	</p>
+	<p>
+		For this operation to work, the user must have the right to Edit the node or the resource on the 
+		component that will be updated (node if the updated component is a Page or a Subsection element 
+		and resource if it is a GetResource element).
+	</p>
+	<p>
+		TIP: To prevent the user from modifying directly the node or resource after the operation, check 
+		the Node Without Pencil or Resource Without Pencil metadata.
+	</p>
+	<h4>Format</h4>
+	<p>
+		<code>function</code>,<code>get_multiple</code>/<code>query</code>/<code>portfolio 
+		code.semantic tag</code>/<code>semantic tag</code>,<code>label</code>,<code>role(s)</code>
+	</p>
+	<ul>
+		<li><code>function</code> Reserved word.</li>
+		<li><code>get_multiple</code> Reserved word.</li>
+		<li>
+			<code>query</code> Query metadata of the equivalent GetResource (see 
+			<a href='../metadata_en/#query'>METADATA</a> for details). Returns a list of codes.
+		</li>
+		<li><code>portfolio code.semantic tag</code> Reusable component to import.</li>
+		<li>
+			<code>semantic tag</code> Element of the component to update with the selected code and 
+			label (may be the component itself or one of it's children).
+		</li>
+		<li>
+			<code>label</code> Button label for the multiple choice box. Append with @en for English.
+		</li>
+		<li>
+			<code>role(s)</code> List of roles, separated by a space character, that will have the button.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='get_get_multiple'>Get_Get_Multiple</h3>
+	<p>
+		Equivalent to the previous function, except that the choices to the user are restricted by the
+		selection in a parent element. This is the same principle as the GetGetResource element (see 
+		<a href='../resources_en/#getGetResource'>RESOURCES</a> for details).
+	</p>
+	<h4>Format</h4>
+	<p>
+		<code>function</code>,<code>get_get_multiple</code>/<code>query</code>/<code>portfolio 
+		code.semantic tag</code>/<code>semantic tag</code>,<code>label</code>,<code>role(s)</code>
+	</p>
+	<ul>
+		<li><code>function</code> Reserved word.</li>
+		<li><code>get_get_multiple</code> Reserved word.</li>
+		<li>
+			<code>query</code> Query metadata of the equivalent GetGetResource (see 
+			<a href='../metadata_en/#query'>METADATA</a> for details). Returns a list of codes.
+		</li>
+		<li><code>portfolio code.semantic tag</code> Reusable component to import.</li>
+		<li>
+			<code>semantic tag</code> Element of the component to update with the selected code and 
+			label (may be the component itself or one of it's children).
+		</li>
+		<li>
+			<code>label</code> Button label for the multiple choice box. Append with @en for English.
+		</li>
+		<li>
+			<code>role(s)</code> List of roles, separated by a space character, that will have the button.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='import_multiple'>Import_Multiple</h3>
+	<p>
+		This function is used to allow the user to select multiple elements from a list. For
+		each selected element, an element is imported into the portfolio (most often the selected element 
+		itself, but not always &mdash; see below).
+	</p>
+	<p>
+		The list of elements must exist in a Rubrics portfolio. All the elements displayed in the list
+		must share the same semantic tag and each must have a unique code (same rules as the 
+		GetResource element). IMPORTANT: in the case of Item elements, the <i>Code&nbsp;- Item</i> must
+		be repeated in the <i>Code</i> field of the node.
+	</p>
+	<p>
+		The imported elements can be the same elements selected in the Rubrics portfolio (Item or 
+		Subsection elements). They can also be copied from a third portfolio (for example a Reusable
+		components portfolio). In this case, the imported elements are those that have the same codes 
+		as the ones selected in the list. The elements of the third portfolio must thus have the same
+		codes as the elements of the Rubrics portfolio.
+	</p>
+	<h4>Format</h4>
+	<p>
+		<code>function</code>,<code>import_multiple</code>/<code>query</code>/<code>portfolio
+		code</code>,<code>label</code>,<code>role(s)</code>
+	</p>
+	<ul>
+		<li><code>function</code> Reserved word.</li>
+		<li><code>import_multiple</code> Reserved word.</li>
+		<li>
+			<code>query</code> Query metadata of the equivalent GetResource (see 
+			<a href='../metadata_en/#query'>METADATA</a> for details). Returns a list of codes.
+		</li>
+		<li>
+			<code>portfolio code</code> Code of the portfolio from which to import the nodes that 
+			have the selected codes. Can be the same as that of the Query, or not.
+		</li>
+		<li>
+			<code>label</code> Button label for the multiple choice box. Append with @en for English.
+		</li>
+		<li>
+			<code>role(s)</code> List of roles, separated by a space character, that will have the button.
+		</li>
+	</ul>
+	<p> 
+		Option <code>?</code>.<code>semantic tag</code><br>
+		Can replace <code>portfolio code</code>. In this case, the portfolio code will be the code of the 
+		selected element and the imported element will be that with the <code>semantic tag</code>. In this 
+		way elements can be imported from multiple portfolios. For example, the user may select multiple 
+		rubrics (competency frameworks) from a list, and import into his or her portfolio the competencies 
+		of these rubrics (specified by <code>semantic tag</code>).
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='import_ggmultiple'>Import_GGMultiple</h3>
+	<p>
+		Equivalent to the previous function, except that the choices to the user are restricted by the
+		selection in a parent element. This is the same principle as the GetGetResource element (see 
+		<a href='../resources_en/#getGetResource'>RESOURCES</a> for details).
+	 </p>
+	<h4>Format</h4>
+	<p>
+		<code>function</code>,<code>import_ggmultiple</code>/<code>query</code>/<code>portfolio 
+		code</code>,<code>label</code>,<code>role(s)</code>
+	</p>
+	<ul>
+		<li><code>function</code> Reserved word.</li>
+		<li><code>import_ggmultiple</code> Reserved word.</li>
+		<li>
+			<code>query</code> Query metadata of the equivalent GetGetResource (see 
+			<a href='../metadata_en/#query'>METADATA</a> for details). Returns a list of codes.
+		</li>
+		<li>
+			<code>portfolio code</code> Code of the portfolio from which to import the nodes that 
+			have the selected codes. Can be the same as that of the Query, or a different one.
+		</li>
+		<li>
+			<code>label</code> Button label for the multiple choice box. Append with @en for English.
+		</li>
+		<li>
+			<code>role(s)</code> List of roles, separated by a space character, that will have the button.
+		</li>
+	</ul>
+	<p>
+	 	OPTION <code>?</code> in the query<br> 
+	 	Can replace the portfolio code in the query. In this case, the code of the portfolio 
+	 	for the query will be the code of the parent element.
+	 </p>
+	 <p>
+	  	OPTION <code>?</code><br>
+	  	Can replace <code>portfolio code</code>. In this case, the code of the portfolio from which to
+	  	import will be the code of the selection in the parent.
+	 </p>
+	
+	<h4>Use Case Example</h4>
+	<p>
+		The user selects a rubric (or competency framework) from a list, using a GetResource element (in this 
+		case the codes of the Item elements must be the codes of the corresponding Rubrics portfolios). The 
+		user can then import elements from this rubric into his or her portfolio, using the Import_GGMultiple 
+		function.
+	</p>
+	<p>
+		Menu<br> 
+		<code>function</code>,<code>import_ggmultiple</code>/<code>?.child.rubric.skill$.label</code>/<code>?</code>,<code>Add one or multiple competencies</code>@en,<code>student</code>
+	</p>
+	<p>
+		How it works<br>
+		This Menu metadata is located on a Subsection element that contains the GetResource element (hence 
+		the use of the reserved word <code>child</code>). <code>rubric</code> is at once the semantic tag 
+		of the GetResource element and the semantic tag of the Item elements composing the list of rubrics. 
+		The code of each Item element is the same as the code of the corresponding Rubrics portfolio. Both
+		<code>?</code> symbols refer to this Rubrics portfolio code.
+	</p>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='proxy_multiple'>Proxy_Multiple</h3>
+	<p>
+		This function is used to allow the user to select multiple elements from a list. For each 
+		selected element, a Proxy element is imported into the portfolio and it's target is update 
+		with the selection. The Proxy element must exist in a Reusable Components portfolio. 
+	</p>
+	<p>
+		This function results in the equivalent of a Import_Multiple function, except that instead 
+		of importing the selected element in the portfolio, the selected element is only displayed 
+		in the portfolio through a Proxy element.
+	</p>
+	<p>
+		For this operation to work, the user must have the right to Edit the resource on the 
+		component that will be updated (the Proxy element).
+	</p>
+	<h4>Format</h4>
+	<p>		
+		<code>function</code>,<code>proxy_multiple</code>/<code>query</code>/<code>portfolio 
+		code.semantic tag</code>/<code>semantic tag</code>,<code>label</code>,<code>role(s)</code>
+	</p>
+	<ul>
+		<li><code>function</code> Reserved word.</li>
+		<li><code>proxy_multiple</code> Reserved word.</li>
+		<li>
+			<code>query</code> Query metadata of the equivalent GetResource (see 
+			<a href='../metadata_en/#query'>METADATA</a> for details). Returns a list of codes.
+		</li>
+		<li><code>portfolio code.semantic tag</code> Proxy element to import.</li>
+		<li><code>semantic tag</code> Proxy element to update.</li>
+		<li>
+			<code>label</code> Button label for the multiple choice box. Append with @en for English.
+		</li>
+		<li>
+			<code>role(s)</code> List of roles, separated by a space character, that will have the button.
+		</li>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='importAndSetDateToday'>ImportAndSetDateToday</h3>
+	<p>
+		This function is used to timestamp the date when a component is added by the user. When the 
+		user clicks on the menu, a reusable component is imported into the portfolio and a Calendar
+		element within this component is updated with the current date. The component, including the
+		Calendar element, must exist in a Reusable Components portfolio.
+	</p>
+	<p>
+		For this operation to work, the user must have the right to Edit the resource on the component 
+		that will be updated (the Calendar element).
+	</p>
+	<p>
+		TIP: To prevent the user from modifying directly the resource after the operation, check the 
+		Resource Without Pencil metadata.
+	</p>
+	<h4>Format</h4>
+	<p>
+		<code>function</code>,<code>importAndSetDateToday</code>/<code>portfolio 
+		code</code>/<code>component semantic tag</code>/<code>Calendar semantic 
+		tag</code>,<code>label</code>@fr,<code>role(s)</code>
+	</p>
+	<ul>
+		<li><code>function</code> Reserved word.</li>
+		<li><code>importAndSetDateToday</code> Reserved word.</li>
+		<li>
+			<code>portfolio code</code> Code of the Reusable Components portfolio from which to import
+			the component.
+		</li>
+		<li><code>component semantic tag</code> Component to import.</li>
+		<li><code>Calendar semantic tag</code> Calendar element to update.</li>
+		<li><code>label</code> Label for the menu element. Append with @en for English.</li>
+		<li>
+			<code>role(s)</code> List of roles, separated by a space character, that will have the menu 
+			element.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='moveTO'>MoveTO</h3>
+	<p>
+		This function is used to create a toggle button that allows the user to move a portfolio element 
+		back and forth between two predefined structural elements. On each execution, the destination and 
+		starting point are reversed.
+	</p>
+	<p>
+		For example, allow the user to toggle an experience or a diploma between the Present and Past
+		sections of his or her portfolio.
+	</p>
+	<h4>Format</h4>
+	<p>
+		<code>function</code>,<code>moveTO</code>/<code>destination</code>/<code>starting 
+		point</code>,<code>label</code>@fr,<code>role(s)</code>
+	</p>
+	<ul>
+		<li><code>function</code> Reserved word.</li>
+		<li><code>moveTO</code> Reserved word.</li>
+		<li>
+			<code>destination</code> Semantic tag of the Section, Page or Subsection of destination.
+		</li>
+		<li>
+			<code>starting point</code> Semantic tag of the Section, Page or Subsection that is the 
+			starting point.
+		</li>
+		<li><code>label</code> Label for the toggle button. Append with @en for English.</li>
+		<li>
+			<code>role(s)</code> List of roles, separated by a space character, that will have the button.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='execReport_BatchCSV'>ExecReport_BatchCSV</h3>
+	<p>
+		This function executes a report script on the data of the current portfolio (portfolio containing
+		the call to the function), builds a temporary CSV file with the resulting data, then feeds this 
+		file to a batch script.
+	</p>
+	<p>
+		This function can be used to create a cohort management portfolio, for a user that must execute 
+		predefined management operations without having designer rights (for example create user accounts
+		and portfolio instances).
+	</p>
+	<p>
+		To do this, the report script, instead of displaying its results on the screen, must write the 
+		data in a CSV file. This is enabled by two report elements: <code>CSV Line</code> and <code>CSV
+		Value</code> (see section <a href='../report_en/#commandesCSV'>CSV Commands</a> on the Report 
+		page for details.) 
+	</p>
+	<p>
+		NOTE&nbsp;: The CSV file is not saved.
+	</p>
+	<h4>Format</h4>
+	<p>
+		<code>function</code>,<code>execReport_BatchCSV</code>/<code>report 
+		code</code>,<code>label</code>,<code>role(s)</code>
+	</p>
+	<ul>
+		<li><code>function</code> Reserved word.</li>
+		<li><code>execReport_BatchCSV</code> Reserved word.</li>
+		<li><code>report code</code> Code of the Report portfolio (containing the report script).</li>
+		<li><code>label</code> Label of the button to initiate execution. Append with @en for English.</li>
+		<li>
+			<code>role(s)</code> List of roles, separated by a space character, that will have the button.
+		</li>
+	</ul>
+</article>
+

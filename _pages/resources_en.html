@@ -7,26 +7,27 @@ sidebar:
 ---
 <p>
 	Resource elements contain the data of a portfolio. Each resource element has a list of rights
-	(See, Edit, Submit, etc). One or multiple roles (for example <i>student</i> or <i>teacher</i>) 
-	may be specified for each of these rights. The roles for futur end-users of a portfolio are 
-	created by the portfolio designer.
+	(See, Edit, Submit, etc). For each right, the designer may specify one or multiple roles (for 
+	example <i>student</i> or <i>teacher</i>) that will have this right. This
+	is done in the metadata of the element. It is the portfolio designer who decides what 
+	the various roles will be for the future portfolio users. Users will then be shared with a 
+	portfolio in a specific role.
 </p>
 <p>
 	Note that the designer has all the rights on all portfolio elements while building the
-	portfolio. It is sometimes useful for the designer to pre-fill data in Resource elements to 
-	supply information to end-users (for example supply instructions or attach a file to the 
-	portfolio). In this case, the Edit right is generally not attributed to any role.
+	portfolio. It is sometimes useful for the designer to pre-fill data in resource elements to 
+	supply information to users (for example give instructions or attach a file for the user to download). 
+	In this case, the Edit right is generally not attributed to any role.
 </p>
 <p>
 	In the XML representation of the tree, the resource elements are the leaves of the tree.  
 </p>
 
-<p>Some of the Karuta Resource elements are:</p>
-<ul>
+<p>The available resources are:</p>
 <ul>
 	<li><code><a href='#field'>Short Text</a></code></li>
-	<li><code><a href='#textfield'>Long Text</a></code></li>
-	<li><code><a href='#comment'>Comment</a></code></li>
+	<li><code><a href='#textfield'>Long Text</a></code></li> 
+	<li><code><a href='#commentaires'>Comments</a></code></li>
 	<li><code><a href='#image'>Image</a></code></li>
 	<li><code><a href='#audio'>Audio</a></code></li>
 	<li><code><a href='#video'>Video</a></code></li>
@@ -34,16 +35,17 @@ sidebar:
 	<li><code><a href='#oembed'>oEmbed</a></code></li>
 	<li><code><a href='#url'>URL</a></code></li>
 	<li><code><a href='#url2unit'>URL2Unit</a></code></li>
-	<li><code><a href='#sendEmail'>SendEmail</a></code></li>
-	<li><code><a href='#calendar'>Calendar</a></code></li>
-	<li><code><a href='#color'>Color</a></code></li>
+	<li><code><a href='#sendEmail'>Send Email</a></code></li>
+	<li><code><a href='#date'>Calendar</a></code></li>
+	<li><code><a href='#couleur'>Color</a></code></li>
 	<li><code><a href='#dashboard'>Dashboard</a></code></li>
+	<li><code><a href='#report'>Deferred Report</a></code></li>
 	<li><code><a href='#getResource'>GetResource</a></code></li>
 	<li><code><a href='#getGetResource'>GetGetResource</a></code></li>
 	<li><code><a href='#getDoubleResource'>GetDoubleResource</a></code></li>
 	<li><code><a href='#item'>Item</a></code></li>
 	<li><code><a href='#proxy'>Proxy</a></code></li>
-</ul>
+	<li><code><a href='#getProxy'>GetProxy</a></code></li>
 </ul>
 
 <article>
@@ -61,18 +63,25 @@ sidebar:
 	<h3 id='textfield'>Long Text</h3>
 	<p>
 		The Long Text element is used to enter a longer text. A basic text editor with simple 
-		layout options is available to the end-user with the Edit right on this element.</br>
+		layout options is available to the user with the Edit right on this element.
+	</p>
+	<p>
 		This element is also useful to include instructions in the portfolio, from to designer
-		to the end-users. In this case, the Edit right is not attributed to any role.
+		to the users. In this case, the Edit right is not attributed to any role.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='comment'>Comment</h3>
+	<h3 id='commentaires'>Comments</h3>
 	<p>
-		The Comment element is a TextField element which is signed and timestamped. The user name 
-		along with date and time are added at the end of the comment.
+		The Comments element is a Long Text which is signed and timestamped. The name of
+		the user that edits the element, along with date and time, are added at the end of the 
+		comment.
+	</p>
+	<p>
+		Usually used in combination with a user menu that allows users to add comments as need
+		be, and a submit button to keep track of the evolution of the comments.
 	</p>
 </article>
 
@@ -80,12 +89,12 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='image'>Image</h3>
 	<p>
-		The Image element allows the designer or the end-user with the Edit right on the element 
-		to upload an image file to the portfolio (all regular formats are accepted). The image is 
-		then displayed in the portfolio.</br>
-		It is possible to give the end-user with the Edit right on this element an additional right
-		to modify the display size of the image (otherwise the display size is set by the portfolio
-		designer).
+		The Image element is used to upload an image file to the portoflio (all common formats 
+		are accepted). The image is then displayed in the portfolio.
+	</p>
+	<p>
+		It is possible to assign an extra right to the role that has the Edit Resource right
+		to modify the display size (otherwise the display size is defined by the designer). 
 	</p>
 </article>
 
@@ -93,10 +102,11 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='audio'>Audio</h3>
 	<p>
-		The Audio element allows the upload of an MP3 file to the portfolio. A basic audio player is 
+		The Audio element is used to upload an MP3 file to the portfolio. A basic audio player is 
 		available to listen to the uploaded file.
-		</br>
-		Only the end-user with the Edit right may upload a file into this element, but any user with
+	</p>
+	<p>
+		Only the user with the Edit right may upload a file into this element, but any user with
 		the See right (by default <i>all</i>, all roles), may listen to it.
 	</p>
 </article>
@@ -105,11 +115,12 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='video'>Video</h3>
 	<p>
-		The Video element allows the upload of an MP4 file to the portfolio. A basic video player 
-		is available to watch to the uploaded file.
-		</br>
-		Only the end-user with the Edit right may upload a file into this element, but any user with
-		the See right (by default <i>all</i>, all roles), may watch it.
+		The Video element is used to upload an MP4 file to the portfolio. A basic video player 
+		is available to watch the uploaded file.
+	</p>
+	<p>
+		Only the user with the Edit right may upload a file into this element, but any user with
+		the See right may watch it.
 	</p>
 </article>
 
@@ -117,9 +128,9 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='document'>Document</h3>
 	<p>
-		The Document element allows the upload of a file of any type to the portfolio. Contrary to 
+		The Document element is used to upload of a file of any type to the portfolio. Contrary to 
 		the Image, Audio and Video elements, the content of the file is not displayed directly in the 
-		portfolio &mdash; but the file is available for download by any user with the See right on 
+		portfolio &mdash; however the file is available for download by any user with the See right on 
 		the element.
 	</p>
 </article>
@@ -128,12 +139,14 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='oembed'>oEmbed</h3>
 	<p>
-		The oEmbed element allows the end-user with the Edit right on the element to embed content 
-		in the portfolio (like slides, videos, etc) that are hosted on a third-party site (like 
-		Youtube, Vimeo, etc). A basic player is available to view the content within the portfolio
-		directly.</br>
-		For more information on oEmbed elements, see 
-		<a href='https://oembed.com/' target='_blank'>https://oembed.com/</a>.
+		The oEmbed element is used to display in the portfolio presentations (video, slides, etc)
+		stored on a third party site (YouTube, Vimeo, Meetup, Facebook, etc). The desired content
+		is specified by url. A basic player is available to view the content within the portfolio
+		directly.
+	</p>
+	<p>
+		For more information on oEmbed elements, see <a href='https://oembed.com/' 
+		target='_blank'>https://oembed.com/</a>.
 	</p>
 </article>
 
@@ -141,11 +154,13 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='url'>URL</h3>
 	<p>
-		The URL element allows the specification a hyperlink. A label may also be specified, in 
-		which case it will be displayed on the link instead of the url.</br>
-		Any user with the See role on the element may follow the link.</br>
-		The hyperlink must lead outside Karuta &mdash; for links within Karuta see URL2Unit (next 
-		paragraph).
+		The URL element is used to specify a hyperlink in the portfolio. A label may also be specified, 
+		in which case it will be displayed on the link instead of the url. Any user with the See right 
+		on the element may follow the link.
+	</p>
+	<p>
+		The hyperlink must lead outside Karuta &mdash; for links within Karuta see the URL2Unit element 
+		below.
 	</p>
 </article>
 
@@ -153,18 +168,18 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='url2unit'>URL2Unit</h3>
 	<p>
-		The URL2Unit element allows the specification of a hyperlink to another page of the
-		portfolio. It may be used to by the designer to create navigation links other than the 
-		left-hand navigation menu, or it may be used by the end-user to specify certain pages
-		of their portfolio they consider particularly important.
+		The URL2Unit element is used to specify a hyperlink to another page of the
+		portfolio. It may be used by the designer to create navigation links within the portfolio,
+		other than the left-hand navigation menu, or it may be used by the user to indicate certain 
+		pages of their portfolio they consider particularly important.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='sendEmail'>SendEmail</h3>
+	<h3 id='sendEmail'>Send Email</h3>
 	<p>
-		With a SendEmail element, a user may send an email to a predefined recipient without the 
+		With a Send Email element a user may send an email to a predetermined recipient, without the 
 		recipient's email address being revealed to the user.
 	</p>
 </article>
@@ -173,8 +188,7 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='calendar'>Calendar</h3>
 	<p>
-		The Calendar element allows the designer or the end-user with the Edit right on the element
-		to pick a date in a calendar.
+		The Calendar element is used to pick a date in a calendar.
 	</p>
 </article>
 
@@ -182,16 +196,40 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='color'>Color</h3>
 	<p>
-		The Color element allows the designer or the end-user with the Edit right on the element
-		to pick a color in a color palette.
+		The Color element is used to pick a color in a color palette.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='dashboard'>Dashboard</h3>
-	<p>The Dashboard element executes a report script (from a Report Portfolio) and displays the resulting 
-		html table.
+	<p>The Dashboard element executes a report script and displays the resulting HTML table.</p>
+	<p>
+		The report script is created in a seperate portfolio, a Report portfolio, and the code of this 
+		portfolio is specified in the Dashboard element. The Report portfolio code may be suffixed by 
+		one or more of the following attributes:
+	</p>
+	<ul>
+		<li>
+			<code>@local</code> The report script will execute only on the data of the current page
+			(page containing the Dashboard element) rather than on the entire portolio.
+		</li>
+		<li><code>@nospinning</code> The spinning wheel is not displayed.</li>
+		<li>
+			<code>@norefresh</code> The table is not updated if the data is modified.
+		</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='report'>Deferred Report</h3>
+	<p>
+		Like the Dashboard element, the Deferred Report element executes a report script and displays 
+		the resulting HTML table. However, instead of executing the script upon displaying the portfolio
+		page, the script is executed according to a predetermined time and frequency and stored in 
+		memory, and the pre-executed result is displayed when loading the page. This is useful for scripts
+		that are long to execute like aggregated cohort reports.
 	</p>
 </article>
 
@@ -199,11 +237,20 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='getResource'>GetResource (choice box)</h3>
 	<p>
-		The GetResource element allows you to build a list of elements amongst which the end-user
-		must make a choice. The elements that will fill the choice box are Resource elements of type
-		Item (see below) and are created in a separate portfolio - the Rubrics Portfolio. Which elements 
-		of the Rubrics Portfolio to display in the choice box is specified in the Query metadata of the 
-		GetResource element (see METADATA).
+		The GetResource element is used to build a list of elements amongst which the user can make 
+		a choice (dropdown list, choice box or radio button). 
+	</p>
+	<p>
+		The elements that will fill the choice box are resource elements of type
+		Item (see below) or Subsection elements and are usually created in a seperate portfolio:
+		a Rubrics portfolio. All elements of a choice box must share the same semantic tag and
+		each must have a unique code (<i>Code&nbsp;- Item</i> for Item elements and <i>Code</i> for
+		Subsection elements).
+	</p>
+	<p>
+		The Search metadata of the GetResource element is used to specify which elements of the 
+		Rubrics portfolio will populate the dropdown list (see the <a href='../metadata_en/'>METADATA</a> 
+		page for more detail). 
 	</p>
 </article>
 
@@ -211,32 +258,53 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='getGetResource'>GetGetResource (conditional choice box)</h3>
 	<p>
-		The GetGetResource element is a choice box whose Items are restricted by the choice a user
-		made in a previous GetResource element. The user's selection in the first choice box determines
-		which options will be displayed in the second. Which Items of the Rubrics Portfolio to 
-		display in the choice box is specified in the Query metadata of the GetGetResource element 
-		(see METADATA).
+		The GetGetResource element is used to build a choice box whose options are restricted by the 
+		choice made by the user in an associated GetResource element. The user's selection in the first
+		choice box determines which options will be displayed in the second. 
+	</p>
+	<p>
+		The Search metadata of the GetGetResource element is used to specify which elements of the 
+		Rubrics portfolio will populate the choice box (see the <a href='../metadata_en/'>METADATA</a> 
+		page for more detail). 
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='getDoubleResource'>GetDoubleResource (double choice box)</h3>
-	<p>The GetDoubleResource allows you to build two independent choice boxes within one single element.</p>
+	<p>
+		The GetDoubleResource is used to build two independent choice boxes within one single element.
+		For example to ask the user to pick a semester and a year.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='item'>Item</h3>
-	<p>The Item element is one option in a choice box. We group a project's Item elements in a Rubrics
-		portfolio.</p>
+	<p>
+		The Item element is one option of a choice box. A project's Item elements are grouped in a 
+		Rubrics portfolio. The code of each Item must be unique within the Rubrics portfolio 
+		(<i>Code&nbsp;- Item</i>). Items appearing in the same choice box must share the same semantic 
+		tag.
+	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='proxy'>Proxy</h3>
-	<p>The Proxy element allows you to display a portfolio element in a different portfolio. It is 
-		possible to give the end-user the right to modify the element displayed by proxy, in which
-		case the value of the original element is automatically updated.</p>
+	<p>The Proxy element is used to display an element of one portfolio in another portfolio.</p>
+	<p>
+		It is possible to give the user the right to modify the element displayed by proxy, in which
+		case the value of the original element is automatically updated.
+	</p>
 </article>
 
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='getProxy'>GetProxy</h3>
+	<p>
+		The GetProxy element is used to let the user choose from a choice box the target of the displayed 
+		Proxy. All elements available in the choice box must share the same semantic tag (for example 
+		choose between all <i>competency-page</i> pages).
+	</p>
+</article>

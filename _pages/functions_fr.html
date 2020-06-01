@@ -24,17 +24,18 @@ sidebar:
 		Permet à l'utilisateur de sélectionner plusieurs éléments parmi une 
 		liste. Pour chaque élément sélectionné, une composante réutilisable est importée dans le 
 		portfolio. Un élément de cette composante est alors mis à jour avec le code et le libellé de 
-		l'élément sélectionné (en général un élément Page, Sous-section ou Get_Resource&nbsp;&ndash; dans 
-		le cas d'un Get-Resource, c'est la resource qui est mise à jour). 
+		l'élément sélectionné (en général un élément Page, Sous-section ou GetResource&nbsp;&mdash; dans 
+		le cas d'un GetResource, c'est la resource qui est mise à jour). 
 	</p>
 	<p>
 		La liste d'éléments doit exister dans un portfolio référentiel. Tous les éléments affichés dans 
-		une liste doivent partager le même tag sémantique et chacun doit avoir un code unique. 
+		une liste doivent partager le même tag sémantique et chacun doit avoir un code unique (ce sont
+		les mêmes règles que pour un élément GetResource).
 	</p>
 	<p>
-		Pour que l'utilisateur puisse exécuter cette opération, il doit avoir le droit de Modifier le nœud
-		ou Modifier la ressource sur la composante mise à jour (nœud si la composante mise à jour est une 
-		Page ou une Sous-section, ressource si c'est un Get_Resource).
+		Pour que l'utilisateur puisse exécuter cette opération, il doit avoir le droit d'Éditer le nœud
+		ou la ressource sur la composante mise à jour (nœud si la composante mise à jour est une 
+		Page ou une Sous-section, ressource si c'est un GetResource).
 	</p>
 	<p>
 		ASTUCE&nbsp;: Afin que l'utilisateur ne puisse pas modifier directement le nœud ou la ressource 
@@ -42,26 +43,28 @@ sidebar:
 	</p>
 	<h4>Format</h4>
 	<p>
-		<code>function</code>,<code>get_multiple</code>/<code>recherche</code>/<code>code_portfolio.tag_sémantique</code>/<code>tag_sémantique</code>,<code>libellé</code>@fr,<code>rôles</code>
+		<code>function</code>,<code>get_multiple</code>/<code>recherche</code>/<code>code portfolio.tag 
+		sémantique</code>/<code>tag sémantique</code>,<code>libellé</code>,<code>rôle(s)</code>
 	</p>
 	<ul>
 		<li><code>function</code> Mot réservé.</li>
 		<li><code>get_multiple</code> Mot réservé.</li>
 		<li>
-			<code>recherche</code> Recherche du Get_Resource équivalent (voir section 
+			<code>recherche</code> Métadonnée Recherche du GetResource équivalent (voir  
 			<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails).
+			Retourne une liste de codes.
 		</li>
-		<li><code>code_portfolio.tag_sémantique</code> Composante réutilisable à importer.</li>
+		<li><code>code portfolio.tag sémantique</code> Composante réutilisable à importer.</li>
 		<li>
-			<code>tag_sémantique</code> Tag sémantique de l'élément de la composante à mettre à jour avec 
-			le code et le libellé sélectionné.
+			<code>tag sémantique</code> Élément de la composante à mettre à jour avec le code et le 
+			libellé sélectionnés (peut être la composante elle-même ou un de ses enfants).
 		</li>
 		<li>
 			<code>libellé</code> Libellé du bouton pour la boîte de choix. Suffixer de @fr pour 
 			français.
 		</li>
 		<li>
-			<code>rôles</code> Liste des rôles, séparés par un espace, ayant le bouton pour la 
+			<code>rôle(s)</code> Liste des rôles, séparés par un espace, ayant le bouton pour la 
 			boîte de choix.
 		</li>
 	</ul>
@@ -71,32 +74,35 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='get_get_multiple'>Get_Get_Multiple</h3>
 	<p>
-		Équivalent à la fonction précédente, sauf que les choix aux utilisateurs sont restreints par la
-		sélection dans un élément parent. Il s'agit du même principe que pour l'élément Get_Get_Resource 
-		(voir section <a href='../resources_fr/#getGetResource'>RESSOURCES</a> pour plus de détails).
+		Équivalent à la fonction précédente, sauf que les choix à l'utilisateur sont restreints par la
+		sélection dans un élément parent. Il s'agit du même principe que pour l'élément GetGetResource 
+		(voir <a href='../resources_fr/#getGetResource'>RESSOURCES</a> pour plus 
+		de détails).
 	</p>
 	<h4>Format</h4>
 	<p>
-		<code>function</code>,<code>get_get_multiple</code>/<code>recherche</code>/<code>code_portfolio.tag_sémantique</code>/<code>tag_sémantique</code>,<code>libellé</code>@fr,<code>rôles</code>
+		<code>function</code>,<code>get_get_multiple</code>/<code>recherche</code>/<code>code portfolio.tag 
+		sémantique</code>/<code>tag sémantique</code>,<code>libellé</code>,<code>rôle(s)</code>
 	</p>
 	<ul>
 		<li><code>function</code> Mot réservé.</li>
 		<li><code>get_get_multiple</code> Mot réservé.</li>
 		<li>
-			<code>recherche</code> Recherche du Get_Get_Resource équivalent (voir section 
+			<code>recherche</code> Métadonnée Recherche du GetGetResource équivalent (voir  
 			<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails).
+			Retourne une liste de codes.
 		</li>
 		<li><code>code_portfolio.tag_sémantique</code> Composante réutilisable à importer.</li>
 		<li>
-			<code>tag_sémantique</code> Tag sémantique de l'élément de la composante à mettre à jour 
-			avec le code et le libellé sélectionné.
+			<code>tag sémantique</code> Élément de la composante à mettre à jour avec le code et le 
+			libellé sélectionnés (peut être la composante elle-même ou un de ses enfants).
 		</li>
 		<li>
 			<code>libellé</code> Libellé du bouton pour la boîte de choix. Suffixer de @fr pour 
 			français.
 		</li>
 		<li>
-			<code>rôles</code> Liste des rôles, séparés par un espace, ayant le bouton pour la 
+			<code>rôle(s)</code> Liste des rôles, séparés par un espace, ayant le bouton pour la 
 			boîte de choix.
 		</li>
 	</ul>
@@ -106,33 +112,38 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='import_multiple'>Import_Multiple</h3>
 	<p>
-		Permet à l'utilisateur de sélectionner plusieurs éléments parmi une 
-		liste. Pour chaque élément sélectionné, un élément est importé dans le portfolio. 
+		Permet à l'utilisateur de sélectionner plusieurs éléments parmi une liste. Pour chaque 
+		élément sélectionné, un élément est importé dans le portfolio (habituellement l'élément
+		sélectionné lui-même, mais pas toujours&nbsp;&mdash; voir ci-dessous). 
 	</p>
 	<p>
-		La liste d'éléments doit exister dans un portfolio référentiel et chaque élément doit avoir un 
-		code unique&nbsp;; dans le cas d'éléments Items, il faut répéter le <i>Code&nbsp;- Item</i> dans 
-		le champ <i>Code</i> du nœud.
+		La liste d'éléments doit exister dans un portfolio référentiel. Tous les éléments affichés dans 
+		une liste doivent partager le même tag sémantique et chacun doit avoir un code unique (ce sont
+		les mêmes règles que pour un élément GetResource). ATTENTION&nbsp;: dans le cas d'éléments Items, 
+		il faut répéter le <i>Code&nbsp;- Item</i> dans le champ <i>Code</i> du nœud.
 	</p>
 	<p>
-		Les éléments importés peuvent être directement ceux du portfolio référentiel (éléments Items ou 
-		Sous-section) ou peuvent être copiés d'un portfolio tiers. Dans ce dernier cas, les éléments 
-		importés sont ceux qui ont le même code que ceux cochés dans la liste. Les éléments du portfolio 
-		tiers doivent donc avoir les mêmes codes que ceux du portfolio référentiel.
+		Les éléments importés peuvent être directement les éléments sélectionnés du portfolio référentiel 
+		(éléments Items ou Sous-section). Ils peuvent aussi être copiés d'un portfolio tiers (par exemple
+		un portfolio de composantes réutilisables). Dans ce dernier cas, les éléments importés sont ceux 
+		qui ont le même code que ceux cochés dans la liste. Les éléments du portfolio tiers doivent donc 
+		avoir les mêmes codes que ceux du portfolio référentiel.
 	</p>
 	<h4>Format</h4>
-	<p><code>function</code>,<code>import_multiple</code>/<code>recherche</code>/<code>code_portfolio</code>,<code>libellé</code>@fr,<code>rôles</code>
+	<p>
+		<code>function</code>,<code>import_multiple</code>/<code>recherche</code>/<code>code 
+		portfolio</code>,<code>libellé</code>,<code>rôle(s)</code>
 	</p>
 	<ul>
 		<li><code>function</code> Mot réservé.</li>
 		<li><code>import_multiple</code> Mot réservé.</li>
 		<li>
-			<code>recherche</code> Recherche du Get_Resource équivalent (voir section 
-			<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails). Retourne une liste
-			de codes.
+			<code>recherche</code> Recherche du GetResource équivalent (voir 
+			<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails). 
+			Retourne une liste de codes.
 		</li>
 		<li>
-			<code>code_portfolio</code> Code du portfolio duquel on importe les noeuds qui ont les 
+			<code>code portfolio</code> Code du portfolio duquel on importe les nœuds qui ont les 
 			codes sélectionnés. Peut être ou pas le même que celui de la recherche.
 		</li>
 		<li>
@@ -140,17 +151,17 @@ sidebar:
 			français.
 		</li>
 		<li>
-			<code>rôles</code> Liste des rôles, séparés par un espace, ayant le bouton pour la 
+			<code>rôle(s)</code> Liste des rôles, séparés par un espace, ayant le bouton pour la 
 			boîte de choix.
 		</li>
 	</ul>
 	<p> 
-		Option <code>?</code>.<code>tag_sémantique</code><br>
-		Peut remplacer <code>code_portfolio</code>. Dans ce cas le code du portfolio sera le code de 
-		l'élément coché et le tag sémantique de l'élément importé sera <code>tag_sémantique</code>.
+		Option <code>?</code>.<code>tag sémantique</code><br>
+		Peut remplacer <code>code portfolio</code>. Dans ce cas le code du portfolio sera le code de 
+		l'élément coché et le tag sémantique de l'élément importé sera <code>tag sémantique</code>.
 		Ceci permet d'importer des éléments de plusieurs portfolios différents. Par exemple, l'utilisateur 
-		peut sélectionner plusieurs référentiels parmi une liste, puis importer les compétences de ces 
-		référentiels qui ont le <code>tag sémantique</code> dans son portfolio.
+		peut sélectionner plusieurs référentiels parmi une liste, puis importer dans son portfolio les 
+		compétences de ces référentiels (spécifiées par <code>tag sémantique</code>).
 	</p>
 </article>
 
@@ -159,22 +170,25 @@ sidebar:
 	<h3 id='import_ggmultiple'>Import_GGMultiple</h3>
 	<p>
 		Équivalent à la fonction précédente, sauf que les choix aux utilisateurs sont restreints par la 
-		sélection dans un élément parent. Il s'agit du même principe que pour l'élément Get_Get_Resource 
-		(voir section <a href='../resources_fr/#getGetResource'>RESSOURCES</a>.
+		sélection dans un élément parent. Il s'agit du même principe que pour l'élément GetGetResource 
+		(voir <a href='../resources_fr/#getGetResource'>RESSOURCES</a> pour plus 
+		de détails).
 	 </p>
 	<h4>Format</h4>
 	<p>
-		<code>function</code>,<code>import_ggmultiple</code>/<code>recherche</code>/<code>code_portfolio</code>,<code>libellé</code>@fr,<code>rôles</code>
+		<code>function</code>,<code>import_ggmultiple</code>/<code>recherche</code>/<code>code 
+		portfolio</code>,<code>libellé</code>,<code>rôle(s)</code>
 	</p>
 	<ul>
 		<li><code>function</code> Mot réservé.</li>
 		<li><code>import_ggmultiple</code> Mot réservé.</li>
 		<li>
-			<code>recherche</code> Recherche du Get_Get_Resource équivalent (voir section 
+			<code>recherche</code> Recherche du GetGetResource équivalent (voir  
 			<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails).
+			Retourne une liste de codes. 
 		</li>
 		<li>
-			<code>code_portfolio</code> Code du portfolio duquel on importe les noeuds qui ont les 
+			<code>code portfolio</code> Code du portfolio duquel on importe les noeuds qui ont les 
 			codes sélectionnés. Peut être ou pas le même que celui de la recherche.
 		</li>
 		<li>
@@ -182,7 +196,7 @@ sidebar:
 			français.
 		</li>
 		<li>
-			<code>rôles</code> Liste des rôles, séparés par un espace, ayant le bouton pour la 
+			<code>rôle(s)</code> Liste des rôles, séparés par un espace, ayant le bouton pour la 
 			boîte de choix.
 		</li>
 	</ul>
@@ -193,27 +207,28 @@ sidebar:
 	 </p>
 	 <p>
 	  	OPTION <code>?</code><br>
-	  	Peut remplacer <code>code_portfolio</code>. Dans ce cas le code du portfolio d'importation sera le 
-	  	code de l'élément parent trouvé.
+	  	Peut remplacer <code>code portfolio</code>. Dans ce cas le code du portfolio d'importation sera le 
+	  	code de l'élément parent sélectionné.
 	 </p>
-<h4>Exemple d'utilisation</h4>
+	 
+	<h4>Exemple d'utilisation</h4>
 	<p>
-		Un élément Get-Resource permet de sélectionner un référentiel parmi une liste de référentiels 
+		Un élément GetResource permet de sélectionner un référentiel parmi une liste de référentiels 
 		(le code de l'élément Item doit alors être le code du portfolio du référentiel correspondant). 
 		La fonction Import_GGMultiple permet d'importer des éléments du référentiel sélectionné dans  
-		l'élément Get_Resource.
+		l'élément GetResource.
 	</p>
 	<p>
 		Menu<br> 
-		<code>function</code>,<code>import_ggmultiple</code>/<code>?.child.referentiel.skill$.label</code>/<code>?</code>,<code>Ajouter une compétence</code>@fr,<code>auteur</code>
+		<code>function</code>,<code>import_ggmultiple</code>/<code>?.child.referentiel.skill$.label</code>/<code>?</code>,<code>Ajouter une ou plusieurs compétences</code>@fr,<code>etudiant</code>
 	</p>
 	<p>
-		Remarque<br>
-		Ce menu se trouve sur un élément Sous-section qui contient l'élément Get_Resource (d'où l'utiliation 
-		du mot résevé <code>child</code>). <code>referentiel</code> est à la fois le tag sémantique de
-		l'élément Get_Resource et le tag sémantique des éléments Item de la liste de référentiels. Chaque 
-	   	élément Item a pour code le code du portfolio référentiel correspondant. Les deux <code>?</code> 
-	   	font référence à ce code de portfolio référentiel.
+		Fonctionnement<br>
+		Cette métadonnée Menu est placée sur un élément Sous-section qui contient l'élément GetResource 
+		(d'où l'utiliation du mot résevé <code>child</code>). <code>referentiel</code> est à la fois le 
+		tag sémantique de l'élément Get_Resource et le tag sémantique des éléments Item de la liste de 
+	   	référentiels. Chaque élément Item a pour code le code du portfolio référentiel correspondant. 
+	   	Les deux <code>?</code> font référence à ce code de portfolio référentiel.
 	</p>
 </article>
 
@@ -222,8 +237,8 @@ sidebar:
 	<h3 id='proxy_multiple'>Proxy_Multiple</h3>
 	<p>
 		Permet à l'utilisateur de sélectionner plusieurs éléments à partir d'une liste. Pour chaque 
-		sélection un élément Proxy est importé et sa cible est mise à jour avec la sélection. L'élément 
-		Proxy doit exister dans le portfolio de composantes réutilisables.
+		sélection un élément Proxy est importé et sa cible est mise à jour pour pointer sur la sélection. 
+		L'élément Proxy doit exister dans le portfolio de composantes réutilisables.
 	</p>
 	<p>
 		Cette fonction donne l'équivalent d'un Import_Multiple mais au lieu d'importer l'élément 
@@ -231,30 +246,31 @@ sidebar:
 		pointer sur l'élément sélectionné.
 	</p>
 	<p>
-		Pour que l'utilisateur puisse exécuter cette opération, il doit avoir le droit de Modifier la 
+		Pour que l'utilisateur puisse exécuter cette opération, il doit avoir le droit d'Éditer la 
 		ressource sur la composante mise à jour (l'élément Proxy).
 	</p>
 	<h4>Format</h4>
 	<p>		
-		<code>function</code>,<code>proxy_multiple</code>/<code>recherche</code>/<code>code_portfolio.tag_sémantique</code>/<code>tag_sémantique</code>,<code>libellé</code>@fr,<code>rôles</code>
+		<code>function</code>,<code>proxy_multiple</code>/<code>recherche</code>/<code>code portfolio.tag 
+		sémantique</code>/<code>tag sémantique</code>,<code>libellé</code>,<code>rôle(s)</code>
 	</p>
 	<ul>
 		<li><code>function</code> Mot réservé.</li>
-		<li><code>proxy_multiple</code> Mot réservé.</li>
-			<code>recherche</code> Recherche du Get_Resource équivalent (voir section 
-			<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails). Retourne une liste
-			de codes.
-		</li>
-		<li><code>code_portfolio.tag_sémantique</code> Élément Proxy à importer.</li>
 		<li>
-			<code>tag_sémantique</code> Élément Proxy à mettre à jour.
+			<code>recherche</code> Recherche du GetResource équivalent (voir 
+			<a href='../metadata_fr/#query'>MÉTADONNÉES</a> pour plus de détails). 
+			Retourne une liste de codes.
+		</li>
+		<li><code>code portfolio.tag sémantique</code> Élément Proxy à importer.</li>
+		<li>
+			<code>tag sémantique</code> Élément Proxy à mettre à jour.
 		</li>
 		<li>
 			<code>libellé</code> Libellé du bouton pour la boîte de choix. Suffixer de @fr pour 
 			français.
 		</li>
 		<li>
-			<code>rôles</code> Liste des rôles, séparés par un espace, ayant le bouton pour la 
+			<code>rôle(s)</code> Liste des rôles, séparés par un espace, ayant le bouton pour la 
 			boîte de choix.
 		</li>
 	</ul>
@@ -269,7 +285,7 @@ sidebar:
 		et un élément Calendrier de cette composante est mis à jour avec la date courante du système.
 	</p>
 	<p>
-		Pour que l'utilisateur puisse exécuter cette opération, il doit avoir le droit de Modifier la 
+		Pour que l'utilisateur puisse exécuter cette opération, il doit avoir le droit d'Éditer la 
 		ressource sur la composante mise à jour (l'élément Calendrier).
 	</p>
 	<p>
@@ -277,26 +293,26 @@ sidebar:
 		après l'import, cocher la métadonnée Ressource sans crayon.
 	</p>
 	<h4>Format</h4>
-	<p><code>function</code>,<code>importAndSetDateToday</code>/<code>code_portfolio</code>/<code>tag_sémantique_composante</code>/<code>tag_sémantique_calendrier</code>,<code>libellé</code>@fr,<code>rôles</code>
+	<p>
+		<code>function</code>,<code>importAndSetDateToday</code>/<code>code 
+		portfolio</code>/<code>tag sémantique composante</code>/<code>tag sémantique 
+		calendrier</code>,<code>libellé</code>,<code>rôle(s)</code>
 	</p>
 	<ul>
 		<li><code>function</code> Mot réservé.</li>
 		<li><code>importAndSetDateToday</code> Mot réservé.</li>
 		<li>
-			<code>code_portfolio</code> Code du portfolio de composantes réutilisables où se trouve la 
-			composante à importer.
+			<code>code portfolio</code> Code du portfolio de composantes réutilisables où se trouve 
+			la composante à importer.
 		</li>
-		<li><code>tag_sémantique_composante</code> Composante réutilisable à importer.</li>
+		<li><code>tag sémantique composante</code> Composante réutilisable à importer.</li>
 		<li>
-			<code>tag_sémantique_calendrier</code> Élément Calendrier à mettre à jour avec la date 
+			<code>tag sémantique calendrier</code> Élément Calendrier à mettre à jour avec la date 
 			courante.
 		</li>
+		<li><code>libellé</code> Libellé de l'élément de menu. Suffixer de @fr pour français.</li>
 		<li>
-			<code>libellé</code> Libellé du bouton pour l'élément de menu. Suffixer de @fr pour 
-			français.
-		</li>
-		<li>
-			<code>rôles</code> Liste des rôles, séparés par un espace, ayant l'élément de menu.
+			<code>rôle(s)</code> Liste des rôles, séparés par un espace, ayant l'élément de menu.
 		</li>
 	</ul>
 </article>
@@ -308,9 +324,13 @@ sidebar:
 		Permet de créer un bouton pour que l'utilisateur bascule un élément de son portfolio entre deux 
 		endroits prédéterminés. À chaque exécution, la destination et le point de départ sont inversés.
 	</p>
+	<p>
+		Par exemple, permettre à l'utilisateur de basculer une expérience ou un diplôme entre les sections
+		Présent et Passé de son portfolio.
+	</p>
 	<h4>Format</h4>
 	<p>
-		<code>function</code>,<code>moveTO</code>/<code>destination</code>/<code>départ</code>,<code>libellé</code>@fr,<code>rôles</code>
+		<code>function</code>,<code>moveTO</code>/<code>destination</code>/<code>départ</code>,<code>libellé</code>,<code>rôle(s)</code>
 	</p>
 	<ul>
 		<li><code>function</code> Mot réservé.</li>
@@ -322,7 +342,7 @@ sidebar:
 			<code>départ</code> Tag sémantique de la Section, Page ou Sous-section du point de départ.
 		</li>
 		<li><code>libellé</code> Libellé du bouton pour la bascule. Suffixer de @fr pour français.</li>
-		<li><code>rôles</code> Liste des rôles, séparés par un espace, ayant le bouton.</li>
+		<li><code>rôle(s)</code> Liste des rôles, séparés par un espace, ayant le bouton.</li>
 	</ul>
 </article>
 
@@ -330,9 +350,9 @@ sidebar:
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
 	<h3 id='execReport_BatchCSV'>ExecReport_BatchCSV</h3>
 	<p>
-		Exécute un script de rapport sur les données du portfolio courant, construit avec
-		les données résultantes un fichier CSV temporaire, puis fournit ce fichier en entrée à un script 
-		de batch.
+		Exécute un script de rapport sur les données du portfolio courant (portfolio où se trouve l'appel
+		à la fonction), construit avec les données résultantes un fichier CSV temporaire, puis fournit ce 
+		fichier en entrée à un script de batch.
 	</p>
 	<p>
 		Cette fonction permet de créer un portfolio de gestion de cohorte pour un utilisateur qui doit 
@@ -342,7 +362,7 @@ sidebar:
 	<p>
 		Pour ce faire, le script de rapport, au lieu de faire de l'affichage à l'écran, doit écrire dans 
 		un fichier CSV. Ceci est permis par les éléments <code>Ligne CSV</code> et <code>Valeur CSV</code>
-		(voir la section <a href='../report_fr/#commandesCSV'>Commandes CSV</a> de la section Rapport pour 
+		(voir la section <a href='../report_fr/#commandesCSV'>Commandes CSV</a> de la page Rapport pour 
 		plus de détails.) 
 	</p>
 	<p>
@@ -350,14 +370,13 @@ sidebar:
 	</p>
 	<h4>Format</h4>
 	<p>
-		<code>function</code>,<code>execReport_BatchCSV</code>/<code>code_rapport</code>,<code>libellé</code>@fr,<code>rôles</code>
+		<code>function</code>,<code>execReport_BatchCSV</code>/<code>code 
+		rapport</code>,<code>libellé</code>,<code>rôles</code>
 	</p>
 	<ul>
 		<li><code>function</code> Mot réservé.</li>
 		<li><code>execReport_BatchCSV</code> Mot réservé.</li>
-		<li>
-			<code>code_rapport</code> Code du portfolio script de rapport.
-		</li>
+		<li><code>code rapport</code> Code du portfolio Rapport (contient le script de rapport).</li>
 		<li>
 			<code>libellé</code> Libellé du bouton pour lancer l'exécution. Suffixer de @fr pour français.
 		</li>

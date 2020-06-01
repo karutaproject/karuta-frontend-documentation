@@ -9,15 +9,15 @@ var g_json = {};
 function prepareBatch()
 //=======================
 {
-	var today=new Date();
+	var today = new Date();
 	var annee = today.getFullYear();
 	var mois = today.getMonth() + 1;
-	if (mois<10)
-		mois = "0"+mois;
-	// ---- global variables ---------
+	if (mois < 10)
+		mois = "0" + mois;
+	// ---- variables globales ---------
 	g_json['model_code'] = "autocreate.batch-creation";
-	g_json['diploma_begin'] = annee+"-"+mois;
-	// ---- local variables ---------
+	g_json['diploma_begin'] = annee + "-" + mois;
+	// ---- variables locales ---------
 	g_json['lines'] = [];
 	g_json.lines[0] =
 	{

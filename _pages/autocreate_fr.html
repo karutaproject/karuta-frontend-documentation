@@ -5,101 +5,112 @@ title: "Création automatique"
 sidebar:
  nav: "autocreate_fr"
 ---
-<style>
-	.champ {
-		border: 1px solid gray;
-		padding: 5px;
-	}
-</style>
 <p>
-	Il est possible d'automatiser la création d'un portfolio lors de la première connexion d'un utilisateur. 
-	Dans ce cas Karuta exécutera un batch créé puis spécifié par le designer dans le fichier application/js/specific.js.
+	Il est possible d'automatiser la création d'un portfolio lors de la première connexion d'un 
+	utilisateur. Dans ce cas Karuta exécutera un batch créé puis spécifié par le designer dans le fichier 
+	<i>application/js/specific.js</i>.
 </p>
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='step1'>Condition d'exécution</h3>
+	<h3 id='condition'>Condition d'exécution</h3>
 	<p>
-		Pour que le batch de création s'exécute lors de la première connexion de l'utilisateur, ce dernier doit avoir le droit de création qui lui sera retiré à la fin de l'exécution du batch.
-		Il doit également avoir <code>xlimited</code> dans le champ Autre.
+		Pour que le batch de création s'exécute lors de la première connexion de l'utilisateur, ce 
+		dernier doit avoir le droit Créateur qui lui sera retiré à la fin de l'exécution du batch.
+		Il doit également avoir l'instruction <code>xlimited</code> dans le champ Autre.
 	</p>
-		<img src='../assets/img/autocreate/usager.jpg' width='50%'/>
+		<img src='../assets/img/autocreate/compte_utilisateur.png' width='50%'/>
 	<p>
-		<b>Remarque</b> : si CAS est utilisé, Karuta créera automatiquement l'utilisateur avec comme username l'identifiant CAS avec le droit de création et <code>xlimited</code> dans le champ Autre
-	</p>
-</article>
-
-<article>
-	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-
-	<h3 id='step1'>Étape 0 - Configuration du backend</h3>
-	<p>
-		Dans le fichier de configuration <code>configKaruta.properties</code> du backend il doit y avoir les valeurs suivantes:
-		<ul>
-			<li>casCreateAccount=y</li>
-			<li>createAsDesigner=y</li>
-		</ul>
+		REMARQUE : si CAS est utilisé, Karuta créera automatiquement l'utilisateur avec l'identifiant CAS 
+		comme identifiant Karuta ainsi qu'avec le droit Créateur et l'instruction <code>xlimited</code>
+		dans le champ Autre.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='step1'>Étape 1 - Écriture du batch de création</h3>
+
+	<h3 id='step1'>Étape 1 - Configuration du backend</h3>
 	<p>
-		Le batch doit inclure la création du ou des portfolios de l'utilisateur, le partage avec cet utilisateur dans le rôle désiré.
-		Il doit se terminer par :
-		<ol>
-			<li> Retrait des droits de création de l'utilisateur</li>
-			<li> Départage des éléments créés du rôle designer</li>
-			<li> Changement du propriétaire des éléments créés</li>
-		</ol>
-		Exemple de batch de création automatique
+		Dans le fichier de configuration <code>configKaruta.properties</code> du backend il faut renseigner
+		les valeurs suivantes&nbsp;:
 	</p>
-	<img src='../assets/img/autocreate/batch.jpg'/>
+	<ul>
+		<li>casCreateAccount=y</li>
+		<li>createAsDesigner=y</li>
+	</ul>
+</article>
+
+<article>
+	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
+	<h3 id='step2'>Étape 2 - Écriture du batch de création</h3>
 	<p>
-	Téléchargez le batch <a href='../assets/img/autocreate/autocreate.batch-creation.xml'>autocreate.batch-creation.xml</a>
+		Le batch doit inclure les instructions pour créer le ou les portfolios de l'utilisateur puis 
+		partager ces portfolios avec cet utilisateur dans le rôle désiré. À la fin il doit aussi :
+	<p>
+	<ol>
+		<li> retirer le droit Créateur de l'utilisateur&nbsp;;</li>
+		<li> départager les portfolios créés du l'utilisateur dans le rôle <i>designer</i>&nbsp;;</li>
+		<li> changer le propriétaire des portfolios créés pour root.</li>
+	</ol>
+	<p>Exemple de batch de création automatique&nbsp;:</p>
+	<img src='../assets/img/autocreate/batch.jpg' width='75%'/>
+	<p>
+		Téléchargez ce modèle de batch <b><a href='../assets/img/autocreate/batch-creation.xml'>ici</a></b>
+		ou encore voyez le détail du modèle de batch plus bas.
 	</p>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='step2'>Étape 2 - Spécification du batch</h3>
+	<h3 id='step3'>Étape 3 &mdash; Configuration de l'application (frontend)</h3>
 	<p>
-	Le designer doit spécifier le batch de création ainsi que les variables globales utilisées dans le batch dans le fichier application/js/specific.js.
-	La valeur de la varable g_execbatch à la ligne 3 doit être <code>true</code>.
+		Le designer doit spécifier dans le fichier <i>application/js/specific.js</i> le batch de création 
+		ainsi que les variables utilisées dans ce batch . De plus, la valeur de la variable g_execbatch 
+		à la ligne 3 doit être mise à <code>true</code>.
 	</p>
-		<img src='../assets/img/autocreate/specific_js.jpg' width='50%'/>
+	<img src='../assets/img/autocreate/specific_js.jpg'/>
 </article>
 
 <article>
 	<a style='float:right' href='#top'><img src='../assets/img/arrow-up.png'/></a>
-	<h3 id='step3'>Détails du batch de création</h3>
-	<!-- --------------------------------------- -->
-	<h4>Création du projet Cohorte</h4>
-	<p> Dans notre exemple un projet Cohorte sera créé si il n'existe pas déjà.
-	Son code et libellé sera la valeur de la vaiable globale défini dans le fichier specific.js (année-mois)
+	<h3 id='batchDetails'>Détails du batch de création de l'étape 2</h3>
+	<h4>Création du projet pour la cohorte</h4>
+	<p>
+		Dans notre exemple un projet pour la cohorte sera créé si il n'existe pas déjà (si il s'agit du 
+		premier étudiant de cette cohorte à se connecter). Le code et libellé du projet sont composés de
+		l'année + mois du système (donc une nouvelle cohorte à tous les mois) tel que spécifié par la 
+		variable globale définie dans le fichier <i>specific.js</i>.
 	</p>
 	<img src='../assets/img/autocreate/create-project.jpg'/>
-	<!-- --------------------------------------- -->
-	<h4>Création du portfolio</h4>
+
+	<h4>Création du portfolio de l'utilisateur</h4>
 	<img src='../assets/img/autocreate/create-tree.jpg'/>
-	<!-- --------------------------------------- -->
-	<h4>Partage du portfolio</h4>
+
+	<h4>Partage du portfolio avec l'utilisateur dans le bon rôle</h4>
 	<img src='../assets/img/autocreate/share-tree.jpg'/>
-	<!-- --------------------------------------- -->
-	<h4>Mise à jour des ressources</h4>
-	<p>Dans notre modèle de portfolio, il y a le nom, prénom et couriel de l'étudiant.</p>
+
+	<h4>Mise à jour des ressources profil dans le portfolio</h4>
+	<p>Dans notre modèle de portfolio, nous voulons pré-remplir le nom et le couriel de l'étudiant.</p>
 	<img src='../assets/img/autocreate/update-resources.jpg'/>
-	<!-- --------------------------------------- -->
-	<h4>Départage du portfolio</h4>
+
+	<h4>Mise à jour du compte utilisateur pour retirer le droit Créateur</h4>
+	<p>On utilise l'élément create-person pour mettre à jour un compte existant.</p>
+	<img src='../assets/img/autocreate/update-person.jpg'/>
+
+	<h4>Départage du portfolio d'avec l'étudiant dans le rôle <i>designer</i></h4>
+	<p>
+		Le création automatique du portfolio à partir du compte de l'étudiant en avait fait le designer. 
+		Or l'étudiant ne doit pas avoir plus d'un rôle dans son portfolio.
+	</p>
 	<img src='../assets/img/autocreate/unshare-portfolio.jpg'/>
-	<!-- --------------------------------------- -->
-	<h4>Départage du projet</h4>
+
+	<h4>Départage du projet cohorte d'avec l'étudiant dans le rôle <i>designer</i></h4>
 	<img src='../assets/img/autocreate/unshare-project.jpg'/>
-	<!-- --------------------------------------- -->
-	<h4>Changement de propiétaire du portfolio</h4>
+
+	<h4>Changement de propiétaire du portfolio pour root</h4>
+	<p>Idem point précédent&nbsp;: la création du portfolio par l'étudiant en avait fait le propriétaire.</p>
 	<img src='../assets/img/autocreate/setowner-portfolio.jpg'/>
-	<!-- --------------------------------------- -->
-	<h4>Changement de propiétaire du portfolio</h4>
+
+	<h4>Changement de propiétaire du projet cohorte pour root</h4>
 	<img src='../assets/img/autocreate/setowner-project.jpg'/>
-	<!-- --------------------------------------- -->
 </article>

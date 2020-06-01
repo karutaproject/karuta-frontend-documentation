@@ -6,7 +6,10 @@ sidebar:
  nav: "portfolio_en"
 ---
 
-<p>Karuta portfolios are represented by structured trees (see STRUCTURES).</p>
+<p>
+	In Karuta portfolios are stored as structured trees. All portfolios are built following an XML
+	tree structure (see the <a href='../structures_en/'>STRUCTURES</a> page for more detail).
+</p>
 <p>There are multiple types of Karuta trees:</p>
 <ul>
 	<li>Portfolio Model</li>
@@ -20,92 +23,99 @@ sidebar:
 <h3>Portfolio Model</h3>
 <p>
 	A portfolio model is a tree structure that organizes resources. Resources are the elements that 
-	will contain data: data supplied to the users like instructions or files, and data supplied by 
-	the users to populate their portfolios. Karuta offers resources of many types: text fields, text 
-	editors, files, images, audio and video players, date fields, etc.
+	will contain data: data supplied to the users (like instructions or files), and data supplied by 
+	the users to populate their portfolios. Karuta offers resources of many types: text field, text 
+	editor, file, image, audio and video player, calendar, etc (see the
+	<a href='../resources_en/'>RESOURCES</a> page for more detail).
 </p>
 <p>
-	Once constructed by the designer, the portfolio model is instantiated for each user, which means 
+	Once built by the designer, the portfolio model is instantiated for each user, which means 
 	that a copy of the model is created and the new tree is the portfolio for that specific user.
 </p>
 <h3>Portfolio Instance</h3>
 <p>
 	A portfolio instance is a copy of the model for a specific user. At the moment of instantiation 
-	(e.g., copying), roles and permissions are created for each element of the portfolio.
+	(copying) the roles and rights are created for each element of the portfolio, according to what 
+	the designer has indicated in the metadata (see the <a href='../metadata_en/'>METADATA</a> page 
+	for more detail).
 </p>
 <h3>Rubrics Portfolio</h3>
 <p>
-	A rubrics portfolio contains elements that will be referenced in other portfolios, for example a 
-	competency framework or elements of a choice-box.
+	A rubrics portfolio contains lists of elements that will be referenced in other portfolios, for 
+	example a competency framework or the choices of a dropdown list.
 </p>
 <h3>Reusable Components Portfolio</h3>
 <p>
-	A reusable components portfolio is used to contain pre-built portfolio parts that will then be
-	made available to a user through a menu. This allows users to add parts to their portfolio as
+	A reusable components portfolio is used to store portfolio parts that will then be made 
+	available to users through a menu. This allows users to add parts to their portfolio as
 	needed.
 </p>
 <h3>Report Script</h3>
 <p>
-	A report script contains commands to select elements from one or multiple portfolios and
-	display them with in a different layout. For exemple, building dashboards, resumes, or cohort
-	aggregate reports. The report commands allow you to navigate through portfolios to select the
-	elements to display. The result is displayed in an html table, the layout of which is 
-	customizable by the designer.
+	A report is a script that contains specific commands to select elements from one or multiple 
+	portfolios and display them in a different layout. For exemple to build dashboards, resumes
+	or cohort aggregate reports. The report script commands are used to navigate through portfolios 
+	to select the elements to be displayed. The result is then displayed in an HTML table, the layout 
+	of which is customizable by the designer (see the <b><a href='../report_en/'>Report</a></b> page
+	for more detail).
 </p>
 <h3>Batch Script</h3>
 <p>
-	A batch script contains commands to automate the process of creating user accounts, 
-	portfolios, and updating information. A batch script is usually associated to a 
-	CSV file containing, for example, a list of intended users. Executing the batch script
-	with this file would then automatically create the user accounts and their portfolios. 
-	A batch script may also be associated to a batch form.
+	A batch is a script that contains specific commands to automate the process of creating user 
+	accounts, creating portfolio instances, updating information in these portfolios, etc. A batch 
+	script is usually associated to a CSV file containing, for example, the list of users. Executing 
+	the batch script with this file will then automatically create the user accounts and the portfolios 
+	(see the <b><a href='../batch_en/'>Batch</a></b> page for more detail). A batch script may also 
+	be associated with a batch form.
 </p>
 <h3>Batch Form</h3>
 <p>
-	A batch form executes a batch script for one single line, without the need for a CSV file.
+	A batch form executes a batch script for one single user, without the need for a CSV file.
 </p>
 
-<h2>Operational Principles</h2>
+<h2>How It Works</h2>
 <p>
-	A Kartua portfolio is built by adding branches to the root element, thus constructing a tree 
-	structure. The process is much like an assembly of Lego blocks. Certain branches, such as the 
-	basic Karuta elements, are predefined. Designers combine these basic elements to construct 
-	branches, and combines these branches to build complex portfolios.
+	A Karuta tree or portfolio is built by adding branches to the root element, much like the 
+	assembly of Lego blocks. Certain branches are predefined: the basic Karuta elements. 
+	Other branches are built by the designer by combining these basic elements. In this manner 
+	complex portfolios are built.
 </p>
 <p>
-	User menus may also be defined, allowing the end user to add branches to their portfolio 
-	as need be (this is where the reusable components portfolio is called upon). This way the
-	portfolio is customizable by the end user.
+	User menus may also be defined, allowing the end user to add pre-built branches to their 
+	portfolio as need be.
 </p>
 
-<h3>Models and Instances</h3>
+<h3>Model and Instance</h3>
 <p>There are two types of Karuta portfolios:</p>
 <ul>
-<li>Portfolio model — Built by the designer. The associated roles are <i>designer</i> and 
-	<i>all</i>.
-</li>
-<li>Portfolio instance — Instantiated from a portfolio model for each individual user. 
-	The associated roles are those defined by the designer in the model (plus <i>designer</i> 
-	and <i>all</i>).
-</li>
+	<li>
+		Portfolio model &ndash; Built by the designer. The associated roles are <i>designer</i> and 
+		<i>all</i>.
+	</li>
+	<li>
+		Portfolio instance &ndash; Instantiated from a portfolio model for each individual user. 
+		The associated roles are those defined by the designer in the model, for example 
+		<i>student</i> and <i>teacher</i>, plus <i>designer</i> and <i>all</i>.
+	</li>
 </ul>
 <p>The diagram below illustrates the relationship between these two types of portfolios:</p>
-<img src='../assets/img/modele-instance1.png' width='30%'/>
-<h3>The security model</h3>
+<img src='../assets/img/modele-vs-instance_en.png' width='50%'/>
+<h3>The Security Model</h3>
 <p></p>
-<img src='../assets/img/modele-securite.png' width='50%'/>
+<img src='../assets/img/modele-securite_en.png' width='50%'/>
 <ul>
-	<li>A portfolio has associated roles.</li>
-	<li>A role has associated permissions (read, write, submit, etc.) for each of the portfolio
-	 elements.
+	<li>A portfolio has associated <b>roles</b> (example student, teacher, etc).</li>
+	<li>
+		A role has associated <b>rights</b> (read, edit, submit, etc) for each of the portfolio
+		elements.
 	</li>
-	<li>Sharing a portfolio is done by associating a user and a role.</li>
+	<li>Sharing a portfolio is done by indicating a user and a role.</li>
 </ul>
-<img src='../assets/img/partage.png' width='60%'/>
+<img src='../assets/img/partage_en.png' width='100%'/>
 
-<h3>Simulation of the custom roles by the designer</h3>
+<h3>Simulation of the Roles by the Designer</h3>
 <p>
-	From the portfolio model, the designer may (and should!) simulate the various roles created 
-	for the portfolio users.
+	In the portfolio model, the designer may (and should!) simulate the various roles he or she has
+	created to verify the rights attributed on each element.
 </p>
-<img src='../assets/img/simulation-roles.png' width='60%'/>
+<img src='../assets/img/simulation-roles_en.png' width='50%'/>

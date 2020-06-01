@@ -8,9 +8,9 @@ sidebar:
 
 <p>
 	Dans Karuta un portfolio est représenté par un arbre structuré. Tous les portfolios sont construits
-	selon une arborescence de type XML (voir section <a href='../structures_fr/'>STRUCTURES</a> pour plus 
-	de détails).
-</p>
+	selon une arborescence de type XML (voir la page <a href='../structures_fr/'>STRUCTURES</a> pour 
+	plus de détails).
+</p> 
 <p> Il y a plusieurs types d'arbres dans Karuta&nbsp;:</p>
 <ul>
 	<li>modèle de portfolio</li>
@@ -26,9 +26,9 @@ sidebar:
 	Un modèle de portfolio est une structure d'arbre qui organise des ressources. Les ressources sont 
 	les éléments qui vont contenir les données&nbsp;: les données fournies aux utilisateurs (comme des 
 	instructions ou des fichiers à consulter), ainsi que les données que les utilisateurs vont entrer 
-	pour peupler leur portfolio. Karuta offre des ressources de plusieurs types&nbsp;: champ de texte 
-	(texte court), éditeur de texte (texte long), fichier, image, son, vidéo, calendrier, etc (voir 
-	section <a href='../resources_fr/'>RESSOURCES</a> pour plus de détails).
+	pour peupler leur portfolio. Karuta offre des ressources de plusieurs types&nbsp;: champ de texte, 
+	éditeur de texte, fichier, image, audio, vidéo, calendrier, etc (voir 
+	la page <a href='../resources_fr/'>RESSOURCES</a> pour plus de détails).
 </p>
 <p>
 	Une fois construit par le designer, le modèle de portfolio est instancié pour chaque utilisateur, 
@@ -39,13 +39,13 @@ sidebar:
 <p>
 	Une instance de portfolio est une copie du modèle pour un utilisateur spécifique. Au moment de 
 	l'instantiation (copie) les rôles et les droits sont créés pour chacun des éléments du portfolio, 
-	en fonction de ce que le designer a indiqué dans les métadonnées (voir section 
+	en fonction de ce que le designer a indiqué dans les métadonnées (voir la page  
 	<a href='../metadata_fr/'>MÉTADONNÉES</a> pour plus de détails).
 </p>
 <h3>Portfolio référentiel</h3>
 <p>
-	Un portfolio référentiel contient une liste d'éléments qui seront référencés dans les portfolios, 
-	par exemple un référentiel de compétences ou encore les choix d'une liste déroulante.
+	Un portfolio référentiel contient des listes d'éléments qui seront référencés dans les autres 
+	portfolios, par exemple un référentiel de compétences ou encore les choix d'une liste déroulante.
 </p>
 <h3>Portfolio de composantes réutilisables</h3>
 <p>
@@ -60,7 +60,7 @@ sidebar:
 	Par exemple pour faire un tableau de bord, un CV ou un rapport de cohorte. Les commandes de script 
 	de rapport permettent de naviguer dans les portfolios pour y sélectionner les éléments à afficher. 
 	Le résultat est affiché dans une table HTML dont la mise en forme est libre au designer
-	(voir section <b><a href='../report_fr/'>Rapport</a></b> pour plus de détails).
+	(voir la page <b><a href='../report_fr/'>Rapport</a></b> pour plus de détails).
 </p>
 
 <h3>Script de batch</h3>
@@ -69,7 +69,7 @@ sidebar:
 	de créer des utilisateurs, des instances de portfolio, de mettre à jour des éléments 
 	de ces portfolios, etc. Un script de batch est généralement associé à un fichier CSV contenant, par 
 	exemple, la liste des utilisateurs. L'exécution du script de batch créera alors automatiquement 
-	tous les portfolios des utilisateurs (voir section <b><a href='../batch_fr/'>Batch</a></b> pour 
+	tous les portfolios des utilisateurs (voir la page <b><a href='../batch_fr/'>Batch</a></b> pour 
 	plus de détails). Un script de batch peut également être associé à un formulaire batch.
 </p>
 <h3>Formulaire pour batch</h3>
@@ -102,7 +102,7 @@ sidebar:
 </li>
 </ul>
 <p>Le diagramme ci-dessous présente les liens entre les deux types de portfolios&nbsp;:</p>
-<img src='../assets/img/modele-instance1.png' width='30%'/>
+<img src='../assets/img/modele-vs-instance.png' width='40%'/>
 <h3>Le modèle de sécurité</h3>
 <p></p>
 <img src='../assets/img/modele-securite.png' width='50%'/>
@@ -111,12 +111,12 @@ sidebar:
 		Un portfolio a des <b>rôles</b> associés (par exemple etudiant, professeur, etc).
 	</li>
 	<li>
-		Un rôle a des <b>droits</b> associés (voir, écrire, soumettre, etc) sur chacun des éléments 
+		Un rôle a des <b>droits</b> associés (voir, éditer, soumettre, etc) sur chacun des éléments 
 		du portfolio.
 	</li>
 	<li>Le partage d'un portfolio se fait en indiquant un utilisateur et un rôle.</li>
 </ul>
-<img src='../assets/img/partage.png' width='80%'/>
+<img src='../assets/img/partage.png' width='90%'/>
 
 <h3>Simulation des rôles par le designer</h3>
 <p>

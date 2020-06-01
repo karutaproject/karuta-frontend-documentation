@@ -316,12 +316,10 @@ portfolio_fr:
     url: /metadata_fr/
   - title: Fonctions Menu
     url: /functions_fr/
-  - title: Mise en forme (CSS)
-    url: /css_fr/
-  - title: Partage par l'utilisateur
-    url: /sharing_fr/
   - title: Création automatique
     url: /autocreate_fr/
+  - title: Mise en forme (CSS)
+    url: /css_fr/
   - title:
     children:
       - title: "English"
@@ -335,10 +333,12 @@ portfolio_en:
     url: /resources_en/
   - title: Metadata
     url: /metadata_en/
+  - title: Menu Functions 
+    url: /functions_en/
+  - title: Automatic Creation
+    url: /autocreate_en/
   - title: CSS
     url: /css_en/
-  - title: Sharing
-    url: /sharing_en/
   - title:
     children:
       - title: "Français"
@@ -355,7 +355,7 @@ structures_fr:
         url: /structures_fr/#asmunit
       - title: "Sous-section"
         url: /structures_fr/#asmunitstructure
-      - title: "Noeud de ressource"
+      - title: "Noeud ressource"
         url: /structures_fr/#asmcontext
   - title: Ressources
     url: /resources_fr/
@@ -363,12 +363,10 @@ structures_fr:
     url: /metadata_fr/
   - title: Fonctions Menu
     url: /functions_fr/
-  - title: Mise en forme (CSS)
-    url: /css_fr/
-  - title: Partage par l'utilisateur
-    url: /sharing_fr/
   - title: Création automatique
     url: /autocreate_fr/
+  - title: Mise en forme (CSS)
+    url: /css_fr/
   - title:
     children:
       - title: "English"
@@ -391,10 +389,12 @@ structures_en:
     url: /resources_en/
   - title: Metadata
     url: /metadata_en/
+  - title: Menu Functions 
+    url: /functions_en/
+  - title: Automatic Creation
+    url: /autocreate_en/
   - title: CSS
     url: /css_en/
-  - title: Sharing
-    url: /sharing_en/
   - title:
     children:
       - title: "Français"
@@ -410,12 +410,10 @@ sharing_fr:
     url: /metadata_fr/
   - title: Fonctions Menu
     url: /functions_fr/
-  - title: Mise en forme (CSS)
-    url: /css_fr/
-  - title: Partage par l'utilisateur
-    url: /sharing_fr/
   - title: Création automatique
     url: /autocreate_fr/
+  - title: Mise en forme (CSS)
+    url: /css_fr/
   - title:
     children:
       - title: "English"
@@ -429,10 +427,12 @@ sharing_en:
     url: /resources_en/
   - title: Metadata
     url: /metadata_en/
+  - title: Menu Functions 
+    url: /functions_en/
+  - title: Automatic Creation
+    url: /autocreate_en/
   - title: CSS
     url: /css_en/
-  - title: Sharing
-    url: /sharing_en/
   - title:
     children:
       - title: "Français"
@@ -473,6 +473,8 @@ resources_fr:
         url: /resources_fr/#couleur
       - title: "Tableau de bord"
         url: /resources_fr/#dashboard
+      - title: "Rapport différé"
+        url: /resources_fr/#report
       - title: "GetResource"
         url: /resources_fr/#getResource
       - title: "GetGetResource"
@@ -483,16 +485,16 @@ resources_fr:
         url: /resources_fr/#item
       - title: "Proxy"
         url: /resources_fr/#proxy
+      - title: "GetProxy"
+        url: /resources_fr/#getProxy
   - title: Métadonnées
     url: /metadata_fr/
   - title: Fonctions Menu
     url: /functions_fr/
-  - title: Mise en forme (CSS)
-    url: /css_fr/
-  - title: Partage par l'utilisateur
-    url: /sharing_fr/
   - title: Création automatique
     url: /autocreate_fr/
+  - title: Mise en forme (CSS)
+    url: /css_fr/
   - title:
     children:
       - title: "English"
@@ -509,7 +511,7 @@ resources_en:
         url: /resources_en/#field
       - title: "Long Text"
         url: /resources_en/#textfield
-      - title: "Comment"
+      - title: "Comments"
         url: /resources_en/#commentaires
       - title: "Image"
         url: /resources_en/#image
@@ -525,14 +527,16 @@ resources_en:
         url: /resources_en/#url
       - title: "URL2Unit"
         url: /resources_en/#url2unit
-      - title: "SendEmail"
+      - title: "Send Email"
         url: /resources_en/#sendEmail
-      - title: "Calender"
+      - title: "Calendar"
         url: /resources_en/#date
-      - title: "Coulor"
+      - title: "Color"
         url: /resources_en/#couleur
       - title: "Dashboard"
         url: /resources_en/#dashboard
+      - title: "Deferred Report"
+        url: /resources_en/#report
       - title: "GetResource"
         url: /resources_en/#getResource
       - title: "GetGetResource"
@@ -543,11 +547,15 @@ resources_en:
         url: /resources_en/#item
       - title: "Proxy"
         url: /resources_en/#proxy
+      - title: "GetProxy"
+        url: /resources_en/#getProxy
   - title: Metadata
     url: /metadata_en/
+  - title: Menu Functions 
+    url: /functions_en/
+  - title: Automatic Creation
+    url: /autocreate_en/
   - title: CSS
-  - title: Sharing
-    url: /sharing_en/
     url: /css_en/
   - title:
     children:
@@ -577,7 +585,7 @@ metadata_fr:
         url: /metadata_fr/#see
       - title: "Supprimer"
         url: /metadata_fr/#delete
-      - title: "Modifier ressource"
+      - title: "Éditer ressource"
         url: /metadata_fr/#edit-resource
       - title: "Ressource sans crayon"
         url: /metadata_fr/#resnopencil
@@ -587,7 +595,7 @@ metadata_fr:
         url: /metadata_fr/#submit
       - title: "Éditer code"
         url: /metadata_fr/#editcoderoles
-      - title: "Modifier nœud"
+      - title: "Éditer libellé"
         url: /metadata_fr/#editnoderoles
       - title: "Nœud sans crayon"
         url: /metadata_fr/#nodenopencil
@@ -595,6 +603,8 @@ metadata_fr:
         url: /metadata_fr/#duplicateroles
       - title: "Modifier taille image"
         url: /metadata_fr/#resizeroles
+      - title: "Éditer cible proxy"
+        url: /metadata_fr/#edittargetroles
       - title: "Ordonner"
         url: /metadata_fr/#moveroles
       - title: "Déplacer"
@@ -629,12 +639,10 @@ metadata_fr:
         url: /metadata_fr/#help
   - title: Fonctions Menu
     url: /functions_fr/
-  - title: Mise en forme (CSS)
-    url: /css_fr/
   - title: Création automatique
     url: /autocreate_fr/
-  - title: Partage par l'utilisateur
-    url: /sharing_fr/
+  - title: Mise en forme (CSS)
+    url: /css_fr/
   - title:
     children:
       - title: "English"
@@ -659,32 +667,68 @@ metadata_en:
         url: /metadata_en/#multilingual-resource
       - title: "Encrypt Resource"
         url: /metadata_en/#encript-resource
-      - title: "Roles - See"
+      - title: "See"
         url: /metadata_en/#see
-      - title: "Roles - Delete"
+      - title: "Delete"
         url: /metadata_en/#delete
-      - title: "Roles - Edit Resource"
+      - title: "Edit Resource"
         url: /metadata_en/#edit-resource
-      - title: "Roles - Comment"
+      - title: "Resource Without Pencil"
+        url: /metadata_en/#resnopencil
+      - title: "Comment"
         url: /metadata_en/#comment
-      - title: "Roles - Submit"
+      - title: "Submit"
         url: /metadata_en/#submit
-      - title: "Query"
+      - title: "Edit Code"
+        url: /metadata_en/#editcoderoles
+      - title: "Edit Label"
+        url: /metadata_en/#editnoderoles
+      - title: "Node Without Pencil"
+        url: /metadata_en/#nodenopencil
+      - title: "Duplicate"
+        url: /metadata_en/#duplicateroles
+      - title: "Resize Image"
+        url: /metadata_en/#resizeroles
+      - title: "Edit Proxy Target"
+        url: /metadata_en/#edittargetroles
+      - title: "Ordering"
+        url: /metadata_en/#moveroles
+      - title: "Move"
+        url: /metadata_en/#moveinroles
+      - title: "Move In"
+        url: /metadata_en/#movein
+      - title: "Show/Hide"
+        url: /metadata_en/#showroles
+      - title: "Show To"
+        url: /metadata_en/#showtoroles
+      - title: "Print"
+        url: /metadata_en/#printroles
+      - title: "Editing Box Title"
+        url: /metadata_en/#editboxtitle
+      - title: "Max Number Words"
+        url: /metadata_en/#maxword
+      - title: "Visible"
+        url: /metadata_en/#display
+      - title: "Inline Editing"
+        url: /metadata_en/#inline
+      - title: "Collapsible"
+        url: /metadata_en/#collapsible
+      - title: "Search"
         url: /metadata_en/#query
-      - title: "Menu - Get_Multiple"
-        url: /metadata_en/#get_multiple
-      - title: "Menu - Get_Get_Multiple"
-        url: /metadata_en/#get_get_multiple
-      - title: "Menu - Import_Multiple"
-        url: /metadata_en/#import_multiple
-      - title: "Menu - Import_GGMultiple"
-        url: /metadata_en/#import_ggmultiple
-      - title: "Sharing by the end-user"
+      - title: "Share"
         url: /metadata_en/#sharing
+      - title: "Menus"
+        url: /metadata_en/#menu
+      - title: "Menu Button Text"
+        url: /metadata_en/#menulabels
+      - title: "Help Bubble"
+        url: /metadata_en/#help
+  - title: Menu Functions 
+    url: /functions_en/
+  - title: Automatic Creation
+    url: /autocreate_en/
   - title: CSS
     url: /css_en/
-  - title: Sharing
-    url: /sharing_en/
   - title:
     children:
       - title: "Français"
@@ -717,14 +761,50 @@ functions_fr:
         url: /functions_fr/#moveTO
       - title: "ExecReport_BatchCSV"
         url: /functions_fr/#execReport_BatchCSV
+  - title: Création automatique
+    url: /autocreate_fr/
   - title: Mise en forme (CSS)
     url: /css_fr/
-  - title: Partage par l'utilisateur
-    url: /sharing_fr/
-#  - title:
-#    children:
-#      - title: "English"
-#        url: /metadata_en/
+  - title:
+    children:
+      - title: "English"
+        url: /functions_en/
+
+# ====== FUNCTIONS_FR =============
+functions_en:
+  - title: Structures
+    url: /structures_en/
+  - title: Resources
+    url: /resources_en/
+  - title: Metadata
+    url: /metadata_en/
+  - title: Menu Functions 
+    url: /functions_en/
+    children:
+      - title: "Get_Multiple"
+        url: /functions_en/#get_multiple
+      - title: "Get_Get_Multiple"
+        url: /functions_en/#get_get_multiple
+      - title: "Import_Multiple"
+        url: /functions_en/#import_multiple
+      - title: "Import_GGMultiple"
+        url: /functions_en/#import_ggmultiple
+      - title: "Proxy_Multiple"
+        url: /functions_en/#proxy_multiple
+      - title: "ImportAndSetDateToday"
+        url: /functions_en/#importAndSetDateToday
+      - title: "MoveTO"
+        url: /functions_en/#moveTO
+      - title: "ExecReport_BatchCSV"
+        url: /functions_en/#execReport_BatchCSV
+  - title: Automatic Creation
+    url: /autocreate_en/
+  - title: CSS
+    url: /css_en/
+  - title:
+    children:
+      - title: "Français"
+        url: /functions_fr/
 
 # ====== CSS_FR =============
 css_fr:
@@ -736,12 +816,10 @@ css_fr:
     url: /metadata_fr/
   - title: Fonctions Menu
     url: /functions_fr/
-  - title: Mise en forme (CSS)
-    url: /css_fr/
-  - title: Partage par l'utilisateur
-    url: /sharing_fr/
   - title: Création automatique
     url: /autocreate_fr/
+  - title: Mise en forme (CSS)
+    url: /css_fr/
   - title:
     children:
       - title: "English"
@@ -755,10 +833,12 @@ css_en:
     url: /resources_en/
   - title: Metadata
     url: /metadata_en/
+  - title: Menu Functions 
+    url: /functions_en/
+  - title: Automatic Creation
+    url: /autocreate_en/
   - title: CSS
     url: /css_en/
-  - title: Sharing
-    url: /sharing_en/
   - title:
     children:
       - title: "Français"
@@ -774,16 +854,14 @@ autocreate_fr:
     url: /metadata_fr/
   - title: Fonctions Menu
     url: /functions_fr/
-  - title: Mise en forme (CSS)
-    url: /css_fr/
-  - title: Partage par l'utilisateur
-    url: /sharing_fr/
   - title: Création automatique
     url: /autocreate_fr/
+  - title: Mise en forme (CSS)
+    url: /css_fr/
   - title:
     children:
       - title: "English"
-        url: /css_en/
+        url: /autocreate_en/
         
 # ====== AUTOCREATE_EN =============
 autocreate_en:
@@ -793,12 +871,14 @@ autocreate_en:
     url: /resources_en/
   - title: Metadata
     url: /metadata_en/
+  - title: Menu Functions 
+    url: /functions_en/
+  - title: Automatic Creation
+    url: /autocreate_en/
   - title: CSS
     url: /css_en/
-  - title: Sharing
-    url: /sharing_en/
   - title:
     children:
       - title: "Français"
-        url: /css_fr/
+        url: /autocreate_fr/
 
